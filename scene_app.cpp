@@ -57,7 +57,7 @@ void SceneApp::Init()
 	mat1.set_colour(0xFF0000FF);
 	playerCharacter->SetMaterial(mat1);
 
-	MeshActor* actor = SpawnMeshActor(primitive_builder_->CreateBoxMesh(gef::Vector4(5.f, 0.5f, 5.f)), gef::Vector4(0.f, -2.f, 0.f));
+	MeshActor* actor = SpawnMeshActor(primitive_builder_->CreateBoxMesh(gef::Vector4(50.f, 0.5f, 50.f)), gef::Vector4(0.f, -2.f, 0.f));
 	gef::Material mat;
 	mat.set_colour(0xFF00FFFF);
 	actor->SetMaterial(mat);
