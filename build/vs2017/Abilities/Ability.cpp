@@ -84,10 +84,6 @@ bool Ability::CanActivate(ActivationOutcome& OutActivationOutcome)
         return false;
     }
 
-    // Owning Character, 
-    // @TODO: Once Attributes have been implemented, get the attributes
-    // And check if we have got enough of said attribute
-    //Character* OwningChar = dynamic_cast<Character*>(GetOwner()->GetOwner());
     AttributeComponent* attributes = GetOwner()->GetAttributeComponent();
 
     if (!attributes->CheckHasEnoughOfAttributeByType(abilityCostType, abilityCostAmount))
