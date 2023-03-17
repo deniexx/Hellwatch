@@ -1,6 +1,6 @@
 #pragma once
 
-#include "WorldObject.h"
+#include "GameFramework/WorldObject.h"
 
 #include "graphics/mesh.h"
 

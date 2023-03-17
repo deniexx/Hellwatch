@@ -1,5 +1,10 @@
 #pragma once
 
+#include "maths/Vector2.h"
+#include "maths/vector4.h"
+#include "maths/matrix44.h"
+#include <graphics/renderer_3d.h>
+
 #define GENERATED_BODY(ParentClass, CurrentClass) typedef ::ParentClass Super; \
 									typedef CurrentClass ThisClass;
 
@@ -18,4 +23,35 @@ static T Clamp(T expression, T minVal, T maxVal)
 		expression = minVal;
 	
 	return expression > maxVal ? maxVal : expression;
+}
+
+static gef::Vector4 rojectScreenToWorldSpace(gef::Vector2 v2, gef::Renderer3D* renderer, float vpWidth, float vpHeight)
+{
+	gef::Matrix44 matProjection = renderer->projection_matrix() * renderer->view_matrix();
+	matProjection.Inverse(matProjection);
+
+	gef::Vector4 in;
+	float winZ = 1.f;
+
+	in.set_x((2.f * (float)(v2.x) / (vpWidth)) - 1);
+	in.set_y(-1.f);
+	in.set_z(1.f - (2.f * (float)(v2.y) / (vpHeight)));
+	in.set_w(1.f);
+
+	gef::Matrix44 calc;
+	calc.SetIdentity();
+
+	calc.SetTranslation(in);
+
+	gef::Matrix44 actualPos = calc * matProjection;
+
+	gef::Vector4 pos = actualPos.GetTranslation();
+	pos.set_x(pos.x() * 5);
+	pos.set_y(pos.y() * 5 - 25.f);
+
+	float posY = pos.y();
+	pos.set_z(posY);
+	pos.set_y(0);
+
+	return pos;
 }

@@ -1,7 +1,7 @@
 #pragma once
 
 #include "ActorComponents/ActorComponent.h"
-#include "Utils.h"
+#include "GameFramework/Utils.h"
 #include "AttributeTypes.h"
 
 #include <vector>

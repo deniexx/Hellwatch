@@ -3,8 +3,8 @@
 #include "ActorComponents/ActorComponent.h"
 #include "ActorComponents/AbilitiesComponent.h"
 #include "Attributes/AttributeComponent.h"
-#include "WorldObject.h"
-#include "Character.h"
+#include "GameFramework/WorldObject.h"
+#include "GameFramework/Character.h"
 
 void Ability::Init(AbilitiesComponent* inOwningComponent)
 {

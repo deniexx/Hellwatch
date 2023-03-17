@@ -1,4 +1,6 @@
 #include "SpriteActor.h"
+#include "graphics/sprite_renderer.h"
+#include <scene_app.h>
 
 SpriteActor::SpriteActor()
 	: Super()
@@ -43,4 +45,15 @@ void SpriteActor::SetTexture(gef::Texture* texture)
 void SpriteActor::SetSprite(gef::Sprite* inSprite)
 {
 	sprite = inSprite;
+}
+
+void SpriteActor::Render()
+{
+	if (SceneApp::instance)
+	{
+		if (SceneApp::instance->GetSpriteRenderer())
+		{
+			SceneApp::instance->GetSpriteRenderer()->DrawSprite(*sprite);
+		}
+	}
 }

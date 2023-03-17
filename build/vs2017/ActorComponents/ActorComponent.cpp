@@ -1,6 +1,6 @@
 #include "ActorComponent.h"
 
-#include "WorldObject.h"
+#include "GameFramework/WorldObject.h"
 
 void ActorComponent::Init(WorldObject* inOwnerActor)
 {

@@ -1,6 +1,6 @@
 #pragma once
 
-#include "WorldObject.h"
+#include "GameFramework/WorldObject.h"
 
 #include "graphics/sprite.h"
 #include "graphics/texture.h"
@@ -39,6 +39,8 @@ public:
 	virtual void SetScale(const gef::Vector4& inScale);
 	void SetTexture(gef::Texture* texture);
 	void SetSprite(gef::Sprite* inSprite);
+
+	virtual void Render() override;
 
 
 	/************************************************************************/

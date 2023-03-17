@@ -18,6 +18,11 @@ SceneApp::SceneApp(gef::Platform& platform):
 
 void SceneApp::Init()
 {
+	if (!instance)
+		instance = this;
+	else
+		delete this;
+
 	sprite_renderer_ = gef::SpriteRenderer::Create(platform_);
 
 	// create the renderer for draw 3D geometry
@@ -31,7 +36,8 @@ void SceneApp::Init()
 	scene_assets_ = LoadSceneAssets(platform_, scene_asset_filename);
 	if (scene_assets_)
 	{
-		mesh_instance_.set_mesh(GetMeshFromSceneAssets(scene_assets_));
+		meshActor = new MeshActor();
+		meshActor->SetMesh(GetMeshFromSceneAssets(scene_assets_));
 	}
 	else
 	{
@@ -91,7 +97,7 @@ void SceneApp::Render()
 	// draw 3d geometry
 	renderer_3d_->Begin();
 
-	renderer_3d_->DrawMesh(mesh_instance_);
+	meshActor->Render();
 
 	renderer_3d_->End();
 

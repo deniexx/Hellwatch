@@ -17,11 +17,11 @@ MeshActor::MeshActor(gef::Mesh* inMesh)
 
 void MeshActor::Render()
 {
-	if (GetScene())
+	if (SceneApp::instance)
 	{
-		if (GetScene()->GetRenderer3D())
+		if (SceneApp::instance->GetRenderer3D())
 		{
-			GetScene()->GetRenderer3D()->DrawMesh(*GetMesh(), GetTransform());
+			SceneApp::instance->GetRenderer3D()->DrawMesh(*GetMesh(), GetTransform());
 		}
 	}
 }

@@ -6,6 +6,7 @@
 #include "primitive_builder.h"
 #include <graphics/mesh_instance.h>
 #include "graphics/scene.h"
+#include <Actors/MeshActor.h>
 
 // FRAMEWORK FORWARD DECLARATIONS
 namespace gef
@@ -20,11 +21,16 @@ namespace gef
 class SceneApp : public gef::Application
 {
 public:
+
+	static inline SceneApp* SceneApp::instance;
+
 	SceneApp(gef::Platform& platform);
 	void Init();
 	void CleanUp();
 	bool Update(float frame_time);
 	void Render();
+
+
 private:
 	void InitFont();
 	void CleanUpFont();
@@ -40,10 +46,15 @@ private:
 
 	PrimitiveBuilder* primitive_builder_;
 
-	gef::MeshInstance mesh_instance_;
+	MeshActor* meshActor;
 	gef::Scene* scene_assets_;
 
 	float fps_;
+
+public:
+
+	__forceinline gef::Renderer3D* GetRenderer3D() const { return renderer_3d_; }
+	__forceinline gef::SpriteRenderer* GetSpriteRenderer() const { return sprite_renderer_; }
 };
 
 #endif // _SCENE_APP_H

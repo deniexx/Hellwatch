@@ -11,9 +11,8 @@ WorldObject::WorldObject()
 	SetScale(gef::Vector4::kOne);
 }
 
-void WorldObject::Init(SceneApp* scene, WorldObject* owner)
+void WorldObject::Init(WorldObject* owner)
 {
-	owningScene = scene;
 	owningObject = owner;
 
 	PostInit();

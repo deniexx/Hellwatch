@@ -27,7 +27,7 @@ public:
 	/// </summary>
 	/// <param name="scene">The owninig scene of the object</param>
 	/// <param name="owner">The owning object of this object</param>
-	void Init(SceneApp* scene, WorldObject* owner);
+	void Init(WorldObject* owner = nullptr);
 
 	/// <summary>
 	/// Override this to Initialize variables or do any necessary work when the object is created
@@ -49,7 +49,6 @@ protected:
 
 	gef::Matrix44 transformMat;
 	WorldObject* owningObject;
-	SceneApp* owningScene;
 
 	gef::Quaternion rotationVec;
 	
@@ -72,7 +71,6 @@ public:
 	__forceinline const virtual float GetRotationF() const { return 0.f; }
 	__forceinline const virtual gef::Vector4& GetScale() const { return transformMat.GetScale(); }
 	__forceinline const gef::Matrix44& GetTransform() const { return transformMat; }
-	__forceinline const SceneApp* GetScene() const { return owningScene; }
 	__forceinline WorldObject* GetOwner() const { return owningObject; }
 };
 
