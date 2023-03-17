@@ -15,7 +15,7 @@ namespace gef
 
 namespace HellwatchInputAction
 {
-	enum InputAction
+	enum Type
 	{
 		None = 0,
 		Pressed,
@@ -26,7 +26,7 @@ namespace HellwatchInputAction
 
 namespace HellwatchControllerAxis
 {
-	enum ControllerAxis
+	enum Type
 	{
 		None = 0,
 		LeftStickXY,
@@ -39,7 +39,7 @@ namespace HellwatchControllerAxis
 /* -------------------------------------- */
 struct FKeyBindKeyboard
 {
-	HellwatchInputAction::InputAction inputAction;
+	HellwatchInputAction::Type inputAction;
 	gef::Keyboard::KeyCode keyCode;
 	std::function<void()> functionBind;
 };
@@ -47,8 +47,8 @@ struct FKeyBindKeyboard
 struct FKeyBindController
 {
 	uint32_t keyCode;
-	HellwatchInputAction::InputAction inputAction = HellwatchInputAction::None;
-	HellwatchControllerAxis::ControllerAxis axis = HellwatchControllerAxis::None;
+	HellwatchInputAction::Type inputAction = HellwatchInputAction::None;
+	HellwatchControllerAxis::Type axis = HellwatchControllerAxis::None;
 	std::function<void(gef::Vector2)> functionBind;
 };
 
@@ -144,5 +144,9 @@ private:
 	/*             Input Manager              */
 	/* -------------------------------------- */
 	gef::InputManager* inputManager;
+
+public:
+
+	const FKeyBindSet& GetKeybindSet() const;
 };
 

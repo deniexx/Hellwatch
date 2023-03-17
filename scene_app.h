@@ -6,6 +6,7 @@
 #include "primitive_builder.h"
 #include "graphics/scene.h"
 #include "box2d/box2d.h"
+#include "system/platform.h"
 #include <vector>
 
 // FRAMEWORK FORWARD DECLARATIONS
@@ -22,6 +23,7 @@ namespace gef
 class MeshActor;
 class SpriteActor;
 class WorldObject;
+class PlayerCharacter;
 
 class SceneApp : public gef::Application
 {
@@ -41,16 +43,6 @@ public:
 	/// </summary>
 	b2Body* CreateCollisionBody(b2BodyDef bodyDef, b2FixtureDef fixtureDef, WorldObject* owningObject);
 
-	/// <summary>
-	/// Spawns a MeshActor into the scene and gets it ready for rendering and updating
-	/// </summary>
-	MeshActor* SpawnMeshActor(gef::Mesh* mesh = nullptr, gef::Vector4 translation = gef::Vector4::kZero, gef::Vector4 rotation = gef::Vector4::kZero, gef::Vector4 scale = gef::Vector4::kZero);
-
-	/// <summary>
-	/// Spawns a SpriteActor into the scene and gets it ready for rendering and updating
-	/// </summary>
-	SpriteActor* SpawnSpriteActor(gef::Sprite* sprite = nullptr, gef::Vector2 position = gef::Vector2::kZero, float rotation = 0.f);
-
 private:
 
 	void InitFont();
@@ -67,6 +59,7 @@ private:
 
 	PrimitiveBuilder* primitive_builder_;
 
+	PlayerCharacter* playerCharacter;
 	std::vector<SpriteActor*> spriteActors;
 	std::vector<MeshActor*> meshActors;
 	gef::Scene* scene_assets_;
@@ -87,6 +80,41 @@ public:
 	__forceinline b2World* GetBox2DWorld() const { return b2dWorld; }
 	__forceinline float GetViewportWidth() const { return platform_.width(); }
 	__forceinline float GetViewportHeight() const { return platform_.height(); }
+
+
+
+	/// <summary>
+	/// Spawns a MeshActor into the scene and gets it ready for rendering and updating
+	/// </summary>
+	template <typename T = MeshActor>
+	T* SpawnMeshActor(gef::Mesh* mesh = nullptr, gef::Vector4 translation = gef::Vector4::kZero, gef::Vector4 rotation = gef::Vector4::kZero, gef::Vector4 scale = gef::Vector4::kZero, WorldObject* owner = nullptr)
+	{
+		T* meshActor = new T();
+		meshActor->SetMesh(mesh);
+		meshActor->SetTranslation(translation);
+		meshActor->SetRotation(rotation);
+		meshActor->SetScale(scale);
+		meshActor->Init(owner);
+		meshActors.push_back(meshActor);
+
+		return meshActor;
+	}
+
+	/// <summary>
+	/// Spawns a SpriteActor into the scene and gets it ready for rendering and updating
+	/// </summary>
+	template<typename T = SpriteActor>
+	T* SpawnSpriteActor(gef::Sprite* sprite = nullptr, gef::Vector2 position = gef::Vector2::kZero, float rotation = 0.f, WorldObject* owner = nullptr)
+	{
+		T* spriteActor = new T();
+		spriteActor->SetSprite(sprite);
+		spriteActor->SetTranslation(gef::Vector4(position.x, position.y, 0.f));
+		spriteActor->SetRotation(rotation);
+		spriteActor->Init(owner);
+		spriteActors.push_back(spriteActor);
+
+		return spriteActor;
+	}
 };
 
 #endif // _SCENE_APP_H

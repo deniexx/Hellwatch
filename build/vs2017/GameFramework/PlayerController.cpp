@@ -288,3 +288,14 @@ void PlayerController::EvaluateMouseKeybinds(const gef::TouchInputManager* touch
 		}
 	}
 }
+
+const FKeyBindSet& PlayerController::GetKeybindSet() const
+{
+	FKeyBindSet keybindSet;
+
+	keybindSet.keyboardKeyBinds = keyboardKeyBinds;
+	keybindSet.controllerKeyBinds = controllerKeyBinds;
+	keybindSet.mouseKeyBinds = mouseKeyBinds;
+
+	return keybindSet;
+}

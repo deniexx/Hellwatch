@@ -7,6 +7,7 @@
 #include <maths/math_utils.h>
 #include "graphics/sprite.h"
 
+#include "Actors/MeshActors/PlayerCharacter.h"
 #include <Actors/SpriteActor.h>
 #include <Actors/MeshActor.h>
 
@@ -32,23 +33,34 @@ void SceneApp::Init()
 	// create the renderer for draw 3D geometry
 	renderer_3d_ = gef::Renderer3D::Create(platform_);
 
-	gravity = b2Vec2(0.0f, -9.81f);
+	gravity = b2Vec2(0.0f, -0.f);
 	b2dWorld = new b2World(gravity);
 
 	// initialise primitive builder to make create some 3D geometry easier
 	primitive_builder_ = new PrimitiveBuilder(platform_);
 
-	// load the assets in from the .scn
-	const char* scene_asset_filename = "world.scn";
-	scene_assets_ = LoadSceneAssets(platform_, scene_asset_filename);
-	if (scene_assets_)
-	{
-		SpawnMeshActor(GetMeshFromSceneAssets(scene_assets_));
-	}
-	else
-	{
-		gef::DebugOut("Scene file %s failed to load\n", scene_asset_filename);
-	}
+	playerCharacter = SpawnMeshActor<PlayerCharacter>(primitive_builder_->CreateBoxMesh(gef::Vector4(1.f, 1.f, 1.f)));
+
+	b2BodyDef newBodyDef;
+	newBodyDef.type = b2_staticBody;
+	newBodyDef.position.Set(0.f, -2.f);
+
+	b2PolygonShape newDynamicBox;
+	newDynamicBox.SetAsBox(10.f, 1.f);
+
+	b2FixtureDef newFixtureDef;
+	newFixtureDef.shape = &newDynamicBox;
+	newFixtureDef.density = 1.f;
+	newFixtureDef.friction = 0.3f;
+
+	gef::Material mat1;
+	mat1.set_colour(0xFF0000FF);
+	playerCharacter->SetMaterial(mat1);
+
+	MeshActor* actor = SpawnMeshActor(primitive_builder_->CreateBoxMesh(gef::Vector4(5.f, 0.5f, 5.f)), gef::Vector4(0.f, -2.f, 0.f));
+	gef::Material mat;
+	mat.set_colour(0xFF00FFFF);
+	actor->SetMaterial(mat);
 
 	InitFont();
 	SetupLights();
@@ -105,9 +117,22 @@ void SceneApp::Render()
 	renderer_3d_->set_projection_matrix(projection_matrix);
 
 	// view
-	gef::Vector4 camera_eye(-2.0f, 2.0f, 5.0f);
-	gef::Vector4 camera_lookat(0.0f, 0.0f, 0.0f);
+	gef::Vector4 camera_eye =  gef::Vector4(0.0f, 20.0f, 0.0f);
+	gef::Vector4 camera_lookat = gef::Vector4(0.0f, -1.0f, 0.001f);
 	gef::Vector4 camera_up(0.0f, 1.0f, 0.0f);
+
+	
+	if (playerCharacter)
+	{
+		camera_eye = playerCharacter->GetTranslation();
+		camera_eye.set_y(20.f);
+		camera_lookat = playerCharacter->GetTranslation();
+		camera_lookat.set_y(-1.f);
+		
+		float i = camera_eye.z() + 0.001f;
+		camera_lookat.set_z(i);
+	}
+	
 	gef::Matrix44 view_matrix;
 	view_matrix.LookAt(camera_eye, camera_lookat, camera_up);
 	renderer_3d_->set_view_matrix(view_matrix);
@@ -148,7 +173,7 @@ void SceneApp::DrawHUD()
 	if(font_)
 	{
 		// display frame rate
-		font_->RenderText(sprite_renderer_, gef::Vector4(850.0f, 510.0f, -0.9f), 1.0f, 0xffffffff, gef::TJ_LEFT, "FPS: %.1f", fps_);
+		font_->RenderText(sprite_renderer_, gef::Vector4(1800.0f, 1040.0f, -0.9f), 1.0f, 0xffffffff, gef::TJ_LEFT, "FPS: %.1f", fps_);
 	}
 }
 
@@ -219,28 +244,6 @@ void SceneApp::HandleCollision()
 				wo->OnCollision(bodyA);
 		}
 	}
-}
-
-MeshActor* SceneApp::SpawnMeshActor(gef::Mesh* mesh, gef::Vector4 translation, gef::Vector4 rotation, gef::Vector4 scale)
-{
-	MeshActor* meshActor = new MeshActor(mesh);
-	meshActor->SetTranslation(translation);
-	meshActor->SetRotation(rotation);
-	meshActor->SetScale(scale);
-	meshActors.push_back(meshActor);
-
-	return meshActor;
-}
-
-SpriteActor* SceneApp::SpawnSpriteActor(gef::Sprite* sprite, gef::Vector2 position, float rotation)
-{
-	SpriteActor* spriteActor = new SpriteActor();
-	spriteActor->SetSprite(sprite);
-	spriteActor->SetTranslation(gef::Vector4(position.x, position.y, 0.f));
-	spriteActor->SetRotation(rotation);
-	spriteActors.push_back(spriteActor);
-
-	return spriteActor;
 }
 
 b2Body* SceneApp::CreateCollisionBody(b2BodyDef bodyDef, b2FixtureDef fixtureDef, WorldObject* owningObject)

@@ -45,16 +45,20 @@ public:
 	/// </summary>
 	virtual void Render();
 
+	/// <summary>
+	/// Function to respond to collision
+	/// </summary>
+	virtual void OnCollision(b2Body* OtherBody);
+
 protected:
 
+	b2Body* collisionBody;
 	gef::Matrix44 transformMat;
 	WorldObject* owningObject;
 
 	gef::Vector4 translation;
 	gef::Vector4 scale;
 	gef::Vector4 rotationVec;
-
-private:
 
 	void BuildTransform();
 	
@@ -67,8 +71,7 @@ public:
 	virtual void SetRotation(const gef::Vector4& inRotation);
 	virtual void SetRotation(const float inRotation);
 	virtual void SetScale(const gef::Vector4& inScale);
-	virtual void OnCollision(b2Body* OtherBody);
-
+	void SetCollisionBody(b2Body* inCollisionBody);
 
 	/************************************************************************/
 	/*                              GETTERS                                 */
@@ -79,5 +82,6 @@ public:
 	__forceinline const virtual gef::Vector4& GetScale() const { return transformMat.GetScale(); }
 	__forceinline const gef::Matrix44& GetTransform() const { return transformMat; }
 	__forceinline WorldObject* GetOwner() const { return owningObject; }
+	__forceinline b2Body* GetCollisionBody() const { return collisionBody; }
 };
 

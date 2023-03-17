@@ -114,7 +114,7 @@ public:
 	/************************************************************************/
 	void SetActivationKey(AbilityActivationKey::Type key) { activationKey = key; }
 	void SetAbilityCostAmount(uint32_t newCost) { abilityCostAmount = newCost; }
-	void SetAbilityCostType(HellwatchAttribute::Attribute newCost) { abilityCostType = newCost; }
+	void SetAbilityCostType(HellwatchAttribute::Type newCost) { abilityCostType = newCost; }
 	void SetAbilityName(std::string newName) { abilityName = newName; }
 	void SetIsActive(bool bNewState) { bIsActive = bNewState; }
 	void SetCooldownStartPolicy(CooldownStartPolicy::Type newPolicy) { cooldownStartPolicy = newPolicy; }

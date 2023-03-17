@@ -9,7 +9,7 @@ public:
 	void Init(WorldObject* inOwnerActor);
 	virtual void UpdateComponent(float deltaTime);
 
-private:
+protected:
 
 	virtual void PostInit();
 

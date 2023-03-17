@@ -4,6 +4,7 @@
 
 #include "graphics/mesh.h"
 
+
 class MeshActor : public WorldObject
 {
 	GENERATED_BODY(WorldObject, MeshActor)
@@ -23,6 +24,12 @@ public:
 
 	virtual void Render() override;
 
+protected:
+
+	std::string meshName;
+	gef::Material material;
+	bool bOverrideMaterial;
+
 private:
 
 	gef::Mesh* mesh;
@@ -33,6 +40,9 @@ public:
 	/*                              SETTERS                                 */
 	/************************************************************************/
 	void SetMesh(gef::Mesh* inMesh) { mesh = inMesh; }
+	void SetMaterial(gef::Material newMaterial) {
+		material = newMaterial; bOverrideMaterial = true;
+	}
 
 
 	/************************************************************************/

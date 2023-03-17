@@ -7,6 +7,8 @@ MeshActor::MeshActor()
 	: Super()
 {
 	mesh = nullptr;
+	material.set_colour(0xFFFFFFFF);
+	bOverrideMaterial = false;
 }
 
 MeshActor::MeshActor(gef::Mesh* inMesh)
@@ -21,6 +23,11 @@ void MeshActor::Render()
 	{
 		if (SceneApp::instance->GetRenderer3D())
 		{
+			BuildTransform();
+
+			if (bOverrideMaterial)
+				SceneApp::instance->GetRenderer3D()->set_override_material(&material);
+
 			SceneApp::instance->GetRenderer3D()->DrawMesh(*GetMesh(), GetTransform());
 		}
 	}

@@ -5,6 +5,7 @@
 void ActorComponent::Init(WorldObject* inOwnerActor)
 {
 	ownerActor = inOwnerActor;
+	PostInit();
 }
 
 void ActorComponent::PostInit()
