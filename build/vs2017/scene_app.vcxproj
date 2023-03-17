@@ -229,7 +229,6 @@
     <ClCompile Include="Actors\MeshActor.cpp" />
     <ClCompile Include="Actors\SpriteActor.cpp" />
     <ClCompile Include="Attributes\AttributeComponent.cpp" />
-    <ClCompile Include="GameFramework\Character.cpp" />
     <ClCompile Include="GameFramework\PlayerController.cpp" />
     <ClCompile Include="GameFramework\WorldObject.cpp" />
   </ItemGroup>
@@ -244,7 +243,6 @@
     <ClInclude Include="Actors\SpriteActor.h" />
     <ClInclude Include="Attributes\AttributeComponent.h" />
     <ClInclude Include="Attributes\AttributeTypes.h" />
-    <ClInclude Include="GameFramework\Character.h" />
     <ClInclude Include="GameFramework\PlayerController.h" />
     <ClInclude Include="GameFramework\Utils.h" />
     <ClInclude Include="GameFramework\WorldObject.h" />

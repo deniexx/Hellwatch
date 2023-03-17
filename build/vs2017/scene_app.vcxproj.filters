@@ -48,9 +48,6 @@
     <ClCompile Include="Attributes\AttributeComponent.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="GameFramework\Character.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="GameFramework\PlayerController.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -87,9 +84,6 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Attributes\AttributeTypes.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="GameFramework\Character.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="GameFramework\PlayerController.h">

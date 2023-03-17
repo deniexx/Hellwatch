@@ -4,7 +4,6 @@
 #include "ActorComponents/AbilitiesComponent.h"
 #include "Attributes/AttributeComponent.h"
 #include "GameFramework/WorldObject.h"
-#include "GameFramework/Character.h"
 
 void Ability::Init(AbilitiesComponent* inOwningComponent)
 {
