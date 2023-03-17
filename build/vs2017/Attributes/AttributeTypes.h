@@ -2,9 +2,12 @@
 
 #include <string>
 
+/// <summary>
+/// Attribute Type
+/// </summary>
 namespace HellwatchAttribute
 {
-	enum Attribute
+	enum Type
 	{
 		Health = 0,
 		Mana,
@@ -18,16 +21,23 @@ namespace HellwatchAttribute
 	};
 }
 
+
+/// <summary>
+/// Attribute representation
+/// </summary>
 struct FAttribute
 {
-	HellwatchAttribute::Attribute attributeType;
+	HellwatchAttribute::Type attributeType;
 	float maxAmount = 100.f;
 	float currentAmount = 0.f;
 
 	bool bClampedToZero = true;
 };
 
-static std::string AttributeToString(HellwatchAttribute::Attribute type)
+/// <summary>
+/// Helper function to get attribute name in string format
+/// </summary>
+static std::string AttributeToString(HellwatchAttribute::Type type)
 {
 	switch (type)
 	{

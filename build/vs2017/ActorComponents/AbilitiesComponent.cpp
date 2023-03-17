@@ -20,12 +20,12 @@ void AbilitiesComponent::AddAbility(Ability* abilityToAdd)
 	availableAbilities.push_back(abilityToAdd);
 }
 
-void AbilitiesComponent::EquipAbility(Ability* abilityToEquip, AbilityActivationKey::ActivationKey keyToEquipAt)
+void AbilitiesComponent::EquipAbility(Ability* abilityToEquip, AbilityActivationKey::Type keyToEquipAt)
 {
 	equippedAbilities[keyToEquipAt] = abilityToEquip;
 }
 
-void AbilitiesComponent::ActivateAbilityByKey(AbilityActivationKey::ActivationKey key)
+void AbilitiesComponent::ActivateAbilityByKey(AbilityActivationKey::Type key)
 {
 	if (equippedAbilities[key])
 		equippedAbilities[key]->TryActivate();
@@ -42,7 +42,7 @@ void AbilitiesComponent::ActivateAbilityByName(std::string name)
 	}
 }
 
-void AbilitiesComponent::EndAbilityByKey(AbilityActivationKey::ActivationKey key)
+void AbilitiesComponent::EndAbilityByKey(AbilityActivationKey::Type key)
 {
 	if (equippedAbilities[key])
 		equippedAbilities[key]->EndAbility();

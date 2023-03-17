@@ -84,6 +84,12 @@ bool SceneApp::Update(float frame_time)
 	b2dWorld->Step(frame_time, velocityIterations, positionIterations);
 	HandleCollision();
 
+	for (auto actor : meshActors)
+		actor->Update(frame_time);
+
+	for (auto actor : spriteActors)
+		actor->Update(frame_time);
+
 	return true;
 }
 

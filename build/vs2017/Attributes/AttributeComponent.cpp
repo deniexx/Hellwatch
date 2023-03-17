@@ -2,7 +2,7 @@
 
 #include <algorithm>
 
-const float AttributeComponent::GetCurrentAttributeValueByType(HellwatchAttribute::Attribute type) const
+const float AttributeComponent::GetCurrentAttributeValueByType(HellwatchAttribute::Type type) const
 {
 	for (const auto& attribute : attributes)
 	{
@@ -13,7 +13,7 @@ const float AttributeComponent::GetCurrentAttributeValueByType(HellwatchAttribut
 	return 0.0f;
 }
 
-const float AttributeComponent::GetMaxAttributeValueByType(HellwatchAttribute::Attribute type) const
+const float AttributeComponent::GetMaxAttributeValueByType(HellwatchAttribute::Type type) const
 {
 	for (const auto& attribute : attributes)
 	{
@@ -24,7 +24,7 @@ const float AttributeComponent::GetMaxAttributeValueByType(HellwatchAttribute::A
 	return 0.0f;
 }
 
-const bool AttributeComponent::CheckHasEnoughOfAttributeByType(HellwatchAttribute::Attribute type, float amountNeeded)
+const bool AttributeComponent::CheckHasEnoughOfAttributeByType(HellwatchAttribute::Type type, float amountNeeded)
 {
 	for (const auto& attribute : attributes)
 	{
@@ -35,7 +35,7 @@ const bool AttributeComponent::CheckHasEnoughOfAttributeByType(HellwatchAttribut
 	return false;
 }
 
-void AttributeComponent::ApplyAttributeChange(HellwatchAttribute::Attribute type, float delta) const
+void AttributeComponent::ApplyAttributeChange(HellwatchAttribute::Type type, float delta) const
 {
 	for (auto& attribute : attributes)
 	{

@@ -35,10 +35,20 @@ public:
 	bool Update(float frame_time);
 	void Render();
 
+	/// <summary>
+	/// Creates a collision body for a specified object, object can be null if using for things like environment or invisible walls
+	/// @NOTE: The owning object will be used to call OnCollision function
+	/// </summary>
 	b2Body* CreateCollisionBody(b2BodyDef bodyDef, b2FixtureDef fixtureDef, WorldObject* owningObject);
 
+	/// <summary>
+	/// Spawns a MeshActor into the scene and gets it ready for rendering and updating
+	/// </summary>
 	MeshActor* SpawnMeshActor(gef::Mesh* mesh = nullptr, gef::Vector4 translation = gef::Vector4::kZero, gef::Vector4 rotation = gef::Vector4::kZero, gef::Vector4 scale = gef::Vector4::kZero);
 
+	/// <summary>
+	/// Spawns a SpriteActor into the scene and gets it ready for rendering and updating
+	/// </summary>
 	SpriteActor* SpawnSpriteActor(gef::Sprite* sprite = nullptr, gef::Vector2 position = gef::Vector2::kZero, float rotation = 0.f);
 
 private:
@@ -75,6 +85,8 @@ public:
 	__forceinline gef::Renderer3D* GetRenderer3D() const { return renderer_3d_; }
 	__forceinline gef::SpriteRenderer* GetSpriteRenderer() const { return sprite_renderer_; }
 	__forceinline b2World* GetBox2DWorld() const { return b2dWorld; }
+	__forceinline float GetViewportWidth() const { return platform_.width(); }
+	__forceinline float GetViewportHeight() const { return platform_.height(); }
 };
 
 #endif // _SCENE_APP_H

@@ -13,13 +13,43 @@ class AbilitiesComponent : public ActorComponent
 
 public:
 
+	/// <summary>
+	/// Adds an ability to our system
+	/// @NOTE: It does not equip it, just adds it to the available abilities vector
+	/// </summary>
 	void AddAbility(Ability* abilityToAdd);
-	void EquipAbility(Ability* abilityToEquip, AbilityActivationKey::ActivationKey keyToEquipAt);
 
-	void ActivateAbilityByKey(AbilityActivationKey::ActivationKey key);
+	/// <summary>
+	/// Equips an ability, at a specific key
+	/// </summary>
+	void EquipAbility(Ability* abilityToEquip, AbilityActivationKey::Type keyToEquipAt);
+
+	/// <summary>
+	/// Attempts to activate ability by key
+	/// </summary>
+	void ActivateAbilityByKey(AbilityActivationKey::Type key);
+
+	/// <summary>
+	/// Attempts to activate ability by its name
+	/// @NOTE: Preferred to use ActivateAbilityByKey version
+	/// </summary>
 	void ActivateAbilityByName(std::string name);
-	void EndAbilityByKey(AbilityActivationKey::ActivationKey key);
+
+	/// <summary>
+	/// Ends an ability by key, we can use this if we prematurely end ability, etc...
+	/// </summary>
+	void EndAbilityByKey(AbilityActivationKey::Type key);
+
+	/// <summary>
+	/// Ends an ability by name, we can use this if we prematurely end ability, etc...
+	/// Preferred to use EndAbilityByKey version
+	/// </summary>
+	/// <param name="name"></param>
 	void EndAbilityByName(std::string name);
+
+	/// <summary>
+	/// Registers an attribute component to this ability system
+	/// </summary>
 	void RegisterAttributes(AttributeComponent* newAttributes);
 
 	virtual void UpdateComponent(float deltaTime) override;

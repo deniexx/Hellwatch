@@ -4,6 +4,7 @@
 #include "maths/vector4.h"
 #include "maths/matrix44.h"
 #include <graphics/renderer_3d.h>
+#include <scene_app.h>
 
 #define GENERATED_BODY(ParentClass, CurrentClass) typedef ::ParentClass Super; \
 									typedef CurrentClass ThisClass;
@@ -16,6 +17,9 @@
 #define bindFunc_FOURParams(funcName, paramType1, paramName1, paramType2, paramName2, paramType3, paramName3, paramType4, paramName4) [this](paramType1 paramName1, paramType2 paramName2, paramType3 paramName3, paramType4 paramName4) { funcName(paramName1, paramName2, paramName3, paramName4); }
 #define bindFunc_FIVEParams(funcName, paramType1, paramName1, paramType2, paramName2, paramType3, paramName3, paramType4, paramName4, paramType5, paramName5) [this](paramType1 paramName1, paramType2 paramName2, paramType3 paramName3, paramType4 paramName4, paramName5 paramName5) { funcName(paramName1, paramName2, paramName3, paramName4, paramName5); }
 
+/// <summary>
+/// Clamps a value between 2 given values
+/// </summary>
 template<typename T>
 static T Clamp(T expression, T minVal, T maxVal)
 {
@@ -25,8 +29,15 @@ static T Clamp(T expression, T minVal, T maxVal)
 	return expression > maxVal ? maxVal : expression;
 }
 
-static gef::Vector4 rojectScreenToWorldSpace(gef::Vector2 v2, gef::Renderer3D* renderer, float vpWidth, float vpHeight)
+/// <summary>
+/// Projects a Vector2 into world space
+/// </summary>
+static gef::Vector4 ProjectScreenToWorldSpace(gef::Vector2 v2)
 {
+	gef::Renderer3D* renderer = SceneApp::instance->GetRenderer3D();
+	float vpWidth = SceneApp::instance->GetViewportWidth();
+	float vpHeight = SceneApp::instance->GetViewportHeight();
+
 	gef::Matrix44 matProjection = renderer->projection_matrix() * renderer->view_matrix();
 	matProjection.Inverse(matProjection);
 
