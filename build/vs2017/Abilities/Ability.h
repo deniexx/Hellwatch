@@ -100,7 +100,7 @@ private:
 	float cooldownTimer;
 	float cooldown;
 	uint32_t abilityCostAmount;
-	HellwatchAttribute::Attribute abilityCostType;
+	HellwatchAttribute::Type abilityCostType;
 	CooldownStartPolicy::Type cooldownStartPolicy;
 
 	std::string abilityName;
