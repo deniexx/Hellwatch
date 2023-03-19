@@ -46,6 +46,7 @@ public:
 private:
 
 	void InitFont();
+	void LoadAssets();
 	void CleanUpFont();
 	void DrawHUD();
 	void SetupLights();
@@ -60,8 +61,8 @@ private:
 	PrimitiveBuilder* primitive_builder_;
 
 	PlayerCharacter* playerCharacter;
-	std::vector<SpriteActor*> spriteActors;
 	std::vector<MeshActor*> meshActors;
+	std::vector<SpriteActor*> spriteActors;
 	gef::Scene* scene_assets_;
 
 	float fps_;
@@ -87,7 +88,7 @@ public:
 	/// Spawns a MeshActor into the scene and gets it ready for rendering and updating
 	/// </summary>
 	template <typename T = MeshActor>
-	T* SpawnMeshActor(gef::Mesh* mesh = nullptr, gef::Vector4 translation = gef::Vector4::kZero, gef::Vector4 rotation = gef::Vector4::kZero, gef::Vector4 scale = gef::Vector4::kZero, WorldObject* owner = nullptr)
+	T* SpawnMeshActor(gef::Mesh* mesh = nullptr, gef::Vector4 translation = gef::Vector4::kZero, gef::Vector4 rotation = gef::Vector4::kZero, gef::Vector4 scale = gef::Vector4::kOne, WorldObject* owner = nullptr)
 	{
 		T* meshActor = new T();
 		meshActor->SetMesh(mesh);

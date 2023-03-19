@@ -39,7 +39,7 @@ void SceneApp::Init()
 	// initialise primitive builder to make create some 3D geometry easier
 	primitive_builder_ = new PrimitiveBuilder(platform_);
 
-	playerCharacter = SpawnMeshActor<PlayerCharacter>(primitive_builder_->CreateBoxMesh(gef::Vector4(1.f, 1.f, 1.f)));
+	playerCharacter = SpawnMeshActor<PlayerCharacter>();
 
 	b2BodyDef newBodyDef;
 	newBodyDef.type = b2_staticBody;
@@ -64,6 +64,7 @@ void SceneApp::Init()
 
 	InitFont();
 	SetupLights();
+	LoadAssets();
 }
 
 void SceneApp::CleanUp()
@@ -96,19 +97,35 @@ bool SceneApp::Update(float frame_time)
 	b2dWorld->Step(frame_time, velocityIterations, positionIterations);
 	HandleCollision();
 
-	for (auto actor : meshActors)
-		actor->Update(frame_time);
+	std::vector<MeshActor*> cleanMeshActors;
+	std::vector<SpriteActor*> cleanSpriteActors;
 
+	for (auto actor : meshActors)
+	{
+		if (actor)
+		{
+			actor->Update(frame_time);
+			cleanMeshActors.push_back(actor);
+		}
+	}
+		
 	for (auto actor : spriteActors)
-		actor->Update(frame_time);
+	{
+		if (actor)
+		{
+			actor->Update(frame_time);
+			cleanSpriteActors.push_back(actor);
+		}
+	}
+
+	meshActors = cleanMeshActors;
+	spriteActors = cleanSpriteActors;
 
 	return true;
 }
 
 void SceneApp::Render()
 {
-	// setup camera
-
 	// projection
 	float fov = gef::DegToRad(45.0f);
 	float aspect_ratio = (float)platform_.width() / (float)platform_.height();
@@ -121,16 +138,13 @@ void SceneApp::Render()
 	gef::Vector4 camera_lookat = gef::Vector4(0.0f, -1.0f, 0.001f);
 	gef::Vector4 camera_up(0.0f, 1.0f, 0.0f);
 
-	
 	if (playerCharacter)
 	{
 		camera_eye = playerCharacter->GetTranslation();
 		camera_eye.set_y(20.f);
+		camera_eye.set_z(camera_eye.z() - 10);
 		camera_lookat = playerCharacter->GetTranslation();
 		camera_lookat.set_y(-1.f);
-		
-		float i = camera_eye.z() + 0.001f;
-		camera_lookat.set_z(i);
 	}
 	
 	gef::Matrix44 view_matrix;
@@ -244,6 +258,15 @@ void SceneApp::HandleCollision()
 				wo->OnCollision(bodyA);
 		}
 	}
+}
+
+void SceneApp::LoadAssets()
+{
+	gef::Scene* scene = LoadSceneAssets(platform_, "Assets/MainCharacter.scn");
+
+	playerCharacter->SetMesh(GetMeshFromSceneAssets(scene));
+	playerCharacter->SetMaterial(*scene->materials.front());
+	playerCharacter->SetScale(gef::Vector4(0.01f, 0.01f, 0.01f));
 }
 
 b2Body* SceneApp::CreateCollisionBody(b2BodyDef bodyDef, b2FixtureDef fixtureDef, WorldObject* owningObject)

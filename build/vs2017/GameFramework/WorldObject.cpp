@@ -60,7 +60,7 @@ void WorldObject::BuildTransform()
 {
 	gef::Matrix44 scale_mat, rotateX_mat, rotateY_mat, rotateZ_mat, translate_mat;
 	scale_mat.SetIdentity();
-	//scale_mat.Scale(scale);
+	scale_mat.Scale(scale);
 
 	rotateX_mat.RotationX(rotationVec.x());
 	rotateY_mat.RotationY(rotationVec.y());

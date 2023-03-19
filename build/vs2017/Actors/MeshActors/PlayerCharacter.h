@@ -2,6 +2,7 @@
 
 #include "Actors/MeshActor.h"
 #include "GameFramework/PlayerController.h"
+#include "graphics/skinned_mesh_instance.h"
 #include "GameFramework/Utils.h"
 
 class CharacterMovementComponent;
@@ -18,8 +19,12 @@ public:
 
 	virtual void Update(float deltaTime) override;
 
+	gef::Animation* idleAnimation;
+	gef::Animation* walkAnimation;
+
 protected:
 
+	gef::SkinnedMeshInstance* meshInstance;
 	PlayerController* controller;
 
 	void MoveLeft();

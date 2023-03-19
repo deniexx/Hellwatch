@@ -32,5 +32,6 @@ public:
 
 
 	__forceinline bool IsFrozen() const { return bFrozen; }
+	__forceinline float GetSpeed() const { return ownerCollision ? ownerCollision->GetLinearVelocity().Length() : 0.f; }
 };
 
