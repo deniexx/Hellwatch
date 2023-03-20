@@ -6,6 +6,8 @@
 #include "GameFramework/Utils.h"
 
 class CharacterMovementComponent;
+class AbilitiesComponent;
+class AttributeComponent;
 
 class PlayerCharacter : public MeshActor
 {
@@ -19,12 +21,8 @@ public:
 
 	virtual void Update(float deltaTime) override;
 
-	gef::Animation* idleAnimation;
-	gef::Animation* walkAnimation;
-
 protected:
 
-	gef::SkinnedMeshInstance* meshInstance;
 	PlayerController* controller;
 
 	void MoveLeft();
@@ -33,12 +31,24 @@ protected:
 	void MoveForward();
 	void MoveBack();
 
+	void ActivateAbility1();
+	void ActivateAbility2();
+	void ActivateAbility3();
+	void ActivateAbility4();
+
 private:
 
 	CharacterMovementComponent* characterMovement;
+	AbilitiesComponent* abilitiesComponent;
+	AttributeComponent* attributes;
+
+	void BindKeys();
+	void InitializeComponents();
+	void InitializeAbilitySystem();
 
 public:
 
+	PlayerController* GetController() const { return controller; }
 	CharacterMovementComponent* GetCharacterMovement() const { return characterMovement; }
 
 };

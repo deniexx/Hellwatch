@@ -5,18 +5,20 @@
 #include "Attributes/AttributeComponent.h"
 #include "GameFramework/WorldObject.h"
 
+Ability::Ability()
+{
+    cooldownTimer = 0.f;
+    cooldown = 0.f;
+    abilityCostType = HellwatchAttribute::None;
+    abilityCostAmount = 0.f;
+    bIsActive = false;
+    abilityName = "";
+    cooldownStartPolicy = CooldownStartPolicy::OnAbilityStart;
+}
+
 void Ability::Init(AbilitiesComponent* inOwningComponent)
 {
     owningComponent = inOwningComponent;
-
-    SetAbilityCostAmount(0);
-    SetActivationKey(AbilityActivationKey::None);
-    SetAbilityCostType(HellwatchAttribute::None);
-    SetAbilityName("");
-    SetIsActive(false);
-    SetAbilityCooldown(0);
-    SetCooldownStartPolicy(CooldownStartPolicy::OnAbilityStart);
-
     PostInit();
 }
 
@@ -84,6 +86,13 @@ bool Ability::CanActivate(ActivationOutcome& OutActivationOutcome)
         return false;
     }
 
+    if (cooldownTimer > 0.f)
+    {
+        OutActivationOutcome.bWasSuccessful = false;
+        OutActivationOutcome.failReason = "Ability is in cooldown";
+        return false;
+    }
+
     AttributeComponent* attributes = GetOwner()->GetAttributeComponent();
 
     if (!attributes->CheckHasEnoughOfAttributeByType(abilityCostType, abilityCostAmount))
@@ -102,5 +111,5 @@ bool Ability::CanActivate(ActivationOutcome& OutActivationOutcome)
 void Ability::SetAbilityCooldown(float newCooldown)
 {
     cooldown = newCooldown;
-    cooldown = 0.f;
+    cooldownTimer = 0.f;
 }

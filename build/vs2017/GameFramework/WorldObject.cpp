@@ -1,6 +1,8 @@
 #include "WorldObject.h"
 
 #include "graphics/scene.h"
+#include "box2d/b2_body.h"
+#include "box2d/b2_world.h"
 #include "scene_app.h"
 
 WorldObject::WorldObject()
@@ -9,6 +11,12 @@ WorldObject::WorldObject()
 	SetTranslation(gef::Vector4::kZero);
 	SetRotation(gef::Vector4::kZero);
 	SetScale(gef::Vector4::kOne);
+}
+
+WorldObject::~WorldObject()
+{
+	if (GetCollisionBody())
+		SceneApp::instance->GetBox2DWorld()->DestroyBody(GetCollisionBody());
 }
 
 void WorldObject::Init(WorldObject* owner)

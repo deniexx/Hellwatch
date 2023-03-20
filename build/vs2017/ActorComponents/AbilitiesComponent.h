@@ -22,7 +22,7 @@ public:
 	/// <summary>
 	/// Equips an ability, at a specific key
 	/// </summary>
-	void EquipAbility(Ability* abilityToEquip, AbilityActivationKey::Type keyToEquipAt);
+	void EquipAbility(std::string abilityName, AbilityActivationKey::Type keyToEquipAt);
 
 	/// <summary>
 	/// Attempts to activate ability by key
@@ -63,6 +63,12 @@ private:
 	std::vector<Ability*> availableAbilities;
 	Ability* equippedAbilities[4];
 	AttributeComponent* attributes;
+
+	bool HasAbility(Ability* abilityToCheck);
+	bool HasAbility(const std::string& abilityToCheck);
+	bool IsAbilityEquipped(Ability* abilityToCheck);
+	Ability* FindAbility(const std::string& abilityName);
+	void EquipAbilityInternal(Ability* abilityToEquip, AbilityActivationKey::Type keyToEquipAt);
 
 public:
 

@@ -52,6 +52,8 @@ class Ability
 {
 public:
 
+	Ability();
+
 	/// <summary>
 	/// Initializes the ability with the ability component
 	/// </summary>
@@ -90,7 +92,7 @@ protected:
 	/// Can the ability be activated
 	/// </summary>
 	/// <param name="OutActivationOutcome">This is an out parameter, holding information whether we can activate this ability, and if we can't why</param>
-	/// <returns>A boolean, whether we can activate this abiltiy or not</returns>
+	/// <returns>A boolean, whether we can activate this ability or not</returns>
 	virtual bool CanActivate(ActivationOutcome& OutActivationOutcome);
 
 private:
@@ -99,6 +101,7 @@ private:
 
 	float cooldownTimer;
 	float cooldown;
+	float damageAmount;
 	uint32_t abilityCostAmount;
 	HellwatchAttribute::Type abilityCostType;
 	CooldownStartPolicy::Type cooldownStartPolicy;
@@ -119,6 +122,7 @@ public:
 	void SetIsActive(bool bNewState) { bIsActive = bNewState; }
 	void SetCooldownStartPolicy(CooldownStartPolicy::Type newPolicy) { cooldownStartPolicy = newPolicy; }
 	void SetAbilityCooldown(float newCooldown);
+	void SetDamageAmount(float newAmount) { damageAmount = newAmount; }
 
 	/// <summary>
 	/// Checks if the ability is active
@@ -131,6 +135,7 @@ public:
 	__forceinline AbilityActivationKey::Type GetActivationKey() const { return activationKey; }
 	__forceinline const std::string& GetAbilityName() const { return abilityName; }
 	__forceinline bool IsInCooldown() const { return cooldown > 0 && cooldownTimer > 0.f; }
+	__forceinline float GetDamageAmount() const { return damageAmount; }
 
 	AbilitiesComponent* GetOwner() const { return owningComponent; }
 };

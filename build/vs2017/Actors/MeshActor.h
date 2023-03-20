@@ -3,9 +3,10 @@
 #include "GameFramework/WorldObject.h"
 
 #include "graphics/mesh.h"
+#include "Interfaces/Damagable.h"
 
 
-class MeshActor : public WorldObject
+class MeshActor : public WorldObject, public IDamagable
 {
 	GENERATED_BODY(WorldObject, MeshActor)
 
@@ -23,6 +24,10 @@ public:
 	MeshActor(gef::Mesh* inMesh);
 
 	virtual void Render() override;
+
+	virtual void Update(float deltaTime) override;
+
+	virtual void TakeDamage(float damageAmount) {};
 
 protected:
 
@@ -43,6 +48,8 @@ public:
 	void SetMaterial(gef::Material newMaterial) {
 		material = newMaterial; bOverrideMaterial = true;
 	}
+
+	virtual void SetRotation(const gef::Vector4& inRotation) override;
 
 
 	/************************************************************************/

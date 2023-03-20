@@ -139,7 +139,6 @@ private:
 	Int32 activeTouchID;
 	gef::Vector2 touchPosition;
 
-
 	/* -------------------------------------- */
 	/*             Input Manager              */
 	/* -------------------------------------- */

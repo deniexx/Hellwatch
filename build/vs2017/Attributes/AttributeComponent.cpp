@@ -48,6 +48,17 @@ void AttributeComponent::ApplyAttributeChange(HellwatchAttribute::Type type, flo
 	}
 }
 
+void AttributeComponent::ApplyAttributeMaxValueChange(HellwatchAttribute::Type type, float delta) const
+{
+	for (auto& attribute : attributes)
+	{
+		if (attribute.attributeType == type)
+		{
+			attribute.maxAmount += delta;
+		}
+	}
+}
+
 void AttributeComponent::InitAttributesBySpec(std::vector<FAttribute>& attributesToInit)
 {
 	attributes.clear();

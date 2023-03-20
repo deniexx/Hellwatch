@@ -6,9 +6,13 @@
 #include <graphics/renderer_3d.h>
 #include <maths/math_utils.h>
 #include "graphics/sprite.h"
+#include "assets/png_loader.h"
+#include <graphics/image_data.h>
+#include "obj_mesh_loader.h"
 
 #include "Actors/MeshActors/PlayerCharacter.h"
 #include <Actors/SpriteActor.h>
+#include "Actors/MeshActors/EnemyDummy.h"
 #include <Actors/MeshActor.h>
 
 SceneApp::SceneApp(gef::Platform& platform):
@@ -40,6 +44,9 @@ void SceneApp::Init()
 	primitive_builder_ = new PrimitiveBuilder(platform_);
 
 	playerCharacter = SpawnMeshActor<PlayerCharacter>();
+
+	gef::Mesh* mesh = primitive_builder_->CreateBoxMesh(gef::Vector4(0.5f, 0.5f, 0.5f));
+	enemyDummy = SpawnMeshActor<EnemyDummy>(mesh, gef::Vector4(2.0f, 0.f, 2.0f));
 
 	b2BodyDef newBodyDef;
 	newBodyDef.type = b2_staticBody;
@@ -97,31 +104,52 @@ bool SceneApp::Update(float frame_time)
 	b2dWorld->Step(frame_time, velocityIterations, positionIterations);
 	HandleCollision();
 
+	for (int i = 0; i < meshActors.size(); ++i)
+	{
+		if (meshActors[i])
+			meshActors[i]->Update(frame_time);
+	}
+		
+	for (int i = 0; i < spriteActors.size(); ++i)
+	{
+		if (spriteActors[i])
+			spriteActors[i]->Update(frame_time);
+	}
+
+	CheckMarkedForDeletion();
+
+	return true;
+}
+
+void SceneApp::CheckMarkedForDeletion()
+{
 	std::vector<MeshActor*> cleanMeshActors;
 	std::vector<SpriteActor*> cleanSpriteActors;
 
+	std::vector<WorldObject*> toBeDeleted;
+
 	for (auto actor : meshActors)
 	{
-		if (actor)
-		{
-			actor->Update(frame_time);
+		if (actor->GetIsMarkedForDelete())
+			toBeDeleted.push_back(actor);
+		else
 			cleanMeshActors.push_back(actor);
-		}
 	}
-		
+
 	for (auto actor : spriteActors)
 	{
-		if (actor)
-		{
-			actor->Update(frame_time);
+		if (actor->GetIsMarkedForDelete())
+			toBeDeleted.push_back(actor);
+		else
 			cleanSpriteActors.push_back(actor);
-		}
 	}
+
 
 	meshActors = cleanMeshActors;
 	spriteActors = cleanSpriteActors;
 
-	return true;
+	for (int i = 0; i < toBeDeleted.size(); ++i)
+		delete toBeDeleted[i];
 }
 
 void SceneApp::Render()
@@ -133,22 +161,17 @@ void SceneApp::Render()
 	projection_matrix = platform_.PerspectiveProjectionFov(fov, aspect_ratio, 0.001f, 100.0f);
 	renderer_3d_->set_projection_matrix(projection_matrix);
 
-	// view
-	gef::Vector4 camera_eye =  gef::Vector4(0.0f, 20.0f, 0.0f);
-	gef::Vector4 camera_lookat = gef::Vector4(0.0f, -1.0f, 0.001f);
-	gef::Vector4 camera_up(0.0f, 1.0f, 0.0f);
-
 	if (playerCharacter)
 	{
-		camera_eye = playerCharacter->GetTranslation();
-		camera_eye.set_y(20.f);
-		camera_eye.set_z(camera_eye.z() - 10);
-		camera_lookat = playerCharacter->GetTranslation();
-		camera_lookat.set_y(-1.f);
+		cameraEye = playerCharacter->GetTranslation();
+		cameraEye.set_y(20.f);
+		cameraEye.set_z(cameraEye.z() - 10);
+		cameraLookAt = playerCharacter->GetTranslation();
+		cameraLookAt.set_y(-1.f);
 	}
 	
 	gef::Matrix44 view_matrix;
-	view_matrix.LookAt(camera_eye, camera_lookat, camera_up);
+	view_matrix.LookAt(cameraEye, cameraLookAt, cameraUp);
 	renderer_3d_->set_view_matrix(view_matrix);
 
 
@@ -186,8 +209,12 @@ void SceneApp::DrawHUD()
 {
 	if(font_)
 	{
-		// display frame rate
+		gef::Vector4 mousePos = ProjectScreenToWorldSpace(GetLastTouchPosition());
+		gef::Vector4 characterPos = playerCharacter ? playerCharacter->GetTranslation() : gef::Vector4::kZero;
 		font_->RenderText(sprite_renderer_, gef::Vector4(1800.0f, 1040.0f, -0.9f), 1.0f, 0xffffffff, gef::TJ_LEFT, "FPS: %.1f", fps_);
+		font_->RenderText(sprite_renderer_, gef::Vector4(1740.0f, 1000.0f, -0.9f), 1.0f, 0xffffffff, gef::TJ_LEFT, "Mouse: %.1f, %.1f", mousePos.x(), mousePos.z());
+		font_->RenderText(sprite_renderer_, gef::Vector4(1700.0f, 960.0f, -0.9f), 1.0f, 0xffffffff, gef::TJ_LEFT, "Character: %.1f, %.1f", characterPos.x(), characterPos.z());
+		font_->RenderText(sprite_renderer_, gef::Vector4(1700.0f, 920.0f, -0.9f), 1.0f, 0xffffffff, gef::TJ_LEFT, "Enemy Health: %.1f", enemyDummy->GetHealth());
 	}
 }
 
@@ -251,10 +278,12 @@ void SceneApp::HandleCollision()
 			b2Body* bodyA = contact->GetFixtureA()->GetBody();
 			b2Body* bodyB = contact->GetFixtureB()->GetBody();
 
-			if (WorldObject* wo = (WorldObject*)bodyA->GetUserData().pointer)
+			WorldObject* wo = (WorldObject*)(bodyA->GetUserData().pointer);
+			if (wo != nullptr)
 				wo->OnCollision(bodyB);
 			
-			if (WorldObject* wo = (WorldObject*)bodyB->GetUserData().pointer)
+			wo = (WorldObject*)(bodyB->GetUserData().pointer);
+			if (wo != nullptr)
 				wo->OnCollision(bodyA);
 		}
 	}
@@ -262,11 +291,43 @@ void SceneApp::HandleCollision()
 
 void SceneApp::LoadAssets()
 {
-	gef::Scene* scene = LoadSceneAssets(platform_, "Assets/MainCharacter.scn");
+	//gef::Scene* scene = LoadSceneAssets(platform_, "Assets/MainCharacter.scn");
 
-	playerCharacter->SetMesh(GetMeshFromSceneAssets(scene));
-	playerCharacter->SetMaterial(*scene->materials.front());
-	playerCharacter->SetScale(gef::Vector4(0.01f, 0.01f, 0.01f));
+	//playerCharacter->SetMesh(GetMeshFromSceneAssets(scene));
+
+	OBJMeshLoader meshLoader;
+
+	MeshMap map;
+
+	if (meshLoader.Load("Assets/MainCharacter.obj", platform_, map))
+	{
+		playerCharacter->SetMesh(map["Ganfaul"]);
+	}
+	else
+	{
+		std::string result = meshLoader.GetLastError();
+		gef::DebugOut(result.c_str());
+
+		gef::Mesh* mesh = primitive_builder_->CreateBoxMesh(gef::Vector4(0.5f, 0.5f, 0.5f));
+		playerCharacter->SetMesh(mesh);
+	}
+
+	gef::PNGLoader png_loader;
+	std::vector<std::pair<gef::Texture*, gef::Colour>> textures;
+
+	bool success = true;
+	gef::ImageData imageData;
+
+	png_loader.Load("Assets/Ganfaul_diffuse.png", platform_, imageData);
+	gef::Material mat;
+	if (imageData.image() != nullptr)
+	{
+		gef::Texture* texture = gef::Texture::Create(platform_, imageData);
+		mat.set_texture(texture);
+	}
+
+	playerCharacter->SetMaterial(mat);
+	playerCharacter->SetScale(gef::Vector4(1.f, 1.f, 1.f));
 }
 
 b2Body* SceneApp::CreateCollisionBody(b2BodyDef bodyDef, b2FixtureDef fixtureDef, WorldObject* owningObject)
@@ -278,4 +339,9 @@ b2Body* SceneApp::CreateCollisionBody(b2BodyDef bodyDef, b2FixtureDef fixtureDef
 	userData.pointer = (uintptr_t)owningObject;
 
 	return body;
+}
+
+const gef::Vector2 SceneApp::GetLastTouchPosition()
+{
+	return SceneApp::instance->GetPlayerCharacter()->GetController()->GetMousePosition();
 }

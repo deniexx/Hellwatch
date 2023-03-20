@@ -22,6 +22,8 @@ public:
 	/// </summary>
 	WorldObject();
 
+	~WorldObject();
+
 	/// <summary>
 	/// This function initializes the world object, should only be called by the spawn object scene function.
 	/// </summary>
@@ -52,13 +54,15 @@ public:
 
 protected:
 
-	b2Body* collisionBody;
+	b2Body* collisionBody = nullptr;
 	gef::Matrix44 transformMat;
 	WorldObject* owningObject;
 
 	gef::Vector4 translation;
 	gef::Vector4 scale;
 	gef::Vector4 rotationVec;
+
+	bool bMarkedForDelete = false;
 
 	void BuildTransform();
 	
@@ -83,5 +87,10 @@ public:
 	__forceinline const gef::Matrix44& GetTransform() const { return transformMat; }
 	__forceinline WorldObject* GetOwner() const { return owningObject; }
 	__forceinline b2Body* GetCollisionBody() const { return collisionBody; }
+
+
+	__forceinline void MarkForDelete() { bMarkedForDelete = true; }
+
+	__forceinline const bool GetIsMarkedForDelete() const { return bMarkedForDelete; }
 };
 

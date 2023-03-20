@@ -1,5 +1,8 @@
 #include "PlayerCharacter.h"
 #include "ActorComponents/CharacterMovementComponent.h"
+#include "ActorComponents/AbilitiesComponent.h"
+#include "Attributes/AttributeComponent.h"
+#include "Abilities/PlayerAbilities/IceBolt.h"
 
 PlayerCharacter::PlayerCharacter()
 	: Super()
@@ -8,6 +11,12 @@ PlayerCharacter::PlayerCharacter()
 }
 
 void PlayerCharacter::PostInit()
+{
+	BindKeys();
+	InitializeComponents();
+}
+
+void PlayerCharacter::BindKeys()
 {
 	controller = new PlayerController(SceneApp::instance->platform());
 	FKeyBindKeyboard keybind;
@@ -20,7 +29,6 @@ void PlayerCharacter::PostInit()
 	keybind.functionBind = bindFunc(MoveRight);
 	controller->BindKeyboardEvent(keybind);
 
-
 	keybind.keyCode = gef::Keyboard::KC_W;
 	keybind.functionBind = bindFunc(MoveForward);
 	controller->BindKeyboardEvent(keybind);
@@ -29,6 +37,14 @@ void PlayerCharacter::PostInit()
 	keybind.functionBind = bindFunc(MoveBack);
 	controller->BindKeyboardEvent(keybind);
 
+	keybind.keyCode = gef::Keyboard::KC_1;
+	keybind.inputAction = HellwatchInputAction::Released;
+	keybind.functionBind = bindFunc(ActivateAbility1);
+	controller->BindKeyboardEvent(keybind);
+}
+
+void PlayerCharacter::InitializeComponents()
+{
 	b2BodyDef bodyDef;
 	bodyDef.position.Set(0.f, 0.f);
 	bodyDef.type = b2_dynamicBody;
@@ -36,7 +52,7 @@ void PlayerCharacter::PostInit()
 	bodyDef.linearDamping = 5.f;
 
 	b2PolygonShape shape;
-	shape.SetAsBox(1.f, 1.f);
+	shape.SetAsBox(.75f, .75f);
 
 	b2FixtureDef fixtureDef;
 	fixtureDef.shape = &shape;
@@ -47,20 +63,41 @@ void PlayerCharacter::PostInit()
 
 	characterMovement = new CharacterMovementComponent();
 	characterMovement->Init(this);
+
+	InitializeAbilitySystem();
 }
+
+void PlayerCharacter::InitializeAbilitySystem()
+{
+	attributes = new AttributeComponent();
+
+	FAttribute attributeToAdd;
+	attributeToAdd.attributeType = HellwatchAttribute::Health;
+	attributeToAdd.bClampedToZero = true;
+	attributeToAdd.maxAmount = 100.f;
+	attributeToAdd.currentAmount = 100.f;
+	attributes->AddAttribute(attributeToAdd);
+
+	attributeToAdd.attributeType = HellwatchAttribute::Mana;
+	attributes->AddAttribute(attributeToAdd);
+
+	abilitiesComponent = new AbilitiesComponent();
+	abilitiesComponent->Init(this);
+	abilitiesComponent->RegisterAttributes(attributes);
+	
+	IceBolt* iceBolt = new IceBolt();
+	abilitiesComponent->AddAbility(iceBolt);
+	abilitiesComponent->EquipAbility("IceBolt", AbilityActivationKey::AbilityKey1);
+}
+
 
 void PlayerCharacter::Update(float deltaTime)
 {
+	Super::Update(deltaTime);
+
 	controller->Update();
 	characterMovement->UpdateComponent(deltaTime);
-
-	b2Body* body = GetCollisionBody();
-
-	if (body)
-	{
-		b2Vec2 translation = body->GetPosition();
-		SetTranslation(gef::Vector4(translation.x, 0, translation.y));
-	}
+	abilitiesComponent->UpdateComponent(deltaTime);
 }
 
 void PlayerCharacter::MoveLeft()
@@ -85,4 +122,24 @@ void PlayerCharacter::MoveBack()
 {
 	if (characterMovement)
 		characterMovement->ApplyMovementForceInDirection(b2Vec2(0, -1));
+}
+
+void PlayerCharacter::ActivateAbility1()
+{
+	abilitiesComponent->ActivateAbilityByKey(AbilityActivationKey::AbilityKey1);
+}
+
+void PlayerCharacter::ActivateAbility2()
+{
+	abilitiesComponent->ActivateAbilityByKey(AbilityActivationKey::AbilityKey2);
+}
+
+void PlayerCharacter::ActivateAbility3()
+{
+	abilitiesComponent->ActivateAbilityByKey(AbilityActivationKey::AbilityKey3);
+}
+
+void PlayerCharacter::ActivateAbility4()
+{
+	abilitiesComponent->ActivateAbilityByKey(AbilityActivationKey::AbilityKey4);
 }

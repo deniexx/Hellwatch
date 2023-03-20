@@ -24,6 +24,7 @@ class MeshActor;
 class SpriteActor;
 class WorldObject;
 class PlayerCharacter;
+class EnemyDummy;
 
 class SceneApp : public gef::Application
 {
@@ -51,6 +52,7 @@ private:
 	void DrawHUD();
 	void SetupLights();
 	void HandleCollision();
+	void CheckMarkedForDeletion();
 	gef::Scene* LoadSceneAssets(gef::Platform& platform, const char* filename);
 	gef::Mesh* GetMeshFromSceneAssets(gef::Scene* scene);
 
@@ -61,9 +63,14 @@ private:
 	PrimitiveBuilder* primitive_builder_;
 
 	PlayerCharacter* playerCharacter;
+	EnemyDummy* enemyDummy;
 	std::vector<MeshActor*> meshActors;
 	std::vector<SpriteActor*> spriteActors;
 	gef::Scene* scene_assets_;
+
+	gef::Vector4 cameraEye = gef::Vector4(0.0f, 20.0f, 0.0f);
+	gef::Vector4 cameraLookAt = gef::Vector4(0.0f, -1.0f, 0.001f);
+	gef::Vector4 cameraUp = gef::Vector4(0.0f, 1.0f, 0.0f);
 
 	float fps_;
 
@@ -81,6 +88,12 @@ public:
 	__forceinline b2World* GetBox2DWorld() const { return b2dWorld; }
 	__forceinline float GetViewportWidth() const { return platform_.width(); }
 	__forceinline float GetViewportHeight() const { return platform_.height(); }
+	__forceinline PlayerCharacter* GetPlayerCharacter() const { return playerCharacter; }
+	__forceinline PrimitiveBuilder* GetPrimitiveBuilder() const { return primitive_builder_; }
+	__forceinline gef::Vector4 GetCameraEye() const { return cameraEye; }
+	__forceinline gef::Vector4 GetCameraLookAt() const { return cameraLookAt; }
+
+	static const gef::Vector2 GetLastTouchPosition();
 
 
 

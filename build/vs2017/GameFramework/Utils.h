@@ -57,12 +57,18 @@ static gef::Vector4 ProjectScreenToWorldSpace(gef::Vector2 v2)
 	gef::Matrix44 actualPos = calc * matProjection;
 
 	gef::Vector4 pos = actualPos.GetTranslation();
-	pos.set_x(pos.x() * 5);
-	pos.set_y(pos.y() * 5 - 25.f);
+	pos.set_x(pos.x());
+	pos.set_y(pos.y() - 8.1f);
 
 	float posY = pos.y();
 	pos.set_z(posY);
 	pos.set_y(0);
+
+	gef::Vector4 cameraPos = SceneApp::instance->GetCameraLookAt();
+
+	// @TODO: Figure out WHY?
+	pos.set_x(pos.x() * 1.35714286);
+	pos.set_z(cameraPos.z() + pos.z() * 1.75f);
 
 	return pos;
 }

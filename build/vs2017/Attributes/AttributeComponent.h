@@ -37,6 +37,11 @@ public:
 	void ApplyAttributeChange(HellwatchAttribute::Type type, float delta) const;
 
 	/// <summary>
+	/// Applies an attribute change to the specified attribute's max value, can be positive or negative
+	/// </summary>
+	void ApplyAttributeMaxValueChange(HellwatchAttribute::Type type, float delta) const;
+
+	/// <summary>
 	/// Initializes attribute component by spec, spec meaning a container of multiple attributes
 	/// </summary>
 	/// <param name="attributesToInit"></param>

@@ -6,6 +6,64 @@ void AbilitiesComponent::PostInit()
 		equippedAbilities[i] = nullptr;
 }
 
+bool AbilitiesComponent::HasAbility(Ability* abilityToCheck)
+{
+	for (auto ability : availableAbilities)
+	{
+		if (!ability) continue;
+		if (ability->GetAbilityName() == abilityToCheck->GetAbilityName())
+			return true;
+	}
+
+	return false;
+}
+
+bool AbilitiesComponent::HasAbility(const std::string& abilityToCheck)
+{
+	for (auto ability : availableAbilities)
+	{
+		if (!ability) continue;
+		if (ability->GetAbilityName() == abilityToCheck)
+			return true;
+	}
+
+	return false;
+}
+
+bool AbilitiesComponent::IsAbilityEquipped(Ability* abilityToCheck)
+{
+	for (auto ability : equippedAbilities)
+	{
+		if (!ability) continue;
+		if (ability->GetAbilityName() == abilityToCheck->GetAbilityName())
+			return true;
+	}
+
+	return false;
+}
+
+Ability* AbilitiesComponent::FindAbility(const std::string& abilityName)
+{
+	for (auto ability : availableAbilities)
+	{
+		if (!ability) continue;
+		if (ability->GetAbilityName() == abilityName)
+			return ability;
+	}
+
+	return nullptr;
+}
+
+void AbilitiesComponent::EquipAbilityInternal(Ability* abilityToEquip, AbilityActivationKey::Type keyToEquipAt)
+{
+	Ability* prevAbility = equippedAbilities[keyToEquipAt];
+	if (prevAbility)
+		prevAbility->SetActivationKey(AbilityActivationKey::None);
+
+	equippedAbilities[keyToEquipAt] = abilityToEquip;
+	abilityToEquip->SetActivationKey(keyToEquipAt);
+}
+
 void AbilitiesComponent::UpdateComponent(float deltaTime)
 {
 	for (const auto& ability : equippedAbilities)
@@ -17,12 +75,19 @@ void AbilitiesComponent::UpdateComponent(float deltaTime)
 
 void AbilitiesComponent::AddAbility(Ability* abilityToAdd)
 {
+	abilityToAdd->Init(this);
 	availableAbilities.push_back(abilityToAdd);
 }
 
-void AbilitiesComponent::EquipAbility(Ability* abilityToEquip, AbilityActivationKey::Type keyToEquipAt)
+void AbilitiesComponent::EquipAbility(std::string abilityName, AbilityActivationKey::Type keyToEquipAt)
 {
-	equippedAbilities[keyToEquipAt] = abilityToEquip;
+	if (!HasAbility(abilityName)) return;
+	if (Ability* foundAbility = FindAbility(abilityName))
+	{
+		if (IsAbilityEquipped(foundAbility)) return;
+
+		EquipAbilityInternal(foundAbility, keyToEquipAt);
+	}
 }
 
 void AbilitiesComponent::ActivateAbilityByKey(AbilityActivationKey::Type key)
