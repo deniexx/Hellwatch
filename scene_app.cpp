@@ -286,6 +286,8 @@ void SceneApp::HandleCollision()
 			if (wo != nullptr)
 				wo->OnCollision(bodyA);
 		}
+
+		contact->GetNext();
 	}
 }
 
