@@ -313,9 +313,6 @@ void SceneApp::LoadAssets()
 	}
 
 	gef::PNGLoader png_loader;
-	std::vector<std::pair<gef::Texture*, gef::Colour>> textures;
-
-	bool success = true;
 	gef::ImageData imageData;
 
 	png_loader.Load("Assets/Ganfaul_diffuse.png", platform_, imageData);

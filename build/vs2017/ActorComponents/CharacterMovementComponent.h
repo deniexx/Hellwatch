@@ -13,6 +13,12 @@ public:
 
 	virtual void UpdateComponent(float deltaTime) override;
 
+	/// <summary>
+	/// Applies Movement force in a direction, that is scaled with the acceleration
+	/// </summary>
+	/// <param name="force"></param>
+	void ApplyMovementForceInDirection(b2Vec2 force);
+
 protected:
 	
 	virtual void PostInit() override;
@@ -26,11 +32,15 @@ private:
 
 public:
 	
+	/************************************************************************/
+	/*                              SETTERS                                 */
+	/************************************************************************/
 	void SetCollisionBody(b2Body* newBody) { ownerCollision = newBody; }
 	void SetFrozen(bool bNewState) { bFrozen = bNewState; }
-	void ApplyMovementForceInDirection(b2Vec2 force);
 
-
+	/************************************************************************/
+	/*                              GETTERS                                 */
+	/************************************************************************/
 	__forceinline bool IsFrozen() const { return bFrozen; }
 	__forceinline float GetSpeed() const { return ownerCollision ? ownerCollision->GetLinearVelocity().Length() : 0.f; }
 };
