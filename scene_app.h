@@ -25,6 +25,7 @@ class SpriteActor;
 class WorldObject;
 class PlayerCharacter;
 class EnemyDummy;
+class Enemy;
 
 class SceneApp : public gef::Application
 {
@@ -64,6 +65,7 @@ private:
 
 	PlayerCharacter* playerCharacter;
 	EnemyDummy* enemyDummy;
+	Enemy* testEnemy;
 	std::vector<MeshActor*> meshActors;
 	std::vector<SpriteActor*> spriteActors;
 	gef::Scene* scene_assets_;

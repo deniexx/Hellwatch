@@ -69,6 +69,9 @@
     <ClCompile Include="Actors\MeshActors\EnemyDummy.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Actors\MeshActors\Enemy.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\scene_app.h">
@@ -126,6 +129,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Interfaces\Damagable.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Actors\MeshActors\Enemy.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

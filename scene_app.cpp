@@ -47,6 +47,8 @@ void SceneApp::Init()
 
 	gef::Mesh* mesh = primitive_builder_->CreateBoxMesh(gef::Vector4(0.5f, 0.5f, 0.5f));
 	enemyDummy = SpawnMeshActor<EnemyDummy>(mesh, gef::Vector4(2.0f, 0.f, 2.0f));
+	testEnemy = SpawnMeshActor<Enemy>(mesh, gef::Vector4(2.0f, 0.f, 2.0f));
+
 
 	b2BodyDef newBodyDef;
 	newBodyDef.type = b2_staticBody;

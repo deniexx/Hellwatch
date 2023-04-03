@@ -227,6 +227,7 @@
     <ClCompile Include="ActorComponents\AbilitiesComponent.cpp" />
     <ClCompile Include="ActorComponents\ActorComponent.cpp" />
     <ClCompile Include="Actors\MeshActor.cpp" />
+    <ClCompile Include="Actors\MeshActors\Enemy.cpp" />
     <ClCompile Include="Actors\SpriteActor.cpp" />
     <ClCompile Include="Attributes\AttributeComponent.cpp" />
     <ClCompile Include="Actors\MeshActors\PlayerCharacter.cpp" />
@@ -245,6 +246,7 @@
     <ClInclude Include="ActorComponents\AbilitiesComponent.h" />
     <ClInclude Include="ActorComponents\ActorComponent.h" />
     <ClInclude Include="Actors\MeshActor.h" />
+    <ClInclude Include="Actors\MeshActors\Enemy.h" />
     <ClInclude Include="Actors\SpriteActor.h" />
     <ClInclude Include="Attributes\AttributeComponent.h" />
     <ClInclude Include="Attributes\AttributeTypes.h" />
