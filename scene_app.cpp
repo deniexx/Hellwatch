@@ -11,9 +11,10 @@
 #include "obj_mesh_loader.h"
 
 #include "Actors/MeshActors/PlayerCharacter.h"
-#include <Actors/SpriteActor.h>
+#include "Actors/SpriteActor.h"
 #include "Actors/MeshActors/EnemyDummy.h"
-#include <Actors/MeshActor.h>
+#include "Actors/MeshActors/Enemy.h"
+#include "Actors/MeshActor.h"
 
 SceneApp::SceneApp(gef::Platform& platform):
 	Application(platform)
@@ -47,8 +48,10 @@ void SceneApp::Init()
 
 	gef::Mesh* mesh = primitive_builder_->CreateBoxMesh(gef::Vector4(0.5f, 0.5f, 0.5f));
 	enemyDummy = SpawnMeshActor<EnemyDummy>(mesh, gef::Vector4(2.0f, 0.f, 2.0f));
-	testEnemy = SpawnMeshActor<Enemy>(mesh, gef::Vector4(2.0f, 0.f, 2.0f));
-
+	testEnemy = SpawnMeshActor<Enemy>(mesh, gef::Vector4(4.0f, 0.f, 4.0f));
+	gef::Material mat;
+	mat.set_colour(0xFF0000FF);
+	testEnemy->SetMaterial(mat);
 
 	b2BodyDef newBodyDef;
 	newBodyDef.type = b2_staticBody;
@@ -67,7 +70,7 @@ void SceneApp::Init()
 	playerCharacter->SetMaterial(mat1);
 
 	MeshActor* actor = SpawnMeshActor(primitive_builder_->CreateBoxMesh(gef::Vector4(50.f, 0.5f, 50.f)), gef::Vector4(0.f, -2.f, 0.f));
-	gef::Material mat;
+	gef::Material enemyMat;
 	mat.set_colour(0xFF00FFFF);
 	actor->SetMaterial(mat);
 
@@ -108,13 +111,13 @@ bool SceneApp::Update(float frame_time)
 
 	for (int i = 0; i < meshActors.size(); ++i)
 	{
-		if (meshActors[i])
+		if (meshActors[i] && meshActors[i]->ShouldUpdate())
 			meshActors[i]->Update(frame_time);
 	}
 		
 	for (int i = 0; i < spriteActors.size(); ++i)
 	{
-		if (spriteActors[i])
+		if (spriteActors[i] &&  spriteActors[i]->ShouldUpdate())
 			spriteActors[i]->Update(frame_time);
 	}
 

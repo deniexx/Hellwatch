@@ -61,7 +61,7 @@ void PlayerCharacter::InitializeComponents()
 
 	SetCollisionBody(SceneApp::instance->CreateCollisionBody(bodyDef, fixtureDef, this));
 
-	characterMovement = new CharacterMovementComponent();
+	characterMovement = CreateComponent<CharacterMovementComponent>();
 	characterMovement->Init(this);
 
 	InitializeAbilitySystem();
@@ -69,7 +69,7 @@ void PlayerCharacter::InitializeComponents()
 
 void PlayerCharacter::InitializeAbilitySystem()
 {
-	attributes = new AttributeComponent();
+	attributes = CreateComponent<AttributeComponent>();
 
 	FAttribute attributeToAdd;
 	attributeToAdd.attributeType = HellwatchAttribute::Health;
@@ -81,7 +81,7 @@ void PlayerCharacter::InitializeAbilitySystem()
 	attributeToAdd.attributeType = HellwatchAttribute::Mana;
 	attributes->AddAttribute(attributeToAdd);
 
-	abilitiesComponent = new AbilitiesComponent();
+	abilitiesComponent = CreateComponent<AbilitiesComponent>();
 	abilitiesComponent->Init(this);
 	abilitiesComponent->RegisterAttributes(attributes);
 	
@@ -96,8 +96,6 @@ void PlayerCharacter::Update(float deltaTime)
 	Super::Update(deltaTime);
 
 	controller->Update();
-	characterMovement->UpdateComponent(deltaTime);
-	abilitiesComponent->UpdateComponent(deltaTime);
 }
 
 void PlayerCharacter::MoveLeft()

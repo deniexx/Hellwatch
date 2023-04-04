@@ -8,12 +8,16 @@
 
 class Enemy : public MeshActor
 {
+	GENERATED_BODY(MeshActor, Enemy)
+
 public:
-	virtual void TakeDamage(float damageAmount);
+
+	virtual void TakeDamage(float damageAmount) override;
 	float GetHealth() { return attributes ? attributes->GetCurrentAttributeValueByType(HellwatchAttribute::Health) : 0.f; }
-	void update();
+	virtual void Update(float deltaTime) override;
 
 protected:
+
 	AttributeComponent* attributes;
 	virtual void PostInit() override;
 	CharacterMovementComponent* enemyMovement;

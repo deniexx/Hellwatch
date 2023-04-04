@@ -63,6 +63,7 @@ protected:
 	gef::Vector4 rotationVec;
 
 	bool bMarkedForDelete = false;
+	bool bDisableUpdate = false;
 
 	void BuildTransform();
 	
@@ -90,7 +91,10 @@ public:
 
 
 	__forceinline void MarkForDelete() { bMarkedForDelete = true; }
+	__forceinline void DisableUpdate() { bDisableUpdate = true; }
+	__forceinline void EnableUpdate() { bDisableUpdate = false; }
 
+	__forceinline bool ShouldUpdate() { return !bDisableUpdate; }
 	__forceinline const bool GetIsMarkedForDelete() const { return bMarkedForDelete; }
 };
 

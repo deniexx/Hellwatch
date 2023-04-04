@@ -8,7 +8,7 @@ void EnemyDummy::TakeDamage(float damageAmount)
 
 void EnemyDummy::PostInit()
 {
-	attributes = new AttributeComponent();
+	attributes = CreateComponent<AttributeComponent>();
 	
 	FAttribute health;
 	health.attributeType = HellwatchAttribute::Health;

@@ -2,6 +2,7 @@
 
 #include "scene_app.h"
 #include "graphics/renderer_3d.h"
+#include "ActorComponents/ActorComponent.h"
 
 MeshActor::MeshActor()
 	: Super()
@@ -42,6 +43,11 @@ void MeshActor::Update(float deltaTime)
 	{
 		b2Vec2 translation = body->GetPosition();
 		SetTranslation(gef::Vector4(translation.x, 0, translation.y));
+	}
+
+	for (auto component : components)
+	{
+		component->UpdateComponent(deltaTime);
 	}
 }
 

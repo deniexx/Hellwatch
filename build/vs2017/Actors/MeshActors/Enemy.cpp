@@ -8,7 +8,7 @@ void Enemy::TakeDamage(float damageAmount)
 
 void Enemy::PostInit()
 {
-	attributes = new AttributeComponent();
+	attributes = CreateComponent<AttributeComponent>();
 
 	FAttribute health;
 	health.attributeType = HellwatchAttribute::Health;
@@ -18,7 +18,7 @@ void Enemy::PostInit()
 	attributes->AddAttribute(health);
 
 	b2BodyDef bodyDef;
-	bodyDef.position.Set(0.f, 0.f);
+	bodyDef.position.Set(GetTranslation().x(), GetTranslation().z());
 	bodyDef.type = b2_dynamicBody;
 	bodyDef.enabled = true;
 	bodyDef.linearDamping = 5.f;
@@ -33,11 +33,21 @@ void Enemy::PostInit()
 
 	SetCollisionBody(SceneApp::instance->CreateCollisionBody(bodyDef, fixtureDef, this));
 
-	enemyMovement = new CharacterMovementComponent();
+	enemyMovement = CreateComponent<CharacterMovementComponent>();
 	enemyMovement->Init(this);
 }
 
-void Enemy::update() {
+void Enemy::Update(float deltaTime) 
+{
+	Super::Update(deltaTime);
+
+	if (attributes->GetCurrentAttributeValueByType(HellwatchAttribute::Health) <= 0.f)
+	{
+		DisableUpdate();
+		MarkForDelete();
+		return;
+	}
+
 	if (PlayerCharacter* player = SceneApp::instance->GetPlayerCharacter())
 	{
 		gef::Vector4 playerPosition = player->GetTranslation();

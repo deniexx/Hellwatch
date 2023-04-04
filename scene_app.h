@@ -102,10 +102,10 @@ public:
 	/// <summary>
 	/// Spawns a MeshActor into the scene and gets it ready for rendering and updating
 	/// </summary>
-	template <typename T = MeshActor>
-	T* SpawnMeshActor(gef::Mesh* mesh = nullptr, gef::Vector4 translation = gef::Vector4::kZero, gef::Vector4 rotation = gef::Vector4::kZero, gef::Vector4 scale = gef::Vector4::kOne, WorldObject* owner = nullptr)
+	template <typename MeshActorType = MeshActor>
+	MeshActorType* SpawnMeshActor(gef::Mesh* mesh = nullptr, gef::Vector4 translation = gef::Vector4::kZero, gef::Vector4 rotation = gef::Vector4::kZero, gef::Vector4 scale = gef::Vector4::kOne, WorldObject* owner = nullptr)
 	{
-		T* meshActor = new T();
+		MeshActorType* meshActor = new MeshActorType();
 		meshActor->SetMesh(mesh);
 		meshActor->SetTranslation(translation);
 		meshActor->SetRotation(rotation);
@@ -119,10 +119,10 @@ public:
 	/// <summary>
 	/// Spawns a SpriteActor into the scene and gets it ready for rendering and updating
 	/// </summary>
-	template<typename T = SpriteActor>
-	T* SpawnSpriteActor(gef::Sprite* sprite = nullptr, gef::Vector2 position = gef::Vector2::kZero, float rotation = 0.f, WorldObject* owner = nullptr)
+	template<typename SpriteActorType = SpriteActor>
+	SpriteActorType* SpawnSpriteActor(gef::Sprite* sprite = nullptr, gef::Vector2 position = gef::Vector2::kZero, float rotation = 0.f, WorldObject* owner = nullptr)
 	{
-		T* spriteActor = new T();
+		SpriteActorType* spriteActor = new SpriteActorType();
 		spriteActor->SetSprite(sprite);
 		spriteActor->SetTranslation(gef::Vector4(position.x, position.y, 0.f));
 		spriteActor->SetRotation(rotation);

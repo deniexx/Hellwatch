@@ -13,7 +13,7 @@ void IceBolt::PostInit()
 	SetAbilityName("IceBolt");
 	SetAbilityCostType(HellwatchAttribute::Mana);
 	SetAbilityCostAmount(10.f);
-	SetAbilityCooldown(3.f);
+	SetAbilityCooldown(0.75f);
 	SetCooldownStartPolicy(CooldownStartPolicy::OnAbilityStart);
 	SetDamageAmount(20.f);
 }

@@ -5,6 +5,7 @@
 #include "graphics/mesh.h"
 #include "Interfaces/Damagable.h"
 
+class ActorComponent;
 
 class MeshActor : public WorldObject, public IDamagable
 {
@@ -37,6 +38,7 @@ protected:
 
 private:
 
+	std::vector<ActorComponent*> components;
 	gef::Mesh* mesh;
 
 public:
@@ -45,10 +47,10 @@ public:
 	/*                              SETTERS                                 */
 	/************************************************************************/
 	void SetMesh(gef::Mesh* inMesh) { mesh = inMesh; }
-	void SetMaterial(gef::Material newMaterial) {
+	void SetMaterial(gef::Material newMaterial) 
+	{
 		material = newMaterial; bOverrideMaterial = true;
 	}
-
 	virtual void SetRotation(const gef::Vector4& inRotation) override;
 
 
@@ -56,5 +58,52 @@ public:
 	/*                              GETTERS                                 */
 	/************************************************************************/
 	__forceinline const gef::Mesh* GetMesh() const { return mesh; }
+	__forceinline const std::vector<ActorComponent*>& GetComponents() { return components; }
+
+	/************************************************************************/
+	/*                             TEMPLATES                                */
+	/************************************************************************/
+
+protected:
+
+	template<typename ComponentType = ActorComponent>
+	ComponentType* CreateComponent()
+	{
+		ComponentType* component = new ComponentType();
+		component->Init(this);
+		components.push_back(component);
+
+		return component;
+	}
+
+
+public:
+
+	template<typename ComponentType = ActorComponent>
+	ComponentType* GetComponent()
+	{
+		for (const auto component : components)
+		{
+			if (ComponentType* foundComponent = reinterpret_cast<ComponentType>(component))
+			{
+				return foundComponent;
+			}
+		}
+	}
+
+	template<typename ComponentType = ActorComponent>
+	std::vector<ComponentType*>& GetComponents()
+	{
+		std::vector<ComponentType*> componentsFound;
+		for (const auto component : components)
+		{
+			if (ComponentType* foundComponent = reinterpret_cast<ComponentType>(component))
+			{
+				componentsFound.push_back(foundComponent);
+			}
+		}
+
+		return componentsFound;
+	}
 };
 
