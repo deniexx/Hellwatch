@@ -51,6 +51,17 @@ void SceneApp::Init()
 	InitFont();
 	SetupLights();
 
+	loadingSprite = new gef::Sprite();
+
+	gef::PNGLoader png_loader;
+	gef::ImageData imageData;
+	png_loader.Load("Assets/Loading.png", platform_, imageData);
+	if (imageData.image() != nullptr)
+	{
+		gef::Texture* texture = gef::Texture::Create(platform_, imageData);
+		loadingSprite->set_texture(texture);
+	}
+
 	loadFuture = std::async(std::launch::async, [this] { LoadAssets(); return GameState::Type::Loading; });
 }
 
@@ -144,7 +155,8 @@ void SceneApp::UpdateLoading(float frame_time)
 {
 	if (loadFuture._Is_ready())
 	{
-		SetGameState(GameState::MainMenu);
+		SetGameState(GameState::GameLoop);
+		delete loadingSprite;
 	}
 }
 
@@ -214,6 +226,10 @@ void SceneApp::RenderLoading()
 	gef::Matrix44 view_matrix;
 	view_matrix.LookAt(cameraEye, cameraLookAt, cameraUp);
 	renderer_3d_->set_view_matrix(view_matrix);
+
+	sprite_renderer_->Begin();
+	sprite_renderer_->DrawSprite(*loadingSprite);
+	sprite_renderer_->End();
 }
 
 void SceneApp::RenderMainMenu()

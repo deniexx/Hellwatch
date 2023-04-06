@@ -100,6 +100,7 @@ private:
 
 	std::future<GameState::Type> loadFuture;
 
+	gef::Sprite* loadingSprite;
 	PlayerCharacter* playerCharacter;
 	EnemyDummy* enemyDummy;
 	Enemy* testEnemy;
