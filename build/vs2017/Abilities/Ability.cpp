@@ -26,12 +26,16 @@ void Ability::Update(float deltaTime)
 {
     if (cooldown > 0 && cooldownTimer > 0)
         cooldownTimer -= deltaTime;
-
 }
 
 ActivationOutcome Ability::TryActivate()
 {
     ActivationOutcome outcome;
+
+    if (IsAbilityTargeting())
+    {
+        CommitAbility();
+    }
 
     if (!CanActivate(outcome))
     {
@@ -44,14 +48,19 @@ ActivationOutcome Ability::TryActivate()
 
 void Ability::CommitAbility()
 {
-
+    if (bIsTargeting)
+    {
+        EndTargeting();
+        Commit();
+    }
 }
 
 bool Ability::EndAbility()
 {
+	EndTargeting();
+
     if (!IsActive())
         return false;
-
     End();
     return true;
 }
@@ -64,12 +73,33 @@ void Ability::Begin()
 {
     if (cooldownStartPolicy == CooldownStartPolicy::OnAbilityStart)
         cooldownTimer = cooldown;
+
+    if (IsAbilityTargeted())
+	{
+		SetIsTargeting(true);
+        BeginTargeting();
+        return;
+    }  
 }
 
 void Ability::End()
 {
     if (cooldownStartPolicy == CooldownStartPolicy::OnAbilityEnd)
         cooldownTimer = cooldown;
+
+    EndTargeting();
+}
+
+void Ability::Commit()
+{
+}
+
+void Ability::BeginTargeting()
+{
+}
+
+void Ability::EndTargeting()
+{
 }
 
 bool Ability::CanActivate(ActivationOutcome& OutActivationOutcome)

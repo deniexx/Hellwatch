@@ -8,7 +8,6 @@
 #include "graphics/sprite.h"
 #include "assets/png_loader.h"
 #include <graphics/image_data.h>
-#include "obj_mesh_loader.h"
 
 #include "Actors/MeshActors/PlayerCharacter.h"
 #include "Actors/SpriteActor.h"
@@ -27,12 +26,15 @@ SceneApp::SceneApp(gef::Platform& platform):
 {
 }
 
+#pragma region Init and CleanUp
 void SceneApp::Init()
 {
 	if (!instance)
 		instance = this;
 	else
 		delete this;
+
+	BuildToLoadData();
 
 	sprite_renderer_ = gef::SpriteRenderer::Create(platform_);
 
@@ -41,6 +43,10 @@ void SceneApp::Init()
 
 	gravity = b2Vec2(0.0f, -0.f);
 	b2dWorld = new b2World(gravity);
+
+	InitFont();
+	SetupLights();
+	LoadAssets();
 
 	// initialise primitive builder to make create some 3D geometry easier
 	primitive_builder_ = new PrimitiveBuilder(platform_);
@@ -66,18 +72,10 @@ void SceneApp::Init()
 	newFixtureDef.density = 1.f;
 	newFixtureDef.friction = 0.3f;
 
-	gef::Material mat1;
-	mat1.set_colour(0xFF0000FF);
-	playerCharacter->SetMaterial(mat1);
-
 	MeshActor* actor = SpawnMeshActor(primitive_builder_->CreateBoxMesh(gef::Vector4(50.f, 0.5f, 50.f)), gef::Vector4(0.f, -2.f, 0.f));
 	gef::Material enemyMat;
 	mat.set_colour(0xFF00FFFF);
 	actor->SetMaterial(mat);
-
-	InitFont();
-	SetupLights();
-	LoadAssets();
 }
 
 void SceneApp::CleanUp()
@@ -100,7 +98,9 @@ void SceneApp::CleanUp()
 	delete b2dWorld;
 	b2dWorld = NULL;
 }
+#pragma endregion
 
+#pragma region GameLoop
 bool SceneApp::Update(float frame_time)
 {
 	fps_ = 1.0f / frame_time;
@@ -126,6 +126,31 @@ bool SceneApp::Update(float frame_time)
 	CheckMarkedForDeletion();
 
 	return true;
+}
+
+void SceneApp::HandleCollision()
+{
+	b2Contact* contact = b2dWorld->GetContactList();
+	int numContacts = b2dWorld->GetContactCount();
+
+	for (int i = 0; i < numContacts; ++i)
+	{
+		if (contact->IsTouching())
+		{
+			b2Body* bodyA = contact->GetFixtureA()->GetBody();
+			b2Body* bodyB = contact->GetFixtureB()->GetBody();
+
+			WorldObject* wo = (WorldObject*)(bodyA->GetUserData().pointer);
+			if (wo != nullptr)
+				wo->OnCollision(bodyB);
+
+			wo = (WorldObject*)(bodyB->GetUserData().pointer);
+			if (wo != nullptr)
+				wo->OnCollision(bodyA);
+		}
+
+		contact->GetNext();
+	}
 }
 
 void SceneApp::CheckMarkedForDeletion()
@@ -181,7 +206,6 @@ void SceneApp::Render()
 	view_matrix.LookAt(cameraEye, cameraLookAt, cameraUp);
 	renderer_3d_->set_view_matrix(view_matrix);
 
-
 	// draw 3d geometry
 	renderer_3d_->Begin();
 
@@ -200,18 +224,6 @@ void SceneApp::Render()
 	sprite_renderer_->End();
 }
 
-void SceneApp::InitFont()
-{
-	font_ = new gef::Font(platform_);
-	font_->Load("comic_sans");
-}
-
-void SceneApp::CleanUpFont()
-{
-	delete font_;
-	font_ = NULL;
-}
-
 void SceneApp::DrawHUD()
 {
 	if(font_)
@@ -224,23 +236,9 @@ void SceneApp::DrawHUD()
 		font_->RenderText(sprite_renderer_, gef::Vector4(1700.0f, 920.0f, -0.9f), 1.0f, 0xffffffff, gef::TJ_LEFT, "Enemy Health: %.1f", enemyDummy->GetHealth());
 	}
 }
+#pragma endregion
 
-void SceneApp::SetupLights()
-{
-	// grab the data for the default shader used for rendering 3D geometry
-	gef::Default3DShaderData& default_shader_data = renderer_3d_->default_shader_data();
-
-	// set the ambient light
-	default_shader_data.set_ambient_light_colour(gef::Colour(0.25f, 0.25f, 0.25f, 1.0f));
-
-	// add a point light that is almost white, but with a blue tinge
-	// the position of the light is set far away so it acts light a directional light
-	gef::PointLight default_point_light;
-	default_point_light.set_colour(gef::Colour(0.7f, 0.7f, 1.0f, 1.0f));
-	default_point_light.set_position(gef::Vector4(-500.0f, 400.0f, 700.0f));
-	default_shader_data.AddPointLight(default_point_light);
-}
-
+#pragma region SceneAssets
 gef::Scene* SceneApp::LoadSceneAssets(gef::Platform& platform, const char* filename)
 {
 	gef::Scene* scene = new gef::Scene();
@@ -272,68 +270,59 @@ gef::Mesh* SceneApp::GetMeshFromSceneAssets(gef::Scene* scene)
 
 	return mesh;
 }
+#pragma endregion
 
-void SceneApp::HandleCollision()
+void SceneApp::InitFont()
 {
-	b2Contact* contact = b2dWorld->GetContactList();
-	int numContacts = b2dWorld->GetContactCount();
+	font_ = new gef::Font(platform_);
+	font_->Load("comic_sans");
+}
 
-	for (int i = 0; i < numContacts; ++i)
-	{
-		if (contact->IsTouching())
-		{
-			b2Body* bodyA = contact->GetFixtureA()->GetBody();
-			b2Body* bodyB = contact->GetFixtureB()->GetBody();
+void SceneApp::CleanUpFont()
+{
+	delete font_;
+	font_ = NULL;
+}
 
-			WorldObject* wo = (WorldObject*)(bodyA->GetUserData().pointer);
-			if (wo != nullptr)
-				wo->OnCollision(bodyB);
-			
-			wo = (WorldObject*)(bodyB->GetUserData().pointer);
-			if (wo != nullptr)
-				wo->OnCollision(bodyA);
-		}
+void SceneApp::SetupLights()
+{
+	// grab the data for the default shader used for rendering 3D geometry
+	gef::Default3DShaderData& default_shader_data = renderer_3d_->default_shader_data();
 
-		contact->GetNext();
-	}
+	// set the ambient light
+	default_shader_data.set_ambient_light_colour(gef::Colour(0.25f, 0.25f, 0.25f, 1.0f));
+
+	// add a point light that is almost white, but with a blue tinge
+	// the position of the light is set far away so it acts light a directional light
+	gef::PointLight default_point_light;
+	default_point_light.set_colour(gef::Colour(0.7f, 0.7f, 1.0f, 1.0f));
+	default_point_light.set_position(gef::Vector4(-500.0f, 400.0f, 700.0f));
+	default_shader_data.AddPointLight(default_point_light);
 }
 
 void SceneApp::LoadAssets()
 {
-	//gef::Scene* scene = LoadSceneAssets(platform_, "Assets/MainCharacter.scn");
-
-	//playerCharacter->SetMesh(GetMeshFromSceneAssets(scene));
-
 	OBJMeshLoader meshLoader;
-
-	MeshMap map;
-
-	if (meshLoader.Load("Assets/MainCharacter.obj", platform_, map))
-	{
-		playerCharacter->SetMesh(map["Ganfaul"]);
-	}
-	else
-	{
-		std::string result = meshLoader.GetLastError();
-		gef::DebugOut(result.c_str());
-
-		gef::Mesh* mesh = primitive_builder_->CreateBoxMesh(gef::Vector4(0.5f, 0.5f, 0.5f));
-		playerCharacter->SetMesh(mesh);
-	}
+	for (const auto& mesh : meshesToLoad)
+		meshLoader.Load(mesh.c_str(), platform_, meshes);
 
 	gef::PNGLoader png_loader;
 	gef::ImageData imageData;
-
-	png_loader.Load("Assets/Ganfaul_diffuse.png", platform_, imageData);
-	gef::Material mat;
-	if (imageData.image() != nullptr)
+	for (const auto& text : texturesToLoad)
 	{
-		gef::Texture* texture = gef::Texture::Create(platform_, imageData);
-		mat.set_texture(texture);
+		png_loader.Load(text.second.c_str(), platform_, imageData);
+		if (imageData.image() != nullptr)
+		{
+			gef::Texture* texture = gef::Texture::Create(platform_, imageData);
+			textures[text.first] = texture;
+		}
 	}
+}
 
-	playerCharacter->SetMaterial(mat);
-	playerCharacter->SetScale(gef::Vector4(1.f, 1.f, 1.f));
+void SceneApp::BuildToLoadData()
+{
+	meshesToLoad.push_back("Assets/MainCharacter.obj");
+	texturesToLoad["Ganfaul"] = "Assets/Ganfaul_diffuse.png";
 }
 
 b2Body* SceneApp::CreateCollisionBody(b2BodyDef bodyDef, b2FixtureDef fixtureDef, WorldObject* owningObject)
@@ -350,4 +339,26 @@ b2Body* SceneApp::CreateCollisionBody(b2BodyDef bodyDef, b2FixtureDef fixtureDef
 const gef::Vector2 SceneApp::GetLastTouchPosition()
 {
 	return SceneApp::instance->GetPlayerCharacter()->GetController()->GetMousePosition();
+}
+
+gef::Mesh* SceneApp::RequestMeshByName(std::string meshName)
+{
+	auto it = meshes.find(meshName);
+	if (it != meshes.end())
+	{
+		return meshes[meshName];
+	}
+
+	return nullptr;
+}
+
+gef::Texture* SceneApp::RequestTextureByName(std::string textureName)
+{
+	auto it = textures.find(textureName);
+	if (it != textures.end())
+	{
+		return textures[textureName];
+	}
+
+	return nullptr;
 }

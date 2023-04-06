@@ -47,9 +47,12 @@ public:
 	/*                              SETTERS                                 */
 	/************************************************************************/
 	void SetMesh(gef::Mesh* inMesh) { mesh = inMesh; }
+	void SetMeshName(std::string newName);
+
 	void SetMaterial(gef::Material newMaterial) 
 	{
-		material = newMaterial; bOverrideMaterial = true;
+		material = newMaterial; 
+		bOverrideMaterial = true;
 	}
 	virtual void SetRotation(const gef::Vector4& inRotation) override;
 
@@ -59,6 +62,7 @@ public:
 	/************************************************************************/
 	__forceinline const gef::Mesh* GetMesh() const { return mesh; }
 	__forceinline const std::vector<ActorComponent*>& GetComponents() { return components; }
+	__forceinline const std::string& GetMeshName() { return meshName; }
 
 	/************************************************************************/
 	/*                             TEMPLATES                                */

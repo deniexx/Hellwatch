@@ -8,6 +8,18 @@
 #include "box2d/box2d.h"
 #include "system/platform.h"
 #include <vector>
+#include "obj_mesh_loader.h"
+
+namespace GameState
+{
+	enum Type
+	{
+		Loading,
+		MainMenu,
+		GameLoop,
+		PauseMenu
+	};
+}
 
 // FRAMEWORK FORWARD DECLARATIONS
 namespace gef
@@ -26,6 +38,8 @@ class WorldObject;
 class PlayerCharacter;
 class EnemyDummy;
 class Enemy;
+
+typedef std::map<std::string, gef::Texture*> TextureMap;
 
 class SceneApp : public gef::Application
 {
@@ -54,6 +68,10 @@ private:
 	void SetupLights();
 	void HandleCollision();
 	void CheckMarkedForDeletion();
+	void BuildToLoadData();
+
+	GameState::Type gameState;
+
 	gef::Scene* LoadSceneAssets(gef::Platform& platform, const char* filename);
 	gef::Mesh* GetMeshFromSceneAssets(gef::Scene* scene);
 
@@ -62,6 +80,10 @@ private:
 	gef::Renderer3D* renderer_3d_;
 
 	PrimitiveBuilder* primitive_builder_;
+	MeshMap meshes;
+	TextureMap textures;
+
+
 
 	PlayerCharacter* playerCharacter;
 	EnemyDummy* enemyDummy;
@@ -69,6 +91,8 @@ private:
 	std::vector<MeshActor*> meshActors;
 	std::vector<SpriteActor*> spriteActors;
 	gef::Scene* scene_assets_;
+	std::vector<std::string> meshesToLoad;
+	std::map<std::string, std::string> texturesToLoad;
 
 	gef::Vector4 cameraEye = gef::Vector4(0.0f, 20.0f, 0.0f);
 	gef::Vector4 cameraLookAt = gef::Vector4(0.0f, -1.0f, 0.001f);
@@ -96,8 +120,13 @@ public:
 	__forceinline gef::Vector4 GetCameraEye() const { return cameraEye; }
 	__forceinline gef::Vector4 GetCameraLookAt() const { return cameraLookAt; }
 	__forceinline float GetCurrentGameTime() { return currentGameTime; }
-
+	gef::Mesh* RequestMeshByName(std::string meshName);
+	gef::Texture* RequestTextureByName(std::string textureName);
 	static const gef::Vector2 GetLastTouchPosition();
+
+	// Game State
+	void SetGameState(GameState::Type newGameState) { gameState = newGameState; }
+	GameState::Type GetGameState() const { return gameState; }
 
 
 

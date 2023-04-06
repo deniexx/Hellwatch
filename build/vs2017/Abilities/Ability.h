@@ -94,6 +94,21 @@ protected:
 	virtual void End();
 
 	/// <summary>
+	/// Called after committing an ability, targeting has been confirmed
+	/// </summary>
+	virtual void Commit();
+
+	/// <summary>
+	/// Begins targeting, spawn an actor that follows the mouse to be able to identify the range of the ability
+	/// </summary>
+	virtual void BeginTargeting();
+
+	/// <summary>
+	/// Ends targeting, remove the targeting actor
+	/// </summary>
+	virtual void EndTargeting();
+
+	/// <summary>
 	/// Can the ability be activated
 	/// </summary>
 	/// <param name="OutActivationOutcome">This is an out parameter, holding information whether we can activate this ability, and if we can't why</param>
@@ -113,6 +128,7 @@ private:
 
 	// Allows for targeting using the mouse and then committing it once targeting has finished
 	bool bIsTargeted;
+	bool bIsTargeting;
 
 	std::string abilityName;
 	bool bIsActive;
@@ -132,6 +148,7 @@ public:
 	void SetAbilityCooldown(float newCooldown);
 	void SetDamageAmount(float newAmount) { damageAmount = newAmount; }
 	void SetIsTargeted(bool bNewState) { bIsTargeted = bNewState; }
+	void SetIsTargeting(bool bNewState) { bIsTargeting = bNewState; }
 
 	/// <summary>
 	/// Checks if the ability is active
@@ -146,6 +163,7 @@ public:
 	__forceinline bool IsInCooldown() const { return cooldown > 0 && cooldownTimer > 0.f; }
 	__forceinline float GetDamageAmount() const { return damageAmount; }
 	__forceinline bool IsAbilityTargeted() const { return bIsTargeted; }
+	__forceinline bool IsAbilityTargeting() const { return bIsTargeting; }
 
 	AbilitiesComponent* GetOwner() const { return owningComponent; }
 };

@@ -7,11 +7,18 @@
 PlayerCharacter::PlayerCharacter()
 	: Super()
 {
-	meshName = "";
+	meshName = "Ganfaul";
 }
 
 void PlayerCharacter::PostInit()
 {
+	SetMesh(SceneApp::instance->RequestMeshByName(meshName));
+	gef::Material mat;
+	if (gef::Texture* texture = SceneApp::instance->RequestTextureByName("Ganfaul"))
+		mat.set_texture(texture);
+
+	SetMaterial(mat);
+
 	BindKeys();
 	InitializeComponents();
 }
@@ -89,7 +96,6 @@ void PlayerCharacter::InitializeAbilitySystem()
 	abilitiesComponent->AddAbility(iceBolt);
 	abilitiesComponent->EquipAbility("IceBolt", AbilityActivationKey::AbilityKey1);
 }
-
 
 void PlayerCharacter::Update(float deltaTime)
 {

@@ -7,7 +7,7 @@
 MeshActor::MeshActor()
 	: Super()
 {
-	mesh = nullptr;
+	meshName = "";
 	material.set_colour(0xFFFFFFFF);
 	bOverrideMaterial = false;
 	material.set_texture(nullptr);
@@ -22,7 +22,7 @@ MeshActor::MeshActor(gef::Mesh* inMesh)
 
 void MeshActor::Render()
 {
-	if (SceneApp::instance)
+	if (SceneApp::instance && GetMesh())
 	{
 		if (SceneApp::instance->GetRenderer3D())
 		{
@@ -49,6 +49,15 @@ void MeshActor::Update(float deltaTime)
 	{
 		component->UpdateComponent(deltaTime);
 	}
+}
+
+void MeshActor::SetMeshName(std::string newName)
+{
+	meshName = newName;
+	
+	gef::Mesh* newMesh = SceneApp::instance->RequestMeshByName(meshName);
+	if (newMesh)
+		SetMesh(newMesh);
 }
 
 void MeshActor::SetRotation(const gef::Vector4& inRotation)
