@@ -11,6 +11,8 @@
 #define ENEMY_ID 2
 #define ENVIRONMENT_ID 3
 
+#define PI 3.14159265358979323846
+
 #define GENERATED_BODY(ParentClass, CurrentClass) typedef ::ParentClass Super; \
 									typedef CurrentClass ThisClass;
 
@@ -76,6 +78,16 @@ static gef::Vector4 ProjectScreenToWorldSpace(gef::Vector2 v2)
 	pos.set_z(cameraPos.z() + pos.z() * 1.75f);
 
 	return pos;
+}
+
+static float FindAngle(const gef::Vector4& a, const gef::Vector4& b)
+{
+	double dot_product = a.x() * b.x() + a.y() * b.y() + a.z() * b.z();
+	double mag_a = std::sqrt(a.x() * a.x() + a.y() * a.y() + a.z() * a.z());
+	double mag_b = std::sqrt(b.x() * b.x() + b.y() * b.y() + b.z() * b.z());
+	double cos_theta = dot_product / (mag_a * mag_b);
+	double theta = std::acos(cos_theta) * 180 / PI;
+	return theta;
 }
 
 namespace ApplyDamageOn

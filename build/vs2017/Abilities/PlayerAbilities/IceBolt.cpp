@@ -1,6 +1,7 @@
 #include "IceBolt.h"
 #include "scene_app.h"
 #include "ActorComponents/AbilitiesComponent.h"
+#include "maths/math_utils.h"
 #include "Actors/MeshActors/DamageOnCollisionActor.h"
 
 IceBolt::IceBolt()
@@ -27,9 +28,14 @@ void IceBolt::Begin()
 	gef::Vector4 target = mousePos - translation;
 	target.Normalise();
 
-	gef::Mesh* mesh = SceneApp::instance->GetPrimitiveBuilder()->CreateBoxMesh(gef::Vector4(0.2f, 0.2f, 0.2f));
+	gef::Mesh* mesh = SceneApp::instance->RequestMeshByName("IceBolt");
 	DamageOnCollisionActor* actor = SceneApp::instance->SpawnMeshActor<DamageOnCollisionActor>(mesh, translation);
 	actor->SetDamageAmount(GetDamageAmount());
+	actor->SetScale(gef::Vector4(0.2f, 0.2f, 0.2f));
+
+	float angle = FindAngle(gef::Vector4(1.f, 0.f, 0.f), target);
+	actor->SetRotation(gef::Vector4(0, angle, 0.f));
+
 	gef::Material mat;
 	mat.set_colour(0xFFC18B36);
 	actor->SetMaterial(mat);
@@ -51,7 +57,7 @@ void IceBolt::Begin()
 	b2Body* body = SceneApp::instance->CreateCollisionBody(bodyDef, fixtureDef, actor);
 	actor->SetCollisionBody(body);
 	b2Vec2 forceDir = b2Vec2(target.x(), target.z());
-	forceDir *= 2000.f;
+	forceDir *= 1500.f;
 
 	actor->GetCollisionBody()->ApplyForceToCenter(forceDir, true);
 }

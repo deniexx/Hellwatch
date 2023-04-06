@@ -62,6 +62,6 @@ void MeshActor::SetMeshName(std::string newName)
 
 void MeshActor::SetRotation(const gef::Vector4& inRotation)
 {
-	gef::Vector4 tempRotation = gef::Vector4(inRotation.x() * 360, inRotation.y() * 360, inRotation.z() * 360);
+	gef::Vector4 tempRotation = gef::Vector4(inRotation.x(), inRotation.y(), inRotation.z());
 	Super::SetRotation(tempRotation);
 }

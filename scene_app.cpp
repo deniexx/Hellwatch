@@ -9,6 +9,7 @@
 #include "assets/png_loader.h"
 #include <graphics/image_data.h>
 
+#include "GameFramework/PlayerController.h"
 #include "Actors/MeshActors/PlayerCharacter.h"
 #include "Actors/SpriteActor.h"
 #include "Actors/MeshActors/EnemyDummy.h"
@@ -66,6 +67,71 @@ void SceneApp::Init()
 	}
 
 	loadFuture = std::async(std::launch::async, [this] { LoadAssets(); return GameState::Type::Loading; });
+}
+
+void SceneApp::InitMainMenu()
+{
+	MenuButton startButton;
+	startButton.buttonText = "Start";
+	startButton.color = 0xFF0000FF;
+	startButton.justification = gef::TJ_LEFT;
+	startButton.scale = 3.f;
+	startButton.position = gef::Vector4(160.f, 540.f, 0.f);
+	startButton.callbackFunction = bindFunc(OnStartButtonClicked);
+	mainMenuButtons.push_back(startButton);
+
+	MenuButton exitButton;
+	exitButton.buttonText = "Exit";
+	exitButton.color = 0xFF0000FF;
+	exitButton.justification = gef::TJ_LEFT;
+	exitButton.scale = 3.f;
+	exitButton.position = gef::Vector4(160.f, 640.f, 0.f);
+	exitButton.callbackFunction = bindFunc(OnExitButtonClicked);
+	mainMenuButtons.push_back(exitButton);
+
+	mainMenuSprite = new gef::Sprite();
+	gef::PNGLoader png_loader;
+	gef::ImageData imageData;
+	png_loader.Load("Assets/MainMenu.png", platform_, imageData);
+	if (imageData.image() != nullptr)
+	{
+		gef::Texture* texture = gef::Texture::Create(platform_, imageData);
+		mainMenuSprite->set_position(platform_.width() / 2, platform_.height() / 2, 0.f);
+		mainMenuSprite->set_width(1920);
+		mainMenuSprite->set_height(1080);
+		mainMenuSprite->set_texture(texture);
+	}
+
+	menuController = new PlayerController(platform_);
+	FKeyBindKeyboard keyboardKeybind;
+
+	// Move down on menu keybinds
+	keyboardKeybind.inputAction = HellwatchInputAction::Released;
+	keyboardKeybind.keyCode = gef::Keyboard::KC_S;
+	keyboardKeybind.functionBind = bindFunc(OnDownButtonPressed);
+	menuController->BindKeyboardEvent(keyboardKeybind);
+
+	keyboardKeybind.keyCode = gef::Keyboard::KC_DOWN;
+	menuController->BindKeyboardEvent(keyboardKeybind);
+
+	// Move up on menu keybinds
+	keyboardKeybind.keyCode = gef::Keyboard::KC_UP;
+	keyboardKeybind.functionBind = bindFunc(OnUpButtonPressed);
+	menuController->BindKeyboardEvent(keyboardKeybind);
+
+	keyboardKeybind.keyCode = gef::Keyboard::KC_W;
+	menuController->BindKeyboardEvent(keyboardKeybind);
+
+	// Submit keybind
+	keyboardKeybind.keyCode = gef::Keyboard::KC_RETURN;
+	keyboardKeybind.functionBind = bindFunc(PressMenuButton);
+	menuController->BindKeyboardEvent(keyboardKeybind);
+
+	// Mouse click to submit keybind
+	FKeyBindMouse mouseKeybind;
+	mouseKeybind.clickAction = gef::TT_NEW;
+	mouseKeybind.functionBind = bindFunc_ONEParam(OnMouseButtonPressed, gef::Vector2, mousePos);
+	menuController->BindMouseEvent(mouseKeybind);
 }
 
 void SceneApp::InitGameLoop()
@@ -134,6 +200,7 @@ bool SceneApp::Update(float frame_time)
 {
 	fps_ = 1.0f / frame_time;
 	currentGameTime += frame_time;
+	lastDeltaTime = frame_time;
 
 	switch (gameState)
 	{
@@ -158,14 +225,18 @@ void SceneApp::UpdateLoading(float frame_time)
 {
 	if (loadFuture._Is_ready())
 	{
-		SetGameState(GameState::GameLoop);
+		SetGameState(GameState::MainMenu);
 		delete loadingSprite;
 	}
 }
 
 void SceneApp::UpdateMainMenu(float frame_time)
 {
-
+	if (menuController)
+	{
+		menuController->Update();
+		CheckForHighlight();
+	}
 }
 
 void SceneApp::UpdateGameLoop(float frame_time)
@@ -241,7 +312,31 @@ void SceneApp::RenderLoading()
 
 void SceneApp::RenderMainMenu()
 {
+	cameraLookAt = gef::Vector4(0.f, 0.f, 0.f);
 
+	gef::Matrix44 view_matrix;
+	view_matrix.LookAt(cameraEye, cameraLookAt, cameraUp);
+	renderer_3d_->set_view_matrix(view_matrix);
+
+	renderer_3d_->Begin();
+
+	renderer_3d_->End();
+
+	sprite_renderer_->Begin(false);
+	sprite_renderer_->DrawSprite(*mainMenuSprite);
+	sprite_renderer_->End();
+
+	if (font_)
+	{
+		gef::Vector2 mousePos = menuController->GetMousePosition();
+		font_->RenderText(sprite_renderer_, gef::Vector4(1700.0f, 1000.0f, -0.9f), 1.0f, 0xffffffff, gef::TJ_LEFT, "Mouse: %.1f, %.1f", mousePos.x, mousePos.y);
+
+		for (int i = 0; i < mainMenuButtons.size(); ++i)
+		{
+			float btnScale = i == currentButtonFocused ? mainMenuButtons[i].scale * 1.2f : mainMenuButtons[i].scale;
+			font_->RenderText(sprite_renderer_, mainMenuButtons[i].position, btnScale, mainMenuButtons[i].color, mainMenuButtons[i].justification, mainMenuButtons[i].buttonText.c_str());
+		}
+	}
 }
 
 void SceneApp::RenderGameLoop()
@@ -350,6 +445,70 @@ void SceneApp::DrawHUD()
 }
 #pragma endregion
 
+#pragma region MainMenuButtons
+void SceneApp::OnDownButtonPressed()
+{
+	currentButtonFocused = (currentButtonFocused + 1) % mainMenuButtons.size();
+}
+
+void SceneApp::OnUpButtonPressed()
+{
+	currentButtonFocused = (currentButtonFocused - 1) % mainMenuButtons.size();
+}
+
+void SceneApp::OnMouseButtonPressed(gef::Vector2 mousePos)
+{
+	if (mousePos.x > 140 && mousePos.x < 340 && mousePos.y > 540 && mousePos.y < 630)
+	{
+		OnStartButtonClicked();
+	}
+	else if (mousePos.x > 140 && mousePos.x < 340 && mousePos.y > 640 && mousePos.y < 730)
+	{
+		OnExitButtonClicked();
+	}
+}
+
+void SceneApp::OnControllerDownButton(gef::Vector2 dir)
+{
+	currentButtonFocused = (currentButtonFocused + 1) % mainMenuButtons.size();
+}
+
+
+void SceneApp::OnControllerUpButton(gef::Vector2 dir)
+{
+	currentButtonFocused = (currentButtonFocused - 1) % mainMenuButtons.size();
+}
+
+void SceneApp::CheckForHighlight()
+{
+	gef::Vector2 mousePos = menuController->GetMousePosition();
+	
+	if (mousePos.x > 140 && mousePos.x < 340 && mousePos.y > 540 && mousePos.y < 630)
+	{
+		currentButtonFocused = 0;
+	}
+	else if (mousePos.x > 140 && mousePos.x < 340 && mousePos.y > 640 && mousePos.y < 730)
+	{
+		currentButtonFocused = 1;
+	}
+}
+
+void SceneApp::OnStartButtonClicked()
+{
+	SetGameState(GameState::GameLoop);
+}
+
+void SceneApp::OnExitButtonClicked()
+{
+	exit(0);
+}
+
+void SceneApp::PressMenuButton()
+{
+	mainMenuButtons[currentButtonFocused].callbackFunction();
+}
+#pragma endregion
+
 #pragma region SceneAssets
 gef::Scene* SceneApp::LoadSceneAssets(gef::Platform& platform, const char* filename)
 {
@@ -388,6 +547,7 @@ void SceneApp::InitFont()
 {
 	font_ = new gef::Font(platform_);
 	font_->Load("comic_sans");
+
 }
 
 void SceneApp::CleanUpFont()
@@ -414,9 +574,6 @@ void SceneApp::SetupLights()
 
 void SceneApp::LoadAssets()
 {
-
-	std::this_thread::sleep_for(std::chrono::seconds(5));
-
 	OBJMeshLoader meshLoader;
 	for (const auto& mesh : meshesToLoad)
 		meshLoader.Load(mesh.c_str(), platform_, meshes);
@@ -437,6 +594,7 @@ void SceneApp::LoadAssets()
 void SceneApp::BuildToLoadData()
 {
 	meshesToLoad.push_back("Assets/MainCharacter.obj");
+	meshesToLoad.push_back("Assets/IceBolt.obj");
 	texturesToLoad["Ganfaul"] = "Assets/Ganfaul_diffuse.png";
 }
 
@@ -486,6 +644,7 @@ void SceneApp::SetGameState(GameState::Type newState)
 	break;
 	case GameState::MainMenu:
 	{
+		InitMainMenu();
 	}
 	break;
 	case GameState::GameLoop:

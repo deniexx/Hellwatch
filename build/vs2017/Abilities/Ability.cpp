@@ -13,6 +13,8 @@ Ability::Ability()
     abilityCostAmount = 0.f;
     bIsActive = false;
     abilityName = "";
+    bIsTargeted = false;
+    bIsTargeting = false;
     cooldownStartPolicy = CooldownStartPolicy::OnAbilityStart;
 }
 

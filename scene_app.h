@@ -10,6 +10,7 @@
 #include <vector>
 #include "obj_mesh_loader.h"
 #include <future>
+#include "graphics/font.h"
 
 namespace GameState
 {
@@ -33,6 +34,7 @@ namespace gef
 	class Sprite;
 }
 
+class PlayerController;
 class MeshActor;
 class SpriteActor;
 class WorldObject;
@@ -40,6 +42,16 @@ class PlayerCharacter;
 class EnemyDummy;
 class Enemy;
 class RangedEnemy;
+
+struct MenuButton
+{
+	gef::Vector4 position;
+	uint32_t color = 0xffffffff;
+	float scale = 1;
+	gef::TextJustification justification;
+	std::string buttonText;
+	std::function<void()> callbackFunction;
+};
 
 typedef std::map<std::string, gef::Texture*> TextureMap;
 
@@ -72,7 +84,7 @@ private:
 	void CheckMarkedForDeletion();
 	void BuildToLoadData();
 	void InitGameLoop();
-	void InitLoadThread();
+	void InitMainMenu();
 
 	void UpdateLoading(float frame_time);
 	void UpdateMainMenu(float frame_time);
@@ -84,6 +96,25 @@ private:
 	void RenderGameLoop();
 	void RenderPauseMenu();
 
+	/*******************************************************
+	*					MENU INPUT                         *
+	*******************************************************/
+	PlayerController* menuController;
+	void DrawMainMenuHUD();
+	void OnDownButtonPressed();
+	void OnUpButtonPressed();
+	void OnMouseButtonPressed(gef::Vector2 mousePos);
+	void OnControllerDownButton(gef::Vector2 dir);
+	void OnControllerUpButton(gef::Vector2 dir);
+	void CheckForHighlight();
+	void OnStartButtonClicked();
+	void OnExitButtonClicked();
+	void PressMenuButton();
+	std::vector<MenuButton> mainMenuButtons;
+	int currentButtonFocused = 0;
+	/*******************************************************
+	*					GAME STATE                         *
+	*******************************************************/
 	GameState::Type gameState;
 	bool bGameLoopInitted = false;
 
@@ -101,6 +132,7 @@ private:
 	std::future<GameState::Type> loadFuture;
 
 	gef::Sprite* loadingSprite;
+	gef::Sprite* mainMenuSprite;
 	PlayerCharacter* playerCharacter;
 	EnemyDummy* enemyDummy;
 	Enemy* testEnemy;
@@ -117,13 +149,13 @@ private:
 
 	float fps_;
 	float currentGameTime;
+	float lastDeltaTime;
 
 	/************************************************************************/
 	/*                               BOX2D                                  */
 	/************************************************************************/
 	b2World* b2dWorld;
 	b2Vec2 gravity;
-
 
 public:
 
@@ -136,7 +168,8 @@ public:
 	__forceinline PrimitiveBuilder* GetPrimitiveBuilder() const { return primitive_builder_; }
 	__forceinline gef::Vector4 GetCameraEye() const { return cameraEye; }
 	__forceinline gef::Vector4 GetCameraLookAt() const { return cameraLookAt; }
-	__forceinline float GetCurrentGameTime() { return currentGameTime; }
+	__forceinline float GetCurrentGameTime() const { return currentGameTime; }
+	__forceinline float GetLastDeltaTime() const { return lastDeltaTime; }
 	gef::Mesh* RequestMeshByName(std::string meshName);
 	gef::Texture* RequestTextureByName(std::string textureName);
 	static const gef::Vector2 GetLastTouchPosition();

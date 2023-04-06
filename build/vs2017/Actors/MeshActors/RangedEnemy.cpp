@@ -123,7 +123,7 @@ void RangedEnemy::Shoot(float deltaTime) {
 	b2Body* body = SceneApp::instance->CreateCollisionBody(bodyDef, fixtureDef, actor);
 	actor->SetCollisionBody(body);
 	b2Vec2 forceDir = b2Vec2(target.x(), target.z());
-	forceDir *= 55000.f*deltaTime;
+	forceDir *= 1500.f;
 
 	actor->GetCollisionBody()->ApplyForceToCenter(forceDir, true);
 }
