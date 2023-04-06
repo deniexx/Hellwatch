@@ -23,6 +23,7 @@ SceneApp::SceneApp(gef::Platform& platform):
 	,primitive_builder_(NULL)
 	,font_(NULL)
 	,scene_assets_(NULL)
+	,currentGameTime(0.f)
 {
 }
 
@@ -103,6 +104,7 @@ void SceneApp::CleanUp()
 bool SceneApp::Update(float frame_time)
 {
 	fps_ = 1.0f / frame_time;
+	currentGameTime += frame_time;
 	int32 velocityIterations = 6;
 	int32 positionIterations = 2;
 

@@ -37,11 +37,15 @@ public:
 	/************************************************************************/
 	void SetCollisionBody(b2Body* newBody) { ownerCollision = newBody; }
 	void SetFrozen(bool bNewState) { bFrozen = bNewState; }
+	void SetMaximumSpeed(float newMaximumSpeed) { maximumSpeed = newMaximumSpeed; }
+	void SetAcceleration(float newAcceleration) { acceleration = newAcceleration; }
 
 	/************************************************************************/
 	/*                              GETTERS                                 */
 	/************************************************************************/
 	__forceinline bool IsFrozen() const { return bFrozen; }
 	__forceinline float GetSpeed() const { return ownerCollision ? ownerCollision->GetLinearVelocity().Length() : 0.f; }
+	__forceinline float GetMaximumSpeed() { return maximumSpeed; }
+	__forceinline float GetAcceleration() { return acceleration; }
 };
 

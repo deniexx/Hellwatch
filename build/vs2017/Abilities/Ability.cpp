@@ -42,6 +42,11 @@ ActivationOutcome Ability::TryActivate()
     return outcome;
 }
 
+void Ability::CommitAbility()
+{
+
+}
+
 bool Ability::EndAbility()
 {
     if (!IsActive())

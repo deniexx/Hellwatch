@@ -67,6 +67,11 @@ public:
 	ActivationOutcome TryActivate();
 
 	/// <summary>
+	/// Attempts to commit the ability if it is targeted, does nothing if the ability is NOT targeted
+	/// </summary>
+	void CommitAbility();
+
+	/// <summary>
 	/// Attempts to end the ability, returns a bool whether it was successful
 	/// </summary>
 	bool EndAbility();
@@ -106,6 +111,9 @@ private:
 	HellwatchAttribute::Type abilityCostType;
 	CooldownStartPolicy::Type cooldownStartPolicy;
 
+	// Allows for targeting using the mouse and then committing it once targeting has finished
+	bool bIsTargeted;
+
 	std::string abilityName;
 	bool bIsActive;
 	AbilitiesComponent* owningComponent;
@@ -123,6 +131,7 @@ public:
 	void SetCooldownStartPolicy(CooldownStartPolicy::Type newPolicy) { cooldownStartPolicy = newPolicy; }
 	void SetAbilityCooldown(float newCooldown);
 	void SetDamageAmount(float newAmount) { damageAmount = newAmount; }
+	void SetIsTargeted(bool bNewState) { bIsTargeted = bNewState; }
 
 	/// <summary>
 	/// Checks if the ability is active
@@ -136,6 +145,7 @@ public:
 	__forceinline const std::string& GetAbilityName() const { return abilityName; }
 	__forceinline bool IsInCooldown() const { return cooldown > 0 && cooldownTimer > 0.f; }
 	__forceinline float GetDamageAmount() const { return damageAmount; }
+	__forceinline bool IsAbilityTargeted() const { return bIsTargeted; }
 
 	AbilitiesComponent* GetOwner() const { return owningComponent; }
 };

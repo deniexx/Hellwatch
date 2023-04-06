@@ -75,6 +75,7 @@ private:
 	gef::Vector4 cameraUp = gef::Vector4(0.0f, 1.0f, 0.0f);
 
 	float fps_;
+	float currentGameTime;
 
 	/************************************************************************/
 	/*                               BOX2D                                  */
@@ -94,6 +95,7 @@ public:
 	__forceinline PrimitiveBuilder* GetPrimitiveBuilder() const { return primitive_builder_; }
 	__forceinline gef::Vector4 GetCameraEye() const { return cameraEye; }
 	__forceinline gef::Vector4 GetCameraLookAt() const { return cameraLookAt; }
+	__forceinline float GetCurrentGameTime() { return currentGameTime; }
 
 	static const gef::Vector2 GetLastTouchPosition();
 
