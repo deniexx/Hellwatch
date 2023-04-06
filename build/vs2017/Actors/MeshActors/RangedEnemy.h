@@ -11,7 +11,7 @@ public:
     virtual void TakeDamage(float damageAmount);
     float GetHealth() { return attributes ? attributes->GetCurrentAttributeValueByType(HellwatchAttribute::Health) : 0.f; }
     virtual void Update(float deltaTime) override;
-    virtual void Shoot();
+    virtual void Shoot(float deltaTime);
 
     float damageAmount;
     float attackTime;

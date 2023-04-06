@@ -43,6 +43,8 @@ void RangedEnemy::PostInit()
 
 	enemyMovement = CreateComponent<CharacterMovementComponent>();
 	enemyMovement->Init(this);
+	enemyMovement->SetMaximumSpeed(30);
+	enemyMovement->SetAcceleration(150);
 }
 
 
@@ -50,9 +52,7 @@ void RangedEnemy::Update(float deltaTime)
 {
 	MeshActor::Update(deltaTime);
 
-	if (attackTime + attackCooldown < SceneApp::instance->GetCurrentGameTime()) {
-		Shoot();
-	}
+
 
 	PlayerCharacter* player = SceneApp::instance->GetPlayerCharacter();
 	gef::Vector4 playerPosition = player->GetTranslation();
@@ -60,6 +60,12 @@ void RangedEnemy::Update(float deltaTime)
 	gef::Vector4 enemyPosition = GetTranslation();
 	b2Vec2 enemyDirection = b2Vec2(enemyPosition.x(), enemyPosition.z());
 	b2Vec2 towardsPlayer = playerDirection - enemyDirection;
+
+	if (attackTime + attackCooldown < SceneApp::instance->GetCurrentGameTime()) {
+		if (towardsPlayer.Length() <= 13.f) {
+			Shoot(deltaTime);
+		}
+	}
 
 	if (towardsPlayer.Length() >= 10.f) {
 		if (player)
@@ -72,9 +78,11 @@ void RangedEnemy::Update(float deltaTime)
 		towardsPlayer.Normalize();
 		enemyMovement->ApplyMovementForceInDirection(-towardsPlayer);
 	}
+
+
 }
 
-void RangedEnemy::Shoot() {
+void RangedEnemy::Shoot(float deltaTime) {
 
 	attackTime = SceneApp::instance->GetCurrentGameTime();
 	PlayerCharacter* player = SceneApp::instance->GetPlayerCharacter();
@@ -115,7 +123,7 @@ void RangedEnemy::Shoot() {
 	b2Body* body = SceneApp::instance->CreateCollisionBody(bodyDef, fixtureDef, actor);
 	actor->SetCollisionBody(body);
 	b2Vec2 forceDir = b2Vec2(target.x(), target.z());
-	forceDir *= 2000.f;
+	forceDir *= 55000.f*deltaTime;
 
 	actor->GetCollisionBody()->ApplyForceToCenter(forceDir, true);
 }
