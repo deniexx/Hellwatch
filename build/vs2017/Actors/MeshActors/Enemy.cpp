@@ -1,5 +1,4 @@
 #include "Enemy.h"
-#include "scene_app.h"
 
 void Enemy::TakeDamage(float damageAmount)
 {
@@ -58,8 +57,6 @@ void Enemy::Update(float deltaTime)
 		b2Vec2 enemyDirection = b2Vec2(enemyPosition.x(), enemyPosition.z());
 		b2Vec2 towardsPlayer = playerDirection - enemyDirection;
 		towardsPlayer.Normalize();
-		towardsPlayer.x *= rand() % 10;
-		towardsPlayer.y *= rand() % 10;
 		enemyMovement->ApplyMovementForceInDirection(towardsPlayer);
 	}
 }

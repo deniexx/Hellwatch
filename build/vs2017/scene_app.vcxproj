@@ -237,6 +237,7 @@
     <ClCompile Include="GameFramework\PlayerController.cpp" />
     <ClCompile Include="GameFramework\WorldObject.cpp" />
     <ClCompile Include="Abilities\PlayerAbilities\IceBolt.cpp" />
+    <ClCompile Include="Actors\MeshActors\RangedEnemy.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\obj_mesh_loader.h" />
@@ -259,6 +260,7 @@
     <ClInclude Include="GameFramework\WorldObject.h" />
     <ClInclude Include="Abilities\PlayerAbilities\IceBolt.h" />
     <ClInclude Include="Interfaces\Damagable.h" />
+    <ClInclude Include="Actors\MeshActors\RangedEnemy.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

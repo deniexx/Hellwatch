@@ -38,6 +38,7 @@ class WorldObject;
 class PlayerCharacter;
 class EnemyDummy;
 class Enemy;
+class RangedEnemy;
 
 typedef std::map<std::string, gef::Texture*> TextureMap;
 
@@ -88,6 +89,7 @@ private:
 	PlayerCharacter* playerCharacter;
 	EnemyDummy* enemyDummy;
 	Enemy* testEnemy;
+	RangedEnemy* testRanged;
 	std::vector<MeshActor*> meshActors;
 	std::vector<SpriteActor*> spriteActors;
 	gef::Scene* scene_assets_;

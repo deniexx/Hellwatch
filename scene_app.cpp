@@ -13,6 +13,7 @@
 #include "Actors/SpriteActor.h"
 #include "Actors/MeshActors/EnemyDummy.h"
 #include "Actors/MeshActors/Enemy.h"
+#include "Actors/MeshActors/RangedEnemy.h"
 #include "Actors/MeshActor.h"
 
 SceneApp::SceneApp(gef::Platform& platform):
@@ -56,9 +57,12 @@ void SceneApp::Init()
 	gef::Mesh* mesh = primitive_builder_->CreateBoxMesh(gef::Vector4(0.5f, 0.5f, 0.5f));
 	enemyDummy = SpawnMeshActor<EnemyDummy>(mesh, gef::Vector4(2.0f, 0.f, 2.0f));
 	testEnemy = SpawnMeshActor<Enemy>(mesh, gef::Vector4(4.0f, 0.f, 4.0f));
+	testRanged = SpawnMeshActor<RangedEnemy>(mesh, gef::Vector4(10.0f, 0.f, 10.0f));
+	
 	gef::Material mat;
 	mat.set_colour(0xFF0000FF);
 	testEnemy->SetMaterial(mat);
+	testRanged->SetMaterial(mat);
 
 	b2BodyDef newBodyDef;
 	newBodyDef.type = b2_staticBody;
