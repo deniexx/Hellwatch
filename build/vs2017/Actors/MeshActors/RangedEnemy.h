@@ -8,7 +8,7 @@ public:
     virtual void TakeDamage(float damageAmount) override;
     float GetHealth() { return attributes ? attributes->GetCurrentAttributeValueByType(HellwatchAttribute::Health) : 0.f; }
     virtual void Update(float deltaTime) override;
-    virtual void OnCollision(b2Body* otherBody) override;
+    virtual void Shoot();
 
     float damageAmount;
     float attackTime;
