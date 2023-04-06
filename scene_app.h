@@ -9,6 +9,7 @@
 #include "system/platform.h"
 #include <vector>
 #include "obj_mesh_loader.h"
+#include <future>
 
 namespace GameState
 {
@@ -70,8 +71,21 @@ private:
 	void HandleCollision();
 	void CheckMarkedForDeletion();
 	void BuildToLoadData();
+	void InitGameLoop();
+	void InitLoadThread();
+
+	void UpdateLoading(float frame_time);
+	void UpdateMainMenu(float frame_time);
+	void UpdateGameLoop(float frame_time);
+	void UpdatePauseMenu(float frame_time);
+
+	void RenderLoading();
+	void RenderMainMenu();
+	void RenderGameLoop();
+	void RenderPauseMenu();
 
 	GameState::Type gameState;
+	bool bGameLoopInitted = false;
 
 	gef::Scene* LoadSceneAssets(gef::Platform& platform, const char* filename);
 	gef::Mesh* GetMeshFromSceneAssets(gef::Scene* scene);
@@ -84,7 +98,7 @@ private:
 	MeshMap meshes;
 	TextureMap textures;
 
-
+	std::future<GameState::Type> loadFuture;
 
 	PlayerCharacter* playerCharacter;
 	EnemyDummy* enemyDummy;
@@ -127,7 +141,7 @@ public:
 	static const gef::Vector2 GetLastTouchPosition();
 
 	// Game State
-	void SetGameState(GameState::Type newGameState) { gameState = newGameState; }
+	void SetGameState(GameState::Type newState);
 	GameState::Type GetGameState() const { return gameState; }
 
 

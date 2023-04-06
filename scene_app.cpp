@@ -16,6 +16,7 @@
 #include "Actors/MeshActors/RangedEnemy.h"
 #include "Actors/MeshActor.h"
 
+
 SceneApp::SceneApp(gef::Platform& platform):
 	Application(platform)
 	,sprite_renderer_(NULL)
@@ -30,6 +31,8 @@ SceneApp::SceneApp(gef::Platform& platform):
 #pragma region Init and CleanUp
 void SceneApp::Init()
 {
+	SetGameState(GameState::Loading);
+
 	if (!instance)
 		instance = this;
 	else
@@ -47,7 +50,13 @@ void SceneApp::Init()
 
 	InitFont();
 	SetupLights();
-	LoadAssets();
+
+	loadFuture = std::async(std::launch::async, [this] { LoadAssets(); return GameState::Type::Loading; });
+}
+
+void SceneApp::InitGameLoop()
+{
+	if (bGameLoopInitted) return;
 
 	// initialise primitive builder to make create some 3D geometry easier
 	primitive_builder_ = new PrimitiveBuilder(platform_);
@@ -58,7 +67,7 @@ void SceneApp::Init()
 	enemyDummy = SpawnMeshActor<EnemyDummy>(mesh, gef::Vector4(2.0f, 0.f, 2.0f));
 	testEnemy = SpawnMeshActor<Enemy>(mesh, gef::Vector4(4.0f, 0.f, 4.0f));
 	testRanged = SpawnMeshActor<RangedEnemy>(mesh, gef::Vector4(10.0f, 0.f, 10.0f));
-	
+
 	gef::Material mat;
 	mat.set_colour(0xFF0000FF);
 	testEnemy->SetMaterial(mat);
@@ -80,6 +89,8 @@ void SceneApp::Init()
 	gef::Material enemyMat;
 	mat.set_colour(0xFF00FFFF);
 	actor->SetMaterial(mat);
+
+	bGameLoopInitted = true;
 }
 
 void SceneApp::CleanUp()
@@ -109,6 +120,41 @@ bool SceneApp::Update(float frame_time)
 {
 	fps_ = 1.0f / frame_time;
 	currentGameTime += frame_time;
+
+	switch (gameState)
+	{
+	case GameState::Loading:
+		UpdateLoading(frame_time);
+		break;
+	case GameState::MainMenu:
+		UpdateMainMenu(frame_time);
+		break;
+	case GameState::GameLoop:
+		UpdateGameLoop(frame_time);
+		break;
+	case GameState::PauseMenu:
+		UpdatePauseMenu(frame_time);
+		break;
+	}
+
+	return true;
+}
+
+void SceneApp::UpdateLoading(float frame_time)
+{
+	if (loadFuture._Is_ready())
+	{
+		SetGameState(GameState::MainMenu);
+	}
+}
+
+void SceneApp::UpdateMainMenu(float frame_time)
+{
+
+}
+
+void SceneApp::UpdateGameLoop(float frame_time)
+{
 	int32 velocityIterations = 6;
 	int32 positionIterations = 2;
 
@@ -120,16 +166,95 @@ bool SceneApp::Update(float frame_time)
 		if (meshActors[i] && meshActors[i]->ShouldUpdate())
 			meshActors[i]->Update(frame_time);
 	}
-		
+
 	for (int i = 0; i < spriteActors.size(); ++i)
 	{
-		if (spriteActors[i] &&  spriteActors[i]->ShouldUpdate())
+		if (spriteActors[i] && spriteActors[i]->ShouldUpdate())
 			spriteActors[i]->Update(frame_time);
 	}
 
 	CheckMarkedForDeletion();
+}
 
-	return true;
+void SceneApp::UpdatePauseMenu(float frame_time)
+{
+
+}
+
+void SceneApp::Render()
+{
+	// projection
+	float fov = gef::DegToRad(45.0f);
+	float aspect_ratio = (float)platform_.width() / (float)platform_.height();
+	gef::Matrix44 projection_matrix;
+	projection_matrix = platform_.PerspectiveProjectionFov(fov, aspect_ratio, 0.001f, 100.0f);
+	renderer_3d_->set_projection_matrix(projection_matrix);
+
+	switch (gameState)
+	{
+	case GameState::Loading:
+		RenderLoading();
+		break;
+	case GameState::MainMenu:
+		RenderMainMenu();
+		break;
+	case GameState::GameLoop:
+		RenderGameLoop();
+		break;
+	case GameState::PauseMenu:
+		RenderPauseMenu();
+		break;
+	}
+}
+
+void SceneApp::RenderLoading()
+{
+	cameraLookAt = gef::Vector4(0.f, 0.f, 0.f);
+
+	gef::Matrix44 view_matrix;
+	view_matrix.LookAt(cameraEye, cameraLookAt, cameraUp);
+	renderer_3d_->set_view_matrix(view_matrix);
+}
+
+void SceneApp::RenderMainMenu()
+{
+
+}
+
+void SceneApp::RenderGameLoop()
+{
+	if (playerCharacter != NULL)
+	{
+		cameraEye = playerCharacter->GetTranslation();
+		cameraEye.set_y(20.f);
+		cameraEye.set_z(cameraEye.z() - 10);
+		cameraLookAt = playerCharacter->GetTranslation();
+		cameraLookAt.set_y(-1.f);
+	}
+
+	gef::Matrix44 view_matrix;
+	view_matrix.LookAt(cameraEye, cameraLookAt, cameraUp);
+	renderer_3d_->set_view_matrix(view_matrix);
+
+	renderer_3d_->Begin();
+
+	for (auto actor : meshActors)
+		actor->Render();
+
+	renderer_3d_->End();
+
+	sprite_renderer_->Begin(false);
+
+	DrawHUD();
+	for (auto actor : spriteActors)
+		actor->Render();
+
+	sprite_renderer_->End();
+}
+
+void SceneApp::RenderPauseMenu()
+{
+
 }
 
 void SceneApp::HandleCollision()
@@ -186,46 +311,6 @@ void SceneApp::CheckMarkedForDeletion()
 
 	for (int i = 0; i < toBeDeleted.size(); ++i)
 		delete toBeDeleted[i];
-}
-
-void SceneApp::Render()
-{
-	// projection
-	float fov = gef::DegToRad(45.0f);
-	float aspect_ratio = (float)platform_.width() / (float)platform_.height();
-	gef::Matrix44 projection_matrix;
-	projection_matrix = platform_.PerspectiveProjectionFov(fov, aspect_ratio, 0.001f, 100.0f);
-	renderer_3d_->set_projection_matrix(projection_matrix);
-
-	if (playerCharacter)
-	{
-		cameraEye = playerCharacter->GetTranslation();
-		cameraEye.set_y(20.f);
-		cameraEye.set_z(cameraEye.z() - 10);
-		cameraLookAt = playerCharacter->GetTranslation();
-		cameraLookAt.set_y(-1.f);
-	}
-	
-	gef::Matrix44 view_matrix;
-	view_matrix.LookAt(cameraEye, cameraLookAt, cameraUp);
-	renderer_3d_->set_view_matrix(view_matrix);
-
-	// draw 3d geometry
-	renderer_3d_->Begin();
-
-	for (auto actor : meshActors)
-		actor->Render();
-
-	renderer_3d_->End();
-
-	// start drawing sprites, but don't clear the frame buffer
-	sprite_renderer_->Begin(false);
-	
-	DrawHUD();
-	for (auto actor : spriteActors)
-		actor->Render();
-
-	sprite_renderer_->End();
 }
 
 void SceneApp::DrawHUD()
@@ -365,4 +450,29 @@ gef::Texture* SceneApp::RequestTextureByName(std::string textureName)
 	}
 
 	return nullptr;
+}
+
+void SceneApp::SetGameState(GameState::Type newState)
+{
+	switch (newState)
+	{
+	case GameState::Loading:
+
+	case GameState::MainMenu:
+	{
+	}
+	break;
+	case GameState::GameLoop:
+	{
+		InitGameLoop();
+	}
+	break;
+	case GameState::PauseMenu:
+	{
+
+	}
+	break;
+	}
+
+	gameState = newState;
 }
