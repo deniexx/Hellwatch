@@ -1,9 +1,16 @@
 #include "Enemy.h"
+#include "scene_app.h"
 
 void Enemy::TakeDamage(float damageAmount)
 {
 	if (attributes)
 		attributes->ApplyAttributeChange(HellwatchAttribute::Health, -damageAmount);
+
+	if (attributes->GetCurrentAttributeValueByType(HellwatchAttribute::Health) <= 0.f)
+	{
+		DisableUpdate();
+		MarkForDelete();
+	}
 }
 
 void Enemy::PostInit()
@@ -41,12 +48,7 @@ void Enemy::Update(float deltaTime)
 {
 	Super::Update(deltaTime);
 
-	if (attributes->GetCurrentAttributeValueByType(HellwatchAttribute::Health) <= 0.f)
-	{
-		DisableUpdate();
-		MarkForDelete();
-		return;
-	}
+
 
 	if (PlayerCharacter* player = SceneApp::instance->GetPlayerCharacter())
 	{
@@ -56,6 +58,23 @@ void Enemy::Update(float deltaTime)
 		b2Vec2 enemyDirection = b2Vec2(enemyPosition.x(), enemyPosition.z());
 		b2Vec2 towardsPlayer = playerDirection - enemyDirection;
 		towardsPlayer.Normalize();
+		towardsPlayer.x *= rand() % 10;
+		towardsPlayer.y *= rand() % 10;
 		enemyMovement->ApplyMovementForceInDirection(towardsPlayer);
+	}
+}
+
+void Enemy::OnCollision(b2Body* otherBody)
+{
+	if (attackTime + attackCooldown < SceneApp::instance->GetCurrentGameTime()) {
+		if (otherBody)
+		{
+			PlayerCharacter* player = (PlayerCharacter*)otherBody->GetUserData().pointer;
+			if (player)
+			{
+				player->TakeDamage(damageAmount);
+				attackTime = SceneApp::instance->GetCurrentGameTime();
+			}
+		}
 	}
 }
