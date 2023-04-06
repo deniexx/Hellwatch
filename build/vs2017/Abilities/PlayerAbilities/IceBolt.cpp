@@ -34,8 +34,6 @@ void IceBolt::Begin()
 	mat.set_colour(0xFFC18B36);
 	actor->SetMaterial(mat);
 
-	translation += target * 2.f;
-
 	b2BodyDef bodyDef;
 	bodyDef.type = b2_dynamicBody;
 	bodyDef.position = b2Vec2(translation.x(), translation.z());
@@ -48,6 +46,7 @@ void IceBolt::Begin()
 	fixtureDef.shape = &shape;
 	fixtureDef.density = 1.f;
 	fixtureDef.friction = 0.75f;
+	fixtureDef.isSensor = true;
 
 	b2Body* body = SceneApp::instance->CreateCollisionBody(bodyDef, fixtureDef, actor);
 	actor->SetCollisionBody(body);

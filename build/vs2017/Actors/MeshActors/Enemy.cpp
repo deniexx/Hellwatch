@@ -1,5 +1,10 @@
 #include "Enemy.h"
 
+Enemy::Enemy()
+{
+	ID = ENEMY_ID;
+}
+
 void Enemy::TakeDamage(float damageAmount)
 {
 	if (attributes)
@@ -46,8 +51,6 @@ void Enemy::PostInit()
 void Enemy::Update(float deltaTime) 
 {
 	Super::Update(deltaTime);
-
-
 
 	if (PlayerCharacter* player = SceneApp::instance->GetPlayerCharacter())
 	{

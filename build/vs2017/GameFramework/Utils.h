@@ -6,6 +6,11 @@
 #include <graphics/renderer_3d.h>
 #include <scene_app.h>
 
+#define NO_ID 0
+#define PLAYER_ID 1
+#define ENEMY_ID 2
+#define ENVIRONMENT_ID 3
+
 #define GENERATED_BODY(ParentClass, CurrentClass) typedef ::ParentClass Super; \
 									typedef CurrentClass ThisClass;
 
@@ -71,4 +76,14 @@ static gef::Vector4 ProjectScreenToWorldSpace(gef::Vector2 v2)
 	pos.set_z(cameraPos.z() + pos.z() * 1.75f);
 
 	return pos;
+}
+
+namespace ApplyDamageOn
+{
+	enum Type
+	{
+		EnemiesOnly,
+		PlayerOnly,
+		EnemiesAndPlayer
+	};
 }

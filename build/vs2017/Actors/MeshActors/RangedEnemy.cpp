@@ -3,16 +3,15 @@
 #include "Abilities/Ability.h"
 
 
+RangedEnemy::RangedEnemy()
+{
+	ID = ENEMY_ID;
+	attackTime = attackCooldown + SceneApp::instance->GetCurrentGameTime();
+}
+
 void RangedEnemy::TakeDamage(float damageAmount)
 {
-	if (attributes)
-		attributes->ApplyAttributeChange(HellwatchAttribute::Health, -damageAmount);
-
-	if (attributes->GetCurrentAttributeValueByType(HellwatchAttribute::Health) <= 0.f)
-	{
-		DisableUpdate();
-		MarkForDelete();
-	}
+	Super::TakeDamage(damageAmount);
 }
 
 void RangedEnemy::PostInit()
@@ -49,7 +48,7 @@ void RangedEnemy::PostInit()
 
 void RangedEnemy::Update(float deltaTime)
 {
-	Super::Update(deltaTime);
+	MeshActor::Update(deltaTime);
 
 	if (attackTime + attackCooldown < SceneApp::instance->GetCurrentGameTime()) {
 		Shoot();
@@ -73,11 +72,10 @@ void RangedEnemy::Update(float deltaTime)
 		towardsPlayer.Normalize();
 		enemyMovement->ApplyMovementForceInDirection(-towardsPlayer);
 	}
-
 }
 
 void RangedEnemy::Shoot() {
-		//Super::Begin();
+
 	attackTime = SceneApp::instance->GetCurrentGameTime();
 	PlayerCharacter* player = SceneApp::instance->GetPlayerCharacter();
 	gef::Vector4 playerPosition = player->GetTranslation();
@@ -93,6 +91,7 @@ void RangedEnemy::Shoot() {
 
 	gef::Mesh* mesh = SceneApp::instance->GetPrimitiveBuilder()->CreateBoxMesh(gef::Vector4(0.2f, 0.2f, 0.2f));
 	DamageOnCollisionActor* actor = SceneApp::instance->SpawnMeshActor<DamageOnCollisionActor>(mesh, translation);
+	actor->SetApplyDamageOn(ApplyDamageOn::PlayerOnly);
 	actor->SetDamageAmount(10);
 	gef::Material mat;
 	mat.set_colour(0xFFC18B36);
@@ -111,11 +110,12 @@ void RangedEnemy::Shoot() {
 	fixtureDef.shape = &shape;
 	fixtureDef.density = 1.f;
 	fixtureDef.friction = 0.75f;
+	fixtureDef.isSensor = true;
 
 	b2Body* body = SceneApp::instance->CreateCollisionBody(bodyDef, fixtureDef, actor);
 	actor->SetCollisionBody(body);
 	b2Vec2 forceDir = b2Vec2(target.x(), target.z());
-	forceDir *= 1000.f;
+	forceDir *= 2000.f;
 
 	actor->GetCollisionBody()->ApplyForceToCenter(forceDir, true);
 }

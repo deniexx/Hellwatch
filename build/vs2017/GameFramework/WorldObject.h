@@ -52,6 +52,8 @@ public:
 	/// </summary>
 	virtual void OnCollision(b2Body* OtherBody);
 
+	int ID = NO_ID;
+
 protected:
 
 	b2Body* collisionBody = nullptr;

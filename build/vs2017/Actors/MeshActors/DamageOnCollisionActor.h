@@ -10,16 +10,21 @@ public:
 	/// <summary>
 	/// Deal damage on collision
 	/// </summary>
-	/// <param name="otherBody"></param>
 	virtual void OnCollision(b2Body* otherBody) override;
 
 	/// <summary>
 	/// Sets the damage amount
 	/// </summary>
-	/// <param name="newAmount"></param>
 	void SetDamageAmount(float newAmount) { damageAmount = newAmount; }
 
+	/// <summary>
+	/// Sets to what we should apply damage
+	/// </summary>
+	void SetApplyDamageOn(ApplyDamageOn::Type newState) { applyDamageOn = newState; }
+
 private:
+
+	ApplyDamageOn::Type applyDamageOn = ApplyDamageOn::EnemiesOnly;
 
 	float damageAmount = 0.f;
 };

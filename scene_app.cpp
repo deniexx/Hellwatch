@@ -15,7 +15,7 @@
 #include "Actors/MeshActors/Enemy.h"
 #include "Actors/MeshActors/RangedEnemy.h"
 #include "Actors/MeshActor.h"
-
+#include <thread>
 
 SceneApp::SceneApp(gef::Platform& platform):
 	Application(platform)
@@ -59,6 +59,9 @@ void SceneApp::Init()
 	if (imageData.image() != nullptr)
 	{
 		gef::Texture* texture = gef::Texture::Create(platform_, imageData);
+		loadingSprite->set_position(platform_.width() / 2, platform_.height() / 2, 0.f);
+		loadingSprite->set_width(1920);
+		loadingSprite->set_height(1080);
 		loadingSprite->set_texture(texture);
 	}
 
@@ -227,7 +230,11 @@ void SceneApp::RenderLoading()
 	view_matrix.LookAt(cameraEye, cameraLookAt, cameraUp);
 	renderer_3d_->set_view_matrix(view_matrix);
 
-	sprite_renderer_->Begin();
+	renderer_3d_->Begin();
+
+	renderer_3d_->End();
+
+	sprite_renderer_->Begin(false);
 	sprite_renderer_->DrawSprite(*loadingSprite);
 	sprite_renderer_->End();
 }
@@ -407,6 +414,9 @@ void SceneApp::SetupLights()
 
 void SceneApp::LoadAssets()
 {
+
+	std::this_thread::sleep_for(std::chrono::seconds(5));
+
 	OBJMeshLoader meshLoader;
 	for (const auto& mesh : meshesToLoad)
 		meshLoader.Load(mesh.c_str(), platform_, meshes);
@@ -473,7 +483,7 @@ void SceneApp::SetGameState(GameState::Type newState)
 	switch (newState)
 	{
 	case GameState::Loading:
-
+	break;
 	case GameState::MainMenu:
 	{
 	}

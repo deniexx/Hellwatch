@@ -13,6 +13,8 @@ class Enemy : public MeshActor
 
 public:
 
+	Enemy();
+
 	virtual void TakeDamage(float damageAmount) override;
 	float GetHealth() { return attributes ? attributes->GetCurrentAttributeValueByType(HellwatchAttribute::Health) : 0.f; }
 	virtual void Update(float deltaTime) override;

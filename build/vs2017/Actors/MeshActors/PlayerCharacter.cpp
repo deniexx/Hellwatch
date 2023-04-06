@@ -8,6 +8,7 @@ PlayerCharacter::PlayerCharacter()
 	: Super()
 {
 	meshName = "Ganfaul";
+	ID = PLAYER_ID;
 }
 
 void PlayerCharacter::PostInit()
