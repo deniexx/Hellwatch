@@ -35,6 +35,30 @@ const bool AttributeComponent::CheckHasEnoughOfAttributeByType(HellwatchAttribut
 	return false;
 }
 
+void AttributeComponent::SetAttributeCurrentValue(HellwatchAttribute::Type type, float newValue)
+{
+	for (auto& attribute : attributes)
+	{
+		if (attribute.attributeType == type)
+			attribute.currentAmount = newValue;
+	}
+}
+
+void AttributeComponent::SetAttributeMaxValue(HellwatchAttribute::Type type, float newValue)
+{
+	for (auto& attribute : attributes)
+	{
+		if (attribute.attributeType == type)
+			attribute.maxAmount = newValue;
+	}
+}
+
+void AttributeComponent::SetAttributeCurrentAndMaxValue(HellwatchAttribute::Type type, float newValue)
+{
+	SetAttributeMaxValue(type, newValue);
+	SetAttributeCurrentValue(type, newValue);
+}
+
 void AttributeComponent::ApplyAttributeChange(HellwatchAttribute::Type type, float delta) const
 {
 	for (auto& attribute : attributes)

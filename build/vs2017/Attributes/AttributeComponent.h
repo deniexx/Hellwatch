@@ -32,6 +32,21 @@ public:
 	const bool CheckHasEnoughOfAttributeByType(HellwatchAttribute::Type type, float amountNeeded);
 
 	/// <summary>
+	/// Sets the attribute current to the new given value
+	/// </summary>
+	void SetAttributeCurrentValue(HellwatchAttribute::Type type, float newValue);
+
+	/// <summary>
+	/// Sets the attribute max value to the new given value
+	/// </summary>
+	void SetAttributeMaxValue(HellwatchAttribute::Type type, float newValue);
+
+	/// <summary>
+	/// Sets the attribute current and max value to the new given value
+	/// </summary>
+	void SetAttributeCurrentAndMaxValue(HellwatchAttribute::Type, float newValue);
+
+	/// <summary>
 	/// Applies an attribute change to the specified attribute, can be positive or negative
 	/// </summary>
 	void ApplyAttributeChange(HellwatchAttribute::Type type, float delta) const;
