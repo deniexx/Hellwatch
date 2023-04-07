@@ -11,17 +11,23 @@ void Enemy::SetClass(EnemyClass::Type type)
 	{
 	case EnemyClass::HEAVY:
 	{
-
+		enemyMovement->SetAcceleration(50.f);
+		attributes->SetAttributeCurrentAndMaxValue(HellwatchAttribute::Health, 150.f);
+		damageAmount = 75;
 	}
 		break;
 	case EnemyClass::NORMAL:
 	{
-
+		enemyMovement->SetAcceleration(100.f);
+		attributes->SetAttributeCurrentAndMaxValue(HellwatchAttribute::Health, 100.f);
+		damageAmount = 50;
 	}
 		break;
 	case EnemyClass::LIGHT:
 	{
 		enemyMovement->SetAcceleration(150.f);
+		attributes->SetAttributeCurrentAndMaxValue(HellwatchAttribute::Health, 50.f);
+		damageAmount = 25;
 	}
 		break;
 	}
