@@ -165,10 +165,82 @@ void SceneApp::InitGameLoop()
 	newFixtureDef.density = 1.f;
 	newFixtureDef.friction = 0.3f;
 
+	// Build environment
 	MeshActor* actor = SpawnMeshActor(primitive_builder_->CreateBoxMesh(gef::Vector4(50.f, 0.5f, 50.f)), gef::Vector4(0.f, -2.f, 0.f));
-	gef::Material enemyMat;
-	mat.set_colour(0xFF00FFFF);
+	mat.set_colour(0xFFFFFFFF);
+	mat.set_texture(RequestTextureByName("Environment"));
 	actor->SetMaterial(mat);
+
+	std::vector<b2Vec2> blockPositions = { b2Vec2(12.f, 12.f)
+									, b2Vec2(-12.f, -12.f)
+									, b2Vec2(-12.f, 12.f)
+									, b2Vec2(12.f, -12.f)
+									, b2Vec2(20.f, 0.f)
+									, b2Vec2(-20.f, 0.f)
+									, b2Vec2(0.f, 20.f)
+									, b2Vec2(0.f, -20.f)
+									, b2Vec2(21.f, 21.f)
+									, b2Vec2(21.f, -21.f)
+									, b2Vec2(-21.f, -21.f)
+									, b2Vec2(-21.f, 21.f) };
+
+	b2BodyDef envBodyDef;
+	b2FixtureDef envFixture;
+
+	for (int i = 0; i < blockPositions.size(); ++i)
+	{
+		float x = blockPositions[i].x;
+		float y = blockPositions[i].y;
+		MeshActor* environment = SpawnMeshActor(RequestMeshByName("EnvironmentBlock"), gef::Vector4(x, 0.f, y));
+		environment->SetMaterial(mat);
+
+		envBodyDef.type = b2_staticBody;
+		envBodyDef.position.Set(x, y);
+
+		b2CircleShape shape;
+		shape.m_radius = 1.f;
+
+		envFixture.shape = &shape;
+		envFixture.density = 1.f;
+
+		environment->ID = ENVIRONMENT_ID;
+		environment->SetCollisionBody(CreateCollisionBody(envBodyDef, envFixture, environment));
+	}
+
+	 // Left and Right walls
+	gef::Material blockMat;
+	blockMat.set_colour(0xFF000000);
+
+	MeshActor* blockingWall = SpawnMeshActor(RequestMeshByName("BlockingWall"), gef::Vector4(30.f, 0.f, 0.f));
+	envBodyDef.position.Set(30.f, 0.f);
+	b2PolygonShape envShape;
+	envShape.SetAsBox(1.f, 60.f);
+	envFixture.shape = &envShape;
+	blockingWall->SetCollisionBody(CreateCollisionBody(envBodyDef, envFixture, blockingWall));
+	blockingWall->SetMaterial(blockMat);
+	blockingWall->ID = ENVIRONMENT_ID;
+
+	blockingWall = SpawnMeshActor(RequestMeshByName("BlockingWall"), gef::Vector4(-30.f, 0.f, 0.f));
+	envBodyDef.position.Set(-30.f, 0.f);
+	blockingWall->SetCollisionBody(CreateCollisionBody(envBodyDef, envFixture, blockingWall));
+	blockingWall->SetMaterial(blockMat);
+	blockingWall->ID = ENVIRONMENT_ID;
+
+	// Up and down
+	blockingWall = SpawnMeshActor(RequestMeshByName("BlockingWallY"), gef::Vector4(0.f, 0.f, 30.f));
+	envBodyDef.position.Set(0.f, 30.f);
+	envShape.SetAsBox(60.f, 1.f);
+	envFixture.shape = &envShape;
+	blockingWall->SetCollisionBody(CreateCollisionBody(envBodyDef, envFixture, blockingWall));
+	blockingWall->SetMaterial(blockMat);
+	blockingWall->ID = ENVIRONMENT_ID;
+
+	blockingWall = SpawnMeshActor(RequestMeshByName("BlockingWallY"), gef::Vector4(0.f, 0.f, -30.f));
+	envBodyDef.position.Set(0.f, -30.f);
+	blockingWall->SetCollisionBody(CreateCollisionBody(envBodyDef, envFixture, blockingWall));
+	blockingWall->SetMaterial(blockMat);
+	blockingWall->ID = ENVIRONMENT_ID;
+
 
 	bGameLoopInitted = true;
 }
@@ -595,7 +667,13 @@ void SceneApp::BuildToLoadData()
 {
 	meshesToLoad.push_back("Assets/MainCharacter.obj");
 	meshesToLoad.push_back("Assets/IceBolt.obj");
+	meshesToLoad.push_back("Assets/EnvironmentBlock.obj");
+	meshesToLoad.push_back("Assets/BlockingWalls.obj");
+
 	texturesToLoad["Ganfaul"] = "Assets/Ganfaul_diffuse.png";
+	texturesToLoad["Environment"] = "Assets/Environment_diffuse.png";
+	texturesToLoad["IceBolt"] = "Assets/IceBolt_diffuse.png";
+	texturesToLoad["BlockingWall"] = "Assets/BlockingWall_diffuse.png";
 }
 
 b2Body* SceneApp::CreateCollisionBody(b2BodyDef bodyDef, b2FixtureDef fixtureDef, WorldObject* owningObject)
@@ -640,8 +718,6 @@ void SceneApp::SetGameState(GameState::Type newState)
 {
 	switch (newState)
 	{
-	case GameState::Loading:
-	break;
 	case GameState::MainMenu:
 	{
 		InitMainMenu();

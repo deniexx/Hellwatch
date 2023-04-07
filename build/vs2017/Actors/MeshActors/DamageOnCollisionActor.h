@@ -4,6 +4,7 @@
 
 class DamageOnCollisionActor : public MeshActor
 {
+	GENERATED_BODY(MeshActor, DamageOnCollisionActor)
 
 public:
 
@@ -22,10 +23,15 @@ public:
 	/// </summary>
 	void SetApplyDamageOn(ApplyDamageOn::Type newState) { applyDamageOn = newState; }
 
-private:
+	void SetSpinning(bool bNewState) { bSpinning = bNewState; }
+
+
+	virtual void Update(float deltaTime) override;
+
+protected:
 
 	ApplyDamageOn::Type applyDamageOn = ApplyDamageOn::EnemiesOnly;
-
+	bool bSpinning = false;
 	float damageAmount = 0.f;
 };
 

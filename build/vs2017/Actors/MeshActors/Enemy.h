@@ -7,6 +7,16 @@
 #include "scene_app.h"
 #include "DamageOnCollisionActor.h"
 
+namespace EnemyClass
+{
+	enum Type
+	{
+		HEAVY,
+		NORMAL,
+		LIGHT
+	};
+}
+
 class Enemy : public MeshActor
 {
 	GENERATED_BODY(MeshActor, Enemy)
@@ -15,6 +25,7 @@ public:
 
 	Enemy();
 
+	virtual void SetClass(EnemyClass::Type type);
 	virtual void TakeDamage(float damageAmount) override;
 	float GetHealth() { return attributes ? attributes->GetCurrentAttributeValueByType(HellwatchAttribute::Health) : 0.f; }
 	virtual void Update(float deltaTime) override;

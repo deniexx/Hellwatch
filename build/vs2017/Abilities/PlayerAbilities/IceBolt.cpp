@@ -28,16 +28,15 @@ void IceBolt::Begin()
 	gef::Vector4 target = mousePos - translation;
 	target.Normalise();
 
+	translation.set_y(1.f);
 	gef::Mesh* mesh = SceneApp::instance->RequestMeshByName("IceBolt");
 	DamageOnCollisionActor* actor = SceneApp::instance->SpawnMeshActor<DamageOnCollisionActor>(mesh, translation);
 	actor->SetDamageAmount(GetDamageAmount());
 	actor->SetScale(gef::Vector4(0.2f, 0.2f, 0.2f));
-
-	float angle = FindAngle(gef::Vector4(1.f, 0.f, 0.f), target);
-	actor->SetRotation(gef::Vector4(0, angle, 0.f));
+	actor->SetSpinning(true);
 
 	gef::Material mat;
-	mat.set_colour(0xFFC18B36);
+	mat.set_texture(SceneApp::instance->RequestTextureByName("IceBolt"));
 	actor->SetMaterial(mat);
 
 	b2BodyDef bodyDef;

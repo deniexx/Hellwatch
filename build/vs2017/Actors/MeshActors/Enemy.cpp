@@ -5,6 +5,28 @@ Enemy::Enemy()
 	ID = ENEMY_ID;
 }
 
+void Enemy::SetClass(EnemyClass::Type type)
+{
+	switch (type)
+	{
+	case EnemyClass::HEAVY:
+	{
+
+	}
+		break;
+	case EnemyClass::NORMAL:
+	{
+
+	}
+		break;
+	case EnemyClass::LIGHT:
+	{
+		enemyMovement->SetAcceleration(150.f);
+	}
+		break;
+	}
+}
+
 void Enemy::TakeDamage(float damageAmount)
 {
 	if (attributes)

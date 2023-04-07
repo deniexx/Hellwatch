@@ -25,7 +25,23 @@ void DamageOnCollisionActor::OnCollision(b2Body* otherBody)
 			{
 				actor->TakeDamage(damageAmount);
 				MarkForDelete();
+				return;
 			}
+
+			if (actor->ID == ENVIRONMENT_ID)
+				MarkForDelete();
 		}
+	}
+}
+
+void DamageOnCollisionActor::Update(float deltaTime)
+{
+	Super::Update(deltaTime);
+
+	if (bSpinning)
+	{
+		gef::Vector4 actorRot = GetRotation();
+		actorRot.set_y(actorRot.y() + deltaTime * 100.f);
+		SetRotation(actorRot);
 	}
 }
