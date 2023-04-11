@@ -41,6 +41,10 @@ void WorldObject::Render()
 
 void WorldObject::SetTranslation(const gef::Vector4& inTranslation)
 {
+	if (collisionBody)
+	{
+		collisionBody->SetTransform(b2Vec2(inTranslation.x(), inTranslation.z()), 0.f);
+	}
 	translation = inTranslation;
 }
 

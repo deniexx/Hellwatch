@@ -16,6 +16,7 @@
 #include "Actors/MeshActors/Enemy.h"
 #include "Actors/MeshActors/RangedEnemy.h"
 #include "Actors/MeshActor.h"
+#include "GameFramework/WaveManager.h"
 #include <thread>
 
 SceneApp::SceneApp(gef::Platform& platform):
@@ -143,15 +144,8 @@ void SceneApp::InitGameLoop()
 
 	playerCharacter = SpawnMeshActor<PlayerCharacter>();
 
-	gef::Mesh* mesh = primitive_builder_->CreateBoxMesh(gef::Vector4(0.5f, 0.5f, 0.5f));
-	enemyDummy = SpawnMeshActor<EnemyDummy>(mesh, gef::Vector4(2.0f, 0.f, 2.0f));
-	testEnemy = SpawnMeshActor<Enemy>(mesh, gef::Vector4(4.0f, 0.f, 4.0f));
-	testRanged = SpawnMeshActor<RangedEnemy>(mesh, gef::Vector4(10.0f, 0.f, 10.0f));
-
-	gef::Material mat;
-	mat.set_colour(0xFF0000FF);
-	testEnemy->SetMaterial(mat);
-	testRanged->SetMaterial(mat);
+	waveManager = new WaveManager();
+	waveManager->Init();
 
 	b2BodyDef newBodyDef;
 	newBodyDef.type = b2_staticBody;
@@ -166,6 +160,7 @@ void SceneApp::InitGameLoop()
 	newFixtureDef.friction = 0.3f;
 
 	// Build environment
+	gef::Material mat;
 	MeshActor* actor = SpawnMeshActor(primitive_builder_->CreateBoxMesh(gef::Vector4(50.f, 0.5f, 50.f)), gef::Vector4(0.f, -2.f, 0.f));
 	mat.set_colour(0xFFFFFFFF);
 	mat.set_texture(RequestTextureByName("Environment"));
@@ -317,6 +312,7 @@ void SceneApp::UpdateGameLoop(float frame_time)
 	int32 positionIterations = 2;
 
 	b2dWorld->Step(frame_time, velocityIterations, positionIterations);
+	waveManager->Update();
 	HandleCollision();
 
 	for (int i = 0; i < meshActors.size(); ++i)
@@ -512,7 +508,6 @@ void SceneApp::DrawHUD()
 		font_->RenderText(sprite_renderer_, gef::Vector4(1800.0f, 1040.0f, -0.9f), 1.0f, 0xffffffff, gef::TJ_LEFT, "FPS: %.1f", fps_);
 		font_->RenderText(sprite_renderer_, gef::Vector4(1740.0f, 1000.0f, -0.9f), 1.0f, 0xffffffff, gef::TJ_LEFT, "Mouse: %.1f, %.1f", mousePos.x(), mousePos.z());
 		font_->RenderText(sprite_renderer_, gef::Vector4(1700.0f, 960.0f, -0.9f), 1.0f, 0xffffffff, gef::TJ_LEFT, "Character: %.1f, %.1f", characterPos.x(), characterPos.z());
-		font_->RenderText(sprite_renderer_, gef::Vector4(1700.0f, 920.0f, -0.9f), 1.0f, 0xffffffff, gef::TJ_LEFT, "Enemy Health: %.1f", enemyDummy->GetHealth());
 	}
 }
 #pragma endregion
@@ -669,11 +664,15 @@ void SceneApp::BuildToLoadData()
 	meshesToLoad.push_back("Assets/IceBolt.obj");
 	meshesToLoad.push_back("Assets/EnvironmentBlock.obj");
 	meshesToLoad.push_back("Assets/BlockingWalls.obj");
+	meshesToLoad.push_back("Assets/MeleeEnemy.obj");
+	meshesToLoad.push_back("Assets/RangedEnemy.obj");
 
 	texturesToLoad["Ganfaul"] = "Assets/Ganfaul_diffuse.png";
 	texturesToLoad["Environment"] = "Assets/Environment_diffuse.png";
 	texturesToLoad["IceBolt"] = "Assets/IceBolt_diffuse.png";
 	texturesToLoad["BlockingWall"] = "Assets/BlockingWall_diffuse.png";
+	texturesToLoad["MeleeEnemy"] = "Assets/MeleeEnemy_diffuse.png";
+	texturesToLoad["RangedEnemy"] = "Assets/RangedEnemy_diffuse.png";
 }
 
 b2Body* SceneApp::CreateCollisionBody(b2BodyDef bodyDef, b2FixtureDef fixtureDef, WorldObject* owningObject)
@@ -731,6 +730,11 @@ void SceneApp::SetGameState(GameState::Type newState)
 	case GameState::PauseMenu:
 	{
 
+	}
+	break;
+	case GameState::Shop:
+	{
+		
 	}
 	break;
 	}

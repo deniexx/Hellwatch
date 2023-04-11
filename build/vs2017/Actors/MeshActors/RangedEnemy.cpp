@@ -20,8 +20,8 @@ void RangedEnemy::PostInit()
 
 	FAttribute health;
 	health.attributeType = HellwatchAttribute::Health;
-	health.maxAmount = 700.f;
-	health.currentAmount = 700.f;
+	health.maxAmount = 60.f;
+	health.currentAmount = 60.f;
 	health.bClampedToZero = true;
 	attributes->AddAttribute(health);
 
@@ -45,14 +45,17 @@ void RangedEnemy::PostInit()
 	enemyMovement->Init(this);
 	enemyMovement->SetMaximumSpeed(30);
 	enemyMovement->SetAcceleration(150);
+
+	SetMesh(SceneApp::instance->RequestMeshByName("RangedEnemyMesh"));
+	gef::Material mat;
+	mat.set_texture(SceneApp::instance->RequestTextureByName("RangedEnemy"));
+	SetMaterial(mat);
 }
 
 
 void RangedEnemy::Update(float deltaTime)
 {
 	MeshActor::Update(deltaTime);
-
-
 
 	PlayerCharacter* player = SceneApp::instance->GetPlayerCharacter();
 	gef::Vector4 playerPosition = player->GetTranslation();

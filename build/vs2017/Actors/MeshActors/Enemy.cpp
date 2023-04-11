@@ -74,6 +74,11 @@ void Enemy::PostInit()
 
 	enemyMovement = CreateComponent<CharacterMovementComponent>();
 	enemyMovement->Init(this);
+
+	SetMesh(SceneApp::instance->RequestMeshByName("MutantMesh"));
+	gef::Material mat;
+	mat.set_texture(SceneApp::instance->RequestTextureByName("MeleeEnemy"));
+	SetMaterial(mat);
 }
 
 void Enemy::Update(float deltaTime) 

@@ -19,7 +19,8 @@ namespace GameState
 		Loading,
 		MainMenu,
 		GameLoop,
-		PauseMenu
+		PauseMenu,
+		Shop
 	};
 }
 
@@ -42,6 +43,7 @@ class PlayerCharacter;
 class EnemyDummy;
 class Enemy;
 class RangedEnemy;
+class WaveManager;
 
 struct MenuButton
 {
@@ -131,12 +133,18 @@ private:
 
 	std::future<GameState::Type> loadFuture;
 
-	gef::Sprite* loadingSprite;
+	/************************************************************************/
+	/*                                TESTING                               */
+	/************************************************************************/
 	gef::Sprite* mainMenuSprite;
+	WaveManager* waveManager;
+
+
+	/************************************************************************/
+	/*                              REQUIRED                                */
+	/************************************************************************/
+	gef::Sprite* loadingSprite;
 	PlayerCharacter* playerCharacter;
-	EnemyDummy* enemyDummy;
-	Enemy* testEnemy;
-	RangedEnemy* testRanged;
 	std::vector<MeshActor*> meshActors;
 	std::vector<SpriteActor*> spriteActors;
 	gef::Scene* scene_assets_;
@@ -188,10 +196,10 @@ public:
 	{
 		MeshActorType* meshActor = new MeshActorType();
 		meshActor->SetMesh(mesh);
-		meshActor->SetTranslation(translation);
 		meshActor->SetRotation(rotation);
 		meshActor->SetScale(scale);
 		meshActor->Init(owner);
+		meshActor->SetTranslation(translation);
 		meshActors.push_back(meshActor);
 
 		return meshActor;
