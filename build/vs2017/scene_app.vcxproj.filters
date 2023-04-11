@@ -75,6 +75,9 @@
     <ClCompile Include="Actors\MeshActors\RangedEnemy.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Actors\MeshActors\Boss.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\scene_app.h">
@@ -138,6 +141,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Actors\MeshActors\RangedEnemy.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Actors\MeshActors\Boss.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
