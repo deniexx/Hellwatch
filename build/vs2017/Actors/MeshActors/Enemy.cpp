@@ -36,12 +36,14 @@ void Enemy::SetClass(EnemyClass::Type type)
 void Enemy::TakeDamage(float damageAmount)
 {
 	if (attributes)
+	{
 		attributes->ApplyAttributeChange(HellwatchAttribute::Health, -damageAmount);
 
-	if (attributes->GetCurrentAttributeValueByType(HellwatchAttribute::Health) <= 0.f)
-	{
-		DisableUpdate();
-		MarkForDelete();
+		if (attributes->GetCurrentAttributeValueByType(HellwatchAttribute::Health) <= 0.f)
+		{
+			DisableUpdate();
+			MarkForDelete();
+		}
 	}
 }
 

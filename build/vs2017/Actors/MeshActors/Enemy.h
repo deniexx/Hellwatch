@@ -37,8 +37,9 @@ public:
 
 protected:
 
-	AttributeComponent* attributes;
 	virtual void PostInit() override;
+
+	AttributeComponent* attributes;
 	CharacterMovementComponent* enemyMovement;
 
 

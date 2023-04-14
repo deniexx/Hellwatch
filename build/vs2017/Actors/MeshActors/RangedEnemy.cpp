@@ -9,11 +9,6 @@ RangedEnemy::RangedEnemy()
 	attackTime = attackCooldown + SceneApp::instance->GetCurrentGameTime();
 }
 
-void RangedEnemy::TakeDamage(float damageAmount)
-{
-	Super::TakeDamage(damageAmount);
-}
-
 void RangedEnemy::PostInit()
 {
 	attributes = CreateComponent<AttributeComponent>();
