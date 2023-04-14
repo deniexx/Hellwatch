@@ -53,7 +53,7 @@ void WaveManager::Update()
 	float spawnPeriod = currentWave < waveDefinitions.size() ? waveDefinitions[currentWave].spawnPeriod : SPAWN_PERIOD_AFTER25;
 	float maxSpawnAmount = currentWave < waveDefinitions.size() ? waveDefinitions[currentWave].maxSpawns : USE_WAVE_FORMULA;
 
-	bSpawnsComplete = currentWaveSpawnedEnemiesAmount == maxSpawnAmount;
+	bSpawnsComplete = currentWaveSpawnedEnemiesAmount >= maxSpawnAmount;
 	bool bCanSpawn = lastSpawnTime + spawnPeriod < SceneApp::instance->GetCurrentGameTime() && !bSpawnsComplete;
 
 	if (bCanSpawn)
@@ -68,19 +68,21 @@ void WaveManager::CheckWaveState()
 {
 	if (bSpawnsComplete)
 	{
-		bool bAnyEnemyAlive = false;
+		std::vector<Enemy*> cleanEnemies;
 		for (int i = 0; i < spawnedEnemies.size(); ++i)
 		{
-			if (spawnedEnemies[i]->GetIsMarkedForDelete())
+			if (!spawnedEnemies[i]->GetIsMarkedForDelete())
 			{
-				
+				cleanEnemies.push_back(spawnedEnemies[i]);
 			}
 		}
 
-		if (!bAnyEnemyAlive)
+		if (cleanEnemies.empty())
 		{
 			EndWave();
 		}
+
+		spawnedEnemies = cleanEnemies;
 	}
 }
 

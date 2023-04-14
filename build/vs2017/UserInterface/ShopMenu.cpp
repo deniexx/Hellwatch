@@ -14,32 +14,27 @@ void ShopMenu::Init()
 	increaseAttributeButton.color = 0xFF0000FF;
 	increaseAttributeButton.justification = gef::TJ_LEFT;
 	increaseAttributeButton.scale = 3.f;
-	increaseAttributeButton.position = gef::Vector4(160.f, 100.f, 0.f);
+	increaseAttributeButton.position = gef::Vector4(160.f, 400.f, 0.f);
 	increaseAttributeButton.callbackFunction = bindFunc(IncreaseVitality);
 	menuButtons.push_back(increaseAttributeButton);
 
 	increaseAttributeButton.buttonText = "Wisdom +";
-	increaseAttributeButton.position = gef::Vector4(160.f, 200.f, 0.f);
+	increaseAttributeButton.position = gef::Vector4(160.f, 600.f, 0.f);
 	increaseAttributeButton.callbackFunction = bindFunc(IncreaseWisdom);
 	menuButtons.push_back(increaseAttributeButton);
 
 	increaseAttributeButton.buttonText = "Toughness +";
-	increaseAttributeButton.position = gef::Vector4(260.f, 100.f, 0.f);
+	increaseAttributeButton.position = gef::Vector4(1300.f, 400.f, 0.f);
 	increaseAttributeButton.callbackFunction = bindFunc(IncreaseToughness);
 	menuButtons.push_back(increaseAttributeButton);
 
 	increaseAttributeButton.buttonText = "Energy +";
-	increaseAttributeButton.position = gef::Vector4(260.f, 200.f, 0.f);
-	increaseAttributeButton.callbackFunction = bindFunc(IncreaseEnergy);
-	menuButtons.push_back(increaseAttributeButton);
-
-	increaseAttributeButton.buttonText = "Energy +";
-	increaseAttributeButton.position = gef::Vector4(260.f, 200.f, 0.f);
+	increaseAttributeButton.position = gef::Vector4(1300.f, 600.f, 0.f);
 	increaseAttributeButton.callbackFunction = bindFunc(IncreaseEnergy);
 	menuButtons.push_back(increaseAttributeButton);
 
 	increaseAttributeButton.buttonText = "Close Shop";
-	increaseAttributeButton.position = gef::Vector4(400.f, 600.f, 0.f);
+	increaseAttributeButton.position = gef::Vector4(750.f, 900.f, 0.f);
 	increaseAttributeButton.callbackFunction = bindFunc(CloseShop);
 	menuButtons.push_back(increaseAttributeButton);
 
@@ -80,6 +75,27 @@ void ShopMenu::Init()
 	keyboardKeybind.keyCode = gef::Keyboard::KC_RETURN;
 	keyboardKeybind.functionBind = bindFunc(PressMenuButton);
 	menuController->BindKeyboardEvent(keyboardKeybind);
+
+	// Mouse click to submit keybind
+	FKeyBindMouse mouseKeybind;
+	mouseKeybind.clickAction = gef::TT_NEW;
+	mouseKeybind.functionBind = bindFunc_ONEParam(OnMouseButtonPressed, gef::Vector2, mousePos);
+	menuController->BindMouseEvent(mouseKeybind);
+}
+
+void ShopMenu::OnMouseButtonPressed(gef::Vector2 mousePos)
+{
+	for (const auto& button : menuButtons)
+	{
+		if (menuController)
+		{
+			if (mousePos.x > button.position.x() - 20 && mousePos.x < button.position.x() + 250 && mousePos.y > button.position.y() && mousePos.y < button.position.y() + 90)
+			{
+				button.callbackFunction();
+				break;
+			}
+		}
+	}
 }
 
 void ShopMenu::IncreaseVitality()

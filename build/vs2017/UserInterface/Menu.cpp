@@ -1,6 +1,12 @@
 #include "Menu.h"
 #include "GameFramework/PlayerController.h"
 
+Menu::~Menu()
+{
+	delete menuController;
+	menuController = NULL;
+}
+
 void Menu::Update()
 {
 	if (menuController)
@@ -12,9 +18,6 @@ void Menu::Update()
 
 void Menu::DrawMenuHUD(gef::Font* font_, gef::SpriteRenderer* sprite_renderer_)
 {
-	gef::Vector2 mousePos = menuController->GetMousePosition();
-	font_->RenderText(sprite_renderer_, gef::Vector4(1700.0f, 1000.0f, -0.9f), 1.0f, 0xffffffff, gef::TJ_LEFT, "Mouse: %.1f, %.1f", mousePos.x, mousePos.y);
-
 	for (int i = 0; i < menuButtons.size(); ++i)
 	{
 		float btnScale = i == currentButtonFocused ? menuButtons[i].scale * 1.2f : menuButtons[i].scale;
@@ -56,14 +59,17 @@ void Menu::OnControllerUpButton(gef::Vector2 dir)
 
 void Menu::CheckForHighlight()
 {
-	gef::Vector2 mousePos = menuController->GetMousePosition();
-
-	for (int i = 0; i < menuButtons.size(); ++i)
+	if (menuController)
 	{
-		if (mousePos.x > menuButtons[i].position.x() - 20 && mousePos.x < menuButtons[i].position.x() + 180 && mousePos.y > menuButtons[i].position.y() && mousePos.y < menuButtons[i].position.y() + 90)
+		gef::Vector2 mousePos = menuController->GetMousePosition();
+		
+		for (int i = 0; i < menuButtons.size(); ++i)
 		{
-			currentButtonFocused = i;
-			break;
+			if (mousePos.x > menuButtons[i].position.x() - 20 && mousePos.x < menuButtons[i].position.x() + 180 && mousePos.y > menuButtons[i].position.y() && mousePos.y < menuButtons[i].position.y() + 90)
+			{
+				currentButtonFocused = i;
+				break;
+			}
 		}
 	}
 }

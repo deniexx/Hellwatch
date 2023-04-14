@@ -21,6 +21,8 @@ public:
 	*					MENU INPUT                         *
 	/*******************************************************/
 
+	~Menu();
+
 	virtual void Init() = 0;
 	virtual void Update();
 

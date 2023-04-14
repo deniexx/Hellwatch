@@ -76,9 +76,7 @@ void SceneApp::Init()
 
 void SceneApp::InitMainMenu()
 {
-	if (mainMenu != NULL)
-		mainMenu->Init();
-	else
+	if (mainMenu == NULL)
 	{
 		mainMenu = new MainMenu();
 		mainMenu->Init();
@@ -87,15 +85,19 @@ void SceneApp::InitMainMenu()
 
 void SceneApp::InitShop()
 {
-	if (shopMenu != NULL)
+	if (shopMenu == NULL)
 	{
+		shopMenu = new ShopMenu();
 		shopMenu->Init();
 	}
 }
 
 void SceneApp::InitGameLoop()
 {
-	if (bGameLoopInitted) return;
+	if (bGameLoopInitted) 
+	{
+		return;
+	}
 
 	// initialise primitive builder to make create some 3D geometry easier
 	primitive_builder_ = new PrimitiveBuilder(platform_);
@@ -194,7 +196,6 @@ void SceneApp::InitGameLoop()
 	blockingWall->SetMaterial(blockMat);
 	blockingWall->ID = ENVIRONMENT_ID;
 
-
 	bGameLoopInitted = true;
 }
 
@@ -287,12 +288,14 @@ void SceneApp::UpdateGameLoop(float frame_time)
 			spriteActors[i]->Update(frame_time);
 	}
 
+	UpdateShop();
 	CheckMarkedForDeletion();
 }
 
 void SceneApp::UpdateShop()
 {
-	shopMenu->Update();
+	if (shopMenu)
+		shopMenu->Update();
 }
 
 void SceneApp::UpdatePauseMenu(float frame_time)
@@ -656,7 +659,6 @@ void SceneApp::SetGameState(GameState::Type newState)
 		if (gameState == GameState::Shop)
 		{
 			waveManager->StartWave();
-			break;
 		}
 		InitGameLoop();
 	}

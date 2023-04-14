@@ -10,6 +10,10 @@ public:
 
 	virtual void Init();
 
+protected:
+
+	virtual void OnMouseButtonPressed(gef::Vector2 mousePos);
+
 private:
 
 	void IncreaseVitality();
