@@ -234,6 +234,7 @@
     <ClCompile Include="ActorComponents\CharacterMovementComponent.cpp" />
     <ClCompile Include="Actors\MeshActors\DamageOnCollisionActor.cpp" />
     <ClCompile Include="Actors\MeshActors\EnemyDummy.cpp" />
+    <ClCompile Include="Actors\MeshActors\Boss.cpp" />
     <ClCompile Include="GameFramework\PlayerController.cpp" />
     <ClCompile Include="GameFramework\WorldObject.cpp" />
     <ClCompile Include="Abilities\PlayerAbilities\IceBolt.cpp" />
@@ -256,6 +257,7 @@
     <ClInclude Include="ActorComponents\CharacterMovementComponent.h" />
     <ClInclude Include="Actors\MeshActors\DamageOnCollisionActor.h" />
     <ClInclude Include="Actors\MeshActors\EnemyDummy.h" />
+    <ClInclude Include="Actors\MeshActors\Boss.h" />
     <ClInclude Include="GameFramework\PlayerController.h" />
     <ClInclude Include="GameFramework\Utils.h" />
     <ClInclude Include="GameFramework\WorldObject.h" />
