@@ -13,8 +13,8 @@ void WaveManager::Init()
 	lastSpawnTime = SceneApp::instance->GetCurrentGameTime();
 
 	FWaveDefinition wave;
-	wave.maxSpawns = 5;
-	wave.spawnPeriod = 6;
+	wave.maxSpawns = 1;
+	wave.spawnPeriod = 2;
 
 	waveDefinitions.push_back(wave);
 
@@ -45,7 +45,7 @@ void WaveManager::EndWave()
 	spawnedEnemies.clear();
 	currentWave += 1;
 	bInWave = false;
-	//SceneApp::instance->SetGameState(GameState::Shop);
+	SceneApp::instance->SetGameState(GameState::Shop);
 }
 
 void WaveManager::Update()
@@ -71,10 +71,9 @@ void WaveManager::CheckWaveState()
 		bool bAnyEnemyAlive = false;
 		for (int i = 0; i < spawnedEnemies.size(); ++i)
 		{
-			if (spawnedEnemies[i])
+			if (spawnedEnemies[i]->GetIsMarkedForDelete())
 			{
-				bAnyEnemyAlive = true;
-				break;
+				
 			}
 		}
 

@@ -9,6 +9,8 @@
 #include "assets/png_loader.h"
 #include <graphics/image_data.h>
 
+#include "UserInterface/MainMenu.h"
+#include "UserInterface/ShopMenu.h"
 #include "GameFramework/PlayerController.h"
 #include "Actors/MeshActors/PlayerCharacter.h"
 #include "Actors/SpriteActor.h"
@@ -26,6 +28,8 @@ SceneApp::SceneApp(gef::Platform& platform):
 	,primitive_builder_(NULL)
 	,font_(NULL)
 	,scene_assets_(NULL)
+	,mainMenu(NULL)
+	,shopMenu(NULL)
 	,currentGameTime(0.f)
 {
 }
@@ -72,67 +76,21 @@ void SceneApp::Init()
 
 void SceneApp::InitMainMenu()
 {
-	MenuButton startButton;
-	startButton.buttonText = "Start";
-	startButton.color = 0xFF0000FF;
-	startButton.justification = gef::TJ_LEFT;
-	startButton.scale = 3.f;
-	startButton.position = gef::Vector4(160.f, 540.f, 0.f);
-	startButton.callbackFunction = bindFunc(OnStartButtonClicked);
-	mainMenuButtons.push_back(startButton);
-
-	MenuButton exitButton;
-	exitButton.buttonText = "Exit";
-	exitButton.color = 0xFF0000FF;
-	exitButton.justification = gef::TJ_LEFT;
-	exitButton.scale = 3.f;
-	exitButton.position = gef::Vector4(160.f, 640.f, 0.f);
-	exitButton.callbackFunction = bindFunc(OnExitButtonClicked);
-	mainMenuButtons.push_back(exitButton);
-
-	mainMenuSprite = new gef::Sprite();
-	gef::PNGLoader png_loader;
-	gef::ImageData imageData;
-	png_loader.Load("Assets/MainMenu.png", platform_, imageData);
-	if (imageData.image() != nullptr)
+	if (mainMenu != NULL)
+		mainMenu->Init();
+	else
 	{
-		gef::Texture* texture = gef::Texture::Create(platform_, imageData);
-		mainMenuSprite->set_position(platform_.width() / 2, platform_.height() / 2, 0.f);
-		mainMenuSprite->set_width(1920);
-		mainMenuSprite->set_height(1080);
-		mainMenuSprite->set_texture(texture);
+		mainMenu = new MainMenu();
+		mainMenu->Init();
 	}
+}
 
-	menuController = new PlayerController(platform_);
-	FKeyBindKeyboard keyboardKeybind;
-
-	// Move down on menu keybinds
-	keyboardKeybind.inputAction = HellwatchInputAction::Released;
-	keyboardKeybind.keyCode = gef::Keyboard::KC_S;
-	keyboardKeybind.functionBind = bindFunc(OnDownButtonPressed);
-	menuController->BindKeyboardEvent(keyboardKeybind);
-
-	keyboardKeybind.keyCode = gef::Keyboard::KC_DOWN;
-	menuController->BindKeyboardEvent(keyboardKeybind);
-
-	// Move up on menu keybinds
-	keyboardKeybind.keyCode = gef::Keyboard::KC_UP;
-	keyboardKeybind.functionBind = bindFunc(OnUpButtonPressed);
-	menuController->BindKeyboardEvent(keyboardKeybind);
-
-	keyboardKeybind.keyCode = gef::Keyboard::KC_W;
-	menuController->BindKeyboardEvent(keyboardKeybind);
-
-	// Submit keybind
-	keyboardKeybind.keyCode = gef::Keyboard::KC_RETURN;
-	keyboardKeybind.functionBind = bindFunc(PressMenuButton);
-	menuController->BindKeyboardEvent(keyboardKeybind);
-
-	// Mouse click to submit keybind
-	FKeyBindMouse mouseKeybind;
-	mouseKeybind.clickAction = gef::TT_NEW;
-	mouseKeybind.functionBind = bindFunc_ONEParam(OnMouseButtonPressed, gef::Vector2, mousePos);
-	menuController->BindMouseEvent(mouseKeybind);
+void SceneApp::InitShop()
+{
+	if (shopMenu != NULL)
+	{
+		shopMenu->Init();
+	}
 }
 
 void SceneApp::InitGameLoop()
@@ -259,6 +217,9 @@ void SceneApp::CleanUp()
 
 	delete b2dWorld;
 	b2dWorld = NULL;
+
+	delete mainMenu;
+	mainMenu = NULL;
 }
 #pragma endregion
 
@@ -283,6 +244,9 @@ bool SceneApp::Update(float frame_time)
 	case GameState::PauseMenu:
 		UpdatePauseMenu(frame_time);
 		break;
+	case GameState::Shop:
+		UpdateShop();
+		break;
 	}
 
 	return true;
@@ -299,11 +263,7 @@ void SceneApp::UpdateLoading(float frame_time)
 
 void SceneApp::UpdateMainMenu(float frame_time)
 {
-	if (menuController)
-	{
-		menuController->Update();
-		CheckForHighlight();
-	}
+	mainMenu->Update();
 }
 
 void SceneApp::UpdateGameLoop(float frame_time)
@@ -328,6 +288,11 @@ void SceneApp::UpdateGameLoop(float frame_time)
 	}
 
 	CheckMarkedForDeletion();
+}
+
+void SceneApp::UpdateShop()
+{
+	shopMenu->Update();
 }
 
 void SceneApp::UpdatePauseMenu(float frame_time)
@@ -358,6 +323,9 @@ void SceneApp::Render()
 	case GameState::PauseMenu:
 		RenderPauseMenu();
 		break;
+	case GameState::Shop:
+		RenderShop();
+		break;
 	}
 }
 
@@ -378,6 +346,38 @@ void SceneApp::RenderLoading()
 	sprite_renderer_->End();
 }
 
+void SceneApp::RenderShop()
+{
+	if (playerCharacter != NULL)
+	{
+		cameraEye = playerCharacter->GetTranslation();
+		cameraEye.set_y(20.f);
+		cameraEye.set_z(cameraEye.z() - 10);
+		cameraLookAt = playerCharacter->GetTranslation();
+		cameraLookAt.set_y(-1.f);
+	}
+
+	gef::Matrix44 view_matrix;
+	view_matrix.LookAt(cameraEye, cameraLookAt, cameraUp);
+	renderer_3d_->set_view_matrix(view_matrix);
+
+	renderer_3d_->Begin();
+
+	for (auto actor : meshActors)
+		actor->Render();
+
+	renderer_3d_->End();
+
+	sprite_renderer_->Begin(false);
+
+	DrawHUD();
+	for (auto actor : spriteActors)
+		actor->Render();
+
+	shopMenu->DrawMenuHUD(font_, sprite_renderer_);
+	sprite_renderer_->End();
+}
+
 void SceneApp::RenderMainMenu()
 {
 	cameraLookAt = gef::Vector4(0.f, 0.f, 0.f);
@@ -391,19 +391,12 @@ void SceneApp::RenderMainMenu()
 	renderer_3d_->End();
 
 	sprite_renderer_->Begin(false);
-	sprite_renderer_->DrawSprite(*mainMenuSprite);
+	sprite_renderer_->DrawSprite(*mainMenu->menuSprite);
 	sprite_renderer_->End();
 
 	if (font_)
 	{
-		gef::Vector2 mousePos = menuController->GetMousePosition();
-		font_->RenderText(sprite_renderer_, gef::Vector4(1700.0f, 1000.0f, -0.9f), 1.0f, 0xffffffff, gef::TJ_LEFT, "Mouse: %.1f, %.1f", mousePos.x, mousePos.y);
-
-		for (int i = 0; i < mainMenuButtons.size(); ++i)
-		{
-			float btnScale = i == currentButtonFocused ? mainMenuButtons[i].scale * 1.2f : mainMenuButtons[i].scale;
-			font_->RenderText(sprite_renderer_, mainMenuButtons[i].position, btnScale, mainMenuButtons[i].color, mainMenuButtons[i].justification, mainMenuButtons[i].buttonText.c_str());
-		}
+		mainMenu->DrawMenuHUD(font_, sprite_renderer_);
 	}
 }
 
@@ -509,70 +502,6 @@ void SceneApp::DrawHUD()
 		font_->RenderText(sprite_renderer_, gef::Vector4(1740.0f, 1000.0f, -0.9f), 1.0f, 0xffffffff, gef::TJ_LEFT, "Mouse: %.1f, %.1f", mousePos.x(), mousePos.z());
 		font_->RenderText(sprite_renderer_, gef::Vector4(1700.0f, 960.0f, -0.9f), 1.0f, 0xffffffff, gef::TJ_LEFT, "Character: %.1f, %.1f", characterPos.x(), characterPos.z());
 	}
-}
-#pragma endregion
-
-#pragma region MainMenuButtons
-void SceneApp::OnDownButtonPressed()
-{
-	currentButtonFocused = (currentButtonFocused + 1) % mainMenuButtons.size();
-}
-
-void SceneApp::OnUpButtonPressed()
-{
-	currentButtonFocused = (currentButtonFocused - 1) % mainMenuButtons.size();
-}
-
-void SceneApp::OnMouseButtonPressed(gef::Vector2 mousePos)
-{
-	if (mousePos.x > 140 && mousePos.x < 340 && mousePos.y > 540 && mousePos.y < 630)
-	{
-		OnStartButtonClicked();
-	}
-	else if (mousePos.x > 140 && mousePos.x < 340 && mousePos.y > 640 && mousePos.y < 730)
-	{
-		OnExitButtonClicked();
-	}
-}
-
-void SceneApp::OnControllerDownButton(gef::Vector2 dir)
-{
-	currentButtonFocused = (currentButtonFocused + 1) % mainMenuButtons.size();
-}
-
-
-void SceneApp::OnControllerUpButton(gef::Vector2 dir)
-{
-	currentButtonFocused = (currentButtonFocused - 1) % mainMenuButtons.size();
-}
-
-void SceneApp::CheckForHighlight()
-{
-	gef::Vector2 mousePos = menuController->GetMousePosition();
-	
-	if (mousePos.x > 140 && mousePos.x < 340 && mousePos.y > 540 && mousePos.y < 630)
-	{
-		currentButtonFocused = 0;
-	}
-	else if (mousePos.x > 140 && mousePos.x < 340 && mousePos.y > 640 && mousePos.y < 730)
-	{
-		currentButtonFocused = 1;
-	}
-}
-
-void SceneApp::OnStartButtonClicked()
-{
-	SetGameState(GameState::GameLoop);
-}
-
-void SceneApp::OnExitButtonClicked()
-{
-	exit(0);
-}
-
-void SceneApp::PressMenuButton()
-{
-	mainMenuButtons[currentButtonFocused].callbackFunction();
 }
 #pragma endregion
 
@@ -724,6 +653,11 @@ void SceneApp::SetGameState(GameState::Type newState)
 	break;
 	case GameState::GameLoop:
 	{
+		if (gameState == GameState::Shop)
+		{
+			waveManager->StartWave();
+			break;
+		}
 		InitGameLoop();
 	}
 	break;
@@ -734,7 +668,7 @@ void SceneApp::SetGameState(GameState::Type newState)
 	break;
 	case GameState::Shop:
 	{
-		
+		InitShop();
 	}
 	break;
 	}

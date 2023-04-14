@@ -21,7 +21,6 @@ namespace HellwatchAttribute
 	};
 }
 
-
 /// <summary>
 /// Attribute representation
 /// </summary>

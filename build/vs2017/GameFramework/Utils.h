@@ -5,6 +5,7 @@
 #include "maths/matrix44.h"
 #include <graphics/renderer_3d.h>
 #include <scene_app.h>
+#include "maths/math_utils.h"
 
 #define NO_ID 0
 #define PLAYER_ID 1
@@ -88,6 +89,15 @@ static float FindAngle(const gef::Vector4& a, const gef::Vector4& b)
 	double cos_theta = dot_product / (mag_a * mag_b);
 	double theta = std::acos(cos_theta) * 180 / PI;
 	return theta;
+}
+
+static gef::Vector4 Lerp(const gef::Vector4& a, const gef::Vector4& b, float alpha)
+{
+	float x = gef::Lerp(a.x(), b.x(), alpha);
+	float y = gef::Lerp(a.x(), b.x(), alpha);
+	float z = gef::Lerp(a.x(), b.x(), alpha);
+
+	return gef::Vector4(x, y, z);
 }
 
 namespace ApplyDamageOn

@@ -44,16 +44,8 @@ class EnemyDummy;
 class Enemy;
 class RangedEnemy;
 class WaveManager;
-
-struct MenuButton
-{
-	gef::Vector4 position;
-	uint32_t color = 0xffffffff;
-	float scale = 1;
-	gef::TextJustification justification;
-	std::string buttonText;
-	std::function<void()> callbackFunction;
-};
+class MainMenu;
+class ShopMenu;
 
 typedef std::map<std::string, gef::Texture*> TextureMap;
 
@@ -87,33 +79,21 @@ private:
 	void BuildToLoadData();
 	void InitGameLoop();
 	void InitMainMenu();
+	void InitShop();
 
 	void UpdateLoading(float frame_time);
 	void UpdateMainMenu(float frame_time);
 	void UpdateGameLoop(float frame_time);
 	void UpdatePauseMenu(float frame_time);
+	void UpdateShop();
 
 	void RenderLoading();
 	void RenderMainMenu();
 	void RenderGameLoop();
 	void RenderPauseMenu();
+	void RenderShop();
 
-	/*******************************************************
-	*					MENU INPUT                         *
-	*******************************************************/
-	PlayerController* menuController;
-	void DrawMainMenuHUD();
-	void OnDownButtonPressed();
-	void OnUpButtonPressed();
-	void OnMouseButtonPressed(gef::Vector2 mousePos);
-	void OnControllerDownButton(gef::Vector2 dir);
-	void OnControllerUpButton(gef::Vector2 dir);
-	void CheckForHighlight();
-	void OnStartButtonClicked();
-	void OnExitButtonClicked();
-	void PressMenuButton();
-	std::vector<MenuButton> mainMenuButtons;
-	int currentButtonFocused = 0;
+
 	/*******************************************************
 	*					GAME STATE                         *
 	*******************************************************/
@@ -133,11 +113,9 @@ private:
 
 	std::future<GameState::Type> loadFuture;
 
-	/************************************************************************/
-	/*                                TESTING                               */
-	/************************************************************************/
-	gef::Sprite* mainMenuSprite;
 	WaveManager* waveManager;
+	MainMenu* mainMenu;
+	ShopMenu* shopMenu;
 
 
 	/************************************************************************/

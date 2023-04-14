@@ -53,6 +53,8 @@ public:
 
 	PlayerController* GetController() const { return controller; }
 	CharacterMovementComponent* GetCharacterMovement() const { return characterMovement; }
+	AttributeComponent* GetCharacterAttributes() const { return attributes; }
+	AbilitiesComponent* GetCharacterAbilities() const { return abilitiesComponent; }
 
 };
 
