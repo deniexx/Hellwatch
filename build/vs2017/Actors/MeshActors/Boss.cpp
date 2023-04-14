@@ -5,10 +5,33 @@ Boss::Boss() {
 }
 
 void Boss::Update(float deltaTime) {
+	Super::Update(deltaTime);
 
+	if (PlayerCharacter* player = SceneApp::instance->GetPlayerCharacter())
+	{
+		gef::Vector4 playerPosition = player->GetTranslation();
+		b2Vec2 playerDirection = b2Vec2(playerPosition.x(), playerPosition.z());
+		gef::Vector4 bossPosition = GetTranslation();
+		b2Vec2 enemyDirection = b2Vec2(bossPosition.x(), bossPosition.z());
+		b2Vec2 towardsPlayer = playerDirection - enemyDirection;
+		towardsPlayer.Normalize();
+		enemyMovement->ApplyMovementForceInDirection(towardsPlayer);
+	}
+
+	if (isJumping == true) {
+		alpha += deltaTime;
+		gef::Vector4 lerpVector = Lerp(bossPosition, midpoint, alpha);
+		//broken
+		if (GetTranslation() == midpoint) {
+			gef::Vector4 lerpVector = Lerp(midpoint, playerPosition, alpha);
+			isJumping = false;
+		}
+	}
 }
 
 void Boss::PostInit() {
+	Super::PostInit();
+
 	attributes = CreateComponent<AttributeComponent>();
 
 	FAttribute health;
@@ -36,12 +59,23 @@ void Boss::PostInit() {
 
 	bossMovement = CreateComponent<CharacterMovementComponent>();
 	bossMovement->Init(this);
-	bossMovement->SetMaximumSpeed(30);
-	bossMovement->SetAcceleration(150);
+	bossMovement->SetMaximumSpeed(15);
+	bossMovement->SetAcceleration(125);
 }
 
 void Boss::Slam(float deltaTime) {
 	gef::Vector4 bossPosition = GetTranslation();
 
 
+}
+
+void Boss::Jump(float deltaTime) {
+	if (PlayerCharacter* player = SceneApp::instance->GetPlayerCharacter()) {
+		playerPosition = player->GetTranslation();
+		bossPosition = GetTranslation();
+		gef::Vector4 midpoint = (playerPosition + bossPosition) / 2;
+		midpoint.set_y(midpoint.y() + 15);
+		alpha = 0;
+		isJumping = true;
+	}
 }
