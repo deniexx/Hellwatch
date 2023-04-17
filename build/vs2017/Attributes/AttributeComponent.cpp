@@ -40,7 +40,10 @@ void AttributeComponent::SetAttributeCurrentValue(HellwatchAttribute::Type type,
 	for (auto& attribute : attributes)
 	{
 		if (attribute.attributeType == type)
+		{
 			attribute.currentAmount = newValue;
+			break;
+		}
 	}
 }
 
@@ -49,7 +52,10 @@ void AttributeComponent::SetAttributeMaxValue(HellwatchAttribute::Type type, flo
 	for (auto& attribute : attributes)
 	{
 		if (attribute.attributeType == type)
+		{
 			attribute.maxAmount = newValue;
+			break;
+		}
 	}
 }
 
@@ -59,26 +65,31 @@ void AttributeComponent::SetAttributeCurrentAndMaxValue(HellwatchAttribute::Type
 	SetAttributeCurrentValue(type, newValue);
 }
 
-void AttributeComponent::ApplyAttributeChange(HellwatchAttribute::Type type, float delta) const
+void AttributeComponent::ApplyAttributeChange(HellwatchAttribute::Type type, float delta)
 {
 	for (auto& attribute : attributes)
 	{
 		if (attribute.attributeType == type)
 		{
+			float oldAmount = attribute.currentAmount;
 			attribute.currentAmount += delta;
 			if (attribute.bClampedToZero)
 				attribute.currentAmount = Clamp<float>(attribute.currentAmount, 0, attribute.maxAmount);
+
+			OnAttributeChanged(type, oldAmount, attribute.currentAmount);
+			break;
 		}
 	}
 }
 
-void AttributeComponent::ApplyAttributeMaxValueChange(HellwatchAttribute::Type type, float delta) const
+void AttributeComponent::ApplyAttributeMaxValueChange(HellwatchAttribute::Type type, float delta)
 {
 	for (auto& attribute : attributes)
 	{
 		if (attribute.attributeType == type)
 		{
 			attribute.maxAmount += delta;
+			break;
 		}
 	}
 }
@@ -98,4 +109,25 @@ void AttributeComponent::AddAttribute(FAttribute& attributeToAdd)
 			return;
 
 	attributes.push_back(attributeToAdd);
+}
+
+void AttributeComponent::ApplyAttributeMultipliyer(HellwatchAttribute::Type type, float multipliyer)
+{
+	float maxValue = GetMaxAttributeValueByType(type);
+	float currentValue = GetCurrentAttributeValueByType(type);
+
+	SetAttributeMaxValue(type, maxValue * multipliyer);
+	SetAttributeCurrentValue(type, currentValue * multipliyer);
+}
+
+void AttributeComponent::OnAttributeChanged(HellwatchAttribute::Type type, float oldAmount, float newAmount)
+{
+	if (type == HellwatchAttribute::Vitality)
+	{
+		ApplyAttributeMultipliyer(HellwatchAttribute::Health, ((newAmount - oldAmount) * 0.1f) + 1);
+	}
+	else if (type == HellwatchAttribute::Energy)
+	{
+		ApplyAttributeMultipliyer(HellwatchAttribute::Energy, ((newAmount - oldAmount) * 0.1f) + 1);
+	}
 }

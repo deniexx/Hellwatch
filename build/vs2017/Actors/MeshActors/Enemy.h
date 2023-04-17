@@ -30,6 +30,8 @@ public:
 	float GetHealth() { return attributes ? attributes->GetCurrentAttributeValueByType(HellwatchAttribute::Health) : 0.f; }
 	virtual void Update(float deltaTime) override;
 	virtual void OnCollision(b2Body* otherBody) override;
+	
+	void ScaleWithWave(int wave);
 
 	float damageAmount;
 	float attackTime;
@@ -39,8 +41,9 @@ protected:
 
 	virtual void PostInit() override;
 
+	int playerMoneyToAdd = 30;
 	AttributeComponent* attributes;
 	CharacterMovementComponent* enemyMovement;
 
-
+	void IncreasePlayerMoney();
 };

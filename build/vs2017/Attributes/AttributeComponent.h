@@ -49,12 +49,12 @@ public:
 	/// <summary>
 	/// Applies an attribute change to the specified attribute, can be positive or negative
 	/// </summary>
-	void ApplyAttributeChange(HellwatchAttribute::Type type, float delta) const;
+	void ApplyAttributeChange(HellwatchAttribute::Type type, float delta);
 
 	/// <summary>
 	/// Applies an attribute change to the specified attribute's max value, can be positive or negative
 	/// </summary>
-	void ApplyAttributeMaxValueChange(HellwatchAttribute::Type type, float delta) const;
+	void ApplyAttributeMaxValueChange(HellwatchAttribute::Type type, float delta);
 
 	/// <summary>
 	/// Initializes attribute component by spec, spec meaning a container of multiple attributes
@@ -67,6 +67,17 @@ public:
 	/// @NOTE: We can not have 2 attributes of the same type, if that happens, the new attribute will be ignore and we will keep the old one
 	/// </summary>
 	void AddAttribute(FAttribute& attributeToAdd);
-	
+
+	/// <summary>
+	/// Applies a multiplier to an attribute
+	/// </summary>
+	void ApplyAttributeMultipliyer(HellwatchAttribute::Type type, float multipliyer);
+
+private:
+
+	/// <summary>
+	/// Updates health and mana based on attributes changed
+	/// </summary>
+	void OnAttributeChanged(HellwatchAttribute::Type type, float oldAmount, float newAmount);
 };
 

@@ -2,11 +2,10 @@
 
 #include "ActorComponent.h"
 #include "Abilities/Ability.h"
+#include "Attributes/AttributeComponent.h"
 
 #include <vector>
 #include <string>
-
-class AttributeComponent;
 
 class AbilitiesComponent : public ActorComponent
 {
@@ -62,7 +61,7 @@ private:
 
 	std::vector<Ability*> availableAbilities;
 	Ability* equippedAbilities[4];
-	AttributeComponent* attributes;
+	AttributeComponent* attributes = nullptr;
 
 	bool HasAbility(Ability* abilityToCheck);
 	bool HasAbility(const std::string& abilityToCheck);

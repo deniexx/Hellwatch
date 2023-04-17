@@ -172,16 +172,19 @@ void PlayerController::EvaluateKeyboardKeybinds(gef::Keyboard* keyboard)
 				if (keyboard->IsKeyPressed(keybind.keyCode))
 					keybind.functionBind();
 			}
+			break;
 			case HellwatchInputAction::Held:
 			{
 				if (keyboard->IsKeyDown(keybind.keyCode))
 					keybind.functionBind();
 			}
+			break;
 			case HellwatchInputAction::Released:
 			{
 				if (keyboard->IsKeyReleased(keybind.keyCode))
 					keybind.functionBind();
 			}
+			break;
 		}
 	}
 }
@@ -198,10 +201,12 @@ void PlayerController::EvaluateControllerKeybinds(const gef::SonyController* con
 				{
 					keybind.functionBind(gef::Vector2(controller->left_stick_x_axis(), controller->left_stick_y_axis()));
 				}
+				break;
 				case HellwatchControllerAxis::RightStickXY:
 				{
 					keybind.functionBind(gef::Vector2(controller->right_stick_x_axis(), controller->right_stick_y_axis()));
 				}
+				break;
 			}
 		}
 		else if (keybind.inputAction != HellwatchInputAction::None)
@@ -215,16 +220,19 @@ void PlayerController::EvaluateControllerKeybinds(const gef::SonyController* con
 						if (controller->buttons_pressed() & keybind.keyCode)
 							keybind.functionBind(gef::Vector2(0.f, 0.f));
 					}
+					break;
 					case HellwatchInputAction::Held:
 					{
 						if (controller->buttons_down() & keybind.keyCode)
 							keybind.functionBind(gef::Vector2(0.f, 0.f));
 					}
+					break;
 					case HellwatchInputAction::Released:
 					{
 						if (controller->buttons_released() & keybind.keyCode)
 							keybind.functionBind(gef::Vector2(0.f, 0.f));
 					}
+					break;
 				}
 			}
 		}
@@ -268,7 +276,7 @@ void PlayerController::EvaluateMouseKeybinds(const gef::TouchInputManager* touch
 
 				for (const auto& mousebind : mouseKeyBinds)
 				{
-					if (mousebind.clickAction == gef::TT_NEW)
+					if (mousebind.clickAction == gef::TT_ACTIVE)
 						mousebind.functionBind(touchPosition);
 				}
 			}
@@ -281,7 +289,7 @@ void PlayerController::EvaluateMouseKeybinds(const gef::TouchInputManager* touch
 
 				for (const auto& mousebind : mouseKeyBinds)
 				{
-					if (mousebind.clickAction == gef::TT_NEW)
+					if (mousebind.clickAction == gef::TT_RELEASED)
 						mousebind.functionBind(touchPosition);
 				}
 			}

@@ -99,6 +99,7 @@ private:
 	*******************************************************/
 	GameState::Type gameState;
 	bool bGameLoopInitted = false;
+	bool bCommingFromMainMenu = false;
 
 	gef::Scene* LoadSceneAssets(gef::Platform& platform, const char* filename);
 	gef::Mesh* GetMeshFromSceneAssets(gef::Scene* scene);
@@ -116,6 +117,9 @@ private:
 	WaveManager* waveManager;
 	MainMenu* mainMenu;
 	ShopMenu* shopMenu;
+
+	/* We store this here for ease of access */
+	uint32_t playerMoney = 0;
 
 
 	/************************************************************************/
@@ -164,7 +168,9 @@ public:
 	void SetGameState(GameState::Type newState);
 	GameState::Type GetGameState() const { return gameState; }
 
-
+	const uint32_t GetPlayerMoney() { return playerMoney; }
+	void IncreasePlayerMoney(uint32_t increaseAmount) { playerMoney += increaseAmount; }
+	void ApplyCostToPlayerMoney(uint32_t cost) { playerMoney -= cost; }
 
 	/// <summary>
 	/// Spawns a MeshActor into the scene and gets it ready for rendering and updating

@@ -11,23 +11,25 @@ void Enemy::SetClass(EnemyClass::Type type)
 	{
 	case EnemyClass::HEAVY:
 	{
-		enemyMovement->SetAcceleration(50.f);
-		attributes->SetAttributeCurrentAndMaxValue(HellwatchAttribute::Health, 150.f);
-		damageAmount = 75;
+		playerMoneyToAdd *= 1.5;
+		enemyMovement->SetAcceleration(enemyMovement->GetAcceleration() * 0.5f);
+		attributes->ApplyAttributeMultipliyer(HellwatchAttribute::Health, 1.5f);
+		damageAmount = damageAmount * 1.5f;
 	}
 		break;
 	case EnemyClass::NORMAL:
 	{
-		enemyMovement->SetAcceleration(100.f);
-		attributes->SetAttributeCurrentAndMaxValue(HellwatchAttribute::Health, 100.f);
-		damageAmount = 50;
+		//enemyMovement->SetAcceleration(enemyMovement->GetAcceleration());
+		//attributes->SetAttributeCurrentAndMaxValue(HellwatchAttribute::Health, 100.f);
+		//damageAmount = 50;
 	}
 		break;
 	case EnemyClass::LIGHT:
 	{
-		enemyMovement->SetAcceleration(150.f);
-		attributes->SetAttributeCurrentAndMaxValue(HellwatchAttribute::Health, 50.f);
-		damageAmount = 25;
+		playerMoneyToAdd *= 0.5;
+		enemyMovement->SetAcceleration(enemyMovement->GetAcceleration() * 1.5f);
+		attributes->ApplyAttributeMultipliyer(HellwatchAttribute::Health, 0.5f);
+		damageAmount = damageAmount * 0.5f;
 	}
 		break;
 	}
@@ -41,6 +43,7 @@ void Enemy::TakeDamage(float damageAmount)
 
 		if (attributes->GetCurrentAttributeValueByType(HellwatchAttribute::Health) <= 0.f)
 		{
+			IncreasePlayerMoney();
 			DisableUpdate();
 			MarkForDelete();
 		}
@@ -81,6 +84,13 @@ void Enemy::PostInit()
 	gef::Material mat;
 	mat.set_texture(SceneApp::instance->RequestTextureByName("MeleeEnemy"));
 	SetMaterial(mat);
+
+	damageAmount = 50;
+}
+
+void Enemy::IncreasePlayerMoney()
+{
+	SceneApp::instance->IncreasePlayerMoney(playerMoneyToAdd);
 }
 
 void Enemy::Update(float deltaTime) 
@@ -104,12 +114,19 @@ void Enemy::OnCollision(b2Body* otherBody)
 	if (attackTime + attackCooldown < SceneApp::instance->GetCurrentGameTime()) {
 		if (otherBody)
 		{
-			PlayerCharacter* player = (PlayerCharacter*)otherBody->GetUserData().pointer;
-			if (player)
+			MeshActor* actor = (MeshActor*)otherBody->GetUserData().pointer;
+			if (actor && actor->ID == PLAYER_ID)
 			{
-				player->TakeDamage(damageAmount);
+				actor->TakeDamage(damageAmount);
 				attackTime = SceneApp::instance->GetCurrentGameTime();
 			}
 		}
 	}
+}
+
+void Enemy::ScaleWithWave(int wave)
+{
+	float multipiyer = (wave * 0.1) + 1;
+	attributes->ApplyAttributeMultipliyer(HellwatchAttribute::Health, multipiyer);
+	damageAmount *= multipiyer;
 }

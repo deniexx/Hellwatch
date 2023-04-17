@@ -150,3 +150,21 @@ void Ability::SetAbilityCooldown(float newCooldown)
     cooldown = newCooldown;
     cooldownTimer = 0.f;
 }
+
+float Ability::GetDamageAmount()
+{
+    AttributeComponent* attributes = GetOwnerAttributes();
+
+    if (attributes)
+    {
+        float multipliyer = (attributes->GetCurrentAttributeValueByType(HellwatchAttribute::Wisdom) * 0.1f) + 1;
+        damageAmount *= multipliyer;
+    }
+
+    return damageAmount;
+}
+
+AttributeComponent* Ability::GetOwnerAttributes()
+{
+    return GetOwner() ? GetOwner()->GetAttributeComponent() : nullptr;
+}

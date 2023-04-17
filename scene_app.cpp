@@ -81,6 +81,9 @@ void SceneApp::InitMainMenu()
 		mainMenu = new MainMenu();
 		mainMenu->Init();
 	}
+
+	if (bGameLoopInitted)
+		bCommingFromMainMenu = true;
 }
 
 void SceneApp::InitShop()
@@ -94,9 +97,30 @@ void SceneApp::InitShop()
 
 void SceneApp::InitGameLoop()
 {
-	if (bGameLoopInitted) 
+	if (bGameLoopInitted && !bCommingFromMainMenu) 
 	{
 		return;
+	}
+	else if (bGameLoopInitted && bCommingFromMainMenu)
+	{
+		playerCharacter = NULL;
+		delete waveManager;
+		delete primitive_builder_;
+
+		for (int i = 0; i < meshActors.size(); ++i)
+		{
+			meshActors[i]->MarkForDelete();
+		}
+
+		for (int i = 0; i < spriteActors.size(); ++i)
+		{
+			spriteActors[i]->MarkForDelete();
+		}
+
+		playerMoney = 0;
+		delete shopMenu;
+		shopMenu = NULL;
+		bCommingFromMainMenu = false;
 	}
 
 	// initialise primitive builder to make create some 3D geometry easier

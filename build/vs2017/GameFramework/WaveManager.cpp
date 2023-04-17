@@ -93,17 +93,30 @@ void WaveManager::SpawnEnemy()
 	
 	bool bSpawnRanged = rand() % 255 > 140;
 	int spawnLocationIndex = rand() % spawnLocations.size();
+	int enemyClassRand = rand() % 300;
+
+	EnemyClass::Type enemyClass;
+	if (enemyClassRand < 80)
+		enemyClass = EnemyClass::LIGHT;
+	else if (enemyClassRand < 220)
+		enemyClass = EnemyClass::NORMAL;
+	else
+		enemyClass = EnemyClass::HEAVY;
 
 	gef::Mesh* mesh = SceneApp::instance->GetPrimitiveBuilder()->CreateBoxMesh(gef::Vector4(0.5f, 0.5f, 0.5f));
 	if (bSpawnRanged)
 	{
 		RangedEnemy* enemy = SceneApp::instance->SpawnMeshActor<RangedEnemy>(mesh, spawnLocations[spawnLocationIndex]);
 		Enemy* n = (Enemy*)(enemy);
+		n->SetClass(enemyClass);
+		n->ScaleWithWave(currentWave);
 		spawnedEnemies.push_back(n);
 	}
 	else
 	{
 		Enemy* enemy = SceneApp::instance->SpawnMeshActor<Enemy>(mesh, spawnLocations[spawnLocationIndex]);
+		enemy->SetClass(enemyClass);
+		enemy->ScaleWithWave(currentWave);
 		spawnedEnemies.push_back(enemy);
 	}
 }

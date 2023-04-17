@@ -83,6 +83,26 @@ void ShopMenu::Init()
 	menuController->BindMouseEvent(mouseKeybind);
 }
 
+void ShopMenu::Update()
+{
+	Menu::Update();
+
+	menuButtons[0].buttonText = "+ Vitality (" + std::to_string((int)SceneApp::instance->GetPlayerCharacter()->GetCharacterAttributes()->GetCurrentAttributeValueByType(HellwatchAttribute::Vitality)) + ")";
+	menuButtons[1].buttonText = "+ Wisdom (" + std::to_string((int)SceneApp::instance->GetPlayerCharacter()->GetCharacterAttributes()->GetCurrentAttributeValueByType(HellwatchAttribute::Wisdom)) + ")";
+	menuButtons[2].buttonText = "+ Toughness (" + std::to_string((int)SceneApp::instance->GetPlayerCharacter()->GetCharacterAttributes()->GetCurrentAttributeValueByType(HellwatchAttribute::Toughness)) + ")";
+	menuButtons[3].buttonText = "+ Energy (" + std::to_string((int)SceneApp::instance->GetPlayerCharacter()->GetCharacterAttributes()->GetCurrentAttributeValueByType(HellwatchAttribute::Energy)) + ")";
+}
+
+void ShopMenu::DrawMenuHUD(gef::Font* font_, gef::SpriteRenderer* sprite_renderer_)
+{
+	Menu::DrawMenuHUD(font_, sprite_renderer_);
+
+	std::string moneyAmount = "Money: " + std::to_string(SceneApp::instance->GetPlayerMoney());
+	std::string upgradeCostStr = "Cost: " + std::to_string(upgradeCost);
+	font_->RenderText(sprite_renderer_, gef::Vector4(100, 200, 0, 0), 1, 0xFF00FFFF, gef::TJ_LEFT, moneyAmount.c_str());
+	font_->RenderText(sprite_renderer_, gef::Vector4(100, 250, 0, 0), 1, 0xFF00FFFF, gef::TJ_LEFT, upgradeCostStr.c_str());
+}
+
 void ShopMenu::OnMouseButtonPressed(gef::Vector2 mousePos)
 {
 	for (const auto& button : menuButtons)
@@ -125,6 +145,14 @@ void ShopMenu::CloseShop()
 
 void ShopMenu::IncreaseAttribute(HellwatchAttribute::Type attribute)
 {
+	if (!DoesPlayerHaveMoneyForUpgrade())
+	{
+		return;
+	}
+
+	SceneApp::instance->ApplyCostToPlayerMoney(upgradeCost);
+	IncreaseUpgradeCost();
+
 	PlayerCharacter* pc = SceneApp::instance->GetPlayerCharacter();
 	AttributeComponent* attributes = pc ? pc->GetCharacterAttributes() : nullptr;
 
@@ -134,7 +162,18 @@ void ShopMenu::IncreaseAttribute(HellwatchAttribute::Type attribute)
 	}
 }
 
-void ShopMenu::GrantAbility(Ability* abilityToGrant)
+void ShopMenu::IncreaseUpgradeCost()
 {
-
+	++upgradesAmount;
+	upgradeCost = UPGRADE_COST_FORMULA(upgradesAmount);
 }
+
+bool ShopMenu::DoesPlayerHaveMoneyForUpgrade()
+{
+	return SceneApp::instance->GetPlayerMoney() > upgradeCost;
+}
+
+//void ShopMenu::GrantAbility(Ability* abilityToGrant)
+//{
+//
+//}

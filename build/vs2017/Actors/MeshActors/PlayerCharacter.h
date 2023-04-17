@@ -18,8 +18,8 @@ public:
 	PlayerCharacter();
 
 	virtual void PostInit() override;
-
 	virtual void Update(float deltaTime) override;
+	virtual void TakeDamage(float damageAmount) override;
 
 protected:
 

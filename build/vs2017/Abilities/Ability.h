@@ -4,6 +4,7 @@
 #include "Attributes/AttributeTypes.h"
 
 class AbilitiesComponent;
+class AttributeComponent;
 
 /// <summary>
 /// The key that will be used to activate this ability 1, 2, 3, 4
@@ -132,7 +133,7 @@ private:
 
 	std::string abilityName;
 	bool bIsActive;
-	AbilitiesComponent* owningComponent;
+	AbilitiesComponent* owningComponent = nullptr;
 
 public:
 
@@ -161,10 +162,11 @@ public:
 	__forceinline AbilityActivationKey::Type GetActivationKey() const { return activationKey; }
 	__forceinline const std::string& GetAbilityName() const { return abilityName; }
 	__forceinline bool IsInCooldown() const { return cooldown > 0 && cooldownTimer > 0.f; }
-	__forceinline float GetDamageAmount() const { return damageAmount; }
 	__forceinline bool IsAbilityTargeted() const { return bIsTargeted; }
 	__forceinline bool IsAbilityTargeting() const { return bIsTargeting; }
 
-	AbilitiesComponent* GetOwner() const { return owningComponent; }
+	float GetDamageAmount();
+	AbilitiesComponent* GetOwner() { return owningComponent; }
+	AttributeComponent* GetOwnerAttributes();
 };
 

@@ -22,10 +22,10 @@ void Boss::Update(float deltaTime) {
 		alpha += deltaTime;
 		gef::Vector4 lerpVector = Lerp(bossPosition, midpoint, alpha);
 		//broken
-		if (GetTranslation() == midpoint) {
+		/*if (GetTranslation() == midpoint) {
 			gef::Vector4 lerpVector = Lerp(midpoint, playerPosition, alpha);
 			isJumping = false;
-		}
+		}*/
 	}
 }
 

@@ -28,7 +28,7 @@ void PlayerCharacter::BindKeys()
 {
 	controller = new PlayerController(SceneApp::instance->platform());
 	FKeyBindKeyboard keybind;
-	keybind.inputAction = HellwatchInputAction::Pressed;
+	keybind.inputAction = HellwatchInputAction::Held;
 	keybind.keyCode = gef::Keyboard::KC_A;
 	keybind.functionBind = bindFunc(MoveLeft);
 	controller->BindKeyboardEvent(keybind);
@@ -46,7 +46,7 @@ void PlayerCharacter::BindKeys()
 	controller->BindKeyboardEvent(keybind);
 
 	keybind.keyCode = gef::Keyboard::KC_1;
-	keybind.inputAction = HellwatchInputAction::Released;
+	keybind.inputAction = HellwatchInputAction::Pressed;
 	keybind.functionBind = bindFunc(ActivateAbility1);
 	controller->BindKeyboardEvent(keybind);
 }
@@ -87,6 +87,20 @@ void PlayerCharacter::InitializeAbilitySystem()
 	attributes->AddAttribute(attributeToAdd);
 
 	attributeToAdd.attributeType = HellwatchAttribute::Mana;
+	attributes->AddAttribute(attributeToAdd);
+
+	attributeToAdd.attributeType = HellwatchAttribute::Vitality;
+	attributeToAdd.currentAmount = 0;
+	attributeToAdd.maxAmount = 32;
+	attributes->AddAttribute(attributeToAdd);
+
+	attributeToAdd.attributeType = HellwatchAttribute::Wisdom;
+	attributes->AddAttribute(attributeToAdd);
+
+	attributeToAdd.attributeType = HellwatchAttribute::Toughness;
+	attributes->AddAttribute(attributeToAdd);
+
+	attributeToAdd.attributeType = HellwatchAttribute::Energy;
 	attributes->AddAttribute(attributeToAdd);
 
 	abilitiesComponent = CreateComponent<AbilitiesComponent>();
@@ -147,4 +161,18 @@ void PlayerCharacter::ActivateAbility3()
 void PlayerCharacter::ActivateAbility4()
 {
 	abilitiesComponent->ActivateAbilityByKey(AbilityActivationKey::AbilityKey4);
+}
+
+void PlayerCharacter::TakeDamage(float damageAmount)
+{
+	float damageReductionMultipliyer = 1 - (attributes->GetCurrentAttributeValueByType(HellwatchAttribute::Toughness) * 0.1);
+	damageAmount *= damageReductionMultipliyer;
+
+	attributes->ApplyAttributeChange(HellwatchAttribute::Health, -damageAmount);
+
+	if (attributes->GetCurrentAttributeValueByType(HellwatchAttribute::Health) <= 0.f)
+	{
+		DisableUpdate();
+		SceneApp::instance->SetGameState(GameState::MainMenu);
+	}
 }
