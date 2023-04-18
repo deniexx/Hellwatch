@@ -7,26 +7,38 @@ Boss::Boss() {
 void Boss::Update(float deltaTime) {
 	Super::Update(deltaTime);
 
+
+
 	if (PlayerCharacter* player = SceneApp::instance->GetPlayerCharacter())
 	{
-		gef::Vector4 playerPosition = player->GetTranslation();
-		b2Vec2 playerDirection = b2Vec2(playerPosition.x(), playerPosition.z());
-		gef::Vector4 bossPosition = GetTranslation();
-		b2Vec2 enemyDirection = b2Vec2(bossPosition.x(), bossPosition.z());
-		b2Vec2 towardsPlayer = playerDirection - enemyDirection;
-		towardsPlayer.Normalize();
-		enemyMovement->ApplyMovementForceInDirection(towardsPlayer);
-	}
+		if (isJumping == true) {
+			alpha += deltaTime;
+			if ((bossPosition - midpoint).Length() < 1 || pastMidpoint) {
+				if (!pastMidpoint) {
+					alpha = 0;
+				}
+				gef::Vector4 lerpVector = Lerp(bossPosition, playerPosition, alpha);
+				pastMidpoint = true;
+				if ((bossPosition - playerPosition).Length() < 0.1) {
+					isJumping = false;
+				}
+			}
+			else {
+				gef::Vector4 lerpVector = Lerp(bossPosition, midpoint, alpha);
+			}
+		}
+		else {
+			gef::Vector4 playerPosition = player->GetTranslation();
+			b2Vec2 playerDirection = b2Vec2(playerPosition.x(), playerPosition.z());
+			gef::Vector4 bossPosition = GetTranslation();
+			b2Vec2 enemyDirection = b2Vec2(bossPosition.x(), bossPosition.z());
+			b2Vec2 towardsPlayer = playerDirection - enemyDirection;
+			towardsPlayer.Normalize();
+			enemyMovement->ApplyMovementForceInDirection(towardsPlayer);
+		}
 
-	if (isJumping == true) {
-		alpha += deltaTime;
-		gef::Vector4 lerpVector = Lerp(bossPosition, midpoint, alpha);
-		//broken
-		/*if (GetTranslation() == midpoint) {
-			gef::Vector4 lerpVector = Lerp(midpoint, playerPosition, alpha);
-			isJumping = false;
-		}*/
 	}
+	
 }
 
 void Boss::PostInit() {

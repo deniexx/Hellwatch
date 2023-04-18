@@ -19,11 +19,12 @@ protected:
 	CharacterMovementComponent* bossMovement;
 
 	bool isJumping = false;
+	bool pastMidpoint = false;
 
 	gef::Vector4 playerPosition;
 	gef::Vector4 bossPosition;
 	gef::Vector4 midpoint;
-	float alpha;
+	float alpha = 0;
 
 };
 
