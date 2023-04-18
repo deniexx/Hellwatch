@@ -49,6 +49,11 @@ void PlayerCharacter::BindKeys()
 	keybind.inputAction = HellwatchInputAction::Pressed;
 	keybind.functionBind = bindFunc(ActivateAbility1);
 	controller->BindKeyboardEvent(keybind);
+
+	keybind.keyCode = gef::Keyboard::KC_ESCAPE;
+	keybind.inputAction = HellwatchInputAction::Pressed;
+	keybind.functionBind = [this]() {SceneApp::instance->SetGameState(GameState::PauseMenu); };
+	controller->BindKeyboardEvent(keybind);
 }
 
 void PlayerCharacter::InitializeComponents()
