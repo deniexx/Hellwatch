@@ -11,6 +11,7 @@
 
 #include "UserInterface/MainMenu.h"
 #include "UserInterface/ShopMenu.h"
+#include "UserInterface/PauseMenu.h"
 #include "GameFramework/PlayerController.h"
 #include "Actors/MeshActors/PlayerCharacter.h"
 #include "Actors/SpriteActor.h"
@@ -30,6 +31,7 @@ SceneApp::SceneApp(gef::Platform& platform):
 	,scene_assets_(NULL)
 	,mainMenu(NULL)
 	,shopMenu(NULL)
+	,pauseMenu(NULL)
 	,currentGameTime(0.f)
 {
 }
@@ -223,6 +225,15 @@ void SceneApp::InitGameLoop()
 	bGameLoopInitted = true;
 }
 
+void SceneApp::InitPauseMenu()
+{
+	if (pauseMenu == NULL)
+	{
+		pauseMenu = new PauseMenu();
+		pauseMenu->Init();
+	}
+}
+
 void SceneApp::CleanUp()
 {
 	// clean up scene assets
@@ -324,7 +335,8 @@ void SceneApp::UpdateShop()
 
 void SceneApp::UpdatePauseMenu(float frame_time)
 {
-
+	if (pauseMenu)
+		pauseMenu->Update();
 }
 
 void SceneApp::Render()
@@ -460,7 +472,34 @@ void SceneApp::RenderGameLoop()
 
 void SceneApp::RenderPauseMenu()
 {
+	if (playerCharacter != NULL)
+	{
+		cameraEye = playerCharacter->GetTranslation();
+		cameraEye.set_y(20.f);
+		cameraEye.set_z(cameraEye.z() - 10);
+		cameraLookAt = playerCharacter->GetTranslation();
+		cameraLookAt.set_y(-1.f);
+	}
 
+	gef::Matrix44 view_matrix;
+	view_matrix.LookAt(cameraEye, cameraLookAt, cameraUp);
+	renderer_3d_->set_view_matrix(view_matrix);
+
+	renderer_3d_->Begin();
+
+	for (auto actor : meshActors)
+		actor->Render();
+
+	renderer_3d_->End();
+
+	sprite_renderer_->Begin(false);
+
+	DrawHUD();
+	for (auto actor : spriteActors)
+		actor->Render();
+
+	pauseMenu->DrawMenuHUD(font_, sprite_renderer_);
+	sprite_renderer_->End();
 }
 
 void SceneApp::HandleCollision()
@@ -689,7 +728,7 @@ void SceneApp::SetGameState(GameState::Type newState)
 	break;
 	case GameState::PauseMenu:
 	{
-
+		InitPauseMenu();
 	}
 	break;
 	case GameState::Shop:

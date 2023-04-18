@@ -240,6 +240,7 @@
     <ClCompile Include="Abilities\PlayerAbilities\IceBolt.cpp" />
     <ClCompile Include="Actors\MeshActors\RangedEnemy.cpp" />
     <ClCompile Include="GameFramework\WaveManager.cpp" />
+    <ClCompile Include="UserInterface\PauseMenu.cpp" />
     <ClCompile Include="UserInterface\ShopMenu.cpp" />
     <ClCompile Include="UserInterface\MainMenu.cpp" />
     <ClCompile Include="UserInterface\Menu.cpp" />
@@ -268,6 +269,7 @@
     <ClInclude Include="Interfaces\Damagable.h" />
     <ClInclude Include="Actors\MeshActors\RangedEnemy.h" />
     <ClInclude Include="GameFramework\WaveManager.h" />
+    <ClInclude Include="UserInterface\PauseMenu.h" />
     <ClInclude Include="UserInterface\ShopMenu.h" />
     <ClInclude Include="UserInterface\MainMenu.h" />
     <ClInclude Include="UserInterface\Menu.h" />

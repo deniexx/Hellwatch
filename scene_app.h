@@ -46,6 +46,7 @@ class RangedEnemy;
 class WaveManager;
 class MainMenu;
 class ShopMenu;
+class PauseMenu;
 
 typedef std::map<std::string, gef::Texture*> TextureMap;
 
@@ -80,6 +81,7 @@ private:
 	void InitGameLoop();
 	void InitMainMenu();
 	void InitShop();
+	void InitPauseMenu();
 
 	void UpdateLoading(float frame_time);
 	void UpdateMainMenu(float frame_time);
@@ -92,7 +94,6 @@ private:
 	void RenderGameLoop();
 	void RenderPauseMenu();
 	void RenderShop();
-
 
 	/*******************************************************
 	*					GAME STATE                         *
@@ -117,6 +118,7 @@ private:
 	WaveManager* waveManager;
 	MainMenu* mainMenu;
 	ShopMenu* shopMenu;
+	PauseMenu* pauseMenu;
 
 	/* We store this here for ease of access */
 	uint32_t playerMoney = 0;
