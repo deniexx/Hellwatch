@@ -24,6 +24,11 @@ public:
 	virtual void Update(float deltaTime) override;
 	virtual void TakeDamage(float damageAmount) override;
 
+	/// <summary>
+	/// Applies invincibility for specified duration
+	/// </summary>
+	void ApplyInvincibilityForDuration(float invincibilityDuration);
+
 protected:
 
 	PlayerController* controller;
@@ -47,6 +52,9 @@ private:
 	CharacterMovementComponent* characterMovement;
 	AbilitiesComponent* abilitiesComponent;
 	AttributeComponent* attributes;
+
+	/* Used to track when should player invincibility end */
+	float invincibilityEndTime = 0.f;
 
 	void BindKeys();
 	void InitializeComponents();
