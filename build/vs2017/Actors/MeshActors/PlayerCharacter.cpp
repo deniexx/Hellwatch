@@ -170,8 +170,8 @@ void PlayerCharacter::ActivateAbility4()
 
 void PlayerCharacter::TakeDamage(float damageAmount)
 {
-	float damageReductionMultipliyer = 1 - (attributes->GetCurrentAttributeValueByType(HellwatchAttribute::Toughness) * 0.1);
-	damageAmount *= damageReductionMultipliyer;
+	float damageReductionMultiplier = 1 - (attributes->GetCurrentAttributeValueByType(HellwatchAttribute::Toughness) * 0.1);
+	damageAmount *= damageReductionMultiplier;
 
 	attributes->ApplyAttributeChange(HellwatchAttribute::Health, -damageAmount);
 

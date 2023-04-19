@@ -124,10 +124,10 @@ void AttributeComponent::OnAttributeChanged(HellwatchAttribute::Type type, float
 {
 	if (type == HellwatchAttribute::Vitality)
 	{
-		ApplyAttributeMultipliyer(HellwatchAttribute::Health, ((newAmount - oldAmount) * 0.1f) + 1);
+		ApplyAttributeMultiplier(HellwatchAttribute::Health, ((newAmount - oldAmount) * 0.1f) + 1);
 	}
 	else if (type == HellwatchAttribute::Energy)
 	{
-		ApplyAttributeMultipliyer(HellwatchAttribute::Energy, ((newAmount - oldAmount) * 0.1f) + 1);
+		ApplyAttributeMultiplier(HellwatchAttribute::Energy, ((newAmount - oldAmount) * 0.1f) + 1);
 	}
 }

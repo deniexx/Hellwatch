@@ -13,7 +13,7 @@ void Enemy::SetClass(EnemyClass::Type type)
 	{
 		playerMoneyToAdd *= 1.5;
 		enemyMovement->SetAcceleration(enemyMovement->GetAcceleration() * 0.5f);
-		attributes->ApplyAttributeMultipliyer(HellwatchAttribute::Health, 1.5f);
+		attributes->ApplyAttributeMultiplier(HellwatchAttribute::Health, 1.5f);
 		damageAmount = damageAmount * 1.5f;
 	}
 		break;
@@ -28,7 +28,7 @@ void Enemy::SetClass(EnemyClass::Type type)
 	{
 		playerMoneyToAdd *= 0.5;
 		enemyMovement->SetAcceleration(enemyMovement->GetAcceleration() * 1.5f);
-		attributes->ApplyAttributeMultipliyer(HellwatchAttribute::Health, 0.5f);
+		attributes->ApplyAttributeMultiplier(HellwatchAttribute::Health, 0.5f);
 		damageAmount = damageAmount * 0.5f;
 	}
 		break;
@@ -126,8 +126,8 @@ void Enemy::OnCollision(b2Body* otherBody)
 
 void Enemy::ScaleWithWave(int wave)
 {
-	float multipliyer = (wave * 0.1) + 1;
-	attributes->ApplyAttributeMultipliyer(HellwatchAttribute::Health, multipliyer);
-	damageAmount *= multipliyer;
-	playerMoneyToAdd *= multipliyer;
+	float multiplier = (wave * 0.1) + 1;
+	attributes->ApplyAttributeMultiplier(HellwatchAttribute::Health, multiplier);
+	damageAmount *= multiplier;
+	playerMoneyToAdd *= multiplier;
 }
