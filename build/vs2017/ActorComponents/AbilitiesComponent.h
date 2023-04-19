@@ -7,6 +7,10 @@
 #include <vector>
 #include <string>
 
+/// <summary>
+/// A component allowing the object to use abilities
+/// @NOTE: Requires an attribute component to function properly
+/// </summary>
 class AbilitiesComponent : public ActorComponent
 {
 

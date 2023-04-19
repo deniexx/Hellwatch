@@ -2,6 +2,9 @@
 
 #include "Actors/MeshActor.h"
 
+/// <summary>
+/// Actor to spawn to perform damage on collision
+/// </summary>
 class DamageOnCollisionActor : public MeshActor
 {
 	GENERATED_BODY(MeshActor, DamageOnCollisionActor)
@@ -23,6 +26,10 @@ public:
 	/// </summary>
 	void SetApplyDamageOn(ApplyDamageOn::Type newState) { applyDamageOn = newState; }
 
+	/// <summary>
+	/// Specifies whether the actor should spin while moving
+	/// @NOTE: This does not change the movement direction
+	/// </summary>
 	void SetSpinning(bool bNewState) { bSpinning = bNewState; }
 
 

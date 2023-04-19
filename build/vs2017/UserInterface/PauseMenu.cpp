@@ -3,6 +3,7 @@
 
 void PauseMenu::Init()
 {
+	// Set up buttons
 	MenuButton pauseMenuButton;
 	pauseMenuButton.buttonText = "Resume";
 	pauseMenuButton.color = 0xFF0000FF;
@@ -17,6 +18,7 @@ void PauseMenu::Init()
 	pauseMenuButton.callbackFunction = bindFunc(ExitToMainMenu);
 	menuButtons.push_back(pauseMenuButton);
 
+	// Create controller, so that we can navigate the menu
 	menuController = new PlayerController(SceneApp::instance->platform());
 	FKeyBindKeyboard keyboardKeybind;
 

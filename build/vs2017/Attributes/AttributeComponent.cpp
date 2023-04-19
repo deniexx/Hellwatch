@@ -111,13 +111,13 @@ void AttributeComponent::AddAttribute(FAttribute& attributeToAdd)
 	attributes.push_back(attributeToAdd);
 }
 
-void AttributeComponent::ApplyAttributeMultipliyer(HellwatchAttribute::Type type, float multipliyer)
+void AttributeComponent::ApplyAttributeMultiplier(HellwatchAttribute::Type type, float multiplier)
 {
 	float maxValue = GetMaxAttributeValueByType(type);
 	float currentValue = GetCurrentAttributeValueByType(type);
 
-	SetAttributeMaxValue(type, maxValue * multipliyer);
-	SetAttributeCurrentValue(type, currentValue * multipliyer);
+	SetAttributeMaxValue(type, maxValue * multiplier);
+	SetAttributeCurrentValue(type, currentValue * multiplier);
 }
 
 void AttributeComponent::OnAttributeChanged(HellwatchAttribute::Type type, float oldAmount, float newAmount)

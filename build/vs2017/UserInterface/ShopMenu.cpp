@@ -9,6 +9,7 @@
 
 void ShopMenu::Init()
 {
+	// Set up buttons
 	MenuButton increaseAttributeButton;
 	increaseAttributeButton.buttonText = "Vitality +";
 	increaseAttributeButton.color = 0xFF0000FF;
@@ -38,19 +39,7 @@ void ShopMenu::Init()
 	increaseAttributeButton.callbackFunction = bindFunc(CloseShop);
 	menuButtons.push_back(increaseAttributeButton);
 
-	menuSprite = new gef::Sprite();
-	gef::PNGLoader png_loader;
-	gef::ImageData imageData;
-	png_loader.Load("Assets/ShopMenu.png", SceneApp::instance->platform(), imageData);
-	if (imageData.image() != nullptr)
-	{
-		gef::Texture* texture = gef::Texture::Create(SceneApp::instance->platform(), imageData);
-		menuSprite->set_position(SceneApp::instance->platform().width() / 2, SceneApp::instance->platform().height() / 2, 0.f);
-		menuSprite->set_width(1920);
-		menuSprite->set_height(1080);
-		menuSprite->set_texture(texture);
-	}
-
+	// Create controller, so that we can navigate the menu
 	menuController = new PlayerController(SceneApp::instance->platform());
 	FKeyBindKeyboard keyboardKeybind;
 
@@ -172,8 +161,3 @@ bool ShopMenu::DoesPlayerHaveMoneyForUpgrade()
 {
 	return SceneApp::instance->GetPlayerMoney() > upgradeCost;
 }
-
-//void ShopMenu::GrantAbility(Ability* abilityToGrant)
-//{
-//
-//}

@@ -50,7 +50,7 @@ void WaveManager::EndWave()
 
 void WaveManager::Update()
 {
-	float spawnPeriod = currentWave < waveDefinitions.size() ? waveDefinitions[currentWave].spawnPeriod : SPAWN_PERIOD_AFTER25;
+	float spawnPeriod = currentWave < waveDefinitions.size() ? waveDefinitions[currentWave].spawnPeriod : SPAWN_PERIOD_AFTER_WAVE_DEFINITIONS;
 	float maxSpawnAmount = currentWave < waveDefinitions.size() ? waveDefinitions[currentWave].maxSpawns : USE_WAVE_FORMULA;
 
 	bSpawnsComplete = currentWaveSpawnedEnemiesAmount >= maxSpawnAmount;

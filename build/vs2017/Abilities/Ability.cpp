@@ -157,8 +157,8 @@ float Ability::GetDamageAmount()
 
     if (attributes)
     {
-        float multipliyer = (attributes->GetCurrentAttributeValueByType(HellwatchAttribute::Wisdom) * 0.1f) + 1;
-        damageAmount *= multipliyer;
+        float multipliers = (attributes->GetCurrentAttributeValueByType(HellwatchAttribute::Wisdom) * 0.1f) + 1;
+        damageAmount *= multipliers;
     }
 
     return damageAmount;

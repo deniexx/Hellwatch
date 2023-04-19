@@ -7,6 +7,9 @@
 
 class ActorComponent;
 
+/// <summary>
+/// An object that has a mesh
+/// </summary>
 class MeshActor : public WorldObject, public IDamagable
 {
 	GENERATED_BODY(WorldObject, MeshActor)
@@ -70,6 +73,9 @@ public:
 
 protected:
 
+	/// <summary>
+	/// Creates and return the specified component, if no component is specified it will create the base class of ActorComponent
+	/// </summary>
 	template<typename ComponentType = ActorComponent>
 	ComponentType* CreateComponent()
 	{
@@ -83,6 +89,9 @@ protected:
 
 public:
 
+	/// <summary>
+	/// Gets the first component of the specified type from the Actor
+	/// </summary>
 	template<typename ComponentType = ActorComponent>
 	ComponentType* GetComponent()
 	{
@@ -95,6 +104,9 @@ public:
 		}
 	}
 
+	/// <summary>
+	/// Gets all the components of the specified type from the Actor
+	/// </summary>
 	template<typename ComponentType = ActorComponent>
 	std::vector<ComponentType*>& GetComponents()
 	{

@@ -2,6 +2,9 @@
 
 class WorldObject;
 
+/// <summary>
+/// Base class to be derived for actor components
+/// </summary>
 class ActorComponent
 {
 public:

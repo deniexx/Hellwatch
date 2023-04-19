@@ -35,6 +35,7 @@ namespace gef
 	class Sprite;
 }
 
+/* Forward declarations */
 class PlayerController;
 class MeshActor;
 class SpriteActor;
@@ -70,24 +71,36 @@ public:
 
 private:
 
+	/************************************************************************/
+	/*                         CALLED ONCE                                  */
+	/************************************************************************/
 	void InitFont();
 	void LoadAssets();
 	void CleanUpFont();
-	void DrawHUD();
 	void SetupLights();
-	void HandleCollision();
-	void CheckMarkedForDeletion();
 	void BuildToLoadData();
 	void InitGameLoop();
 	void InitMainMenu();
 	void InitShop();
 	void InitPauseMenu();
 
+	/************************************************************************/
+	/*                             UPDATES                                  */
+	/************************************************************************/
 	void UpdateLoading(float frame_time);
 	void UpdateMainMenu(float frame_time);
 	void UpdateGameLoop(float frame_time);
 	void UpdatePauseMenu(float frame_time);
 	void UpdateShop();
+
+	void HandleCollision();
+	void CheckMarkedForDeletion();
+
+
+	/************************************************************************/
+	/*                           RENDERING                                  */
+	/************************************************************************/
+	void DrawHUD();
 
 	void RenderLoading();
 	void RenderMainMenu();
@@ -102,19 +115,27 @@ private:
 	bool bGameLoopInitted = false;
 	bool bCommingFromMainMenu = false;
 
+	/*******************************************************
+	*				   ASSET LOADING                       *
+	*******************************************************/
 	gef::Scene* LoadSceneAssets(gef::Platform& platform, const char* filename);
 	gef::Mesh* GetMeshFromSceneAssets(gef::Scene* scene);
-
-	gef::SpriteRenderer* sprite_renderer_;
-	gef::Font* font_;
-	gef::Renderer3D* renderer_3d_;
 
 	PrimitiveBuilder* primitive_builder_;
 	MeshMap meshes;
 	TextureMap textures;
 
+	/*******************************************************
+	*					 RENDERING                         *
+	*******************************************************/
+	gef::SpriteRenderer* sprite_renderer_;
+	gef::Font* font_;
+	gef::Renderer3D* renderer_3d_;
+
+	/* This is used to asynchronously load assets */
 	std::future<GameState::Type> loadFuture;
 
+	/* Menu classes and wave manager */
 	WaveManager* waveManager;
 	MainMenu* mainMenu;
 	ShopMenu* shopMenu;
@@ -122,7 +143,6 @@ private:
 
 	/* We store this here for ease of access */
 	uint32_t playerMoney = 0;
-
 
 	/************************************************************************/
 	/*                              REQUIRED                                */
@@ -151,6 +171,9 @@ private:
 
 public:
 
+	/************************************************************************/
+	/*                              GETTERS                                 */
+	/************************************************************************/
 	__forceinline gef::Renderer3D* GetRenderer3D() const { return renderer_3d_; }
 	__forceinline gef::SpriteRenderer* GetSpriteRenderer() const { return sprite_renderer_; }
 	__forceinline b2World* GetBox2DWorld() const { return b2dWorld; }
@@ -166,10 +189,11 @@ public:
 	gef::Texture* RequestTextureByName(std::string textureName);
 	static const gef::Vector2 GetLastTouchPosition();
 
-	// Game State
+	/* Game State */
 	void SetGameState(GameState::Type newState);
 	GameState::Type GetGameState() const { return gameState; }
 
+	/* Player money */
 	const uint32_t GetPlayerMoney() { return playerMoney; }
 	void IncreasePlayerMoney(uint32_t increaseAmount) { playerMoney += increaseAmount; }
 	void ApplyCostToPlayerMoney(uint32_t cost) { playerMoney -= cost; }

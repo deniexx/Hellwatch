@@ -6,6 +6,9 @@
 
 #define UPGRADE_COST_FORMULA(amountOfUpgrades) (upgradeCost * amountOfUpgrades) * 0.5 + 5;
 
+/// <summary>
+/// Shop menu to be used in Shop GameState
+/// </summary>
 class ShopMenu : public Menu
 {
 public:
@@ -23,15 +26,37 @@ private:
 	uint32_t upgradeCost = 10;
 	int upgradesAmount = 0;
 
+	/************************************************************************/
+	/*                       Attribute Increasers                           */
+	/************************************************************************/
 	void IncreaseVitality();
 	void IncreaseWisdom();
 	void IncreaseToughness();
 	void IncreaseEnergy();
+
+	/// <summary>
+	/// Closes the shop
+	/// </summary>
 	void CloseShop();
 
+	/// <summary>
+	/// Increases an attribute by 1
+	/// </summary>
+	/// <param name="attribute"></param>
 	void IncreaseAttribute(HellwatchAttribute::Type attribute);
+
+	/// <summary>
+	/// Increases the upgrade cost
+	/// </summary>
 	void IncreaseUpgradeCost();
+
+	/// <summary>
+	/// Checks if the player has enough money for the current upgrade
+	/// </summary>
+	/// <returns></returns>
 	bool DoesPlayerHaveMoneyForUpgrade();
+
+	/* Not used currently */
 	//void GrantAbility(Ability* abilityToGrant);
 };
 

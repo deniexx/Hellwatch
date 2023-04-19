@@ -2,6 +2,9 @@
 
 #include "Menu.h"
 
+/// <summary>
+/// Pause Menu to be used in Pause GameState
+/// </summary>
 class PauseMenu : public Menu
 {
 public:
@@ -10,8 +13,14 @@ public:
 
 private:
 
+	/// <summary>
+	/// Resumes the game
+	/// </summary>
 	void ResumeGame();
 
+	/// <summary>
+	/// Exits to main menu
+	/// </summary>
 	void ExitToMainMenu();
 };
 

@@ -126,7 +126,8 @@ void Enemy::OnCollision(b2Body* otherBody)
 
 void Enemy::ScaleWithWave(int wave)
 {
-	float multipiyer = (wave * 0.1) + 1;
-	attributes->ApplyAttributeMultipliyer(HellwatchAttribute::Health, multipiyer);
-	damageAmount *= multipiyer;
+	float multipliyer = (wave * 0.1) + 1;
+	attributes->ApplyAttributeMultipliyer(HellwatchAttribute::Health, multipliyer);
+	damageAmount *= multipliyer;
+	playerMoneyToAdd *= multipliyer;
 }

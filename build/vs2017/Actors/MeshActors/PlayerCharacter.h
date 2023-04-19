@@ -9,6 +9,9 @@ class CharacterMovementComponent;
 class AbilitiesComponent;
 class AttributeComponent;
 
+/// <summary>
+/// The class that the player uses during the GameLoop GameState
+/// </summary>
 class PlayerCharacter : public MeshActor
 {
 	GENERATED_BODY(MeshActor, PlayerCharacter)

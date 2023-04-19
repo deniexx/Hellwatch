@@ -8,6 +8,7 @@
 
 void MainMenu::Init()
 {
+	// Set up buttons
 	MenuButton startButton;
 	startButton.buttonText = "Start";
 	startButton.color = 0xFF0000FF;
@@ -26,6 +27,7 @@ void MainMenu::Init()
 	exitButton.callbackFunction = bindFunc(OnExitButtonClicked);
 	menuButtons.push_back(exitButton);
 
+	// Set up background sprite
 	menuSprite = new gef::Sprite();
 	gef::PNGLoader png_loader;
 	gef::ImageData imageData;
@@ -39,6 +41,7 @@ void MainMenu::Init()
 		menuSprite->set_texture(texture);
 	}
 
+	// Create controller, so that we can navigate the menu
 	menuController = new PlayerController(SceneApp::instance->platform());
 	FKeyBindKeyboard keyboardKeybind;
 

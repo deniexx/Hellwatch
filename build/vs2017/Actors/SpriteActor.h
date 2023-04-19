@@ -5,6 +5,9 @@
 #include "graphics/sprite.h"
 #include "graphics/texture.h"
 
+/// <summary>
+/// An object that has a sprite
+/// </summary>
 class SpriteActor : public WorldObject
 {
 	GENERATED_BODY(WorldObject, SpriteActor)

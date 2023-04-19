@@ -3,6 +3,9 @@
 #include "Abilities/Ability.h"
 #include "GameFramework/Utils.h"
 
+/// <summary>
+/// Fires an ice projectile that hits the first target ONLY
+/// </summary>
 class IceBolt : public Ability
 {
 public:

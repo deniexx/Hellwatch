@@ -81,6 +81,9 @@ static gef::Vector4 ProjectScreenToWorldSpace(gef::Vector2 v2)
 	return pos;
 }
 
+/// <summary>
+/// Finds the angle between 2 Vector4s
+/// </summary>
 static float FindAngle(const gef::Vector4& a, const gef::Vector4& b)
 {
 	double dot_product = a.x() * b.x() + a.y() * b.y() + a.z() * b.z();
@@ -91,6 +94,9 @@ static float FindAngle(const gef::Vector4& a, const gef::Vector4& b)
 	return theta;
 }
 
+/// <summary>
+/// Static implemtation of the Vector4 lerp that is in the Vector4 class
+/// </summary>
 static gef::Vector4 Lerp(const gef::Vector4& a, const gef::Vector4& b, float alpha)
 {
 	float x = gef::Lerp(a.x(), b.x(), alpha);
@@ -100,6 +106,9 @@ static gef::Vector4 Lerp(const gef::Vector4& a, const gef::Vector4& b, float alp
 	return gef::Vector4(x, y, z);
 }
 
+/// <summary>
+/// Enum used to decided on what to apply damage
+/// </summary>
 namespace ApplyDamageOn
 {
 	enum Type

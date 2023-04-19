@@ -257,6 +257,35 @@ void SceneApp::CleanUp()
 	delete mainMenu;
 	mainMenu = NULL;
 }
+
+void SceneApp::InitFont()
+{
+	font_ = new gef::Font(platform_);
+	font_->Load("comic_sans");
+
+}
+
+void SceneApp::CleanUpFont()
+{
+	delete font_;
+	font_ = NULL;
+}
+
+void SceneApp::SetupLights()
+{
+	// grab the data for the default shader used for rendering 3D geometry
+	gef::Default3DShaderData& default_shader_data = renderer_3d_->default_shader_data();
+
+	// set the ambient light
+	default_shader_data.set_ambient_light_colour(gef::Colour(0.25f, 0.25f, 0.25f, 1.0f));
+
+	// add a point light that is almost white, but with a blue tinge
+	// the position of the light is set far away so it acts light a directional light
+	gef::PointLight default_point_light;
+	default_point_light.set_colour(gef::Colour(0.7f, 0.7f, 1.0f, 1.0f));
+	default_point_light.set_position(gef::Vector4(-500.0f, 400.0f, 700.0f));
+	default_shader_data.AddPointLight(default_point_light);
+}
 #pragma endregion
 
 #pragma region GameLoop
@@ -603,36 +632,6 @@ gef::Mesh* SceneApp::GetMeshFromSceneAssets(gef::Scene* scene)
 
 	return mesh;
 }
-#pragma endregion
-
-void SceneApp::InitFont()
-{
-	font_ = new gef::Font(platform_);
-	font_->Load("comic_sans");
-
-}
-
-void SceneApp::CleanUpFont()
-{
-	delete font_;
-	font_ = NULL;
-}
-
-void SceneApp::SetupLights()
-{
-	// grab the data for the default shader used for rendering 3D geometry
-	gef::Default3DShaderData& default_shader_data = renderer_3d_->default_shader_data();
-
-	// set the ambient light
-	default_shader_data.set_ambient_light_colour(gef::Colour(0.25f, 0.25f, 0.25f, 1.0f));
-
-	// add a point light that is almost white, but with a blue tinge
-	// the position of the light is set far away so it acts light a directional light
-	gef::PointLight default_point_light;
-	default_point_light.set_colour(gef::Colour(0.7f, 0.7f, 1.0f, 1.0f));
-	default_point_light.set_position(gef::Vector4(-500.0f, 400.0f, 700.0f));
-	default_shader_data.AddPointLight(default_point_light);
-}
 
 void SceneApp::LoadAssets()
 {
@@ -670,22 +669,6 @@ void SceneApp::BuildToLoadData()
 	texturesToLoad["RangedEnemy"] = "Assets/RangedEnemy_diffuse.png";
 }
 
-b2Body* SceneApp::CreateCollisionBody(b2BodyDef bodyDef, b2FixtureDef fixtureDef, WorldObject* owningObject)
-{
-	b2Body* body = b2dWorld->CreateBody(&bodyDef);
-	body->CreateFixture(&fixtureDef);
-
-	b2BodyUserData& userData = body->GetUserData();
-	userData.pointer = (uintptr_t)owningObject;
-
-	return body;
-}
-
-const gef::Vector2 SceneApp::GetLastTouchPosition()
-{
-	return SceneApp::instance->GetPlayerCharacter()->GetController()->GetMousePosition();
-}
-
 gef::Mesh* SceneApp::RequestMeshByName(std::string meshName)
 {
 	auto it = meshes.find(meshName);
@@ -706,6 +689,24 @@ gef::Texture* SceneApp::RequestTextureByName(std::string textureName)
 	}
 
 	return nullptr;
+}
+#pragma endregion
+
+#pragma region Others
+b2Body* SceneApp::CreateCollisionBody(b2BodyDef bodyDef, b2FixtureDef fixtureDef, WorldObject* owningObject)
+{
+	b2Body* body = b2dWorld->CreateBody(&bodyDef);
+	body->CreateFixture(&fixtureDef);
+
+	b2BodyUserData& userData = body->GetUserData();
+	userData.pointer = (uintptr_t)owningObject;
+
+	return body;
+}
+
+const gef::Vector2 SceneApp::GetLastTouchPosition()
+{
+	return SceneApp::instance->GetPlayerCharacter()->GetController()->GetMousePosition();
 }
 
 void SceneApp::SetGameState(GameState::Type newState)
@@ -740,3 +741,4 @@ void SceneApp::SetGameState(GameState::Type newState)
 
 	gameState = newState;
 }
+#pragma endregion

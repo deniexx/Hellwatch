@@ -3,6 +3,9 @@
 #include "Actors/MeshActor.h"
 #include "Attributes/AttributeComponent.h"
 
+/// <summary>
+/// A dummy enemy class used for testing damage
+/// </summary>
 class EnemyDummy : public MeshActor
 {
 public:

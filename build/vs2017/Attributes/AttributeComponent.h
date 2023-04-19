@@ -71,7 +71,7 @@ public:
 	/// <summary>
 	/// Applies a multiplier to an attribute
 	/// </summary>
-	void ApplyAttributeMultipliyer(HellwatchAttribute::Type type, float multipliyer);
+	void ApplyAttributeMultiplier(HellwatchAttribute::Type type, float multipliyer);
 
 private:
 

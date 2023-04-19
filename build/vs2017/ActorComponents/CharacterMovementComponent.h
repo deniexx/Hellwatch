@@ -3,6 +3,9 @@
 #include "ActorComponents/ActorComponent.h"
 #include "GameFramework/Utils.h"
 
+/// <summary>
+/// A component that handles moving the character
+/// </summary>
 class CharacterMovementComponent : public ActorComponent
 {
 	GENERATED_BODY(ActorComponent, CharacterMovementComponent)

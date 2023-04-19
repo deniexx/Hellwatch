@@ -25,14 +25,14 @@ void Menu::DrawMenuHUD(gef::Font* font_, gef::SpriteRenderer* sprite_renderer_)
 	}
 }
 
-void Menu::OnDownButtonPressed()
-{
-	currentButtonFocused = (currentButtonFocused + 1) % menuButtons.size();
-}
-
 void Menu::OnUpButtonPressed()
 {
 	currentButtonFocused = (currentButtonFocused - 1) % menuButtons.size();
+}
+
+void Menu::OnDownButtonPressed()
+{
+	currentButtonFocused = (currentButtonFocused + 1) % menuButtons.size();
 }
 
 void Menu::OnMouseButtonPressed(gef::Vector2 mousePos)
@@ -46,15 +46,14 @@ void Menu::OnMouseButtonPressed(gef::Vector2 mousePos)
 	}
 }
 
-void Menu::OnControllerDownButton(gef::Vector2 dir)
-{
-	currentButtonFocused = (currentButtonFocused + 1) % menuButtons.size();
-}
-
-
 void Menu::OnControllerUpButton(gef::Vector2 dir)
 {
-	currentButtonFocused = (currentButtonFocused - 1) % menuButtons.size();
+	OnUpButtonPressed();
+}
+
+void Menu::OnControllerDownButton(gef::Vector2 dir)
+{
+	OnDownButtonPressed();
 }
 
 void Menu::CheckForHighlight()
