@@ -54,6 +54,11 @@ public:
 	/// </summary>
 	void SpawnEnemy();
 
+	/// <summary>
+	/// Gets all the currently spawned enemies
+	/// </summary>
+	std::vector<Enemy*> GetAllSpawnedEnemies() const { return spawnedEnemies; }
+
 private:
 
 	bool bInWave = false;

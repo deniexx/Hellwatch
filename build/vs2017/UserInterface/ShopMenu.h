@@ -4,7 +4,8 @@
 #include "Attributes/AttributeTypes.h"
 #include "Abilities/Ability.h"
 
-#define UPGRADE_COST_FORMULA(amountOfUpgrades) (upgradeCost * amountOfUpgrades) * 0.5 + 5;
+#define UPGRADE_COST_FORMULA(amountOfUpgrades) (upgradeCost * amountOfUpgrades) * 0.5 + 5
+#define MAX_COST 3000.f
 
 /// <summary>
 /// Shop menu to be used in Shop GameState

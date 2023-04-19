@@ -155,6 +155,9 @@ void ShopMenu::IncreaseUpgradeCost()
 {
 	++upgradesAmount;
 	upgradeCost = UPGRADE_COST_FORMULA(upgradesAmount);
+
+	if (upgradeCost > MAX_COST)
+		upgradeCost = MAX_COST;
 }
 
 bool ShopMenu::DoesPlayerHaveMoneyForUpgrade()

@@ -6,6 +6,8 @@
 
 #include <vector>
 
+#define BASE_REGEN_RATIO 7
+
 class AttributeComponent : public ActorComponent
 {
 	GENERATED_BODY(ActorComponent, AttributeComponent);
@@ -72,6 +74,9 @@ public:
 	/// Applies a multiplier to an attribute
 	/// </summary>
 	void ApplyAttributeMultiplier(HellwatchAttribute::Type type, float multipliyer);
+
+
+	virtual void UpdateComponent(float deltaTime);
 
 private:
 

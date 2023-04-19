@@ -61,9 +61,10 @@ bool Ability::EndAbility()
 {
 	EndTargeting();
 
+    End();
+
     if (!IsActive())
         return false;
-    End();
     return true;
 }
 
@@ -81,7 +82,7 @@ void Ability::Begin()
 		SetIsTargeting(true);
         BeginTargeting();
         return;
-    }  
+    }
 }
 
 void Ability::End()

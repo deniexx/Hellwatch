@@ -4,6 +4,8 @@
 #include "Attributes/AttributeComponent.h"
 #include "Abilities/PlayerAbilities/IceBolt.h"
 #include "Abilities/PlayerAbilities/Dash.h"
+#include "Abilities/PlayerAbilities/PiercingStrike.h"
+#include "Abilities/PlayerAbilities/Meteor.h"
 
 PlayerCharacter::PlayerCharacter()
 	: Super()
@@ -54,6 +56,16 @@ void PlayerCharacter::BindKeys()
 	keybind.keyCode = gef::Keyboard::KC_2;
 	keybind.inputAction = HellwatchInputAction::Pressed;
 	keybind.functionBind = bindFunc(ActivateAbility2);
+	controller->BindKeyboardEvent(keybind);
+
+	keybind.keyCode = gef::Keyboard::KC_3;
+	keybind.inputAction = HellwatchInputAction::Pressed;
+	keybind.functionBind = bindFunc(ActivateAbility3);
+	controller->BindKeyboardEvent(keybind);
+
+	keybind.keyCode = gef::Keyboard::KC_4;
+	keybind.inputAction = HellwatchInputAction::Pressed;
+	keybind.functionBind = bindFunc(ActivateAbility4);
 	controller->BindKeyboardEvent(keybind);
 
 	keybind.keyCode = gef::Keyboard::KC_ESCAPE;
@@ -125,6 +137,14 @@ void PlayerCharacter::InitializeAbilitySystem()
 	Dash* dash = new Dash();
 	abilitiesComponent->AddAbility(dash);
 	abilitiesComponent->EquipAbility("Dash", AbilityActivationKey::AbilityKey2);
+
+	PiercingStrike* piercingStrike = new PiercingStrike();
+	abilitiesComponent->AddAbility(piercingStrike);
+	abilitiesComponent->EquipAbility("Piercing Strike", AbilityActivationKey::AbilityKey3);
+
+	Meteor* meteor = new Meteor();
+	abilitiesComponent->AddAbility(meteor);
+	abilitiesComponent->EquipAbility("Meteor", AbilityActivationKey::AbilityKey4);
 }
 
 void PlayerCharacter::Update(float deltaTime)
@@ -132,6 +152,18 @@ void PlayerCharacter::Update(float deltaTime)
 	Super::Update(deltaTime);
 
 	controller->Update();
+}
+
+void PlayerCharacter::DrawPlayerHUD()
+{
+	gef::Font* font = SceneApp::instance->GetFont();
+	gef::SpriteRenderer* spriteRenderer = SceneApp::instance->GetSpriteRenderer();
+
+	std::string healthText = "Heath: " + std::to_string((int)attributes->GetCurrentAttributeValueByType(HellwatchAttribute::Health));
+	std::string manaText = "Mana: " + std::to_string((int)attributes->GetCurrentAttributeValueByType(HellwatchAttribute::Mana));
+
+	font->RenderText(spriteRenderer, gef::Vector4(10, 10, 0), 1, 0xFF0000FF, gef::TJ_LEFT, healthText.c_str());
+	font->RenderText(spriteRenderer, gef::Vector4(10, 40, 0), 1, 0xFFFF0000, gef::TJ_LEFT, manaText.c_str());
 }
 
 void PlayerCharacter::MoveLeft()
@@ -186,6 +218,7 @@ void PlayerCharacter::TakeDamage(float damageAmount)
 	damageAmount *= damageReductionMultiplier;
 
 	attributes->ApplyAttributeChange(HellwatchAttribute::Health, -damageAmount);
+	ApplyInvincibilityForDuration(1.f);
 
 	if (attributes->GetCurrentAttributeValueByType(HellwatchAttribute::Health) <= 0.f)
 	{

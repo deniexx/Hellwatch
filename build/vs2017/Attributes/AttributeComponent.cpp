@@ -2,6 +2,16 @@
 
 #include <algorithm>
 
+void AttributeComponent::UpdateComponent(float deltaTime)
+{
+	float vitality = GetCurrentAttributeValueByType(HellwatchAttribute::Vitality);
+	float wisdom = GetCurrentAttributeValueByType(HellwatchAttribute::Wisdom);
+
+	ApplyAttributeChange(HellwatchAttribute::Health, (BASE_REGEN_RATIO + vitality) * deltaTime);
+	ApplyAttributeChange(HellwatchAttribute::Mana, (BASE_REGEN_RATIO + (wisdom * 2)) * deltaTime);
+}
+
+
 const float AttributeComponent::GetCurrentAttributeValueByType(HellwatchAttribute::Type type) const
 {
 	for (const auto& attribute : attributes)

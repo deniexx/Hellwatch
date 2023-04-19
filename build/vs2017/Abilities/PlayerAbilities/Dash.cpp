@@ -28,6 +28,8 @@ void Dash::Begin() {
 		player->ApplyInvincibilityForDuration(2);
 		player->GetCollisionBody()->ApplyForceToCenter(forceDir, true);
 	}
+
+	GetOwnerAttributes()->ApplyAttributeChange(abilityCostType, -abilityCostAmount);
 }
 
 void Dash::End() {

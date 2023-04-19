@@ -100,8 +100,8 @@ static float FindAngle(const gef::Vector4& a, const gef::Vector4& b)
 static gef::Vector4 Lerp(const gef::Vector4& a, const gef::Vector4& b, float alpha)
 {
 	float x = gef::Lerp(a.x(), b.x(), alpha);
-	float y = gef::Lerp(a.x(), b.x(), alpha);
-	float z = gef::Lerp(a.x(), b.x(), alpha);
+	float y = gef::Lerp(a.y(), b.y(), alpha);
+	float z = gef::Lerp(a.z(), b.z(), alpha);
 
 	return gef::Vector4(x, y, z);
 }

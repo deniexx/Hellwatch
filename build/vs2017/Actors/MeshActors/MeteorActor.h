@@ -1,20 +1,13 @@
 #pragma once
 
 #include "Actors/MeshActor.h"
+#include "GameFramework/Utils.h"
 
-/// <summary>
-/// Actor to spawn to perform damage on collision
-/// </summary>
-class DamageOnCollisionActor : public MeshActor
+class MeteorActor : public MeshActor
 {
-	GENERATED_BODY(MeshActor, DamageOnCollisionActor)
+	GENERATED_BODY(MeshActor, MeteorActor)
 
 public:
-
-	/// <summary>
-	/// Deal damage on collision
-	/// </summary>
-	virtual void OnCollision(b2Body* otherBody) override;
 
 	/// <summary>
 	/// Sets the damage amount
@@ -32,19 +25,17 @@ public:
 	/// </summary>
 	void SetSpinning(bool bNewState) { bSpinning = bNewState; }
 
-	/// <summary>
-	/// Sets the projectile to be piercing, passing through all enemies/players until it hits environment
-	/// </summary>
-	void SetIsPiercing(bool bNewState) { bIsPiercing = bNewState; }
-
-
 	virtual void Update(float deltaTime) override;
+
+	gef::Vector4 startPosition;
+	gef::Vector4 targetPosition;
 
 protected:
 
 	ApplyDamageOn::Type applyDamageOn = ApplyDamageOn::EnemiesOnly;
 	bool bSpinning = false;
-	bool bIsPiercing = false;
 	float damageAmount = 0.f;
+
+	float lerpAlpha = 0.f;
 };
 

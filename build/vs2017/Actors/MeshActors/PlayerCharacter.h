@@ -29,6 +29,8 @@ public:
 	/// </summary>
 	void ApplyInvincibilityForDuration(float invincibilityDuration);
 
+	void DrawPlayerHUD();
+
 protected:
 
 	PlayerController* controller;

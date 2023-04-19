@@ -1,25 +1,21 @@
-#include "IceBolt.h"
+#include "PiercingStrike.h"
+
 #include "scene_app.h"
 #include "ActorComponents/AbilitiesComponent.h"
 #include "maths/math_utils.h"
 #include "Actors/MeshActors/DamageOnCollisionActor.h"
 
-IceBolt::IceBolt()
-	: Super()
+void PiercingStrike::PostInit()
 {
-}
-
-void IceBolt::PostInit()
-{
-	SetAbilityName("IceBolt");
+	SetAbilityName("Piercing Strike");
 	SetAbilityCostType(HellwatchAttribute::Mana);
-	SetAbilityCostAmount(10.f);
-	SetAbilityCooldown(0.75f);
+	SetAbilityCostAmount(15.f);
+	SetAbilityCooldown(1.25f);
 	SetCooldownStartPolicy(CooldownStartPolicy::OnAbilityStart);
-	SetDamageAmount(20.f);
+	SetDamageAmount(15.f);
 }
 
-void IceBolt::Begin()
+void PiercingStrike::Begin()
 {
 	Super::Begin();
 
@@ -29,13 +25,15 @@ void IceBolt::Begin()
 	target.Normalise();
 
 	translation.set_y(1.f);
-	gef::Mesh* mesh = SceneApp::instance->RequestMeshByName("IceBolt");
+	gef::Mesh* mesh = const_cast<gef::Mesh*>(SceneApp::instance->GetPrimitiveBuilder()->GetDefaultCubeMesh());
 	DamageOnCollisionActor* actor = SceneApp::instance->SpawnMeshActor<DamageOnCollisionActor>(mesh, translation);
 	actor->SetDamageAmount(GetDamageAmount());
-	actor->SetScale(gef::Vector4(0.2f, 0.2f, 0.2f));
+	actor->SetScale(gef::Vector4(0.75f, 0.25f, 0.75f));
 	actor->SetSpinning(true);
+	actor->SetIsPiercing(true);
 
 	gef::Material mat;
+	mat.set_colour(0xFF05E2FC);
 	mat.set_texture(SceneApp::instance->RequestTextureByName("IceBolt"));
 	actor->SetMaterial(mat);
 
@@ -46,7 +44,7 @@ void IceBolt::Begin()
 
 	b2PolygonShape shape;
 	shape.SetAsBox(0.4f, 0.4f);
-	
+
 	b2FixtureDef fixtureDef;
 	fixtureDef.shape = &shape;
 	fixtureDef.density = 1.f;
@@ -63,6 +61,7 @@ void IceBolt::Begin()
 	GetOwnerAttributes()->ApplyAttributeChange(abilityCostType, -abilityCostAmount);
 }
 
-void IceBolt::End()
+void PiercingStrike::End()
 {
+	Super::End();
 }

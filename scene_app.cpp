@@ -492,6 +492,7 @@ void SceneApp::RenderGameLoop()
 
 	sprite_renderer_->Begin(false);
 
+	playerCharacter->DrawPlayerHUD();
 	DrawHUD();
 	for (auto actor : spriteActors)
 		actor->Render();
@@ -660,6 +661,7 @@ void SceneApp::BuildToLoadData()
 	meshesToLoad.push_back("Assets/BlockingWalls.obj");
 	meshesToLoad.push_back("Assets/MeleeEnemy.obj");
 	meshesToLoad.push_back("Assets/RangedEnemy.obj");
+	meshesToLoad.push_back("Assets/Meteor.obj");
 
 	texturesToLoad["Ganfaul"] = "Assets/Ganfaul_diffuse.png";
 	texturesToLoad["Environment"] = "Assets/Environment_diffuse.png";
@@ -667,6 +669,7 @@ void SceneApp::BuildToLoadData()
 	texturesToLoad["BlockingWall"] = "Assets/BlockingWall_diffuse.png";
 	texturesToLoad["MeleeEnemy"] = "Assets/MeleeEnemy_diffuse.png";
 	texturesToLoad["RangedEnemy"] = "Assets/RangedEnemy_diffuse.png";
+	texturesToLoad["Meteor"] = "Assets/Meteor_diffuse.png";
 }
 
 gef::Mesh* SceneApp::RequestMeshByName(std::string meshName)
@@ -740,5 +743,26 @@ void SceneApp::SetGameState(GameState::Type newState)
 	}
 
 	gameState = newState;
+}
+
+void SceneApp::ApplyRadialDamage(float damageAmount, gef::Vector4 origin, float innerRadius, float outerRadius)
+{
+	std::vector<Enemy*> enemies = waveManager->GetAllSpawnedEnemies();
+
+	for (int i = 0; i < enemies.size(); ++i)
+	{
+		if (enemies[i] && !enemies[i]->GetIsMarkedForDelete())
+		{
+			float distance = (enemies[i]->GetTranslation() - origin).Length();
+			if (distance < innerRadius)
+			{
+				enemies[i]->TakeDamage(damageAmount);
+			}
+			else if (distance < outerRadius)
+			{
+				enemies[i]->TakeDamage(gef::Lerp(damageAmount, 1, distance / outerRadius));
+			}
+		}
+	}
 }
 #pragma endregion

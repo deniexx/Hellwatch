@@ -224,10 +224,12 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="Abilities\Ability.cpp" />
+    <ClCompile Include="Abilities\PlayerAbilities\Meteor.cpp" />
     <ClCompile Include="ActorComponents\AbilitiesComponent.cpp" />
     <ClCompile Include="ActorComponents\ActorComponent.cpp" />
     <ClCompile Include="Actors\MeshActor.cpp" />
     <ClCompile Include="Actors\MeshActors\Enemy.cpp" />
+    <ClCompile Include="Actors\MeshActors\MeteorActor.cpp" />
     <ClCompile Include="Actors\SpriteActor.cpp" />
     <ClCompile Include="Attributes\AttributeComponent.cpp" />
     <ClCompile Include="Actors\MeshActors\PlayerCharacter.cpp" />
@@ -241,6 +243,7 @@
     <ClCompile Include="Abilities\PlayerAbilities\IceBolt.cpp" />
     <ClCompile Include="Actors\MeshActors\RangedEnemy.cpp" />
     <ClCompile Include="GameFramework\WaveManager.cpp" />
+    <ClCompile Include="Abilities\PlayerAbilities\PiercingStrike.cpp" />
     <ClCompile Include="UserInterface\PauseMenu.cpp" />
     <ClCompile Include="UserInterface\ShopMenu.cpp" />
     <ClCompile Include="UserInterface\MainMenu.cpp" />
@@ -251,10 +254,12 @@
     <ClInclude Include="..\..\primitive_builder.h" />
     <ClInclude Include="..\..\scene_app.h" />
     <ClInclude Include="Abilities\Ability.h" />
+    <ClInclude Include="Abilities\PlayerAbilities\Meteor.h" />
     <ClInclude Include="ActorComponents\AbilitiesComponent.h" />
     <ClInclude Include="ActorComponents\ActorComponent.h" />
     <ClInclude Include="Actors\MeshActor.h" />
     <ClInclude Include="Actors\MeshActors\Enemy.h" />
+    <ClInclude Include="Actors\MeshActors\MeteorActor.h" />
     <ClInclude Include="Actors\SpriteActor.h" />
     <ClInclude Include="Attributes\AttributeComponent.h" />
     <ClInclude Include="Attributes\AttributeTypes.h" />
@@ -271,6 +276,7 @@
     <ClInclude Include="Interfaces\Damagable.h" />
     <ClInclude Include="Actors\MeshActors\RangedEnemy.h" />
     <ClInclude Include="GameFramework\WaveManager.h" />
+    <ClInclude Include="Abilities\PlayerAbilities\PiercingStrike.h" />
     <ClInclude Include="UserInterface\PauseMenu.h" />
     <ClInclude Include="UserInterface\ShopMenu.h" />
     <ClInclude Include="UserInterface\MainMenu.h" />

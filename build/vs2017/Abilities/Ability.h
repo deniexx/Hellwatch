@@ -116,14 +116,14 @@ protected:
 	/// <returns>A boolean, whether we can activate this ability or not</returns>
 	virtual bool CanActivate(ActivationOutcome& OutActivationOutcome);
 
-private:
+protected:
 
 	AbilityActivationKey::Type activationKey;
 
 	float cooldownTimer;
 	float cooldown;
 	float damageAmount;
-	uint32_t abilityCostAmount;
+	float abilityCostAmount;
 	HellwatchAttribute::Type abilityCostType;
 	CooldownStartPolicy::Type cooldownStartPolicy;
 
@@ -141,7 +141,7 @@ public:
 	/*                              SETTERS                                 */
 	/************************************************************************/
 	void SetActivationKey(AbilityActivationKey::Type key) { activationKey = key; }
-	void SetAbilityCostAmount(uint32_t newCost) { abilityCostAmount = newCost; }
+	void SetAbilityCostAmount(float newCost) { abilityCostAmount = newCost; }
 	void SetAbilityCostType(HellwatchAttribute::Type newCost) { abilityCostType = newCost; }
 	void SetAbilityName(std::string newName) { abilityName = newName; }
 	void SetIsActive(bool bNewState) { bIsActive = bNewState; }

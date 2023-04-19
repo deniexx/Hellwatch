@@ -187,6 +187,7 @@ public:
 	__forceinline float GetLastDeltaTime() const { return lastDeltaTime; }
 	gef::Mesh* RequestMeshByName(std::string meshName);
 	gef::Texture* RequestTextureByName(std::string textureName);
+	gef::Font* GetFont() { return font_; }
 	static const gef::Vector2 GetLastTouchPosition();
 
 	/* Game State */
@@ -197,6 +198,10 @@ public:
 	const uint32_t GetPlayerMoney() { return playerMoney; }
 	void IncreasePlayerMoney(uint32_t increaseAmount) { playerMoney += increaseAmount; }
 	void ApplyCostToPlayerMoney(uint32_t cost) { playerMoney -= cost; }
+
+
+	/* Damage */
+	void ApplyRadialDamage(float damageAmount, gef::Vector4 origin, float innerRadius, float outerRadius);
 
 	/// <summary>
 	/// Spawns a MeshActor into the scene and gets it ready for rendering and updating

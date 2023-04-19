@@ -24,7 +24,12 @@ void DamageOnCollisionActor::OnCollision(b2Body* otherBody)
 			if (bApplyDamage)
 			{
 				actor->TakeDamage(damageAmount);
-				MarkForDelete();
+
+				if (!bIsPiercing)
+				{
+					MarkForDelete();
+				}
+
 				return;
 			}
 
