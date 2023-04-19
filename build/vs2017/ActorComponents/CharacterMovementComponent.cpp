@@ -31,7 +31,7 @@ void CharacterMovementComponent::UpdateComponent(float deltaTime)
 	{
 		velocity.Normalize();
 		velocity *= maximumSpeed;
-		ownerCollision->SetLinearVelocity(velocity);
+		//ownerCollision->SetLinearVelocity(velocity);
 	}
 }
 

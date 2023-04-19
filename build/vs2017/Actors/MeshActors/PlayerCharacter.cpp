@@ -3,6 +3,7 @@
 #include "ActorComponents/AbilitiesComponent.h"
 #include "Attributes/AttributeComponent.h"
 #include "Abilities/PlayerAbilities/IceBolt.h"
+#include "Abilities/PlayerAbilities/Dash.h"
 
 PlayerCharacter::PlayerCharacter()
 	: Super()
@@ -48,6 +49,11 @@ void PlayerCharacter::BindKeys()
 	keybind.keyCode = gef::Keyboard::KC_1;
 	keybind.inputAction = HellwatchInputAction::Pressed;
 	keybind.functionBind = bindFunc(ActivateAbility1);
+	controller->BindKeyboardEvent(keybind);
+
+	keybind.keyCode = gef::Keyboard::KC_2;
+	keybind.inputAction = HellwatchInputAction::Pressed;
+	keybind.functionBind = bindFunc(ActivateAbility2);
 	controller->BindKeyboardEvent(keybind);
 
 	keybind.keyCode = gef::Keyboard::KC_ESCAPE;
@@ -115,6 +121,10 @@ void PlayerCharacter::InitializeAbilitySystem()
 	IceBolt* iceBolt = new IceBolt();
 	abilitiesComponent->AddAbility(iceBolt);
 	abilitiesComponent->EquipAbility("IceBolt", AbilityActivationKey::AbilityKey1);
+
+	Dash* dash = new Dash();
+	abilitiesComponent->AddAbility(dash);
+	abilitiesComponent->EquipAbility("Dash", AbilityActivationKey::AbilityKey2);
 }
 
 void PlayerCharacter::Update(float deltaTime)
