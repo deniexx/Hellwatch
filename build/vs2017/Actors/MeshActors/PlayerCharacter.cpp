@@ -170,6 +170,8 @@ void PlayerCharacter::ActivateAbility4()
 
 void PlayerCharacter::TakeDamage(float damageAmount)
 {
+	if (SceneApp::instance->GetCurrentGameTime() < invincibilityEndTime) return;
+
 	float damageReductionMultiplier = 1 - (attributes->GetCurrentAttributeValueByType(HellwatchAttribute::Toughness) * 0.1);
 	damageAmount *= damageReductionMultiplier;
 
@@ -180,4 +182,9 @@ void PlayerCharacter::TakeDamage(float damageAmount)
 		DisableUpdate();
 		SceneApp::instance->SetGameState(GameState::MainMenu);
 	}
+}
+
+void PlayerCharacter::ApplyInvincibilityForDuration(float invincibilityDuration)
+{
+	invincibilityEndTime = SceneApp::instance->GetCurrentGameTime() + invincibilityDuration;
 }
