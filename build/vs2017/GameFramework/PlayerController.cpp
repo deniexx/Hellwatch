@@ -202,11 +202,6 @@ void PlayerController::EvaluateControllerKeybinds(const gef::SonyController* con
 					keybind.functionBind(gef::Vector2(controller->left_stick_x_axis(), controller->left_stick_y_axis()));
 				}
 				break;
-				case HellwatchControllerAxis::RightStickXY:
-				{
-					keybind.functionBind(gef::Vector2(controller->right_stick_x_axis(), controller->right_stick_y_axis()));
-				}
-				break;
 			}
 		}
 		else if (keybind.inputAction != HellwatchInputAction::None)
@@ -237,6 +232,8 @@ void PlayerController::EvaluateControllerKeybinds(const gef::SonyController* con
 			}
 		}
 	}
+
+	SceneApp::instance->AddPointerLocationOffset(gef::Vector2(controller->right_stick_x_axis() * 8, -controller->right_stick_y_axis() * 8));
 }
 
 void PlayerController::EvaluateMouseKeybinds(const gef::TouchInputManager* touchInput)
@@ -261,7 +258,7 @@ void PlayerController::EvaluateMouseKeybinds(const gef::TouchInputManager* touch
 				for (const auto& mousebind : mouseKeyBinds)
 				{
 					if (mousebind.clickAction == gef::TT_NEW)
-						mousebind.functionBind(touchPosition);
+						mousebind.functionBind(SceneApp::instance->GetLastTouchPosition());
 				}
 			}
 		}
@@ -277,7 +274,7 @@ void PlayerController::EvaluateMouseKeybinds(const gef::TouchInputManager* touch
 				for (const auto& mousebind : mouseKeyBinds)
 				{
 					if (mousebind.clickAction == gef::TT_ACTIVE)
-						mousebind.functionBind(touchPosition);
+						mousebind.functionBind(SceneApp::instance->GetLastTouchPosition());
 				}
 			}
 			else if (touch->type == gef::TT_RELEASED)
@@ -290,11 +287,19 @@ void PlayerController::EvaluateMouseKeybinds(const gef::TouchInputManager* touch
 				for (const auto& mousebind : mouseKeyBinds)
 				{
 					if (mousebind.clickAction == gef::TT_RELEASED)
-						mousebind.functionBind(touchPosition);
+						mousebind.functionBind(SceneApp::instance->GetLastTouchPosition());
 				}
 			}
 		}
 	}
+
+	gef::Vector2 currentMousePosition = inputManager->touch_manager()->mouse_position();
+	if ((lastMousePosition - currentMousePosition).Length() > 0.2)
+	{
+		SceneApp::instance->SetPointerLocation(currentMousePosition);
+	}
+
+	lastMousePosition = currentMousePosition;
 }
 
 const FKeyBindSet& PlayerController::GetKeybindSet() const

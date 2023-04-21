@@ -167,6 +167,9 @@ private:
 	std::vector<std::string> meshesToLoad;
 	std::map<std::string, std::string> texturesToLoad;
 
+	gef::Sprite* pointerSprite;
+	gef::Vector2 pointerLocation = gef::Vector2(0, 0);
+
 	gef::Vector4 cameraEye = gef::Vector4(0.0f, 20.0f, 0.0f);
 	gef::Vector4 cameraLookAt = gef::Vector4(0.0f, -1.0f, 0.001f);
 	gef::Vector4 cameraUp = gef::Vector4(0.0f, 1.0f, 0.0f);
@@ -209,7 +212,7 @@ public:
 	gef::Texture* RequestTextureByName(std::string textureName);
 	gef::Font* GetFont() { return font_; }
 	gef::AudioManager* GetAudioManager() { return audioManager; }
-	static const gef::Vector2 GetLastTouchPosition();
+	const gef::Vector2 GetLastTouchPosition();
 
 	/* Game State */
 	void SetGameState(GameState::Type newState);
@@ -226,6 +229,11 @@ public:
 
 	/* Sound */
 	void PlaySample(std::string sampleName, bool bIsLooping = false);
+
+	/* Pointer functions */
+	void AddPointerLocationOffset(gef::Vector2 offset) { pointerLocation += offset; }
+
+	void SetPointerLocation(gef::Vector2 newLocation) { pointerLocation = newLocation; }
 
 	/// <summary>
 	/// Spawns a MeshActor into the scene and gets it ready for rendering and updating

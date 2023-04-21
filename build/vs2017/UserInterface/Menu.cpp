@@ -65,7 +65,7 @@ void Menu::CheckForHighlight()
 {
 	if (menuController)
 	{
-		gef::Vector2 mousePos = menuController->GetMousePosition();
+		gef::Vector2 mousePos = SceneApp::instance->GetLastTouchPosition();
 		
 		for (int i = 0; i < menuButtons.size(); ++i)
 		{

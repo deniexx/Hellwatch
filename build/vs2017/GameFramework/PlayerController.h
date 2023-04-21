@@ -139,6 +139,8 @@ private:
 	Int32 activeTouchID;
 	gef::Vector2 touchPosition;
 
+	gef::Vector2 lastMousePosition = gef::Vector2(0, 0);
+
 	/* -------------------------------------- */
 	/*             Input Manager              */
 	/* -------------------------------------- */

@@ -53,7 +53,7 @@ void SceneApp::Init()
 	BuildToLoadData();
 
 	sprite_renderer_ = gef::SpriteRenderer::Create(platform_);
-
+	
 	// create the renderer for draw 3D geometry
 	renderer_3d_ = gef::Renderer3D::Create(platform_);
 
@@ -66,6 +66,7 @@ void SceneApp::Init()
 	SetupLights();
 
 	loadingSprite = new gef::Sprite();
+	pointerSprite = new gef::Sprite();
 
 	gef::PNGLoader png_loader;
 	gef::ImageData imageData;
@@ -77,6 +78,17 @@ void SceneApp::Init()
 		loadingSprite->set_width(1920);
 		loadingSprite->set_height(1080);
 		loadingSprite->set_texture(texture);
+	}
+
+	gef::ImageData pointerData;
+	png_loader.Load("Assets/Pointer.png", platform_, pointerData);
+	if (pointerData.image() != nullptr)
+	{
+		gef::Texture* texture = gef::Texture::Create(platform_, pointerData);
+		pointerSprite->set_position(platform_.width() / 2, platform_.height() / 2, 0.f);
+		pointerSprite->set_width(64);
+		pointerSprite->set_height(64);
+		pointerSprite->set_texture(texture);
 	}
 
 	loadFuture = std::async(std::launch::async, [this] { LoadAssets(); return GameState::Type::Loading; });
@@ -310,6 +322,12 @@ bool SceneApp::Update(float frame_time)
 	currentGameTime += frame_time;
 	lastDeltaTime = frame_time;
 
+	if (pointerSprite)
+	{
+		gef::Vector2 lastTouch = GetLastTouchPosition();
+		pointerSprite->set_position(lastTouch.x, lastTouch.y + 32, 0);
+	}
+
 	switch (gameState)
 	{
 	case GameState::Loading:
@@ -465,11 +483,13 @@ void SceneApp::RenderShop()
 
 	sprite_renderer_->Begin(false);
 
+	sprite_renderer_->DrawSprite(*shopMenu->menuSprite);
 	DrawHUD();
 	for (auto actor : spriteActors)
 		actor->Render();
 
 	shopMenu->DrawMenuHUD(font_, sprite_renderer_);
+	sprite_renderer_->DrawSprite(*pointerSprite);
 	sprite_renderer_->End();
 }
 
@@ -502,6 +522,7 @@ void SceneApp::RenderGameEnd()
 		actor->Render();
 
 	gameEndMenu->DrawMenuHUD(font_, sprite_renderer_);
+	sprite_renderer_->DrawSprite(*pointerSprite);
 	sprite_renderer_->End();
 }
 
@@ -519,6 +540,8 @@ void SceneApp::RenderMainMenu()
 
 	sprite_renderer_->Begin(false);
 	sprite_renderer_->DrawSprite(*mainMenu->menuSprite);
+
+	sprite_renderer_->DrawSprite(*pointerSprite);
 	sprite_renderer_->End();
 
 	if (font_)
@@ -556,6 +579,7 @@ void SceneApp::RenderGameLoop()
 	for (auto actor : spriteActors)
 		actor->Render();
 
+	sprite_renderer_->DrawSprite(*pointerSprite);
 	sprite_renderer_->End();
 }
 
@@ -588,6 +612,7 @@ void SceneApp::RenderPauseMenu()
 		actor->Render();
 
 	pauseMenu->DrawMenuHUD(font_, sprite_renderer_);
+	sprite_renderer_->DrawSprite(*pointerSprite);
 	sprite_renderer_->End();
 }
 
@@ -768,7 +793,7 @@ b2Body* SceneApp::CreateCollisionBody(b2BodyDef bodyDef, b2FixtureDef fixtureDef
 
 const gef::Vector2 SceneApp::GetLastTouchPosition()
 {
-	return SceneApp::instance->GetPlayerCharacter()->GetController()->GetMousePosition();
+	return pointerLocation;
 }
 
 void SceneApp::SetGameState(GameState::Type newState)
