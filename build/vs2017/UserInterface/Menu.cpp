@@ -56,6 +56,11 @@ void Menu::OnControllerDownButton(gef::Vector2 dir)
 	OnDownButtonPressed();
 }
 
+void Menu::OnControllerSubmitButton(gef::Vector2 dir)
+{
+	PressMenuButton();
+}
+
 void Menu::CheckForHighlight()
 {
 	if (menuController)

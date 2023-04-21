@@ -105,8 +105,8 @@ void PlayerCharacter::InitializeAbilitySystem()
 	FAttribute attributeToAdd;
 	attributeToAdd.attributeType = HellwatchAttribute::Health;
 	attributeToAdd.bClampedToZero = true;
-	attributeToAdd.maxAmount = 100.f;
-	attributeToAdd.currentAmount = 100.f;
+	attributeToAdd.maxAmount = 10.f;
+	attributeToAdd.currentAmount = 10.f;
 	attributes->AddAttribute(attributeToAdd);
 
 	attributeToAdd.attributeType = HellwatchAttribute::Mana;
@@ -223,7 +223,7 @@ void PlayerCharacter::TakeDamage(float damageAmount)
 	if (attributes->GetCurrentAttributeValueByType(HellwatchAttribute::Health) <= 0.f)
 	{
 		DisableUpdate();
-		SceneApp::instance->SetGameState(GameState::MainMenu);
+		SceneApp::instance->SetGameState(GameState::GameEnd);
 	}
 }
 

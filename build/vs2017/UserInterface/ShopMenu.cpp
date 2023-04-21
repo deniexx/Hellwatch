@@ -6,6 +6,7 @@
 #include "graphics/texture.h"
 #include "Actors/MeshActors/PlayerCharacter.h"
 #include "Attributes/AttributeComponent.h"
+#include "input/sony_controller_input_manager.h"
 
 void ShopMenu::Init()
 {
@@ -70,6 +71,21 @@ void ShopMenu::Init()
 	mouseKeybind.clickAction = gef::TT_NEW;
 	mouseKeybind.functionBind = bindFunc_ONEParam(OnMouseButtonPressed, gef::Vector2, mousePos);
 	menuController->BindMouseEvent(mouseKeybind);
+
+	// Controller events
+	FKeyBindController controllerKeybind;
+	controllerKeybind.inputAction = HellwatchInputAction::Pressed;
+	controllerKeybind.keyCode = gef_SONY_CTRL_DOWN;
+	controllerKeybind.functionBind = bindFunc_ONEParam(OnControllerDownButton, gef::Vector2, dir);
+	menuController->BindControllerEvent(controllerKeybind);
+
+	controllerKeybind.keyCode = gef_SONY_CTRL_UP;
+	controllerKeybind.functionBind = bindFunc_ONEParam(OnControllerUpButton, gef::Vector2, dir);
+	menuController->BindControllerEvent(controllerKeybind);
+
+	controllerKeybind.keyCode = gef_SONY_CTRL_CROSS;
+	controllerKeybind.functionBind = bindFunc_ONEParam(OnControllerSubmitButton, gef::Vector2, dir);
+	menuController->BindControllerEvent(controllerKeybind);
 }
 
 void ShopMenu::Update()

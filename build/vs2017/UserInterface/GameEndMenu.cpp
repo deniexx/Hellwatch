@@ -1,24 +1,45 @@
-#include "PauseMenu.h"
+#include "GameEndMenu.h"
+
+#include "scene_app.h"
 #include "GameFramework/PlayerController.h"
+#include "Actors/MeshActors/PlayerCharacter.h"
+#include "Attributes/AttributeComponent.h"
+#include "GameFramework/Utils.h"
 #include "input/sony_controller_input_manager.h"
 
-
-void PauseMenu::Init()
+void GameEndMenu::Init()
 {
-	// Set up buttons
-	MenuButton pauseMenuButton;
-	pauseMenuButton.buttonText = "Resume";
-	pauseMenuButton.color = 0xFF0000FF;
-	pauseMenuButton.justification = gef::TJ_CENTRE;
-	pauseMenuButton.scale = 3.f;
-	pauseMenuButton.position = gef::Vector4(960.f, 340.f, 0.f);
-	pauseMenuButton.callbackFunction = bindFunc(ResumeGame);
-	menuButtons.push_back(pauseMenuButton);
+	bool bPlayerWon = SceneApp::instance->GetPlayerCharacter()->GetCharacterAttributes()->GetCurrentAttributeValueByType(HellwatchAttribute::Health) > 0;
 
-	pauseMenuButton.buttonText = "Main Menu";
-	pauseMenuButton.position = gef::Vector4(960.f, 640.f, 0.f);
-	pauseMenuButton.callbackFunction = bindFunc(ExitToMainMenu);
-	menuButtons.push_back(pauseMenuButton);
+	// Set up buttons
+	MenuButton mainMenuButton;
+	mainMenuButton.buttonText = "Main Menu";
+	mainMenuButton.color = 0xFF0000FF;
+	mainMenuButton.justification = gef::TJ_LEFT;
+	mainMenuButton.scale = 3.f;
+	mainMenuButton.position = gef::Vector4(160.f, 540.f, 0.f);
+	mainMenuButton.callbackFunction = bindFunc(OnMainMenuButtonClicked);
+	menuButtons.push_back(mainMenuButton);
+
+	MenuButton exitButton;
+	exitButton.buttonText = "Exit";
+	exitButton.color = 0xFF0000FF;
+	exitButton.justification = gef::TJ_LEFT;
+	exitButton.scale = 3.f;
+	exitButton.position = gef::Vector4(1560.f, 540.f, 0.f);
+	exitButton.callbackFunction = bindFunc(OnExitButtonClicked);
+	menuButtons.push_back(exitButton);
+
+	if (bPlayerWon)
+	{
+		MenuButton continueButton;
+		continueButton.buttonText = "Continue";
+		continueButton.justification = gef::TJ_LEFT;
+		continueButton.scale = 3.f;
+		continueButton.position = gef::Vector4(1010.f, 540.f, 0.f);
+		continueButton.callbackFunction = bindFunc(OnContinueButtonClicked);
+		menuButtons.push_back(continueButton);
+	}
 
 	// Create controller, so that we can navigate the menu
 	menuController = new PlayerController(SceneApp::instance->platform());
@@ -68,12 +89,17 @@ void PauseMenu::Init()
 	menuController->BindControllerEvent(controllerKeybind);
 }
 
-void PauseMenu::ResumeGame()
-{
-	SceneApp::instance->SetGameState(GameState::GameLoop);
-}
-
-void PauseMenu::ExitToMainMenu()
+void GameEndMenu::OnMainMenuButtonClicked()
 {
 	SceneApp::instance->SetGameState(GameState::MainMenu);
+}
+
+void GameEndMenu::OnExitButtonClicked()
+{
+	exit(0);
+}
+
+void GameEndMenu::OnContinueButtonClicked()
+{
+	SceneApp::instance->SetGameState(GameState::GameLoop);
 }

@@ -13,6 +13,7 @@
 #include "UserInterface/MainMenu.h"
 #include "UserInterface/ShopMenu.h"
 #include "UserInterface/PauseMenu.h"
+#include "UserInterface/GameEndMenu.h"
 #include "GameFramework/PlayerController.h"
 #include "Actors/MeshActors/PlayerCharacter.h"
 #include "Actors/SpriteActor.h"
@@ -33,6 +34,7 @@ SceneApp::SceneApp(gef::Platform& platform):
 	,mainMenu(NULL)
 	,shopMenu(NULL)
 	,pauseMenu(NULL)
+	,gameEndMenu(NULL)
 	,audioManager(NULL)
 	,currentGameTime(0.f)
 {
@@ -238,6 +240,15 @@ void SceneApp::InitPauseMenu()
 	}
 }
 
+void SceneApp::InitGameEndMenu()
+{
+	if (gameEndMenu == NULL)
+	{
+		gameEndMenu = new GameEndMenu();
+		gameEndMenu->Init();
+	}
+}
+
 void SceneApp::CleanUp()
 {
 	// clean up scene assets
@@ -316,6 +327,9 @@ bool SceneApp::Update(float frame_time)
 	case GameState::Shop:
 		UpdateShop();
 		break;
+	case GameState::GameEnd:
+		UpdateGameEnd();
+		break;
 	}
 
 	return true;
@@ -366,6 +380,12 @@ void SceneApp::UpdateShop()
 		shopMenu->Update();
 }
 
+void SceneApp::UpdateGameEnd()
+{
+	if (gameEndMenu)
+		gameEndMenu->Update();
+}
+
 void SceneApp::UpdatePauseMenu(float frame_time)
 {
 	if (pauseMenu)
@@ -397,6 +417,9 @@ void SceneApp::Render()
 		break;
 	case GameState::Shop:
 		RenderShop();
+		break;
+	case GameState::GameEnd:
+		RenderGameEnd();
 		break;
 	}
 }
@@ -447,6 +470,38 @@ void SceneApp::RenderShop()
 		actor->Render();
 
 	shopMenu->DrawMenuHUD(font_, sprite_renderer_);
+	sprite_renderer_->End();
+}
+
+void SceneApp::RenderGameEnd()
+{
+	if (playerCharacter != NULL)
+	{
+		cameraEye = playerCharacter->GetTranslation();
+		cameraEye.set_y(20.f);
+		cameraEye.set_z(cameraEye.z() - 10);
+		cameraLookAt = playerCharacter->GetTranslation();
+		cameraLookAt.set_y(-1.f);
+	}
+
+	gef::Matrix44 view_matrix;
+	view_matrix.LookAt(cameraEye, cameraLookAt, cameraUp);
+	renderer_3d_->set_view_matrix(view_matrix);
+
+	renderer_3d_->Begin();
+
+	for (auto actor : meshActors)
+		actor->Render();
+
+	renderer_3d_->End();
+
+	sprite_renderer_->Begin(false);
+
+	DrawHUD();
+	for (auto actor : spriteActors)
+		actor->Render();
+
+	gameEndMenu->DrawMenuHUD(font_, sprite_renderer_);
 	sprite_renderer_->End();
 }
 
@@ -742,6 +797,11 @@ void SceneApp::SetGameState(GameState::Type newState)
 	case GameState::Shop:
 	{
 		InitShop();
+	}
+	break;
+	case GameState::GameEnd:
+	{
+		InitGameEndMenu();
 	}
 	break;
 	}

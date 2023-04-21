@@ -20,7 +20,8 @@ namespace GameState
 		MainMenu,
 		GameLoop,
 		PauseMenu,
-		Shop
+		Shop,
+		GameEnd
 	};
 }
 
@@ -49,6 +50,7 @@ class WaveManager;
 class MainMenu;
 class ShopMenu;
 class PauseMenu;
+class GameEndMenu;
 
 typedef std::map<std::string, gef::Texture*> TextureMap;
 typedef std::map<std::string, int> SoundMap;
@@ -83,6 +85,7 @@ private:
 	void InitMainMenu();
 	void InitShop();
 	void InitPauseMenu();
+	void InitGameEndMenu();
 
 	/************************************************************************/
 	/*                             UPDATES                                  */
@@ -92,6 +95,7 @@ private:
 	void UpdateGameLoop(float frame_time);
 	void UpdatePauseMenu(float frame_time);
 	void UpdateShop();
+	void UpdateGameEnd();
 
 	void HandleCollision();
 	void CheckMarkedForDeletion();
@@ -107,6 +111,7 @@ private:
 	void RenderGameLoop();
 	void RenderPauseMenu();
 	void RenderShop();
+	void RenderGameEnd();
 
 	/*******************************************************
 	*					GAME STATE                         *
@@ -143,6 +148,7 @@ private:
 	MainMenu* mainMenu;
 	ShopMenu* shopMenu;
 	PauseMenu* pauseMenu;
+	GameEndMenu* gameEndMenu;
 
 	/* We store this here for ease of access */
 	uint32_t playerMoney = 0;

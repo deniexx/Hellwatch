@@ -45,6 +45,13 @@ void WaveManager::EndWave()
 	spawnedEnemies.clear();
 	currentWave += 1;
 	bInWave = false;
+
+	if (currentWave == waveDefinitions.size() - 1)
+	{
+		SceneApp::instance->SetGameState(GameState::GameEnd);
+		return;
+	}
+
 	SceneApp::instance->SetGameState(GameState::Shop);
 }
 

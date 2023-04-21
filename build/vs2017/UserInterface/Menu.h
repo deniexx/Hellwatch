@@ -77,6 +77,11 @@ protected:
 	void OnControllerDownButton(gef::Vector2 dir);
 
 	/// <summary>
+	/// When the player presses a button to navigate down the menu
+	/// </summary>
+	void OnControllerSubmitButton(gef::Vector2 dir);
+
+	/// <summary>
 	/// Checks whether to highlight any buttons
 	/// </summary>
 	void CheckForHighlight();

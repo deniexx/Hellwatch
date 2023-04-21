@@ -46,7 +46,7 @@ struct FKeyBindKeyboard
 
 struct FKeyBindController
 {
-	uint32_t keyCode;
+	int keyCode;
 	HellwatchInputAction::Type inputAction = HellwatchInputAction::None;
 	HellwatchControllerAxis::Type axis = HellwatchControllerAxis::None;
 	std::function<void(gef::Vector2)> functionBind;
