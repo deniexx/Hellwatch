@@ -33,6 +33,7 @@ namespace gef
 	class InputManager;
 	class Renderer3D;
 	class Sprite;
+	class AudioManager;
 }
 
 /* Forward declarations */
@@ -50,6 +51,7 @@ class ShopMenu;
 class PauseMenu;
 
 typedef std::map<std::string, gef::Texture*> TextureMap;
+typedef std::map<std::string, int> SoundMap;
 
 class SceneApp : public gef::Application
 {
@@ -75,10 +77,8 @@ private:
 	/*                         CALLED ONCE                                  */
 	/************************************************************************/
 	void InitFont();
-	void LoadAssets();
 	void CleanUpFont();
 	void SetupLights();
-	void BuildToLoadData();
 	void InitGameLoop();
 	void InitMainMenu();
 	void InitShop();
@@ -121,6 +121,9 @@ private:
 	gef::Scene* LoadSceneAssets(gef::Platform& platform, const char* filename);
 	gef::Mesh* GetMeshFromSceneAssets(gef::Scene* scene);
 
+	void LoadAssets();
+	void BuildToLoadData();
+
 	PrimitiveBuilder* primitive_builder_;
 	MeshMap meshes;
 	TextureMap textures;
@@ -143,6 +146,9 @@ private:
 
 	/* We store this here for ease of access */
 	uint32_t playerMoney = 0;
+
+	/* Utility function to find sample name */
+	int FindSampleFromName(std::string sampleName);
 
 	/************************************************************************/
 	/*                              REQUIRED                                */
@@ -169,6 +175,13 @@ private:
 	b2World* b2dWorld;
 	b2Vec2 gravity;
 
+
+	/************************************************************************/
+	/*                               SOUND                                  */
+	/************************************************************************/
+	gef::AudioManager* audioManager;
+	SoundMap sounds;
+
 public:
 
 	/************************************************************************/
@@ -185,9 +198,11 @@ public:
 	__forceinline gef::Vector4 GetCameraLookAt() const { return cameraLookAt; }
 	__forceinline float GetCurrentGameTime() const { return currentGameTime; }
 	__forceinline float GetLastDeltaTime() const { return lastDeltaTime; }
+
 	gef::Mesh* RequestMeshByName(std::string meshName);
 	gef::Texture* RequestTextureByName(std::string textureName);
 	gef::Font* GetFont() { return font_; }
+	gef::AudioManager* GetAudioManager() { return audioManager; }
 	static const gef::Vector2 GetLastTouchPosition();
 
 	/* Game State */
@@ -202,6 +217,9 @@ public:
 
 	/* Damage */
 	void ApplyRadialDamage(float damageAmount, gef::Vector4 origin, float innerRadius, float outerRadius);
+
+	/* Sound */
+	void PlaySample(std::string sampleName, bool bIsLooping = false);
 
 	/// <summary>
 	/// Spawns a MeshActor into the scene and gets it ready for rendering and updating

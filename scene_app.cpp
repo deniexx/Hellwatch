@@ -8,6 +8,7 @@
 #include "graphics/sprite.h"
 #include "assets/png_loader.h"
 #include <graphics/image_data.h>
+#include <audio/audio_manager.h>
 
 #include "UserInterface/MainMenu.h"
 #include "UserInterface/ShopMenu.h"
@@ -32,6 +33,7 @@ SceneApp::SceneApp(gef::Platform& platform):
 	,mainMenu(NULL)
 	,shopMenu(NULL)
 	,pauseMenu(NULL)
+	,audioManager(NULL)
 	,currentGameTime(0.f)
 {
 }
@@ -55,6 +57,8 @@ void SceneApp::Init()
 
 	gravity = b2Vec2(0.0f, -0.f);
 	b2dWorld = new b2World(gravity);
+	audioManager = gef::AudioManager::Create();
+	// @TODO: Find samples and music
 
 	InitFont();
 	SetupLights();
@@ -763,6 +767,27 @@ void SceneApp::ApplyRadialDamage(float damageAmount, gef::Vector4 origin, float 
 				enemies[i]->TakeDamage(gef::Lerp(damageAmount, 1, distance / outerRadius));
 			}
 		}
+	}
+}
+
+int SceneApp::FindSampleFromName(std::string sampleName)
+{
+	auto it = sounds.find(sampleName);
+	if (it != sounds.end())
+	{
+		return sounds[sampleName];
+	}
+
+	return -1;
+}
+
+void SceneApp::PlaySample(std::string sampleName, bool bIsLooping)
+{
+	int sampleIndex = FindSampleFromName(sampleName);
+
+	if (sampleIndex >= 0)
+	{
+		audioManager->PlaySample(sampleIndex, bIsLooping);
 	}
 }
 #pragma endregion
