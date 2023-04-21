@@ -7,7 +7,7 @@ void AttributeComponent::UpdateComponent(float deltaTime)
 	float vitality = GetCurrentAttributeValueByType(HellwatchAttribute::Vitality);
 	float wisdom = GetCurrentAttributeValueByType(HellwatchAttribute::Wisdom);
 
-	ApplyAttributeChange(HellwatchAttribute::Health, (BASE_REGEN_RATIO + vitality) * deltaTime);
+	ApplyAttributeChange(HellwatchAttribute::Health, (BASE_REGEN_RATIO * 0.5 + vitality) * deltaTime);
 	ApplyAttributeChange(HellwatchAttribute::Mana, (BASE_REGEN_RATIO + (wisdom * 2)) * deltaTime);
 }
 

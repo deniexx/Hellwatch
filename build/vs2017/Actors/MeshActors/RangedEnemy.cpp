@@ -100,7 +100,7 @@ void RangedEnemy::Shoot(float deltaTime) {
 	actor->SetApplyDamageOn(ApplyDamageOn::PlayerOnly);
 	actor->SetDamageAmount(10);
 	gef::Material mat;
-	mat.set_colour(0xFFC18B36);
+	mat.set_colour(0xFF0000FF);
 	actor->SetMaterial(mat);
 
 
@@ -121,7 +121,7 @@ void RangedEnemy::Shoot(float deltaTime) {
 	b2Body* body = SceneApp::instance->CreateCollisionBody(bodyDef, fixtureDef, actor);
 	actor->SetCollisionBody(body);
 	b2Vec2 forceDir = b2Vec2(target.x(), target.z());
-	forceDir *= 1500.f;
+	forceDir *= 700.f;
 
 	actor->GetCollisionBody()->ApplyForceToCenter(forceDir, true);
 }
