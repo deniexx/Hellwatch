@@ -141,6 +141,9 @@ void SceneApp::InitGameLoop()
 		delete shopMenu;
 		shopMenu = NULL;
 		bCommingFromMainMenu = false;
+
+		delete gameEndMenu;
+		gameEndMenu = NULL;
 	}
 
 	// initialise primitive builder to make create some 3D geometry easier
@@ -325,7 +328,7 @@ bool SceneApp::Update(float frame_time)
 	if (pointerSprite)
 	{
 		gef::Vector2 lastTouch = GetLastTouchPosition();
-		pointerSprite->set_position(lastTouch.x, lastTouch.y + 32, 0);
+		pointerSprite->set_position(lastTouch.x, lastTouch.y, 0);
 	}
 
 	switch (gameState)
@@ -483,7 +486,6 @@ void SceneApp::RenderShop()
 
 	sprite_renderer_->Begin(false);
 
-	sprite_renderer_->DrawSprite(*shopMenu->menuSprite);
 	DrawHUD();
 	for (auto actor : spriteActors)
 		actor->Render();

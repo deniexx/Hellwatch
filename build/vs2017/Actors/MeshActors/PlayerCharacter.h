@@ -49,6 +49,13 @@ protected:
 	void ActivateAbility3();
 	void ActivateAbility4();
 
+	void OnControllerLeftStick(gef::Vector2 delta);
+	void OnControllerActivateAbility1(gef::Vector2 delta);
+	void OnControllerActivateAbility2(gef::Vector2 delta);
+	void OnControllerActivateAbility3(gef::Vector2 delta);
+	void OnControllerActivateAbility4(gef::Vector2 delta);
+	void OnControllerInvertUpDownMovement(gef::Vector2 delta);
+
 private:
 
 	CharacterMovementComponent* characterMovement;
@@ -61,6 +68,8 @@ private:
 	void BindKeys();
 	void InitializeComponents();
 	void InitializeAbilitySystem();
+
+	bool bInvertMovement = false;
 
 public:
 

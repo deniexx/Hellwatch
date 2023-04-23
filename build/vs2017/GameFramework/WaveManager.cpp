@@ -46,7 +46,7 @@ void WaveManager::EndWave()
 	currentWave += 1;
 	bInWave = false;
 
-	if (currentWave == waveDefinitions.size() - 1)
+	if (currentWave == waveDefinitions.size())
 	{
 		SceneApp::instance->SetGameState(GameState::GameEnd);
 		return;
