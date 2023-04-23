@@ -6,39 +6,15 @@ Boss::Boss() {
 
 void Boss::Update(float deltaTime) {
 	Super::Update(deltaTime);
-
-
-
-	if (PlayerCharacter* player = SceneApp::instance->GetPlayerCharacter())
-	{
-		if (isJumping == true) {
-			alpha += deltaTime;
-			if ((bossPosition - midpoint).Length() < 1 || pastMidpoint) {
-				if (!pastMidpoint) {
-					alpha = 0;
-				}
-				gef::Vector4 lerpVector = Lerp(bossPosition, playerPosition, alpha);
-				pastMidpoint = true;
-				if ((bossPosition - playerPosition).Length() < 0.1) {
-					isJumping = false;
-				}
-			}
-			else {
-				gef::Vector4 lerpVector = Lerp(bossPosition, midpoint, alpha);
-			}
-		}
-		else {
-			gef::Vector4 playerPosition = player->GetTranslation();
-			b2Vec2 playerDirection = b2Vec2(playerPosition.x(), playerPosition.z());
-			gef::Vector4 bossPosition = GetTranslation();
-			b2Vec2 enemyDirection = b2Vec2(bossPosition.x(), bossPosition.z());
-			b2Vec2 towardsPlayer = playerDirection - enemyDirection;
-			towardsPlayer.Normalize();
-			enemyMovement->ApplyMovementForceInDirection(towardsPlayer);
-		}
-
+	if (PlayerCharacter* player = SceneApp::instance->GetPlayerCharacter()) {
+		gef::Vector4 playerPosition = player->GetTranslation();
+		b2Vec2 playerDirection = b2Vec2(playerPosition.x(), playerPosition.z());
+		gef::Vector4 bossPosition = GetTranslation();
+		b2Vec2 enemyDirection = b2Vec2(bossPosition.x(), bossPosition.z());
+		b2Vec2 towardsPlayer = playerDirection - enemyDirection;
+		towardsPlayer.Normalize();
+		enemyMovement->ApplyMovementForceInDirection(towardsPlayer);
 	}
-	
 }
 
 void Boss::PostInit() {
@@ -71,23 +47,25 @@ void Boss::PostInit() {
 
 	bossMovement = CreateComponent<CharacterMovementComponent>();
 	bossMovement->Init(this);
-	bossMovement->SetMaximumSpeed(15);
+	bossMovement->SetMaximumSpeed(35);
 	bossMovement->SetAcceleration(125);
+
+	damageAmount = 80;
 }
 
-void Boss::Slam(float deltaTime) {
-	gef::Vector4 bossPosition = GetTranslation();
-
-
-}
-
-void Boss::Jump(float deltaTime) {
-	if (PlayerCharacter* player = SceneApp::instance->GetPlayerCharacter()) {
-		playerPosition = player->GetTranslation();
-		bossPosition = GetTranslation();
-		gef::Vector4 midpoint = (playerPosition + bossPosition) / 2;
-		midpoint.set_y(midpoint.y() + 15);
-		alpha = 0;
-		isJumping = true;
-	}
-}
+//void Boss::Slam(float deltaTime) {
+//	gef::Vector4 bossPosition = GetTranslation();
+//
+//
+//}
+//
+//void Boss::Jump(float deltaTime) {
+//	if (PlayerCharacter* player = SceneApp::instance->GetPlayerCharacter()) {
+//		playerPosition = player->GetTranslation();
+//		bossPosition = GetTranslation();
+//		gef::Vector4 midpoint = (playerPosition + bossPosition) / 2;
+//		midpoint.set_y(midpoint.y() + 15);
+//		alpha = 0;
+//		isJumping = true;
+//	}
+//}
