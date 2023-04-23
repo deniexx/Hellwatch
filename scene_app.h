@@ -7,10 +7,12 @@
 #include "graphics/scene.h"
 #include "box2d/box2d.h"
 #include "system/platform.h"
-#include <vector>
 #include "obj_mesh_loader.h"
-#include <future>
 #include "graphics/font.h"
+
+#include <vector>
+#include <future>
+#include <random>
 
 namespace GameState
 {
@@ -38,7 +40,6 @@ namespace gef
 }
 
 /* Forward declarations */
-class PlayerController;
 class MeshActor;
 class SpriteActor;
 class WorldObject;
@@ -51,6 +52,7 @@ class MainMenu;
 class ShopMenu;
 class PauseMenu;
 class GameEndMenu;
+class PlayerController;
 
 typedef std::map<std::string, gef::Texture*> TextureMap;
 typedef std::map<std::string, int> SoundMap;
@@ -166,6 +168,7 @@ private:
 	gef::Scene* scene_assets_;
 	std::vector<std::string> meshesToLoad;
 	std::map<std::string, std::string> texturesToLoad;
+	std::map<std::string, std::string> soundsToLoad;
 
 	gef::Sprite* pointerSprite;
 	gef::Vector2 pointerLocation = gef::Vector2(0, 0);
@@ -190,6 +193,15 @@ private:
 	/************************************************************************/
 	gef::AudioManager* audioManager;
 	SoundMap sounds;
+	int masterVolume = 30.f;
+
+	PlayerController* soundController;
+
+	/************************************************************************/
+	/*                               RANDOM                                 */
+	/************************************************************************/
+	std::default_random_engine rd;
+	std::uniform_real_distribution<float> dist;
 
 public:
 
@@ -228,7 +240,7 @@ public:
 	void ApplyRadialDamage(float damageAmount, gef::Vector4 origin, float innerRadius, float outerRadius);
 
 	/* Sound */
-	void PlaySample(std::string sampleName, bool bIsLooping = false);
+	void PlaySample(std::string sampleName, float pitch = 1, bool bIsLooping = false);
 
 	/* Pointer functions */
 	void AddPointerLocationOffset(gef::Vector2 offset) { pointerLocation += offset; }

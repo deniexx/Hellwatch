@@ -41,6 +41,8 @@ void Enemy::TakeDamage(float damageAmount)
 	{
 		attributes->ApplyAttributeChange(HellwatchAttribute::Health, -damageAmount);
 
+		SceneApp::instance->PlaySample(hurtSound);
+
 		if (attributes->GetCurrentAttributeValueByType(HellwatchAttribute::Health) <= 0.f)
 		{
 			IncreasePlayerMoney();
@@ -111,7 +113,8 @@ void Enemy::Update(float deltaTime)
 
 void Enemy::OnCollision(b2Body* otherBody)
 {
-	if (attackTime + attackCooldown < SceneApp::instance->GetCurrentGameTime()) {
+	if (attackTime + attackCooldown < SceneApp::instance->GetCurrentGameTime()) 
+	{
 		if (otherBody)
 		{
 			MeshActor* actor = (MeshActor*)otherBody->GetUserData().pointer;

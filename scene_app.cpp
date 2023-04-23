@@ -9,19 +9,19 @@
 #include "assets/png_loader.h"
 #include <graphics/image_data.h>
 #include <audio/audio_manager.h>
+#include "input/sony_controller_input_manager.h"
 
 #include "UserInterface/MainMenu.h"
 #include "UserInterface/ShopMenu.h"
 #include "UserInterface/PauseMenu.h"
 #include "UserInterface/GameEndMenu.h"
-#include "GameFramework/PlayerController.h"
 #include "Actors/MeshActors/PlayerCharacter.h"
 #include "Actors/SpriteActor.h"
-#include "Actors/MeshActors/EnemyDummy.h"
 #include "Actors/MeshActors/Enemy.h"
 #include "Actors/MeshActors/RangedEnemy.h"
 #include "Actors/MeshActor.h"
 #include "GameFramework/WaveManager.h"
+#include "GameFramework/PlayerController.h"
 #include <thread>
 
 SceneApp::SceneApp(gef::Platform& platform):
@@ -38,6 +38,7 @@ SceneApp::SceneApp(gef::Platform& platform):
 	,audioManager(NULL)
 	,currentGameTime(0.f)
 {
+	dist = std::uniform_real_distribution<float>(0.9, 1.1);
 }
 
 #pragma region Init and CleanUp
@@ -53,6 +54,43 @@ void SceneApp::Init()
 	BuildToLoadData();
 
 	sprite_renderer_ = gef::SpriteRenderer::Create(platform_);
+
+	// Sounds controls
+	soundController = new PlayerController(platform_);
+
+	// Keyboard
+	FKeyBindKeyboard keybind;
+	keybind.keyCode = gef::Keyboard::KC_EQUALS;
+	keybind.inputAction = HellwatchInputAction::Pressed;
+	keybind.functionBind = [this]() {
+		masterVolume += 5;
+		audioManager->SetMasterVolume(masterVolume); 
+	};
+	soundController->BindKeyboardEvent(keybind);
+
+	keybind.keyCode = gef::Keyboard::KC_MINUS;
+	keybind.functionBind = [this]() {
+		masterVolume -= 5;
+		audioManager->SetMasterVolume(masterVolume);
+	};
+	soundController->BindKeyboardEvent(keybind);
+
+	// Controller
+	FKeyBindController controllerKeybind;
+	controllerKeybind.inputAction = HellwatchInputAction::Pressed;
+	controllerKeybind.keyCode = gef_SONY_CTRL_UP;
+	controllerKeybind.functionBind = [this](gef::Vector2 delta) {
+		masterVolume += 5;
+		audioManager->SetMasterVolume(masterVolume);
+	};
+	soundController->BindControllerEvent(controllerKeybind);
+
+	controllerKeybind.keyCode = gef_SONY_CTRL_DOWN;
+	controllerKeybind.functionBind = [this](gef::Vector2 delta) {
+		masterVolume -= 5;
+		audioManager->SetMasterVolume(masterVolume);
+	};
+	soundController->BindControllerEvent(controllerKeybind);
 	
 	// create the renderer for draw 3D geometry
 	renderer_3d_ = gef::Renderer3D::Create(platform_);
@@ -102,8 +140,10 @@ void SceneApp::InitMainMenu()
 		mainMenu->Init();
 	}
 
-	if (bGameLoopInitted)
-		bCommingFromMainMenu = true;
+	audioManager->SetMasterVolume(30.f);
+	PlaySample("MainMenu", 1.f, true);
+
+	bCommingFromMainMenu = true;
 }
 
 void SceneApp::InitShop()
@@ -140,10 +180,19 @@ void SceneApp::InitGameLoop()
 		playerMoney = 0;
 		delete shopMenu;
 		shopMenu = NULL;
-		bCommingFromMainMenu = false;
 
 		delete gameEndMenu;
 		gameEndMenu = NULL;
+	}
+
+	if (bCommingFromMainMenu)
+	{
+		int mainMenuMusicIndex = FindSampleFromName("MainMenu");
+		audioManager->StopPlayingSampleVoice(mainMenuMusicIndex);
+
+		PlaySample("GameLoop", 1.f, true);
+
+		bCommingFromMainMenu = false;
 	}
 
 	// initialise primitive builder to make create some 3D geometry easier
@@ -260,8 +309,9 @@ void SceneApp::InitGameEndMenu()
 	if (gameEndMenu == NULL)
 	{
 		gameEndMenu = new GameEndMenu();
-		gameEndMenu->Init();
 	}
+
+	gameEndMenu->Init();
 }
 
 void SceneApp::CleanUp()
@@ -324,6 +374,7 @@ bool SceneApp::Update(float frame_time)
 	fps_ = 1.0f / frame_time;
 	currentGameTime += frame_time;
 	lastDeltaTime = frame_time;
+	soundController->Update();
 
 	if (pointerSprite)
 	{
@@ -737,6 +788,11 @@ void SceneApp::LoadAssets()
 			textures[text.first] = texture;
 		}
 	}
+
+	for (const auto& sound : soundsToLoad)
+	{
+		sounds[sound.first] = audioManager->LoadSample(sound.second.c_str(), platform_);
+	}
 }
 
 void SceneApp::BuildToLoadData()
@@ -748,6 +804,7 @@ void SceneApp::BuildToLoadData()
 	meshesToLoad.push_back("Assets/MeleeEnemy.obj");
 	meshesToLoad.push_back("Assets/RangedEnemy.obj");
 	meshesToLoad.push_back("Assets/Meteor.obj");
+	meshesToLoad.push_back("Assets/Boss.obj");
 
 	texturesToLoad["Ganfaul"] = "Assets/Ganfaul_diffuse.png";
 	texturesToLoad["Environment"] = "Assets/Environment_diffuse.png";
@@ -756,6 +813,19 @@ void SceneApp::BuildToLoadData()
 	texturesToLoad["MeleeEnemy"] = "Assets/MeleeEnemy_diffuse.png";
 	texturesToLoad["RangedEnemy"] = "Assets/RangedEnemy_diffuse.png";
 	texturesToLoad["Meteor"] = "Assets/Meteor_diffuse.png";
+	texturesToLoad["Boss"] = "Assets/Boss_diffuse.png";
+
+	soundsToLoad["Dash"] = "Sounds/dash.wav";
+	soundsToLoad["EnemyShoot"] = "Sounds/enemyshoot.wav";
+	soundsToLoad["Ice1"] = "Sounds/ice1.wav";
+	soundsToLoad["MeleeHurt"] = "Sounds/meleehurt.wav";
+	soundsToLoad["Meteor"] = "Sounds/meteor.wav";
+	soundsToLoad["MeteorImpact"] = "Sounds/meteorimpact.wav";
+	soundsToLoad["Piercing"] = "Sounds/piercing.wav";
+	soundsToLoad["PlayerHurt"] = "Sounds/playerhurt.wav";
+	soundsToLoad["RangedHurt"] = "Sounds/rangedhurt.wav";
+	soundsToLoad["MainMenu"] = "Sounds/mainmenu.wav";
+	soundsToLoad["GameLoop"] = "Sounds/gameloop.wav";
 }
 
 gef::Mesh* SceneApp::RequestMeshByName(std::string meshName)
@@ -868,12 +938,15 @@ int SceneApp::FindSampleFromName(std::string sampleName)
 	return -1;
 }
 
-void SceneApp::PlaySample(std::string sampleName, bool bIsLooping)
+void SceneApp::PlaySample(std::string sampleName, float pitch, bool bIsLooping)
 {
 	int sampleIndex = FindSampleFromName(sampleName);
 
 	if (sampleIndex >= 0)
 	{
+		float pitchModulation = dist(rd);
+		
+		audioManager->SetSamplePitch(sampleIndex, pitch * pitchModulation);
 		audioManager->PlaySample(sampleIndex, bIsLooping);
 	}
 }

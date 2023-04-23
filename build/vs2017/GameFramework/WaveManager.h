@@ -7,6 +7,7 @@
 
 class Enemy;
 class RangedEnemy;
+class Boss;
 
 /// <summary>
 /// A definition for a wave, the max number of spawned enemies and the period of spawning them
@@ -63,6 +64,9 @@ private:
 
 	bool bInWave = false;
 	bool bSpawnsComplete = false;
+	bool bBossSpawned = false;
+
+	Boss* boss = nullptr;
 
 	uint32_t currentWave = 0;
 	uint32_t currentWaveSpawnedEnemiesAmount = 0;

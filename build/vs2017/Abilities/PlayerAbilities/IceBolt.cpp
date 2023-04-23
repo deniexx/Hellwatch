@@ -60,6 +60,8 @@ void IceBolt::Begin()
 
 	actor->GetCollisionBody()->ApplyForceToCenter(forceDir, true);
 
+	SceneApp::instance->PlaySample("Ice1");
+
 	GetOwnerAttributes()->ApplyAttributeChange(abilityCostType, -abilityCostAmount);
 }
 

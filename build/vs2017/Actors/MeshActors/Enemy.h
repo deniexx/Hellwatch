@@ -64,6 +64,8 @@ protected:
 	AttributeComponent* attributes;
 	CharacterMovementComponent* enemyMovement;
 
+	std::string hurtSound = "MeleeHurt";
+
 	/// <summary>
 	/// Increases the money the player has
 	/// </summary>

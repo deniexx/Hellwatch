@@ -16,7 +16,9 @@ void Dash::PostInit()
 
 void Dash::Begin() {
 	Super::Begin();
-	if (PlayerCharacter* player = SceneApp::instance->GetPlayerCharacter()) {
+
+	if (PlayerCharacter* player = SceneApp::instance->GetPlayerCharacter()) 
+	{
 		gef::Vector4 mousePos = ProjectScreenToWorldSpace(SceneApp::instance->GetLastTouchPosition());
 		gef::Vector4 translation = GetOwner()->GetOwner()->GetTranslation();
 		gef::Vector4 target = mousePos - translation;
@@ -28,6 +30,8 @@ void Dash::Begin() {
 		player->ApplyInvincibilityForDuration(2);
 		player->GetCollisionBody()->ApplyForceToCenter(forceDir, true);
 	}
+
+	SceneApp::instance->PlaySample("Dash");
 
 	GetOwnerAttributes()->ApplyAttributeChange(abilityCostType, -abilityCostAmount);
 }

@@ -83,7 +83,7 @@ void PlayerCharacter::BindKeys()
 	controllerKeybind.functionBind = bindFunc_ONEParam(OnControllerLeftStick, gef::Vector2, delta);
 	controller->BindControllerEvent(controllerKeybind);
 
-	controllerKeybind.inputAction = HellwatchInputAction::Released;
+	controllerKeybind.inputAction = HellwatchInputAction::Pressed;
 
 	controllerKeybind.keyCode = gef_SONY_CTRL_TRIANGLE;
 	controllerKeybind.functionBind = bindFunc_ONEParam(OnControllerActivateAbility1, gef::Vector2, delta);
@@ -307,7 +307,9 @@ void PlayerCharacter::TakeDamage(float damageAmount)
 	damageAmount *= damageReductionMultiplier;
 
 	attributes->ApplyAttributeChange(HellwatchAttribute::Health, -damageAmount);
-	ApplyInvincibilityForDuration(1.f);
+	ApplyInvincibilityForDuration(0.5f);
+
+	SceneApp::instance->PlaySample("PlayerHurt");
 
 	if (attributes->GetCurrentAttributeValueByType(HellwatchAttribute::Health) <= 0.f)
 	{

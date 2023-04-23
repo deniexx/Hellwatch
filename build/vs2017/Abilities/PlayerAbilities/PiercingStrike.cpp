@@ -58,6 +58,8 @@ void PiercingStrike::Begin()
 
 	actor->GetCollisionBody()->ApplyForceToCenter(forceDir, true);
 
+	SceneApp::instance->PlaySample("Piercing");
+
 	GetOwnerAttributes()->ApplyAttributeChange(abilityCostType, -abilityCostAmount);
 }
 

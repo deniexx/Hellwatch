@@ -25,6 +25,5 @@ protected:
 	gef::Vector4 bossPosition;
 	gef::Vector4 midpoint;
 	float alpha = 0;
-
 };
 

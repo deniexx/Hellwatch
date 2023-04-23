@@ -7,6 +7,7 @@ RangedEnemy::RangedEnemy()
 {
 	ID = ENEMY_ID;
 	attackTime = attackCooldown + SceneApp::instance->GetCurrentGameTime();
+	hurtSound = "RangedHurt";
 }
 
 void RangedEnemy::PostInit()

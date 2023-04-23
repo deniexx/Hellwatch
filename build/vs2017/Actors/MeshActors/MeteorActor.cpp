@@ -9,6 +9,7 @@ void MeteorActor::Update(float deltaTime)
 	}
 	else
 	{
+		SceneApp::instance->PlaySample("MeteorImpact");
 		SceneApp::instance->ApplyRadialDamage(damageAmount, targetPosition, 7, 15);
 		MarkForDelete();
 	}

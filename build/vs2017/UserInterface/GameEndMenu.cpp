@@ -10,6 +10,8 @@
 void GameEndMenu::Init()
 {
 	bool bPlayerWon = SceneApp::instance->GetPlayerCharacter()->GetCharacterAttributes()->GetCurrentAttributeValueByType(HellwatchAttribute::Health) > 0;
+	
+	menuButtons.clear();
 
 	// Set up buttons
 	MenuButton mainMenuButton;

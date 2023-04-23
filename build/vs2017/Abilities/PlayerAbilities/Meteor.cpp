@@ -41,6 +41,8 @@ void Meteor::Begin()
 	actor->startPosition = translation;
 	actor->targetPosition = mousePos;
 
+	SceneApp::instance->PlaySample("Meteor");
+
 	GetOwnerAttributes()->ApplyAttributeChange(abilityCostType, -abilityCostAmount);
 }
 
