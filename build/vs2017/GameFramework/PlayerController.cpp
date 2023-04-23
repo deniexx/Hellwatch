@@ -149,9 +149,12 @@ void PlayerController::Update()
 		EvaluateKeyboardKeybinds(keyboard);
 	}
 
-	if (const gef::SonyController* controller = inputManager->controller_input()->GetController(0))
+	if (inputManager->controller_input()->GetDS5ControllerCount() > 0)
 	{
-		EvaluateControllerKeybinds(controller);
+		if (const gef::SonyController* controller = inputManager->controller_input()->GetController(0))
+		{
+			EvaluateControllerKeybinds(controller);
+		}
 	}
 
 	if (const gef::TouchInputManager* touchInput = inputManager->touch_manager())

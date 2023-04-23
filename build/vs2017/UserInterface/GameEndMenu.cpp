@@ -36,10 +36,12 @@ void GameEndMenu::Init()
 		continueButton.buttonText = "Continue";
 		continueButton.justification = gef::TJ_LEFT;
 		continueButton.scale = 3.f;
-		continueButton.position = gef::Vector4(1010.f, 540.f, 0.f);
+		continueButton.position = gef::Vector4(780.f, 540.f, 0.f);
 		continueButton.callbackFunction = bindFunc(OnContinueButtonClicked);
 		menuButtons.push_back(continueButton);
 	}
+
+	gameEndText = bPlayerWon ? "You won!" : "You lost!";
 
 	// Create controller, so that we can navigate the menu
 	menuController = new PlayerController(SceneApp::instance->platform());
@@ -87,6 +89,12 @@ void GameEndMenu::Init()
 	controllerKeybind.keyCode = gef_SONY_CTRL_CROSS;
 	controllerKeybind.functionBind = bindFunc_ONEParam(OnControllerSubmitButton, gef::Vector2, dir);
 	menuController->BindControllerEvent(controllerKeybind);
+}
+
+void GameEndMenu::DrawMenuHUD(gef::Font* font_, gef::SpriteRenderer* sprite_renderer_)
+{
+	Menu::DrawMenuHUD(font_, sprite_renderer_);
+	font_->RenderText(sprite_renderer_, gef::Vector4(780, 100, 0), 3.f, 0xFF0000FF, gef::TJ_LEFT, gameEndText.c_str());
 }
 
 void GameEndMenu::OnMainMenuButtonClicked()

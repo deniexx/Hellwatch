@@ -138,7 +138,7 @@ bool Ability::CanActivate(ActivationOutcome& OutActivationOutcome)
         float amountMissing = abilityCostAmount - attributes->GetCurrentAttributeValueByType(abilityCostType);
 
 		OutActivationOutcome.bWasSuccessful = false;
-		OutActivationOutcome.failReason = sprintf("Not enough %s owned! Missing %f.01", AttributeToString(abilityCostType).c_str(), amountMissing);
+        OutActivationOutcome.failReason = "Not enough " + AttributeToString(abilityCostType) + " owned! Missing " + std::to_string((int)amountMissing);
         return false;
     }
 

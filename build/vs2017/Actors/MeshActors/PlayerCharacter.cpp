@@ -6,6 +6,7 @@
 #include "Abilities/PlayerAbilities/Dash.h"
 #include "Abilities/PlayerAbilities/PiercingStrike.h"
 #include "Abilities/PlayerAbilities/Meteor.h"
+#include "input/sony_controller_input_manager.h"
 
 PlayerCharacter::PlayerCharacter()
 	: Super()
@@ -22,14 +23,16 @@ void PlayerCharacter::PostInit()
 		mat.set_texture(texture);
 
 	SetMaterial(mat);
+	InitializeComponents();
 
 	BindKeys();
-	InitializeComponents();
 }
 
 void PlayerCharacter::BindKeys()
 {
 	controller = new PlayerController(SceneApp::instance->platform());
+
+	// Keyboard Keybinds
 	FKeyBindKeyboard keybind;
 	keybind.inputAction = HellwatchInputAction::Held;
 	keybind.keyCode = gef::Keyboard::KC_A;
@@ -72,6 +75,39 @@ void PlayerCharacter::BindKeys()
 	keybind.inputAction = HellwatchInputAction::Pressed;
 	keybind.functionBind = [this]() {SceneApp::instance->SetGameState(GameState::PauseMenu); };
 	controller->BindKeyboardEvent(keybind);
+
+
+	// Controller keybinds
+	FKeyBindController controllerKeybind;
+	controllerKeybind.axis = HellwatchControllerAxis::LeftStickXY;
+	controllerKeybind.functionBind = bindFunc_ONEParam(OnControllerLeftStick, gef::Vector2, delta);
+	controller->BindControllerEvent(controllerKeybind);
+
+	controllerKeybind.inputAction = HellwatchInputAction::Released;
+
+	controllerKeybind.keyCode = gef_SONY_CTRL_TRIANGLE;
+	controllerKeybind.functionBind = bindFunc_ONEParam(OnControllerActivateAbility1, gef::Vector2, delta);
+	controller->BindControllerEvent(controllerKeybind);
+
+	controllerKeybind.keyCode = gef_SONY_CTRL_CIRCLE;
+	controllerKeybind.functionBind = bindFunc_ONEParam(OnControllerActivateAbility2, gef::Vector2, delta);
+	controller->BindControllerEvent(controllerKeybind);
+
+	controllerKeybind.keyCode = gef_SONY_CTRL_CROSS;
+	controllerKeybind.functionBind = bindFunc_ONEParam(OnControllerActivateAbility3, gef::Vector2, delta);
+	controller->BindControllerEvent(controllerKeybind);
+
+	controllerKeybind.keyCode = gef_SONY_CTRL_SQUARE;
+	controllerKeybind.functionBind = bindFunc_ONEParam(OnControllerActivateAbility4, gef::Vector2, delta);
+	controller->BindControllerEvent(controllerKeybind);
+
+	controllerKeybind.keyCode = gef_SONY_CTRL_OPTIONS;
+	controllerKeybind.functionBind = bindFunc_ONEParam(OnControllerInvertUpDownMovement, gef::Vector2, delta);
+	controller->BindControllerEvent(controllerKeybind);
+
+	controllerKeybind.keyCode = gef_SONY_CTRL_SELECT;
+	controllerKeybind.functionBind = [this](gef::Vector2 delta) {SceneApp::instance->SetGameState(GameState::PauseMenu); };
+	controller->BindControllerEvent(controllerKeybind);
 }
 
 void PlayerCharacter::InitializeComponents()
@@ -105,8 +141,8 @@ void PlayerCharacter::InitializeAbilitySystem()
 	FAttribute attributeToAdd;
 	attributeToAdd.attributeType = HellwatchAttribute::Health;
 	attributeToAdd.bClampedToZero = true;
-	attributeToAdd.maxAmount = 10.f;
-	attributeToAdd.currentAmount = 10.f;
+	attributeToAdd.maxAmount = 100.f;
+	attributeToAdd.currentAmount = 100.f;
 	attributes->AddAttribute(attributeToAdd);
 
 	attributeToAdd.attributeType = HellwatchAttribute::Mana;
@@ -208,6 +244,59 @@ void PlayerCharacter::ActivateAbility3()
 void PlayerCharacter::ActivateAbility4()
 {
 	abilitiesComponent->ActivateAbilityByKey(AbilityActivationKey::AbilityKey4);
+}
+
+void PlayerCharacter::OnControllerLeftStick(gef::Vector2 delta)
+{
+	if (delta.x > 0.2)
+	{
+		if (characterMovement)
+			characterMovement->ApplyMovementForceInDirection(b2Vec2(-1, 0));
+	}
+	else if (delta.x < -0.2)
+	{
+		if (characterMovement)
+			characterMovement->ApplyMovementForceInDirection(b2Vec2(-1, 0));
+	}
+
+	/* If invert movement is true invert the up and down movement */
+	float y = bInvertMovement ? -delta.y : delta.y;
+
+	if (y > 0.2)
+	{
+		if (characterMovement)
+			characterMovement->ApplyMovementForceInDirection(b2Vec2(0, 1));
+	}
+	else if (y < -0.2)
+	{
+		if (characterMovement)
+			characterMovement->ApplyMovementForceInDirection(b2Vec2(0, -1));
+	}
+}
+
+void PlayerCharacter::OnControllerActivateAbility1(gef::Vector2 delta)
+{
+	ActivateAbility1();
+}
+
+void PlayerCharacter::OnControllerActivateAbility2(gef::Vector2 delta)
+{
+	ActivateAbility2();
+}
+
+void PlayerCharacter::OnControllerActivateAbility3(gef::Vector2 delta)
+{
+	ActivateAbility3();
+}
+
+void PlayerCharacter::OnControllerActivateAbility4(gef::Vector2 delta)
+{
+	ActivateAbility4();
+}
+
+void PlayerCharacter::OnControllerInvertUpDownMovement(gef::Vector2 delta)
+{
+	bInvertMovement = !bInvertMovement;
 }
 
 void PlayerCharacter::TakeDamage(float damageAmount)

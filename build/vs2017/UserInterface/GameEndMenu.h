@@ -8,6 +8,8 @@ public:
 
 	virtual void Init();
 
+	virtual void DrawMenuHUD(gef::Font* font_, gef::SpriteRenderer* sprite_renderer_) override;
+
 private:
 
 	/// <summary>
@@ -24,5 +26,7 @@ private:
 	/// Continues the game if the player has won and has clicked this button
 	/// </summary>
 	void OnContinueButtonClicked();
+
+	std::string gameEndText;
 };
 
