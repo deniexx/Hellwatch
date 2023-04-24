@@ -4,6 +4,7 @@
 #include "GameFramework/PlayerController.h"
 #include "graphics/skinned_mesh_instance.h"
 #include "GameFramework/Utils.h"
+#include "graphics/sprite.h"
 
 class CharacterMovementComponent;
 class AbilitiesComponent;
@@ -70,6 +71,9 @@ private:
 	void InitializeAbilitySystem();
 
 	bool bInvertMovement = false;
+
+	std::vector<gef::Sprite> abilityTextures;
+	gef::Sprite background;
 
 public:
 

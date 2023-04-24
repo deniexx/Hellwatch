@@ -4,7 +4,7 @@
 
 class Boss : public Enemy
 {
-	GENERATED_BODY(Enemy, Boss)
+	GENERATED_BODY(MeshActor, Boss)
 
 public:
 	Boss();
@@ -14,9 +14,7 @@ public:
 
 protected:
 
-	AttributeComponent* attributes;
 	virtual void PostInit() override;
-	CharacterMovementComponent* bossMovement;
 
 	bool isJumping = false;
 	bool pastMidpoint = false;

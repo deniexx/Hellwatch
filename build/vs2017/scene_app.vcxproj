@@ -238,6 +238,8 @@
     <ClCompile Include="Actors\MeshActors\EnemyDummy.cpp" />
     <ClCompile Include="Actors\MeshActors\Boss.cpp" />
     <ClCompile Include="Abilities\PlayerAbilities\Dash.cpp" />
+    <ClCompile Include="GameFramework\ParticleManager.cpp" />
+    <ClCompile Include="Actors\MeshActors\ParticleActor.cpp" />
     <ClCompile Include="UserInterface\GameEndMenu.cpp" />
     <ClCompile Include="GameFramework\PlayerController.cpp" />
     <ClCompile Include="GameFramework\WorldObject.cpp" />
@@ -270,6 +272,8 @@
     <ClInclude Include="Actors\MeshActors\EnemyDummy.h" />
     <ClInclude Include="Actors\MeshActors\Boss.h" />
     <ClInclude Include="Abilities\PlayerAbilities\Dash.h" />
+    <ClInclude Include="GameFramework\ParticleManager.h" />
+    <ClInclude Include="Actors\MeshActors\ParticleActor.h" />
     <ClInclude Include="UserInterface\GameEndMenu.h" />
     <ClInclude Include="GameFramework\PlayerController.h" />
     <ClInclude Include="GameFramework\Utils.h" />

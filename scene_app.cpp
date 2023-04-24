@@ -23,6 +23,7 @@
 #include "GameFramework/WaveManager.h"
 #include "GameFramework/PlayerController.h"
 #include <thread>
+#include "GameFramework/ParticleManager.h"
 
 SceneApp::SceneApp(gef::Platform& platform):
 	Application(platform)
@@ -57,6 +58,9 @@ void SceneApp::Init()
 
 	// Sounds controls
 	soundController = new PlayerController(platform_);
+
+	particleManager = new ParticleManager();
+	particleManager->Init();
 
 	// Keyboard
 	FKeyBindKeyboard keybind;
@@ -610,6 +614,26 @@ void SceneApp::RenderGameLoop()
 		cameraEye = playerCharacter->GetTranslation();
 		cameraEye.set_y(20.f);
 		cameraEye.set_z(cameraEye.z() - 10);
+
+		gef::Vector4 cameraShakeOffset = gef::Vector4::kZero;
+
+		if (cameraShake.cameraShakeStartTime + cameraShake.duration > currentGameTime)
+		{
+			cameraShakeOffset = Lerp(cameraShake.minOffset, cameraShake.maxOffset, cameraShake.lerpAlpha);
+			if (cameraShake.lerpAlpha > 1.f)
+			{
+				cameraShake.bMovingForward = false;
+			}
+			else if (cameraShake.lerpAlpha < 0.f)
+			{
+				cameraShake.bMovingForward = true;
+			}
+			const float intensity = lastDeltaTime * cameraShake.intensity;
+			cameraShake.lerpAlpha = cameraShake.bMovingForward ? cameraShake.lerpAlpha + intensity : cameraShake.lerpAlpha - intensity;
+		}
+
+		cameraEye += cameraShakeOffset;
+
 		cameraLookAt = playerCharacter->GetTranslation();
 		cameraLookAt.set_y(-1.f);
 	}
@@ -796,6 +820,8 @@ void SceneApp::LoadAssets()
 	{
 		sounds[sound.first] = audioManager->LoadSample(sound.second.c_str(), platform_);
 	}
+
+	particleManager->PrepareParticles();
 }
 
 void SceneApp::BuildToLoadData()
@@ -806,7 +832,6 @@ void SceneApp::BuildToLoadData()
 	meshesToLoad.push_back("Assets/BlockingWalls.obj");
 	meshesToLoad.push_back("Assets/MeleeEnemy.obj");
 	meshesToLoad.push_back("Assets/RangedEnemy.obj");
-	meshesToLoad.push_back("Assets/Meteor.obj");
 	meshesToLoad.push_back("Assets/Boss.obj");
 
 	texturesToLoad["Ganfaul"] = "Assets/Ganfaul_diffuse.png";
@@ -817,6 +842,13 @@ void SceneApp::BuildToLoadData()
 	texturesToLoad["RangedEnemy"] = "Assets/RangedEnemy_diffuse.png";
 	texturesToLoad["Meteor"] = "Assets/Meteor_diffuse.png";
 	texturesToLoad["Boss"] = "Assets/Boss_diffuse.png";
+
+	// Player Abilities
+	texturesToLoad["IceBoltAbility"] = "Assets/PlayerAbilities/IceBolt.png";
+	texturesToLoad["DashAbility"] = "Assets/PlayerAbilities/Dash.png";
+	texturesToLoad["PiercingStrikeAbility"] = "Assets/PlayerAbilities/PiercingStrike.png";
+	texturesToLoad["MeteorAbility"] = "Assets/PlayerAbilities/Meteor.png";
+	texturesToLoad["AbilityBackground"] = "Assets/PlayerAbilities/Background.png";
 
 	soundsToLoad["Dash"] = "Sounds/dash.wav";
 	soundsToLoad["EnemyShoot"] = "Sounds/enemyshoot.wav";
@@ -952,5 +984,11 @@ void SceneApp::PlaySample(std::string sampleName, float pitch, bool bIsLooping)
 		audioManager->SetSamplePitch(sampleIndex, pitch * pitchModulation);
 		audioManager->PlaySample(sampleIndex, bIsLooping);
 	}
+}
+
+void SceneApp::ApplyCameraShake(FCameraShake newShake)
+{
+	cameraShake = newShake;
+	cameraShake.cameraShakeStartTime = GetCurrentGameTime();
 }
 #pragma endregion

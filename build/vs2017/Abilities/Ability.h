@@ -1,6 +1,7 @@
 #pragma once
 
 #include <string>
+#include <cmath>
 #include "Attributes/AttributeTypes.h"
 
 class AbilitiesComponent;
@@ -11,7 +12,7 @@ class AttributeComponent;
 /// </summary>
 namespace AbilityActivationKey
 {
-	enum Type
+	enum Type : int
 	{
 		AbilityKey1 = 0,
 		AbilityKey2,
@@ -164,6 +165,7 @@ public:
 	__forceinline bool IsInCooldown() const { return cooldown > 0 && cooldownTimer > 0.f; }
 	__forceinline bool IsAbilityTargeted() const { return bIsTargeted; }
 	__forceinline bool IsAbilityTargeting() const { return bIsTargeting; }
+	__forceinline float GetRemainingCooldown() const { return std::ceil(cooldownTimer); }
 
 	float GetDamageAmount();
 	AbilitiesComponent* GetOwner() { return owningComponent; }

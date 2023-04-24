@@ -27,6 +27,19 @@ namespace GameState
 	};
 }
 
+struct FCameraShake
+{
+	gef::Vector4 maxOffset = gef::Vector4::kZero;
+	gef::Vector4 minOffset = gef::Vector4::kZero;
+
+	float lerpAlpha = 0.f;
+	float duration = 1.f;
+	float intensity = 1.f;
+	float cameraShakeStartTime = 0.f;
+
+	bool bMovingForward = true;
+};
+
 // FRAMEWORK FORWARD DECLARATIONS
 namespace gef
 {
@@ -53,6 +66,7 @@ class ShopMenu;
 class PauseMenu;
 class GameEndMenu;
 class PlayerController;
+class ParticleManager;
 
 typedef std::map<std::string, gef::Texture*> TextureMap;
 typedef std::map<std::string, int> SoundMap;
@@ -177,6 +191,8 @@ private:
 	gef::Vector4 cameraLookAt = gef::Vector4(0.0f, -1.0f, 0.001f);
 	gef::Vector4 cameraUp = gef::Vector4(0.0f, 1.0f, 0.0f);
 
+	FCameraShake cameraShake = FCameraShake();
+
 	float fps_;
 	float currentGameTime;
 	float lastDeltaTime;
@@ -202,6 +218,11 @@ private:
 	/************************************************************************/
 	std::default_random_engine rd;
 	std::uniform_real_distribution<float> dist;
+
+	/************************************************************************/
+	/*                             PARTICLES                                */
+	/************************************************************************/
+	ParticleManager* particleManager;
 
 public:
 
@@ -235,6 +256,13 @@ public:
 	void IncreasePlayerMoney(uint32_t increaseAmount) { playerMoney += increaseAmount; }
 	void ApplyCostToPlayerMoney(uint32_t cost) { playerMoney -= cost; }
 
+	/* Camera Shake */
+
+	/// <summary>
+	/// Applies camera shake
+	/// @NOTE: This overwrites the previous camera shake
+	/// </summary>
+	void ApplyCameraShake(FCameraShake newShake);
 
 	/* Damage */
 	void ApplyRadialDamage(float damageAmount, gef::Vector4 origin, float innerRadius, float outerRadius);
@@ -268,11 +296,11 @@ public:
 	/// Spawns a SpriteActor into the scene and gets it ready for rendering and updating
 	/// </summary>
 	template<typename SpriteActorType = SpriteActor>
-	SpriteActorType* SpawnSpriteActor(gef::Sprite* sprite = nullptr, gef::Vector2 position = gef::Vector2::kZero, float rotation = 0.f, WorldObject* owner = nullptr)
+	SpriteActorType* SpawnSpriteActor(gef::Sprite* sprite = nullptr, gef::Vector4 position = gef::Vector4::kZero, float rotation = 0.f, WorldObject* owner = nullptr)
 	{
 		SpriteActorType* spriteActor = new SpriteActorType();
 		spriteActor->SetSprite(sprite);
-		spriteActor->SetTranslation(gef::Vector4(position.x, position.y, 0.f));
+		spriteActor->SetTranslation(position);
 		spriteActor->SetRotation(rotation);
 		spriteActor->Init(owner);
 		spriteActors.push_back(spriteActor);

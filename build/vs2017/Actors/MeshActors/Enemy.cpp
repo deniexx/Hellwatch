@@ -1,4 +1,5 @@
 #include "Enemy.h"
+#include "GameFramework/ParticleManager.h"
 
 Enemy::Enemy()
 {
@@ -46,6 +47,7 @@ void Enemy::TakeDamage(float damageAmount)
 		if (attributes->GetCurrentAttributeValueByType(HellwatchAttribute::Health) <= 0.f)
 		{
 			IncreasePlayerMoney();
+			ParticleManager::instance->PlayParticlesAtLocation(HellwatchParticle::Death, GetTranslation());
 			DisableUpdate();
 			MarkForDelete();
 		}

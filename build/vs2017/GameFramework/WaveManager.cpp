@@ -132,7 +132,12 @@ void WaveManager::CheckWaveState()
 
 		if (cleanEnemies.empty())
 		{
-			EndWave();
+			bool bBossAlive = bBossSpawned && !boss->GetIsMarkedForDelete();
+			if (!bBossAlive)
+			{
+				EndWave();
+				boss = nullptr;
+			}
 		}
 
 		spawnedEnemies = cleanEnemies;

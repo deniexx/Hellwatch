@@ -21,6 +21,12 @@ SpriteActor::SpriteActor(float width, float height, gef::Texture* texture, UInt3
 	sprite->set_colour(colour);
 }
 
+SpriteActor::~SpriteActor()
+{
+	if (sprite)
+		delete sprite;
+}
+
 void SpriteActor::SetTranslation(const gef::Vector4& inTranslation)
 {
 	sprite->set_position(inTranslation);

@@ -128,3 +128,13 @@ void AbilitiesComponent::RegisterAttributes(AttributeComponent* newAttributes)
 {
 	attributes = newAttributes;
 }
+
+bool AbilitiesComponent::IsAbilityInCooldown(int key)
+{
+	return equippedAbilities[key] ? equippedAbilities[key]->IsInCooldown() : false;
+}
+
+int AbilitiesComponent::GetAbilityCooldown(int key)
+{
+	return equippedAbilities[key] ? equippedAbilities[key]->GetRemainingCooldown() : 0.f;
+}

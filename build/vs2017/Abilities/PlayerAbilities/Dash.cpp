@@ -1,4 +1,5 @@
 #include "Dash.h"
+#include "GameFramework/ParticleManager.h"
 
 Dash::Dash()
 	: Super()
@@ -29,11 +30,13 @@ void Dash::Begin() {
 
 		player->ApplyInvincibilityForDuration(2);
 		player->GetCollisionBody()->ApplyForceToCenter(forceDir, true);
+
+		ParticleManager::instance->PlayParticlesAtLocation(HellwatchParticle::Dash, translation);
+
+		SceneApp::instance->PlaySample("Dash");
+
+		GetOwnerAttributes()->ApplyAttributeChange(abilityCostType, -abilityCostAmount);
 	}
-
-	SceneApp::instance->PlaySample("Dash");
-
-	GetOwnerAttributes()->ApplyAttributeChange(abilityCostType, -abilityCostAmount);
 }
 
 void Dash::End() {

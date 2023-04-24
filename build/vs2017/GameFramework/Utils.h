@@ -81,6 +81,22 @@ static gef::Vector4 ProjectScreenToWorldSpace(gef::Vector2 v2)
 	return pos;
 }
 
+static gef::Vector4 ProjectWorldToScreenSpace(gef::Vector4 v4)
+{
+	gef::Renderer3D* renderer = SceneApp::instance->GetRenderer3D();
+	v4.set_w(1.f);
+	v4.Transform(renderer->view_matrix());
+	v4.Transform(renderer->projection_matrix());
+
+	float clipSpaceX = v4.x() / v4.w();
+	float clipSpaceY = v4.y() / v4.w();
+
+	float xScreen = (clipSpaceX + 1.f) * SceneApp::instance->platform().width() / 2;
+	float yScreen = (1 - clipSpaceY) * SceneApp::instance->platform().height() / 2;
+
+	return gef::Vector4(xScreen, yScreen, 0);
+}
+
 /// <summary>
 /// Finds the angle between 2 Vector4s
 /// </summary>

@@ -28,9 +28,11 @@ public:
 	/// <param name="colour">Colour of the sprite</param>
 	SpriteActor(float width, float height, gef::Texture* texture = nullptr, UInt32 colour = 0xFFFFFFFF);
 
+	~SpriteActor();
+
 private:
 
-	gef::Sprite* sprite;
+	gef::Sprite* sprite = nullptr;
 
 public:
 
@@ -42,6 +44,8 @@ public:
 	virtual void SetScale(const gef::Vector4& inScale);
 	void SetTexture(gef::Texture* texture);
 	void SetSprite(gef::Sprite* inSprite);
+	void SetWidth(float newWidth) { sprite->set_width(newWidth); }
+	void SetHeight(float newHeight) { sprite->set_height(newHeight); }
 
 	virtual void Render() override;
 
@@ -49,7 +53,7 @@ public:
 	/************************************************************************/
 	/*                              GETTERS                                 */
 	/************************************************************************/
-	__forceinline const gef::Sprite* GetSprite() const { return sprite; }
+	__forceinline gef::Sprite* GetSprite() const { return sprite; }
 	__forceinline const virtual float GetRotationF() const override { return sprite->rotation(); }
 	__forceinline const virtual gef::Vector4& GetTranslation() const { return sprite->position(); }
 	__forceinline const virtual gef::Vector4& GetScale() const { return gef::Vector4(sprite->width(), sprite->height(), 0); }

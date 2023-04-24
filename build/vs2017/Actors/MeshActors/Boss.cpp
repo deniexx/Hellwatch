@@ -1,12 +1,12 @@
 #include "Boss.h"
 
 Boss::Boss() {
-
+	playerMoneyToAdd = 12000;
 }
 
 void Boss::Update(float deltaTime) 
 {
-	MeshActor::Update(deltaTime);
+	Super::Update(deltaTime);
 
 	if (PlayerCharacter* player = SceneApp::instance->GetPlayerCharacter())
 	{
@@ -16,7 +16,7 @@ void Boss::Update(float deltaTime)
 		b2Vec2 enemyDirection = b2Vec2(enemyPosition.x(), enemyPosition.z());
 		b2Vec2 towardsPlayer = playerDirection - enemyDirection;
 		towardsPlayer.Normalize();
-		bossMovement->ApplyMovementForceInDirection(towardsPlayer);
+		enemyMovement->ApplyMovementForceInDirection(towardsPlayer);
 	}
 }
 
@@ -47,10 +47,12 @@ void Boss::PostInit()
 
 	SetCollisionBody(SceneApp::instance->CreateCollisionBody(bodyDef, fixtureDef, this));
 
-	bossMovement = CreateComponent<CharacterMovementComponent>();
-	bossMovement->Init(this);
-	bossMovement->SetMaximumSpeed(50);
-	bossMovement->SetAcceleration(60);
+	enemyMovement = CreateComponent<CharacterMovementComponent>();
+	enemyMovement->Init(this);
+
+	// @TODO: Balance
+	enemyMovement->SetMaximumSpeed(125);
+	enemyMovement->SetAcceleration(125);
 
 	SetMesh(SceneApp::instance->RequestMeshByName("Warrok"));
 	SetScale(gef::Vector4(3.f, 3.f, 3.f));

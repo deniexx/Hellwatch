@@ -55,6 +55,16 @@ public:
 	/// </summary>
 	void RegisterAttributes(AttributeComponent* newAttributes);
 
+	/// <summary>
+	/// Checks whether an ability is in cooldown
+	/// </summary>
+	bool IsAbilityInCooldown(int key);
+
+	/// <summary>
+	/// Gets the ability cooldown
+	/// </summary>
+	int GetAbilityCooldown(int key);
+
 	virtual void UpdateComponent(float deltaTime) override;
 
 protected:

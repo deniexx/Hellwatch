@@ -7,6 +7,7 @@
 #include "Abilities/PlayerAbilities/PiercingStrike.h"
 #include "Abilities/PlayerAbilities/Meteor.h"
 #include "input/sony_controller_input_manager.h"
+#include "graphics/sprite_renderer.h"
 
 PlayerCharacter::PlayerCharacter()
 	: Super()
@@ -18,11 +19,36 @@ PlayerCharacter::PlayerCharacter()
 void PlayerCharacter::PostInit()
 {
 	SetMesh(SceneApp::instance->RequestMeshByName(meshName));
+
 	gef::Material mat;
 	if (gef::Texture* texture = SceneApp::instance->RequestTextureByName("Ganfaul"))
 		mat.set_texture(texture);
-
 	SetMaterial(mat);
+
+	gef::Sprite sprite;
+	sprite.set_height(78);
+	sprite.set_width(78);
+	sprite.set_texture(SceneApp::instance->RequestTextureByName("IceBoltAbility"));
+	sprite.set_position(gef::Vector4(615, 1016.5f, 0));
+	abilityTextures.push_back(sprite);
+
+	sprite.set_texture(SceneApp::instance->RequestTextureByName("DashAbility"));
+	sprite.set_position(gef::Vector4(848, 1016.5f, 0));
+	abilityTextures.push_back(sprite);
+
+	sprite.set_texture(SceneApp::instance->RequestTextureByName("PiercingStrikeAbility"));
+	sprite.set_position(gef::Vector4(1081, 1016.5f, 0));
+	abilityTextures.push_back(sprite);
+
+	sprite.set_texture(SceneApp::instance->RequestTextureByName("MeteorAbility"));
+	sprite.set_position(gef::Vector4(1314, 1016.5f, 0));
+	abilityTextures.push_back(sprite);
+
+	background.set_height(125);
+	background.set_width(925);
+	background.set_position(gef::Vector4(960, 1017.5f, 0));
+	background.set_texture(SceneApp::instance->RequestTextureByName("AbilityBackground"));
+
 	InitializeComponents();
 
 	BindKeys();
@@ -197,6 +223,25 @@ void PlayerCharacter::DrawPlayerHUD()
 
 	std::string healthText = "Heath: " + std::to_string((int)attributes->GetCurrentAttributeValueByType(HellwatchAttribute::Health));
 	std::string manaText = "Mana: " + std::to_string((int)attributes->GetCurrentAttributeValueByType(HellwatchAttribute::Mana));
+
+	spriteRenderer->DrawSprite(background);
+
+	for (int i = 0; i < abilityTextures.size(); ++i)
+	{
+		if (abilitiesComponent->IsAbilityInCooldown(i))
+		{
+			abilityTextures[i].set_colour(0xFF5A5A5A);
+			gef::Vector4 pos = abilityTextures[i].position();
+			pos.set_y(pos.y() - 39);
+			spriteRenderer->DrawSprite(abilityTextures[i]);
+			font->RenderText(spriteRenderer, pos, 2, 0xFF0000FF, gef::TJ_CENTRE, std::to_string(abilitiesComponent->GetAbilityCooldown(i)).c_str());
+		}
+		else
+		{
+			abilityTextures[i].set_colour(0xFFFFFFFF);
+			spriteRenderer->DrawSprite(abilityTextures[i]);
+		}
+	}
 
 	font->RenderText(spriteRenderer, gef::Vector4(10, 10, 0), 1, 0xFF0000FF, gef::TJ_LEFT, healthText.c_str());
 	font->RenderText(spriteRenderer, gef::Vector4(10, 40, 0), 1, 0xFFFF0000, gef::TJ_LEFT, manaText.c_str());
