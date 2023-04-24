@@ -632,6 +632,9 @@ void SceneApp::RenderGameLoop()
 	for (auto actor : spriteActors)
 		actor->Render();
 
+	std::string waveText = "Wave: " + std::to_string(waveManager->currentWave + 1);
+	font_->RenderText(sprite_renderer_, gef::Vector4(10, 70, 0), 1, 0xFFFFFFFF, gef::TJ_LEFT, waveText.c_str());
+
 	sprite_renderer_->DrawSprite(*pointerSprite);
 	sprite_renderer_->End();
 }

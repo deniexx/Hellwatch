@@ -144,7 +144,7 @@ void WaveManager::SpawnEnemy()
 	++currentWaveSpawnedEnemiesAmount;
 	lastSpawnTime = SceneApp::instance->GetCurrentGameTime();
 
-	if (currentWave == 0 && !bBossSpawned)
+	if (currentWave == 9 && !bBossSpawned)
 	{
 		boss = SceneApp::instance->SpawnMeshActor<Boss>();
 		bBossSpawned = true;

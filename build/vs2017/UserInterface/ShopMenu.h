@@ -24,8 +24,8 @@ protected:
 
 private:
 
-	uint32_t upgradeCost = 10;
-	int upgradesAmount = 0;
+	uint32_t upgradeCost = 50;
+	int upgradesAmount = 1;
 
 	/************************************************************************/
 	/*                       Attribute Increasers                           */

@@ -60,6 +60,8 @@ public:
 	/// </summary>
 	std::vector<Enemy*> GetAllSpawnedEnemies() const { return spawnedEnemies; }
 
+	int currentWave = 0;
+
 private:
 
 	bool bInWave = false;
@@ -68,7 +70,6 @@ private:
 
 	Boss* boss = nullptr;
 
-	uint32_t currentWave = 0;
 	uint32_t currentWaveSpawnedEnemiesAmount = 0;
 	
 	float lastSpawnTime = 0.f;
