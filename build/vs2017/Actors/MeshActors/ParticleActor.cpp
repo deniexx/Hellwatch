@@ -7,7 +7,7 @@ void ParticleActor::Play()
 	lastTextureTime = SceneApp::instance->GetCurrentGameTime();
 	timeBetweenTextures = particleData.duration / particleData.textures.size();
 
-	SetMesh(SceneApp::instance->GetPrimitiveBuilder()->CreateBoxMesh(gef::Vector4(0.5f, 0.05f, 0.5f)));
+	SetMesh(SceneApp::instance->GetPrimitiveBuilder()->CreateBoxMesh(gef::Vector4(0.5f, 0.01f, 0.5f)));
 	SetScale(particleData.scale);
 	material.set_texture(particleData.textures[0]);
 }

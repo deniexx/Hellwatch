@@ -72,7 +72,8 @@ private:
 
 	bool bInvertMovement = false;
 
-	std::vector<gef::Sprite> abilityTextures;
+	std::vector<gef::Sprite> abilitySprites;
+	std::vector<gef::Sprite> backgroundSprites;
 	gef::Sprite background;
 
 public:

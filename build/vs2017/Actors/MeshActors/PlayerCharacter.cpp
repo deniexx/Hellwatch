@@ -26,23 +26,53 @@ void PlayerCharacter::PostInit()
 	SetMaterial(mat);
 
 	gef::Sprite sprite;
+	// background sprite
+	sprite.set_position(gef::Vector4(615, 1016.5f, 0));
+	sprite.set_texture(nullptr);
+	sprite.set_width(80);
+	sprite.set_height(80);
+	backgroundSprites.push_back(sprite);
+
 	sprite.set_height(78);
 	sprite.set_width(78);
 	sprite.set_texture(SceneApp::instance->RequestTextureByName("IceBoltAbility"));
-	sprite.set_position(gef::Vector4(615, 1016.5f, 0));
-	abilityTextures.push_back(sprite);
+	abilitySprites.push_back(sprite);
 
-	sprite.set_texture(SceneApp::instance->RequestTextureByName("DashAbility"));
+	// background sprite
 	sprite.set_position(gef::Vector4(848, 1016.5f, 0));
-	abilityTextures.push_back(sprite);
+	sprite.set_texture(nullptr);
+	sprite.set_width(80);
+	sprite.set_height(80);
+	backgroundSprites.push_back(sprite);
 
-	sprite.set_texture(SceneApp::instance->RequestTextureByName("PiercingStrikeAbility"));
+	sprite.set_height(78);
+	sprite.set_width(78);
+	sprite.set_texture(SceneApp::instance->RequestTextureByName("DashAbility"));
+	abilitySprites.push_back(sprite);
+
+	// background sprite
 	sprite.set_position(gef::Vector4(1081, 1016.5f, 0));
-	abilityTextures.push_back(sprite);
+	sprite.set_texture(nullptr);
+	sprite.set_width(80);
+	sprite.set_height(80);
+	backgroundSprites.push_back(sprite);
 
-	sprite.set_texture(SceneApp::instance->RequestTextureByName("MeteorAbility"));
+	sprite.set_height(78);
+	sprite.set_width(78);
+	sprite.set_texture(SceneApp::instance->RequestTextureByName("PiercingStrikeAbility"));
+	abilitySprites.push_back(sprite);
+
+	// background sprite
 	sprite.set_position(gef::Vector4(1314, 1016.5f, 0));
-	abilityTextures.push_back(sprite);
+	sprite.set_texture(nullptr);
+	sprite.set_width(80);
+	sprite.set_height(80);
+	backgroundSprites.push_back(sprite);
+
+	sprite.set_height(78);
+	sprite.set_width(78);
+	sprite.set_texture(SceneApp::instance->RequestTextureByName("MeteorAbility"));
+	abilitySprites.push_back(sprite);
 
 	background.set_height(125);
 	background.set_width(925);
@@ -226,20 +256,22 @@ void PlayerCharacter::DrawPlayerHUD()
 
 	spriteRenderer->DrawSprite(background);
 
-	for (int i = 0; i < abilityTextures.size(); ++i)
+	for (int i = 0; i < abilitySprites.size(); ++i)
 	{
+		spriteRenderer->DrawSprite(backgroundSprites[i]);
+
 		if (abilitiesComponent->IsAbilityInCooldown(i))
 		{
-			abilityTextures[i].set_colour(0xFF5A5A5A);
-			gef::Vector4 pos = abilityTextures[i].position();
+			abilitySprites[i].set_colour(0xFF5A5A5A);
+			gef::Vector4 pos = abilitySprites[i].position();
 			pos.set_y(pos.y() - 39);
-			spriteRenderer->DrawSprite(abilityTextures[i]);
+			spriteRenderer->DrawSprite(abilitySprites[i]);
 			font->RenderText(spriteRenderer, pos, 2, 0xFF0000FF, gef::TJ_CENTRE, std::to_string(abilitiesComponent->GetAbilityCooldown(i)).c_str());
 		}
 		else
 		{
-			abilityTextures[i].set_colour(0xFFFFFFFF);
-			spriteRenderer->DrawSprite(abilityTextures[i]);
+			abilitySprites[i].set_colour(0xFFFFFFFF);
+			spriteRenderer->DrawSprite(abilitySprites[i]);
 		}
 	}
 
