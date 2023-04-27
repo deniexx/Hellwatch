@@ -1,0 +1,138 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_wave_manager" xml:lang="en-US">
+<title>WaveManager Class Reference</title>
+<indexterm><primary>WaveManager</primary></indexterm>
+<para>
+
+<para>Manages the spawning of enemies and tracking the progress of waves  </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;WaveManager.h&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_wave_manager_1a1c039c9a7a485f88b68a3f966ffe02c5">WaveManager</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_wave_manager_1a918f759b1a32b82fea823b5292b8a001">Init</link> ()</para>
+
+<para>Must be called, initializes the wave definitions  </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_wave_manager_1aa56d31703d3d02067e75debabbfae300">StartWave</link> ()</para>
+
+<para>Starts the next wave  </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_wave_manager_1a751017f23187640be76f5db4b6eba243">EndWave</link> ()</para>
+
+<para>Ends the current wave  </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_wave_manager_1ae5ee18f81c4ea516839af94da831a24d">Update</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_wave_manager_1ac60f15dad7ac55306c45b17babdfcb17">CheckWaveState</link> ()</para>
+
+<para>Checks whether all enemies have been spawned, and if any are alive  </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_wave_manager_1acc8ea63b30bc4ccd02e7b12f1504595c">SpawnEnemy</link> ()</para>
+
+<para>Spawns a random enemy and sets its class to a random one  </para>
+</listitem>
+            <listitem><para>std::vector&lt; <link linkend="_class_enemy">Enemy</link> * &gt; <link linkend="_class_wave_manager_1a2608b3fb9c41ad9a227143f66e1dd385">GetAllSpawnedEnemies</link> () const</para>
+
+<para>Gets all the currently spawned enemies  </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>int <link linkend="_class_wave_manager_1a9440cd9b8ec292c041b5f794b2bb3217">currentWave</link> = 0</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Manages the spawning of enemies and tracking the progress of waves  </para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_wave_manager_1a1c039c9a7a485f88b68a3f966ffe02c5"/><section>
+    <title>WaveManager()</title>
+<indexterm><primary>WaveManager</primary><secondary>WaveManager</secondary></indexterm>
+<indexterm><primary>WaveManager</primary><secondary>WaveManager</secondary></indexterm>
+<para><computeroutput>WaveManager::WaveManager ( )</computeroutput></para></section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_wave_manager_1ac60f15dad7ac55306c45b17babdfcb17"/><section>
+    <title>CheckWaveState()</title>
+<indexterm><primary>CheckWaveState</primary><secondary>WaveManager</secondary></indexterm>
+<indexterm><primary>WaveManager</primary><secondary>CheckWaveState</secondary></indexterm>
+<para><computeroutput>void WaveManager::CheckWaveState ( )</computeroutput></para><para>
+
+<para>Checks whether all enemies have been spawned, and if any are alive  </para>
+</para>
+</section>
+<anchor xml:id="_class_wave_manager_1a751017f23187640be76f5db4b6eba243"/><section>
+    <title>EndWave()</title>
+<indexterm><primary>EndWave</primary><secondary>WaveManager</secondary></indexterm>
+<indexterm><primary>WaveManager</primary><secondary>EndWave</secondary></indexterm>
+<para><computeroutput>void WaveManager::EndWave ( )</computeroutput></para><para>
+
+<para>Ends the current wave  </para>
+</para>
+</section>
+<anchor xml:id="_class_wave_manager_1a2608b3fb9c41ad9a227143f66e1dd385"/><section>
+    <title>GetAllSpawnedEnemies()</title>
+<indexterm><primary>GetAllSpawnedEnemies</primary><secondary>WaveManager</secondary></indexterm>
+<indexterm><primary>WaveManager</primary><secondary>GetAllSpawnedEnemies</secondary></indexterm>
+<para><computeroutput>std::vector&lt; <link linkend="_class_enemy">Enemy</link> * &gt; WaveManager::GetAllSpawnedEnemies ( ) const<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Gets all the currently spawned enemies  </para>
+</para>
+</section>
+<anchor xml:id="_class_wave_manager_1a918f759b1a32b82fea823b5292b8a001"/><section>
+    <title>Init()</title>
+<indexterm><primary>Init</primary><secondary>WaveManager</secondary></indexterm>
+<indexterm><primary>WaveManager</primary><secondary>Init</secondary></indexterm>
+<para><computeroutput>void WaveManager::Init ( )</computeroutput></para><para>
+
+<para>Must be called, initializes the wave definitions  </para>
+</para>
+</section>
+<anchor xml:id="_class_wave_manager_1acc8ea63b30bc4ccd02e7b12f1504595c"/><section>
+    <title>SpawnEnemy()</title>
+<indexterm><primary>SpawnEnemy</primary><secondary>WaveManager</secondary></indexterm>
+<indexterm><primary>WaveManager</primary><secondary>SpawnEnemy</secondary></indexterm>
+<para><computeroutput>void WaveManager::SpawnEnemy ( )</computeroutput></para><para>
+
+<para>Spawns a random enemy and sets its class to a random one  </para>
+</para>
+</section>
+<anchor xml:id="_class_wave_manager_1aa56d31703d3d02067e75debabbfae300"/><section>
+    <title>StartWave()</title>
+<indexterm><primary>StartWave</primary><secondary>WaveManager</secondary></indexterm>
+<indexterm><primary>WaveManager</primary><secondary>StartWave</secondary></indexterm>
+<para><computeroutput>void WaveManager::StartWave ( )</computeroutput></para><para>
+
+<para>Starts the next wave  </para>
+</para>
+</section>
+<anchor xml:id="_class_wave_manager_1ae5ee18f81c4ea516839af94da831a24d"/><section>
+    <title>Update()</title>
+<indexterm><primary>Update</primary><secondary>WaveManager</secondary></indexterm>
+<indexterm><primary>WaveManager</primary><secondary>Update</secondary></indexterm>
+<para><computeroutput>void WaveManager::Update ( )</computeroutput></para></section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_class_wave_manager_1a9440cd9b8ec292c041b5f794b2bb3217"/><section>
+    <title>currentWave</title>
+<indexterm><primary>currentWave</primary><secondary>WaveManager</secondary></indexterm>
+<indexterm><primary>WaveManager</primary><secondary>currentWave</secondary></indexterm>
+<para><computeroutput>int WaveManager::currentWave = 0</computeroutput></para></section>
+<para>
+The documentation for this class was generated from the following files:</para>
+D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/<link linkend="__wave_manager_8h">WaveManager.h</link>D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/<link linkend="__wave_manager_8cpp">WaveManager.cpp</link></section>
+</section>

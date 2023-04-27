@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__wave_manager_8h" xml:lang="en-US">
+<title>D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/WaveManager.h File Reference</title>
+<indexterm><primary>D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/WaveManager.h</primary></indexterm>
+<programlisting linenumbering="unnumbered">#include &quot;GameFramework/Utils.h&quot;<?linebreak?></programlisting>Include dependency graph for WaveManager.h:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_wave_manager_8h__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+This graph shows which files directly or indirectly include this file:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_wave_manager_8h__dep__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>struct <link linkend="_struct_f_wave_definition">FWaveDefinition</link></para>
+
+<para>A definition for a wave, the max number of spawned enemies and the period of spawning them  </para>
+</listitem>
+            <listitem><para>class <link linkend="_class_wave_manager">WaveManager</link></para>
+
+<para>Manages the spawning of enemies and tracking the progress of waves  </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="__wave_manager_8h_1a61d1084c2f3105aa6fe0935321c38056">USE_WAVE_FORMULA</link>&#160;&#160;&#160;(currentWave + currentWave * 0.5) * 5</para>
+</listitem>
+            <listitem><para>#define <link linkend="__wave_manager_8h_1a7611b1145603b267db98d53c153808b5">SPAWN_PERIOD_AFTER_WAVE_DEFINITIONS</link>&#160;&#160;&#160;1.f</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Macro Definition Documentation</title>
+<anchor xml:id="__wave_manager_8h_1a7611b1145603b267db98d53c153808b5"/><section>
+    <title>SPAWN_PERIOD_AFTER_WAVE_DEFINITIONS</title>
+<indexterm><primary>SPAWN_PERIOD_AFTER_WAVE_DEFINITIONS</primary><secondary>WaveManager.h</secondary></indexterm>
+<indexterm><primary>WaveManager.h</primary><secondary>SPAWN_PERIOD_AFTER_WAVE_DEFINITIONS</secondary></indexterm>
+<para><computeroutput>#define SPAWN_PERIOD_AFTER_WAVE_DEFINITIONS&#160;&#160;&#160;1.f</computeroutput></para></section>
+<anchor xml:id="__wave_manager_8h_1a61d1084c2f3105aa6fe0935321c38056"/><section>
+    <title>USE_WAVE_FORMULA</title>
+<indexterm><primary>USE_WAVE_FORMULA</primary><secondary>WaveManager.h</secondary></indexterm>
+<indexterm><primary>WaveManager.h</primary><secondary>USE_WAVE_FORMULA</secondary></indexterm>
+<para><computeroutput>#define USE_WAVE_FORMULA&#160;&#160;&#160;(currentWave + currentWave * 0.5) * 5</computeroutput></para></section>
+</section>
+</section>

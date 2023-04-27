@@ -1,0 +1,55 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__attribute_component_8h_source" xml:lang="en-US">
+<title>AttributeComponent.h</title>
+<indexterm><primary>D:/Uni/CMP208/Hellwatch/build/vs2017/Attributes/AttributeComponent.h</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered">1 <emphasis role="preprocessor">#pragma&#32;once</emphasis>
+2 
+3 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="__actor_component_8h">ActorComponents/ActorComponent.h</link>&quot;</emphasis>
+4 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="__utils_8h">GameFramework/Utils.h</link>&quot;</emphasis>
+5 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="__attribute_types_8h">AttributeTypes.h</link>&quot;</emphasis>
+6 
+7 <emphasis role="preprocessor">#include&#32;&lt;vector&gt;</emphasis>
+8 
+9 <emphasis role="preprocessor">#define&#32;BASE_REGEN_RATIO&#32;7</emphasis>
+10 
+11 <emphasis role="keyword">class&#32;</emphasis><link linkend="_class_attribute_component">AttributeComponent</link>&#32;:&#32;<emphasis role="keyword">public</emphasis>&#32;<link linkend="_class_actor_component">ActorComponent</link>
+12 {
+13 &#32;&#32;&#32;&#32;<link linkend="__utils_8h_1afc0ee7bd35c161a2d80b8e8f04fd9213">GENERATED_BODY</link>(<link linkend="_class_actor_component">ActorComponent</link>,&#32;<link linkend="_class_attribute_component">AttributeComponent</link>);
+14 
+15 <emphasis role="keyword">private</emphasis>:
+16 
+17 &#32;&#32;&#32;&#32;<emphasis role="keyword">mutable</emphasis>&#32;std::vector&lt;FAttribute&gt;&#32;attributes;
+18 
+19 <emphasis role="keyword">public</emphasis>:
+20 
+24 &#32;&#32;&#32;&#32;<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">float</emphasis>&#32;<link linkend="_class_attribute_component_1a580cf7f29236d87d448840840ad53bc6">GetCurrentAttributeValueByType</link>(<link linkend="_namespace_hellwatch_attribute_1ad0a500e65129d06e4589f9bca54c4a7d">HellwatchAttribute::Type</link>&#32;type)&#32;<emphasis role="keyword">const</emphasis>;
+25 
+29 &#32;&#32;&#32;&#32;<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">float</emphasis>&#32;<link linkend="_class_attribute_component_1ac3a3cdb64a8ddf33f584b07cb6fb3546">GetMaxAttributeValueByType</link>(<link linkend="_namespace_hellwatch_attribute_1ad0a500e65129d06e4589f9bca54c4a7d">HellwatchAttribute::Type</link>&#32;type)&#32;<emphasis role="keyword">const</emphasis>;
+30 
+34 &#32;&#32;&#32;&#32;<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_class_attribute_component_1ac8bc3fd1392349fb859ddf83e3e8e027">CheckHasEnoughOfAttributeByType</link>(<link linkend="_namespace_hellwatch_attribute_1ad0a500e65129d06e4589f9bca54c4a7d">HellwatchAttribute::Type</link>&#32;type,&#32;<emphasis role="keywordtype">float</emphasis>&#32;amountNeeded);
+35 
+39 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_attribute_component_1ab359fd856c0eaee6fda4c81765c9b336">SetAttributeCurrentValue</link>(<link linkend="_namespace_hellwatch_attribute_1ad0a500e65129d06e4589f9bca54c4a7d">HellwatchAttribute::Type</link>&#32;type,&#32;<emphasis role="keywordtype">float</emphasis>&#32;newValue);
+40 
+44 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_attribute_component_1a1ed8d3136ef683d442d1ff7523d219b0">SetAttributeMaxValue</link>(<link linkend="_namespace_hellwatch_attribute_1ad0a500e65129d06e4589f9bca54c4a7d">HellwatchAttribute::Type</link>&#32;type,&#32;<emphasis role="keywordtype">float</emphasis>&#32;newValue);
+45 
+49 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_attribute_component_1ada89535490c847acf8574d39d35c837c">SetAttributeCurrentAndMaxValue</link>(<link linkend="_namespace_hellwatch_attribute_1ad0a500e65129d06e4589f9bca54c4a7d">HellwatchAttribute::Type</link>,&#32;<emphasis role="keywordtype">float</emphasis>&#32;newValue);
+50 
+54 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_attribute_component_1a2a29edbf9c15e3296eb8ac4f5b59e8c9">ApplyAttributeChange</link>(<link linkend="_namespace_hellwatch_attribute_1ad0a500e65129d06e4589f9bca54c4a7d">HellwatchAttribute::Type</link>&#32;type,&#32;<emphasis role="keywordtype">float</emphasis>&#32;delta);
+55 
+59 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_attribute_component_1a381ad0a8f330864674b1cf80bc27f858">ApplyAttributeMaxValueChange</link>(<link linkend="_namespace_hellwatch_attribute_1ad0a500e65129d06e4589f9bca54c4a7d">HellwatchAttribute::Type</link>&#32;type,&#32;<emphasis role="keywordtype">float</emphasis>&#32;delta);
+60 
+65 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_attribute_component_1a3677b4bee550b858f87f5e62148d1e10">InitAttributesBySpec</link>(std::vector&lt;FAttribute&gt;&amp;&#32;attributesToInit);
+66 
+71 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_attribute_component_1a6f76a7c8bb5bf45d085ffb001cec45d5">AddAttribute</link>(<link linkend="_struct_f_attribute">FAttribute</link>&amp;&#32;attributeToAdd);
+72 
+76 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_attribute_component_1ac864c662a9b8d2155fa8142078ce3dff">ApplyAttributeMultiplier</link>(<link linkend="_namespace_hellwatch_attribute_1ad0a500e65129d06e4589f9bca54c4a7d">HellwatchAttribute::Type</link>&#32;type,&#32;<emphasis role="keywordtype">float</emphasis>&#32;multipliyer);
+77 
+78 
+79 &#32;&#32;&#32;&#32;<emphasis role="keyword">virtual</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_attribute_component_1ae67a6fc2951e19257274edb42eec023f">UpdateComponent</link>(<emphasis role="keywordtype">float</emphasis>&#32;deltaTime);
+80 
+81 <emphasis role="keyword">private</emphasis>:
+82 
+86 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;OnAttributeChanged(<link linkend="_namespace_hellwatch_attribute_1ad0a500e65129d06e4589f9bca54c4a7d">HellwatchAttribute::Type</link>&#32;type,&#32;<emphasis role="keywordtype">float</emphasis>&#32;oldAmount,&#32;<emphasis role="keywordtype">float</emphasis>&#32;newAmount);
+87 };
+88 
+</programlisting></section>

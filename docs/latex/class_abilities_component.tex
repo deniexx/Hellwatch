@@ -1,0 +1,183 @@
+\hypertarget{class_abilities_component}{}\doxysection{Abilities\+Component Class Reference}
+\label{class_abilities_component}\index{AbilitiesComponent@{AbilitiesComponent}}
+
+
+A component allowing the object to use abilities @\+NOTE\+: Requires an attribute component to function properly   
+
+
+
+
+{\ttfamily \#include $<$Abilities\+Component.\+h$>$}
+
+
+
+Inheritance diagram for Abilities\+Component\+:
+% FIG 0
+
+
+Collaboration diagram for Abilities\+Component\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_abilities_component_a2002c80ff8a5e6de25e5269310c6dfa5}{Add\+Ability}} (\mbox{\hyperlink{class_ability}{Ability}} $\ast$ability\+To\+Add)
+\begin{DoxyCompactList}\small\item\em Adds an ability to our system @\+NOTE\+: It does not equip it, just adds it to the available abilities vector  \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_abilities_component_a06d5228f074b929c061cf34af9460be4}{Equip\+Ability}} (std\+::string ability\+Name, \mbox{\hyperlink{namespace_ability_activation_key_ab159d3c3f26196a9ff493b67ecf7e68c}{Ability\+Activation\+Key\+::\+Type}} key\+To\+Equip\+At)
+\begin{DoxyCompactList}\small\item\em Equips an ability, at a specific key  \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_abilities_component_a092acad2af7f3c106d117a3c51a04971}{Activate\+Ability\+By\+Key}} (\mbox{\hyperlink{namespace_ability_activation_key_ab159d3c3f26196a9ff493b67ecf7e68c}{Ability\+Activation\+Key\+::\+Type}} key)
+\begin{DoxyCompactList}\small\item\em Attempts to activate ability by key  \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_abilities_component_aae3dce0a0f06941f91f8c14dc1a3878e}{Activate\+Ability\+By\+Name}} (std\+::string name)
+\begin{DoxyCompactList}\small\item\em Attempts to activate ability by its name @\+NOTE\+: Preferred to use Activate\+Ability\+By\+Key version  \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_abilities_component_a3d01f13b661e8d6bfe3c0a8f2d6af7ea}{End\+Ability\+By\+Key}} (\mbox{\hyperlink{namespace_ability_activation_key_ab159d3c3f26196a9ff493b67ecf7e68c}{Ability\+Activation\+Key\+::\+Type}} key)
+\begin{DoxyCompactList}\small\item\em Ends an ability by key, we can use this if we prematurely end ability, etc...  \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_abilities_component_a310f5751a58f69fba41f473b492e5582}{End\+Ability\+By\+Name}} (std\+::string name)
+\begin{DoxyCompactList}\small\item\em Ends an ability by name, we can use this if we prematurely end ability, etc... Preferred to use End\+Ability\+By\+Key version  \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_abilities_component_ab57de1cda84055ee7564f0709e03777f}{Register\+Attributes}} (\mbox{\hyperlink{class_attribute_component}{Attribute\+Component}} $\ast$new\+Attributes)
+\begin{DoxyCompactList}\small\item\em Registers an attribute component to this ability system  \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_abilities_component_a10a7a5652a4d850b5845766224a43c54}{Is\+Ability\+In\+Cooldown}} (int key)
+\begin{DoxyCompactList}\small\item\em Checks whether an ability is in cooldown  \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_abilities_component_a46f90af4015a7e4fa9679f5743547d94}{Get\+Ability\+Cooldown}} (int key)
+\begin{DoxyCompactList}\small\item\em Gets the ability cooldown  \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_abilities_component_a96732cdae01d866200dc66a89200695f}{Update\+Component}} (float delta\+Time) override
+\item 
+\mbox{\hyperlink{class_attribute_component}{Attribute\+Component}} $\ast$ \mbox{\hyperlink{class_abilities_component_aa2e9909a907d358e34fc58a387f0e493}{Get\+Attribute\+Component}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_abilities_component_aa1a55ce45b753097f0e2d7d4db4a419b}{Post\+Init}} () override
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+A component allowing the object to use abilities @\+NOTE\+: Requires an attribute component to function properly  
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_abilities_component_a092acad2af7f3c106d117a3c51a04971}\label{class_abilities_component_a092acad2af7f3c106d117a3c51a04971}} 
+\index{AbilitiesComponent@{AbilitiesComponent}!ActivateAbilityByKey@{ActivateAbilityByKey}}
+\index{ActivateAbilityByKey@{ActivateAbilityByKey}!AbilitiesComponent@{AbilitiesComponent}}
+\doxysubsubsection{\texorpdfstring{ActivateAbilityByKey()}{ActivateAbilityByKey()}}
+{\footnotesize\ttfamily void Abilities\+Component\+::\+Activate\+Ability\+By\+Key (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespace_ability_activation_key_ab159d3c3f26196a9ff493b67ecf7e68c}{Ability\+Activation\+Key\+::\+Type}}}]{key }\end{DoxyParamCaption})}
+
+
+
+Attempts to activate ability by key  
+
+\mbox{\Hypertarget{class_abilities_component_aae3dce0a0f06941f91f8c14dc1a3878e}\label{class_abilities_component_aae3dce0a0f06941f91f8c14dc1a3878e}} 
+\index{AbilitiesComponent@{AbilitiesComponent}!ActivateAbilityByName@{ActivateAbilityByName}}
+\index{ActivateAbilityByName@{ActivateAbilityByName}!AbilitiesComponent@{AbilitiesComponent}}
+\doxysubsubsection{\texorpdfstring{ActivateAbilityByName()}{ActivateAbilityByName()}}
+{\footnotesize\ttfamily void Abilities\+Component\+::\+Activate\+Ability\+By\+Name (\begin{DoxyParamCaption}\item[{std\+::string}]{name }\end{DoxyParamCaption})}
+
+
+
+Attempts to activate ability by its name @\+NOTE\+: Preferred to use Activate\+Ability\+By\+Key version  
+
+\mbox{\Hypertarget{class_abilities_component_a2002c80ff8a5e6de25e5269310c6dfa5}\label{class_abilities_component_a2002c80ff8a5e6de25e5269310c6dfa5}} 
+\index{AbilitiesComponent@{AbilitiesComponent}!AddAbility@{AddAbility}}
+\index{AddAbility@{AddAbility}!AbilitiesComponent@{AbilitiesComponent}}
+\doxysubsubsection{\texorpdfstring{AddAbility()}{AddAbility()}}
+{\footnotesize\ttfamily void Abilities\+Component\+::\+Add\+Ability (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_ability}{Ability}} $\ast$}]{ability\+To\+Add }\end{DoxyParamCaption})}
+
+
+
+Adds an ability to our system @\+NOTE\+: It does not equip it, just adds it to the available abilities vector  
+
+\mbox{\Hypertarget{class_abilities_component_a3d01f13b661e8d6bfe3c0a8f2d6af7ea}\label{class_abilities_component_a3d01f13b661e8d6bfe3c0a8f2d6af7ea}} 
+\index{AbilitiesComponent@{AbilitiesComponent}!EndAbilityByKey@{EndAbilityByKey}}
+\index{EndAbilityByKey@{EndAbilityByKey}!AbilitiesComponent@{AbilitiesComponent}}
+\doxysubsubsection{\texorpdfstring{EndAbilityByKey()}{EndAbilityByKey()}}
+{\footnotesize\ttfamily void Abilities\+Component\+::\+End\+Ability\+By\+Key (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespace_ability_activation_key_ab159d3c3f26196a9ff493b67ecf7e68c}{Ability\+Activation\+Key\+::\+Type}}}]{key }\end{DoxyParamCaption})}
+
+
+
+Ends an ability by key, we can use this if we prematurely end ability, etc...  
+
+\mbox{\Hypertarget{class_abilities_component_a310f5751a58f69fba41f473b492e5582}\label{class_abilities_component_a310f5751a58f69fba41f473b492e5582}} 
+\index{AbilitiesComponent@{AbilitiesComponent}!EndAbilityByName@{EndAbilityByName}}
+\index{EndAbilityByName@{EndAbilityByName}!AbilitiesComponent@{AbilitiesComponent}}
+\doxysubsubsection{\texorpdfstring{EndAbilityByName()}{EndAbilityByName()}}
+{\footnotesize\ttfamily void Abilities\+Component\+::\+End\+Ability\+By\+Name (\begin{DoxyParamCaption}\item[{std\+::string}]{name }\end{DoxyParamCaption})}
+
+
+
+Ends an ability by name, we can use this if we prematurely end ability, etc... Preferred to use End\+Ability\+By\+Key version  
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_abilities_component_a06d5228f074b929c061cf34af9460be4}\label{class_abilities_component_a06d5228f074b929c061cf34af9460be4}} 
+\index{AbilitiesComponent@{AbilitiesComponent}!EquipAbility@{EquipAbility}}
+\index{EquipAbility@{EquipAbility}!AbilitiesComponent@{AbilitiesComponent}}
+\doxysubsubsection{\texorpdfstring{EquipAbility()}{EquipAbility()}}
+{\footnotesize\ttfamily void Abilities\+Component\+::\+Equip\+Ability (\begin{DoxyParamCaption}\item[{std\+::string}]{ability\+Name,  }\item[{\mbox{\hyperlink{namespace_ability_activation_key_ab159d3c3f26196a9ff493b67ecf7e68c}{Ability\+Activation\+Key\+::\+Type}}}]{key\+To\+Equip\+At }\end{DoxyParamCaption})}
+
+
+
+Equips an ability, at a specific key  
+
+\mbox{\Hypertarget{class_abilities_component_a46f90af4015a7e4fa9679f5743547d94}\label{class_abilities_component_a46f90af4015a7e4fa9679f5743547d94}} 
+\index{AbilitiesComponent@{AbilitiesComponent}!GetAbilityCooldown@{GetAbilityCooldown}}
+\index{GetAbilityCooldown@{GetAbilityCooldown}!AbilitiesComponent@{AbilitiesComponent}}
+\doxysubsubsection{\texorpdfstring{GetAbilityCooldown()}{GetAbilityCooldown()}}
+{\footnotesize\ttfamily int Abilities\+Component\+::\+Get\+Ability\+Cooldown (\begin{DoxyParamCaption}\item[{int}]{key }\end{DoxyParamCaption})}
+
+
+
+Gets the ability cooldown  
+
+\mbox{\Hypertarget{class_abilities_component_aa2e9909a907d358e34fc58a387f0e493}\label{class_abilities_component_aa2e9909a907d358e34fc58a387f0e493}} 
+\index{AbilitiesComponent@{AbilitiesComponent}!GetAttributeComponent@{GetAttributeComponent}}
+\index{GetAttributeComponent@{GetAttributeComponent}!AbilitiesComponent@{AbilitiesComponent}}
+\doxysubsubsection{\texorpdfstring{GetAttributeComponent()}{GetAttributeComponent()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_attribute_component}{Attribute\+Component}} $\ast$ Abilities\+Component\+::\+Get\+Attribute\+Component (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_abilities_component_a10a7a5652a4d850b5845766224a43c54}\label{class_abilities_component_a10a7a5652a4d850b5845766224a43c54}} 
+\index{AbilitiesComponent@{AbilitiesComponent}!IsAbilityInCooldown@{IsAbilityInCooldown}}
+\index{IsAbilityInCooldown@{IsAbilityInCooldown}!AbilitiesComponent@{AbilitiesComponent}}
+\doxysubsubsection{\texorpdfstring{IsAbilityInCooldown()}{IsAbilityInCooldown()}}
+{\footnotesize\ttfamily bool Abilities\+Component\+::\+Is\+Ability\+In\+Cooldown (\begin{DoxyParamCaption}\item[{int}]{key }\end{DoxyParamCaption})}
+
+
+
+Checks whether an ability is in cooldown  
+
+\mbox{\Hypertarget{class_abilities_component_aa1a55ce45b753097f0e2d7d4db4a419b}\label{class_abilities_component_aa1a55ce45b753097f0e2d7d4db4a419b}} 
+\index{AbilitiesComponent@{AbilitiesComponent}!PostInit@{PostInit}}
+\index{PostInit@{PostInit}!AbilitiesComponent@{AbilitiesComponent}}
+\doxysubsubsection{\texorpdfstring{PostInit()}{PostInit()}}
+{\footnotesize\ttfamily void Abilities\+Component\+::\+Post\+Init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_actor_component_a467d082f3fedd6cf2acacb117450f90e}{Actor\+Component}}.
+
+\mbox{\Hypertarget{class_abilities_component_ab57de1cda84055ee7564f0709e03777f}\label{class_abilities_component_ab57de1cda84055ee7564f0709e03777f}} 
+\index{AbilitiesComponent@{AbilitiesComponent}!RegisterAttributes@{RegisterAttributes}}
+\index{RegisterAttributes@{RegisterAttributes}!AbilitiesComponent@{AbilitiesComponent}}
+\doxysubsubsection{\texorpdfstring{RegisterAttributes()}{RegisterAttributes()}}
+{\footnotesize\ttfamily void Abilities\+Component\+::\+Register\+Attributes (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_attribute_component}{Attribute\+Component}} $\ast$}]{new\+Attributes }\end{DoxyParamCaption})}
+
+
+
+Registers an attribute component to this ability system  
+
+\mbox{\Hypertarget{class_abilities_component_a96732cdae01d866200dc66a89200695f}\label{class_abilities_component_a96732cdae01d866200dc66a89200695f}} 
+\index{AbilitiesComponent@{AbilitiesComponent}!UpdateComponent@{UpdateComponent}}
+\index{UpdateComponent@{UpdateComponent}!AbilitiesComponent@{AbilitiesComponent}}
+\doxysubsubsection{\texorpdfstring{UpdateComponent()}{UpdateComponent()}}
+{\footnotesize\ttfamily void Abilities\+Component\+::\+Update\+Component (\begin{DoxyParamCaption}\item[{float}]{delta\+Time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_actor_component_af730b3c7d2b4154e1fb0962db7750f6b}{Actor\+Component}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Uni/\+CMP208/\+Hellwatch/build/vs2017/\+Actor\+Components/\mbox{\hyperlink{_abilities_component_8h}{Abilities\+Component.\+h}}\item 
+D\+:/\+Uni/\+CMP208/\+Hellwatch/build/vs2017/\+Actor\+Components/\mbox{\hyperlink{_abilities_component_8cpp}{Abilities\+Component.\+cpp}}\end{DoxyCompactItemize}

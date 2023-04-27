@@ -1,0 +1,60 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__menu_8h_source" xml:lang="en-US">
+<title>Menu.h</title>
+<indexterm><primary>D:/Uni/CMP208/Hellwatch/build/vs2017/UserInterface/Menu.h</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered">1 <emphasis role="preprocessor">#pragma&#32;once</emphasis>
+2 
+3 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="__utils_8h">GameFramework/Utils.h</link>&quot;</emphasis>
+4 <emphasis role="preprocessor">#include&#32;&lt;future&gt;</emphasis>
+5 
+9 <emphasis role="keyword">struct&#32;</emphasis><link linkend="_struct_menu_button">MenuButton</link>
+10 {
+11 &#32;&#32;&#32;&#32;gef::Vector4&#32;<link linkend="_struct_menu_button_1a50a2575f7a437f6ae6bcef25f904301e">position</link>;
+12 &#32;&#32;&#32;&#32;uint32_t&#32;<link linkend="_struct_menu_button_1a41cfc44472326f1da939089a1b3b791e">color</link>&#32;=&#32;0xffffffff;
+13 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">float</emphasis>&#32;<link linkend="_struct_menu_button_1a3248c3e6aebedd07e092b36014bddc13">scale</link>&#32;=&#32;1;
+14 &#32;&#32;&#32;&#32;gef::TextJustification&#32;<link linkend="_struct_menu_button_1a616c2081a729821f35c44b4be80e771b">justification</link>;
+15 &#32;&#32;&#32;&#32;std::string&#32;<link linkend="_struct_menu_button_1a23f34c6529bb20a890225fdb069c5afc">buttonText</link>;
+16 &#32;&#32;&#32;&#32;std::function&lt;void()&gt;&#32;<link linkend="_struct_menu_button_1a16cdea6d06499ccaf865be569f5c3adb">callbackFunction</link>;
+17 };
+18 
+22 <emphasis role="keyword">class&#32;</emphasis><link linkend="_class_menu">Menu</link>
+23 {
+24 
+25 <emphasis role="keyword">public</emphasis>:
+26 <emphasis role="comment">&#32;&#32;&#32;&#32;/*******************************************************</emphasis>
+27 <emphasis role="comment">&#32;&#32;&#32;&#32;*&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;MENU&#32;INPUT&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;*</emphasis>
+28 <emphasis role="comment"></emphasis><emphasis role="comment">&#32;&#32;&#32;&#32;/*******************************************************/</emphasis>
+29 
+30 &#32;&#32;&#32;&#32;<link linkend="_class_menu_1a831387f51358cfb88cd018e1777bc980">~Menu</link>();
+31 
+35 &#32;&#32;&#32;&#32;<emphasis role="keyword">virtual</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_menu_1a0c64b7333b29000c8b219d2ebc28c03b">Init</link>()&#32;=&#32;0;
+36 
+40 &#32;&#32;&#32;&#32;<emphasis role="keyword">virtual</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_menu_1af29d71473a414e31e914bc637840cb3e">Update</link>();
+41 
+45 &#32;&#32;&#32;&#32;<emphasis role="keyword">virtual</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_menu_1acef1c8e0a83655c3b17c217567527f8b">DrawMenuHUD</link>(gef::Font*&#32;font_,&#32;gef::SpriteRenderer*&#32;sprite_renderer_);
+46 
+47 &#32;&#32;&#32;&#32;<link linkend="_class_player_controller">PlayerController</link>*&#32;<link linkend="_class_menu_1a0187883a2d424dadf01b0218d1db7d12">menuController</link>;
+48 &#32;&#32;&#32;&#32;std::vector&lt;MenuButton&gt;&#32;<link linkend="_class_menu_1a6005d125bc4b0372bcd6d2719cb9a994">menuButtons</link>;
+49 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_class_menu_1a1551f565b2ae79bf65449810f4ea81d5">currentButtonFocused</link>&#32;=&#32;0;
+50 &#32;&#32;&#32;&#32;gef::Sprite*&#32;<link linkend="_class_menu_1a2737fb42e257221f78c86b9221795255">menuSprite</link>;
+51 
+52 <emphasis role="keyword">protected</emphasis>:
+53 
+57 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_menu_1a98395444d03f38df02fa9c2aed1fb797">OnUpButtonPressed</link>();
+58 
+62 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_menu_1a6b8e73974658482814f99b63ecc4d470">OnDownButtonPressed</link>();
+63 
+67 &#32;&#32;&#32;&#32;<emphasis role="keyword">virtual</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_menu_1a2370ebbed22dfd0c10491bd8ae45b771">OnMouseButtonPressed</link>(gef::Vector2&#32;mousePos);
+68 
+72 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_menu_1a8023104df1848b95c94e1c46fba209ca">OnControllerUpButton</link>(gef::Vector2&#32;dir);
+73 
+77 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_menu_1a50e7901f94713c0719e0774474d981c2">OnControllerDownButton</link>(gef::Vector2&#32;dir);
+78 
+82 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_menu_1a8bd9fce86817a1125bf7d2e371551689">OnControllerSubmitButton</link>(gef::Vector2&#32;dir);
+83 
+87 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_menu_1a2f2b184a3f4000ce78d9e948c95cced4">CheckForHighlight</link>();
+88 
+92 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_menu_1a78e162d9e5571f0bb3e93c02cc0f76df">PressMenuButton</link>();
+93 };
+94 
+</programlisting></section>

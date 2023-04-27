@@ -1,0 +1,127 @@
+\hypertarget{_utils_8h_source}{}\doxysection{Utils.\+h}
+\label{_utils_8h_source}\index{D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/Utils.h@{D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/Utils.h}}
+\mbox{\hyperlink{_utils_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{2 }
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#include "{}maths/Vector2.h"{}}}
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include "{}maths/vector4.h"{}}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include "{}maths/matrix44.h"{}}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include <graphics/renderer\_3d.h>}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{scene__app_8h}{scene\_app.h}}>}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include "{}maths/math\_utils.h"{}}}
+\DoxyCodeLine{9 }
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#define NO\_ID 0}}
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#define PLAYER\_ID 1}}
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#define ENEMY\_ID 2}}
+\DoxyCodeLine{13 \textcolor{preprocessor}{\#define ENVIRONMENT\_ID 3}}
+\DoxyCodeLine{14 }
+\DoxyCodeLine{15 \textcolor{preprocessor}{\#define PI 3.14159265358979323846}}
+\DoxyCodeLine{16 }
+\DoxyCodeLine{17 \textcolor{preprocessor}{\#define GENERATED\_BODY(ParentClass, CurrentClass) typedef ::ParentClass Super; \(\backslash\)}}
+\DoxyCodeLine{18 \textcolor{preprocessor}{                                    typedef CurrentClass ThisClass;}}
+\DoxyCodeLine{19 }
+\DoxyCodeLine{20 }
+\DoxyCodeLine{21 \textcolor{preprocessor}{\#define bindFunc(funcName) [this]() \{ funcName(); \}}}
+\DoxyCodeLine{22 \textcolor{preprocessor}{\#define bindFunc\_ONEParam(funcName, paramType, paramName) [this](paramType paramName) \{ funcName(paramName); \}}}
+\DoxyCodeLine{23 \textcolor{preprocessor}{\#define bindFunc\_TWOParams(funcName, paramType1, paramName1, paramType2, paramName2) [this](paramType1 paramName1, paramType2 paramName2) \{ funcName(paramName1, paramName2); \}}}
+\DoxyCodeLine{24 \textcolor{preprocessor}{\#define bindFunc\_THREEParam(funcName, paramType1, paramName1, paramType2, paramName2, paramType3, paramName3) [this](paramType1 paramName1, paramType2 paramName2, paramType3 paramName3) \{ funcName(paramName1, paramName2, paramName3); \}}}
+\DoxyCodeLine{25 \textcolor{preprocessor}{\#define bindFunc\_FOURParams(funcName, paramType1, paramName1, paramType2, paramName2, paramType3, paramName3, paramType4, paramName4) [this](paramType1 paramName1, paramType2 paramName2, paramType3 paramName3, paramType4 paramName4) \{ funcName(paramName1, paramName2, paramName3, paramName4); \}}}
+\DoxyCodeLine{26 \textcolor{preprocessor}{\#define bindFunc\_FIVEParams(funcName, paramType1, paramName1, paramType2, paramName2, paramType3, paramName3, paramType4, paramName4, paramType5, paramName5) [this](paramType1 paramName1, paramType2 paramName2, paramType3 paramName3, paramType4 paramName4, paramName5 paramName5) \{ funcName(paramName1, paramName2, paramName3, paramName4, paramName5); \}}}
+\DoxyCodeLine{27 }
+\DoxyCodeLine{31 \textcolor{keyword}{template}<\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{32 \textcolor{keyword}{static} T Clamp(T expression, T minVal, T maxVal)}
+\DoxyCodeLine{33 \{}
+\DoxyCodeLine{34     \textcolor{keywordflow}{if} (expression < minVal)}
+\DoxyCodeLine{35         expression = minVal;}
+\DoxyCodeLine{36     }
+\DoxyCodeLine{37     \textcolor{keywordflow}{return} expression > maxVal ? maxVal : expression;}
+\DoxyCodeLine{38 \}}
+\DoxyCodeLine{39 }
+\DoxyCodeLine{43 \textcolor{keyword}{static} gef::Vector4 ProjectScreenToWorldSpace(gef::Vector2 v2)}
+\DoxyCodeLine{44 \{}
+\DoxyCodeLine{45     gef::Renderer3D* renderer = SceneApp::instance-\/>GetRenderer3D();}
+\DoxyCodeLine{46     \textcolor{keywordtype}{float} vpWidth = SceneApp::instance-\/>GetViewportWidth();}
+\DoxyCodeLine{47     \textcolor{keywordtype}{float} vpHeight = SceneApp::instance-\/>GetViewportHeight();}
+\DoxyCodeLine{48 }
+\DoxyCodeLine{49     gef::Matrix44 matProjection = renderer-\/>projection\_matrix() * renderer-\/>view\_matrix();}
+\DoxyCodeLine{50     matProjection.Inverse(matProjection);}
+\DoxyCodeLine{51 }
+\DoxyCodeLine{52     gef::Vector4 in;}
+\DoxyCodeLine{53     \textcolor{keywordtype}{float} winZ = 1.f;}
+\DoxyCodeLine{54 }
+\DoxyCodeLine{55     in.set\_x((2.f * (\textcolor{keywordtype}{float})(v2.x) / (vpWidth)) -\/ 1);}
+\DoxyCodeLine{56     in.set\_y(-\/1.f);}
+\DoxyCodeLine{57     in.set\_z(1.f -\/ (2.f * (\textcolor{keywordtype}{float})(v2.y) / (vpHeight)));}
+\DoxyCodeLine{58     in.set\_w(1.f);}
+\DoxyCodeLine{59 }
+\DoxyCodeLine{60     gef::Matrix44 calc;}
+\DoxyCodeLine{61     calc.SetIdentity();}
+\DoxyCodeLine{62 }
+\DoxyCodeLine{63     calc.SetTranslation(in);}
+\DoxyCodeLine{64 }
+\DoxyCodeLine{65     gef::Matrix44 actualPos = calc * matProjection;}
+\DoxyCodeLine{66 }
+\DoxyCodeLine{67     gef::Vector4 pos = actualPos.GetTranslation();}
+\DoxyCodeLine{68     pos.set\_x(pos.x());}
+\DoxyCodeLine{69     pos.set\_y(pos.y() -\/ 8.1f);}
+\DoxyCodeLine{70 }
+\DoxyCodeLine{71     \textcolor{keywordtype}{float} posY = pos.y();}
+\DoxyCodeLine{72     pos.set\_z(posY);}
+\DoxyCodeLine{73     pos.set\_y(0);}
+\DoxyCodeLine{74 }
+\DoxyCodeLine{75     gef::Vector4 cameraPos = SceneApp::instance-\/>GetCameraLookAt();}
+\DoxyCodeLine{76 }
+\DoxyCodeLine{77     \textcolor{comment}{// @TODO: Figure out WHY?}}
+\DoxyCodeLine{78     pos.set\_x(pos.x() * 1.35714286);}
+\DoxyCodeLine{79     pos.set\_z(cameraPos.z() + pos.z() * 1.75f);}
+\DoxyCodeLine{80 }
+\DoxyCodeLine{81     \textcolor{keywordflow}{return} pos;}
+\DoxyCodeLine{82 \}}
+\DoxyCodeLine{83 }
+\DoxyCodeLine{84 \textcolor{keyword}{static} gef::Vector4 ProjectWorldToScreenSpace(gef::Vector4 v4)}
+\DoxyCodeLine{85 \{}
+\DoxyCodeLine{86     gef::Renderer3D* renderer = SceneApp::instance-\/>GetRenderer3D();}
+\DoxyCodeLine{87     v4.set\_w(1.f);}
+\DoxyCodeLine{88     v4.Transform(renderer-\/>view\_matrix());}
+\DoxyCodeLine{89     v4.Transform(renderer-\/>projection\_matrix());}
+\DoxyCodeLine{90 }
+\DoxyCodeLine{91     \textcolor{keywordtype}{float} clipSpaceX = v4.x() / v4.w();}
+\DoxyCodeLine{92     \textcolor{keywordtype}{float} clipSpaceY = v4.y() / v4.w();}
+\DoxyCodeLine{93 }
+\DoxyCodeLine{94     \textcolor{keywordtype}{float} xScreen = (clipSpaceX + 1.f) * SceneApp::instance-\/>platform().width() / 2;}
+\DoxyCodeLine{95     \textcolor{keywordtype}{float} yScreen = (1 -\/ clipSpaceY) * SceneApp::instance-\/>platform().height() / 2;}
+\DoxyCodeLine{96 }
+\DoxyCodeLine{97     \textcolor{keywordflow}{return} gef::Vector4(xScreen, yScreen, 0);}
+\DoxyCodeLine{98 \}}
+\DoxyCodeLine{99 }
+\DoxyCodeLine{103 \textcolor{keyword}{static} \textcolor{keywordtype}{float} FindAngle(\textcolor{keyword}{const} gef::Vector4\& a, \textcolor{keyword}{const} gef::Vector4\& b)}
+\DoxyCodeLine{104 \{}
+\DoxyCodeLine{105     \textcolor{keywordtype}{double} dot\_product = a.x() * b.x() + a.y() * b.y() + a.z() * b.z();}
+\DoxyCodeLine{106     \textcolor{keywordtype}{double} mag\_a = std::sqrt(a.x() * a.x() + a.y() * a.y() + a.z() * a.z());}
+\DoxyCodeLine{107     \textcolor{keywordtype}{double} mag\_b = std::sqrt(b.x() * b.x() + b.y() * b.y() + b.z() * b.z());}
+\DoxyCodeLine{108     \textcolor{keywordtype}{double} cos\_theta = dot\_product / (mag\_a * mag\_b);}
+\DoxyCodeLine{109     \textcolor{keywordtype}{double} theta = std::acos(cos\_theta) * 180 / \mbox{\hyperlink{_utils_8h_a598a3330b3c21701223ee0ca14316eca}{PI}};}
+\DoxyCodeLine{110     \textcolor{keywordflow}{return} theta;}
+\DoxyCodeLine{111 \}}
+\DoxyCodeLine{112 }
+\DoxyCodeLine{116 \textcolor{keyword}{static} gef::Vector4 Lerp(\textcolor{keyword}{const} gef::Vector4\& a, \textcolor{keyword}{const} gef::Vector4\& b, \textcolor{keywordtype}{float} alpha)}
+\DoxyCodeLine{117 \{}
+\DoxyCodeLine{118     \textcolor{keywordtype}{float} x = gef::Lerp(a.x(), b.x(), alpha);}
+\DoxyCodeLine{119     \textcolor{keywordtype}{float} y = gef::Lerp(a.y(), b.y(), alpha);}
+\DoxyCodeLine{120     \textcolor{keywordtype}{float} z = gef::Lerp(a.z(), b.z(), alpha);}
+\DoxyCodeLine{121 }
+\DoxyCodeLine{122     \textcolor{keywordflow}{return} gef::Vector4(x, y, z);}
+\DoxyCodeLine{123 \}}
+\DoxyCodeLine{124 }
+\DoxyCodeLine{128 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespace_apply_damage_on}{ApplyDamageOn}}}
+\DoxyCodeLine{129 \{}
+\DoxyCodeLine{130     \textcolor{keyword}{enum} \mbox{\hyperlink{namespace_apply_damage_on_aab4652342cac35cdff458c5aa2bad289}{Type}}}
+\DoxyCodeLine{131     \{}
+\DoxyCodeLine{132         \mbox{\hyperlink{namespace_apply_damage_on_aab4652342cac35cdff458c5aa2bad289a17c0a2d2e83ad970a7bb7395c9819d1f}{EnemiesOnly}},}
+\DoxyCodeLine{133         \mbox{\hyperlink{namespace_apply_damage_on_aab4652342cac35cdff458c5aa2bad289af658fe1d6a4dd178955748cb85f117ac}{PlayerOnly}},}
+\DoxyCodeLine{134         \mbox{\hyperlink{namespace_apply_damage_on_aab4652342cac35cdff458c5aa2bad289a1b46eaf8b75eb03bd8e0c31036b8d89b}{EnemiesAndPlayer}}}
+\DoxyCodeLine{135     \};}
+\DoxyCodeLine{136 \}}
+
+\end{DoxyCode}

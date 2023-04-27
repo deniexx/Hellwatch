@@ -1,0 +1,174 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="main__vita_8cpp" kind="file" language="C++">
+    <compoundname>main_vita.cpp</compoundname>
+    <includes local="no">platform/vita/system/platform_vita.h</includes>
+    <includes refid="scene__app_8h" local="yes">scene_app.h</includes>
+    <incdepgraph>
+      <node id="1">
+        <label>D:/Uni/CMP208/Hellwatch/main_vita.cpp</label>
+        <link refid="main__vita_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>obj_mesh_loader.h</label>
+        <link refid="obj__mesh__loader_8h"/>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>primitive_builder.h</label>
+        <link refid="primitive__builder_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>scene_app.h</label>
+        <link refid="scene__app_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>box2d/box2d.h</label>
+      </node>
+      <node id="9">
+        <label>cstddef</label>
+      </node>
+      <node id="19">
+        <label>future</label>
+      </node>
+      <node id="14">
+        <label>gef.h</label>
+      </node>
+      <node id="18">
+        <label>graphics/font.h</label>
+      </node>
+      <node id="8">
+        <label>graphics/material.h</label>
+      </node>
+      <node id="10">
+        <label>graphics/scene.h</label>
+      </node>
+      <node id="15">
+        <label>map</label>
+      </node>
+      <node id="5">
+        <label>maths/vector2.h</label>
+      </node>
+      <node id="7">
+        <label>maths/vector4.h</label>
+      </node>
+      <node id="2">
+        <label>platform/vita/system/platform_vita.h</label>
+      </node>
+      <node id="20">
+        <label>random</label>
+      </node>
+      <node id="16">
+        <label>string</label>
+      </node>
+      <node id="4">
+        <label>system/application.h</label>
+      </node>
+      <node id="12">
+        <label>system/platform.h</label>
+      </node>
+      <node id="17">
+        <label>vector</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="main__vita_8cpp_1a69cc9008095a7d96918395b56d077919" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int sceLibcHeapSize</definition>
+        <argsstring></argsstring>
+        <name>sceLibcHeapSize</name>
+        <initializer>= 128*1024*1024</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/main_vita.cpp" line="4" column="14" bodyfile="D:/Uni/CMP208/Hellwatch/main_vita.cpp" bodystart="4" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="main__vita_8cpp_1a840291bc02cba5474a4cb46a9b9566fe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int main</definition>
+        <argsstring>(void)</argsstring>
+        <name>main</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/main_vita.cpp" line="6" column="5" bodyfile="D:/Uni/CMP208/Hellwatch/main_vita.cpp" bodystart="6" bodyend="15"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&lt;platform/vita/system/platform_vita.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="scene__app_8h" kindref="compound">scene_app.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="main__vita_8cpp_1a69cc9008095a7d96918395b56d077919" kindref="member">sceLibcHeapSize</ref><sp/>=<sp/>128*1024*1024;<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Sets<sp/>up<sp/>the<sp/>heap<sp/>area<sp/>size<sp/>as<sp/>128MiB.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="main__vita_8cpp_1a840291bc02cba5474a4cb46a9b9566fe" kindref="member">main</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="7"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>initialisation</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/>gef::PlatformVita<sp/>platform;</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_scene_app" kindref="compound">SceneApp</ref><sp/>myApp(platform);</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/>myApp.Run();</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="15"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="D:/Uni/CMP208/Hellwatch/main_vita.cpp"/>
+  </compounddef>
+</doxygen>

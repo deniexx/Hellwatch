@@ -1,0 +1,65 @@
+.TH "D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/PlayerController.h" 3 "Thu Apr 27 2023" "Hellwatch" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/PlayerController.h
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <cstdint>\fP
+.br
+\fC#include <functional>\fP
+.br
+\fC#include <input/touch_input_manager\&.h>\fP
+.br
+\fC#include <input/keyboard\&.h>\fP
+.br
+\fC#include 'Utils\&.h'\fP
+.br
+
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "struct \fBFKeyBindKeyboard\fP"
+.br
+.ti -1c
+.RI "struct \fBFKeyBindController\fP"
+.br
+.ti -1c
+.RI "struct \fBFKeyBindMouse\fP"
+.br
+.ti -1c
+.RI "struct \fBFKeyBindSet\fP"
+.br
+.ti -1c
+.RI "class \fBPlayerController\fP"
+.br
+.RI "Responsible for reading input and calling appropriate events  "
+.in -1c
+.SS "Namespaces"
+
+.in +1c
+.ti -1c
+.RI "namespace \fBgef\fP"
+.br
+.ti -1c
+.RI "namespace \fBHellwatchInputAction\fP"
+.br
+.ti -1c
+.RI "namespace \fBHellwatchControllerAxis\fP"
+.br
+.in -1c
+.SS "Enumerations"
+
+.in +1c
+.ti -1c
+.RI "enum \fBHellwatchInputAction::Type\fP { \fBHellwatchInputAction::None\fP = 0, \fBHellwatchInputAction::Pressed\fP, \fBHellwatchInputAction::Held\fP, \fBHellwatchInputAction::Released\fP }"
+.br
+.ti -1c
+.RI "enum \fBHellwatchControllerAxis::Type\fP { \fBHellwatchControllerAxis::None\fP = 0, \fBHellwatchControllerAxis::LeftStickXY\fP, \fBHellwatchControllerAxis::RightStickXY\fP }"
+.br
+.in -1c
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Hellwatch from the source code\&.

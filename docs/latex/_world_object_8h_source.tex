@@ -1,0 +1,87 @@
+\hypertarget{_world_object_8h_source}{}\doxysection{World\+Object.\+h}
+\label{_world_object_8h_source}\index{D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/WorldObject.h@{D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/WorldObject.h}}
+\mbox{\hyperlink{_world_object_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{2 }
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#include <maths/Matrix44.h>}}
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <maths/quaternion.h>}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_utils_8h}{Utils.h}}"{}}}
+\DoxyCodeLine{6 }
+\DoxyCodeLine{7 \textcolor{comment}{/************************************************************************/}}
+\DoxyCodeLine{8 \textcolor{comment}{/*                         FORWARD DECLARATIONS                         */}}
+\DoxyCodeLine{9 \textcolor{comment}{/************************************************************************/}}
+\DoxyCodeLine{10 \textcolor{keyword}{class }b2Body;}
+\DoxyCodeLine{11 }
+\DoxyCodeLine{12 \textcolor{comment}{/************************************************************************/}}
+\DoxyCodeLine{13 \textcolor{comment}{/*                          Base Object Class                           */}}
+\DoxyCodeLine{14 \textcolor{comment}{/************************************************************************/}}
+\DoxyCodeLine{15 \textcolor{keyword}{class }\mbox{\hyperlink{class_world_object}{WorldObject}}}
+\DoxyCodeLine{16 \{}
+\DoxyCodeLine{17 }
+\DoxyCodeLine{18 \textcolor{keyword}{public}:}
+\DoxyCodeLine{19 }
+\DoxyCodeLine{23     \mbox{\hyperlink{class_world_object_a632d2e78acdcbc0aef09951134340d4e}{WorldObject}}();}
+\DoxyCodeLine{24 }
+\DoxyCodeLine{25     \mbox{\hyperlink{class_world_object_a287e5b87a26133cd35f3015268d2a5a3}{\string~WorldObject}}();}
+\DoxyCodeLine{26 }
+\DoxyCodeLine{32     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_world_object_aa2d0bc51a9b2dac1930c37e2401e8934}{Init}}(\mbox{\hyperlink{class_world_object}{WorldObject}}* owner = \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{33 }
+\DoxyCodeLine{37     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_world_object_a8500a6a24c62699fa103a68349407a3f}{PostInit}}();}
+\DoxyCodeLine{38 }
+\DoxyCodeLine{43     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_world_object_a828815709498f192bf138ecfe416c529}{Update}}(\textcolor{keywordtype}{float} deltaTime);}
+\DoxyCodeLine{44 }
+\DoxyCodeLine{48     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_world_object_a2a30bf431fa478eb5d24683e1906c261}{Render}}();}
+\DoxyCodeLine{49 }
+\DoxyCodeLine{53     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_world_object_a7c563531a541e9f5ff4193443cedd515}{OnCollision}}(b2Body* OtherBody);}
+\DoxyCodeLine{54 }
+\DoxyCodeLine{55     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_world_object_a9f76e2def47f4d6be6bafb330ac0394b}{ID}} = \mbox{\hyperlink{_utils_8h_a642e16f35aa1e585c25e405ede76e115}{NO\_ID}};}
+\DoxyCodeLine{56 }
+\DoxyCodeLine{57 \textcolor{keyword}{protected}:}
+\DoxyCodeLine{58 }
+\DoxyCodeLine{59     b2Body* \mbox{\hyperlink{class_world_object_a025ba78ec5cc2607f7e62750a7c37749}{collisionBody}} = \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{60     gef::Matrix44 \mbox{\hyperlink{class_world_object_a9e5ac0cc278f5766b6020950fdabbe75}{transformMat}};}
+\DoxyCodeLine{61     \mbox{\hyperlink{class_world_object}{WorldObject}}* \mbox{\hyperlink{class_world_object_a8917ba1d61e12c12f7246c7b95cd4094}{owningObject}};}
+\DoxyCodeLine{62 }
+\DoxyCodeLine{63     gef::Vector4 \mbox{\hyperlink{class_world_object_a78bd9162f55826c5c68706d688578cf8}{translation}};}
+\DoxyCodeLine{64     gef::Vector4 \mbox{\hyperlink{class_world_object_a45f28fb0c7cf14a6c92ab72eaa4eb9a9}{scale}};}
+\DoxyCodeLine{65     gef::Vector4 \mbox{\hyperlink{class_world_object_a519b69f0419703cfbe08580d4b2ab408}{rotationVec}};}
+\DoxyCodeLine{66 }
+\DoxyCodeLine{67     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_world_object_a60c2b1f707b5694f97dd950996d05e11}{bMarkedForDelete}} = \textcolor{keyword}{false};}
+\DoxyCodeLine{68     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_world_object_ac10cc37682a3a3cce8405411fbd8f4c3}{bDisableUpdate}} = \textcolor{keyword}{false};}
+\DoxyCodeLine{69 }
+\DoxyCodeLine{70     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_world_object_a4c83c0d8e3817aac3ef2080ec0972802}{BuildTransform}}();}
+\DoxyCodeLine{71     }
+\DoxyCodeLine{72 \textcolor{keyword}{public}:}
+\DoxyCodeLine{73 }
+\DoxyCodeLine{74 \textcolor{comment}{    /************************************************************************/}}
+\DoxyCodeLine{75     \textcolor{comment}{/*                              SETTERS                                 */}}
+\DoxyCodeLine{76 \textcolor{comment}{    /************************************************************************/}}
+\DoxyCodeLine{77     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_world_object_a830b64bbf6df3fc50284b0316c124133}{SetTranslation}}(\textcolor{keyword}{const} gef::Vector4\& inTranslation);}
+\DoxyCodeLine{78     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_world_object_a18ba8b67b53f7df01220643617ecd75c}{SetRotation}}(\textcolor{keyword}{const} gef::Vector4\& inRotation);}
+\DoxyCodeLine{79     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_world_object_a18ba8b67b53f7df01220643617ecd75c}{SetRotation}}(\textcolor{keyword}{const} \textcolor{keywordtype}{float} inRotation);}
+\DoxyCodeLine{80     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_world_object_ae00d341e9ac8909374dd556aaecbdb46}{SetScale}}(\textcolor{keyword}{const} gef::Vector4\& inScale);}
+\DoxyCodeLine{81     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_world_object_a8817deac42a357d2ed476791c7b76511}{SetCollisionBody}}(b2Body* inCollisionBody);}
+\DoxyCodeLine{82 }
+\DoxyCodeLine{83 \textcolor{comment}{    /************************************************************************/}}
+\DoxyCodeLine{84     \textcolor{comment}{/*                              GETTERS                                 */}}
+\DoxyCodeLine{85 \textcolor{comment}{    /************************************************************************/}}
+\DoxyCodeLine{86     \_\_forceinline \textcolor{keyword}{const} \textcolor{keyword}{virtual} gef::Vector4\& \mbox{\hyperlink{class_world_object_a9967baa65719f1418641598a244306a5}{GetTranslation}}()\textcolor{keyword}{ const }\{ \textcolor{keywordflow}{return} \mbox{\hyperlink{class_world_object_a9e5ac0cc278f5766b6020950fdabbe75}{transformMat}}.GetTranslation(); \}}
+\DoxyCodeLine{87     \_\_forceinline \textcolor{keyword}{const} \textcolor{keyword}{virtual} gef::Vector4\& \mbox{\hyperlink{class_world_object_a271e4b4870fadf60e285576f94b31e79}{GetRotation}}()\textcolor{keyword}{ const }\{ \textcolor{keywordflow}{return} \mbox{\hyperlink{class_world_object_a519b69f0419703cfbe08580d4b2ab408}{rotationVec}}; \};}
+\DoxyCodeLine{88     \_\_forceinline \textcolor{keyword}{const} \textcolor{keyword}{virtual} \textcolor{keywordtype}{float} \mbox{\hyperlink{class_world_object_aa959995cc385843f1e2b0139e4413ab5}{GetRotationF}}()\textcolor{keyword}{ const }\{ \textcolor{keywordflow}{return} 0.f; \}}
+\DoxyCodeLine{89     \_\_forceinline \textcolor{keyword}{const} \textcolor{keyword}{virtual} gef::Vector4\& \mbox{\hyperlink{class_world_object_a223b3653f965b7698ec28c9b4fc84e28}{GetScale}}()\textcolor{keyword}{ const }\{ \textcolor{keywordflow}{return} \mbox{\hyperlink{class_world_object_a9e5ac0cc278f5766b6020950fdabbe75}{transformMat}}.GetScale(); \}}
+\DoxyCodeLine{90     \_\_forceinline \textcolor{keyword}{const} gef::Matrix44\& \mbox{\hyperlink{class_world_object_a1302aea00b9a5f348459f55e9dd50725}{GetTransform}}()\textcolor{keyword}{ const }\{ \textcolor{keywordflow}{return} \mbox{\hyperlink{class_world_object_a9e5ac0cc278f5766b6020950fdabbe75}{transformMat}}; \}}
+\DoxyCodeLine{91     \_\_forceinline \mbox{\hyperlink{class_world_object}{WorldObject}}* \mbox{\hyperlink{class_world_object_a0fdf372cdda0fb026916b60e19e657a0}{GetOwner}}()\textcolor{keyword}{ const }\{ \textcolor{keywordflow}{return} \mbox{\hyperlink{class_world_object_a8917ba1d61e12c12f7246c7b95cd4094}{owningObject}}; \}}
+\DoxyCodeLine{92     \_\_forceinline b2Body* \mbox{\hyperlink{class_world_object_aa3b5f5e5e1ed26c94265854e2858bdee}{GetCollisionBody}}()\textcolor{keyword}{ const }\{ \textcolor{keywordflow}{return} \mbox{\hyperlink{class_world_object_a025ba78ec5cc2607f7e62750a7c37749}{collisionBody}}; \}}
+\DoxyCodeLine{93 }
+\DoxyCodeLine{94 }
+\DoxyCodeLine{95     \_\_forceinline \textcolor{keywordtype}{void} \mbox{\hyperlink{class_world_object_a4402fa17dfd062fc97750d581d4f774b}{MarkForDelete}}() \{ \mbox{\hyperlink{class_world_object_a60c2b1f707b5694f97dd950996d05e11}{bMarkedForDelete}} = \textcolor{keyword}{true}; \}}
+\DoxyCodeLine{96     \_\_forceinline \textcolor{keywordtype}{void} \mbox{\hyperlink{class_world_object_a650a599e9ffa751eaba296c4ef6ec2d2}{DisableUpdate}}() \{ \mbox{\hyperlink{class_world_object_ac10cc37682a3a3cce8405411fbd8f4c3}{bDisableUpdate}} = \textcolor{keyword}{true}; \}}
+\DoxyCodeLine{97     \_\_forceinline \textcolor{keywordtype}{void} \mbox{\hyperlink{class_world_object_a42e101b6adf4911396d95acc5b1741d8}{EnableUpdate}}() \{ \mbox{\hyperlink{class_world_object_ac10cc37682a3a3cce8405411fbd8f4c3}{bDisableUpdate}} = \textcolor{keyword}{false}; \}}
+\DoxyCodeLine{98 }
+\DoxyCodeLine{99     \_\_forceinline \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_world_object_a78b0b88900685e80feffc6921fd9f370}{ShouldUpdate}}() \{ \textcolor{keywordflow}{return} !\mbox{\hyperlink{class_world_object_ac10cc37682a3a3cce8405411fbd8f4c3}{bDisableUpdate}}; \}}
+\DoxyCodeLine{100     \_\_forceinline \textcolor{keyword}{const} \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_world_object_aaebbb0abbabef79ad542f01db4ef6101}{GetIsMarkedForDelete}}()\textcolor{keyword}{ const }\{ \textcolor{keywordflow}{return} \mbox{\hyperlink{class_world_object_a60c2b1f707b5694f97dd950996d05e11}{bMarkedForDelete}}; \}}
+\DoxyCodeLine{101 \};}
+\DoxyCodeLine{102 }
+
+\end{DoxyCode}

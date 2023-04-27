@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__player_controller_8cpp" xml:lang="en-US">
+<title>D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/PlayerController.cpp File Reference</title>
+<indexterm><primary>D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/PlayerController.cpp</primary></indexterm>
+<programlisting linenumbering="unnumbered">#include &quot;PlayerController.h&quot;<?linebreak?>#include &lt;system/application.h&gt;<?linebreak?>#include &lt;input/input_manager.h&gt;<?linebreak?>#include &lt;input/sony_controller_input_manager.h&gt;<?linebreak?></programlisting>Include dependency graph for PlayerController.cpp:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_player_controller_8cpp__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>

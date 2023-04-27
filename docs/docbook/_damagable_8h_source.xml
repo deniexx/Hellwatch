@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__damagable_8h_source" xml:lang="en-US">
+<title>Damagable.h</title>
+<indexterm><primary>D:/Uni/CMP208/Hellwatch/build/vs2017/Interfaces/Damagable.h</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered">1 <emphasis role="preprocessor">#pragma&#32;once</emphasis>
+2 
+6 <emphasis role="keyword">class&#32;</emphasis><link linkend="_class_i_damagable">IDamagable</link>
+7 {
+8 &#32;&#32;&#32;&#32;<emphasis role="keyword">virtual</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;TakeDamage(<emphasis role="keywordtype">float</emphasis>&#32;damageAmount)&#32;=&#32;0;
+9 };
+</programlisting></section>

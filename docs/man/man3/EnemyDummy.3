@@ -1,0 +1,53 @@
+.TH "EnemyDummy" 3 "Thu Apr 27 2023" "Hellwatch" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+EnemyDummy \- A dummy enemy class used for testing damage   
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <EnemyDummy\&.h>\fP
+.PP
+Inherits \fBMeshActor\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "virtual void \fBTakeDamage\fP (float damageAmount)"
+.br
+.ti -1c
+.RI "float \fBGetHealth\fP ()"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "virtual void \fBPostInit\fP () override"
+.br
+.RI "Override this to Initialize variables or do any necessary work when the object is created  "
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+A dummy enemy class used for testing damage  
+.SH "Member Function Documentation"
+.PP 
+.SS "float EnemyDummy::GetHealth ()\fC [inline]\fP"
+
+.SS "void EnemyDummy::PostInit ()\fC [override]\fP, \fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+Override this to Initialize variables or do any necessary work when the object is created  
+.PP
+Reimplemented from \fBWorldObject\fP\&.
+.SS "void EnemyDummy::TakeDamage (float damageAmount)\fC [virtual]\fP"
+
+.PP
+Reimplemented from \fBMeshActor\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Hellwatch from the source code\&.

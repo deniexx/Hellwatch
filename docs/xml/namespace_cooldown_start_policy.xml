@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="namespace_cooldown_start_policy" kind="namespace" language="C++">
+    <compoundname>CooldownStartPolicy</compoundname>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="namespace_cooldown_start_policy_1a99c3a8f4a331db7e6db8dfda1785b101" prot="public" static="no" strong="no">
+        <type></type>
+        <name>Type</name>
+        <qualifiedname>CooldownStartPolicy::Type</qualifiedname>
+        <enumvalue id="namespace_cooldown_start_policy_1a99c3a8f4a331db7e6db8dfda1785b101abdb334784b8226969ec44140a0951d92" prot="public">
+          <name>OnAbilityStart</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_cooldown_start_policy_1a99c3a8f4a331db7e6db8dfda1785b101af1b51dae9cd99c300bce560116641d60" prot="public">
+          <name>OnAbilityEnd</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/Abilities/Ability.h" line="31" column="1" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/Abilities/Ability.h" bodystart="32" bodyend="35"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>When should cooldown start, on start of ability or end of ability  </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/Abilities/Ability.h" line="29" column="1"/>
+  </compounddef>
+</doxygen>

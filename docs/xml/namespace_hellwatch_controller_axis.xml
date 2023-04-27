@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="namespace_hellwatch_controller_axis" kind="namespace" language="C++">
+    <compoundname>HellwatchControllerAxis</compoundname>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="namespace_hellwatch_controller_axis_1a6014138ce0ea9634c8a9c36539a7a967" prot="public" static="no" strong="no">
+        <type></type>
+        <name>Type</name>
+        <qualifiedname>HellwatchControllerAxis::Type</qualifiedname>
+        <enumvalue id="namespace_hellwatch_controller_axis_1a6014138ce0ea9634c8a9c36539a7a967af556634c68eda0587cb64022a5dec80d" prot="public">
+          <name>None</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_hellwatch_controller_axis_1a6014138ce0ea9634c8a9c36539a7a967a2c35b461f3a44e7f7e139b6829990d77" prot="public">
+          <name>LeftStickXY</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_hellwatch_controller_axis_1a6014138ce0ea9634c8a9c36539a7a967a052b1c55389f1a8945ac50fdf80d0220" prot="public">
+          <name>RightStickXY</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/PlayerController.h" line="29" column="1" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/PlayerController.h" bodystart="30" bodyend="34"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/PlayerController.h" line="27" column="1"/>
+  </compounddef>
+</doxygen>

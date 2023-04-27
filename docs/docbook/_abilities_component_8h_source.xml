@@ -1,0 +1,61 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__abilities_component_8h_source" xml:lang="en-US">
+<title>AbilitiesComponent.h</title>
+<indexterm><primary>D:/Uni/CMP208/Hellwatch/build/vs2017/ActorComponents/AbilitiesComponent.h</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered">1 <emphasis role="preprocessor">#pragma&#32;once</emphasis>
+2 
+3 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="__actor_component_8h">ActorComponent.h</link>&quot;</emphasis>
+4 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="__ability_8h">Abilities/Ability.h</link>&quot;</emphasis>
+5 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="__attribute_component_8h">Attributes/AttributeComponent.h</link>&quot;</emphasis>
+6 
+7 <emphasis role="preprocessor">#include&#32;&lt;vector&gt;</emphasis>
+8 <emphasis role="preprocessor">#include&#32;&lt;string&gt;</emphasis>
+9 
+14 <emphasis role="keyword">class&#32;</emphasis><link linkend="_class_abilities_component">AbilitiesComponent</link>&#32;:&#32;<emphasis role="keyword">public</emphasis>&#32;<link linkend="_class_actor_component">ActorComponent</link>
+15 {
+16 
+17 <emphasis role="keyword">public</emphasis>:
+18 
+23 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_abilities_component_1a2002c80ff8a5e6de25e5269310c6dfa5">AddAbility</link>(<link linkend="_class_ability">Ability</link>*&#32;abilityToAdd);
+24 
+28 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_abilities_component_1a06d5228f074b929c061cf34af9460be4">EquipAbility</link>(std::string&#32;abilityName,&#32;<link linkend="_namespace_ability_activation_key_1ab159d3c3f26196a9ff493b67ecf7e68c">AbilityActivationKey::Type</link>&#32;keyToEquipAt);
+29 
+33 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_abilities_component_1a092acad2af7f3c106d117a3c51a04971">ActivateAbilityByKey</link>(<link linkend="_namespace_ability_activation_key_1ab159d3c3f26196a9ff493b67ecf7e68c">AbilityActivationKey::Type</link>&#32;key);
+34 
+39 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_abilities_component_1aae3dce0a0f06941f91f8c14dc1a3878e">ActivateAbilityByName</link>(std::string&#32;name);
+40 
+44 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_abilities_component_1a3d01f13b661e8d6bfe3c0a8f2d6af7ea">EndAbilityByKey</link>(<link linkend="_namespace_ability_activation_key_1ab159d3c3f26196a9ff493b67ecf7e68c">AbilityActivationKey::Type</link>&#32;key);
+45 
+51 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_abilities_component_1a310f5751a58f69fba41f473b492e5582">EndAbilityByName</link>(std::string&#32;name);
+52 
+56 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_abilities_component_1ab57de1cda84055ee7564f0709e03777f">RegisterAttributes</link>(<link linkend="_class_attribute_component">AttributeComponent</link>*&#32;newAttributes);
+57 
+61 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_class_abilities_component_1a10a7a5652a4d850b5845766224a43c54">IsAbilityInCooldown</link>(<emphasis role="keywordtype">int</emphasis>&#32;key);
+62 
+66 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_class_abilities_component_1a46f90af4015a7e4fa9679f5743547d94">GetAbilityCooldown</link>(<emphasis role="keywordtype">int</emphasis>&#32;key);
+67 
+68 &#32;&#32;&#32;&#32;<emphasis role="keyword">virtual</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_abilities_component_1a96732cdae01d866200dc66a89200695f">UpdateComponent</link>(<emphasis role="keywordtype">float</emphasis>&#32;deltaTime)&#32;<emphasis role="keyword">override</emphasis>;
+69 
+70 <emphasis role="keyword">protected</emphasis>:
+71 
+72 &#32;&#32;&#32;&#32;<emphasis role="keyword">virtual</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_abilities_component_1aa1a55ce45b753097f0e2d7d4db4a419b">PostInit</link>()&#32;<emphasis role="keyword">override</emphasis>;
+73 
+74 <emphasis role="keyword">private</emphasis>:
+75 
+76 &#32;&#32;&#32;&#32;std::vector&lt;Ability*&gt;&#32;availableAbilities;
+77 &#32;&#32;&#32;&#32;<link linkend="_class_ability">Ability</link>*&#32;equippedAbilities[4];
+78 &#32;&#32;&#32;&#32;<link linkend="_class_attribute_component">AttributeComponent</link>*&#32;attributes&#32;=&#32;<emphasis role="keyword">nullptr</emphasis>;
+79 
+80 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;HasAbility(<link linkend="_class_ability">Ability</link>*&#32;abilityToCheck);
+81 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;HasAbility(<emphasis role="keyword">const</emphasis>&#32;std::string&amp;&#32;abilityToCheck);
+82 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;IsAbilityEquipped(<link linkend="_class_ability">Ability</link>*&#32;abilityToCheck);
+83 &#32;&#32;&#32;&#32;<link linkend="_class_ability">Ability</link>*&#32;FindAbility(<emphasis role="keyword">const</emphasis>&#32;std::string&amp;&#32;abilityName);
+84 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;EquipAbilityInternal(<link linkend="_class_ability">Ability</link>*&#32;abilityToEquip,&#32;<link linkend="_namespace_ability_activation_key_1ab159d3c3f26196a9ff493b67ecf7e68c">AbilityActivationKey::Type</link>&#32;keyToEquipAt);
+85 
+86 <emphasis role="keyword">public</emphasis>:
+87 
+88 &#32;&#32;&#32;&#32;<link linkend="_class_attribute_component">AttributeComponent</link>*&#32;<link linkend="_class_abilities_component_1aa2e9909a907d358e34fc58a387f0e493">GetAttributeComponent</link>()<emphasis role="keyword">&#32;const&#32;</emphasis>{&#32;<emphasis role="keywordflow">return</emphasis>&#32;attributes;&#32;}
+89 
+90 };
+91 
+</programlisting></section>

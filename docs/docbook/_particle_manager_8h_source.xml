@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__particle_manager_8h_source" xml:lang="en-US">
+<title>ParticleManager.h</title>
+<indexterm><primary>D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/ParticleManager.h</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered">1 <emphasis role="preprocessor">#pragma&#32;once</emphasis>
+2 
+3 <emphasis role="preprocessor">#include&#32;&lt;map&gt;</emphasis>
+4 <emphasis role="preprocessor">#include&#32;&lt;string&gt;</emphasis>
+5 <emphasis role="preprocessor">#include&#32;&lt;vector&gt;</emphasis>
+6 
+7 <emphasis role="preprocessor">#include&#32;&quot;maths/vector4.h&quot;</emphasis>
+8 <emphasis role="preprocessor">#include&#32;&quot;graphics/texture.h&quot;</emphasis>
+9 
+10 <emphasis role="keyword">class&#32;</emphasis>ParticleSprite;
+11 
+12 <emphasis role="keyword">namespace&#32;</emphasis><link linkend="_namespace_hellwatch_particle">HellwatchParticle</link>
+13 {
+14 &#32;&#32;&#32;&#32;<emphasis role="keyword">enum</emphasis>&#32;<link linkend="_namespace_hellwatch_particle_1a93a028826056ca781710ef2830834f51">Type</link>
+15 &#32;&#32;&#32;&#32;{
+16 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_namespace_hellwatch_particle_1a93a028826056ca781710ef2830834f51a6436e49d303ed9b9a1fa51de335afc1d">Explosion</link>,
+17 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_namespace_hellwatch_particle_1a93a028826056ca781710ef2830834f51a31724befc90ab0517472666b48eedb0b">Death</link>,
+18 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_namespace_hellwatch_particle_1a93a028826056ca781710ef2830834f51acfc9f6dd38f3e82bbc2fb485f2beea26">Dash</link>,
+19 &#32;&#32;&#32;&#32;};
+20 }
+21 
+22 <emphasis role="keyword">class&#32;</emphasis><link linkend="_class_particle_manager">ParticleManager</link>
+23 {
+24 <emphasis role="keyword">public</emphasis>:
+25 
+26 &#32;&#32;&#32;&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keyword">inline</emphasis>&#32;<link linkend="_class_particle_manager">ParticleManager</link>*&#32;ParticleManager::instance&#32;=&#32;<emphasis role="keyword">nullptr</emphasis>;
+27 
+28 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_particle_manager_1a192bc9932f68795cf756541ad35cdadb">Init</link>();
+29 
+33 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_particle_manager_1a03998e9980dd017daa61ce69a0ec194f">PrepareParticles</link>();
+34 
+38 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_particle_manager_1a74b7e3175e7bf9df045540cedf8c5f05">PlayParticlesAtLocation</link>(<link linkend="_namespace_hellwatch_particle_1a93a028826056ca781710ef2830834f51">HellwatchParticle::Type</link>&#32;type,&#32;gef::Vector4&#32;location);
+39 
+43 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_particle_manager_1a74b7e3175e7bf9df045540cedf8c5f05">PlayParticlesAtLocation</link>(<link linkend="_namespace_hellwatch_particle_1a93a028826056ca781710ef2830834f51">HellwatchParticle::Type</link>&#32;type,&#32;gef::Vector4&#32;location,&#32;<emphasis role="keywordtype">float</emphasis>&#32;duration);
+44 
+48 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_particle_manager_1a74b7e3175e7bf9df045540cedf8c5f05">PlayParticlesAtLocation</link>(<link linkend="_namespace_hellwatch_particle_1a93a028826056ca781710ef2830834f51">HellwatchParticle::Type</link>&#32;type,&#32;gef::Vector4&#32;location,&#32;<emphasis role="keywordtype">float</emphasis>&#32;duration,&#32;<emphasis role="keywordtype">float</emphasis>&#32;lingerTime);
+49 
+50 <emphasis role="keyword">private</emphasis>:
+51 
+52 &#32;&#32;&#32;&#32;std::map&lt;HellwatchParticle::Type,&#32;std::vector&lt;gef::Texture*&gt;&gt;&#32;particlesMap;
+53 
+54 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;LoadTexturesForParticles(<link linkend="_namespace_hellwatch_particle_1a93a028826056ca781710ef2830834f51">HellwatchParticle::Type</link>&#32;type,&#32;std::vector&lt;std::string&gt;&#32;paths);
+55 };
+56 
+</programlisting></section>

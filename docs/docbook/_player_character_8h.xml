@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__player_character_8h" xml:lang="en-US">
+<title>D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/PlayerCharacter.h File Reference</title>
+<indexterm><primary>D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/PlayerCharacter.h</primary></indexterm>
+<programlisting linenumbering="unnumbered">#include &quot;Actors/MeshActor.h&quot;<?linebreak?>#include &quot;GameFramework/PlayerController.h&quot;<?linebreak?>#include &quot;graphics/skinned_mesh_instance.h&quot;<?linebreak?>#include &quot;GameFramework/Utils.h&quot;<?linebreak?>#include &quot;graphics/sprite.h&quot;<?linebreak?></programlisting>Include dependency graph for PlayerCharacter.h:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_player_character_8h__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+This graph shows which files directly or indirectly include this file:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_player_character_8h__dep__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>class <link linkend="_class_player_character">PlayerCharacter</link></para>
+
+<para>The class that the player uses during the GameLoop <link linkend="_namespace_game_state">GameState</link>  </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

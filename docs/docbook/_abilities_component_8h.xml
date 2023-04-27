@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__abilities_component_8h" xml:lang="en-US">
+<title>D:/Uni/CMP208/Hellwatch/build/vs2017/ActorComponents/AbilitiesComponent.h File Reference</title>
+<indexterm><primary>D:/Uni/CMP208/Hellwatch/build/vs2017/ActorComponents/AbilitiesComponent.h</primary></indexterm>
+<programlisting linenumbering="unnumbered">#include &quot;ActorComponent.h&quot;<?linebreak?>#include &quot;Abilities/Ability.h&quot;<?linebreak?>#include &quot;Attributes/AttributeComponent.h&quot;<?linebreak?>#include &lt;vector&gt;<?linebreak?>#include &lt;string&gt;<?linebreak?></programlisting>Include dependency graph for AbilitiesComponent.h:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_abilities_component_8h__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+This graph shows which files directly or indirectly include this file:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_abilities_component_8h__dep__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>class <link linkend="_class_abilities_component">AbilitiesComponent</link></para>
+
+<para>A component allowing the object to use abilities @NOTE: Requires an attribute component to function properly  </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

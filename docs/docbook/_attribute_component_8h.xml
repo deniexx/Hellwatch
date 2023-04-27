@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__attribute_component_8h" xml:lang="en-US">
+<title>D:/Uni/CMP208/Hellwatch/build/vs2017/Attributes/AttributeComponent.h File Reference</title>
+<indexterm><primary>D:/Uni/CMP208/Hellwatch/build/vs2017/Attributes/AttributeComponent.h</primary></indexterm>
+<programlisting linenumbering="unnumbered">#include &quot;ActorComponents/ActorComponent.h&quot;<?linebreak?>#include &quot;GameFramework/Utils.h&quot;<?linebreak?>#include &quot;AttributeTypes.h&quot;<?linebreak?>#include &lt;vector&gt;<?linebreak?></programlisting>Include dependency graph for AttributeComponent.h:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_attribute_component_8h__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+This graph shows which files directly or indirectly include this file:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_attribute_component_8h__dep__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>class <link linkend="_class_attribute_component">AttributeComponent</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="__attribute_component_8h_1a6268eb19c060bd95c2268b25c27ce85c">BASE_REGEN_RATIO</link>&#160;&#160;&#160;7</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Macro Definition Documentation</title>
+<anchor xml:id="__attribute_component_8h_1a6268eb19c060bd95c2268b25c27ce85c"/><section>
+    <title>BASE_REGEN_RATIO</title>
+<indexterm><primary>BASE_REGEN_RATIO</primary><secondary>AttributeComponent.h</secondary></indexterm>
+<indexterm><primary>AttributeComponent.h</primary><secondary>BASE_REGEN_RATIO</secondary></indexterm>
+<para><computeroutput>#define BASE_REGEN_RATIO&#160;&#160;&#160;7</computeroutput></para></section>
+</section>
+</section>

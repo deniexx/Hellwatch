@@ -1,0 +1,115 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="class_pause_menu" kind="class" language="C++" prot="public">
+    <compoundname>PauseMenu</compoundname>
+    <basecompoundref refid="class_menu" prot="public" virt="non-virtual">Menu</basecompoundref>
+    <includes refid="_pause_menu_8h" local="no">PauseMenu.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_pause_menu_1a029c44778ea655c2762cbddc8941a6f8" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void PauseMenu::Init</definition>
+        <argsstring>() override</argsstring>
+        <name>Init</name>
+        <qualifiedname>PauseMenu::Init</qualifiedname>
+        <reimplements refid="class_menu_1a0c64b7333b29000c8b219d2ebc28c03b">Init</reimplements>
+        <briefdescription>
+<para>Initializes the menu  </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/UserInterface/PauseMenu.h" line="12" column="14" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/UserInterface/PauseMenu.cpp" bodystart="6" bodyend="69"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_pause_menu_1a0763dfecee722a895acd7e4fcf4e8f6d" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PauseMenu::ResumeGame</definition>
+        <argsstring>()</argsstring>
+        <name>ResumeGame</name>
+        <qualifiedname>PauseMenu::ResumeGame</qualifiedname>
+        <briefdescription>
+<para>Resumes the game  </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/UserInterface/PauseMenu.h" line="19" column="6" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/UserInterface/PauseMenu.cpp" bodystart="71" bodyend="74"/>
+      </memberdef>
+      <memberdef kind="function" id="class_pause_menu_1a9b93c682d62646666faf5588217e01ad" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PauseMenu::ExitToMainMenu</definition>
+        <argsstring>()</argsstring>
+        <name>ExitToMainMenu</name>
+        <qualifiedname>PauseMenu::ExitToMainMenu</qualifiedname>
+        <briefdescription>
+<para>Exits to main menu  </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/UserInterface/PauseMenu.h" line="24" column="6" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/UserInterface/PauseMenu.cpp" bodystart="76" bodyend="79"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Pause <ref refid="class_menu" kindref="compound">Menu</ref> to be used in Pause <ref refid="namespace_game_state" kindref="compound">GameState</ref>  </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>Menu</label>
+        <link refid="class_menu"/>
+      </node>
+      <node id="1">
+        <label>PauseMenu</label>
+        <link refid="class_pause_menu"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>Menu</label>
+        <link refid="class_menu"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>menuController</edgelabel>
+        </childnode>
+      </node>
+      <node id="1">
+        <label>PauseMenu</label>
+        <link refid="class_pause_menu"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>PlayerController</label>
+        <link refid="class_player_controller"/>
+      </node>
+    </collaborationgraph>
+    <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/UserInterface/PauseMenu.h" line="8" column="1" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/UserInterface/PauseMenu.h" bodystart="9" bodyend="25"/>
+    <listofallmembers>
+      <member refid="class_menu_1a2f2b184a3f4000ce78d9e948c95cced4" prot="protected" virt="non-virtual"><scope>PauseMenu</scope><name>CheckForHighlight</name></member>
+      <member refid="class_menu_1a1551f565b2ae79bf65449810f4ea81d5" prot="public" virt="non-virtual"><scope>PauseMenu</scope><name>currentButtonFocused</name></member>
+      <member refid="class_menu_1acef1c8e0a83655c3b17c217567527f8b" prot="public" virt="virtual"><scope>PauseMenu</scope><name>DrawMenuHUD</name></member>
+      <member refid="class_pause_menu_1a9b93c682d62646666faf5588217e01ad" prot="private" virt="non-virtual"><scope>PauseMenu</scope><name>ExitToMainMenu</name></member>
+      <member refid="class_pause_menu_1a029c44778ea655c2762cbddc8941a6f8" prot="public" virt="virtual"><scope>PauseMenu</scope><name>Init</name></member>
+      <member refid="class_menu_1a6005d125bc4b0372bcd6d2719cb9a994" prot="public" virt="non-virtual"><scope>PauseMenu</scope><name>menuButtons</name></member>
+      <member refid="class_menu_1a0187883a2d424dadf01b0218d1db7d12" prot="public" virt="non-virtual"><scope>PauseMenu</scope><name>menuController</name></member>
+      <member refid="class_menu_1a2737fb42e257221f78c86b9221795255" prot="public" virt="non-virtual"><scope>PauseMenu</scope><name>menuSprite</name></member>
+      <member refid="class_menu_1a50e7901f94713c0719e0774474d981c2" prot="protected" virt="non-virtual"><scope>PauseMenu</scope><name>OnControllerDownButton</name></member>
+      <member refid="class_menu_1a8bd9fce86817a1125bf7d2e371551689" prot="protected" virt="non-virtual"><scope>PauseMenu</scope><name>OnControllerSubmitButton</name></member>
+      <member refid="class_menu_1a8023104df1848b95c94e1c46fba209ca" prot="protected" virt="non-virtual"><scope>PauseMenu</scope><name>OnControllerUpButton</name></member>
+      <member refid="class_menu_1a6b8e73974658482814f99b63ecc4d470" prot="protected" virt="non-virtual"><scope>PauseMenu</scope><name>OnDownButtonPressed</name></member>
+      <member refid="class_menu_1a2370ebbed22dfd0c10491bd8ae45b771" prot="protected" virt="virtual"><scope>PauseMenu</scope><name>OnMouseButtonPressed</name></member>
+      <member refid="class_menu_1a98395444d03f38df02fa9c2aed1fb797" prot="protected" virt="non-virtual"><scope>PauseMenu</scope><name>OnUpButtonPressed</name></member>
+      <member refid="class_menu_1a78e162d9e5571f0bb3e93c02cc0f76df" prot="protected" virt="non-virtual"><scope>PauseMenu</scope><name>PressMenuButton</name></member>
+      <member refid="class_pause_menu_1a0763dfecee722a895acd7e4fcf4e8f6d" prot="private" virt="non-virtual"><scope>PauseMenu</scope><name>ResumeGame</name></member>
+      <member refid="class_menu_1af29d71473a414e31e914bc637840cb3e" prot="public" virt="virtual"><scope>PauseMenu</scope><name>Update</name></member>
+      <member refid="class_menu_1a831387f51358cfb88cd018e1777bc980" prot="public" virt="non-virtual"><scope>PauseMenu</scope><name>~Menu</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

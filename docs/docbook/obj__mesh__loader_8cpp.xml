@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_obj__mesh__loader_8cpp" xml:lang="en-US">
+<title>D:/Uni/CMP208/Hellwatch/obj_mesh_loader.cpp File Reference</title>
+<indexterm><primary>D:/Uni/CMP208/Hellwatch/obj_mesh_loader.cpp</primary></indexterm>
+<programlisting linenumbering="unnumbered">#include &quot;obj_mesh_loader.h&quot;<?linebreak?>#include &lt;graphics/mesh.h&gt;<?linebreak?>#include &lt;graphics/primitive.h&gt;<?linebreak?>#include &lt;system/platform.h&gt;<?linebreak?>#include &lt;graphics/model.h&gt;<?linebreak?>#include &lt;assets/png_loader.h&gt;<?linebreak?>#include &lt;graphics/texture.h&gt;<?linebreak?>#include &lt;graphics/image_data.h&gt;<?linebreak?>#include &lt;system/file.h&gt;<?linebreak?>#include &lt;system/memory_stream_buffer.h&gt;<?linebreak?>#include &lt;graphics/material.h&gt;<?linebreak?>#include &lt;cstdio&gt;<?linebreak?>#include &lt;cstring&gt;<?linebreak?>#include &lt;istream&gt;<?linebreak?>#include &lt;cfloat&gt;<?linebreak?>#include &lt;algorithm&gt;<?linebreak?>#include &lt;cassert&gt;<?linebreak?></programlisting>Include dependency graph for obj_mesh_loader.cpp:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="obj__mesh__loader_8cpp__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>bool <link linkend="_obj__mesh__loader_8cpp_1a1907c8274ead526bc264388c3ae2e000">StringEndsWith</link> (std::string const &amp;full_string, std::string const &amp;ending)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_obj__mesh__loader_8cpp_1a1907c8274ead526bc264388c3ae2e000"/><section>
+    <title>StringEndsWith()</title>
+<indexterm><primary>StringEndsWith</primary><secondary>obj_mesh_loader.cpp</secondary></indexterm>
+<indexterm><primary>obj_mesh_loader.cpp</primary><secondary>StringEndsWith</secondary></indexterm>
+<para><computeroutput>bool StringEndsWith (std::string const &amp; full_string, std::string const &amp; ending)</computeroutput></para></section>
+</section>
+</section>

@@ -1,0 +1,991 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="_utils_8h" kind="file" language="C++">
+    <compoundname>Utils.h</compoundname>
+    <includes local="yes">maths/Vector2.h</includes>
+    <includes local="yes">maths/vector4.h</includes>
+    <includes local="yes">maths/matrix44.h</includes>
+    <includes local="no">graphics/renderer_3d.h</includes>
+    <includes refid="scene__app_8h" local="no">scene_app.h</includes>
+    <includes local="yes">maths/math_utils.h</includes>
+    <includedby refid="_dash_8h" local="yes">D:/Uni/CMP208/Hellwatch/build/vs2017/Abilities/PlayerAbilities/Dash.h</includedby>
+    <includedby refid="_ice_bolt_8h" local="yes">D:/Uni/CMP208/Hellwatch/build/vs2017/Abilities/PlayerAbilities/IceBolt.h</includedby>
+    <includedby refid="_meteor_8h" local="yes">D:/Uni/CMP208/Hellwatch/build/vs2017/Abilities/PlayerAbilities/Meteor.h</includedby>
+    <includedby refid="_piercing_strike_8h" local="yes">D:/Uni/CMP208/Hellwatch/build/vs2017/Abilities/PlayerAbilities/PiercingStrike.h</includedby>
+    <includedby refid="_character_movement_component_8h" local="yes">D:/Uni/CMP208/Hellwatch/build/vs2017/ActorComponents/CharacterMovementComponent.h</includedby>
+    <includedby refid="_meteor_actor_8h" local="yes">D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/MeteorActor.h</includedby>
+    <includedby refid="_player_character_8h" local="yes">D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/PlayerCharacter.h</includedby>
+    <includedby refid="_attribute_component_8h" local="yes">D:/Uni/CMP208/Hellwatch/build/vs2017/Attributes/AttributeComponent.h</includedby>
+    <includedby refid="_player_controller_8h" local="yes">D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/PlayerController.h</includedby>
+    <includedby refid="_wave_manager_8h" local="yes">D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/WaveManager.h</includedby>
+    <includedby refid="_world_object_8h" local="yes">D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/WorldObject.h</includedby>
+    <includedby refid="_menu_8h" local="yes">D:/Uni/CMP208/Hellwatch/build/vs2017/UserInterface/Menu.h</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/Utils.h</label>
+        <link refid="_utils_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>obj_mesh_loader.h</label>
+        <link refid="obj__mesh__loader_8h"/>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>primitive_builder.h</label>
+        <link refid="primitive__builder_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>scene_app.h</label>
+        <link refid="scene__app_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>box2d/box2d.h</label>
+      </node>
+      <node id="11">
+        <label>cstddef</label>
+      </node>
+      <node id="21">
+        <label>future</label>
+      </node>
+      <node id="16">
+        <label>gef.h</label>
+      </node>
+      <node id="20">
+        <label>graphics/font.h</label>
+      </node>
+      <node id="10">
+        <label>graphics/material.h</label>
+      </node>
+      <node id="5">
+        <label>graphics/renderer_3d.h</label>
+      </node>
+      <node id="12">
+        <label>graphics/scene.h</label>
+      </node>
+      <node id="17">
+        <label>map</label>
+      </node>
+      <node id="2">
+        <label>maths/Vector2.h</label>
+      </node>
+      <node id="23">
+        <label>maths/math_utils.h</label>
+      </node>
+      <node id="4">
+        <label>maths/matrix44.h</label>
+      </node>
+      <node id="8">
+        <label>maths/vector2.h</label>
+      </node>
+      <node id="3">
+        <label>maths/vector4.h</label>
+      </node>
+      <node id="22">
+        <label>random</label>
+      </node>
+      <node id="18">
+        <label>string</label>
+      </node>
+      <node id="7">
+        <label>system/application.h</label>
+      </node>
+      <node id="14">
+        <label>system/platform.h</label>
+      </node>
+      <node id="19">
+        <label>vector</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="26">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/Abilities/Ability.cpp</label>
+        <link refid="_ability_8cpp"/>
+      </node>
+      <node id="3">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/Abilities/PlayerAbilities/Dash.cpp</label>
+        <link refid="_dash_8cpp"/>
+      </node>
+      <node id="2">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/Abilities/PlayerAbilities/Dash.h</label>
+        <link refid="_dash_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/Abilities/PlayerAbilities/IceBolt.cpp</label>
+        <link refid="_ice_bolt_8cpp"/>
+      </node>
+      <node id="5">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/Abilities/PlayerAbilities/IceBolt.h</label>
+        <link refid="_ice_bolt_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/Abilities/PlayerAbilities/Meteor.cpp</label>
+        <link refid="_meteor_8cpp"/>
+      </node>
+      <node id="7">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/Abilities/PlayerAbilities/Meteor.h</label>
+        <link refid="_meteor_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/Abilities/PlayerAbilities/PiercingStrike.cpp</label>
+        <link refid="_piercing_strike_8cpp"/>
+      </node>
+      <node id="9">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/Abilities/PlayerAbilities/PiercingStrike.h</label>
+        <link refid="_piercing_strike_8h"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="28">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/ActorComponents/AbilitiesComponent.cpp</label>
+        <link refid="_abilities_component_8cpp"/>
+      </node>
+      <node id="27">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/ActorComponents/AbilitiesComponent.h</label>
+        <link refid="_abilities_component_8h"/>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+      <node id="39">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/ActorComponents/ActorComponent.cpp</label>
+        <link refid="_actor_component_8cpp"/>
+      </node>
+      <node id="12">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/ActorComponents/CharacterMovementComponent.cpp</label>
+        <link refid="_character_movement_component_8cpp"/>
+      </node>
+      <node id="11">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/ActorComponents/CharacterMovementComponent.h</label>
+        <link refid="_character_movement_component_8h"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="41">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActor.cpp</label>
+        <link refid="_mesh_actor_8cpp"/>
+      </node>
+      <node id="40">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActor.h</label>
+        <link refid="_mesh_actor_8h"/>
+        <childnode refid="41" relation="include">
+        </childnode>
+        <childnode refid="42" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="44" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/Boss.cpp</label>
+        <link refid="_boss_8cpp"/>
+      </node>
+      <node id="14">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/Boss.h</label>
+        <link refid="_boss_8h"/>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="43">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/DamageOnCollisionActor.cpp</label>
+        <link refid="_damage_on_collision_actor_8cpp"/>
+      </node>
+      <node id="42">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/DamageOnCollisionActor.h</label>
+        <link refid="_damage_on_collision_actor_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="43" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/Enemy.cpp</label>
+        <link refid="_enemy_8cpp"/>
+      </node>
+      <node id="13">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/Enemy.h</label>
+        <link refid="_enemy_8h"/>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+      </node>
+      <node id="30">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/EnemyDummy.cpp</label>
+        <link refid="_enemy_dummy_8cpp"/>
+      </node>
+      <node id="29">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/EnemyDummy.h</label>
+        <link refid="_enemy_dummy_8h"/>
+        <childnode refid="30" relation="include">
+        </childnode>
+      </node>
+      <node id="22">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/MeteorActor.cpp</label>
+        <link refid="_meteor_actor_8cpp"/>
+      </node>
+      <node id="21">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/MeteorActor.h</label>
+        <link refid="_meteor_actor_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+      </node>
+      <node id="45">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/ParticleActor.cpp</label>
+        <link refid="_particle_actor_8cpp"/>
+      </node>
+      <node id="44">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/ParticleActor.h</label>
+        <link refid="_particle_actor_8h"/>
+        <childnode refid="45" relation="include">
+        </childnode>
+        <childnode refid="46" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/PlayerCharacter.cpp</label>
+        <link refid="_player_character_8cpp"/>
+      </node>
+      <node id="23">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/PlayerCharacter.h</label>
+        <link refid="_player_character_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+      </node>
+      <node id="19">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/RangedEnemy.cpp</label>
+        <link refid="_ranged_enemy_8cpp"/>
+      </node>
+      <node id="18">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/RangedEnemy.h</label>
+        <link refid="_ranged_enemy_8h"/>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+      </node>
+      <node id="48">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/SpriteActor.cpp</label>
+        <link refid="_sprite_actor_8cpp"/>
+      </node>
+      <node id="47">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/SpriteActor.h</label>
+        <link refid="_sprite_actor_8h"/>
+        <childnode refid="48" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+      </node>
+      <node id="31">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/Attributes/AttributeComponent.cpp</label>
+        <link refid="_attribute_component_8cpp"/>
+      </node>
+      <node id="25">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/Attributes/AttributeComponent.h</label>
+        <link refid="_attribute_component_8h"/>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+      </node>
+      <node id="46">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/ParticleManager.cpp</label>
+        <link refid="_particle_manager_8cpp"/>
+      </node>
+      <node id="33">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/PlayerController.cpp</label>
+        <link refid="_player_controller_8cpp"/>
+      </node>
+      <node id="32">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/PlayerController.h</label>
+        <link refid="_player_controller_8h"/>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/Utils.h</label>
+        <link refid="_utils_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+        <childnode refid="38" relation="include">
+        </childnode>
+        <childnode refid="50" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/WaveManager.cpp</label>
+        <link refid="_wave_manager_8cpp"/>
+      </node>
+      <node id="37">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/WaveManager.h</label>
+        <link refid="_wave_manager_8h"/>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+      </node>
+      <node id="49">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/WorldObject.cpp</label>
+        <link refid="_world_object_8cpp"/>
+      </node>
+      <node id="38">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/WorldObject.h</label>
+        <link refid="_world_object_8h"/>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="39" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="40" relation="include">
+        </childnode>
+        <childnode refid="47" relation="include">
+        </childnode>
+        <childnode refid="49" relation="include">
+        </childnode>
+      </node>
+      <node id="52">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/UserInterface/GameEndMenu.cpp</label>
+        <link refid="_game_end_menu_8cpp"/>
+      </node>
+      <node id="51">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/UserInterface/GameEndMenu.h</label>
+        <link refid="_game_end_menu_8h"/>
+        <childnode refid="52" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+      </node>
+      <node id="34">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/UserInterface/MainMenu.cpp</label>
+        <link refid="_main_menu_8cpp"/>
+      </node>
+      <node id="53">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/UserInterface/MainMenu.h</label>
+        <link refid="_main_menu_8h"/>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+      </node>
+      <node id="35">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/UserInterface/Menu.cpp</label>
+        <link refid="_menu_8cpp"/>
+      </node>
+      <node id="50">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/UserInterface/Menu.h</label>
+        <link refid="_menu_8h"/>
+        <childnode refid="51" relation="include">
+        </childnode>
+        <childnode refid="53" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+        <childnode refid="54" relation="include">
+        </childnode>
+        <childnode refid="55" relation="include">
+        </childnode>
+      </node>
+      <node id="36">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/UserInterface/PauseMenu.cpp</label>
+        <link refid="_pause_menu_8cpp"/>
+      </node>
+      <node id="54">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/UserInterface/PauseMenu.h</label>
+        <link refid="_pause_menu_8h"/>
+        <childnode refid="36" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+      </node>
+      <node id="24">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/UserInterface/ShopMenu.cpp</label>
+        <link refid="_shop_menu_8cpp"/>
+      </node>
+      <node id="55">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/UserInterface/ShopMenu.h</label>
+        <link refid="_shop_menu_8h"/>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+      </node>
+      <node id="20">
+        <label>D:/Uni/CMP208/Hellwatch/scene_app.cpp</label>
+        <link refid="scene__app_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innernamespace refid="namespace_apply_damage_on">ApplyDamageOn</innernamespace>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="_utils_8h_1a642e16f35aa1e585c25e405ede76e115" prot="public" static="no">
+        <name>NO_ID</name>
+        <initializer>0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/Utils.h" line="10" column="9" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/Utils.h" bodystart="10" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_utils_8h_1ae50e546c560a653d3409bd594d34dc0d" prot="public" static="no">
+        <name>PLAYER_ID</name>
+        <initializer>1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/Utils.h" line="11" column="9" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/Utils.h" bodystart="11" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_utils_8h_1a85fe7dfc8d35e0e6ee68ceb22ab3b57b" prot="public" static="no">
+        <name>ENEMY_ID</name>
+        <initializer>2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/Utils.h" line="12" column="9" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/Utils.h" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_utils_8h_1af4955eee766517b72730e7c165711a6c" prot="public" static="no">
+        <name>ENVIRONMENT_ID</name>
+        <initializer>3</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/Utils.h" line="13" column="9" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/Utils.h" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_utils_8h_1a598a3330b3c21701223ee0ca14316eca" prot="public" static="no">
+        <name>PI</name>
+        <initializer>3.14159265358979323846</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/Utils.h" line="15" column="9" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/Utils.h" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_utils_8h_1afc0ee7bd35c161a2d80b8e8f04fd9213" prot="public" static="no">
+        <name>GENERATED_BODY</name>
+        <param><defname>ParentClass</defname></param>
+        <param><defname>CurrentClass</defname></param>
+        <initializer>									typedef ::ParentClass Super; \
+									typedef CurrentClass ThisClass;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/Utils.h" line="17" column="9" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/Utils.h" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_utils_8h_1addcf0f43bf2efc658ec99c4911957967" prot="public" static="no">
+        <name>bindFunc</name>
+        <param><defname>funcName</defname></param>
+        <initializer>[this]() { funcName(); }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/Utils.h" line="21" column="9" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/Utils.h" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_utils_8h_1ad2c68575874b116204c5bd611d701513" prot="public" static="no">
+        <name>bindFunc_ONEParam</name>
+        <param><defname>funcName</defname></param>
+        <param><defname>paramType</defname></param>
+        <param><defname>paramName</defname></param>
+        <initializer>[this](paramType paramName) { funcName(paramName); }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/Utils.h" line="22" column="9" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/Utils.h" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_utils_8h_1a8dc74a463255788898ad6d2a82f7fe89" prot="public" static="no">
+        <name>bindFunc_TWOParams</name>
+        <param><defname>funcName</defname></param>
+        <param><defname>paramType1</defname></param>
+        <param><defname>paramName1</defname></param>
+        <param><defname>paramType2</defname></param>
+        <param><defname>paramName2</defname></param>
+        <initializer>[this](paramType1 paramName1, paramType2 paramName2) { funcName(paramName1, paramName2); }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/Utils.h" line="23" column="9" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/Utils.h" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_utils_8h_1a293f714dcb517d7dbe317dda57921a35" prot="public" static="no">
+        <name>bindFunc_THREEParam</name>
+        <param><defname>funcName</defname></param>
+        <param><defname>paramType1</defname></param>
+        <param><defname>paramName1</defname></param>
+        <param><defname>paramType2</defname></param>
+        <param><defname>paramName2</defname></param>
+        <param><defname>paramType3</defname></param>
+        <param><defname>paramName3</defname></param>
+        <initializer>[this](paramType1 paramName1, paramType2 paramName2, paramType3 paramName3) { funcName(paramName1, paramName2, paramName3); }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/Utils.h" line="24" column="9" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/Utils.h" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_utils_8h_1a4604f826239490e2607d6c77ab3342a4" prot="public" static="no">
+        <name>bindFunc_FOURParams</name>
+        <param><defname>funcName</defname></param>
+        <param><defname>paramType1</defname></param>
+        <param><defname>paramName1</defname></param>
+        <param><defname>paramType2</defname></param>
+        <param><defname>paramName2</defname></param>
+        <param><defname>paramType3</defname></param>
+        <param><defname>paramName3</defname></param>
+        <param><defname>paramType4</defname></param>
+        <param><defname>paramName4</defname></param>
+        <initializer>[this](paramType1 paramName1, paramType2 paramName2, paramType3 paramName3, paramType4 paramName4) { funcName(paramName1, paramName2, paramName3, paramName4); }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/Utils.h" line="25" column="9" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/Utils.h" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_utils_8h_1ab1f86d0a9b054701150547f6d57a6e9b" prot="public" static="no">
+        <name>bindFunc_FIVEParams</name>
+        <param><defname>funcName</defname></param>
+        <param><defname>paramType1</defname></param>
+        <param><defname>paramName1</defname></param>
+        <param><defname>paramType2</defname></param>
+        <param><defname>paramName2</defname></param>
+        <param><defname>paramType3</defname></param>
+        <param><defname>paramName3</defname></param>
+        <param><defname>paramType4</defname></param>
+        <param><defname>paramName4</defname></param>
+        <param><defname>paramType5</defname></param>
+        <param><defname>paramName5</defname></param>
+        <initializer>[this](paramType1 paramName1, paramType2 paramName2, paramType3 paramName3, paramType4 paramName4, paramName5 paramName5) { funcName(paramName1, paramName2, paramName3, paramName4, paramName5); }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/Utils.h" line="26" column="9" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/Utils.h" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="_utils_8h_1af34d57503748181af1f24c995687763b" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>T</type>
+        <definition>static T Clamp</definition>
+        <argsstring>(T expression, T minVal, T maxVal)</argsstring>
+        <name>Clamp</name>
+        <param>
+          <type>T</type>
+          <declname>expression</declname>
+        </param>
+        <param>
+          <type>T</type>
+          <declname>minVal</declname>
+        </param>
+        <param>
+          <type>T</type>
+          <declname>maxVal</declname>
+        </param>
+        <briefdescription>
+<para>Clamps a value between 2 given values  </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/Utils.h" line="32" column="10" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/Utils.h" bodystart="32" bodyend="38"/>
+      </memberdef>
+      <memberdef kind="function" id="_utils_8h_1a13c000eb49675481a5739e0469a3ca5b" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>gef::Vector4</type>
+        <definition>static gef::Vector4 ProjectScreenToWorldSpace</definition>
+        <argsstring>(gef::Vector2 v2)</argsstring>
+        <name>ProjectScreenToWorldSpace</name>
+        <param>
+          <type>gef::Vector2</type>
+          <declname>v2</declname>
+        </param>
+        <briefdescription>
+<para>Projects a Vector2 into world space  </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/Utils.h" line="43" column="21" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/Utils.h" bodystart="43" bodyend="82"/>
+      </memberdef>
+      <memberdef kind="function" id="_utils_8h_1ad146791218b4988af44dcbb3ba5b25a2" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>gef::Vector4</type>
+        <definition>static gef::Vector4 ProjectWorldToScreenSpace</definition>
+        <argsstring>(gef::Vector4 v4)</argsstring>
+        <name>ProjectWorldToScreenSpace</name>
+        <param>
+          <type>gef::Vector4</type>
+          <declname>v4</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/Utils.h" line="84" column="21" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/Utils.h" bodystart="84" bodyend="98"/>
+      </memberdef>
+      <memberdef kind="function" id="_utils_8h_1ae45a4236dfaff965983e95c66ae17c80" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>static float FindAngle</definition>
+        <argsstring>(const gef::Vector4 &amp;a, const gef::Vector4 &amp;b)</argsstring>
+        <name>FindAngle</name>
+        <param>
+          <type>const gef::Vector4 &amp;</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>const gef::Vector4 &amp;</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+<para>Finds the angle between 2 Vector4s  </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/Utils.h" line="103" column="14" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/Utils.h" bodystart="103" bodyend="111"/>
+      </memberdef>
+      <memberdef kind="function" id="_utils_8h_1a124ad7fce789088ac0f27bda4dafce00" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>gef::Vector4</type>
+        <definition>static gef::Vector4 Lerp</definition>
+        <argsstring>(const gef::Vector4 &amp;a, const gef::Vector4 &amp;b, float alpha)</argsstring>
+        <name>Lerp</name>
+        <param>
+          <type>const gef::Vector4 &amp;</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>const gef::Vector4 &amp;</type>
+          <declname>b</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>alpha</declname>
+        </param>
+        <briefdescription>
+<para>Static implemtation of the Vector4 lerp that is in the Vector4 class  </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/Utils.h" line="116" column="21" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/Utils.h" bodystart="116" bodyend="123"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;maths/Vector2.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;maths/vector4.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;maths/matrix44.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;graphics/renderer_3d.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="scene__app_8h" kindref="compound">scene_app.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;maths/math_utils.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10" refid="_utils_8h_1a642e16f35aa1e585c25e405ede76e115" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>NO_ID<sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11" refid="_utils_8h_1ae50e546c560a653d3409bd594d34dc0d" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PLAYER_ID<sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12" refid="_utils_8h_1a85fe7dfc8d35e0e6ee68ceb22ab3b57b" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ENEMY_ID<sp/>2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13" refid="_utils_8h_1af4955eee766517b72730e7c165711a6c" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ENVIRONMENT_ID<sp/>3</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15" refid="_utils_8h_1a598a3330b3c21701223ee0ca14316eca" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PI<sp/>3.14159265358979323846</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17" refid="_utils_8h_1afc0ee7bd35c161a2d80b8e8f04fd9213" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>GENERATED_BODY(ParentClass,<sp/>CurrentClass)<sp/>typedef<sp/>::ParentClass<sp/>Super;<sp/>\</highlight></codeline>
+<codeline lineno="18"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>typedef<sp/>CurrentClass<sp/>ThisClass;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21" refid="_utils_8h_1addcf0f43bf2efc658ec99c4911957967" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>bindFunc(funcName)<sp/>[this]()<sp/>{<sp/>funcName();<sp/>}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22" refid="_utils_8h_1ad2c68575874b116204c5bd611d701513" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>bindFunc_ONEParam(funcName,<sp/>paramType,<sp/>paramName)<sp/>[this](paramType<sp/>paramName)<sp/>{<sp/>funcName(paramName);<sp/>}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23" refid="_utils_8h_1a8dc74a463255788898ad6d2a82f7fe89" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>bindFunc_TWOParams(funcName,<sp/>paramType1,<sp/>paramName1,<sp/>paramType2,<sp/>paramName2)<sp/>[this](paramType1<sp/>paramName1,<sp/>paramType2<sp/>paramName2)<sp/>{<sp/>funcName(paramName1,<sp/>paramName2);<sp/>}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24" refid="_utils_8h_1a293f714dcb517d7dbe317dda57921a35" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>bindFunc_THREEParam(funcName,<sp/>paramType1,<sp/>paramName1,<sp/>paramType2,<sp/>paramName2,<sp/>paramType3,<sp/>paramName3)<sp/>[this](paramType1<sp/>paramName1,<sp/>paramType2<sp/>paramName2,<sp/>paramType3<sp/>paramName3)<sp/>{<sp/>funcName(paramName1,<sp/>paramName2,<sp/>paramName3);<sp/>}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25" refid="_utils_8h_1a4604f826239490e2607d6c77ab3342a4" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>bindFunc_FOURParams(funcName,<sp/>paramType1,<sp/>paramName1,<sp/>paramType2,<sp/>paramName2,<sp/>paramType3,<sp/>paramName3,<sp/>paramType4,<sp/>paramName4)<sp/>[this](paramType1<sp/>paramName1,<sp/>paramType2<sp/>paramName2,<sp/>paramType3<sp/>paramName3,<sp/>paramType4<sp/>paramName4)<sp/>{<sp/>funcName(paramName1,<sp/>paramName2,<sp/>paramName3,<sp/>paramName4);<sp/>}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26" refid="_utils_8h_1ab1f86d0a9b054701150547f6d57a6e9b" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>bindFunc_FIVEParams(funcName,<sp/>paramType1,<sp/>paramName1,<sp/>paramType2,<sp/>paramName2,<sp/>paramType3,<sp/>paramName3,<sp/>paramType4,<sp/>paramName4,<sp/>paramType5,<sp/>paramName5)<sp/>[this](paramType1<sp/>paramName1,<sp/>paramType2<sp/>paramName2,<sp/>paramType3<sp/>paramName3,<sp/>paramType4<sp/>paramName4,<sp/>paramName5<sp/>paramName5)<sp/>{<sp/>funcName(paramName1,<sp/>paramName2,<sp/>paramName3,<sp/>paramName4,<sp/>paramName5);<sp/>}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T&gt;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>T<sp/>Clamp(T<sp/>expression,<sp/>T<sp/>minVal,<sp/>T<sp/>maxVal)</highlight></codeline>
+<codeline lineno="33"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(expression<sp/>&lt;<sp/>minVal)</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>expression<sp/>=<sp/>minVal;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>expression<sp/>&gt;<sp/>maxVal<sp/>?<sp/>maxVal<sp/>:<sp/>expression;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="keyword">static</highlight><highlight class="normal"><sp/>gef::Vector4<sp/>ProjectScreenToWorldSpace(gef::Vector2<sp/>v2)</highlight></codeline>
+<codeline lineno="44"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/>gef::Renderer3D*<sp/>renderer<sp/>=<sp/>SceneApp::instance-&gt;GetRenderer3D();</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>vpWidth<sp/>=<sp/>SceneApp::instance-&gt;GetViewportWidth();</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>vpHeight<sp/>=<sp/>SceneApp::instance-&gt;GetViewportHeight();</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/>gef::Matrix44<sp/>matProjection<sp/>=<sp/>renderer-&gt;projection_matrix()<sp/>*<sp/>renderer-&gt;view_matrix();</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/>matProjection.Inverse(matProjection);</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/>gef::Vector4<sp/>in;</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>winZ<sp/>=<sp/>1.f;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/>in.set_x((2.f<sp/>*<sp/>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal">)(v2.x)<sp/>/<sp/>(vpWidth))<sp/>-<sp/>1);</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/>in.set_y(-1.f);</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/>in.set_z(1.f<sp/>-<sp/>(2.f<sp/>*<sp/>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal">)(v2.y)<sp/>/<sp/>(vpHeight)));</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/>in.set_w(1.f);</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/>gef::Matrix44<sp/>calc;</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/>calc.SetIdentity();</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/>calc.SetTranslation(in);</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/>gef::Matrix44<sp/>actualPos<sp/>=<sp/>calc<sp/>*<sp/>matProjection;</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/>gef::Vector4<sp/>pos<sp/>=<sp/>actualPos.GetTranslation();</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/>pos.set_x(pos.x());</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/>pos.set_y(pos.y()<sp/>-<sp/>8.1f);</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>posY<sp/>=<sp/>pos.y();</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/>pos.set_z(posY);</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/>pos.set_y(0);</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/>gef::Vector4<sp/>cameraPos<sp/>=<sp/>SceneApp::instance-&gt;GetCameraLookAt();</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>@TODO:<sp/>Figure<sp/>out<sp/>WHY?</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/>pos.set_x(pos.x()<sp/>*<sp/>1.35714286);</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/>pos.set_z(cameraPos.z()<sp/>+<sp/>pos.z()<sp/>*<sp/>1.75f);</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>pos;</highlight></codeline>
+<codeline lineno="82"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>gef::Vector4<sp/>ProjectWorldToScreenSpace(gef::Vector4<sp/>v4)</highlight></codeline>
+<codeline lineno="85"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/>gef::Renderer3D*<sp/>renderer<sp/>=<sp/>SceneApp::instance-&gt;GetRenderer3D();</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/>v4.set_w(1.f);</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/>v4.Transform(renderer-&gt;view_matrix());</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/>v4.Transform(renderer-&gt;projection_matrix());</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>clipSpaceX<sp/>=<sp/>v4.x()<sp/>/<sp/>v4.w();</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>clipSpaceY<sp/>=<sp/>v4.y()<sp/>/<sp/>v4.w();</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>xScreen<sp/>=<sp/>(clipSpaceX<sp/>+<sp/>1.f)<sp/>*<sp/>SceneApp::instance-&gt;platform().width()<sp/>/<sp/>2;</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>yScreen<sp/>=<sp/>(1<sp/>-<sp/>clipSpaceY)<sp/>*<sp/>SceneApp::instance-&gt;platform().height()<sp/>/<sp/>2;</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>gef::Vector4(xScreen,<sp/>yScreen,<sp/>0);</highlight></codeline>
+<codeline lineno="98"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>FindAngle(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>gef::Vector4&amp;<sp/>a,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>gef::Vector4&amp;<sp/>b)</highlight></codeline>
+<codeline lineno="104"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>dot_product<sp/>=<sp/>a.x()<sp/>*<sp/>b.x()<sp/>+<sp/>a.y()<sp/>*<sp/>b.y()<sp/>+<sp/>a.z()<sp/>*<sp/>b.z();</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>mag_a<sp/>=<sp/>std::sqrt(a.x()<sp/>*<sp/>a.x()<sp/>+<sp/>a.y()<sp/>*<sp/>a.y()<sp/>+<sp/>a.z()<sp/>*<sp/>a.z());</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>mag_b<sp/>=<sp/>std::sqrt(b.x()<sp/>*<sp/>b.x()<sp/>+<sp/>b.y()<sp/>*<sp/>b.y()<sp/>+<sp/>b.z()<sp/>*<sp/>b.z());</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>cos_theta<sp/>=<sp/>dot_product<sp/>/<sp/>(mag_a<sp/>*<sp/>mag_b);</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>theta<sp/>=<sp/>std::acos(cos_theta)<sp/>*<sp/>180<sp/>/<sp/><ref refid="_utils_8h_1a598a3330b3c21701223ee0ca14316eca" kindref="member">PI</ref>;</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>theta;</highlight></codeline>
+<codeline lineno="111"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="keyword">static</highlight><highlight class="normal"><sp/>gef::Vector4<sp/>Lerp(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>gef::Vector4&amp;<sp/>a,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>gef::Vector4&amp;<sp/>b,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>alpha)</highlight></codeline>
+<codeline lineno="117"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>x<sp/>=<sp/>gef::Lerp(a.x(),<sp/>b.x(),<sp/>alpha);</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>y<sp/>=<sp/>gef::Lerp(a.y(),<sp/>b.y(),<sp/>alpha);</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>z<sp/>=<sp/>gef::Lerp(a.z(),<sp/>b.z(),<sp/>alpha);</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>gef::Vector4(x,<sp/>y,<sp/>z);</highlight></codeline>
+<codeline lineno="123"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"></highlight></codeline>
+<codeline lineno="128" refid="namespace_apply_damage_on" refkind="compound"><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespace_apply_damage_on" kindref="compound">ApplyDamageOn</ref></highlight></codeline>
+<codeline lineno="129"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="130" refid="namespace_apply_damage_on_1aab4652342cac35cdff458c5aa2bad289" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="namespace_apply_damage_on_1aab4652342cac35cdff458c5aa2bad289" kindref="member">Type</ref></highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="132" refid="namespace_apply_damage_on_1aab4652342cac35cdff458c5aa2bad289a17c0a2d2e83ad970a7bb7395c9819d1f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespace_apply_damage_on_1aab4652342cac35cdff458c5aa2bad289a17c0a2d2e83ad970a7bb7395c9819d1f" kindref="member">EnemiesOnly</ref>,</highlight></codeline>
+<codeline lineno="133" refid="namespace_apply_damage_on_1aab4652342cac35cdff458c5aa2bad289af658fe1d6a4dd178955748cb85f117ac" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespace_apply_damage_on_1aab4652342cac35cdff458c5aa2bad289af658fe1d6a4dd178955748cb85f117ac" kindref="member">PlayerOnly</ref>,</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespace_apply_damage_on_1aab4652342cac35cdff458c5aa2bad289a1b46eaf8b75eb03bd8e0c31036b8d89b" kindref="member">EnemiesAndPlayer</ref></highlight></codeline>
+<codeline lineno="135" refid="namespace_apply_damage_on_1aab4652342cac35cdff458c5aa2bad289a1b46eaf8b75eb03bd8e0c31036b8d89b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="136"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/Utils.h"/>
+  </compounddef>
+</doxygen>

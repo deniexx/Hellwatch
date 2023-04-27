@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="dir_dd83752153a5f8a26b8780fd171a1a5d" kind="dir">
+    <compoundname>D:/Uni/CMP208/Hellwatch/build/vs2017/Abilities</compoundname>
+    <innerdir refid="dir_e51422e516d0a4e62b73cc6733cd5d2a">D:/Uni/CMP208/Hellwatch/build/vs2017/Abilities/PlayerAbilities</innerdir>
+    <innerfile refid="_ability_8cpp">Ability.cpp</innerfile>
+    <innerfile refid="_ability_8h">Ability.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/Abilities/"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,318 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="_attribute_component_8cpp" kind="file" language="C++">
+    <compoundname>AttributeComponent.cpp</compoundname>
+    <includes refid="_attribute_component_8h" local="yes">AttributeComponent.h</includes>
+    <includes local="no">algorithm</includes>
+    <incdepgraph>
+      <node id="3">
+        <label>ActorComponents/ActorComponent.h</label>
+        <link refid="_actor_component_8h"/>
+      </node>
+      <node id="1">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/Attributes/AttributeComponent.cpp</label>
+        <link refid="_attribute_component_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>AttributeComponent.h</label>
+        <link refid="_attribute_component_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+      </node>
+      <node id="27">
+        <label>AttributeTypes.h</label>
+        <link refid="_attribute_types_8h"/>
+        <childnode refid="21" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>GameFramework/Utils.h</label>
+        <link refid="_utils_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+      </node>
+      <node id="18">
+        <label>obj_mesh_loader.h</label>
+        <link refid="obj__mesh__loader_8h"/>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>primitive_builder.h</label>
+        <link refid="primitive__builder_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>scene_app.h</label>
+        <link refid="scene__app_8h"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+      </node>
+      <node id="28">
+        <label>algorithm</label>
+      </node>
+      <node id="16">
+        <label>box2d/box2d.h</label>
+      </node>
+      <node id="14">
+        <label>cstddef</label>
+      </node>
+      <node id="24">
+        <label>future</label>
+      </node>
+      <node id="19">
+        <label>gef.h</label>
+      </node>
+      <node id="23">
+        <label>graphics/font.h</label>
+      </node>
+      <node id="13">
+        <label>graphics/material.h</label>
+      </node>
+      <node id="8">
+        <label>graphics/renderer_3d.h</label>
+      </node>
+      <node id="15">
+        <label>graphics/scene.h</label>
+      </node>
+      <node id="20">
+        <label>map</label>
+      </node>
+      <node id="5">
+        <label>maths/Vector2.h</label>
+      </node>
+      <node id="26">
+        <label>maths/math_utils.h</label>
+      </node>
+      <node id="7">
+        <label>maths/matrix44.h</label>
+      </node>
+      <node id="11">
+        <label>maths/vector2.h</label>
+      </node>
+      <node id="6">
+        <label>maths/vector4.h</label>
+      </node>
+      <node id="25">
+        <label>random</label>
+      </node>
+      <node id="21">
+        <label>string</label>
+      </node>
+      <node id="10">
+        <label>system/application.h</label>
+      </node>
+      <node id="17">
+        <label>system/platform.h</label>
+      </node>
+      <node id="22">
+        <label>vector</label>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_attribute_component_8h" kindref="compound">AttributeComponent.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;algorithm&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_attribute_component_1ae67a6fc2951e19257274edb42eec023f" kindref="member">AttributeComponent::UpdateComponent</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>deltaTime)</highlight></codeline>
+<codeline lineno="6"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>vitality<sp/>=<sp/><ref refid="class_attribute_component_1a580cf7f29236d87d448840840ad53bc6" kindref="member">GetCurrentAttributeValueByType</ref>(<ref refid="namespace_hellwatch_attribute_1ad0a500e65129d06e4589f9bca54c4a7da32b2fa4bc40129b2f09aa2a9a4192d50" kindref="member">HellwatchAttribute::Vitality</ref>);</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>wisdom<sp/>=<sp/><ref refid="class_attribute_component_1a580cf7f29236d87d448840840ad53bc6" kindref="member">GetCurrentAttributeValueByType</ref>(<ref refid="namespace_hellwatch_attribute_1ad0a500e65129d06e4589f9bca54c4a7da1863c83b1312f525ab940b88fd83a2f8" kindref="member">HellwatchAttribute::Wisdom</ref>);</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_attribute_component_1a2a29edbf9c15e3296eb8ac4f5b59e8c9" kindref="member">ApplyAttributeChange</ref>(<ref refid="namespace_hellwatch_attribute_1ad0a500e65129d06e4589f9bca54c4a7da6d26574d573c085ec34ba30576725713" kindref="member">HellwatchAttribute::Health</ref>,<sp/>(<ref refid="_attribute_component_8h_1a6268eb19c060bd95c2268b25c27ce85c" kindref="member">BASE_REGEN_RATIO</ref><sp/>*<sp/>0.5<sp/>+<sp/>vitality)<sp/>*<sp/>deltaTime);</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_attribute_component_1a2a29edbf9c15e3296eb8ac4f5b59e8c9" kindref="member">ApplyAttributeChange</ref>(<ref refid="namespace_hellwatch_attribute_1ad0a500e65129d06e4589f9bca54c4a7dad3c5decb2b14966e4ae3e8e07fc975a4" kindref="member">HellwatchAttribute::Mana</ref>,<sp/>(<ref refid="_attribute_component_8h_1a6268eb19c060bd95c2268b25c27ce85c" kindref="member">BASE_REGEN_RATIO</ref><sp/>+<sp/>(wisdom<sp/>*<sp/>2))<sp/>*<sp/>deltaTime);</highlight></codeline>
+<codeline lineno="12"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="class_attribute_component_1a580cf7f29236d87d448840840ad53bc6" kindref="member">AttributeComponent::GetCurrentAttributeValueByType</ref>(<ref refid="namespace_hellwatch_attribute_1ad0a500e65129d06e4589f9bca54c4a7d" kindref="member">HellwatchAttribute::Type</ref><sp/>type)</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="16"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal">&amp;<sp/>attribute<sp/>:<sp/>attributes)</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(attribute.attributeType<sp/>==<sp/>type)</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>attribute.currentAmount;</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0.0f;</highlight></codeline>
+<codeline lineno="24"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="class_attribute_component_1ac3a3cdb64a8ddf33f584b07cb6fb3546" kindref="member">AttributeComponent::GetMaxAttributeValueByType</ref>(<ref refid="namespace_hellwatch_attribute_1ad0a500e65129d06e4589f9bca54c4a7d" kindref="member">HellwatchAttribute::Type</ref><sp/>type)</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="27"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal">&amp;<sp/>attribute<sp/>:<sp/>attributes)</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(attribute.attributeType<sp/>==<sp/>type)</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>attribute.maxAmount;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0.0f;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_attribute_component_1ac8bc3fd1392349fb859ddf83e3e8e027" kindref="member">AttributeComponent::CheckHasEnoughOfAttributeByType</ref>(<ref refid="namespace_hellwatch_attribute_1ad0a500e65129d06e4589f9bca54c4a7d" kindref="member">HellwatchAttribute::Type</ref><sp/>type,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>amountNeeded)</highlight></codeline>
+<codeline lineno="38"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal">&amp;<sp/>attribute<sp/>:<sp/>attributes)</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(attribute.attributeType<sp/>==<sp/>type)</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>attribute.currentAmount<sp/>&gt;<sp/>amountNeeded;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_attribute_component_1ab359fd856c0eaee6fda4c81765c9b336" kindref="member">AttributeComponent::SetAttributeCurrentValue</ref>(<ref refid="namespace_hellwatch_attribute_1ad0a500e65129d06e4589f9bca54c4a7d" kindref="member">HellwatchAttribute::Type</ref><sp/>type,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>newValue)</highlight></codeline>
+<codeline lineno="49"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">auto</highlight><highlight class="normal">&amp;<sp/>attribute<sp/>:<sp/>attributes)</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(attribute.attributeType<sp/>==<sp/>type)</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>attribute.currentAmount<sp/>=<sp/>newValue;</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="58"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_attribute_component_1a1ed8d3136ef683d442d1ff7523d219b0" kindref="member">AttributeComponent::SetAttributeMaxValue</ref>(<ref refid="namespace_hellwatch_attribute_1ad0a500e65129d06e4589f9bca54c4a7d" kindref="member">HellwatchAttribute::Type</ref><sp/>type,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>newValue)</highlight></codeline>
+<codeline lineno="61"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">auto</highlight><highlight class="normal">&amp;<sp/>attribute<sp/>:<sp/>attributes)</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(attribute.attributeType<sp/>==<sp/>type)</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>attribute.maxAmount<sp/>=<sp/>newValue;</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="70"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_attribute_component_1ada89535490c847acf8574d39d35c837c" kindref="member">AttributeComponent::SetAttributeCurrentAndMaxValue</ref>(<ref refid="namespace_hellwatch_attribute_1ad0a500e65129d06e4589f9bca54c4a7d" kindref="member">HellwatchAttribute::Type</ref><sp/>type,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>newValue)</highlight></codeline>
+<codeline lineno="73"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_attribute_component_1a1ed8d3136ef683d442d1ff7523d219b0" kindref="member">SetAttributeMaxValue</ref>(type,<sp/>newValue);</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_attribute_component_1ab359fd856c0eaee6fda4c81765c9b336" kindref="member">SetAttributeCurrentValue</ref>(type,<sp/>newValue);</highlight></codeline>
+<codeline lineno="76"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_attribute_component_1a2a29edbf9c15e3296eb8ac4f5b59e8c9" kindref="member">AttributeComponent::ApplyAttributeChange</ref>(<ref refid="namespace_hellwatch_attribute_1ad0a500e65129d06e4589f9bca54c4a7d" kindref="member">HellwatchAttribute::Type</ref><sp/>type,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>delta)</highlight></codeline>
+<codeline lineno="79"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">auto</highlight><highlight class="normal">&amp;<sp/>attribute<sp/>:<sp/>attributes)</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(attribute.attributeType<sp/>==<sp/>type)</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>oldAmount<sp/>=<sp/>attribute.currentAmount;</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>attribute.currentAmount<sp/>+=<sp/>delta;</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(attribute.bClampedToZero)</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>attribute.currentAmount<sp/>=<sp/>Clamp&lt;float&gt;(attribute.currentAmount,<sp/>0,<sp/>attribute.maxAmount);</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>OnAttributeChanged(type,<sp/>oldAmount,<sp/>attribute.currentAmount);</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="93"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_attribute_component_1a381ad0a8f330864674b1cf80bc27f858" kindref="member">AttributeComponent::ApplyAttributeMaxValueChange</ref>(<ref refid="namespace_hellwatch_attribute_1ad0a500e65129d06e4589f9bca54c4a7d" kindref="member">HellwatchAttribute::Type</ref><sp/>type,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>delta)</highlight></codeline>
+<codeline lineno="96"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">auto</highlight><highlight class="normal">&amp;<sp/>attribute<sp/>:<sp/>attributes)</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(attribute.attributeType<sp/>==<sp/>type)</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>attribute.maxAmount<sp/>+=<sp/>delta;</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="105"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_attribute_component_1a3677b4bee550b858f87f5e62148d1e10" kindref="member">AttributeComponent::InitAttributesBySpec</ref>(std::vector&lt;FAttribute&gt;&amp;<sp/>attributesToInit)</highlight></codeline>
+<codeline lineno="108"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/>attributes.clear();</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>att<sp/>:<sp/>attributesToInit)</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>attributes.push_back(att);</highlight></codeline>
+<codeline lineno="113"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_attribute_component_1a6f76a7c8bb5bf45d085ffb001cec45d5" kindref="member">AttributeComponent::AddAttribute</ref>(<ref refid="struct_f_attribute" kindref="compound">FAttribute</ref>&amp;<sp/>attributeToAdd)</highlight></codeline>
+<codeline lineno="116"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">auto</highlight><highlight class="normal">&amp;<sp/>att<sp/>:<sp/>attributes)</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(att.attributeType<sp/>==<sp/>attributeToAdd.<ref refid="struct_f_attribute_1adacbd546c31cd3eeb6cc209a7a407e84" kindref="member">attributeType</ref>)</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/>attributes.push_back(attributeToAdd);</highlight></codeline>
+<codeline lineno="122"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"></highlight></codeline>
+<codeline lineno="124"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_attribute_component_1ac864c662a9b8d2155fa8142078ce3dff" kindref="member">AttributeComponent::ApplyAttributeMultiplier</ref>(<ref refid="namespace_hellwatch_attribute_1ad0a500e65129d06e4589f9bca54c4a7d" kindref="member">HellwatchAttribute::Type</ref><sp/>type,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>multiplier)</highlight></codeline>
+<codeline lineno="125"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>maxValue<sp/>=<sp/><ref refid="class_attribute_component_1ac3a3cdb64a8ddf33f584b07cb6fb3546" kindref="member">GetMaxAttributeValueByType</ref>(type);</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>currentValue<sp/>=<sp/><ref refid="class_attribute_component_1a580cf7f29236d87d448840840ad53bc6" kindref="member">GetCurrentAttributeValueByType</ref>(type);</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_attribute_component_1a1ed8d3136ef683d442d1ff7523d219b0" kindref="member">SetAttributeMaxValue</ref>(type,<sp/>maxValue<sp/>*<sp/>multiplier);</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_attribute_component_1ab359fd856c0eaee6fda4c81765c9b336" kindref="member">SetAttributeCurrentValue</ref>(type,<sp/>currentValue<sp/>*<sp/>multiplier);</highlight></codeline>
+<codeline lineno="131"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"></highlight></codeline>
+<codeline lineno="133"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>AttributeComponent::OnAttributeChanged(<ref refid="namespace_hellwatch_attribute_1ad0a500e65129d06e4589f9bca54c4a7d" kindref="member">HellwatchAttribute::Type</ref><sp/>type,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>oldAmount,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>newAmount)</highlight></codeline>
+<codeline lineno="134"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(type<sp/>==<sp/><ref refid="namespace_hellwatch_attribute_1ad0a500e65129d06e4589f9bca54c4a7da32b2fa4bc40129b2f09aa2a9a4192d50" kindref="member">HellwatchAttribute::Vitality</ref>)</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_attribute_component_1ac864c662a9b8d2155fa8142078ce3dff" kindref="member">ApplyAttributeMultiplier</ref>(<ref refid="namespace_hellwatch_attribute_1ad0a500e65129d06e4589f9bca54c4a7da6d26574d573c085ec34ba30576725713" kindref="member">HellwatchAttribute::Health</ref>,<sp/>((newAmount<sp/>-<sp/>oldAmount)<sp/>*<sp/>0.1f)<sp/>+<sp/>1);</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(type<sp/>==<sp/><ref refid="namespace_hellwatch_attribute_1ad0a500e65129d06e4589f9bca54c4a7daf89b5eb0bb9f25288755790fff1e0603" kindref="member">HellwatchAttribute::Energy</ref>)</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_attribute_component_1ac864c662a9b8d2155fa8142078ce3dff" kindref="member">ApplyAttributeMultiplier</ref>(<ref refid="namespace_hellwatch_attribute_1ad0a500e65129d06e4589f9bca54c4a7daf89b5eb0bb9f25288755790fff1e0603" kindref="member">HellwatchAttribute::Energy</ref>,<sp/>((newAmount<sp/>-<sp/>oldAmount)<sp/>*<sp/>0.1f)<sp/>+<sp/>1);</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="143"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/Attributes/AttributeComponent.cpp"/>
+  </compounddef>
+</doxygen>

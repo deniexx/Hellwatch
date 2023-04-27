@@ -1,0 +1,126 @@
+\hypertarget{_player_controller_8h_source}{}\doxysection{Player\+Controller.\+h}
+\label{_player_controller_8h_source}\index{D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/PlayerController.h@{D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/PlayerController.h}}
+\mbox{\hyperlink{_player_controller_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{2 }
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#include <cstdint>}}
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <functional>}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include <input/touch\_input\_manager.h>}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include <input/keyboard.h>}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_utils_8h}{Utils.h}}"{}}}
+\DoxyCodeLine{8 }
+\DoxyCodeLine{9 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacegef}{gef}}}
+\DoxyCodeLine{10 \{}
+\DoxyCodeLine{11     \textcolor{keyword}{class }InputManager;}
+\DoxyCodeLine{12     \textcolor{keyword}{class }Platform;}
+\DoxyCodeLine{13     \textcolor{keyword}{class }SonyController;}
+\DoxyCodeLine{14 \}}
+\DoxyCodeLine{15 }
+\DoxyCodeLine{16 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespace_hellwatch_input_action}{HellwatchInputAction}}}
+\DoxyCodeLine{17 \{}
+\DoxyCodeLine{18     \textcolor{keyword}{enum} \mbox{\hyperlink{namespace_hellwatch_input_action_ad39fcc17ea621da731d011339205f522}{Type}}}
+\DoxyCodeLine{19     \{}
+\DoxyCodeLine{20         \mbox{\hyperlink{namespace_hellwatch_input_action_ad39fcc17ea621da731d011339205f522a1b668be2e7a287399767467c996dcdcb}{None}} = 0,}
+\DoxyCodeLine{21         \mbox{\hyperlink{namespace_hellwatch_input_action_ad39fcc17ea621da731d011339205f522ac50db83d00684255156bb26fbadba101}{Pressed}},}
+\DoxyCodeLine{22         \mbox{\hyperlink{namespace_hellwatch_input_action_ad39fcc17ea621da731d011339205f522a2e7461d356b36a8be3798d12aa43a81d}{Held}},}
+\DoxyCodeLine{23         \mbox{\hyperlink{namespace_hellwatch_input_action_ad39fcc17ea621da731d011339205f522a6baa22c2058b4910e772c39c0e4104bf}{Released}}}
+\DoxyCodeLine{24     \};}
+\DoxyCodeLine{25 \}}
+\DoxyCodeLine{26 }
+\DoxyCodeLine{27 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespace_hellwatch_controller_axis}{HellwatchControllerAxis}}}
+\DoxyCodeLine{28 \{}
+\DoxyCodeLine{29     \textcolor{keyword}{enum} \mbox{\hyperlink{namespace_hellwatch_controller_axis_a6014138ce0ea9634c8a9c36539a7a967}{Type}}}
+\DoxyCodeLine{30     \{}
+\DoxyCodeLine{31         \mbox{\hyperlink{namespace_hellwatch_controller_axis_a6014138ce0ea9634c8a9c36539a7a967af556634c68eda0587cb64022a5dec80d}{None}} = 0,}
+\DoxyCodeLine{32         \mbox{\hyperlink{namespace_hellwatch_controller_axis_a6014138ce0ea9634c8a9c36539a7a967a2c35b461f3a44e7f7e139b6829990d77}{LeftStickXY}},}
+\DoxyCodeLine{33         \mbox{\hyperlink{namespace_hellwatch_controller_axis_a6014138ce0ea9634c8a9c36539a7a967a052b1c55389f1a8945ac50fdf80d0220}{RightStickXY}}}
+\DoxyCodeLine{34     \};}
+\DoxyCodeLine{35 \}}
+\DoxyCodeLine{36 }
+\DoxyCodeLine{37 \textcolor{comment}{/* -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ */}}
+\DoxyCodeLine{38 \textcolor{comment}{/*            Key bind structs            */}}
+\DoxyCodeLine{39 \textcolor{comment}{/* -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ */}}
+\DoxyCodeLine{40 \textcolor{keyword}{struct }\mbox{\hyperlink{struct_f_key_bind_keyboard}{FKeyBindKeyboard}}}
+\DoxyCodeLine{41 \{}
+\DoxyCodeLine{42     \mbox{\hyperlink{namespace_hellwatch_input_action_ad39fcc17ea621da731d011339205f522}{HellwatchInputAction::Type}} \mbox{\hyperlink{struct_f_key_bind_keyboard_a5af1767e769e14b7f3e66f5c1926ed6a}{inputAction}};}
+\DoxyCodeLine{43     gef::Keyboard::KeyCode \mbox{\hyperlink{struct_f_key_bind_keyboard_ac4a6383a3435b6ae4666585580d31fce}{keyCode}};}
+\DoxyCodeLine{44     std::function<void()> \mbox{\hyperlink{struct_f_key_bind_keyboard_a1743545acca699e351fae0996ad583bc}{functionBind}};}
+\DoxyCodeLine{45 \};}
+\DoxyCodeLine{46 }
+\DoxyCodeLine{47 \textcolor{keyword}{struct }\mbox{\hyperlink{struct_f_key_bind_controller}{FKeyBindController}}}
+\DoxyCodeLine{48 \{}
+\DoxyCodeLine{49     \textcolor{keywordtype}{int} \mbox{\hyperlink{struct_f_key_bind_controller_a30a23da42d558b13a620780e9252e1b4}{keyCode}};}
+\DoxyCodeLine{50     \mbox{\hyperlink{namespace_hellwatch_input_action_ad39fcc17ea621da731d011339205f522}{HellwatchInputAction::Type}} \mbox{\hyperlink{struct_f_key_bind_controller_a9439ad75707d54dacf3aff4d9532e80c}{inputAction}} = \mbox{\hyperlink{namespace_hellwatch_input_action_ad39fcc17ea621da731d011339205f522a1b668be2e7a287399767467c996dcdcb}{HellwatchInputAction::None}};}
+\DoxyCodeLine{51     \mbox{\hyperlink{namespace_hellwatch_controller_axis_a6014138ce0ea9634c8a9c36539a7a967}{HellwatchControllerAxis::Type}} \mbox{\hyperlink{struct_f_key_bind_controller_afd25023bd19b1e50223d80261426aa5a}{axis}} = \mbox{\hyperlink{namespace_hellwatch_controller_axis_a6014138ce0ea9634c8a9c36539a7a967af556634c68eda0587cb64022a5dec80d}{HellwatchControllerAxis::None}};}
+\DoxyCodeLine{52     std::function<void(gef::Vector2)> \mbox{\hyperlink{struct_f_key_bind_controller_ad1881af9bbed2c677b1f11b8e5e3d5b6}{functionBind}};}
+\DoxyCodeLine{53 \};}
+\DoxyCodeLine{54 }
+\DoxyCodeLine{55 \textcolor{keyword}{struct }\mbox{\hyperlink{struct_f_key_bind_mouse}{FKeyBindMouse}}}
+\DoxyCodeLine{56 \{}
+\DoxyCodeLine{57     gef::TouchType \mbox{\hyperlink{struct_f_key_bind_mouse_a5bc7033239652acd4610ec1ca89ddf89}{clickAction}};}
+\DoxyCodeLine{58     std::function<void(gef::Vector2)> \mbox{\hyperlink{struct_f_key_bind_mouse_a5845f86fa206d3ba7e4ab997960a3588}{functionBind}};}
+\DoxyCodeLine{59 \};}
+\DoxyCodeLine{60 }
+\DoxyCodeLine{61 \textcolor{keyword}{struct }\mbox{\hyperlink{struct_f_key_bind_set}{FKeyBindSet}}}
+\DoxyCodeLine{62 \{}
+\DoxyCodeLine{63     std::vector<FKeyBindKeyboard> \mbox{\hyperlink{struct_f_key_bind_set_a003faf9e27ce7e6933a32fac6900021f}{keyboardKeyBinds}};}
+\DoxyCodeLine{64     std::vector<FKeyBindController> \mbox{\hyperlink{struct_f_key_bind_set_a135b83e0bfa3706469986a0036fe97fc}{controllerKeyBinds}};}
+\DoxyCodeLine{65     std::vector<FKeyBindMouse> \mbox{\hyperlink{struct_f_key_bind_set_a23f3845994019b3bdc4f0c1455f8eb04}{mouseKeyBinds}};}
+\DoxyCodeLine{66 \};}
+\DoxyCodeLine{67 }
+\DoxyCodeLine{71 \textcolor{keyword}{class }\mbox{\hyperlink{class_player_controller}{PlayerController}}}
+\DoxyCodeLine{72 \{}
+\DoxyCodeLine{73 \textcolor{keyword}{public}:}
+\DoxyCodeLine{74     \mbox{\hyperlink{class_player_controller}{PlayerController}}(gef::Platform\& platform);}
+\DoxyCodeLine{75 }
+\DoxyCodeLine{76 \textcolor{keyword}{public}:}
+\DoxyCodeLine{77 }
+\DoxyCodeLine{82     gef::Vector2 \mbox{\hyperlink{class_player_controller_a3cf1cb2523e6b8a78cdbaf9df577b3be}{GetMousePosition}}();}
+\DoxyCodeLine{83     }
+\DoxyCodeLine{91     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_player_controller_a3ecff75f943f340bce2240d58eaf7f4f}{BindKeyboardEvent}}(\textcolor{keyword}{const} \mbox{\hyperlink{struct_f_key_bind_keyboard}{FKeyBindKeyboard}} keyboardEvent, \textcolor{keywordtype}{bool} bUnique = \textcolor{keyword}{false}, \textcolor{keywordtype}{bool} bReplaceIfUnique = \textcolor{keyword}{false});}
+\DoxyCodeLine{92 }
+\DoxyCodeLine{100     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_player_controller_a3b4ce10a473a2000d1b204c7830bff97}{BindControllerEvent}}(\textcolor{keyword}{const} \mbox{\hyperlink{struct_f_key_bind_controller}{FKeyBindController}} controllerEvent, \textcolor{keywordtype}{bool} bUnique = \textcolor{keyword}{false}, \textcolor{keywordtype}{bool} bReplaceIfUnique = \textcolor{keyword}{false});}
+\DoxyCodeLine{101 }
+\DoxyCodeLine{107     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_player_controller_a654bf416ea31cbe022ccc50c7e1832e8}{BindMouseEvent}}(\textcolor{keyword}{const} \mbox{\hyperlink{struct_f_key_bind_mouse}{FKeyBindMouse}} mouseEvent);}
+\DoxyCodeLine{108 }
+\DoxyCodeLine{113     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_player_controller_a92f0d14a05056e6296fc726fc7073410}{BindKeyBindSet}}(\mbox{\hyperlink{struct_f_key_bind_set}{FKeyBindSet}} keyBindSet);}
+\DoxyCodeLine{114 }
+\DoxyCodeLine{118     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_player_controller_a2e0c380d64a88c8cfe60ce8452921227}{Update}}();}
+\DoxyCodeLine{119 }
+\DoxyCodeLine{120 \textcolor{keyword}{private}:}
+\DoxyCodeLine{121     \textcolor{comment}{/* -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ */}}
+\DoxyCodeLine{122     \textcolor{comment}{/*      Process key binds functions       */} }
+\DoxyCodeLine{123     \textcolor{comment}{/* -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ */}}
+\DoxyCodeLine{124 }
+\DoxyCodeLine{125     \textcolor{keywordtype}{void} EvaluateKeyboardKeybinds(gef::Keyboard* keyboard);}
+\DoxyCodeLine{126     \textcolor{keywordtype}{void} EvaluateControllerKeybinds(\textcolor{keyword}{const} gef::SonyController* controller);}
+\DoxyCodeLine{127     \textcolor{keywordtype}{void} EvaluateMouseKeybinds(\textcolor{keyword}{const} gef::TouchInputManager* touchInput);}
+\DoxyCodeLine{128 }
+\DoxyCodeLine{129     \textcolor{comment}{/* -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ */}}
+\DoxyCodeLine{130     \textcolor{comment}{/*               Key Binds                */}}
+\DoxyCodeLine{131     \textcolor{comment}{/* -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ */}}
+\DoxyCodeLine{132     std::vector<FKeyBindKeyboard> keyboardKeyBinds;}
+\DoxyCodeLine{133     std::vector<FKeyBindController> controllerKeyBinds;}
+\DoxyCodeLine{134     std::vector<FKeyBindMouse> mouseKeyBinds;}
+\DoxyCodeLine{135 }
+\DoxyCodeLine{136     \textcolor{comment}{/* -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ */}}
+\DoxyCodeLine{137     \textcolor{comment}{/*               Mouse Stuff              */}}
+\DoxyCodeLine{138     \textcolor{comment}{/* -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ */}}
+\DoxyCodeLine{139     Int32 activeTouchID;}
+\DoxyCodeLine{140     gef::Vector2 touchPosition;}
+\DoxyCodeLine{141 }
+\DoxyCodeLine{142     gef::Vector2 lastMousePosition = gef::Vector2(0, 0);}
+\DoxyCodeLine{143 }
+\DoxyCodeLine{144     \textcolor{comment}{/* -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ */}}
+\DoxyCodeLine{145     \textcolor{comment}{/*             Input Manager              */}}
+\DoxyCodeLine{146     \textcolor{comment}{/* -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ */}}
+\DoxyCodeLine{147     gef::InputManager* inputManager;}
+\DoxyCodeLine{148 }
+\DoxyCodeLine{149 \textcolor{keyword}{public}:}
+\DoxyCodeLine{150 }
+\DoxyCodeLine{151     \textcolor{keyword}{const} \mbox{\hyperlink{struct_f_key_bind_set}{FKeyBindSet}}\& \mbox{\hyperlink{class_player_controller_ac23282a33a9bfc6972828f0ce385a52b}{GetKeybindSet}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{152 \};}
+\DoxyCodeLine{153 }
+
+\end{DoxyCode}

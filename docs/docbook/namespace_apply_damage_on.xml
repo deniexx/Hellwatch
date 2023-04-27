@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_namespace_apply_damage_on" xml:lang="en-US">
+<title>ApplyDamageOn Namespace Reference</title>
+<indexterm><primary>ApplyDamageOn</primary></indexterm>
+<para>
+
+<para>Enum used to decided on what to apply damage  </para>
+ 
+</para>
+<simplesect>
+    <title>Enumerations    </title>
+        <itemizedlist>
+            <listitem><para>enum <link linkend="_namespace_apply_damage_on_1aab4652342cac35cdff458c5aa2bad289">Type</link> { <link linkend="_namespace_apply_damage_on_1aab4652342cac35cdff458c5aa2bad289a17c0a2d2e83ad970a7bb7395c9819d1f">EnemiesOnly</link>
+, <link linkend="_namespace_apply_damage_on_1aab4652342cac35cdff458c5aa2bad289af658fe1d6a4dd178955748cb85f117ac">PlayerOnly</link>
+, <link linkend="_namespace_apply_damage_on_1aab4652342cac35cdff458c5aa2bad289a1b46eaf8b75eb03bd8e0c31036b8d89b">EnemiesAndPlayer</link>
+ }</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Enum used to decided on what to apply damage  </para>
+</section>
+<section>
+<title>Enumeration Type Documentation</title>
+<anchor xml:id="_namespace_apply_damage_on_1aab4652342cac35cdff458c5aa2bad289"/><section>
+    <title>Type</title>
+<indexterm><primary>Type</primary><secondary>ApplyDamageOn</secondary></indexterm>
+<indexterm><primary>ApplyDamageOn</primary><secondary>Type</secondary></indexterm>
+<para><computeroutput>enum <link linkend="_namespace_apply_damage_on_1aab4652342cac35cdff458c5aa2bad289">ApplyDamageOn::Type</link></computeroutput></para><informaltable frame="all">
+<title>Enumerator</title>
+    <tgroup cols="2" align="left" colsep="1" rowsep="1">
+      <colspec colname='c1'/>
+      <colspec colname='c2'/>
+<tbody>
+<row><entry><indexterm><primary>EnemiesOnly</primary><secondary>ApplyDamageOn</secondary></indexterm>
+<indexterm><primary>ApplyDamageOn</primary><secondary>EnemiesOnly</secondary></indexterm>
+<anchor xml:id="_namespace_apply_damage_on_1aab4652342cac35cdff458c5aa2bad289a17c0a2d2e83ad970a7bb7395c9819d1f"/>EnemiesOnly</entry><entry></entry></row><row><entry><indexterm><primary>PlayerOnly</primary><secondary>ApplyDamageOn</secondary></indexterm>
+<indexterm><primary>ApplyDamageOn</primary><secondary>PlayerOnly</secondary></indexterm>
+<anchor xml:id="_namespace_apply_damage_on_1aab4652342cac35cdff458c5aa2bad289af658fe1d6a4dd178955748cb85f117ac"/>PlayerOnly</entry><entry></entry></row><row><entry><indexterm><primary>EnemiesAndPlayer</primary><secondary>ApplyDamageOn</secondary></indexterm>
+<indexterm><primary>ApplyDamageOn</primary><secondary>EnemiesAndPlayer</secondary></indexterm>
+<anchor xml:id="_namespace_apply_damage_on_1aab4652342cac35cdff458c5aa2bad289a1b46eaf8b75eb03bd8e0c31036b8d89b"/>EnemiesAndPlayer</entry><entry></entry></row>    </tbody>
+    </tgroup>
+</informaltable>
+</section>
+</section>
+</section>

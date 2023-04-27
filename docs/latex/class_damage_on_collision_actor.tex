@@ -1,0 +1,158 @@
+\hypertarget{class_damage_on_collision_actor}{}\doxysection{Damage\+On\+Collision\+Actor Class Reference}
+\label{class_damage_on_collision_actor}\index{DamageOnCollisionActor@{DamageOnCollisionActor}}
+
+
+Actor to spawn to perform damage on collision   
+
+
+
+
+{\ttfamily \#include $<$Damage\+On\+Collision\+Actor.\+h$>$}
+
+
+
+Inheritance diagram for Damage\+On\+Collision\+Actor\+:
+% FIG 0
+
+
+Collaboration diagram for Damage\+On\+Collision\+Actor\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_damage_on_collision_actor_ad097fd69169453c518a8a7b151311edc}{On\+Collision}} (b2\+Body $\ast$other\+Body) override
+\begin{DoxyCompactList}\small\item\em Deal damage on collision  \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_damage_on_collision_actor_af7de29e57bbf7b66d4e618fb3c612257}{Set\+Damage\+Amount}} (float new\+Amount)
+\begin{DoxyCompactList}\small\item\em Sets the damage amount  \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_damage_on_collision_actor_a715ad5963092224ae96d9fa30dc1b12e}{Set\+Apply\+Damage\+On}} (\mbox{\hyperlink{namespace_apply_damage_on_aab4652342cac35cdff458c5aa2bad289}{Apply\+Damage\+On\+::\+Type}} new\+State)
+\begin{DoxyCompactList}\small\item\em Sets to what we should apply damage  \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_damage_on_collision_actor_aeb7e7f169bc0e4b22628788716e401ae}{Set\+Spinning}} (bool b\+New\+State)
+\begin{DoxyCompactList}\small\item\em Specifies whether the actor should spin while moving @\+NOTE\+: This does not change the movement direction  \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_damage_on_collision_actor_aaeb5e7abbad19c5f60a521f0016d3acf}{Set\+Is\+Piercing}} (bool b\+New\+State)
+\begin{DoxyCompactList}\small\item\em Sets the projectile to be piercing, passing through all enemies/players until it hits environment  \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_damage_on_collision_actor_a468c69c421db3d272bf18c46cbb15c2a}{Update}} (float delta\+Time) override
+\begin{DoxyCompactList}\small\item\em Update function, called every frame  \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespace_apply_damage_on_aab4652342cac35cdff458c5aa2bad289}{Apply\+Damage\+On\+::\+Type}} \mbox{\hyperlink{class_damage_on_collision_actor_a07b7703b8e3db5ad89fa3a7bb30750c2}{apply\+Damage\+On}} = \mbox{\hyperlink{namespace_apply_damage_on_aab4652342cac35cdff458c5aa2bad289a17c0a2d2e83ad970a7bb7395c9819d1f}{Apply\+Damage\+On\+::\+Enemies\+Only}}
+\item 
+bool \mbox{\hyperlink{class_damage_on_collision_actor_a3ba78bead6c77dd82c141968a971bd4f}{b\+Spinning}} = false
+\item 
+bool \mbox{\hyperlink{class_damage_on_collision_actor_aee4412e69f1df05a5a77223176b0c6fb}{b\+Is\+Piercing}} = false
+\item 
+float \mbox{\hyperlink{class_damage_on_collision_actor_a8684d8897c9e9725d32a771f08e0b4a3}{damage\+Amount}} = 0.f
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Actor to spawn to perform damage on collision  
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_damage_on_collision_actor_ad097fd69169453c518a8a7b151311edc}\label{class_damage_on_collision_actor_ad097fd69169453c518a8a7b151311edc}} 
+\index{DamageOnCollisionActor@{DamageOnCollisionActor}!OnCollision@{OnCollision}}
+\index{OnCollision@{OnCollision}!DamageOnCollisionActor@{DamageOnCollisionActor}}
+\doxysubsubsection{\texorpdfstring{OnCollision()}{OnCollision()}}
+{\footnotesize\ttfamily void Damage\+On\+Collision\+Actor\+::\+On\+Collision (\begin{DoxyParamCaption}\item[{b2\+Body $\ast$}]{other\+Body }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Deal damage on collision  
+
+
+
+Reimplemented from \mbox{\hyperlink{class_world_object_a7c563531a541e9f5ff4193443cedd515}{World\+Object}}.
+
+\mbox{\Hypertarget{class_damage_on_collision_actor_a715ad5963092224ae96d9fa30dc1b12e}\label{class_damage_on_collision_actor_a715ad5963092224ae96d9fa30dc1b12e}} 
+\index{DamageOnCollisionActor@{DamageOnCollisionActor}!SetApplyDamageOn@{SetApplyDamageOn}}
+\index{SetApplyDamageOn@{SetApplyDamageOn}!DamageOnCollisionActor@{DamageOnCollisionActor}}
+\doxysubsubsection{\texorpdfstring{SetApplyDamageOn()}{SetApplyDamageOn()}}
+{\footnotesize\ttfamily void Damage\+On\+Collision\+Actor\+::\+Set\+Apply\+Damage\+On (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespace_apply_damage_on_aab4652342cac35cdff458c5aa2bad289}{Apply\+Damage\+On\+::\+Type}}}]{new\+State }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets to what we should apply damage  
+
+\mbox{\Hypertarget{class_damage_on_collision_actor_af7de29e57bbf7b66d4e618fb3c612257}\label{class_damage_on_collision_actor_af7de29e57bbf7b66d4e618fb3c612257}} 
+\index{DamageOnCollisionActor@{DamageOnCollisionActor}!SetDamageAmount@{SetDamageAmount}}
+\index{SetDamageAmount@{SetDamageAmount}!DamageOnCollisionActor@{DamageOnCollisionActor}}
+\doxysubsubsection{\texorpdfstring{SetDamageAmount()}{SetDamageAmount()}}
+{\footnotesize\ttfamily void Damage\+On\+Collision\+Actor\+::\+Set\+Damage\+Amount (\begin{DoxyParamCaption}\item[{float}]{new\+Amount }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the damage amount  
+
+\mbox{\Hypertarget{class_damage_on_collision_actor_aaeb5e7abbad19c5f60a521f0016d3acf}\label{class_damage_on_collision_actor_aaeb5e7abbad19c5f60a521f0016d3acf}} 
+\index{DamageOnCollisionActor@{DamageOnCollisionActor}!SetIsPiercing@{SetIsPiercing}}
+\index{SetIsPiercing@{SetIsPiercing}!DamageOnCollisionActor@{DamageOnCollisionActor}}
+\doxysubsubsection{\texorpdfstring{SetIsPiercing()}{SetIsPiercing()}}
+{\footnotesize\ttfamily void Damage\+On\+Collision\+Actor\+::\+Set\+Is\+Piercing (\begin{DoxyParamCaption}\item[{bool}]{b\+New\+State }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the projectile to be piercing, passing through all enemies/players until it hits environment  
+
+\mbox{\Hypertarget{class_damage_on_collision_actor_aeb7e7f169bc0e4b22628788716e401ae}\label{class_damage_on_collision_actor_aeb7e7f169bc0e4b22628788716e401ae}} 
+\index{DamageOnCollisionActor@{DamageOnCollisionActor}!SetSpinning@{SetSpinning}}
+\index{SetSpinning@{SetSpinning}!DamageOnCollisionActor@{DamageOnCollisionActor}}
+\doxysubsubsection{\texorpdfstring{SetSpinning()}{SetSpinning()}}
+{\footnotesize\ttfamily void Damage\+On\+Collision\+Actor\+::\+Set\+Spinning (\begin{DoxyParamCaption}\item[{bool}]{b\+New\+State }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Specifies whether the actor should spin while moving @\+NOTE\+: This does not change the movement direction  
+
+\mbox{\Hypertarget{class_damage_on_collision_actor_a468c69c421db3d272bf18c46cbb15c2a}\label{class_damage_on_collision_actor_a468c69c421db3d272bf18c46cbb15c2a}} 
+\index{DamageOnCollisionActor@{DamageOnCollisionActor}!Update@{Update}}
+\index{Update@{Update}!DamageOnCollisionActor@{DamageOnCollisionActor}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void Damage\+On\+Collision\+Actor\+::\+Update (\begin{DoxyParamCaption}\item[{float}]{delta\+Time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Update function, called every frame  
+
+
+\begin{DoxyParams}{Parameters}
+{\em delta\+Time} & Float variable for the frame time\\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{class_mesh_actor_a3743470557ddbbc88bc73e4dd283d6bf}{Mesh\+Actor}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_damage_on_collision_actor_a07b7703b8e3db5ad89fa3a7bb30750c2}\label{class_damage_on_collision_actor_a07b7703b8e3db5ad89fa3a7bb30750c2}} 
+\index{DamageOnCollisionActor@{DamageOnCollisionActor}!applyDamageOn@{applyDamageOn}}
+\index{applyDamageOn@{applyDamageOn}!DamageOnCollisionActor@{DamageOnCollisionActor}}
+\doxysubsubsection{\texorpdfstring{applyDamageOn}{applyDamageOn}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespace_apply_damage_on_aab4652342cac35cdff458c5aa2bad289}{Apply\+Damage\+On\+::\+Type}} Damage\+On\+Collision\+Actor\+::apply\+Damage\+On = \mbox{\hyperlink{namespace_apply_damage_on_aab4652342cac35cdff458c5aa2bad289a17c0a2d2e83ad970a7bb7395c9819d1f}{Apply\+Damage\+On\+::\+Enemies\+Only}}\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_damage_on_collision_actor_aee4412e69f1df05a5a77223176b0c6fb}\label{class_damage_on_collision_actor_aee4412e69f1df05a5a77223176b0c6fb}} 
+\index{DamageOnCollisionActor@{DamageOnCollisionActor}!bIsPiercing@{bIsPiercing}}
+\index{bIsPiercing@{bIsPiercing}!DamageOnCollisionActor@{DamageOnCollisionActor}}
+\doxysubsubsection{\texorpdfstring{bIsPiercing}{bIsPiercing}}
+{\footnotesize\ttfamily bool Damage\+On\+Collision\+Actor\+::b\+Is\+Piercing = false\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_damage_on_collision_actor_a3ba78bead6c77dd82c141968a971bd4f}\label{class_damage_on_collision_actor_a3ba78bead6c77dd82c141968a971bd4f}} 
+\index{DamageOnCollisionActor@{DamageOnCollisionActor}!bSpinning@{bSpinning}}
+\index{bSpinning@{bSpinning}!DamageOnCollisionActor@{DamageOnCollisionActor}}
+\doxysubsubsection{\texorpdfstring{bSpinning}{bSpinning}}
+{\footnotesize\ttfamily bool Damage\+On\+Collision\+Actor\+::b\+Spinning = false\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_damage_on_collision_actor_a8684d8897c9e9725d32a771f08e0b4a3}\label{class_damage_on_collision_actor_a8684d8897c9e9725d32a771f08e0b4a3}} 
+\index{DamageOnCollisionActor@{DamageOnCollisionActor}!damageAmount@{damageAmount}}
+\index{damageAmount@{damageAmount}!DamageOnCollisionActor@{DamageOnCollisionActor}}
+\doxysubsubsection{\texorpdfstring{damageAmount}{damageAmount}}
+{\footnotesize\ttfamily float Damage\+On\+Collision\+Actor\+::damage\+Amount = 0.f\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Uni/\+CMP208/\+Hellwatch/build/vs2017/\+Actors/\+Mesh\+Actors/\mbox{\hyperlink{_damage_on_collision_actor_8h}{Damage\+On\+Collision\+Actor.\+h}}\item 
+D\+:/\+Uni/\+CMP208/\+Hellwatch/build/vs2017/\+Actors/\+Mesh\+Actors/\mbox{\hyperlink{_damage_on_collision_actor_8cpp}{Damage\+On\+Collision\+Actor.\+cpp}}\end{DoxyCompactItemize}

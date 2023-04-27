@@ -1,0 +1,276 @@
+\hypertarget{class_player_character}{}\doxysection{Player\+Character Class Reference}
+\label{class_player_character}\index{PlayerCharacter@{PlayerCharacter}}
+
+
+The class that the player uses during the Game\+Loop \mbox{\hyperlink{namespace_game_state}{Game\+State}}   
+
+
+
+
+{\ttfamily \#include $<$Player\+Character.\+h$>$}
+
+
+
+Inheritance diagram for Player\+Character\+:
+% FIG 0
+
+
+Collaboration diagram for Player\+Character\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_player_character_af3ac12a41f58d860fb716138578bd95f}{Player\+Character}} ()
+\item 
+virtual void \mbox{\hyperlink{class_player_character_ad12c09c28194b1c5ed39aa4b5c21cbd6}{Post\+Init}} () override
+\begin{DoxyCompactList}\small\item\em Override this to Initialize variables or do any necessary work when the object is created  \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_player_character_ad681ccd09dc1ed4c0242bfa0d981d584}{Update}} (float delta\+Time) override
+\begin{DoxyCompactList}\small\item\em Update function, called every frame  \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_player_character_ac89349d4afba371e044e4c5816ba68c8}{Take\+Damage}} (float damage\+Amount) override
+\item 
+void \mbox{\hyperlink{class_player_character_a0415b6e06c971db05a79ae18176f6e99}{Apply\+Invincibility\+For\+Duration}} (float invincibility\+Duration)
+\begin{DoxyCompactList}\small\item\em Applies invincibility for specified duration  \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_player_character_abf3fd7463bf99305b85490644ff3d276}{Draw\+Player\+HUD}} ()
+\item 
+\mbox{\hyperlink{class_player_controller}{Player\+Controller}} $\ast$ \mbox{\hyperlink{class_player_character_af75d11f2b93d26046988f3316888fdbc}{Get\+Controller}} () const
+\item 
+\mbox{\hyperlink{class_character_movement_component}{Character\+Movement\+Component}} $\ast$ \mbox{\hyperlink{class_player_character_ac890f6a156f0b6f48aa9c62a6a307932}{Get\+Character\+Movement}} () const
+\item 
+\mbox{\hyperlink{class_attribute_component}{Attribute\+Component}} $\ast$ \mbox{\hyperlink{class_player_character_a35f60a491cce521c070536f0c9eec6f6}{Get\+Character\+Attributes}} () const
+\item 
+\mbox{\hyperlink{class_abilities_component}{Abilities\+Component}} $\ast$ \mbox{\hyperlink{class_player_character_a1b142fd480a0b6326069058a0109668a}{Get\+Character\+Abilities}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_player_character_a71db2dd63c1e1ee33c1636d07c663bd2}{Move\+Left}} ()
+\item 
+void \mbox{\hyperlink{class_player_character_a27a3a3bd797b494f4262a0d9cc23a7da}{Move\+Right}} ()
+\item 
+void \mbox{\hyperlink{class_player_character_a3e2db13c832d8ad72f91f35626318029}{Move\+Forward}} ()
+\item 
+void \mbox{\hyperlink{class_player_character_a66f35da8ae003995f4f9984edf1aa503}{Move\+Back}} ()
+\item 
+void \mbox{\hyperlink{class_player_character_ae3414c7f6a3ecb97de258a3c48e5042c}{Activate\+Ability1}} ()
+\item 
+void \mbox{\hyperlink{class_player_character_abf9975cee8626a88bfda0083d5ec32ab}{Activate\+Ability2}} ()
+\item 
+void \mbox{\hyperlink{class_player_character_af678379492ff14630742460e81d191b7}{Activate\+Ability3}} ()
+\item 
+void \mbox{\hyperlink{class_player_character_a5a51435bd69ade9c5e2ea48319f6299d}{Activate\+Ability4}} ()
+\item 
+void \mbox{\hyperlink{class_player_character_a294eaf7133b810dc22a0caf95a98dcb1}{On\+Controller\+Left\+Stick}} (gef\+::\+Vector2 delta)
+\item 
+void \mbox{\hyperlink{class_player_character_ae91b2ed2e883c4e311568689ba946fba}{On\+Controller\+Activate\+Ability1}} (gef\+::\+Vector2 delta)
+\item 
+void \mbox{\hyperlink{class_player_character_aad1ce1a4a76bff1adc2adde12d89a25d}{On\+Controller\+Activate\+Ability2}} (gef\+::\+Vector2 delta)
+\item 
+void \mbox{\hyperlink{class_player_character_aa44656f4422f9b2dd5b9f662eb3f7add}{On\+Controller\+Activate\+Ability3}} (gef\+::\+Vector2 delta)
+\item 
+void \mbox{\hyperlink{class_player_character_a48ccee58814a3244be3ba5f8ba0b056c}{On\+Controller\+Activate\+Ability4}} (gef\+::\+Vector2 delta)
+\item 
+void \mbox{\hyperlink{class_player_character_a0da3ea447b3274eef8d2aab1ca9a22d2}{On\+Controller\+Invert\+Up\+Down\+Movement}} (gef\+::\+Vector2 delta)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_player_controller}{Player\+Controller}} $\ast$ \mbox{\hyperlink{class_player_character_a32fa60c60ab920a4bf3682d8d64efb2f}{controller}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+The class that the player uses during the Game\+Loop \mbox{\hyperlink{namespace_game_state}{Game\+State}}  
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_player_character_af3ac12a41f58d860fb716138578bd95f}\label{class_player_character_af3ac12a41f58d860fb716138578bd95f}} 
+\index{PlayerCharacter@{PlayerCharacter}!PlayerCharacter@{PlayerCharacter}}
+\index{PlayerCharacter@{PlayerCharacter}!PlayerCharacter@{PlayerCharacter}}
+\doxysubsubsection{\texorpdfstring{PlayerCharacter()}{PlayerCharacter()}}
+{\footnotesize\ttfamily Player\+Character\+::\+Player\+Character (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_player_character_ae3414c7f6a3ecb97de258a3c48e5042c}\label{class_player_character_ae3414c7f6a3ecb97de258a3c48e5042c}} 
+\index{PlayerCharacter@{PlayerCharacter}!ActivateAbility1@{ActivateAbility1}}
+\index{ActivateAbility1@{ActivateAbility1}!PlayerCharacter@{PlayerCharacter}}
+\doxysubsubsection{\texorpdfstring{ActivateAbility1()}{ActivateAbility1()}}
+{\footnotesize\ttfamily void Player\+Character\+::\+Activate\+Ability1 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_player_character_abf9975cee8626a88bfda0083d5ec32ab}\label{class_player_character_abf9975cee8626a88bfda0083d5ec32ab}} 
+\index{PlayerCharacter@{PlayerCharacter}!ActivateAbility2@{ActivateAbility2}}
+\index{ActivateAbility2@{ActivateAbility2}!PlayerCharacter@{PlayerCharacter}}
+\doxysubsubsection{\texorpdfstring{ActivateAbility2()}{ActivateAbility2()}}
+{\footnotesize\ttfamily void Player\+Character\+::\+Activate\+Ability2 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_player_character_af678379492ff14630742460e81d191b7}\label{class_player_character_af678379492ff14630742460e81d191b7}} 
+\index{PlayerCharacter@{PlayerCharacter}!ActivateAbility3@{ActivateAbility3}}
+\index{ActivateAbility3@{ActivateAbility3}!PlayerCharacter@{PlayerCharacter}}
+\doxysubsubsection{\texorpdfstring{ActivateAbility3()}{ActivateAbility3()}}
+{\footnotesize\ttfamily void Player\+Character\+::\+Activate\+Ability3 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_player_character_a5a51435bd69ade9c5e2ea48319f6299d}\label{class_player_character_a5a51435bd69ade9c5e2ea48319f6299d}} 
+\index{PlayerCharacter@{PlayerCharacter}!ActivateAbility4@{ActivateAbility4}}
+\index{ActivateAbility4@{ActivateAbility4}!PlayerCharacter@{PlayerCharacter}}
+\doxysubsubsection{\texorpdfstring{ActivateAbility4()}{ActivateAbility4()}}
+{\footnotesize\ttfamily void Player\+Character\+::\+Activate\+Ability4 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_player_character_a0415b6e06c971db05a79ae18176f6e99}\label{class_player_character_a0415b6e06c971db05a79ae18176f6e99}} 
+\index{PlayerCharacter@{PlayerCharacter}!ApplyInvincibilityForDuration@{ApplyInvincibilityForDuration}}
+\index{ApplyInvincibilityForDuration@{ApplyInvincibilityForDuration}!PlayerCharacter@{PlayerCharacter}}
+\doxysubsubsection{\texorpdfstring{ApplyInvincibilityForDuration()}{ApplyInvincibilityForDuration()}}
+{\footnotesize\ttfamily void Player\+Character\+::\+Apply\+Invincibility\+For\+Duration (\begin{DoxyParamCaption}\item[{float}]{invincibility\+Duration }\end{DoxyParamCaption})}
+
+
+
+Applies invincibility for specified duration  
+
+\mbox{\Hypertarget{class_player_character_abf3fd7463bf99305b85490644ff3d276}\label{class_player_character_abf3fd7463bf99305b85490644ff3d276}} 
+\index{PlayerCharacter@{PlayerCharacter}!DrawPlayerHUD@{DrawPlayerHUD}}
+\index{DrawPlayerHUD@{DrawPlayerHUD}!PlayerCharacter@{PlayerCharacter}}
+\doxysubsubsection{\texorpdfstring{DrawPlayerHUD()}{DrawPlayerHUD()}}
+{\footnotesize\ttfamily void Player\+Character\+::\+Draw\+Player\+HUD (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_player_character_a1b142fd480a0b6326069058a0109668a}\label{class_player_character_a1b142fd480a0b6326069058a0109668a}} 
+\index{PlayerCharacter@{PlayerCharacter}!GetCharacterAbilities@{GetCharacterAbilities}}
+\index{GetCharacterAbilities@{GetCharacterAbilities}!PlayerCharacter@{PlayerCharacter}}
+\doxysubsubsection{\texorpdfstring{GetCharacterAbilities()}{GetCharacterAbilities()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_abilities_component}{Abilities\+Component}} $\ast$ Player\+Character\+::\+Get\+Character\+Abilities (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_player_character_a35f60a491cce521c070536f0c9eec6f6}\label{class_player_character_a35f60a491cce521c070536f0c9eec6f6}} 
+\index{PlayerCharacter@{PlayerCharacter}!GetCharacterAttributes@{GetCharacterAttributes}}
+\index{GetCharacterAttributes@{GetCharacterAttributes}!PlayerCharacter@{PlayerCharacter}}
+\doxysubsubsection{\texorpdfstring{GetCharacterAttributes()}{GetCharacterAttributes()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_attribute_component}{Attribute\+Component}} $\ast$ Player\+Character\+::\+Get\+Character\+Attributes (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_player_character_ac890f6a156f0b6f48aa9c62a6a307932}\label{class_player_character_ac890f6a156f0b6f48aa9c62a6a307932}} 
+\index{PlayerCharacter@{PlayerCharacter}!GetCharacterMovement@{GetCharacterMovement}}
+\index{GetCharacterMovement@{GetCharacterMovement}!PlayerCharacter@{PlayerCharacter}}
+\doxysubsubsection{\texorpdfstring{GetCharacterMovement()}{GetCharacterMovement()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_character_movement_component}{Character\+Movement\+Component}} $\ast$ Player\+Character\+::\+Get\+Character\+Movement (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_player_character_af75d11f2b93d26046988f3316888fdbc}\label{class_player_character_af75d11f2b93d26046988f3316888fdbc}} 
+\index{PlayerCharacter@{PlayerCharacter}!GetController@{GetController}}
+\index{GetController@{GetController}!PlayerCharacter@{PlayerCharacter}}
+\doxysubsubsection{\texorpdfstring{GetController()}{GetController()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_player_controller}{Player\+Controller}} $\ast$ Player\+Character\+::\+Get\+Controller (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_player_character_a66f35da8ae003995f4f9984edf1aa503}\label{class_player_character_a66f35da8ae003995f4f9984edf1aa503}} 
+\index{PlayerCharacter@{PlayerCharacter}!MoveBack@{MoveBack}}
+\index{MoveBack@{MoveBack}!PlayerCharacter@{PlayerCharacter}}
+\doxysubsubsection{\texorpdfstring{MoveBack()}{MoveBack()}}
+{\footnotesize\ttfamily void Player\+Character\+::\+Move\+Back (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_player_character_a3e2db13c832d8ad72f91f35626318029}\label{class_player_character_a3e2db13c832d8ad72f91f35626318029}} 
+\index{PlayerCharacter@{PlayerCharacter}!MoveForward@{MoveForward}}
+\index{MoveForward@{MoveForward}!PlayerCharacter@{PlayerCharacter}}
+\doxysubsubsection{\texorpdfstring{MoveForward()}{MoveForward()}}
+{\footnotesize\ttfamily void Player\+Character\+::\+Move\+Forward (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_player_character_a71db2dd63c1e1ee33c1636d07c663bd2}\label{class_player_character_a71db2dd63c1e1ee33c1636d07c663bd2}} 
+\index{PlayerCharacter@{PlayerCharacter}!MoveLeft@{MoveLeft}}
+\index{MoveLeft@{MoveLeft}!PlayerCharacter@{PlayerCharacter}}
+\doxysubsubsection{\texorpdfstring{MoveLeft()}{MoveLeft()}}
+{\footnotesize\ttfamily void Player\+Character\+::\+Move\+Left (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_player_character_a27a3a3bd797b494f4262a0d9cc23a7da}\label{class_player_character_a27a3a3bd797b494f4262a0d9cc23a7da}} 
+\index{PlayerCharacter@{PlayerCharacter}!MoveRight@{MoveRight}}
+\index{MoveRight@{MoveRight}!PlayerCharacter@{PlayerCharacter}}
+\doxysubsubsection{\texorpdfstring{MoveRight()}{MoveRight()}}
+{\footnotesize\ttfamily void Player\+Character\+::\+Move\+Right (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_player_character_ae91b2ed2e883c4e311568689ba946fba}\label{class_player_character_ae91b2ed2e883c4e311568689ba946fba}} 
+\index{PlayerCharacter@{PlayerCharacter}!OnControllerActivateAbility1@{OnControllerActivateAbility1}}
+\index{OnControllerActivateAbility1@{OnControllerActivateAbility1}!PlayerCharacter@{PlayerCharacter}}
+\doxysubsubsection{\texorpdfstring{OnControllerActivateAbility1()}{OnControllerActivateAbility1()}}
+{\footnotesize\ttfamily void Player\+Character\+::\+On\+Controller\+Activate\+Ability1 (\begin{DoxyParamCaption}\item[{gef\+::\+Vector2}]{delta }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_player_character_aad1ce1a4a76bff1adc2adde12d89a25d}\label{class_player_character_aad1ce1a4a76bff1adc2adde12d89a25d}} 
+\index{PlayerCharacter@{PlayerCharacter}!OnControllerActivateAbility2@{OnControllerActivateAbility2}}
+\index{OnControllerActivateAbility2@{OnControllerActivateAbility2}!PlayerCharacter@{PlayerCharacter}}
+\doxysubsubsection{\texorpdfstring{OnControllerActivateAbility2()}{OnControllerActivateAbility2()}}
+{\footnotesize\ttfamily void Player\+Character\+::\+On\+Controller\+Activate\+Ability2 (\begin{DoxyParamCaption}\item[{gef\+::\+Vector2}]{delta }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_player_character_aa44656f4422f9b2dd5b9f662eb3f7add}\label{class_player_character_aa44656f4422f9b2dd5b9f662eb3f7add}} 
+\index{PlayerCharacter@{PlayerCharacter}!OnControllerActivateAbility3@{OnControllerActivateAbility3}}
+\index{OnControllerActivateAbility3@{OnControllerActivateAbility3}!PlayerCharacter@{PlayerCharacter}}
+\doxysubsubsection{\texorpdfstring{OnControllerActivateAbility3()}{OnControllerActivateAbility3()}}
+{\footnotesize\ttfamily void Player\+Character\+::\+On\+Controller\+Activate\+Ability3 (\begin{DoxyParamCaption}\item[{gef\+::\+Vector2}]{delta }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_player_character_a48ccee58814a3244be3ba5f8ba0b056c}\label{class_player_character_a48ccee58814a3244be3ba5f8ba0b056c}} 
+\index{PlayerCharacter@{PlayerCharacter}!OnControllerActivateAbility4@{OnControllerActivateAbility4}}
+\index{OnControllerActivateAbility4@{OnControllerActivateAbility4}!PlayerCharacter@{PlayerCharacter}}
+\doxysubsubsection{\texorpdfstring{OnControllerActivateAbility4()}{OnControllerActivateAbility4()}}
+{\footnotesize\ttfamily void Player\+Character\+::\+On\+Controller\+Activate\+Ability4 (\begin{DoxyParamCaption}\item[{gef\+::\+Vector2}]{delta }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_player_character_a0da3ea447b3274eef8d2aab1ca9a22d2}\label{class_player_character_a0da3ea447b3274eef8d2aab1ca9a22d2}} 
+\index{PlayerCharacter@{PlayerCharacter}!OnControllerInvertUpDownMovement@{OnControllerInvertUpDownMovement}}
+\index{OnControllerInvertUpDownMovement@{OnControllerInvertUpDownMovement}!PlayerCharacter@{PlayerCharacter}}
+\doxysubsubsection{\texorpdfstring{OnControllerInvertUpDownMovement()}{OnControllerInvertUpDownMovement()}}
+{\footnotesize\ttfamily void Player\+Character\+::\+On\+Controller\+Invert\+Up\+Down\+Movement (\begin{DoxyParamCaption}\item[{gef\+::\+Vector2}]{delta }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_player_character_a294eaf7133b810dc22a0caf95a98dcb1}\label{class_player_character_a294eaf7133b810dc22a0caf95a98dcb1}} 
+\index{PlayerCharacter@{PlayerCharacter}!OnControllerLeftStick@{OnControllerLeftStick}}
+\index{OnControllerLeftStick@{OnControllerLeftStick}!PlayerCharacter@{PlayerCharacter}}
+\doxysubsubsection{\texorpdfstring{OnControllerLeftStick()}{OnControllerLeftStick()}}
+{\footnotesize\ttfamily void Player\+Character\+::\+On\+Controller\+Left\+Stick (\begin{DoxyParamCaption}\item[{gef\+::\+Vector2}]{delta }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_player_character_ad12c09c28194b1c5ed39aa4b5c21cbd6}\label{class_player_character_ad12c09c28194b1c5ed39aa4b5c21cbd6}} 
+\index{PlayerCharacter@{PlayerCharacter}!PostInit@{PostInit}}
+\index{PostInit@{PostInit}!PlayerCharacter@{PlayerCharacter}}
+\doxysubsubsection{\texorpdfstring{PostInit()}{PostInit()}}
+{\footnotesize\ttfamily void Player\+Character\+::\+Post\+Init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Override this to Initialize variables or do any necessary work when the object is created  
+
+
+
+Reimplemented from \mbox{\hyperlink{class_world_object_a8500a6a24c62699fa103a68349407a3f}{World\+Object}}.
+
+\mbox{\Hypertarget{class_player_character_ac89349d4afba371e044e4c5816ba68c8}\label{class_player_character_ac89349d4afba371e044e4c5816ba68c8}} 
+\index{PlayerCharacter@{PlayerCharacter}!TakeDamage@{TakeDamage}}
+\index{TakeDamage@{TakeDamage}!PlayerCharacter@{PlayerCharacter}}
+\doxysubsubsection{\texorpdfstring{TakeDamage()}{TakeDamage()}}
+{\footnotesize\ttfamily void Player\+Character\+::\+Take\+Damage (\begin{DoxyParamCaption}\item[{float}]{damage\+Amount }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_mesh_actor_a31a231014625686e8d40e561a7028931}{Mesh\+Actor}}.
+
+\mbox{\Hypertarget{class_player_character_ad681ccd09dc1ed4c0242bfa0d981d584}\label{class_player_character_ad681ccd09dc1ed4c0242bfa0d981d584}} 
+\index{PlayerCharacter@{PlayerCharacter}!Update@{Update}}
+\index{Update@{Update}!PlayerCharacter@{PlayerCharacter}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void Player\+Character\+::\+Update (\begin{DoxyParamCaption}\item[{float}]{delta\+Time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Update function, called every frame  
+
+
+\begin{DoxyParams}{Parameters}
+{\em delta\+Time} & Float variable for the frame time\\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{class_mesh_actor_a3743470557ddbbc88bc73e4dd283d6bf}{Mesh\+Actor}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_player_character_a32fa60c60ab920a4bf3682d8d64efb2f}\label{class_player_character_a32fa60c60ab920a4bf3682d8d64efb2f}} 
+\index{PlayerCharacter@{PlayerCharacter}!controller@{controller}}
+\index{controller@{controller}!PlayerCharacter@{PlayerCharacter}}
+\doxysubsubsection{\texorpdfstring{controller}{controller}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_player_controller}{Player\+Controller}}$\ast$ Player\+Character\+::controller\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Uni/\+CMP208/\+Hellwatch/build/vs2017/\+Actors/\+Mesh\+Actors/\mbox{\hyperlink{_player_character_8h}{Player\+Character.\+h}}\item 
+D\+:/\+Uni/\+CMP208/\+Hellwatch/build/vs2017/\+Actors/\+Mesh\+Actors/\mbox{\hyperlink{_player_character_8cpp}{Player\+Character.\+cpp}}\end{DoxyCompactItemize}

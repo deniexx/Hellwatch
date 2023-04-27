@@ -1,0 +1,77 @@
+.TH "D:/Uni/CMP208/Hellwatch/scene_app.h" 3 "Thu Apr 27 2023" "Hellwatch" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+D:/Uni/CMP208/Hellwatch/scene_app.h
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <system/application\&.h>\fP
+.br
+\fC#include <maths/vector2\&.h>\fP
+.br
+\fC#include 'primitive_builder\&.h'\fP
+.br
+\fC#include 'graphics/scene\&.h'\fP
+.br
+\fC#include 'box2d/box2d\&.h'\fP
+.br
+\fC#include 'system/platform\&.h'\fP
+.br
+\fC#include 'obj_mesh_loader\&.h'\fP
+.br
+\fC#include 'graphics/font\&.h'\fP
+.br
+\fC#include <vector>\fP
+.br
+\fC#include <future>\fP
+.br
+\fC#include <random>\fP
+.br
+
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "struct \fBFCameraShake\fP"
+.br
+.ti -1c
+.RI "class \fBSceneApp\fP"
+.br
+.in -1c
+.SS "Namespaces"
+
+.in +1c
+.ti -1c
+.RI "namespace \fBGameState\fP"
+.br
+.ti -1c
+.RI "namespace \fBgef\fP"
+.br
+.in -1c
+.SS "Typedefs"
+
+.in +1c
+.ti -1c
+.RI "typedef std::map< std::string, gef::Texture * > \fBTextureMap\fP"
+.br
+.ti -1c
+.RI "typedef std::map< std::string, int > \fBSoundMap\fP"
+.br
+.in -1c
+.SS "Enumerations"
+
+.in +1c
+.ti -1c
+.RI "enum \fBGameState::Type\fP { \fBGameState::Loading\fP, \fBGameState::MainMenu\fP, \fBGameState::GameLoop\fP, \fBGameState::PauseMenu\fP, \fBGameState::Shop\fP, \fBGameState::GameEnd\fP }"
+.br
+.in -1c
+.SH "Typedef Documentation"
+.PP 
+.SS "typedef std::map<std::string, int> \fBSoundMap\fP"
+
+.SS "typedef std::map<std::string, gef::Texture*> \fBTextureMap\fP"
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Hellwatch from the source code\&.

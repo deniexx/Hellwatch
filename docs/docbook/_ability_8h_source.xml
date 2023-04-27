@@ -1,0 +1,129 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__ability_8h_source" xml:lang="en-US">
+<title>Ability.h</title>
+<indexterm><primary>D:/Uni/CMP208/Hellwatch/build/vs2017/Abilities/Ability.h</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered">1 <emphasis role="preprocessor">#pragma&#32;once</emphasis>
+2 
+3 <emphasis role="preprocessor">#include&#32;&lt;string&gt;</emphasis>
+4 <emphasis role="preprocessor">#include&#32;&lt;cmath&gt;</emphasis>
+5 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="__attribute_types_8h">Attributes/AttributeTypes.h</link>&quot;</emphasis>
+6 
+7 <emphasis role="keyword">class&#32;</emphasis><link linkend="_class_abilities_component">AbilitiesComponent</link>;
+8 <emphasis role="keyword">class&#32;</emphasis><link linkend="_class_attribute_component">AttributeComponent</link>;
+9 
+13 <emphasis role="keyword">namespace&#32;</emphasis><link linkend="_namespace_ability_activation_key">AbilityActivationKey</link>
+14 {
+15 &#32;&#32;&#32;&#32;<emphasis role="keyword">enum</emphasis>&#32;<link linkend="_namespace_ability_activation_key_1ab159d3c3f26196a9ff493b67ecf7e68c">Type</link>&#32;:&#32;<emphasis role="keywordtype">int</emphasis>
+16 &#32;&#32;&#32;&#32;{
+17 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_namespace_ability_activation_key_1ab159d3c3f26196a9ff493b67ecf7e68cab6784d3bc8d889420937a8c25e9b1c87">AbilityKey1</link>&#32;=&#32;0,
+18 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_namespace_ability_activation_key_1ab159d3c3f26196a9ff493b67ecf7e68ca320fc572e7627361aa1df0f37543c0ac">AbilityKey2</link>,
+19 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_namespace_ability_activation_key_1ab159d3c3f26196a9ff493b67ecf7e68cad9c1b1c777eb7838b8da19f60dbc56d2">AbilityKey3</link>,
+20 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_namespace_ability_activation_key_1ab159d3c3f26196a9ff493b67ecf7e68ca9c88a5d3644987a1299d2142a134c9d9">AbilityKey4</link>,
+21 
+22 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_namespace_ability_activation_key_1ab159d3c3f26196a9ff493b67ecf7e68ca7681c632dadbc0ca58c3a03c7a9d53c2">None</link>
+23 &#32;&#32;&#32;&#32;};
+24 }
+25 
+29 <emphasis role="keyword">namespace&#32;</emphasis><link linkend="_namespace_cooldown_start_policy">CooldownStartPolicy</link>
+30 {
+31 &#32;&#32;&#32;&#32;<emphasis role="keyword">enum</emphasis>&#32;<link linkend="_namespace_cooldown_start_policy_1a99c3a8f4a331db7e6db8dfda1785b101">Type</link>
+32 &#32;&#32;&#32;&#32;{
+33 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_namespace_cooldown_start_policy_1a99c3a8f4a331db7e6db8dfda1785b101abdb334784b8226969ec44140a0951d92">OnAbilityStart</link>,
+34 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_namespace_cooldown_start_policy_1a99c3a8f4a331db7e6db8dfda1785b101af1b51dae9cd99c300bce560116641d60">OnAbilityEnd</link>
+35 &#32;&#32;&#32;&#32;};
+36 }
+37 
+41 <emphasis role="keyword">struct&#32;</emphasis><link linkend="_struct_activation_outcome">ActivationOutcome</link>
+42 {
+43 &#32;&#32;&#32;&#32;std::string&#32;<link linkend="_struct_activation_outcome_1a3867a87cde6f19f7d86e822b056ab7ad">abilityName</link>;
+44 &#32;&#32;&#32;&#32;std::string&#32;<link linkend="_struct_activation_outcome_1a06932003ad89461fc36b0936072bfd97">failReason</link>;
+45 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_struct_activation_outcome_1a6bd503ece6732fc90dacbb08f0bffb40">bWasSuccessful</link>&#32;=&#32;0;
+46 
+47 &#32;&#32;&#32;&#32;<link linkend="_namespace_ability_activation_key_1ab159d3c3f26196a9ff493b67ecf7e68c">AbilityActivationKey::Type</link>&#32;<link linkend="_struct_activation_outcome_1a85ab4e1d039f0aa58b36d9cc42a7d630">keyOfAbility</link>&#32;=&#32;<link linkend="_namespace_ability_activation_key_1ab159d3c3f26196a9ff493b67ecf7e68ca7681c632dadbc0ca58c3a03c7a9d53c2">AbilityActivationKey::None</link>;
+48 };
+49 
+53 <emphasis role="keyword">class&#32;</emphasis><link linkend="_class_ability">Ability</link>
+54 {
+55 <emphasis role="keyword">public</emphasis>:
+56 
+57 &#32;&#32;&#32;&#32;<link linkend="_class_ability_1a1e03282d1a96232143322ef89fcbb314">Ability</link>();
+58 
+62 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_ability_1a291796c5cb356bcef9c6f6c0b2386ca2">Init</link>(<link linkend="_class_abilities_component">AbilitiesComponent</link>*&#32;inOwningComponent);
+63 
+64 &#32;&#32;&#32;&#32;<emphasis role="keyword">virtual</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_ability_1aaa83dbb12f79ceecc4d7b1cb3930d3d3">Update</link>(<emphasis role="keywordtype">float</emphasis>&#32;deltaTime);
+65 
+69 &#32;&#32;&#32;&#32;<link linkend="_struct_activation_outcome">ActivationOutcome</link>&#32;<link linkend="_class_ability_1a7815198848a6acf69bf1d76caf595820">TryActivate</link>();
+70 
+74 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_ability_1a52f7aee4243f1da13b544a038892e43b">CommitAbility</link>();
+75 
+79 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_class_ability_1ad7290141bc73d865773ac54477db7fb6">EndAbility</link>();
+80 
+81 <emphasis role="keyword">protected</emphasis>:
+82 
+86 &#32;&#32;&#32;&#32;<emphasis role="keyword">virtual</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_ability_1a25388ebb622b414ef027eb33bf4a5cfb">PostInit</link>();
+87 
+91 &#32;&#32;&#32;&#32;<emphasis role="keyword">virtual</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_ability_1ace910398ed2eb9f58c8e85dbb7a72de2">Begin</link>();
+92 
+96 &#32;&#32;&#32;&#32;<emphasis role="keyword">virtual</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_ability_1a61a88edf359a3c6bd34868e58bf64f20">End</link>();
+97 
+101 &#32;&#32;&#32;&#32;<emphasis role="keyword">virtual</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_ability_1a1b338496a61edb978f7f83570b9f03a4">Commit</link>();
+102 
+106 &#32;&#32;&#32;&#32;<emphasis role="keyword">virtual</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_ability_1a172dfdc4273690de2476fda0b82e5ea6">BeginTargeting</link>();
+107 
+111 &#32;&#32;&#32;&#32;<emphasis role="keyword">virtual</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_ability_1af82a917f3d8fc9260651c4cc59affb0e">EndTargeting</link>();
+112 
+118 &#32;&#32;&#32;&#32;<emphasis role="keyword">virtual</emphasis>&#32;<emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_class_ability_1a4276e15e3a35b7887dd679eb5e332ff4">CanActivate</link>(<link linkend="_struct_activation_outcome">ActivationOutcome</link>&amp;&#32;OutActivationOutcome);
+119 
+120 <emphasis role="keyword">protected</emphasis>:
+121 
+122 &#32;&#32;&#32;&#32;<link linkend="_namespace_ability_activation_key_1ab159d3c3f26196a9ff493b67ecf7e68c">AbilityActivationKey::Type</link>&#32;<link linkend="_class_ability_1a4310ef2c96c00e405697f9983da58645">activationKey</link>;
+123 
+124 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">float</emphasis>&#32;<link linkend="_class_ability_1a0e5b9e690d512aa57f66a4f7ba3cb295">cooldownTimer</link>;
+125 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">float</emphasis>&#32;<link linkend="_class_ability_1a6e6e8dc7387275d8c4cef1036d0b2a08">cooldown</link>;
+126 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">float</emphasis>&#32;<link linkend="_class_ability_1aa080c6e4857a11599f25e1feb65aae9d">damageAmount</link>;
+127 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">float</emphasis>&#32;<link linkend="_class_ability_1a3d60b8e01776b0f6f42aaa3fa8821aa7">abilityCostAmount</link>;
+128 &#32;&#32;&#32;&#32;<link linkend="_namespace_hellwatch_attribute_1ad0a500e65129d06e4589f9bca54c4a7d">HellwatchAttribute::Type</link>&#32;<link linkend="_class_ability_1aa0aa42d055ea84389c3bd7bb7b61fd00">abilityCostType</link>;
+129 &#32;&#32;&#32;&#32;<link linkend="_namespace_cooldown_start_policy_1a99c3a8f4a331db7e6db8dfda1785b101">CooldownStartPolicy::Type</link>&#32;<link linkend="_class_ability_1a74f19e3368e28b7b61bf54cabe2da629">cooldownStartPolicy</link>;
+130 
+131 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Allows&#32;for&#32;targeting&#32;using&#32;the&#32;mouse&#32;and&#32;then&#32;committing&#32;it&#32;once&#32;targeting&#32;has&#32;finished</emphasis>
+132 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_class_ability_1afc72628992607694ae9e4a096557fead">bIsTargeted</link>;
+133 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_class_ability_1ae2aac411168782dab7715c29817f23de">bIsTargeting</link>;
+134 
+135 &#32;&#32;&#32;&#32;std::string&#32;<link linkend="_class_ability_1acc6fba5d131273ccbc0cf147b6f38eb2">abilityName</link>;
+136 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_class_ability_1ae426458572df63716f8f8b63e83d04ca">bIsActive</link>;
+137 &#32;&#32;&#32;&#32;<link linkend="_class_abilities_component">AbilitiesComponent</link>*&#32;<link linkend="_class_ability_1aa75c59af7fa1fd68787a211e66fd0173">owningComponent</link>&#32;=&#32;<emphasis role="keyword">nullptr</emphasis>;
+138 
+139 <emphasis role="keyword">public</emphasis>:
+140 
+141 <emphasis role="comment">&#32;&#32;&#32;&#32;/************************************************************************/</emphasis>
+142 &#32;&#32;&#32;&#32;<emphasis role="comment">/*&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;SETTERS&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;*/</emphasis>
+143 <emphasis role="comment">&#32;&#32;&#32;&#32;/************************************************************************/</emphasis>
+144 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_ability_1a13aa60092026728b42ade2811168c087">SetActivationKey</link>(<link linkend="_namespace_ability_activation_key_1ab159d3c3f26196a9ff493b67ecf7e68c">AbilityActivationKey::Type</link>&#32;key)&#32;{&#32;<link linkend="_class_ability_1a4310ef2c96c00e405697f9983da58645">activationKey</link>&#32;=&#32;key;&#32;}
+145 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_ability_1a83e04cf64b10504ee3bc1cd10ad7219c">SetAbilityCostAmount</link>(<emphasis role="keywordtype">float</emphasis>&#32;newCost)&#32;{&#32;<link linkend="_class_ability_1a3d60b8e01776b0f6f42aaa3fa8821aa7">abilityCostAmount</link>&#32;=&#32;newCost;&#32;}
+146 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_ability_1a36391efa24d0da869f43e4ba592241c8">SetAbilityCostType</link>(<link linkend="_namespace_hellwatch_attribute_1ad0a500e65129d06e4589f9bca54c4a7d">HellwatchAttribute::Type</link>&#32;newCost)&#32;{&#32;<link linkend="_class_ability_1aa0aa42d055ea84389c3bd7bb7b61fd00">abilityCostType</link>&#32;=&#32;newCost;&#32;}
+147 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_ability_1a6737d4900eb79147ca81aaa20a85218a">SetAbilityName</link>(std::string&#32;newName)&#32;{&#32;<link linkend="_class_ability_1acc6fba5d131273ccbc0cf147b6f38eb2">abilityName</link>&#32;=&#32;newName;&#32;}
+148 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_ability_1a072cbfb1685db6fd4a0723d519bc9176">SetIsActive</link>(<emphasis role="keywordtype">bool</emphasis>&#32;bNewState)&#32;{&#32;<link linkend="_class_ability_1ae426458572df63716f8f8b63e83d04ca">bIsActive</link>&#32;=&#32;bNewState;&#32;}
+149 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_ability_1a060e6f07d0c7510f7779418d69489fea">SetCooldownStartPolicy</link>(<link linkend="_namespace_cooldown_start_policy_1a99c3a8f4a331db7e6db8dfda1785b101">CooldownStartPolicy::Type</link>&#32;newPolicy)&#32;{&#32;<link linkend="_class_ability_1a74f19e3368e28b7b61bf54cabe2da629">cooldownStartPolicy</link>&#32;=&#32;newPolicy;&#32;}
+150 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_ability_1aa7f8c3e16910914b751aa1e1e5731f8f">SetAbilityCooldown</link>(<emphasis role="keywordtype">float</emphasis>&#32;newCooldown);
+151 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_ability_1a51b48c192967cf32ea352f5e735136d6">SetDamageAmount</link>(<emphasis role="keywordtype">float</emphasis>&#32;newAmount)&#32;{&#32;<link linkend="_class_ability_1aa080c6e4857a11599f25e1feb65aae9d">damageAmount</link>&#32;=&#32;newAmount;&#32;}
+152 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_ability_1a95990ec850dd39919d25c4c481935db5">SetIsTargeted</link>(<emphasis role="keywordtype">bool</emphasis>&#32;bNewState)&#32;{&#32;<link linkend="_class_ability_1afc72628992607694ae9e4a096557fead">bIsTargeted</link>&#32;=&#32;bNewState;&#32;}
+153 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_ability_1a5da322fcc571670d8b96385b67685a68">SetIsTargeting</link>(<emphasis role="keywordtype">bool</emphasis>&#32;bNewState)&#32;{&#32;<link linkend="_class_ability_1ae2aac411168782dab7715c29817f23de">bIsTargeting</link>&#32;=&#32;bNewState;&#32;}
+154 
+158 &#32;&#32;&#32;&#32;<emphasis role="keyword">virtual</emphasis>&#32;<emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_class_ability_1ac2b656dc59480f2973aaa3f0f59706bc">IsActive</link>()&#32;{&#32;<emphasis role="keywordflow">return</emphasis>&#32;<link linkend="_class_ability_1ae426458572df63716f8f8b63e83d04ca">bIsActive</link>;&#32;};
+159 
+160 <emphasis role="comment">&#32;&#32;&#32;&#32;/************************************************************************/</emphasis>
+161 &#32;&#32;&#32;&#32;<emphasis role="comment">/*&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;GETTERS&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;*/</emphasis>
+162 <emphasis role="comment">&#32;&#32;&#32;&#32;/************************************************************************/</emphasis>
+163 &#32;&#32;&#32;&#32;__forceinline&#32;<link linkend="_namespace_ability_activation_key_1ab159d3c3f26196a9ff493b67ecf7e68c">AbilityActivationKey::Type</link>&#32;<link linkend="_class_ability_1a7af0334ceb8c57dd4b114124409492b5">GetActivationKey</link>()<emphasis role="keyword">&#32;const&#32;</emphasis>{&#32;<emphasis role="keywordflow">return</emphasis>&#32;<link linkend="_class_ability_1a4310ef2c96c00e405697f9983da58645">activationKey</link>;&#32;}
+164 &#32;&#32;&#32;&#32;__forceinline&#32;<emphasis role="keyword">const</emphasis>&#32;std::string&amp;&#32;<link linkend="_class_ability_1a4e28b2c8ffd652b050612ee758f76958">GetAbilityName</link>()<emphasis role="keyword">&#32;const&#32;</emphasis>{&#32;<emphasis role="keywordflow">return</emphasis>&#32;<link linkend="_class_ability_1acc6fba5d131273ccbc0cf147b6f38eb2">abilityName</link>;&#32;}
+165 &#32;&#32;&#32;&#32;__forceinline&#32;<emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_class_ability_1adbd4d2c476e68c473b2872fd788eb2c2">IsInCooldown</link>()<emphasis role="keyword">&#32;const&#32;</emphasis>{&#32;<emphasis role="keywordflow">return</emphasis>&#32;<link linkend="_class_ability_1a6e6e8dc7387275d8c4cef1036d0b2a08">cooldown</link>&#32;&gt;&#32;0&#32;&amp;&amp;&#32;<link linkend="_class_ability_1a0e5b9e690d512aa57f66a4f7ba3cb295">cooldownTimer</link>&#32;&gt;&#32;0.f;&#32;}
+166 &#32;&#32;&#32;&#32;__forceinline&#32;<emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_class_ability_1a2a7a75401b5757d3b22ed26544bfdb19">IsAbilityTargeted</link>()<emphasis role="keyword">&#32;const&#32;</emphasis>{&#32;<emphasis role="keywordflow">return</emphasis>&#32;<link linkend="_class_ability_1afc72628992607694ae9e4a096557fead">bIsTargeted</link>;&#32;}
+167 &#32;&#32;&#32;&#32;__forceinline&#32;<emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_class_ability_1a2432f7d4c4159f75e8552d08b7ca51ed">IsAbilityTargeting</link>()<emphasis role="keyword">&#32;const&#32;</emphasis>{&#32;<emphasis role="keywordflow">return</emphasis>&#32;<link linkend="_class_ability_1ae2aac411168782dab7715c29817f23de">bIsTargeting</link>;&#32;}
+168 &#32;&#32;&#32;&#32;__forceinline&#32;<emphasis role="keywordtype">float</emphasis>&#32;<link linkend="_class_ability_1a063307977163faa4a3bcf7089cf70bb5">GetRemainingCooldown</link>()<emphasis role="keyword">&#32;const&#32;</emphasis>{&#32;<emphasis role="keywordflow">return</emphasis>&#32;std::ceil(<link linkend="_class_ability_1a0e5b9e690d512aa57f66a4f7ba3cb295">cooldownTimer</link>);&#32;}
+169 
+170 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">float</emphasis>&#32;<link linkend="_class_ability_1a57f2e9a30ca6d2588fd721af77353d52">GetDamageAmount</link>();
+171 &#32;&#32;&#32;&#32;<link linkend="_class_abilities_component">AbilitiesComponent</link>*&#32;<link linkend="_class_ability_1a50b5f7d8d3197869b3bc32d3c9bd4fd2">GetOwner</link>()&#32;{&#32;<emphasis role="keywordflow">return</emphasis>&#32;<link linkend="_class_ability_1aa75c59af7fa1fd68787a211e66fd0173">owningComponent</link>;&#32;}
+172 &#32;&#32;&#32;&#32;<link linkend="_class_attribute_component">AttributeComponent</link>*&#32;<link linkend="_class_ability_1ab567fcf9b39984aa3bf45343ffcbc086">GetOwnerAttributes</link>();
+173 };
+174 
+</programlisting></section>

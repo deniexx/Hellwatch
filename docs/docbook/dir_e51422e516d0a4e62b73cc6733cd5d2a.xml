@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_dir_e51422e516d0a4e62b73cc6733cd5d2a" xml:lang="en-US">
+<title>D:/Uni/CMP208/Hellwatch/build/vs2017/Abilities/PlayerAbilities Directory Reference</title>
+<indexterm><primary>D:/Uni/CMP208/Hellwatch/build/vs2017/Abilities/PlayerAbilities Directory Reference</primary></indexterm>
+Directory dependency graph for PlayerAbilities:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="dir_e51422e516d0a4e62b73cc6733cd5d2a_dep.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Files    </title>
+        <itemizedlist>
+            <listitem><para>file <link linkend="__dash_8cpp">Dash.cpp</link></para>
+</listitem>
+            <listitem><para>file <link linkend="__dash_8h">Dash.h</link></para>
+</listitem>
+            <listitem><para>file <link linkend="__ice_bolt_8cpp">IceBolt.cpp</link></para>
+</listitem>
+            <listitem><para>file <link linkend="__ice_bolt_8h">IceBolt.h</link></para>
+</listitem>
+            <listitem><para>file <link linkend="__meteor_8cpp">Meteor.cpp</link></para>
+</listitem>
+            <listitem><para>file <link linkend="__meteor_8h">Meteor.h</link></para>
+</listitem>
+            <listitem><para>file <link linkend="__piercing_strike_8cpp">PiercingStrike.cpp</link></para>
+</listitem>
+            <listitem><para>file <link linkend="__piercing_strike_8h">PiercingStrike.h</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

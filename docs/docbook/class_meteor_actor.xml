@@ -1,0 +1,170 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_meteor_actor" xml:lang="en-US">
+<title>MeteorActor Class Reference</title>
+<indexterm><primary>MeteorActor</primary></indexterm>
+<para>
+<computeroutput>#include &lt;MeteorActor.h&gt;</computeroutput>
+</para>
+Inheritance diagram for MeteorActor:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_meteor_actor__inherit__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Collaboration diagram for MeteorActor:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_meteor_actor__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_class_meteor_actor_1af958d034e0ee905ef1ad42c3cb7e2e7d">SetDamageAmount</link> (float newAmount)</para>
+
+<para>Sets the damage amount  </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_meteor_actor_1a8426bedb425c8dcdc1311ee2b70f2c38">SetApplyDamageOn</link> (<link linkend="_namespace_apply_damage_on_1aab4652342cac35cdff458c5aa2bad289">ApplyDamageOn::Type</link> newState)</para>
+
+<para>Sets to what we should apply damage  </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_meteor_actor_1a804452922893086186d9c7cba86ba772">SetSpinning</link> (bool bNewState)</para>
+
+<para>Specifies whether the actor should spin while moving @NOTE: This does not change the movement direction  </para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_class_meteor_actor_1ab6359799dcd7d0c88bbe0f9aae848819">Update</link> (float deltaTime) override</para>
+
+<para>Update function, called every frame  </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>gef::Vector4 <link linkend="_class_meteor_actor_1adaff72a4a16bc8aebd4a20c996aecc8e">startPosition</link></para>
+</listitem>
+            <listitem><para>gef::Vector4 <link linkend="_class_meteor_actor_1a03a7f34ddeac63d24f0db59568398e80">targetPosition</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Protected Attributes    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_namespace_apply_damage_on_1aab4652342cac35cdff458c5aa2bad289">ApplyDamageOn::Type</link> <link linkend="_class_meteor_actor_1ab4bb033ead5bfecb16eae10dcedd5bcb">applyDamageOn</link> = <link linkend="_namespace_apply_damage_on_1aab4652342cac35cdff458c5aa2bad289a17c0a2d2e83ad970a7bb7395c9819d1f">ApplyDamageOn::EnemiesOnly</link></para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_meteor_actor_1ac7ad468c3a6c2077dbbfdfb6a99c5b31">bSpinning</link> = false</para>
+</listitem>
+            <listitem><para>float <link linkend="_class_meteor_actor_1a89d596eab0b2175b66e85d02a5f1c055">damageAmount</link> = 0.f</para>
+</listitem>
+            <listitem><para>float <link linkend="_class_meteor_actor_1a946ed0ef11c565381b8686d74283c262">lerpAlpha</link> = 0.f</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Additional Inherited Members    </title>
+</simplesect>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_meteor_actor_1a8426bedb425c8dcdc1311ee2b70f2c38"/><section>
+    <title>SetApplyDamageOn()</title>
+<indexterm><primary>SetApplyDamageOn</primary><secondary>MeteorActor</secondary></indexterm>
+<indexterm><primary>MeteorActor</primary><secondary>SetApplyDamageOn</secondary></indexterm>
+<para><computeroutput>void MeteorActor::SetApplyDamageOn (<link linkend="_namespace_apply_damage_on_1aab4652342cac35cdff458c5aa2bad289">ApplyDamageOn::Type</link> newState)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Sets to what we should apply damage  </para>
+</para>
+</section>
+<anchor xml:id="_class_meteor_actor_1af958d034e0ee905ef1ad42c3cb7e2e7d"/><section>
+    <title>SetDamageAmount()</title>
+<indexterm><primary>SetDamageAmount</primary><secondary>MeteorActor</secondary></indexterm>
+<indexterm><primary>MeteorActor</primary><secondary>SetDamageAmount</secondary></indexterm>
+<para><computeroutput>void MeteorActor::SetDamageAmount (float newAmount)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Sets the damage amount  </para>
+</para>
+</section>
+<anchor xml:id="_class_meteor_actor_1a804452922893086186d9c7cba86ba772"/><section>
+    <title>SetSpinning()</title>
+<indexterm><primary>SetSpinning</primary><secondary>MeteorActor</secondary></indexterm>
+<indexterm><primary>MeteorActor</primary><secondary>SetSpinning</secondary></indexterm>
+<para><computeroutput>void MeteorActor::SetSpinning (bool bNewState)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Specifies whether the actor should spin while moving @NOTE: This does not change the movement direction  </para>
+</para>
+</section>
+<anchor xml:id="_class_meteor_actor_1ab6359799dcd7d0c88bbe0f9aae848819"/><section>
+    <title>Update()</title>
+<indexterm><primary>Update</primary><secondary>MeteorActor</secondary></indexterm>
+<indexterm><primary>MeteorActor</primary><secondary>Update</secondary></indexterm>
+<para><computeroutput>void MeteorActor::Update (float deltaTime)<computeroutput>[override]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Update function, called every frame  </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>deltaTime</entry><entry>
+<para>Float variable for the frame time</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Reimplemented from <link linkend="_class_mesh_actor_1a3743470557ddbbc88bc73e4dd283d6bf">MeshActor</link>.</para>
+</section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_class_meteor_actor_1ab4bb033ead5bfecb16eae10dcedd5bcb"/><section>
+    <title>applyDamageOn</title>
+<indexterm><primary>applyDamageOn</primary><secondary>MeteorActor</secondary></indexterm>
+<indexterm><primary>MeteorActor</primary><secondary>applyDamageOn</secondary></indexterm>
+<para><computeroutput><link linkend="_namespace_apply_damage_on_1aab4652342cac35cdff458c5aa2bad289">ApplyDamageOn::Type</link> MeteorActor::applyDamageOn = <link linkend="_namespace_apply_damage_on_1aab4652342cac35cdff458c5aa2bad289a17c0a2d2e83ad970a7bb7395c9819d1f">ApplyDamageOn::EnemiesOnly</link><computeroutput>[protected]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_meteor_actor_1ac7ad468c3a6c2077dbbfdfb6a99c5b31"/><section>
+    <title>bSpinning</title>
+<indexterm><primary>bSpinning</primary><secondary>MeteorActor</secondary></indexterm>
+<indexterm><primary>MeteorActor</primary><secondary>bSpinning</secondary></indexterm>
+<para><computeroutput>bool MeteorActor::bSpinning = false<computeroutput>[protected]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_meteor_actor_1a89d596eab0b2175b66e85d02a5f1c055"/><section>
+    <title>damageAmount</title>
+<indexterm><primary>damageAmount</primary><secondary>MeteorActor</secondary></indexterm>
+<indexterm><primary>MeteorActor</primary><secondary>damageAmount</secondary></indexterm>
+<para><computeroutput>float MeteorActor::damageAmount = 0.f<computeroutput>[protected]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_meteor_actor_1a946ed0ef11c565381b8686d74283c262"/><section>
+    <title>lerpAlpha</title>
+<indexterm><primary>lerpAlpha</primary><secondary>MeteorActor</secondary></indexterm>
+<indexterm><primary>MeteorActor</primary><secondary>lerpAlpha</secondary></indexterm>
+<para><computeroutput>float MeteorActor::lerpAlpha = 0.f<computeroutput>[protected]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_meteor_actor_1adaff72a4a16bc8aebd4a20c996aecc8e"/><section>
+    <title>startPosition</title>
+<indexterm><primary>startPosition</primary><secondary>MeteorActor</secondary></indexterm>
+<indexterm><primary>MeteorActor</primary><secondary>startPosition</secondary></indexterm>
+<para><computeroutput>gef::Vector4 MeteorActor::startPosition</computeroutput></para></section>
+<anchor xml:id="_class_meteor_actor_1a03a7f34ddeac63d24f0db59568398e80"/><section>
+    <title>targetPosition</title>
+<indexterm><primary>targetPosition</primary><secondary>MeteorActor</secondary></indexterm>
+<indexterm><primary>MeteorActor</primary><secondary>targetPosition</secondary></indexterm>
+<para><computeroutput>gef::Vector4 MeteorActor::targetPosition</computeroutput></para></section>
+<para>
+The documentation for this class was generated from the following files:</para>
+D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/<link linkend="__meteor_actor_8h">MeteorActor.h</link>D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/<link linkend="__meteor_actor_8cpp">MeteorActor.cpp</link></section>
+</section>

@@ -1,0 +1,76 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="namespace_hellwatch_attribute" kind="namespace" language="C++">
+    <compoundname>HellwatchAttribute</compoundname>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="namespace_hellwatch_attribute_1ad0a500e65129d06e4589f9bca54c4a7d" prot="public" static="no" strong="no">
+        <type></type>
+        <name>Type</name>
+        <qualifiedname>HellwatchAttribute::Type</qualifiedname>
+        <enumvalue id="namespace_hellwatch_attribute_1ad0a500e65129d06e4589f9bca54c4a7da6d26574d573c085ec34ba30576725713" prot="public">
+          <name>Health</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_hellwatch_attribute_1ad0a500e65129d06e4589f9bca54c4a7dad3c5decb2b14966e4ae3e8e07fc975a4" prot="public">
+          <name>Mana</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_hellwatch_attribute_1ad0a500e65129d06e4589f9bca54c4a7da32b2fa4bc40129b2f09aa2a9a4192d50" prot="public">
+          <name>Vitality</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_hellwatch_attribute_1ad0a500e65129d06e4589f9bca54c4a7da1863c83b1312f525ab940b88fd83a2f8" prot="public">
+          <name>Wisdom</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_hellwatch_attribute_1ad0a500e65129d06e4589f9bca54c4a7da7a4d8b401430813782ca3155c614b3af" prot="public">
+          <name>Toughness</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_hellwatch_attribute_1ad0a500e65129d06e4589f9bca54c4a7daf89b5eb0bb9f25288755790fff1e0603" prot="public">
+          <name>Energy</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_hellwatch_attribute_1ad0a500e65129d06e4589f9bca54c4a7da1a1cde64b50095f2d28168d2c6b80240" prot="public">
+          <name>None</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/Attributes/AttributeTypes.h" line="10" column="1" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/Attributes/AttributeTypes.h" bodystart="11" bodyend="21"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Attribute Type  </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/Attributes/AttributeTypes.h" line="8" column="1"/>
+  </compounddef>
+</doxygen>

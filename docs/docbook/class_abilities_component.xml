@@ -1,0 +1,216 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_abilities_component" xml:lang="en-US">
+<title>AbilitiesComponent Class Reference</title>
+<indexterm><primary>AbilitiesComponent</primary></indexterm>
+<para>
+
+<para>A component allowing the object to use abilities @NOTE: Requires an attribute component to function properly  </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;AbilitiesComponent.h&gt;</computeroutput>
+</para>
+Inheritance diagram for AbilitiesComponent:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_abilities_component__inherit__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Collaboration diagram for AbilitiesComponent:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_abilities_component__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_class_abilities_component_1a2002c80ff8a5e6de25e5269310c6dfa5">AddAbility</link> (<link linkend="_class_ability">Ability</link> *abilityToAdd)</para>
+
+<para>Adds an ability to our system @NOTE: It does not equip it, just adds it to the available abilities vector  </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_abilities_component_1a06d5228f074b929c061cf34af9460be4">EquipAbility</link> (std::string abilityName, <link linkend="_namespace_ability_activation_key_1ab159d3c3f26196a9ff493b67ecf7e68c">AbilityActivationKey::Type</link> keyToEquipAt)</para>
+
+<para>Equips an ability, at a specific key  </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_abilities_component_1a092acad2af7f3c106d117a3c51a04971">ActivateAbilityByKey</link> (<link linkend="_namespace_ability_activation_key_1ab159d3c3f26196a9ff493b67ecf7e68c">AbilityActivationKey::Type</link> key)</para>
+
+<para>Attempts to activate ability by key  </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_abilities_component_1aae3dce0a0f06941f91f8c14dc1a3878e">ActivateAbilityByName</link> (std::string name)</para>
+
+<para>Attempts to activate ability by its name @NOTE: Preferred to use ActivateAbilityByKey version  </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_abilities_component_1a3d01f13b661e8d6bfe3c0a8f2d6af7ea">EndAbilityByKey</link> (<link linkend="_namespace_ability_activation_key_1ab159d3c3f26196a9ff493b67ecf7e68c">AbilityActivationKey::Type</link> key)</para>
+
+<para>Ends an ability by key, we can use this if we prematurely end ability, etc...  </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_abilities_component_1a310f5751a58f69fba41f473b492e5582">EndAbilityByName</link> (std::string name)</para>
+
+<para>Ends an ability by name, we can use this if we prematurely end ability, etc... Preferred to use EndAbilityByKey version  </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_abilities_component_1ab57de1cda84055ee7564f0709e03777f">RegisterAttributes</link> (<link linkend="_class_attribute_component">AttributeComponent</link> *newAttributes)</para>
+
+<para>Registers an attribute component to this ability system  </para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_abilities_component_1a10a7a5652a4d850b5845766224a43c54">IsAbilityInCooldown</link> (int key)</para>
+
+<para>Checks whether an ability is in cooldown  </para>
+</listitem>
+            <listitem><para>int <link linkend="_class_abilities_component_1a46f90af4015a7e4fa9679f5743547d94">GetAbilityCooldown</link> (int key)</para>
+
+<para>Gets the ability cooldown  </para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_class_abilities_component_1a96732cdae01d866200dc66a89200695f">UpdateComponent</link> (float deltaTime) override</para>
+</listitem>
+            <listitem><para><link linkend="_class_attribute_component">AttributeComponent</link> * <link linkend="_class_abilities_component_1aa2e9909a907d358e34fc58a387f0e493">GetAttributeComponent</link> () const</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Protected Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>virtual void <link linkend="_class_abilities_component_1aa1a55ce45b753097f0e2d7d4db4a419b">PostInit</link> () override</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Additional Inherited Members    </title>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>A component allowing the object to use abilities @NOTE: Requires an attribute component to function properly  </para>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_abilities_component_1a092acad2af7f3c106d117a3c51a04971"/><section>
+    <title>ActivateAbilityByKey()</title>
+<indexterm><primary>ActivateAbilityByKey</primary><secondary>AbilitiesComponent</secondary></indexterm>
+<indexterm><primary>AbilitiesComponent</primary><secondary>ActivateAbilityByKey</secondary></indexterm>
+<para><computeroutput>void AbilitiesComponent::ActivateAbilityByKey (<link linkend="_namespace_ability_activation_key_1ab159d3c3f26196a9ff493b67ecf7e68c">AbilityActivationKey::Type</link> key)</computeroutput></para><para>
+
+<para>Attempts to activate ability by key  </para>
+</para>
+</section>
+<anchor xml:id="_class_abilities_component_1aae3dce0a0f06941f91f8c14dc1a3878e"/><section>
+    <title>ActivateAbilityByName()</title>
+<indexterm><primary>ActivateAbilityByName</primary><secondary>AbilitiesComponent</secondary></indexterm>
+<indexterm><primary>AbilitiesComponent</primary><secondary>ActivateAbilityByName</secondary></indexterm>
+<para><computeroutput>void AbilitiesComponent::ActivateAbilityByName (std::string name)</computeroutput></para><para>
+
+<para>Attempts to activate ability by its name @NOTE: Preferred to use ActivateAbilityByKey version  </para>
+</para>
+</section>
+<anchor xml:id="_class_abilities_component_1a2002c80ff8a5e6de25e5269310c6dfa5"/><section>
+    <title>AddAbility()</title>
+<indexterm><primary>AddAbility</primary><secondary>AbilitiesComponent</secondary></indexterm>
+<indexterm><primary>AbilitiesComponent</primary><secondary>AddAbility</secondary></indexterm>
+<para><computeroutput>void AbilitiesComponent::AddAbility (<link linkend="_class_ability">Ability</link> * abilityToAdd)</computeroutput></para><para>
+
+<para>Adds an ability to our system @NOTE: It does not equip it, just adds it to the available abilities vector  </para>
+</para>
+</section>
+<anchor xml:id="_class_abilities_component_1a3d01f13b661e8d6bfe3c0a8f2d6af7ea"/><section>
+    <title>EndAbilityByKey()</title>
+<indexterm><primary>EndAbilityByKey</primary><secondary>AbilitiesComponent</secondary></indexterm>
+<indexterm><primary>AbilitiesComponent</primary><secondary>EndAbilityByKey</secondary></indexterm>
+<para><computeroutput>void AbilitiesComponent::EndAbilityByKey (<link linkend="_namespace_ability_activation_key_1ab159d3c3f26196a9ff493b67ecf7e68c">AbilityActivationKey::Type</link> key)</computeroutput></para><para>
+
+<para>Ends an ability by key, we can use this if we prematurely end ability, etc...  </para>
+</para>
+</section>
+<anchor xml:id="_class_abilities_component_1a310f5751a58f69fba41f473b492e5582"/><section>
+    <title>EndAbilityByName()</title>
+<indexterm><primary>EndAbilityByName</primary><secondary>AbilitiesComponent</secondary></indexterm>
+<indexterm><primary>AbilitiesComponent</primary><secondary>EndAbilityByName</secondary></indexterm>
+<para><computeroutput>void AbilitiesComponent::EndAbilityByName (std::string name)</computeroutput></para><para>
+
+<para>Ends an ability by name, we can use this if we prematurely end ability, etc... Preferred to use EndAbilityByKey version  </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>name</entry><entry></entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_class_abilities_component_1a06d5228f074b929c061cf34af9460be4"/><section>
+    <title>EquipAbility()</title>
+<indexterm><primary>EquipAbility</primary><secondary>AbilitiesComponent</secondary></indexterm>
+<indexterm><primary>AbilitiesComponent</primary><secondary>EquipAbility</secondary></indexterm>
+<para><computeroutput>void AbilitiesComponent::EquipAbility (std::string abilityName, <link linkend="_namespace_ability_activation_key_1ab159d3c3f26196a9ff493b67ecf7e68c">AbilityActivationKey::Type</link> keyToEquipAt)</computeroutput></para><para>
+
+<para>Equips an ability, at a specific key  </para>
+</para>
+</section>
+<anchor xml:id="_class_abilities_component_1a46f90af4015a7e4fa9679f5743547d94"/><section>
+    <title>GetAbilityCooldown()</title>
+<indexterm><primary>GetAbilityCooldown</primary><secondary>AbilitiesComponent</secondary></indexterm>
+<indexterm><primary>AbilitiesComponent</primary><secondary>GetAbilityCooldown</secondary></indexterm>
+<para><computeroutput>int AbilitiesComponent::GetAbilityCooldown (int key)</computeroutput></para><para>
+
+<para>Gets the ability cooldown  </para>
+</para>
+</section>
+<anchor xml:id="_class_abilities_component_1aa2e9909a907d358e34fc58a387f0e493"/><section>
+    <title>GetAttributeComponent()</title>
+<indexterm><primary>GetAttributeComponent</primary><secondary>AbilitiesComponent</secondary></indexterm>
+<indexterm><primary>AbilitiesComponent</primary><secondary>GetAttributeComponent</secondary></indexterm>
+<para><computeroutput><link linkend="_class_attribute_component">AttributeComponent</link> * AbilitiesComponent::GetAttributeComponent ( ) const<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_abilities_component_1a10a7a5652a4d850b5845766224a43c54"/><section>
+    <title>IsAbilityInCooldown()</title>
+<indexterm><primary>IsAbilityInCooldown</primary><secondary>AbilitiesComponent</secondary></indexterm>
+<indexterm><primary>AbilitiesComponent</primary><secondary>IsAbilityInCooldown</secondary></indexterm>
+<para><computeroutput>bool AbilitiesComponent::IsAbilityInCooldown (int key)</computeroutput></para><para>
+
+<para>Checks whether an ability is in cooldown  </para>
+</para>
+</section>
+<anchor xml:id="_class_abilities_component_1aa1a55ce45b753097f0e2d7d4db4a419b"/><section>
+    <title>PostInit()</title>
+<indexterm><primary>PostInit</primary><secondary>AbilitiesComponent</secondary></indexterm>
+<indexterm><primary>AbilitiesComponent</primary><secondary>PostInit</secondary></indexterm>
+<para><computeroutput>void AbilitiesComponent::PostInit ( )<computeroutput>[override]</computeroutput>, <computeroutput>[protected]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+Reimplemented from <link linkend="_class_actor_component_1a467d082f3fedd6cf2acacb117450f90e">ActorComponent</link>.</para>
+</section>
+<anchor xml:id="_class_abilities_component_1ab57de1cda84055ee7564f0709e03777f"/><section>
+    <title>RegisterAttributes()</title>
+<indexterm><primary>RegisterAttributes</primary><secondary>AbilitiesComponent</secondary></indexterm>
+<indexterm><primary>AbilitiesComponent</primary><secondary>RegisterAttributes</secondary></indexterm>
+<para><computeroutput>void AbilitiesComponent::RegisterAttributes (<link linkend="_class_attribute_component">AttributeComponent</link> * newAttributes)</computeroutput></para><para>
+
+<para>Registers an attribute component to this ability system  </para>
+</para>
+</section>
+<anchor xml:id="_class_abilities_component_1a96732cdae01d866200dc66a89200695f"/><section>
+    <title>UpdateComponent()</title>
+<indexterm><primary>UpdateComponent</primary><secondary>AbilitiesComponent</secondary></indexterm>
+<indexterm><primary>AbilitiesComponent</primary><secondary>UpdateComponent</secondary></indexterm>
+<para><computeroutput>void AbilitiesComponent::UpdateComponent (float deltaTime)<computeroutput>[override]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+Reimplemented from <link linkend="_class_actor_component_1af730b3c7d2b4154e1fb0962db7750f6b">ActorComponent</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following files:</para>
+D:/Uni/CMP208/Hellwatch/build/vs2017/ActorComponents/<link linkend="__abilities_component_8h">AbilitiesComponent.h</link>D:/Uni/CMP208/Hellwatch/build/vs2017/ActorComponents/<link linkend="__abilities_component_8cpp">AbilitiesComponent.cpp</link></section>
+</section>

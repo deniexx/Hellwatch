@@ -1,0 +1,86 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__player_character_8h_source" xml:lang="en-US">
+<title>PlayerCharacter.h</title>
+<indexterm><primary>D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/PlayerCharacter.h</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered">1 <emphasis role="preprocessor">#pragma&#32;once</emphasis>
+2 
+3 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="__mesh_actor_8h">Actors/MeshActor.h</link>&quot;</emphasis>
+4 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="__player_controller_8h">GameFramework/PlayerController.h</link>&quot;</emphasis>
+5 <emphasis role="preprocessor">#include&#32;&quot;graphics/skinned_mesh_instance.h&quot;</emphasis>
+6 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="__utils_8h">GameFramework/Utils.h</link>&quot;</emphasis>
+7 <emphasis role="preprocessor">#include&#32;&quot;graphics/sprite.h&quot;</emphasis>
+8 
+9 <emphasis role="keyword">class&#32;</emphasis><link linkend="_class_character_movement_component">CharacterMovementComponent</link>;
+10 <emphasis role="keyword">class&#32;</emphasis><link linkend="_class_abilities_component">AbilitiesComponent</link>;
+11 <emphasis role="keyword">class&#32;</emphasis><link linkend="_class_attribute_component">AttributeComponent</link>;
+12 
+16 <emphasis role="keyword">class&#32;</emphasis><link linkend="_class_player_character">PlayerCharacter</link>&#32;:&#32;<emphasis role="keyword">public</emphasis>&#32;<link linkend="_class_mesh_actor">MeshActor</link>
+17 {
+18 &#32;&#32;&#32;&#32;<link linkend="__utils_8h_1afc0ee7bd35c161a2d80b8e8f04fd9213">GENERATED_BODY</link>(<link linkend="_class_mesh_actor">MeshActor</link>,&#32;<link linkend="_class_player_character">PlayerCharacter</link>)
+19 
+20 <emphasis role="keyword">public</emphasis>:
+21 
+22 &#32;&#32;&#32;&#32;<link linkend="_class_player_character_1af3ac12a41f58d860fb716138578bd95f">PlayerCharacter</link>();
+23 
+24 &#32;&#32;&#32;&#32;<emphasis role="keyword">virtual</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_player_character_1ad12c09c28194b1c5ed39aa4b5c21cbd6">PostInit</link>()&#32;<emphasis role="keyword">override</emphasis>;
+25 &#32;&#32;&#32;&#32;<emphasis role="keyword">virtual</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_player_character_1ad681ccd09dc1ed4c0242bfa0d981d584">Update</link>(<emphasis role="keywordtype">float</emphasis>&#32;deltaTime)&#32;<emphasis role="keyword">override</emphasis>;
+26 &#32;&#32;&#32;&#32;<emphasis role="keyword">virtual</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_player_character_1ac89349d4afba371e044e4c5816ba68c8">TakeDamage</link>(<emphasis role="keywordtype">float</emphasis>&#32;damageAmount)&#32;<emphasis role="keyword">override</emphasis>;
+27 
+31 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_player_character_1a0415b6e06c971db05a79ae18176f6e99">ApplyInvincibilityForDuration</link>(<emphasis role="keywordtype">float</emphasis>&#32;invincibilityDuration);
+32 
+33 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_player_character_1abf3fd7463bf99305b85490644ff3d276">DrawPlayerHUD</link>();
+34 
+35 <emphasis role="keyword">protected</emphasis>:
+36 
+37 &#32;&#32;&#32;&#32;<link linkend="_class_player_controller">PlayerController</link>*&#32;<link linkend="_class_player_character_1a32fa60c60ab920a4bf3682d8d64efb2f">controller</link>;
+38 
+39 <emphasis role="comment">&#32;&#32;&#32;&#32;/************************************************************************/</emphasis>
+40 &#32;&#32;&#32;&#32;<emphasis role="comment">/*&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;KEY&#32;BINDS&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;*/</emphasis>
+41 <emphasis role="comment">&#32;&#32;&#32;&#32;/************************************************************************/</emphasis>
+42 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_player_character_1a71db2dd63c1e1ee33c1636d07c663bd2">MoveLeft</link>();
+43 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_player_character_1a27a3a3bd797b494f4262a0d9cc23a7da">MoveRight</link>();
+44 
+45 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_player_character_1a3e2db13c832d8ad72f91f35626318029">MoveForward</link>();
+46 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_player_character_1a66f35da8ae003995f4f9984edf1aa503">MoveBack</link>();
+47 
+48 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_player_character_1ae3414c7f6a3ecb97de258a3c48e5042c">ActivateAbility1</link>();
+49 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_player_character_1abf9975cee8626a88bfda0083d5ec32ab">ActivateAbility2</link>();
+50 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_player_character_1af678379492ff14630742460e81d191b7">ActivateAbility3</link>();
+51 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_player_character_1a5a51435bd69ade9c5e2ea48319f6299d">ActivateAbility4</link>();
+52 
+53 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_player_character_1a294eaf7133b810dc22a0caf95a98dcb1">OnControllerLeftStick</link>(gef::Vector2&#32;delta);
+54 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_player_character_1ae91b2ed2e883c4e311568689ba946fba">OnControllerActivateAbility1</link>(gef::Vector2&#32;delta);
+55 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_player_character_1aad1ce1a4a76bff1adc2adde12d89a25d">OnControllerActivateAbility2</link>(gef::Vector2&#32;delta);
+56 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_player_character_1aa44656f4422f9b2dd5b9f662eb3f7add">OnControllerActivateAbility3</link>(gef::Vector2&#32;delta);
+57 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_player_character_1a48ccee58814a3244be3ba5f8ba0b056c">OnControllerActivateAbility4</link>(gef::Vector2&#32;delta);
+58 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_player_character_1a0da3ea447b3274eef8d2aab1ca9a22d2">OnControllerInvertUpDownMovement</link>(gef::Vector2&#32;delta);
+59 
+60 <emphasis role="keyword">private</emphasis>:
+61 
+62 &#32;&#32;&#32;&#32;<link linkend="_class_character_movement_component">CharacterMovementComponent</link>*&#32;characterMovement;
+63 &#32;&#32;&#32;&#32;<link linkend="_class_abilities_component">AbilitiesComponent</link>*&#32;abilitiesComponent;
+64 &#32;&#32;&#32;&#32;<link linkend="_class_attribute_component">AttributeComponent</link>*&#32;attributes;
+65 
+66 &#32;&#32;&#32;&#32;<emphasis role="comment">/*&#32;Used&#32;to&#32;track&#32;when&#32;should&#32;player&#32;invincibility&#32;end&#32;*/</emphasis>
+67 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">float</emphasis>&#32;invincibilityEndTime&#32;=&#32;0.f;
+68 
+69 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;BindKeys();
+70 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;InitializeComponents();
+71 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;InitializeAbilitySystem();
+72 
+73 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;bInvertMovement&#32;=&#32;<emphasis role="keyword">false</emphasis>;
+74 
+75 &#32;&#32;&#32;&#32;std::vector&lt;gef::Sprite&gt;&#32;abilitySprites;
+76 &#32;&#32;&#32;&#32;std::vector&lt;gef::Sprite&gt;&#32;backgroundSprites;
+77 &#32;&#32;&#32;&#32;gef::Sprite&#32;background;
+78 
+79 <emphasis role="keyword">public</emphasis>:
+80 
+81 &#32;&#32;&#32;&#32;<link linkend="_class_player_controller">PlayerController</link>*&#32;<link linkend="_class_player_character_1af75d11f2b93d26046988f3316888fdbc">GetController</link>()<emphasis role="keyword">&#32;const&#32;</emphasis>{&#32;<emphasis role="keywordflow">return</emphasis>&#32;<link linkend="_class_player_character_1a32fa60c60ab920a4bf3682d8d64efb2f">controller</link>;&#32;}
+82 &#32;&#32;&#32;&#32;<link linkend="_class_character_movement_component">CharacterMovementComponent</link>*&#32;<link linkend="_class_player_character_1ac890f6a156f0b6f48aa9c62a6a307932">GetCharacterMovement</link>()<emphasis role="keyword">&#32;const&#32;</emphasis>{&#32;<emphasis role="keywordflow">return</emphasis>&#32;characterMovement;&#32;}
+83 &#32;&#32;&#32;&#32;<link linkend="_class_attribute_component">AttributeComponent</link>*&#32;<link linkend="_class_player_character_1a35f60a491cce521c070536f0c9eec6f6">GetCharacterAttributes</link>()<emphasis role="keyword">&#32;const&#32;</emphasis>{&#32;<emphasis role="keywordflow">return</emphasis>&#32;attributes;&#32;}
+84 &#32;&#32;&#32;&#32;<link linkend="_class_abilities_component">AbilitiesComponent</link>*&#32;<link linkend="_class_player_character_1a1b142fd480a0b6326069058a0109668a">GetCharacterAbilities</link>()<emphasis role="keyword">&#32;const&#32;</emphasis>{&#32;<emphasis role="keywordflow">return</emphasis>&#32;abilitiesComponent;&#32;}
+85 
+86 };
+87 
+</programlisting></section>

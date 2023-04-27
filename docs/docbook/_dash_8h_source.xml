@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__dash_8h_source" xml:lang="en-US">
+<title>Dash.h</title>
+<indexterm><primary>D:/Uni/CMP208/Hellwatch/build/vs2017/Abilities/PlayerAbilities/Dash.h</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered">1 <emphasis role="preprocessor">#pragma&#32;once</emphasis>
+2 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="__ability_8h">Abilities/Ability.h</link>&quot;</emphasis>
+3 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="__abilities_component_8h">ActorComponents/AbilitiesComponent.h</link>&quot;</emphasis>
+4 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="__utils_8h">GameFramework/Utils.h</link>&quot;</emphasis>
+5 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="__player_character_8h">Actors/MeshActors/PlayerCharacter.h</link>&quot;</emphasis>
+6 
+10 
+11 <emphasis role="keyword">class&#32;</emphasis><link linkend="_class_dash">Dash</link>&#32;:&#32;<emphasis role="keyword">public</emphasis>&#32;<link linkend="_class_ability">Ability</link>
+12 {
+13 <emphasis role="keyword">public</emphasis>:
+14 &#32;&#32;&#32;&#32;<link linkend="__utils_8h_1afc0ee7bd35c161a2d80b8e8f04fd9213">GENERATED_BODY</link>(<link linkend="_class_ability">Ability</link>,&#32;<link linkend="_class_dash">Dash</link>)
+15 
+16 <emphasis role="keyword">public</emphasis>:
+17 &#32;&#32;&#32;&#32;<link linkend="_class_dash_1abc38667dc53c7207c42b0808cb88967e">Dash</link>();
+18 
+19 <emphasis role="keyword">protected</emphasis>:
+20 &#32;&#32;&#32;&#32;<emphasis role="keyword">virtual</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_dash_1a3078ae06d66361da3e35af7b0efac786">PostInit</link>()&#32;<emphasis role="keyword">override</emphasis>;
+21 
+22 &#32;&#32;&#32;&#32;<emphasis role="keyword">virtual</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_dash_1ab37a52fcb0a2953ad7f5bcf698d9d65f">Begin</link>()&#32;<emphasis role="keyword">override</emphasis>;
+23 
+24 &#32;&#32;&#32;&#32;<emphasis role="keyword">virtual</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_dash_1a15631a12a91058a2f41e4a8f80127378">End</link>()&#32;<emphasis role="keyword">override</emphasis>;
+25 };
+26 
+</programlisting></section>

@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="dir_f2357408680af1772b236fff8f3cf74b" kind="dir">
+    <compoundname>D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors</compoundname>
+    <innerfile refid="_boss_8cpp">Boss.cpp</innerfile>
+    <innerfile refid="_boss_8h">Boss.h</innerfile>
+    <innerfile refid="_damage_on_collision_actor_8cpp">DamageOnCollisionActor.cpp</innerfile>
+    <innerfile refid="_damage_on_collision_actor_8h">DamageOnCollisionActor.h</innerfile>
+    <innerfile refid="_enemy_8cpp">Enemy.cpp</innerfile>
+    <innerfile refid="_enemy_8h">Enemy.h</innerfile>
+    <innerfile refid="_enemy_dummy_8cpp">EnemyDummy.cpp</innerfile>
+    <innerfile refid="_enemy_dummy_8h">EnemyDummy.h</innerfile>
+    <innerfile refid="_meteor_actor_8cpp">MeteorActor.cpp</innerfile>
+    <innerfile refid="_meteor_actor_8h">MeteorActor.h</innerfile>
+    <innerfile refid="_particle_actor_8cpp">ParticleActor.cpp</innerfile>
+    <innerfile refid="_particle_actor_8h">ParticleActor.h</innerfile>
+    <innerfile refid="_player_character_8cpp">PlayerCharacter.cpp</innerfile>
+    <innerfile refid="_player_character_8h">PlayerCharacter.h</innerfile>
+    <innerfile refid="_ranged_enemy_8cpp">RangedEnemy.cpp</innerfile>
+    <innerfile refid="_ranged_enemy_8h">RangedEnemy.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_main__vita_8cpp" xml:lang="en-US">
+<title>D:/Uni/CMP208/Hellwatch/main_vita.cpp File Reference</title>
+<indexterm><primary>D:/Uni/CMP208/Hellwatch/main_vita.cpp</primary></indexterm>
+<programlisting linenumbering="unnumbered">#include &lt;platform/vita/system/platform_vita.h&gt;<?linebreak?>#include &quot;scene_app.h&quot;<?linebreak?></programlisting>Include dependency graph for main_vita.cpp:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="main__vita_8cpp__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>int <link linkend="_main__vita_8cpp_1a840291bc02cba5474a4cb46a9b9566fe">main</link> (void)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Variables    </title>
+        <itemizedlist>
+            <listitem><para>unsigned int <link linkend="_main__vita_8cpp_1a69cc9008095a7d96918395b56d077919">sceLibcHeapSize</link> = 128*1024*1024</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_main__vita_8cpp_1a840291bc02cba5474a4cb46a9b9566fe"/><section>
+    <title>main()</title>
+<indexterm><primary>main</primary><secondary>main_vita.cpp</secondary></indexterm>
+<indexterm><primary>main_vita.cpp</primary><secondary>main</secondary></indexterm>
+<para><computeroutput>int main (void )</computeroutput></para></section>
+</section>
+<section>
+<title>Variable Documentation</title>
+<anchor xml:id="_main__vita_8cpp_1a69cc9008095a7d96918395b56d077919"/><section>
+    <title>sceLibcHeapSize</title>
+<indexterm><primary>sceLibcHeapSize</primary><secondary>main_vita.cpp</secondary></indexterm>
+<indexterm><primary>main_vita.cpp</primary><secondary>sceLibcHeapSize</secondary></indexterm>
+<para><computeroutput>unsigned int sceLibcHeapSize = 128*1024*1024</computeroutput></para></section>
+</section>
+</section>

@@ -1,0 +1,393 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="_enemy_8h" kind="file" language="C++">
+    <compoundname>Enemy.h</compoundname>
+    <includes refid="_mesh_actor_8h" local="yes">Actors/MeshActor.h</includes>
+    <includes refid="_attribute_component_8h" local="yes">Attributes/AttributeComponent.h</includes>
+    <includes refid="_character_movement_component_8h" local="yes">ActorComponents/CharacterMovementComponent.h</includes>
+    <includes refid="_player_character_8h" local="yes">PlayerCharacter.h</includes>
+    <includes refid="scene__app_8h" local="yes">scene_app.h</includes>
+    <includes refid="_damage_on_collision_actor_8h" local="yes">DamageOnCollisionActor.h</includes>
+    <includedby refid="_boss_8h" local="yes">D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/Boss.h</includedby>
+    <includedby refid="_enemy_8cpp" local="yes">D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/Enemy.cpp</includedby>
+    <includedby refid="_ranged_enemy_8h" local="yes">D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/RangedEnemy.h</includedby>
+    <includedby refid="_wave_manager_8cpp" local="yes">D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/WaveManager.cpp</includedby>
+    <includedby refid="scene__app_8cpp" local="yes">D:/Uni/CMP208/Hellwatch/scene_app.cpp</includedby>
+    <incdepgraph>
+      <node id="32">
+        <label>ActorComponents/ActorComponent.h</label>
+        <link refid="_actor_component_8h"/>
+      </node>
+      <node id="34">
+        <label>ActorComponents/CharacterMovementComponent.h</label>
+        <link refid="_character_movement_component_8h"/>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Actors/MeshActor.h</label>
+        <link refid="_mesh_actor_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+      </node>
+      <node id="43">
+        <label>DamageOnCollisionActor.h</label>
+        <link refid="_damage_on_collision_actor_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/Enemy.h</label>
+        <link refid="_enemy_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="43" relation="include">
+        </childnode>
+      </node>
+      <node id="35">
+        <label>PlayerCharacter.h</label>
+        <link refid="_player_character_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+        <childnode refid="41" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="42" relation="include">
+        </childnode>
+      </node>
+      <node id="31">
+        <label>Attributes/AttributeComponent.h</label>
+        <link refid="_attribute_component_8h"/>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+      </node>
+      <node id="33">
+        <label>AttributeTypes.h</label>
+        <link refid="_attribute_types_8h"/>
+        <childnode refid="23" relation="include">
+        </childnode>
+      </node>
+      <node id="36">
+        <label>GameFramework/PlayerController.h</label>
+        <link refid="_player_controller_8h"/>
+        <childnode refid="37" relation="include">
+        </childnode>
+        <childnode refid="38" relation="include">
+        </childnode>
+        <childnode refid="39" relation="include">
+        </childnode>
+        <childnode refid="40" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>Utils.h</label>
+        <link refid="_utils_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>GameFramework/WorldObject.h</label>
+        <link refid="_world_object_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="30">
+        <label>Interfaces/Damagable.h</label>
+        <link refid="_damagable_8h"/>
+      </node>
+      <node id="20">
+        <label>obj_mesh_loader.h</label>
+        <link refid="obj__mesh__loader_8h"/>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>primitive_builder.h</label>
+        <link refid="primitive__builder_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>scene_app.h</label>
+        <link refid="scene__app_8h"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+      </node>
+      <node id="18">
+        <label>box2d/box2d.h</label>
+      </node>
+      <node id="16">
+        <label>cstddef</label>
+      </node>
+      <node id="37">
+        <label>cstdint</label>
+      </node>
+      <node id="38">
+        <label>functional</label>
+      </node>
+      <node id="26">
+        <label>future</label>
+      </node>
+      <node id="21">
+        <label>gef.h</label>
+      </node>
+      <node id="25">
+        <label>graphics/font.h</label>
+      </node>
+      <node id="15">
+        <label>graphics/material.h</label>
+      </node>
+      <node id="29">
+        <label>graphics/mesh.h</label>
+      </node>
+      <node id="10">
+        <label>graphics/renderer_3d.h</label>
+      </node>
+      <node id="17">
+        <label>graphics/scene.h</label>
+      </node>
+      <node id="41">
+        <label>graphics/skinned_mesh_instance.h</label>
+      </node>
+      <node id="42">
+        <label>graphics/sprite.h</label>
+      </node>
+      <node id="40">
+        <label>input/keyboard.h</label>
+      </node>
+      <node id="39">
+        <label>input/touch_input_manager.h</label>
+      </node>
+      <node id="22">
+        <label>map</label>
+      </node>
+      <node id="4">
+        <label>maths/Matrix44.h</label>
+      </node>
+      <node id="7">
+        <label>maths/Vector2.h</label>
+      </node>
+      <node id="28">
+        <label>maths/math_utils.h</label>
+      </node>
+      <node id="9">
+        <label>maths/matrix44.h</label>
+      </node>
+      <node id="5">
+        <label>maths/quaternion.h</label>
+      </node>
+      <node id="13">
+        <label>maths/vector2.h</label>
+      </node>
+      <node id="8">
+        <label>maths/vector4.h</label>
+      </node>
+      <node id="27">
+        <label>random</label>
+      </node>
+      <node id="23">
+        <label>string</label>
+      </node>
+      <node id="12">
+        <label>system/application.h</label>
+      </node>
+      <node id="19">
+        <label>system/platform.h</label>
+      </node>
+      <node id="24">
+        <label>vector</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="3">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/Boss.cpp</label>
+        <link refid="_boss_8cpp"/>
+      </node>
+      <node id="2">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/Boss.h</label>
+        <link refid="_boss_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/Enemy.cpp</label>
+        <link refid="_enemy_8cpp"/>
+      </node>
+      <node id="1">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/Enemy.h</label>
+        <link refid="_enemy_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/RangedEnemy.cpp</label>
+        <link refid="_ranged_enemy_8cpp"/>
+      </node>
+      <node id="6">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/RangedEnemy.h</label>
+        <link refid="_ranged_enemy_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/WaveManager.cpp</label>
+        <link refid="_wave_manager_8cpp"/>
+      </node>
+      <node id="8">
+        <label>D:/Uni/CMP208/Hellwatch/scene_app.cpp</label>
+        <link refid="scene__app_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_enemy" prot="public">Enemy</innerclass>
+    <innernamespace refid="namespace_enemy_class">EnemyClass</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_mesh_actor_8h" kindref="compound">Actors/MeshActor.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_attribute_component_8h" kindref="compound">Attributes/AttributeComponent.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_character_movement_component_8h" kindref="compound">ActorComponents/CharacterMovementComponent.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_player_character_8h" kindref="compound">PlayerCharacter.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="scene__app_8h" kindref="compound">scene_app.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_damage_on_collision_actor_8h" kindref="compound">DamageOnCollisionActor.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13" refid="namespace_enemy_class" refkind="compound"><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespace_enemy_class" kindref="compound">EnemyClass</ref></highlight></codeline>
+<codeline lineno="14"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="15" refid="namespace_enemy_class_1a21f4473edd2d0cb0970f6505d46f0866" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="namespace_enemy_class_1a21f4473edd2d0cb0970f6505d46f0866" kindref="member">Type</ref></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="17" refid="namespace_enemy_class_1a21f4473edd2d0cb0970f6505d46f0866a7a3e72f4e6ac314cad36a24f27c628a9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespace_enemy_class_1a21f4473edd2d0cb0970f6505d46f0866a7a3e72f4e6ac314cad36a24f27c628a9" kindref="member">HEAVY</ref>,</highlight></codeline>
+<codeline lineno="18" refid="namespace_enemy_class_1a21f4473edd2d0cb0970f6505d46f0866ab7b90fd5865f02a5159836adc5d221bf" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespace_enemy_class_1a21f4473edd2d0cb0970f6505d46f0866ab7b90fd5865f02a5159836adc5d221bf" kindref="member">NORMAL</ref>,</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespace_enemy_class_1a21f4473edd2d0cb0970f6505d46f0866ac49546fa32e67ada5d7619f084ef02cb" kindref="member">LIGHT</ref></highlight></codeline>
+<codeline lineno="20" refid="namespace_enemy_class_1a21f4473edd2d0cb0970f6505d46f0866ac49546fa32e67ada5d7619f084ef02cb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="21"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26" refid="class_enemy" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_enemy" kindref="compound">Enemy</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="class_mesh_actor" kindref="compound">MeshActor</ref></highlight></codeline>
+<codeline lineno="27"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_utils_8h_1afc0ee7bd35c161a2d80b8e8f04fd9213" kindref="member">GENERATED_BODY</ref>(<ref refid="class_mesh_actor" kindref="compound">MeshActor</ref>,<sp/><ref refid="class_enemy" kindref="compound">Enemy</ref>)</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_enemy_1a94f30d348b6d2840fd71675472ba38dd" kindref="member">Enemy</ref>();</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_enemy_1a165cd1993b88023d7f1a45f9f2809b23" kindref="member">SetClass</ref>(<ref refid="namespace_enemy_class_1a21f4473edd2d0cb0970f6505d46f0866" kindref="member">EnemyClass::Type</ref><sp/>type);</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_enemy_1ac49759f4d5262aea5e3b6e3f9f56896e" kindref="member">TakeDamage</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="class_enemy_1a1dbbafd85db9d46820a78f603af4d53a" kindref="member">damageAmount</ref>)<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44" refid="class_enemy_1a724bfc292724ec7f61218051bfa0faf5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="class_enemy_1a724bfc292724ec7f61218051bfa0faf5" kindref="member">GetHealth</ref>()<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_enemy_1a985101af4d36bd5232edb964b061e423" kindref="member">attributes</ref><sp/>?<sp/><ref refid="class_enemy_1a985101af4d36bd5232edb964b061e423" kindref="member">attributes</ref>-&gt;<ref refid="class_attribute_component_1a580cf7f29236d87d448840840ad53bc6" kindref="member">GetCurrentAttributeValueByType</ref>(<ref refid="namespace_hellwatch_attribute_1ad0a500e65129d06e4589f9bca54c4a7da6d26574d573c085ec34ba30576725713" kindref="member">HellwatchAttribute::Health</ref>)<sp/>:<sp/>0.f;<sp/>}</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_enemy_1a723b79407b55383b2c327f674e3ab3bc" kindref="member">Update</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>deltaTime)<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_enemy_1a8fe269579634b8cad6d494254c766387" kindref="member">OnCollision</ref>(b2Body*<sp/>otherBody)<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_enemy_1a43ebf25f19b29fccb8cb71730b95749d" kindref="member">ScaleWithWave</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>wave);</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55" refid="class_enemy_1a1dbbafd85db9d46820a78f603af4d53a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="class_enemy_1a1dbbafd85db9d46820a78f603af4d53a" kindref="member">damageAmount</ref>;</highlight></codeline>
+<codeline lineno="56" refid="class_enemy_1a608edebc42e92ab5f253692c088a56d0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="class_enemy_1a608edebc42e92ab5f253692c088a56d0" kindref="member">attackTime</ref>;</highlight></codeline>
+<codeline lineno="57" refid="class_enemy_1a573af3a6b672a882ae23263bfbcdf440" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="class_enemy_1a573af3a6b672a882ae23263bfbcdf440" kindref="member">attackCooldown</ref><sp/>=<sp/>2;</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_enemy_1a487c39395ee71759c8bf10707776755e" kindref="member">PostInit</ref>()<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63" refid="class_enemy_1ac1779a7f33b1320de88c6a73415bae8c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_enemy_1ac1779a7f33b1320de88c6a73415bae8c" kindref="member">playerMoneyToAdd</ref><sp/>=<sp/>30;</highlight></codeline>
+<codeline lineno="64" refid="class_enemy_1a985101af4d36bd5232edb964b061e423" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_attribute_component" kindref="compound">AttributeComponent</ref>*<sp/><ref refid="class_enemy_1a985101af4d36bd5232edb964b061e423" kindref="member">attributes</ref>;</highlight></codeline>
+<codeline lineno="65" refid="class_enemy_1a8d88db976bfb85797d1a161ae799f8e7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_character_movement_component" kindref="compound">CharacterMovementComponent</ref>*<sp/><ref refid="class_enemy_1a8d88db976bfb85797d1a161ae799f8e7" kindref="member">enemyMovement</ref>;</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67" refid="class_enemy_1a4bc75b6c8f42a2fc5a1a7b932342a074" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/><ref refid="class_enemy_1a4bc75b6c8f42a2fc5a1a7b932342a074" kindref="member">hurtSound</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;MeleeHurt&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_enemy_1a4c732fc920f5da435fc97f9c55ae8531" kindref="member">IncreasePlayerMoney</ref>();</highlight></codeline>
+<codeline lineno="73"><highlight class="normal">};</highlight></codeline>
+    </programlisting>
+    <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/Enemy.h"/>
+  </compounddef>
+</doxygen>

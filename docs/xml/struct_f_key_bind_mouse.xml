@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="struct_f_key_bind_mouse" kind="struct" language="C++" prot="public">
+    <compoundname>FKeyBindMouse</compoundname>
+    <includes refid="_player_controller_8h" local="no">PlayerController.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_f_key_bind_mouse_1a5bc7033239652acd4610ec1ca89ddf89" prot="public" static="no" mutable="no">
+        <type>gef::TouchType</type>
+        <definition>gef::TouchType FKeyBindMouse::clickAction</definition>
+        <argsstring></argsstring>
+        <name>clickAction</name>
+        <qualifiedname>FKeyBindMouse::clickAction</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/PlayerController.h" line="57" column="16" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/PlayerController.h" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_f_key_bind_mouse_1a5845f86fa206d3ba7e4ab997960a3588" prot="public" static="no" mutable="no">
+        <type>std::function&lt; void(gef::Vector2)&gt;</type>
+        <definition>std::function&lt;void(gef::Vector2)&gt; FKeyBindMouse::functionBind</definition>
+        <argsstring></argsstring>
+        <name>functionBind</name>
+        <qualifiedname>FKeyBindMouse::functionBind</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/PlayerController.h" line="58" column="15" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/PlayerController.h" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/PlayerController.h" line="55" column="1" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/PlayerController.h" bodystart="56" bodyend="59"/>
+    <listofallmembers>
+      <member refid="struct_f_key_bind_mouse_1a5bc7033239652acd4610ec1ca89ddf89" prot="public" virt="non-virtual"><scope>FKeyBindMouse</scope><name>clickAction</name></member>
+      <member refid="struct_f_key_bind_mouse_1a5845f86fa206d3ba7e4ab997960a3588" prot="public" virt="non-virtual"><scope>FKeyBindMouse</scope><name>functionBind</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

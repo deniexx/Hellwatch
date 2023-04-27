@@ -1,0 +1,109 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_dash" xml:lang="en-US">
+<title>Dash Class Reference</title>
+<indexterm><primary>Dash</primary></indexterm>
+<para>
+
+<para>Applies a force to the player in the mouse direction and makes the player briefly invincible  </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;Dash.h&gt;</computeroutput>
+</para>
+Inheritance diagram for Dash:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_dash__inherit__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Collaboration diagram for Dash:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_dash__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_dash_1abc38667dc53c7207c42b0808cb88967e">Dash</link> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Protected Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>virtual void <link linkend="_class_dash_1a3078ae06d66361da3e35af7b0efac786">PostInit</link> () override</para>
+
+<para>Called after ability has been initialized, do set up here  </para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_class_dash_1ab37a52fcb0a2953ad7f5bcf698d9d65f">Begin</link> () override</para>
+
+<para>Begins the ability, called if TryActivate was successful  </para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_class_dash_1a15631a12a91058a2f41e4a8f80127378">End</link> () override</para>
+
+<para>Called on end of ability  </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Additional Inherited Members    </title>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Applies a force to the player in the mouse direction and makes the player briefly invincible  </para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_dash_1abc38667dc53c7207c42b0808cb88967e"/><section>
+    <title>Dash()</title>
+<indexterm><primary>Dash</primary><secondary>Dash</secondary></indexterm>
+<indexterm><primary>Dash</primary><secondary>Dash</secondary></indexterm>
+<para><computeroutput>Dash::Dash ( )</computeroutput></para></section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_dash_1ab37a52fcb0a2953ad7f5bcf698d9d65f"/><section>
+    <title>Begin()</title>
+<indexterm><primary>Begin</primary><secondary>Dash</secondary></indexterm>
+<indexterm><primary>Dash</primary><secondary>Begin</secondary></indexterm>
+<para><computeroutput>void Dash::Begin ( )<computeroutput>[override]</computeroutput>, <computeroutput>[protected]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Begins the ability, called if TryActivate was successful  </para>
+</para>
+<para>
+Reimplemented from <link linkend="_class_ability_1ace910398ed2eb9f58c8e85dbb7a72de2">Ability</link>.</para>
+</section>
+<anchor xml:id="_class_dash_1a15631a12a91058a2f41e4a8f80127378"/><section>
+    <title>End()</title>
+<indexterm><primary>End</primary><secondary>Dash</secondary></indexterm>
+<indexterm><primary>Dash</primary><secondary>End</secondary></indexterm>
+<para><computeroutput>void Dash::End ( )<computeroutput>[override]</computeroutput>, <computeroutput>[protected]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Called on end of ability  </para>
+</para>
+<para>
+Reimplemented from <link linkend="_class_ability_1a61a88edf359a3c6bd34868e58bf64f20">Ability</link>.</para>
+</section>
+<anchor xml:id="_class_dash_1a3078ae06d66361da3e35af7b0efac786"/><section>
+    <title>PostInit()</title>
+<indexterm><primary>PostInit</primary><secondary>Dash</secondary></indexterm>
+<indexterm><primary>Dash</primary><secondary>PostInit</secondary></indexterm>
+<para><computeroutput>void Dash::PostInit ( )<computeroutput>[override]</computeroutput>, <computeroutput>[protected]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Called after ability has been initialized, do set up here  </para>
+</para>
+<para>
+Reimplemented from <link linkend="_class_ability_1a25388ebb622b414ef027eb33bf4a5cfb">Ability</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following files:</para>
+D:/Uni/CMP208/Hellwatch/build/vs2017/Abilities/PlayerAbilities/<link linkend="__dash_8h">Dash.h</link>D:/Uni/CMP208/Hellwatch/build/vs2017/Abilities/PlayerAbilities/<link linkend="__dash_8cpp">Dash.cpp</link></section>
+</section>

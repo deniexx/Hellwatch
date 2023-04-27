@@ -1,0 +1,114 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_shop_menu" xml:lang="en-US">
+<title>ShopMenu Class Reference</title>
+<indexterm><primary>ShopMenu</primary></indexterm>
+<para>
+
+<para>Shop menu to be used in Shop <link linkend="_namespace_game_state">GameState</link>  </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;ShopMenu.h&gt;</computeroutput>
+</para>
+Inheritance diagram for ShopMenu:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_shop_menu__inherit__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Collaboration diagram for ShopMenu:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_shop_menu__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>virtual void <link linkend="_class_shop_menu_1ad00ead74fb0ef7f5a265c1725fa6ccbf">Init</link> ()</para>
+
+<para>Initializes the menu  </para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_class_shop_menu_1a17c43cd733173e8a19eaaff593dbfec7">Update</link> () override</para>
+
+<para>Updates the controller of the menu and checks for highlights  </para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_class_shop_menu_1a17f8a9f65b1d66a40d3fed952bedde2b">DrawMenuHUD</link> (gef::Font *font_, gef::SpriteRenderer *sprite_renderer_) override</para>
+
+<para>Draws the menu HUD  </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Protected Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>virtual void <link linkend="_class_shop_menu_1a9d9a71e0eb5eb51a917b46402e9fbc9a">OnMouseButtonPressed</link> (gef::Vector2 mousePos)</para>
+
+<para>When the player presses the mouse button, checks if the mouse is over any buttons and if it is, it activates it  </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Additional Inherited Members    </title>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Shop menu to be used in Shop <link linkend="_namespace_game_state">GameState</link>  </para>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_shop_menu_1a17f8a9f65b1d66a40d3fed952bedde2b"/><section>
+    <title>DrawMenuHUD()</title>
+<indexterm><primary>DrawMenuHUD</primary><secondary>ShopMenu</secondary></indexterm>
+<indexterm><primary>ShopMenu</primary><secondary>DrawMenuHUD</secondary></indexterm>
+<para><computeroutput>void ShopMenu::DrawMenuHUD (gef::Font * font_, gef::SpriteRenderer * sprite_renderer_)<computeroutput>[override]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Draws the menu HUD  </para>
+</para>
+<para>
+Reimplemented from <link linkend="_class_menu_1acef1c8e0a83655c3b17c217567527f8b">Menu</link>.</para>
+</section>
+<anchor xml:id="_class_shop_menu_1ad00ead74fb0ef7f5a265c1725fa6ccbf"/><section>
+    <title>Init()</title>
+<indexterm><primary>Init</primary><secondary>ShopMenu</secondary></indexterm>
+<indexterm><primary>ShopMenu</primary><secondary>Init</secondary></indexterm>
+<para><computeroutput>void ShopMenu::Init ( )<computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Initializes the menu  </para>
+</para>
+<para>
+Implements <link linkend="_class_menu_1a0c64b7333b29000c8b219d2ebc28c03b">Menu</link>.</para>
+</section>
+<anchor xml:id="_class_shop_menu_1a9d9a71e0eb5eb51a917b46402e9fbc9a"/><section>
+    <title>OnMouseButtonPressed()</title>
+<indexterm><primary>OnMouseButtonPressed</primary><secondary>ShopMenu</secondary></indexterm>
+<indexterm><primary>ShopMenu</primary><secondary>OnMouseButtonPressed</secondary></indexterm>
+<para><computeroutput>void ShopMenu::OnMouseButtonPressed (gef::Vector2 mousePos)<computeroutput>[protected]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>When the player presses the mouse button, checks if the mouse is over any buttons and if it is, it activates it  </para>
+</para>
+<para>
+Reimplemented from <link linkend="_class_menu_1a2370ebbed22dfd0c10491bd8ae45b771">Menu</link>.</para>
+</section>
+<anchor xml:id="_class_shop_menu_1a17c43cd733173e8a19eaaff593dbfec7"/><section>
+    <title>Update()</title>
+<indexterm><primary>Update</primary><secondary>ShopMenu</secondary></indexterm>
+<indexterm><primary>ShopMenu</primary><secondary>Update</secondary></indexterm>
+<para><computeroutput>void ShopMenu::Update ( )<computeroutput>[override]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Updates the controller of the menu and checks for highlights  </para>
+</para>
+<para>
+Reimplemented from <link linkend="_class_menu_1af29d71473a414e31e914bc637840cb3e">Menu</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following files:</para>
+D:/Uni/CMP208/Hellwatch/build/vs2017/UserInterface/<link linkend="__shop_menu_8h">ShopMenu.h</link>D:/Uni/CMP208/Hellwatch/build/vs2017/UserInterface/<link linkend="__shop_menu_8cpp">ShopMenu.cpp</link></section>
+</section>

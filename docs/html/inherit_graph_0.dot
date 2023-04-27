@@ -1,0 +1,17 @@
+digraph "Graphical Class Hierarchy"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  rankdir="LR";
+  Node0 [label="Ability",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_ability.html",tooltip="A base ability class, designed to be inherited and provided with functionality"];
+  Node0 -> Node1 [dir="back",color="steelblue1",style="solid"];
+  Node1 [label="Dash",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_dash.html",tooltip="Applies a force to the player in the mouse direction and makes the player briefly invincible"];
+  Node0 -> Node2 [dir="back",color="steelblue1",style="solid"];
+  Node2 [label="IceBolt",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_ice_bolt.html",tooltip="Fires an ice projectile that hits the first target ONLY"];
+  Node0 -> Node3 [dir="back",color="steelblue1",style="solid"];
+  Node3 [label="Meteor",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_meteor.html",tooltip=" "];
+  Node0 -> Node4 [dir="back",color="steelblue1",style="solid"];
+  Node4 [label="PiercingStrike",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_piercing_strike.html",tooltip=" "];
+}

@@ -1,0 +1,312 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_scene_app" xml:lang="en-US">
+<title>SceneApp Class Reference</title>
+<indexterm><primary>SceneApp</primary></indexterm>
+<para>
+<computeroutput>#include &lt;scene_app.h&gt;</computeroutput>
+</para>
+Inheritance diagram for SceneApp:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_scene_app__inherit__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Collaboration diagram for SceneApp:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_scene_app__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_scene_app_1a5a29382297d3aa47f437d98a3dd4acdc">SceneApp</link> (gef::Platform &amp;platform)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_scene_app_1afbc3cd83343839fef53b5fcc2da630e6">Init</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_scene_app_1ab815a8823c2248fcebdc7a06867bdb9b">CleanUp</link> ()</para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_scene_app_1a48adec081291fea513f516bec9dcb898">Update</link> (float frame_time)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_scene_app_1afd9eebbabf3fe176d9fe30b309c2130c">Render</link> ()</para>
+</listitem>
+            <listitem><para>b2Body * <link linkend="_class_scene_app_1adcf5fcd2dfcb07d468c0ff4455e45bdd">CreateCollisionBody</link> (b2BodyDef bodyDef, b2FixtureDef fixtureDef, <link linkend="_class_world_object">WorldObject</link> *owningObject)</para>
+
+<para>Creates a collision body for a specified object, object can be null if using for things like environment or invisible walls @NOTE: The owning object will be used to call OnCollision function  </para>
+</listitem>
+            <listitem><para>__forceinline gef::Renderer3D * <link linkend="_class_scene_app_1ac0999a6034cf97a795506eb75dd3cc7f">GetRenderer3D</link> () const</para>
+</listitem>
+            <listitem><para>__forceinline gef::SpriteRenderer * <link linkend="_class_scene_app_1acfe997c4a66416d0cf25324d47403abb">GetSpriteRenderer</link> () const</para>
+</listitem>
+            <listitem><para>__forceinline b2World * <link linkend="_class_scene_app_1ad1ff8bd221115d5e081490da02e2f398">GetBox2DWorld</link> () const</para>
+</listitem>
+            <listitem><para>__forceinline float <link linkend="_class_scene_app_1a30039f31aff4d61fdce25d79425892fc">GetViewportWidth</link> () const</para>
+</listitem>
+            <listitem><para>__forceinline float <link linkend="_class_scene_app_1a0fc304ef89214b58b23adf26ec63f6ac">GetViewportHeight</link> () const</para>
+</listitem>
+            <listitem><para>__forceinline <link linkend="_class_player_character">PlayerCharacter</link> * <link linkend="_class_scene_app_1a36cc2439051445972f7b29114f3b011b">GetPlayerCharacter</link> () const</para>
+</listitem>
+            <listitem><para>__forceinline <link linkend="_class_primitive_builder">PrimitiveBuilder</link> * <link linkend="_class_scene_app_1ad0422232eb1f735a48a20137eb6e953e">GetPrimitiveBuilder</link> () const</para>
+</listitem>
+            <listitem><para>__forceinline gef::Vector4 <link linkend="_class_scene_app_1aaec63e72c5b04a1f7a63f3ff81b8bdb7">GetCameraEye</link> () const</para>
+</listitem>
+            <listitem><para>__forceinline gef::Vector4 <link linkend="_class_scene_app_1ab94350ed26fa0140eaac7060d97db655">GetCameraLookAt</link> () const</para>
+</listitem>
+            <listitem><para>__forceinline float <link linkend="_class_scene_app_1ab0a3e09a2920c053f50d25ea03132ae7">GetCurrentGameTime</link> () const</para>
+</listitem>
+            <listitem><para>__forceinline float <link linkend="_class_scene_app_1af624c2780cc0b7d913f63f7c4df74030">GetLastDeltaTime</link> () const</para>
+</listitem>
+            <listitem><para>gef::Mesh * <link linkend="_class_scene_app_1a6b6984ec718cb9ebad4be261df534cf1">RequestMeshByName</link> (std::string meshName)</para>
+</listitem>
+            <listitem><para>gef::Texture * <link linkend="_class_scene_app_1ac00c6ac20d92d7e8fd77d341a116e81d">RequestTextureByName</link> (std::string textureName)</para>
+</listitem>
+            <listitem><para>gef::Font * <link linkend="_class_scene_app_1a13fa1b28170df85ade3d18e329fbedc7">GetFont</link> ()</para>
+</listitem>
+            <listitem><para>gef::AudioManager * <link linkend="_class_scene_app_1a1b8d7ed84a7691d140c0b10d6cc01f7b">GetAudioManager</link> ()</para>
+</listitem>
+            <listitem><para>const gef::Vector2 <link linkend="_class_scene_app_1a2cb299beb00f7fea8f1de7c0cc6ab19b">GetLastTouchPosition</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_scene_app_1a3bc64bbc203e9cb597f2b47dc69f20e6">SetGameState</link> (<link linkend="_namespace_game_state_1aa2df68fe63beaaf10d3154d8eb490fe6">GameState::Type</link> newState)</para>
+</listitem>
+            <listitem><para><link linkend="_namespace_game_state_1aa2df68fe63beaaf10d3154d8eb490fe6">GameState::Type</link> <link linkend="_class_scene_app_1a3218d41e2d667db80e8fed34b02b6221">GetGameState</link> () const</para>
+</listitem>
+            <listitem><para>const uint32_t <link linkend="_class_scene_app_1ab4f8fc5ac0dc41a16f83089ff782b6f4">GetPlayerMoney</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_scene_app_1aec4d56f9129795aaef4ad8f2a454e302">IncreasePlayerMoney</link> (uint32_t increaseAmount)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_scene_app_1ac7ebc87268f7eea380099954c5358fd3">ApplyCostToPlayerMoney</link> (uint32_t cost)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_scene_app_1a04b16337e0cd4af5f9b38f75ca623f34">ApplyCameraShake</link> (<link linkend="_struct_f_camera_shake">FCameraShake</link> newShake)</para>
+
+<para>Applies camera shake @NOTE: This overwrites the previous camera shake  </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_scene_app_1a85782170c9894dfebe3a8045063301c6">ApplyRadialDamage</link> (float damageAmount, gef::Vector4 origin, float innerRadius, float outerRadius)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_scene_app_1a942b3809824f430117b26e9a7ad5acf6">PlaySample</link> (std::string sampleName, float pitch=1, bool bIsLooping=false)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_scene_app_1a829d6b657cc270002fcf262d57e2f249">AddPointerLocationOffset</link> (gef::Vector2 offset)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_scene_app_1ab40943893a61a141c9fb25eec163a1f1">SetPointerLocation</link> (gef::Vector2 newLocation)</para>
+</listitem>
+            <listitem><para>template&lt;typename MeshActorType  = MeshActor&gt; </para><para>MeshActorType * <link linkend="_class_scene_app_1a800b10254ae600ce80c0e69d765e8061">SpawnMeshActor</link> (gef::Mesh *mesh=nullptr, gef::Vector4 translation=gef::Vector4::kZero, gef::Vector4 rotation=gef::Vector4::kZero, gef::Vector4 scale=gef::Vector4::kOne, <link linkend="_class_world_object">WorldObject</link> *owner=nullptr)</para>
+
+<para>Spawns a <link linkend="_class_mesh_actor">MeshActor</link> into the scene and gets it ready for rendering and updating  </para>
+</listitem>
+            <listitem><para>template&lt;typename SpriteActorType  = SpriteActor&gt; </para><para>SpriteActorType * <link linkend="_class_scene_app_1ab70d4d12950fa87533727b3fa6e42ee5">SpawnSpriteActor</link> (gef::Sprite *sprite=nullptr, gef::Vector4 position=gef::Vector4::kZero, float rotation=0.f, <link linkend="_class_world_object">WorldObject</link> *owner=nullptr)</para>
+
+<para>Spawns a <link linkend="_class_sprite_actor">SpriteActor</link> into the scene and gets it ready for rendering and updating  </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_scene_app_1a5a29382297d3aa47f437d98a3dd4acdc"/><section>
+    <title>SceneApp()</title>
+<indexterm><primary>SceneApp</primary><secondary>SceneApp</secondary></indexterm>
+<indexterm><primary>SceneApp</primary><secondary>SceneApp</secondary></indexterm>
+<para><computeroutput>SceneApp::SceneApp (gef::Platform &amp; platform)</computeroutput></para></section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_scene_app_1a829d6b657cc270002fcf262d57e2f249"/><section>
+    <title>AddPointerLocationOffset()</title>
+<indexterm><primary>AddPointerLocationOffset</primary><secondary>SceneApp</secondary></indexterm>
+<indexterm><primary>SceneApp</primary><secondary>AddPointerLocationOffset</secondary></indexterm>
+<para><computeroutput>void SceneApp::AddPointerLocationOffset (gef::Vector2 offset)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_scene_app_1a04b16337e0cd4af5f9b38f75ca623f34"/><section>
+    <title>ApplyCameraShake()</title>
+<indexterm><primary>ApplyCameraShake</primary><secondary>SceneApp</secondary></indexterm>
+<indexterm><primary>SceneApp</primary><secondary>ApplyCameraShake</secondary></indexterm>
+<para><computeroutput>void SceneApp::ApplyCameraShake (<link linkend="_struct_f_camera_shake">FCameraShake</link> newShake)</computeroutput></para><para>
+
+<para>Applies camera shake @NOTE: This overwrites the previous camera shake  </para>
+</para>
+</section>
+<anchor xml:id="_class_scene_app_1ac7ebc87268f7eea380099954c5358fd3"/><section>
+    <title>ApplyCostToPlayerMoney()</title>
+<indexterm><primary>ApplyCostToPlayerMoney</primary><secondary>SceneApp</secondary></indexterm>
+<indexterm><primary>SceneApp</primary><secondary>ApplyCostToPlayerMoney</secondary></indexterm>
+<para><computeroutput>void SceneApp::ApplyCostToPlayerMoney (uint32_t cost)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_scene_app_1a85782170c9894dfebe3a8045063301c6"/><section>
+    <title>ApplyRadialDamage()</title>
+<indexterm><primary>ApplyRadialDamage</primary><secondary>SceneApp</secondary></indexterm>
+<indexterm><primary>SceneApp</primary><secondary>ApplyRadialDamage</secondary></indexterm>
+<para><computeroutput>void SceneApp::ApplyRadialDamage (float damageAmount, gef::Vector4 origin, float innerRadius, float outerRadius)</computeroutput></para></section>
+<anchor xml:id="_class_scene_app_1ab815a8823c2248fcebdc7a06867bdb9b"/><section>
+    <title>CleanUp()</title>
+<indexterm><primary>CleanUp</primary><secondary>SceneApp</secondary></indexterm>
+<indexterm><primary>SceneApp</primary><secondary>CleanUp</secondary></indexterm>
+<para><computeroutput>void SceneApp::CleanUp ( )</computeroutput></para></section>
+<anchor xml:id="_class_scene_app_1adcf5fcd2dfcb07d468c0ff4455e45bdd"/><section>
+    <title>CreateCollisionBody()</title>
+<indexterm><primary>CreateCollisionBody</primary><secondary>SceneApp</secondary></indexterm>
+<indexterm><primary>SceneApp</primary><secondary>CreateCollisionBody</secondary></indexterm>
+<para><computeroutput>b2Body * SceneApp::CreateCollisionBody (b2BodyDef bodyDef, b2FixtureDef fixtureDef, <link linkend="_class_world_object">WorldObject</link> * owningObject)</computeroutput></para><para>
+
+<para>Creates a collision body for a specified object, object can be null if using for things like environment or invisible walls @NOTE: The owning object will be used to call OnCollision function  </para>
+</para>
+</section>
+<anchor xml:id="_class_scene_app_1a1b8d7ed84a7691d140c0b10d6cc01f7b"/><section>
+    <title>GetAudioManager()</title>
+<indexterm><primary>GetAudioManager</primary><secondary>SceneApp</secondary></indexterm>
+<indexterm><primary>SceneApp</primary><secondary>GetAudioManager</secondary></indexterm>
+<para><computeroutput>gef::AudioManager * SceneApp::GetAudioManager ( )<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_scene_app_1ad1ff8bd221115d5e081490da02e2f398"/><section>
+    <title>GetBox2DWorld()</title>
+<indexterm><primary>GetBox2DWorld</primary><secondary>SceneApp</secondary></indexterm>
+<indexterm><primary>SceneApp</primary><secondary>GetBox2DWorld</secondary></indexterm>
+<para><computeroutput>__forceinline b2World * SceneApp::GetBox2DWorld ( ) const<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_scene_app_1aaec63e72c5b04a1f7a63f3ff81b8bdb7"/><section>
+    <title>GetCameraEye()</title>
+<indexterm><primary>GetCameraEye</primary><secondary>SceneApp</secondary></indexterm>
+<indexterm><primary>SceneApp</primary><secondary>GetCameraEye</secondary></indexterm>
+<para><computeroutput>__forceinline gef::Vector4 SceneApp::GetCameraEye ( ) const<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_scene_app_1ab94350ed26fa0140eaac7060d97db655"/><section>
+    <title>GetCameraLookAt()</title>
+<indexterm><primary>GetCameraLookAt</primary><secondary>SceneApp</secondary></indexterm>
+<indexterm><primary>SceneApp</primary><secondary>GetCameraLookAt</secondary></indexterm>
+<para><computeroutput>__forceinline gef::Vector4 SceneApp::GetCameraLookAt ( ) const<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_scene_app_1ab0a3e09a2920c053f50d25ea03132ae7"/><section>
+    <title>GetCurrentGameTime()</title>
+<indexterm><primary>GetCurrentGameTime</primary><secondary>SceneApp</secondary></indexterm>
+<indexterm><primary>SceneApp</primary><secondary>GetCurrentGameTime</secondary></indexterm>
+<para><computeroutput>__forceinline float SceneApp::GetCurrentGameTime ( ) const<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_scene_app_1a13fa1b28170df85ade3d18e329fbedc7"/><section>
+    <title>GetFont()</title>
+<indexterm><primary>GetFont</primary><secondary>SceneApp</secondary></indexterm>
+<indexterm><primary>SceneApp</primary><secondary>GetFont</secondary></indexterm>
+<para><computeroutput>gef::Font * SceneApp::GetFont ( )<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_scene_app_1a3218d41e2d667db80e8fed34b02b6221"/><section>
+    <title>GetGameState()</title>
+<indexterm><primary>GetGameState</primary><secondary>SceneApp</secondary></indexterm>
+<indexterm><primary>SceneApp</primary><secondary>GetGameState</secondary></indexterm>
+<para><computeroutput><link linkend="_namespace_game_state_1aa2df68fe63beaaf10d3154d8eb490fe6">GameState::Type</link> SceneApp::GetGameState ( ) const<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_scene_app_1af624c2780cc0b7d913f63f7c4df74030"/><section>
+    <title>GetLastDeltaTime()</title>
+<indexterm><primary>GetLastDeltaTime</primary><secondary>SceneApp</secondary></indexterm>
+<indexterm><primary>SceneApp</primary><secondary>GetLastDeltaTime</secondary></indexterm>
+<para><computeroutput>__forceinline float SceneApp::GetLastDeltaTime ( ) const<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_scene_app_1a2cb299beb00f7fea8f1de7c0cc6ab19b"/><section>
+    <title>GetLastTouchPosition()</title>
+<indexterm><primary>GetLastTouchPosition</primary><secondary>SceneApp</secondary></indexterm>
+<indexterm><primary>SceneApp</primary><secondary>GetLastTouchPosition</secondary></indexterm>
+<para><computeroutput>const gef::Vector2 SceneApp::GetLastTouchPosition ( )</computeroutput></para></section>
+<anchor xml:id="_class_scene_app_1a36cc2439051445972f7b29114f3b011b"/><section>
+    <title>GetPlayerCharacter()</title>
+<indexterm><primary>GetPlayerCharacter</primary><secondary>SceneApp</secondary></indexterm>
+<indexterm><primary>SceneApp</primary><secondary>GetPlayerCharacter</secondary></indexterm>
+<para><computeroutput>__forceinline <link linkend="_class_player_character">PlayerCharacter</link> * SceneApp::GetPlayerCharacter ( ) const<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_scene_app_1ab4f8fc5ac0dc41a16f83089ff782b6f4"/><section>
+    <title>GetPlayerMoney()</title>
+<indexterm><primary>GetPlayerMoney</primary><secondary>SceneApp</secondary></indexterm>
+<indexterm><primary>SceneApp</primary><secondary>GetPlayerMoney</secondary></indexterm>
+<para><computeroutput>const uint32_t SceneApp::GetPlayerMoney ( )<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_scene_app_1ad0422232eb1f735a48a20137eb6e953e"/><section>
+    <title>GetPrimitiveBuilder()</title>
+<indexterm><primary>GetPrimitiveBuilder</primary><secondary>SceneApp</secondary></indexterm>
+<indexterm><primary>SceneApp</primary><secondary>GetPrimitiveBuilder</secondary></indexterm>
+<para><computeroutput>__forceinline <link linkend="_class_primitive_builder">PrimitiveBuilder</link> * SceneApp::GetPrimitiveBuilder ( ) const<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_scene_app_1ac0999a6034cf97a795506eb75dd3cc7f"/><section>
+    <title>GetRenderer3D()</title>
+<indexterm><primary>GetRenderer3D</primary><secondary>SceneApp</secondary></indexterm>
+<indexterm><primary>SceneApp</primary><secondary>GetRenderer3D</secondary></indexterm>
+<para><computeroutput>__forceinline gef::Renderer3D * SceneApp::GetRenderer3D ( ) const<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_scene_app_1acfe997c4a66416d0cf25324d47403abb"/><section>
+    <title>GetSpriteRenderer()</title>
+<indexterm><primary>GetSpriteRenderer</primary><secondary>SceneApp</secondary></indexterm>
+<indexterm><primary>SceneApp</primary><secondary>GetSpriteRenderer</secondary></indexterm>
+<para><computeroutput>__forceinline gef::SpriteRenderer * SceneApp::GetSpriteRenderer ( ) const<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_scene_app_1a0fc304ef89214b58b23adf26ec63f6ac"/><section>
+    <title>GetViewportHeight()</title>
+<indexterm><primary>GetViewportHeight</primary><secondary>SceneApp</secondary></indexterm>
+<indexterm><primary>SceneApp</primary><secondary>GetViewportHeight</secondary></indexterm>
+<para><computeroutput>__forceinline float SceneApp::GetViewportHeight ( ) const<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_scene_app_1a30039f31aff4d61fdce25d79425892fc"/><section>
+    <title>GetViewportWidth()</title>
+<indexterm><primary>GetViewportWidth</primary><secondary>SceneApp</secondary></indexterm>
+<indexterm><primary>SceneApp</primary><secondary>GetViewportWidth</secondary></indexterm>
+<para><computeroutput>__forceinline float SceneApp::GetViewportWidth ( ) const<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_scene_app_1aec4d56f9129795aaef4ad8f2a454e302"/><section>
+    <title>IncreasePlayerMoney()</title>
+<indexterm><primary>IncreasePlayerMoney</primary><secondary>SceneApp</secondary></indexterm>
+<indexterm><primary>SceneApp</primary><secondary>IncreasePlayerMoney</secondary></indexterm>
+<para><computeroutput>void SceneApp::IncreasePlayerMoney (uint32_t increaseAmount)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_scene_app_1afbc3cd83343839fef53b5fcc2da630e6"/><section>
+    <title>Init()</title>
+<indexterm><primary>Init</primary><secondary>SceneApp</secondary></indexterm>
+<indexterm><primary>SceneApp</primary><secondary>Init</secondary></indexterm>
+<para><computeroutput>void SceneApp::Init ( )</computeroutput></para></section>
+<anchor xml:id="_class_scene_app_1a942b3809824f430117b26e9a7ad5acf6"/><section>
+    <title>PlaySample()</title>
+<indexterm><primary>PlaySample</primary><secondary>SceneApp</secondary></indexterm>
+<indexterm><primary>SceneApp</primary><secondary>PlaySample</secondary></indexterm>
+<para><computeroutput>void SceneApp::PlaySample (std::string sampleName, float pitch = <computeroutput>1</computeroutput>
+, bool bIsLooping = <computeroutput>false</computeroutput>
+)</computeroutput></para></section>
+<anchor xml:id="_class_scene_app_1afd9eebbabf3fe176d9fe30b309c2130c"/><section>
+    <title>Render()</title>
+<indexterm><primary>Render</primary><secondary>SceneApp</secondary></indexterm>
+<indexterm><primary>SceneApp</primary><secondary>Render</secondary></indexterm>
+<para><computeroutput>void SceneApp::Render ( )</computeroutput></para></section>
+<anchor xml:id="_class_scene_app_1a6b6984ec718cb9ebad4be261df534cf1"/><section>
+    <title>RequestMeshByName()</title>
+<indexterm><primary>RequestMeshByName</primary><secondary>SceneApp</secondary></indexterm>
+<indexterm><primary>SceneApp</primary><secondary>RequestMeshByName</secondary></indexterm>
+<para><computeroutput>gef::Mesh * SceneApp::RequestMeshByName (std::string meshName)</computeroutput></para></section>
+<anchor xml:id="_class_scene_app_1ac00c6ac20d92d7e8fd77d341a116e81d"/><section>
+    <title>RequestTextureByName()</title>
+<indexterm><primary>RequestTextureByName</primary><secondary>SceneApp</secondary></indexterm>
+<indexterm><primary>SceneApp</primary><secondary>RequestTextureByName</secondary></indexterm>
+<para><computeroutput>gef::Texture * SceneApp::RequestTextureByName (std::string textureName)</computeroutput></para></section>
+<anchor xml:id="_class_scene_app_1a3bc64bbc203e9cb597f2b47dc69f20e6"/><section>
+    <title>SetGameState()</title>
+<indexterm><primary>SetGameState</primary><secondary>SceneApp</secondary></indexterm>
+<indexterm><primary>SceneApp</primary><secondary>SetGameState</secondary></indexterm>
+<para><computeroutput>void SceneApp::SetGameState (<link linkend="_namespace_game_state_1aa2df68fe63beaaf10d3154d8eb490fe6">GameState::Type</link> newState)</computeroutput></para></section>
+<anchor xml:id="_class_scene_app_1ab40943893a61a141c9fb25eec163a1f1"/><section>
+    <title>SetPointerLocation()</title>
+<indexterm><primary>SetPointerLocation</primary><secondary>SceneApp</secondary></indexterm>
+<indexterm><primary>SceneApp</primary><secondary>SetPointerLocation</secondary></indexterm>
+<para><computeroutput>void SceneApp::SetPointerLocation (gef::Vector2 newLocation)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_scene_app_1a800b10254ae600ce80c0e69d765e8061"/><section>
+    <title>SpawnMeshActor()</title>
+<indexterm><primary>SpawnMeshActor</primary><secondary>SceneApp</secondary></indexterm>
+<indexterm><primary>SceneApp</primary><secondary>SpawnMeshActor</secondary></indexterm>
+<computeroutput>template&lt;typename MeshActorType  = MeshActor&gt; </computeroutput><para><computeroutput>MeshActorType * SceneApp::SpawnMeshActor (gef::Mesh * mesh = <computeroutput>nullptr</computeroutput>
+, gef::Vector4 translation = <computeroutput>gef::Vector4::kZero</computeroutput>
+, gef::Vector4 rotation = <computeroutput>gef::Vector4::kZero</computeroutput>
+, gef::Vector4 scale = <computeroutput>gef::Vector4::kOne</computeroutput>
+, <link linkend="_class_world_object">WorldObject</link> * owner = <computeroutput>nullptr</computeroutput>
+)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Spawns a <link linkend="_class_mesh_actor">MeshActor</link> into the scene and gets it ready for rendering and updating  </para>
+</para>
+</section>
+<anchor xml:id="_class_scene_app_1ab70d4d12950fa87533727b3fa6e42ee5"/><section>
+    <title>SpawnSpriteActor()</title>
+<indexterm><primary>SpawnSpriteActor</primary><secondary>SceneApp</secondary></indexterm>
+<indexterm><primary>SceneApp</primary><secondary>SpawnSpriteActor</secondary></indexterm>
+<computeroutput>template&lt;typename SpriteActorType  = SpriteActor&gt; </computeroutput><para><computeroutput>SpriteActorType * SceneApp::SpawnSpriteActor (gef::Sprite * sprite = <computeroutput>nullptr</computeroutput>
+, gef::Vector4 position = <computeroutput>gef::Vector4::kZero</computeroutput>
+, float rotation = <computeroutput>0.f</computeroutput>
+, <link linkend="_class_world_object">WorldObject</link> * owner = <computeroutput>nullptr</computeroutput>
+)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Spawns a <link linkend="_class_sprite_actor">SpriteActor</link> into the scene and gets it ready for rendering and updating  </para>
+</para>
+</section>
+<anchor xml:id="_class_scene_app_1a48adec081291fea513f516bec9dcb898"/><section>
+    <title>Update()</title>
+<indexterm><primary>Update</primary><secondary>SceneApp</secondary></indexterm>
+<indexterm><primary>SceneApp</primary><secondary>Update</secondary></indexterm>
+<para><computeroutput>bool SceneApp::Update (float frame_time)</computeroutput></para></section>
+<para>
+The documentation for this class was generated from the following files:</para>
+D:/Uni/CMP208/Hellwatch/<link linkend="_scene__app_8h">scene_app.h</link>D:/Uni/CMP208/Hellwatch/<link linkend="_scene__app_8cpp">scene_app.cpp</link></section>
+</section>

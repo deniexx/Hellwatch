@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_scene__app_8cpp" xml:lang="en-US">
+<title>D:/Uni/CMP208/Hellwatch/scene_app.cpp File Reference</title>
+<indexterm><primary>D:/Uni/CMP208/Hellwatch/scene_app.cpp</primary></indexterm>
+<programlisting linenumbering="unnumbered">#include &quot;scene_app.h&quot;<?linebreak?>#include &lt;system/platform.h&gt;<?linebreak?>#include &lt;graphics/sprite_renderer.h&gt;<?linebreak?>#include &lt;graphics/font.h&gt;<?linebreak?>#include &lt;system/debug_log.h&gt;<?linebreak?>#include &lt;graphics/renderer_3d.h&gt;<?linebreak?>#include &lt;maths/math_utils.h&gt;<?linebreak?>#include &quot;graphics/sprite.h&quot;<?linebreak?>#include &quot;assets/png_loader.h&quot;<?linebreak?>#include &lt;graphics/image_data.h&gt;<?linebreak?>#include &lt;audio/audio_manager.h&gt;<?linebreak?>#include &quot;input/sony_controller_input_manager.h&quot;<?linebreak?>#include &quot;UserInterface/MainMenu.h&quot;<?linebreak?>#include &quot;UserInterface/ShopMenu.h&quot;<?linebreak?>#include &quot;UserInterface/PauseMenu.h&quot;<?linebreak?>#include &quot;UserInterface/GameEndMenu.h&quot;<?linebreak?>#include &quot;Actors/MeshActors/PlayerCharacter.h&quot;<?linebreak?>#include &quot;Actors/SpriteActor.h&quot;<?linebreak?>#include &quot;Actors/MeshActors/Enemy.h&quot;<?linebreak?>#include &quot;Actors/MeshActors/RangedEnemy.h&quot;<?linebreak?>#include &quot;Actors/MeshActor.h&quot;<?linebreak?>#include &quot;GameFramework/WaveManager.h&quot;<?linebreak?>#include &quot;GameFramework/PlayerController.h&quot;<?linebreak?>#include &lt;thread&gt;<?linebreak?>#include &quot;GameFramework/ParticleManager.h&quot;<?linebreak?></programlisting>Include dependency graph for scene_app.cpp:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="scene__app_8cpp__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>

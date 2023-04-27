@@ -1,0 +1,66 @@
+\hypertarget{scene__app_8h}{}\doxysection{D\+:/\+Uni/\+CMP208/\+Hellwatch/scene\+\_\+app.h File Reference}
+\label{scene__app_8h}\index{D:/Uni/CMP208/Hellwatch/scene\_app.h@{D:/Uni/CMP208/Hellwatch/scene\_app.h}}
+{\ttfamily \#include $<$system/application.\+h$>$}\newline
+{\ttfamily \#include $<$maths/vector2.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}primitive\+\_\+builder.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}graphics/scene.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}box2d/box2d.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}system/platform.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}obj\+\_\+mesh\+\_\+loader.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}graphics/font.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$future$>$}\newline
+{\ttfamily \#include $<$random$>$}\newline
+Include dependency graph for scene\+\_\+app.\+h\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_f_camera_shake}{FCamera\+Shake}}
+\item 
+class \mbox{\hyperlink{class_scene_app}{Scene\+App}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespace_game_state}{Game\+State}}
+\item 
+namespace \mbox{\hyperlink{namespacegef}{gef}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef std\+::map$<$ std\+::string, gef\+::\+Texture $\ast$ $>$ \mbox{\hyperlink{scene__app_8h_a5b57d40276b77cc074d878efc78bb980}{Texture\+Map}}
+\item 
+typedef std\+::map$<$ std\+::string, int $>$ \mbox{\hyperlink{scene__app_8h_a8d89ee6a10feffd9323a0031e0bbea29}{Sound\+Map}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{namespace_game_state_aa2df68fe63beaaf10d3154d8eb490fe6}{Game\+State\+::\+Type}} \{ \newline
+\mbox{\hyperlink{namespace_game_state_aa2df68fe63beaaf10d3154d8eb490fe6a1c09055471a61c18afc1fc201e6d7d2a}{Game\+State\+::\+Loading}}
+, \mbox{\hyperlink{namespace_game_state_aa2df68fe63beaaf10d3154d8eb490fe6afff9d63720dd6c0c621817980d02d9ee}{Game\+State\+::\+Main\+Menu}}
+, \mbox{\hyperlink{namespace_game_state_aa2df68fe63beaaf10d3154d8eb490fe6aa1babbc78fafb7b98d14a8fcc880bd55}{Game\+State\+::\+Game\+Loop}}
+, \mbox{\hyperlink{namespace_game_state_aa2df68fe63beaaf10d3154d8eb490fe6a6e1adcd2eb4fb5660e3baadd566e4873}{Game\+State\+::\+Pause\+Menu}}
+, \newline
+\mbox{\hyperlink{namespace_game_state_aa2df68fe63beaaf10d3154d8eb490fe6a11dfd10e2813b09f256dd86e3902dfe2}{Game\+State\+::\+Shop}}
+, \mbox{\hyperlink{namespace_game_state_aa2df68fe63beaaf10d3154d8eb490fe6a797c961d3f35a579149051adc329e58e}{Game\+State\+::\+Game\+End}}
+ \}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{scene__app_8h_a8d89ee6a10feffd9323a0031e0bbea29}\label{scene__app_8h_a8d89ee6a10feffd9323a0031e0bbea29}} 
+\index{scene\_app.h@{scene\_app.h}!SoundMap@{SoundMap}}
+\index{SoundMap@{SoundMap}!scene\_app.h@{scene\_app.h}}
+\doxysubsubsection{\texorpdfstring{SoundMap}{SoundMap}}
+{\footnotesize\ttfamily typedef std\+::map$<$std\+::string, int$>$ \mbox{\hyperlink{scene__app_8h_a8d89ee6a10feffd9323a0031e0bbea29}{Sound\+Map}}}
+
+\mbox{\Hypertarget{scene__app_8h_a5b57d40276b77cc074d878efc78bb980}\label{scene__app_8h_a5b57d40276b77cc074d878efc78bb980}} 
+\index{scene\_app.h@{scene\_app.h}!TextureMap@{TextureMap}}
+\index{TextureMap@{TextureMap}!scene\_app.h@{scene\_app.h}}
+\doxysubsubsection{\texorpdfstring{TextureMap}{TextureMap}}
+{\footnotesize\ttfamily typedef std\+::map$<$std\+::string, gef\+::\+Texture$\ast$$>$ \mbox{\hyperlink{scene__app_8h_a5b57d40276b77cc074d878efc78bb980}{Texture\+Map}}}
+

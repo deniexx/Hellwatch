@@ -1,0 +1,95 @@
+.TH "WaveManager" 3 "Thu Apr 27 2023" "Hellwatch" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+WaveManager \- Manages the spawning of enemies and tracking the progress of waves   
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <WaveManager\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBWaveManager\fP ()"
+.br
+.ti -1c
+.RI "void \fBInit\fP ()"
+.br
+.RI "Must be called, initializes the wave definitions  "
+.ti -1c
+.RI "void \fBStartWave\fP ()"
+.br
+.RI "Starts the next wave  "
+.ti -1c
+.RI "void \fBEndWave\fP ()"
+.br
+.RI "Ends the current wave  "
+.ti -1c
+.RI "void \fBUpdate\fP ()"
+.br
+.ti -1c
+.RI "void \fBCheckWaveState\fP ()"
+.br
+.RI "Checks whether all enemies have been spawned, and if any are alive  "
+.ti -1c
+.RI "void \fBSpawnEnemy\fP ()"
+.br
+.RI "Spawns a random enemy and sets its class to a random one  "
+.ti -1c
+.RI "std::vector< \fBEnemy\fP * > \fBGetAllSpawnedEnemies\fP () const"
+.br
+.RI "Gets all the currently spawned enemies  "
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "int \fBcurrentWave\fP = 0"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Manages the spawning of enemies and tracking the progress of waves  
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "WaveManager::WaveManager ()"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "void WaveManager::CheckWaveState ()"
+
+.PP
+Checks whether all enemies have been spawned, and if any are alive  
+.SS "void WaveManager::EndWave ()"
+
+.PP
+Ends the current wave  
+.SS "std::vector< \fBEnemy\fP * > WaveManager::GetAllSpawnedEnemies () const\fC [inline]\fP"
+
+.PP
+Gets all the currently spawned enemies  
+.SS "void WaveManager::Init ()"
+
+.PP
+Must be called, initializes the wave definitions  
+.SS "void WaveManager::SpawnEnemy ()"
+
+.PP
+Spawns a random enemy and sets its class to a random one  
+.SS "void WaveManager::StartWave ()"
+
+.PP
+Starts the next wave  
+.SS "void WaveManager::Update ()"
+
+.SH "Member Data Documentation"
+.PP 
+.SS "int WaveManager::currentWave = 0"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Hellwatch from the source code\&.

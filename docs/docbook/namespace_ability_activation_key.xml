@@ -1,0 +1,54 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_namespace_ability_activation_key" xml:lang="en-US">
+<title>AbilityActivationKey Namespace Reference</title>
+<indexterm><primary>AbilityActivationKey</primary></indexterm>
+<para>
+
+<para>The key that will be used to activate this ability 1, 2, 3, 4  </para>
+ 
+</para>
+<simplesect>
+    <title>Enumerations    </title>
+        <itemizedlist>
+            <listitem><para>enum <link linkend="_namespace_ability_activation_key_1ab159d3c3f26196a9ff493b67ecf7e68c">Type</link> : int { <?linebreak?><link linkend="_namespace_ability_activation_key_1ab159d3c3f26196a9ff493b67ecf7e68cab6784d3bc8d889420937a8c25e9b1c87">AbilityKey1</link> = 0
+, <link linkend="_namespace_ability_activation_key_1ab159d3c3f26196a9ff493b67ecf7e68ca320fc572e7627361aa1df0f37543c0ac">AbilityKey2</link>
+, <link linkend="_namespace_ability_activation_key_1ab159d3c3f26196a9ff493b67ecf7e68cad9c1b1c777eb7838b8da19f60dbc56d2">AbilityKey3</link>
+, <link linkend="_namespace_ability_activation_key_1ab159d3c3f26196a9ff493b67ecf7e68ca9c88a5d3644987a1299d2142a134c9d9">AbilityKey4</link>
+, <?linebreak?><link linkend="_namespace_ability_activation_key_1ab159d3c3f26196a9ff493b67ecf7e68ca7681c632dadbc0ca58c3a03c7a9d53c2">None</link>
+ }</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>The key that will be used to activate this ability 1, 2, 3, 4  </para>
+</section>
+<section>
+<title>Enumeration Type Documentation</title>
+<anchor xml:id="_namespace_ability_activation_key_1ab159d3c3f26196a9ff493b67ecf7e68c"/><section>
+    <title>Type</title>
+<indexterm><primary>Type</primary><secondary>AbilityActivationKey</secondary></indexterm>
+<indexterm><primary>AbilityActivationKey</primary><secondary>Type</secondary></indexterm>
+<para><computeroutput>enum <link linkend="_namespace_ability_activation_key_1ab159d3c3f26196a9ff493b67ecf7e68c">AbilityActivationKey::Type</link> : int</computeroutput></para><informaltable frame="all">
+<title>Enumerator</title>
+    <tgroup cols="2" align="left" colsep="1" rowsep="1">
+      <colspec colname='c1'/>
+      <colspec colname='c2'/>
+<tbody>
+<row><entry><indexterm><primary>AbilityKey1</primary><secondary>AbilityActivationKey</secondary></indexterm>
+<indexterm><primary>AbilityActivationKey</primary><secondary>AbilityKey1</secondary></indexterm>
+<anchor xml:id="_namespace_ability_activation_key_1ab159d3c3f26196a9ff493b67ecf7e68cab6784d3bc8d889420937a8c25e9b1c87"/>AbilityKey1</entry><entry></entry></row><row><entry><indexterm><primary>AbilityKey2</primary><secondary>AbilityActivationKey</secondary></indexterm>
+<indexterm><primary>AbilityActivationKey</primary><secondary>AbilityKey2</secondary></indexterm>
+<anchor xml:id="_namespace_ability_activation_key_1ab159d3c3f26196a9ff493b67ecf7e68ca320fc572e7627361aa1df0f37543c0ac"/>AbilityKey2</entry><entry></entry></row><row><entry><indexterm><primary>AbilityKey3</primary><secondary>AbilityActivationKey</secondary></indexterm>
+<indexterm><primary>AbilityActivationKey</primary><secondary>AbilityKey3</secondary></indexterm>
+<anchor xml:id="_namespace_ability_activation_key_1ab159d3c3f26196a9ff493b67ecf7e68cad9c1b1c777eb7838b8da19f60dbc56d2"/>AbilityKey3</entry><entry></entry></row><row><entry><indexterm><primary>AbilityKey4</primary><secondary>AbilityActivationKey</secondary></indexterm>
+<indexterm><primary>AbilityActivationKey</primary><secondary>AbilityKey4</secondary></indexterm>
+<anchor xml:id="_namespace_ability_activation_key_1ab159d3c3f26196a9ff493b67ecf7e68ca9c88a5d3644987a1299d2142a134c9d9"/>AbilityKey4</entry><entry></entry></row><row><entry><indexterm><primary>None</primary><secondary>AbilityActivationKey</secondary></indexterm>
+<indexterm><primary>AbilityActivationKey</primary><secondary>None</secondary></indexterm>
+<anchor xml:id="_namespace_ability_activation_key_1ab159d3c3f26196a9ff493b67ecf7e68ca7681c632dadbc0ca58c3a03c7a9d53c2"/>None</entry><entry></entry></row>    </tbody>
+    </tgroup>
+</informaltable>
+</section>
+</section>
+</section>

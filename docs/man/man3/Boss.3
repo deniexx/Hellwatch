@@ -1,0 +1,97 @@
+.TH "Boss" 3 "Thu Apr 27 2023" "Hellwatch" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Boss
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <Boss\&.h>\fP
+.PP
+Inherits \fBEnemy\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBBoss\fP ()"
+.br
+.ti -1c
+.RI "virtual void \fBUpdate\fP (float deltaTime) override"
+.br
+.RI "Update function, called every frame  "
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "virtual void \fBPostInit\fP () override"
+.br
+.RI "Override this to Initialize variables or do any necessary work when the object is created  "
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "bool \fBisJumping\fP = false"
+.br
+.ti -1c
+.RI "bool \fBpastMidpoint\fP = false"
+.br
+.ti -1c
+.RI "gef::Vector4 \fBplayerPosition\fP"
+.br
+.ti -1c
+.RI "gef::Vector4 \fBbossPosition\fP"
+.br
+.ti -1c
+.RI "gef::Vector4 \fBmidpoint\fP"
+.br
+.ti -1c
+.RI "float \fBalpha\fP = 0"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "Boss::Boss ()"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "void Boss::PostInit ()\fC [override]\fP, \fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+Override this to Initialize variables or do any necessary work when the object is created  
+.PP
+Reimplemented from \fBEnemy\fP\&.
+.SS "void Boss::Update (float deltaTime)\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+Update function, called every frame  
+.PP
+\fBParameters\fP
+.RS 4
+\fIdeltaTime\fP Float variable for the frame time
+.RE
+.PP
+
+.PP
+Reimplemented from \fBEnemy\fP\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "float Boss::alpha = 0\fC [protected]\fP"
+
+.SS "gef::Vector4 Boss::bossPosition\fC [protected]\fP"
+
+.SS "bool Boss::isJumping = false\fC [protected]\fP"
+
+.SS "gef::Vector4 Boss::midpoint\fC [protected]\fP"
+
+.SS "bool Boss::pastMidpoint = false\fC [protected]\fP"
+
+.SS "gef::Vector4 Boss::playerPosition\fC [protected]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Hellwatch from the source code\&.

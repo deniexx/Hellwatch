@@ -1,0 +1,325 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="_ice_bolt_8cpp" kind="file" language="C++">
+    <compoundname>IceBolt.cpp</compoundname>
+    <includes refid="_ice_bolt_8h" local="yes">IceBolt.h</includes>
+    <includes refid="scene__app_8h" local="yes">scene_app.h</includes>
+    <includes refid="_abilities_component_8h" local="yes">ActorComponents/AbilitiesComponent.h</includes>
+    <includes local="yes">maths/math_utils.h</includes>
+    <includes refid="_damage_on_collision_actor_8h" local="yes">Actors/MeshActors/DamageOnCollisionActor.h</includes>
+    <incdepgraph>
+      <node id="3">
+        <label>Abilities/Ability.h</label>
+        <link refid="_ability_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/Abilities/PlayerAbilities/IceBolt.cpp</label>
+        <link refid="_ice_bolt_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>IceBolt.h</label>
+        <link refid="_ice_bolt_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="29">
+        <label>ActorComponents/AbilitiesComponent.h</label>
+        <link refid="_abilities_component_8h"/>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="30">
+        <label>ActorComponent.h</label>
+        <link refid="_actor_component_8h"/>
+      </node>
+      <node id="33">
+        <label>Actors/MeshActor.h</label>
+        <link refid="_mesh_actor_8h"/>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+        <childnode refid="38" relation="include">
+        </childnode>
+      </node>
+      <node id="32">
+        <label>Actors/MeshActors/DamageOnCollisionActor.h</label>
+        <link refid="_damage_on_collision_actor_8h"/>
+        <childnode refid="33" relation="include">
+        </childnode>
+      </node>
+      <node id="31">
+        <label>Attributes/AttributeComponent.h</label>
+        <link refid="_attribute_component_8h"/>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>Attributes/AttributeTypes.h</label>
+        <link refid="_attribute_types_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>GameFramework/Utils.h</label>
+        <link refid="_utils_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+      </node>
+      <node id="34">
+        <label>GameFramework/WorldObject.h</label>
+        <link refid="_world_object_8h"/>
+        <childnode refid="35" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="38">
+        <label>Interfaces/Damagable.h</label>
+        <link refid="_damagable_8h"/>
+      </node>
+      <node id="21">
+        <label>obj_mesh_loader.h</label>
+        <link refid="obj__mesh__loader_8h"/>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>primitive_builder.h</label>
+        <link refid="primitive__builder_8h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>scene_app.h</label>
+        <link refid="scene__app_8h"/>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+      </node>
+      <node id="19">
+        <label>box2d/box2d.h</label>
+      </node>
+      <node id="5">
+        <label>cmath</label>
+      </node>
+      <node id="17">
+        <label>cstddef</label>
+      </node>
+      <node id="26">
+        <label>future</label>
+      </node>
+      <node id="22">
+        <label>gef.h</label>
+      </node>
+      <node id="25">
+        <label>graphics/font.h</label>
+      </node>
+      <node id="16">
+        <label>graphics/material.h</label>
+      </node>
+      <node id="37">
+        <label>graphics/mesh.h</label>
+      </node>
+      <node id="11">
+        <label>graphics/renderer_3d.h</label>
+      </node>
+      <node id="18">
+        <label>graphics/scene.h</label>
+      </node>
+      <node id="23">
+        <label>map</label>
+      </node>
+      <node id="35">
+        <label>maths/Matrix44.h</label>
+      </node>
+      <node id="8">
+        <label>maths/Vector2.h</label>
+      </node>
+      <node id="28">
+        <label>maths/math_utils.h</label>
+      </node>
+      <node id="10">
+        <label>maths/matrix44.h</label>
+      </node>
+      <node id="36">
+        <label>maths/quaternion.h</label>
+      </node>
+      <node id="14">
+        <label>maths/vector2.h</label>
+      </node>
+      <node id="9">
+        <label>maths/vector4.h</label>
+      </node>
+      <node id="27">
+        <label>random</label>
+      </node>
+      <node id="4">
+        <label>string</label>
+      </node>
+      <node id="13">
+        <label>system/application.h</label>
+      </node>
+      <node id="20">
+        <label>system/platform.h</label>
+      </node>
+      <node id="24">
+        <label>vector</label>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_ice_bolt_8h" kindref="compound">IceBolt.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="scene__app_8h" kindref="compound">scene_app.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_abilities_component_8h" kindref="compound">ActorComponents/AbilitiesComponent.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;maths/math_utils.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_damage_on_collision_actor_8h" kindref="compound">Actors/MeshActors/DamageOnCollisionActor.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><ref refid="class_ice_bolt_1afda105a085a8c933adfb02baee41224b" kindref="member">IceBolt::IceBolt</ref>()</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/>:<sp/>Super()</highlight></codeline>
+<codeline lineno="9"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="10"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_ice_bolt_1aaf128a2d87802fa2e09fb8e7c150646b" kindref="member">IceBolt::PostInit</ref>()</highlight></codeline>
+<codeline lineno="13"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_ability_1a6737d4900eb79147ca81aaa20a85218a" kindref="member">SetAbilityName</ref>(</highlight><highlight class="stringliteral">&quot;IceBolt&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_ability_1a36391efa24d0da869f43e4ba592241c8" kindref="member">SetAbilityCostType</ref>(<ref refid="namespace_hellwatch_attribute_1ad0a500e65129d06e4589f9bca54c4a7dad3c5decb2b14966e4ae3e8e07fc975a4" kindref="member">HellwatchAttribute::Mana</ref>);</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_ability_1a83e04cf64b10504ee3bc1cd10ad7219c" kindref="member">SetAbilityCostAmount</ref>(10.f);</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_ability_1aa7f8c3e16910914b751aa1e1e5731f8f" kindref="member">SetAbilityCooldown</ref>(0.75f);</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_ability_1a060e6f07d0c7510f7779418d69489fea" kindref="member">SetCooldownStartPolicy</ref>(<ref refid="namespace_cooldown_start_policy_1a99c3a8f4a331db7e6db8dfda1785b101abdb334784b8226969ec44140a0951d92" kindref="member">CooldownStartPolicy::OnAbilityStart</ref>);</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_ability_1a51b48c192967cf32ea352f5e735136d6" kindref="member">SetDamageAmount</ref>(20.f);</highlight></codeline>
+<codeline lineno="20"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_ice_bolt_1a5dc506246bfe473255626de565ca8af4" kindref="member">IceBolt::Begin</ref>()</highlight></codeline>
+<codeline lineno="23"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/>Super::Begin();</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/>gef::Vector4<sp/>mousePos<sp/>=<sp/>ProjectScreenToWorldSpace(SceneApp::instance-&gt;GetLastTouchPosition());</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/>gef::Vector4<sp/>translation<sp/>=<sp/><ref refid="class_ability_1a50b5f7d8d3197869b3bc32d3c9bd4fd2" kindref="member">GetOwner</ref>()-&gt;<ref refid="class_actor_component_1a3705d464da5f840eca1d14bcce07372d" kindref="member">GetOwner</ref>()-&gt;<ref refid="class_world_object_1a9967baa65719f1418641598a244306a5" kindref="member">GetTranslation</ref>();</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>gef::Vector4<sp/>target<sp/>=<sp/>mousePos<sp/>-<sp/>translation;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/>target.Normalise();</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/>translation.set_y(1.f);</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/>gef::Mesh*<sp/>mesh<sp/>=<sp/>SceneApp::instance-&gt;RequestMeshByName(</highlight><highlight class="stringliteral">&quot;IceBolt&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_damage_on_collision_actor" kindref="compound">DamageOnCollisionActor</ref>*<sp/>actor<sp/>=<sp/>SceneApp::instance-&gt;SpawnMeshActor&lt;<ref refid="class_damage_on_collision_actor" kindref="compound">DamageOnCollisionActor</ref>&gt;(mesh,<sp/>translation);</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/>actor-&gt;<ref refid="class_damage_on_collision_actor_1af7de29e57bbf7b66d4e618fb3c612257" kindref="member">SetDamageAmount</ref>(<ref refid="class_ability_1a57f2e9a30ca6d2588fd721af77353d52" kindref="member">GetDamageAmount</ref>());</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/>actor-&gt;<ref refid="class_world_object_1ae00d341e9ac8909374dd556aaecbdb46" kindref="member">SetScale</ref>(gef::Vector4(0.2f,<sp/>0.2f,<sp/>0.2f));</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/>actor-&gt;<ref refid="class_damage_on_collision_actor_1aeb7e7f169bc0e4b22628788716e401ae" kindref="member">SetSpinning</ref>(</highlight><highlight class="keyword">true</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/>gef::Material<sp/>mat;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/>mat.set_texture(SceneApp::instance-&gt;RequestTextureByName(</highlight><highlight class="stringliteral">&quot;IceBolt&quot;</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/>actor-&gt;<ref refid="class_mesh_actor_1a0217e1969a68278f2548e1553e2ab92b" kindref="member">SetMaterial</ref>(mat);</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/>b2BodyDef<sp/>bodyDef;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/>bodyDef.type<sp/>=<sp/>b2_dynamicBody;</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/>bodyDef.position<sp/>=<sp/>b2Vec2(translation.x(),<sp/>translation.z());</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/>bodyDef.enabled<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/>b2PolygonShape<sp/>shape;</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/>shape.SetAsBox(0.4f,<sp/>0.4f);</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/>b2FixtureDef<sp/>fixtureDef;</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/>fixtureDef.shape<sp/>=<sp/>&amp;shape;</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/>fixtureDef.density<sp/>=<sp/>1.f;</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/>fixtureDef.friction<sp/>=<sp/>0.75f;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/>fixtureDef.isSensor<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/>b2Body*<sp/>body<sp/>=<sp/>SceneApp::instance-&gt;CreateCollisionBody(bodyDef,<sp/>fixtureDef,<sp/>actor);</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/>actor-&gt;<ref refid="class_world_object_1a8817deac42a357d2ed476791c7b76511" kindref="member">SetCollisionBody</ref>(body);</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/>b2Vec2<sp/>forceDir<sp/>=<sp/>b2Vec2(target.x(),<sp/>target.z());</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/>forceDir<sp/>*=<sp/>1500.f;</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/>actor-&gt;<ref refid="class_world_object_1aa3b5f5e5e1ed26c94265854e2858bdee" kindref="member">GetCollisionBody</ref>()-&gt;ApplyForceToCenter(forceDir,<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/>SceneApp::instance-&gt;PlaySample(</highlight><highlight class="stringliteral">&quot;Ice1&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_ability_1ab567fcf9b39984aa3bf45343ffcbc086" kindref="member">GetOwnerAttributes</ref>()-&gt;<ref refid="class_attribute_component_1a2a29edbf9c15e3296eb8ac4f5b59e8c9" kindref="member">ApplyAttributeChange</ref>(<ref refid="class_ability_1aa0aa42d055ea84389c3bd7bb7b61fd00" kindref="member">abilityCostType</ref>,<sp/>-<ref refid="class_ability_1a3d60b8e01776b0f6f42aaa3fa8821aa7" kindref="member">abilityCostAmount</ref>);</highlight></codeline>
+<codeline lineno="66"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_ice_bolt_1a2b7a3bb2d1627b36331a5c2fee6334a7" kindref="member">IceBolt::End</ref>()</highlight></codeline>
+<codeline lineno="69"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="70"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/Abilities/PlayerAbilities/IceBolt.cpp"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_dir_dd83752153a5f8a26b8780fd171a1a5d" xml:lang="en-US">
+<title>D:/Uni/CMP208/Hellwatch/build/vs2017/Abilities Directory Reference</title>
+<indexterm><primary>D:/Uni/CMP208/Hellwatch/build/vs2017/Abilities Directory Reference</primary></indexterm>
+Directory dependency graph for Abilities:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="dir_dd83752153a5f8a26b8780fd171a1a5d_dep.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Directories    </title>
+        <itemizedlist>
+            <listitem><para>directory <link linkend="_dir_e51422e516d0a4e62b73cc6733cd5d2a">PlayerAbilities</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Files    </title>
+        <itemizedlist>
+            <listitem><para>file <link linkend="__ability_8cpp">Ability.cpp</link></para>
+</listitem>
+            <listitem><para>file <link linkend="__ability_8h">Ability.h</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

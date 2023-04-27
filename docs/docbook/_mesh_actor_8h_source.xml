@@ -1,0 +1,111 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__mesh_actor_8h_source" xml:lang="en-US">
+<title>MeshActor.h</title>
+<indexterm><primary>D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActor.h</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered">1 <emphasis role="preprocessor">#pragma&#32;once</emphasis>
+2 
+3 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="__world_object_8h">GameFramework/WorldObject.h</link>&quot;</emphasis>
+4 
+5 <emphasis role="preprocessor">#include&#32;&quot;graphics/mesh.h&quot;</emphasis>
+6 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="__damagable_8h">Interfaces/Damagable.h</link>&quot;</emphasis>
+7 
+8 <emphasis role="keyword">class&#32;</emphasis><link linkend="_class_actor_component">ActorComponent</link>;
+9 
+13 <emphasis role="keyword">class&#32;</emphasis><link linkend="_class_mesh_actor">MeshActor</link>&#32;:&#32;<emphasis role="keyword">public</emphasis>&#32;<link linkend="_class_world_object">WorldObject</link>,&#32;<emphasis role="keyword">public</emphasis>&#32;<link linkend="_class_i_damagable">IDamagable</link>
+14 {
+15 &#32;&#32;&#32;&#32;<link linkend="__utils_8h_1afc0ee7bd35c161a2d80b8e8f04fd9213">GENERATED_BODY</link>(<link linkend="_class_world_object">WorldObject</link>,&#32;<link linkend="_class_mesh_actor">MeshActor</link>)
+16 
+17 <emphasis role="keyword">public</emphasis>:
+18 
+22 &#32;&#32;&#32;&#32;<link linkend="_class_mesh_actor_1af40424bf59441cfb3362f8ef3e1fbb68">MeshActor</link>();
+23 
+28 &#32;&#32;&#32;&#32;<link linkend="_class_mesh_actor_1af40424bf59441cfb3362f8ef3e1fbb68">MeshActor</link>(gef::Mesh*&#32;inMesh);
+29 
+30 &#32;&#32;&#32;&#32;<emphasis role="keyword">virtual</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_mesh_actor_1a9c8f4860ae03966a27c3ee22c2a2b5a1">Render</link>()&#32;<emphasis role="keyword">override</emphasis>;
+31 
+32 &#32;&#32;&#32;&#32;<emphasis role="keyword">virtual</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_mesh_actor_1a3743470557ddbbc88bc73e4dd283d6bf">Update</link>(<emphasis role="keywordtype">float</emphasis>&#32;deltaTime)&#32;<emphasis role="keyword">override</emphasis>;
+33 
+34 &#32;&#32;&#32;&#32;<emphasis role="keyword">virtual</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_mesh_actor_1a31a231014625686e8d40e561a7028931">TakeDamage</link>(<emphasis role="keywordtype">float</emphasis>&#32;damageAmount)&#32;{};
+35 
+36 <emphasis role="keyword">protected</emphasis>:
+37 
+38 &#32;&#32;&#32;&#32;std::string&#32;<link linkend="_class_mesh_actor_1a8eb71848a77c1c7ffb0f88d526a633e3">meshName</link>;
+39 &#32;&#32;&#32;&#32;gef::Material&#32;<link linkend="_class_mesh_actor_1a8585ace5ca84b7903f216c77661a5787">material</link>;
+40 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_class_mesh_actor_1a858b488e44d63ff8eda02e173fa4da7a">bOverrideMaterial</link>;
+41 
+42 <emphasis role="keyword">private</emphasis>:
+43 
+44 &#32;&#32;&#32;&#32;std::vector&lt;ActorComponent*&gt;&#32;components;
+45 &#32;&#32;&#32;&#32;gef::Mesh*&#32;mesh;
+46 
+47 <emphasis role="keyword">public</emphasis>:
+48 
+49 <emphasis role="comment">&#32;&#32;&#32;&#32;/************************************************************************/</emphasis>
+50 &#32;&#32;&#32;&#32;<emphasis role="comment">/*&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;SETTERS&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;*/</emphasis>
+51 <emphasis role="comment">&#32;&#32;&#32;&#32;/************************************************************************/</emphasis>
+52 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_mesh_actor_1a25950ae28c6abf2e9e3dc64cfa19c0c7">SetMesh</link>(gef::Mesh*&#32;inMesh)&#32;{&#32;mesh&#32;=&#32;inMesh;&#32;}
+53 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_mesh_actor_1a86f27025c3484267804fdaa5e6082fd4">SetMeshName</link>(std::string&#32;newName);
+54 
+55 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_mesh_actor_1a0217e1969a68278f2548e1553e2ab92b">SetMaterial</link>(gef::Material&#32;newMaterial)&#32;
+56 &#32;&#32;&#32;&#32;{
+57 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_mesh_actor_1a8585ace5ca84b7903f216c77661a5787">material</link>&#32;=&#32;newMaterial;&#32;
+58 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_mesh_actor_1a858b488e44d63ff8eda02e173fa4da7a">bOverrideMaterial</link>&#32;=&#32;<emphasis role="keyword">true</emphasis>;
+59 &#32;&#32;&#32;&#32;}
+60 &#32;&#32;&#32;&#32;<emphasis role="keyword">virtual</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_mesh_actor_1a295a747ea81d8b09e084c488ab183fbb">SetRotation</link>(<emphasis role="keyword">const</emphasis>&#32;gef::Vector4&amp;&#32;inRotation)&#32;<emphasis role="keyword">override</emphasis>;
+61 
+62 
+63 <emphasis role="comment">&#32;&#32;&#32;&#32;/************************************************************************/</emphasis>
+64 &#32;&#32;&#32;&#32;<emphasis role="comment">/*&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;GETTERS&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;*/</emphasis>
+65 <emphasis role="comment">&#32;&#32;&#32;&#32;/************************************************************************/</emphasis>
+66 &#32;&#32;&#32;&#32;__forceinline&#32;<emphasis role="keyword">const</emphasis>&#32;gef::Mesh*&#32;<link linkend="_class_mesh_actor_1a906146d34e290e3bd7132a4dcbfad8a1">GetMesh</link>()<emphasis role="keyword">&#32;const&#32;</emphasis>{&#32;<emphasis role="keywordflow">return</emphasis>&#32;mesh;&#32;}
+67 &#32;&#32;&#32;&#32;__forceinline&#32;<emphasis role="keyword">const</emphasis>&#32;std::vector&lt;ActorComponent*&gt;&amp;&#32;<link linkend="_class_mesh_actor_1a7eef4e0218a4363460a0375585037012">GetComponents</link>()&#32;{&#32;<emphasis role="keywordflow">return</emphasis>&#32;components;&#32;}
+68 &#32;&#32;&#32;&#32;__forceinline&#32;<emphasis role="keyword">const</emphasis>&#32;std::string&amp;&#32;<link linkend="_class_mesh_actor_1a03ae156a0a281ff9eb128c7c7b44d983">GetMeshName</link>()&#32;{&#32;<emphasis role="keywordflow">return</emphasis>&#32;<link linkend="_class_mesh_actor_1a8eb71848a77c1c7ffb0f88d526a633e3">meshName</link>;&#32;}
+69 
+70 <emphasis role="comment">&#32;&#32;&#32;&#32;/************************************************************************/</emphasis>
+71 &#32;&#32;&#32;&#32;<emphasis role="comment">/*&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;TEMPLATES&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;*/</emphasis>
+72 <emphasis role="comment">&#32;&#32;&#32;&#32;/************************************************************************/</emphasis>
+73 
+74 <emphasis role="keyword">protected</emphasis>:
+75 
+79 &#32;&#32;&#32;&#32;<emphasis role="keyword">template</emphasis>&lt;<emphasis role="keyword">typename</emphasis>&#32;ComponentType&#32;=&#32;ActorComponent&gt;
+80 &#32;&#32;&#32;&#32;ComponentType*&#32;<link linkend="_class_mesh_actor_1af9b992a02356ead76d3c36a031bf6eea">CreateComponent</link>()
+81 &#32;&#32;&#32;&#32;{
+82 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;ComponentType*&#32;component&#32;=&#32;<emphasis role="keyword">new</emphasis>&#32;ComponentType();
+83 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;component-&gt;Init(<emphasis role="keyword">this</emphasis>);
+84 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;components.push_back(component);
+85 
+86 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;component;
+87 &#32;&#32;&#32;&#32;}
+88 
+89 
+90 <emphasis role="keyword">public</emphasis>:
+91 
+95 &#32;&#32;&#32;&#32;<emphasis role="keyword">template</emphasis>&lt;<emphasis role="keyword">typename</emphasis>&#32;ComponentType&#32;=&#32;ActorComponent&gt;
+96 &#32;&#32;&#32;&#32;ComponentType*&#32;<link linkend="_class_mesh_actor_1a639c1c33b5f22210351fd94ec7d78c43">GetComponent</link>()
+97 &#32;&#32;&#32;&#32;{
+98 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keyword">auto</emphasis>&#32;component&#32;:&#32;components)
+99 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+100 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(ComponentType*&#32;foundComponent&#32;=&#32;<emphasis role="keyword">reinterpret_cast&lt;</emphasis>ComponentType<emphasis role="keyword">&gt;</emphasis>(component))
+101 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+102 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;foundComponent;
+103 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+104 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+105 &#32;&#32;&#32;&#32;}
+106 
+110 &#32;&#32;&#32;&#32;<emphasis role="keyword">template</emphasis>&lt;<emphasis role="keyword">typename</emphasis>&#32;ComponentType&#32;=&#32;ActorComponent&gt;
+111 &#32;&#32;&#32;&#32;std::vector&lt;ComponentType*&gt;&amp;&#32;<link linkend="_class_mesh_actor_1aa824a26a7c24d187f15aa3e9beba11f6">GetComponents</link>()
+112 &#32;&#32;&#32;&#32;{
+113 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::vector&lt;ComponentType*&gt;&#32;componentsFound;
+114 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keyword">auto</emphasis>&#32;component&#32;:&#32;components)
+115 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+116 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(ComponentType*&#32;foundComponent&#32;=&#32;<emphasis role="keyword">reinterpret_cast&lt;</emphasis>ComponentType<emphasis role="keyword">&gt;</emphasis>(component))
+117 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+118 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;componentsFound.push_back(foundComponent);
+119 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+120 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+121 
+122 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;componentsFound;
+123 &#32;&#32;&#32;&#32;}
+124 };
+125 
+</programlisting></section>

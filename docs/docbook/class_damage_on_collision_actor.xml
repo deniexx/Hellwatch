@@ -1,0 +1,189 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_damage_on_collision_actor" xml:lang="en-US">
+<title>DamageOnCollisionActor Class Reference</title>
+<indexterm><primary>DamageOnCollisionActor</primary></indexterm>
+<para>
+
+<para>Actor to spawn to perform damage on collision  </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;DamageOnCollisionActor.h&gt;</computeroutput>
+</para>
+Inheritance diagram for DamageOnCollisionActor:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_damage_on_collision_actor__inherit__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Collaboration diagram for DamageOnCollisionActor:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_damage_on_collision_actor__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>virtual void <link linkend="_class_damage_on_collision_actor_1ad097fd69169453c518a8a7b151311edc">OnCollision</link> (b2Body *otherBody) override</para>
+
+<para>Deal damage on collision  </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_damage_on_collision_actor_1af7de29e57bbf7b66d4e618fb3c612257">SetDamageAmount</link> (float newAmount)</para>
+
+<para>Sets the damage amount  </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_damage_on_collision_actor_1a715ad5963092224ae96d9fa30dc1b12e">SetApplyDamageOn</link> (<link linkend="_namespace_apply_damage_on_1aab4652342cac35cdff458c5aa2bad289">ApplyDamageOn::Type</link> newState)</para>
+
+<para>Sets to what we should apply damage  </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_damage_on_collision_actor_1aeb7e7f169bc0e4b22628788716e401ae">SetSpinning</link> (bool bNewState)</para>
+
+<para>Specifies whether the actor should spin while moving @NOTE: This does not change the movement direction  </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_damage_on_collision_actor_1aaeb5e7abbad19c5f60a521f0016d3acf">SetIsPiercing</link> (bool bNewState)</para>
+
+<para>Sets the projectile to be piercing, passing through all enemies/players until it hits environment  </para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_class_damage_on_collision_actor_1a468c69c421db3d272bf18c46cbb15c2a">Update</link> (float deltaTime) override</para>
+
+<para>Update function, called every frame  </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Protected Attributes    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_namespace_apply_damage_on_1aab4652342cac35cdff458c5aa2bad289">ApplyDamageOn::Type</link> <link linkend="_class_damage_on_collision_actor_1a07b7703b8e3db5ad89fa3a7bb30750c2">applyDamageOn</link> = <link linkend="_namespace_apply_damage_on_1aab4652342cac35cdff458c5aa2bad289a17c0a2d2e83ad970a7bb7395c9819d1f">ApplyDamageOn::EnemiesOnly</link></para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_damage_on_collision_actor_1a3ba78bead6c77dd82c141968a971bd4f">bSpinning</link> = false</para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_damage_on_collision_actor_1aee4412e69f1df05a5a77223176b0c6fb">bIsPiercing</link> = false</para>
+</listitem>
+            <listitem><para>float <link linkend="_class_damage_on_collision_actor_1a8684d8897c9e9725d32a771f08e0b4a3">damageAmount</link> = 0.f</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Additional Inherited Members    </title>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Actor to spawn to perform damage on collision  </para>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_damage_on_collision_actor_1ad097fd69169453c518a8a7b151311edc"/><section>
+    <title>OnCollision()</title>
+<indexterm><primary>OnCollision</primary><secondary>DamageOnCollisionActor</secondary></indexterm>
+<indexterm><primary>DamageOnCollisionActor</primary><secondary>OnCollision</secondary></indexterm>
+<para><computeroutput>void DamageOnCollisionActor::OnCollision (b2Body * otherBody)<computeroutput>[override]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Deal damage on collision  </para>
+</para>
+<para>
+Reimplemented from <link linkend="_class_world_object_1a7c563531a541e9f5ff4193443cedd515">WorldObject</link>.</para>
+</section>
+<anchor xml:id="_class_damage_on_collision_actor_1a715ad5963092224ae96d9fa30dc1b12e"/><section>
+    <title>SetApplyDamageOn()</title>
+<indexterm><primary>SetApplyDamageOn</primary><secondary>DamageOnCollisionActor</secondary></indexterm>
+<indexterm><primary>DamageOnCollisionActor</primary><secondary>SetApplyDamageOn</secondary></indexterm>
+<para><computeroutput>void DamageOnCollisionActor::SetApplyDamageOn (<link linkend="_namespace_apply_damage_on_1aab4652342cac35cdff458c5aa2bad289">ApplyDamageOn::Type</link> newState)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Sets to what we should apply damage  </para>
+</para>
+</section>
+<anchor xml:id="_class_damage_on_collision_actor_1af7de29e57bbf7b66d4e618fb3c612257"/><section>
+    <title>SetDamageAmount()</title>
+<indexterm><primary>SetDamageAmount</primary><secondary>DamageOnCollisionActor</secondary></indexterm>
+<indexterm><primary>DamageOnCollisionActor</primary><secondary>SetDamageAmount</secondary></indexterm>
+<para><computeroutput>void DamageOnCollisionActor::SetDamageAmount (float newAmount)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Sets the damage amount  </para>
+</para>
+</section>
+<anchor xml:id="_class_damage_on_collision_actor_1aaeb5e7abbad19c5f60a521f0016d3acf"/><section>
+    <title>SetIsPiercing()</title>
+<indexterm><primary>SetIsPiercing</primary><secondary>DamageOnCollisionActor</secondary></indexterm>
+<indexterm><primary>DamageOnCollisionActor</primary><secondary>SetIsPiercing</secondary></indexterm>
+<para><computeroutput>void DamageOnCollisionActor::SetIsPiercing (bool bNewState)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Sets the projectile to be piercing, passing through all enemies/players until it hits environment  </para>
+</para>
+</section>
+<anchor xml:id="_class_damage_on_collision_actor_1aeb7e7f169bc0e4b22628788716e401ae"/><section>
+    <title>SetSpinning()</title>
+<indexterm><primary>SetSpinning</primary><secondary>DamageOnCollisionActor</secondary></indexterm>
+<indexterm><primary>DamageOnCollisionActor</primary><secondary>SetSpinning</secondary></indexterm>
+<para><computeroutput>void DamageOnCollisionActor::SetSpinning (bool bNewState)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Specifies whether the actor should spin while moving @NOTE: This does not change the movement direction  </para>
+</para>
+</section>
+<anchor xml:id="_class_damage_on_collision_actor_1a468c69c421db3d272bf18c46cbb15c2a"/><section>
+    <title>Update()</title>
+<indexterm><primary>Update</primary><secondary>DamageOnCollisionActor</secondary></indexterm>
+<indexterm><primary>DamageOnCollisionActor</primary><secondary>Update</secondary></indexterm>
+<para><computeroutput>void DamageOnCollisionActor::Update (float deltaTime)<computeroutput>[override]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Update function, called every frame  </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>deltaTime</entry><entry>
+<para>Float variable for the frame time</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Reimplemented from <link linkend="_class_mesh_actor_1a3743470557ddbbc88bc73e4dd283d6bf">MeshActor</link>.</para>
+</section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_class_damage_on_collision_actor_1a07b7703b8e3db5ad89fa3a7bb30750c2"/><section>
+    <title>applyDamageOn</title>
+<indexterm><primary>applyDamageOn</primary><secondary>DamageOnCollisionActor</secondary></indexterm>
+<indexterm><primary>DamageOnCollisionActor</primary><secondary>applyDamageOn</secondary></indexterm>
+<para><computeroutput><link linkend="_namespace_apply_damage_on_1aab4652342cac35cdff458c5aa2bad289">ApplyDamageOn::Type</link> DamageOnCollisionActor::applyDamageOn = <link linkend="_namespace_apply_damage_on_1aab4652342cac35cdff458c5aa2bad289a17c0a2d2e83ad970a7bb7395c9819d1f">ApplyDamageOn::EnemiesOnly</link><computeroutput>[protected]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_damage_on_collision_actor_1aee4412e69f1df05a5a77223176b0c6fb"/><section>
+    <title>bIsPiercing</title>
+<indexterm><primary>bIsPiercing</primary><secondary>DamageOnCollisionActor</secondary></indexterm>
+<indexterm><primary>DamageOnCollisionActor</primary><secondary>bIsPiercing</secondary></indexterm>
+<para><computeroutput>bool DamageOnCollisionActor::bIsPiercing = false<computeroutput>[protected]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_damage_on_collision_actor_1a3ba78bead6c77dd82c141968a971bd4f"/><section>
+    <title>bSpinning</title>
+<indexterm><primary>bSpinning</primary><secondary>DamageOnCollisionActor</secondary></indexterm>
+<indexterm><primary>DamageOnCollisionActor</primary><secondary>bSpinning</secondary></indexterm>
+<para><computeroutput>bool DamageOnCollisionActor::bSpinning = false<computeroutput>[protected]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_damage_on_collision_actor_1a8684d8897c9e9725d32a771f08e0b4a3"/><section>
+    <title>damageAmount</title>
+<indexterm><primary>damageAmount</primary><secondary>DamageOnCollisionActor</secondary></indexterm>
+<indexterm><primary>DamageOnCollisionActor</primary><secondary>damageAmount</secondary></indexterm>
+<para><computeroutput>float DamageOnCollisionActor::damageAmount = 0.f<computeroutput>[protected]</computeroutput></computeroutput></para></section>
+<para>
+The documentation for this class was generated from the following files:</para>
+D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/<link linkend="__damage_on_collision_actor_8h">DamageOnCollisionActor.h</link>D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/<link linkend="__damage_on_collision_actor_8cpp">DamageOnCollisionActor.cpp</link></section>
+</section>

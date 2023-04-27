@@ -1,0 +1,277 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="_character_movement_component_8h" kind="file" language="C++">
+    <compoundname>CharacterMovementComponent.h</compoundname>
+    <includes refid="_actor_component_8h" local="yes">ActorComponents/ActorComponent.h</includes>
+    <includes refid="_utils_8h" local="yes">GameFramework/Utils.h</includes>
+    <includedby refid="_character_movement_component_8cpp" local="yes">D:/Uni/CMP208/Hellwatch/build/vs2017/ActorComponents/CharacterMovementComponent.cpp</includedby>
+    <includedby refid="_enemy_8h" local="yes">D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/Enemy.h</includedby>
+    <includedby refid="_player_character_8cpp" local="yes">D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/PlayerCharacter.cpp</includedby>
+    <incdepgraph>
+      <node id="2">
+        <label>ActorComponents/ActorComponent.h</label>
+        <link refid="_actor_component_8h"/>
+      </node>
+      <node id="1">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/ActorComponents/CharacterMovementComponent.h</label>
+        <link refid="_character_movement_component_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>GameFramework/Utils.h</label>
+        <link refid="_utils_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>obj_mesh_loader.h</label>
+        <link refid="obj__mesh__loader_8h"/>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>primitive_builder.h</label>
+        <link refid="primitive__builder_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>scene_app.h</label>
+        <link refid="scene__app_8h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>box2d/box2d.h</label>
+      </node>
+      <node id="13">
+        <label>cstddef</label>
+      </node>
+      <node id="23">
+        <label>future</label>
+      </node>
+      <node id="18">
+        <label>gef.h</label>
+      </node>
+      <node id="22">
+        <label>graphics/font.h</label>
+      </node>
+      <node id="12">
+        <label>graphics/material.h</label>
+      </node>
+      <node id="7">
+        <label>graphics/renderer_3d.h</label>
+      </node>
+      <node id="14">
+        <label>graphics/scene.h</label>
+      </node>
+      <node id="19">
+        <label>map</label>
+      </node>
+      <node id="4">
+        <label>maths/Vector2.h</label>
+      </node>
+      <node id="25">
+        <label>maths/math_utils.h</label>
+      </node>
+      <node id="6">
+        <label>maths/matrix44.h</label>
+      </node>
+      <node id="10">
+        <label>maths/vector2.h</label>
+      </node>
+      <node id="5">
+        <label>maths/vector4.h</label>
+      </node>
+      <node id="24">
+        <label>random</label>
+      </node>
+      <node id="20">
+        <label>string</label>
+      </node>
+      <node id="9">
+        <label>system/application.h</label>
+      </node>
+      <node id="16">
+        <label>system/platform.h</label>
+      </node>
+      <node id="21">
+        <label>vector</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/ActorComponents/CharacterMovementComponent.cpp</label>
+        <link refid="_character_movement_component_8cpp"/>
+      </node>
+      <node id="1">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/ActorComponents/CharacterMovementComponent.h</label>
+        <link refid="_character_movement_component_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/Boss.cpp</label>
+        <link refid="_boss_8cpp"/>
+      </node>
+      <node id="4">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/Boss.h</label>
+        <link refid="_boss_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/Enemy.cpp</label>
+        <link refid="_enemy_8cpp"/>
+      </node>
+      <node id="3">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/Enemy.h</label>
+        <link refid="_enemy_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/PlayerCharacter.cpp</label>
+        <link refid="_player_character_8cpp"/>
+      </node>
+      <node id="9">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/RangedEnemy.cpp</label>
+        <link refid="_ranged_enemy_8cpp"/>
+      </node>
+      <node id="8">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/RangedEnemy.h</label>
+        <link refid="_ranged_enemy_8h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/WaveManager.cpp</label>
+        <link refid="_wave_manager_8cpp"/>
+      </node>
+      <node id="10">
+        <label>D:/Uni/CMP208/Hellwatch/scene_app.cpp</label>
+        <link refid="scene__app_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_character_movement_component" prot="public">CharacterMovementComponent</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_actor_component_8h" kindref="compound">ActorComponents/ActorComponent.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_utils_8h" kindref="compound">GameFramework/Utils.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9" refid="class_character_movement_component" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_character_movement_component" kindref="compound">CharacterMovementComponent</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="class_actor_component" kindref="compound">ActorComponent</ref></highlight></codeline>
+<codeline lineno="10"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_utils_8h_1afc0ee7bd35c161a2d80b8e8f04fd9213" kindref="member">GENERATED_BODY</ref>(<ref refid="class_actor_component" kindref="compound">ActorComponent</ref>,<sp/><ref refid="class_character_movement_component" kindref="compound">CharacterMovementComponent</ref>)</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_character_movement_component_1a3b46719028da4715fcb1aa41000ef690" kindref="member">CharacterMovementComponent</ref>();</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_character_movement_component_1a44e667731d0323b2dfcdf80ee6e7f3ba" kindref="member">UpdateComponent</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>deltaTime)<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_character_movement_component_1a63d4bb5a09a7addb1664b0f5183ec13c" kindref="member">ApplyMovementForceInDirection</ref>(b2Vec2<sp/>force);</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_character_movement_component_1a7c20d542f943ec133dd3f1df7fee988e" kindref="member">PostInit</ref>()<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/>b2Body*<sp/>ownerCollision;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>maximumSpeed;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>acceleration;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>bFrozen;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="comment"><sp/><sp/><sp/><sp/>/************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SETTERS<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="comment"><sp/><sp/><sp/><sp/>/************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41" refid="class_character_movement_component_1a6cb4c791b22b66c29aa830e40d947d0c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_character_movement_component_1a6cb4c791b22b66c29aa830e40d947d0c" kindref="member">SetCollisionBody</ref>(b2Body*<sp/>newBody)<sp/>{<sp/>ownerCollision<sp/>=<sp/>newBody;<sp/>}</highlight></codeline>
+<codeline lineno="42" refid="class_character_movement_component_1a5c8c5c00d78dc4d38e14c502e9567695" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_character_movement_component_1a5c8c5c00d78dc4d38e14c502e9567695" kindref="member">SetFrozen</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>bNewState)<sp/>{<sp/>bFrozen<sp/>=<sp/>bNewState;<sp/>}</highlight></codeline>
+<codeline lineno="43" refid="class_character_movement_component_1ab3ab4283107113582bc6c7f670c86b3c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_character_movement_component_1ab3ab4283107113582bc6c7f670c86b3c" kindref="member">SetMaximumSpeed</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>newMaximumSpeed)<sp/>{<sp/>maximumSpeed<sp/>=<sp/>newMaximumSpeed;<sp/>}</highlight></codeline>
+<codeline lineno="44" refid="class_character_movement_component_1aa0c6001da09d289c9cdc6a2332293ab6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_character_movement_component_1aa0c6001da09d289c9cdc6a2332293ab6" kindref="member">SetAcceleration</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>newAcceleration)<sp/>{<sp/>acceleration<sp/>=<sp/>newAcceleration;<sp/>}</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="comment"><sp/><sp/><sp/><sp/>/************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>GETTERS<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="comment"><sp/><sp/><sp/><sp/>/************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49" refid="class_character_movement_component_1a95de1dc66286d10e4099b26ee46bdd7b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>__forceinline<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_character_movement_component_1a95de1dc66286d10e4099b26ee46bdd7b" kindref="member">IsFrozen</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>bFrozen;<sp/>}</highlight></codeline>
+<codeline lineno="50" refid="class_character_movement_component_1a0a0b9e6ccb23a433d86991de1d9a2ad8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>__forceinline<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="class_character_movement_component_1a0a0b9e6ccb23a433d86991de1d9a2ad8" kindref="member">GetSpeed</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ownerCollision<sp/>?<sp/>ownerCollision-&gt;GetLinearVelocity().Length()<sp/>:<sp/>0.f;<sp/>}</highlight></codeline>
+<codeline lineno="51" refid="class_character_movement_component_1a1c326e239d25123a6e6ab1893b7c3006" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>__forceinline<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="class_character_movement_component_1a1c326e239d25123a6e6ab1893b7c3006" kindref="member">GetMaximumSpeed</ref>()<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>maximumSpeed;<sp/>}</highlight></codeline>
+<codeline lineno="52" refid="class_character_movement_component_1a07ae2e8b49579f6737117051c3391ed1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>__forceinline<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="class_character_movement_component_1a07ae2e8b49579f6737117051c3391ed1" kindref="member">GetAcceleration</ref>()<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>acceleration;<sp/>}</highlight></codeline>
+<codeline lineno="53"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/ActorComponents/CharacterMovementComponent.h"/>
+  </compounddef>
+</doxygen>

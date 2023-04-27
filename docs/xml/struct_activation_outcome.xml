@@ -1,0 +1,79 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="struct_activation_outcome" kind="struct" language="C++" prot="public">
+    <compoundname>ActivationOutcome</compoundname>
+    <includes refid="_ability_8h" local="no">Ability.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_activation_outcome_1a3867a87cde6f19f7d86e822b056ab7ad" prot="public" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string ActivationOutcome::abilityName</definition>
+        <argsstring></argsstring>
+        <name>abilityName</name>
+        <qualifiedname>ActivationOutcome::abilityName</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/Abilities/Ability.h" line="43" column="13" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/Abilities/Ability.h" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_activation_outcome_1a06932003ad89461fc36b0936072bfd97" prot="public" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string ActivationOutcome::failReason</definition>
+        <argsstring></argsstring>
+        <name>failReason</name>
+        <qualifiedname>ActivationOutcome::failReason</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/Abilities/Ability.h" line="44" column="13" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/Abilities/Ability.h" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_activation_outcome_1a6bd503ece6732fc90dacbb08f0bffb40" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool ActivationOutcome::bWasSuccessful</definition>
+        <argsstring></argsstring>
+        <name>bWasSuccessful</name>
+        <qualifiedname>ActivationOutcome::bWasSuccessful</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/Abilities/Ability.h" line="45" column="6" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/Abilities/Ability.h" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_activation_outcome_1a85ab4e1d039f0aa58b36d9cc42a7d630" prot="public" static="no" mutable="no">
+        <type><ref refid="namespace_ability_activation_key_1ab159d3c3f26196a9ff493b67ecf7e68c" kindref="member">AbilityActivationKey::Type</ref></type>
+        <definition>AbilityActivationKey::Type ActivationOutcome::keyOfAbility</definition>
+        <argsstring></argsstring>
+        <name>keyOfAbility</name>
+        <qualifiedname>ActivationOutcome::keyOfAbility</qualifiedname>
+        <initializer>= <ref refid="namespace_ability_activation_key_1ab159d3c3f26196a9ff493b67ecf7e68ca7681c632dadbc0ca58c3a03c7a9d53c2" kindref="member">AbilityActivationKey::None</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/Abilities/Ability.h" line="47" column="28" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/Abilities/Ability.h" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Outcome of attempting to activate this ability  </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/Abilities/Ability.h" line="41" column="1" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/Abilities/Ability.h" bodystart="42" bodyend="48"/>
+    <listofallmembers>
+      <member refid="struct_activation_outcome_1a3867a87cde6f19f7d86e822b056ab7ad" prot="public" virt="non-virtual"><scope>ActivationOutcome</scope><name>abilityName</name></member>
+      <member refid="struct_activation_outcome_1a6bd503ece6732fc90dacbb08f0bffb40" prot="public" virt="non-virtual"><scope>ActivationOutcome</scope><name>bWasSuccessful</name></member>
+      <member refid="struct_activation_outcome_1a06932003ad89461fc36b0936072bfd97" prot="public" virt="non-virtual"><scope>ActivationOutcome</scope><name>failReason</name></member>
+      <member refid="struct_activation_outcome_1a85ab4e1d039f0aa58b36d9cc42a7d630" prot="public" virt="non-virtual"><scope>ActivationOutcome</scope><name>keyOfAbility</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

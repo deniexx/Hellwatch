@@ -1,0 +1,33 @@
+\hypertarget{_boss_8h_source}{}\doxysection{Boss.\+h}
+\label{_boss_8h_source}\index{D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/Boss.h@{D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/Boss.h}}
+\mbox{\hyperlink{_boss_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_enemy_8h}{Enemy.h}}"{}}}
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#include <maths/vector4.h>}}
+\DoxyCodeLine{4 }
+\DoxyCodeLine{5 \textcolor{keyword}{class }\mbox{\hyperlink{class_boss}{Boss}} : \textcolor{keyword}{public} \mbox{\hyperlink{class_enemy}{Enemy}}}
+\DoxyCodeLine{6 \{}
+\DoxyCodeLine{7     \mbox{\hyperlink{_utils_8h_afc0ee7bd35c161a2d80b8e8f04fd9213}{GENERATED\_BODY}}(\mbox{\hyperlink{class_mesh_actor}{MeshActor}}, \mbox{\hyperlink{class_boss}{Boss}})}
+\DoxyCodeLine{8 }
+\DoxyCodeLine{9 \textcolor{keyword}{public}:}
+\DoxyCodeLine{10     \mbox{\hyperlink{class_boss_af287739a9fe8cb9501795656d34f3018}{Boss}}();}
+\DoxyCodeLine{11     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_boss_aa0943d1fb2d9037e30a2fdc6952878cb}{Update}}(\textcolor{keywordtype}{float} deltaTime) \textcolor{keyword}{override};}
+\DoxyCodeLine{12     \textcolor{comment}{//virtual void Slam(float deltaTime);}}
+\DoxyCodeLine{13     \textcolor{comment}{//virtual void Jump(float deltaTime);}}
+\DoxyCodeLine{14 }
+\DoxyCodeLine{15 \textcolor{keyword}{protected}:}
+\DoxyCodeLine{16 }
+\DoxyCodeLine{17     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_boss_aca38363ac8587bf7012d4c6dec8600a9}{PostInit}}() \textcolor{keyword}{override};}
+\DoxyCodeLine{18 }
+\DoxyCodeLine{19     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_boss_acf6e40d0e800c3d6ea2b529c4351da9c}{isJumping}} = \textcolor{keyword}{false};}
+\DoxyCodeLine{20     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_boss_a605d9ab656bcc24ef4b8591bf740f72e}{pastMidpoint}} = \textcolor{keyword}{false};}
+\DoxyCodeLine{21 }
+\DoxyCodeLine{22     gef::Vector4 \mbox{\hyperlink{class_boss_a0945edb506e027ea61cbfd0750b4bd0b}{playerPosition}};}
+\DoxyCodeLine{23     gef::Vector4 \mbox{\hyperlink{class_boss_ab988b026b0a44d5b9695b1fae80f4bff}{bossPosition}};}
+\DoxyCodeLine{24     gef::Vector4 \mbox{\hyperlink{class_boss_a66b3a8266b0ce9a045cf6d6d41ca3fc4}{midpoint}};}
+\DoxyCodeLine{25     \textcolor{keywordtype}{float} \mbox{\hyperlink{class_boss_a5f8bd3dedd5d923284440df4dce7c6d5}{alpha}} = 0;}
+\DoxyCodeLine{26 \};}
+\DoxyCodeLine{27 }
+
+\end{DoxyCode}

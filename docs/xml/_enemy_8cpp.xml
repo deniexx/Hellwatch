@@ -1,0 +1,436 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="_enemy_8cpp" kind="file" language="C++">
+    <compoundname>Enemy.cpp</compoundname>
+    <includes refid="_enemy_8h" local="yes">Enemy.h</includes>
+    <includes refid="_particle_manager_8h" local="yes">GameFramework/ParticleManager.h</includes>
+    <incdepgraph>
+      <node id="33">
+        <label>ActorComponents/ActorComponent.h</label>
+        <link refid="_actor_component_8h"/>
+      </node>
+      <node id="35">
+        <label>ActorComponents/CharacterMovementComponent.h</label>
+        <link refid="_character_movement_component_8h"/>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>Actors/MeshActor.h</label>
+        <link refid="_mesh_actor_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+      </node>
+      <node id="44">
+        <label>DamageOnCollisionActor.h</label>
+        <link refid="_damage_on_collision_actor_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/Enemy.cpp</label>
+        <link refid="_enemy_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="45" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Enemy.h</label>
+        <link refid="_enemy_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="44" relation="include">
+        </childnode>
+      </node>
+      <node id="36">
+        <label>PlayerCharacter.h</label>
+        <link refid="_player_character_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+        <childnode refid="42" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="43" relation="include">
+        </childnode>
+      </node>
+      <node id="32">
+        <label>Attributes/AttributeComponent.h</label>
+        <link refid="_attribute_component_8h"/>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+      </node>
+      <node id="34">
+        <label>AttributeTypes.h</label>
+        <link refid="_attribute_types_8h"/>
+        <childnode refid="24" relation="include">
+        </childnode>
+      </node>
+      <node id="45">
+        <label>GameFramework/ParticleManager.h</label>
+        <link refid="_particle_manager_8h"/>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="46" relation="include">
+        </childnode>
+      </node>
+      <node id="37">
+        <label>GameFramework/PlayerController.h</label>
+        <link refid="_player_controller_8h"/>
+        <childnode refid="38" relation="include">
+        </childnode>
+        <childnode refid="39" relation="include">
+        </childnode>
+        <childnode refid="40" relation="include">
+        </childnode>
+        <childnode refid="41" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>Utils.h</label>
+        <link refid="_utils_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>GameFramework/WorldObject.h</label>
+        <link refid="_world_object_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="31">
+        <label>Interfaces/Damagable.h</label>
+        <link refid="_damagable_8h"/>
+      </node>
+      <node id="21">
+        <label>obj_mesh_loader.h</label>
+        <link refid="obj__mesh__loader_8h"/>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>primitive_builder.h</label>
+        <link refid="primitive__builder_8h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>scene_app.h</label>
+        <link refid="scene__app_8h"/>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+      </node>
+      <node id="19">
+        <label>box2d/box2d.h</label>
+      </node>
+      <node id="17">
+        <label>cstddef</label>
+      </node>
+      <node id="38">
+        <label>cstdint</label>
+      </node>
+      <node id="39">
+        <label>functional</label>
+      </node>
+      <node id="27">
+        <label>future</label>
+      </node>
+      <node id="22">
+        <label>gef.h</label>
+      </node>
+      <node id="26">
+        <label>graphics/font.h</label>
+      </node>
+      <node id="16">
+        <label>graphics/material.h</label>
+      </node>
+      <node id="30">
+        <label>graphics/mesh.h</label>
+      </node>
+      <node id="11">
+        <label>graphics/renderer_3d.h</label>
+      </node>
+      <node id="18">
+        <label>graphics/scene.h</label>
+      </node>
+      <node id="42">
+        <label>graphics/skinned_mesh_instance.h</label>
+      </node>
+      <node id="43">
+        <label>graphics/sprite.h</label>
+      </node>
+      <node id="46">
+        <label>graphics/texture.h</label>
+      </node>
+      <node id="41">
+        <label>input/keyboard.h</label>
+      </node>
+      <node id="40">
+        <label>input/touch_input_manager.h</label>
+      </node>
+      <node id="23">
+        <label>map</label>
+      </node>
+      <node id="5">
+        <label>maths/Matrix44.h</label>
+      </node>
+      <node id="8">
+        <label>maths/Vector2.h</label>
+      </node>
+      <node id="29">
+        <label>maths/math_utils.h</label>
+      </node>
+      <node id="10">
+        <label>maths/matrix44.h</label>
+      </node>
+      <node id="6">
+        <label>maths/quaternion.h</label>
+      </node>
+      <node id="14">
+        <label>maths/vector2.h</label>
+      </node>
+      <node id="9">
+        <label>maths/vector4.h</label>
+      </node>
+      <node id="28">
+        <label>random</label>
+      </node>
+      <node id="24">
+        <label>string</label>
+      </node>
+      <node id="13">
+        <label>system/application.h</label>
+      </node>
+      <node id="20">
+        <label>system/platform.h</label>
+      </node>
+      <node id="25">
+        <label>vector</label>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_enemy_8h" kindref="compound">Enemy.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_particle_manager_8h" kindref="compound">GameFramework/ParticleManager.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"><ref refid="class_enemy_1a94f30d348b6d2840fd71675472ba38dd" kindref="member">Enemy::Enemy</ref>()</highlight></codeline>
+<codeline lineno="5"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_world_object_1a9f76e2def47f4d6be6bafb330ac0394b" kindref="member">ID</ref><sp/>=<sp/><ref refid="_utils_8h_1a85fe7dfc8d35e0e6ee68ceb22ab3b57b" kindref="member">ENEMY_ID</ref>;</highlight></codeline>
+<codeline lineno="7"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_enemy_1a165cd1993b88023d7f1a45f9f2809b23" kindref="member">Enemy::SetClass</ref>(<ref refid="namespace_enemy_class_1a21f4473edd2d0cb0970f6505d46f0866" kindref="member">EnemyClass::Type</ref><sp/>type)</highlight></codeline>
+<codeline lineno="10"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal"><sp/>(type)</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="namespace_enemy_class_1a21f4473edd2d0cb0970f6505d46f0866a7a3e72f4e6ac314cad36a24f27c628a9" kindref="member">EnemyClass::HEAVY</ref>:</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_enemy_1ac1779a7f33b1320de88c6a73415bae8c" kindref="member">playerMoneyToAdd</ref><sp/>*=<sp/>1.5;</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_enemy_1a8d88db976bfb85797d1a161ae799f8e7" kindref="member">enemyMovement</ref>-&gt;<ref refid="class_character_movement_component_1aa0c6001da09d289c9cdc6a2332293ab6" kindref="member">SetAcceleration</ref>(<ref refid="class_enemy_1a8d88db976bfb85797d1a161ae799f8e7" kindref="member">enemyMovement</ref>-&gt;<ref refid="class_character_movement_component_1a07ae2e8b49579f6737117051c3391ed1" kindref="member">GetAcceleration</ref>()<sp/>*<sp/>0.5f);</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_enemy_1a985101af4d36bd5232edb964b061e423" kindref="member">attributes</ref>-&gt;<ref refid="class_attribute_component_1ac864c662a9b8d2155fa8142078ce3dff" kindref="member">ApplyAttributeMultiplier</ref>(<ref refid="namespace_hellwatch_attribute_1ad0a500e65129d06e4589f9bca54c4a7da6d26574d573c085ec34ba30576725713" kindref="member">HellwatchAttribute::Health</ref>,<sp/>1.5f);</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_enemy_1a1dbbafd85db9d46820a78f603af4d53a" kindref="member">damageAmount</ref><sp/>=<sp/><ref refid="class_enemy_1a1dbbafd85db9d46820a78f603af4d53a" kindref="member">damageAmount</ref><sp/>*<sp/>1.5f;</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="namespace_enemy_class_1a21f4473edd2d0cb0970f6505d46f0866ab7b90fd5865f02a5159836adc5d221bf" kindref="member">EnemyClass::NORMAL</ref>:</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//enemyMovement-&gt;SetAcceleration(enemyMovement-&gt;GetAcceleration());</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//attributes-&gt;SetAttributeCurrentAndMaxValue(HellwatchAttribute::Health,<sp/>100.f);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//damageAmount<sp/>=<sp/>50;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="namespace_enemy_class_1a21f4473edd2d0cb0970f6505d46f0866ac49546fa32e67ada5d7619f084ef02cb" kindref="member">EnemyClass::LIGHT</ref>:</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_enemy_1ac1779a7f33b1320de88c6a73415bae8c" kindref="member">playerMoneyToAdd</ref><sp/>*=<sp/>0.5;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_enemy_1a8d88db976bfb85797d1a161ae799f8e7" kindref="member">enemyMovement</ref>-&gt;<ref refid="class_character_movement_component_1aa0c6001da09d289c9cdc6a2332293ab6" kindref="member">SetAcceleration</ref>(<ref refid="class_enemy_1a8d88db976bfb85797d1a161ae799f8e7" kindref="member">enemyMovement</ref>-&gt;<ref refid="class_character_movement_component_1a07ae2e8b49579f6737117051c3391ed1" kindref="member">GetAcceleration</ref>()<sp/>*<sp/>1.5f);</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_enemy_1a985101af4d36bd5232edb964b061e423" kindref="member">attributes</ref>-&gt;<ref refid="class_attribute_component_1ac864c662a9b8d2155fa8142078ce3dff" kindref="member">ApplyAttributeMultiplier</ref>(<ref refid="namespace_hellwatch_attribute_1ad0a500e65129d06e4589f9bca54c4a7da6d26574d573c085ec34ba30576725713" kindref="member">HellwatchAttribute::Health</ref>,<sp/>0.5f);</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_enemy_1a1dbbafd85db9d46820a78f603af4d53a" kindref="member">damageAmount</ref><sp/>=<sp/><ref refid="class_enemy_1a1dbbafd85db9d46820a78f603af4d53a" kindref="member">damageAmount</ref><sp/>*<sp/>0.5f;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="37"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_enemy_1ac49759f4d5262aea5e3b6e3f9f56896e" kindref="member">Enemy::TakeDamage</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>damageAmount)</highlight></codeline>
+<codeline lineno="40"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="class_enemy_1a985101af4d36bd5232edb964b061e423" kindref="member">attributes</ref>)</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_enemy_1a985101af4d36bd5232edb964b061e423" kindref="member">attributes</ref>-&gt;<ref refid="class_attribute_component_1a2a29edbf9c15e3296eb8ac4f5b59e8c9" kindref="member">ApplyAttributeChange</ref>(<ref refid="namespace_hellwatch_attribute_1ad0a500e65129d06e4589f9bca54c4a7da6d26574d573c085ec34ba30576725713" kindref="member">HellwatchAttribute::Health</ref>,<sp/>-<ref refid="class_enemy_1a1dbbafd85db9d46820a78f603af4d53a" kindref="member">damageAmount</ref>);</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SceneApp::instance-&gt;PlaySample(<ref refid="class_enemy_1a4bc75b6c8f42a2fc5a1a7b932342a074" kindref="member">hurtSound</ref>);</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="class_enemy_1a985101af4d36bd5232edb964b061e423" kindref="member">attributes</ref>-&gt;<ref refid="class_attribute_component_1a580cf7f29236d87d448840840ad53bc6" kindref="member">GetCurrentAttributeValueByType</ref>(<ref refid="namespace_hellwatch_attribute_1ad0a500e65129d06e4589f9bca54c4a7da6d26574d573c085ec34ba30576725713" kindref="member">HellwatchAttribute::Health</ref>)<sp/>&lt;=<sp/>0.f)</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_enemy_1a4c732fc920f5da435fc97f9c55ae8531" kindref="member">IncreasePlayerMoney</ref>();</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ParticleManager::instance-&gt;PlayParticlesAtLocation(<ref refid="namespace_hellwatch_particle_1a93a028826056ca781710ef2830834f51a31724befc90ab0517472666b48eedb0b" kindref="member">HellwatchParticle::Death</ref>,<sp/><ref refid="class_world_object_1a9967baa65719f1418641598a244306a5" kindref="member">GetTranslation</ref>());</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_world_object_1a650a599e9ffa751eaba296c4ef6ec2d2" kindref="member">DisableUpdate</ref>();</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_world_object_1a4402fa17dfd062fc97750d581d4f774b" kindref="member">MarkForDelete</ref>();</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="55"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_enemy_1a487c39395ee71759c8bf10707776755e" kindref="member">Enemy::PostInit</ref>()</highlight></codeline>
+<codeline lineno="58"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_enemy_1a985101af4d36bd5232edb964b061e423" kindref="member">attributes</ref><sp/>=<sp/>CreateComponent&lt;AttributeComponent&gt;();</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_f_attribute" kindref="compound">FAttribute</ref><sp/>health;</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/>health.<ref refid="struct_f_attribute_1adacbd546c31cd3eeb6cc209a7a407e84" kindref="member">attributeType</ref><sp/>=<sp/><ref refid="namespace_hellwatch_attribute_1ad0a500e65129d06e4589f9bca54c4a7da6d26574d573c085ec34ba30576725713" kindref="member">HellwatchAttribute::Health</ref>;</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/>health.<ref refid="struct_f_attribute_1a9056ea5412f85f588763afc561fda841" kindref="member">maxAmount</ref><sp/>=<sp/>100.f;</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/>health.<ref refid="struct_f_attribute_1af950f31a8ba7e36e9a06091afed1edfe" kindref="member">currentAmount</ref><sp/>=<sp/>100.f;</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/>health.<ref refid="struct_f_attribute_1ac7a54aa8f158329ab1a12146fe56e0f1" kindref="member">bClampedToZero</ref><sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_enemy_1a985101af4d36bd5232edb964b061e423" kindref="member">attributes</ref>-&gt;<ref refid="class_attribute_component_1a6f76a7c8bb5bf45d085ffb001cec45d5" kindref="member">AddAttribute</ref>(health);</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/>b2BodyDef<sp/>bodyDef;</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/>bodyDef.position.Set(<ref refid="class_world_object_1a9967baa65719f1418641598a244306a5" kindref="member">GetTranslation</ref>().x(),<sp/><ref refid="class_world_object_1a9967baa65719f1418641598a244306a5" kindref="member">GetTranslation</ref>().z());</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/>bodyDef.type<sp/>=<sp/>b2_dynamicBody;</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/>bodyDef.enabled<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/>bodyDef.linearDamping<sp/>=<sp/>5.f;</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/>b2PolygonShape<sp/>shape;</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/>shape.SetAsBox(1.f,<sp/>1.f);</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/>b2FixtureDef<sp/>fixtureDef;</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/>fixtureDef.shape<sp/>=<sp/>&amp;shape;</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/>fixtureDef.density<sp/>=<sp/>1.f;</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/>fixtureDef.friction<sp/>=<sp/>0.75f;</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_world_object_1a8817deac42a357d2ed476791c7b76511" kindref="member">SetCollisionBody</ref>(SceneApp::instance-&gt;CreateCollisionBody(bodyDef,<sp/>fixtureDef,<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_enemy_1a8d88db976bfb85797d1a161ae799f8e7" kindref="member">enemyMovement</ref><sp/>=<sp/>CreateComponent&lt;CharacterMovementComponent&gt;();</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_enemy_1a8d88db976bfb85797d1a161ae799f8e7" kindref="member">enemyMovement</ref>-&gt;<ref refid="class_actor_component_1ab4ea0eaffa2c616a209e2887f80902f2" kindref="member">Init</ref>(</highlight><highlight class="keyword">this</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_mesh_actor_1a25950ae28c6abf2e9e3dc64cfa19c0c7" kindref="member">SetMesh</ref>(SceneApp::instance-&gt;RequestMeshByName(</highlight><highlight class="stringliteral">&quot;MutantMesh&quot;</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/>gef::Material<sp/>mat;</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/>mat.set_texture(SceneApp::instance-&gt;RequestTextureByName(</highlight><highlight class="stringliteral">&quot;MeleeEnemy&quot;</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_mesh_actor_1a0217e1969a68278f2548e1553e2ab92b" kindref="member">SetMaterial</ref>(mat);</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_enemy_1a1dbbafd85db9d46820a78f603af4d53a" kindref="member">damageAmount</ref><sp/>=<sp/>50;</highlight></codeline>
+<codeline lineno="93"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_enemy_1a4c732fc920f5da435fc97f9c55ae8531" kindref="member">Enemy::IncreasePlayerMoney</ref>()</highlight></codeline>
+<codeline lineno="96"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/>SceneApp::instance-&gt;IncreasePlayerMoney(<ref refid="class_enemy_1ac1779a7f33b1320de88c6a73415bae8c" kindref="member">playerMoneyToAdd</ref>);</highlight></codeline>
+<codeline lineno="98"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_enemy_1a723b79407b55383b2c327f674e3ab3bc" kindref="member">Enemy::Update</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>deltaTime)<sp/></highlight></codeline>
+<codeline lineno="101"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/>Super::Update(deltaTime);</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="class_player_character" kindref="compound">PlayerCharacter</ref>*<sp/>player<sp/>=<sp/>SceneApp::instance-&gt;GetPlayerCharacter())</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>gef::Vector4<sp/>playerPosition<sp/>=<sp/>player-&gt;GetTranslation();</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>b2Vec2<sp/>playerDirection<sp/>=<sp/>b2Vec2(playerPosition.x(),<sp/>playerPosition.z());</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>gef::Vector4<sp/>enemyPosition<sp/>=<sp/><ref refid="class_world_object_1a9967baa65719f1418641598a244306a5" kindref="member">GetTranslation</ref>();</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>b2Vec2<sp/>enemyDirection<sp/>=<sp/>b2Vec2(enemyPosition.x(),<sp/>enemyPosition.z());</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>b2Vec2<sp/>towardsPlayer<sp/>=<sp/>playerDirection<sp/>-<sp/>enemyDirection;</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>towardsPlayer.Normalize();</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_enemy_1a8d88db976bfb85797d1a161ae799f8e7" kindref="member">enemyMovement</ref>-&gt;<ref refid="class_character_movement_component_1a63d4bb5a09a7addb1664b0f5183ec13c" kindref="member">ApplyMovementForceInDirection</ref>(towardsPlayer);</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="114"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_enemy_1a8fe269579634b8cad6d494254c766387" kindref="member">Enemy::OnCollision</ref>(b2Body*<sp/>otherBody)</highlight></codeline>
+<codeline lineno="117"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="class_enemy_1a608edebc42e92ab5f253692c088a56d0" kindref="member">attackTime</ref><sp/>+<sp/>attackCooldown<sp/>&lt;<sp/>SceneApp::instance-&gt;GetCurrentGameTime())<sp/></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(otherBody)</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_mesh_actor" kindref="compound">MeshActor</ref>*<sp/>actor<sp/>=<sp/>(<ref refid="class_mesh_actor" kindref="compound">MeshActor</ref>*)otherBody-&gt;GetUserData().pointer;</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(actor<sp/>&amp;&amp;<sp/>actor-&gt;<ref refid="class_world_object_1a9f76e2def47f4d6be6bafb330ac0394b" kindref="member">ID</ref><sp/>==<sp/><ref refid="_utils_8h_1ae50e546c560a653d3409bd594d34dc0d" kindref="member">PLAYER_ID</ref>)</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>actor-&gt;<ref refid="class_mesh_actor_1a31a231014625686e8d40e561a7028931" kindref="member">TakeDamage</ref>(<ref refid="class_enemy_1a1dbbafd85db9d46820a78f603af4d53a" kindref="member">damageAmount</ref>);</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_enemy_1a608edebc42e92ab5f253692c088a56d0" kindref="member">attackTime</ref><sp/>=<sp/>SceneApp::instance-&gt;GetCurrentGameTime();</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="130"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"></highlight></codeline>
+<codeline lineno="132"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_enemy_1a43ebf25f19b29fccb8cb71730b95749d" kindref="member">Enemy::ScaleWithWave</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>wave)</highlight></codeline>
+<codeline lineno="133"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>multiplier<sp/>=<sp/>(wave<sp/>*<sp/>0.1)<sp/>+<sp/>1;</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_enemy_1a985101af4d36bd5232edb964b061e423" kindref="member">attributes</ref>-&gt;<ref refid="class_attribute_component_1ac864c662a9b8d2155fa8142078ce3dff" kindref="member">ApplyAttributeMultiplier</ref>(<ref refid="namespace_hellwatch_attribute_1ad0a500e65129d06e4589f9bca54c4a7da6d26574d573c085ec34ba30576725713" kindref="member">HellwatchAttribute::Health</ref>,<sp/>multiplier);</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_enemy_1a1dbbafd85db9d46820a78f603af4d53a" kindref="member">damageAmount</ref><sp/>*=<sp/>multiplier;</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_enemy_1ac1779a7f33b1320de88c6a73415bae8c" kindref="member">playerMoneyToAdd</ref><sp/>*=<sp/>multiplier;</highlight></codeline>
+<codeline lineno="138"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/Enemy.cpp"/>
+  </compounddef>
+</doxygen>

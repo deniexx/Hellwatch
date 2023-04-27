@@ -1,0 +1,98 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_actor_component" xml:lang="en-US">
+<title>ActorComponent Class Reference</title>
+<indexterm><primary>ActorComponent</primary></indexterm>
+<para>
+
+<para>Base class to be derived for actor components  </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;ActorComponent.h&gt;</computeroutput>
+</para>
+Inheritance diagram for ActorComponent:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_actor_component__inherit__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Collaboration diagram for ActorComponent:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_actor_component__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_class_actor_component_1ab4ea0eaffa2c616a209e2887f80902f2">Init</link> (<link linkend="_class_world_object">WorldObject</link> *inOwnerActor)</para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_class_actor_component_1af730b3c7d2b4154e1fb0962db7750f6b">UpdateComponent</link> (float deltaTime)</para>
+</listitem>
+            <listitem><para>__forceinline <link linkend="_class_world_object">WorldObject</link> * <link linkend="_class_actor_component_1a3705d464da5f840eca1d14bcce07372d">GetOwner</link> () const</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Protected Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>virtual void <link linkend="_class_actor_component_1a467d082f3fedd6cf2acacb117450f90e">PostInit</link> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Protected Attributes    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_world_object">WorldObject</link> * <link linkend="_class_actor_component_1a2766e186399b24f5d7e2d143ffa26e05">ownerActor</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Base class to be derived for actor components  </para>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_actor_component_1a3705d464da5f840eca1d14bcce07372d"/><section>
+    <title>GetOwner()</title>
+<indexterm><primary>GetOwner</primary><secondary>ActorComponent</secondary></indexterm>
+<indexterm><primary>ActorComponent</primary><secondary>GetOwner</secondary></indexterm>
+<para><computeroutput>__forceinline <link linkend="_class_world_object">WorldObject</link> * ActorComponent::GetOwner ( ) const<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_actor_component_1ab4ea0eaffa2c616a209e2887f80902f2"/><section>
+    <title>Init()</title>
+<indexterm><primary>Init</primary><secondary>ActorComponent</secondary></indexterm>
+<indexterm><primary>ActorComponent</primary><secondary>Init</secondary></indexterm>
+<para><computeroutput>void ActorComponent::Init (<link linkend="_class_world_object">WorldObject</link> * inOwnerActor)</computeroutput></para></section>
+<anchor xml:id="_class_actor_component_1a467d082f3fedd6cf2acacb117450f90e"/><section>
+    <title>PostInit()</title>
+<indexterm><primary>PostInit</primary><secondary>ActorComponent</secondary></indexterm>
+<indexterm><primary>ActorComponent</primary><secondary>PostInit</secondary></indexterm>
+<para><computeroutput>void ActorComponent::PostInit ( )<computeroutput>[protected]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+Reimplemented in <link linkend="_class_abilities_component_1aa1a55ce45b753097f0e2d7d4db4a419b">AbilitiesComponent</link>, and <link linkend="_class_character_movement_component_1a7c20d542f943ec133dd3f1df7fee988e">CharacterMovementComponent</link>.</para>
+</section>
+<anchor xml:id="_class_actor_component_1af730b3c7d2b4154e1fb0962db7750f6b"/><section>
+    <title>UpdateComponent()</title>
+<indexterm><primary>UpdateComponent</primary><secondary>ActorComponent</secondary></indexterm>
+<indexterm><primary>ActorComponent</primary><secondary>UpdateComponent</secondary></indexterm>
+<para><computeroutput>void ActorComponent::UpdateComponent (float deltaTime)<computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+Reimplemented in <link linkend="_class_attribute_component_1ae67a6fc2951e19257274edb42eec023f">AttributeComponent</link>, <link linkend="_class_abilities_component_1a96732cdae01d866200dc66a89200695f">AbilitiesComponent</link>, and <link linkend="_class_character_movement_component_1a44e667731d0323b2dfcdf80ee6e7f3ba">CharacterMovementComponent</link>.</para>
+</section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_class_actor_component_1a2766e186399b24f5d7e2d143ffa26e05"/><section>
+    <title>ownerActor</title>
+<indexterm><primary>ownerActor</primary><secondary>ActorComponent</secondary></indexterm>
+<indexterm><primary>ActorComponent</primary><secondary>ownerActor</secondary></indexterm>
+<para><computeroutput><link linkend="_class_world_object">WorldObject</link>* ActorComponent::ownerActor<computeroutput>[protected]</computeroutput></computeroutput></para></section>
+<para>
+The documentation for this class was generated from the following files:</para>
+D:/Uni/CMP208/Hellwatch/build/vs2017/ActorComponents/<link linkend="__actor_component_8h">ActorComponent.h</link>D:/Uni/CMP208/Hellwatch/build/vs2017/ActorComponents/<link linkend="__actor_component_8cpp">ActorComponent.cpp</link></section>
+</section>

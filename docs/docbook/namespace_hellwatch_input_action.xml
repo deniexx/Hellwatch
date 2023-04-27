@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_namespace_hellwatch_input_action" xml:lang="en-US">
+<title>HellwatchInputAction Namespace Reference</title>
+<indexterm><primary>HellwatchInputAction</primary></indexterm>
+<simplesect>
+    <title>Enumerations    </title>
+        <itemizedlist>
+            <listitem><para>enum <link linkend="_namespace_hellwatch_input_action_1ad39fcc17ea621da731d011339205f522">Type</link> { <link linkend="_namespace_hellwatch_input_action_1ad39fcc17ea621da731d011339205f522a1b668be2e7a287399767467c996dcdcb">None</link> = 0
+, <link linkend="_namespace_hellwatch_input_action_1ad39fcc17ea621da731d011339205f522ac50db83d00684255156bb26fbadba101">Pressed</link>
+, <link linkend="_namespace_hellwatch_input_action_1ad39fcc17ea621da731d011339205f522a2e7461d356b36a8be3798d12aa43a81d">Held</link>
+, <link linkend="_namespace_hellwatch_input_action_1ad39fcc17ea621da731d011339205f522a6baa22c2058b4910e772c39c0e4104bf">Released</link>
+ }</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Enumeration Type Documentation</title>
+<anchor xml:id="_namespace_hellwatch_input_action_1ad39fcc17ea621da731d011339205f522"/><section>
+    <title>Type</title>
+<indexterm><primary>Type</primary><secondary>HellwatchInputAction</secondary></indexterm>
+<indexterm><primary>HellwatchInputAction</primary><secondary>Type</secondary></indexterm>
+<para><computeroutput>enum <link linkend="_namespace_hellwatch_input_action_1ad39fcc17ea621da731d011339205f522">HellwatchInputAction::Type</link></computeroutput></para><informaltable frame="all">
+<title>Enumerator</title>
+    <tgroup cols="2" align="left" colsep="1" rowsep="1">
+      <colspec colname='c1'/>
+      <colspec colname='c2'/>
+<tbody>
+<row><entry><indexterm><primary>None</primary><secondary>HellwatchInputAction</secondary></indexterm>
+<indexterm><primary>HellwatchInputAction</primary><secondary>None</secondary></indexterm>
+<anchor xml:id="_namespace_hellwatch_input_action_1ad39fcc17ea621da731d011339205f522a1b668be2e7a287399767467c996dcdcb"/>None</entry><entry></entry></row><row><entry><indexterm><primary>Pressed</primary><secondary>HellwatchInputAction</secondary></indexterm>
+<indexterm><primary>HellwatchInputAction</primary><secondary>Pressed</secondary></indexterm>
+<anchor xml:id="_namespace_hellwatch_input_action_1ad39fcc17ea621da731d011339205f522ac50db83d00684255156bb26fbadba101"/>Pressed</entry><entry></entry></row><row><entry><indexterm><primary>Held</primary><secondary>HellwatchInputAction</secondary></indexterm>
+<indexterm><primary>HellwatchInputAction</primary><secondary>Held</secondary></indexterm>
+<anchor xml:id="_namespace_hellwatch_input_action_1ad39fcc17ea621da731d011339205f522a2e7461d356b36a8be3798d12aa43a81d"/>Held</entry><entry></entry></row><row><entry><indexterm><primary>Released</primary><secondary>HellwatchInputAction</secondary></indexterm>
+<indexterm><primary>HellwatchInputAction</primary><secondary>Released</secondary></indexterm>
+<anchor xml:id="_namespace_hellwatch_input_action_1ad39fcc17ea621da731d011339205f522a6baa22c2058b4910e772c39c0e4104bf"/>Released</entry><entry></entry></row>    </tbody>
+    </tgroup>
+</informaltable>
+</section>
+</section>
+</section>

@@ -1,0 +1,142 @@
+.TH "PlayerController" 3 "Thu Apr 27 2023" "Hellwatch" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+PlayerController \- Responsible for reading input and calling appropriate events   
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <PlayerController\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBPlayerController\fP (gef::Platform &platform)"
+.br
+.ti -1c
+.RI "gef::Vector2 \fBGetMousePosition\fP ()"
+.br
+.RI "Gets the mouse Position  "
+.ti -1c
+.RI "bool \fBBindKeyboardEvent\fP (const \fBFKeyBindKeyboard\fP keyboardEvent, bool bUnique=false, bool bReplaceIfUnique=false)"
+.br
+.RI "Binds a keyboard event to this player controller  "
+.ti -1c
+.RI "bool \fBBindControllerEvent\fP (const \fBFKeyBindController\fP controllerEvent, bool bUnique=false, bool bReplaceIfUnique=false)"
+.br
+.RI "Binds a controller event to this player controller  "
+.ti -1c
+.RI "bool \fBBindMouseEvent\fP (const \fBFKeyBindMouse\fP mouseEvent)"
+.br
+.RI "Binds a mouse event to this player controller  "
+.ti -1c
+.RI "void \fBBindKeyBindSet\fP (\fBFKeyBindSet\fP keyBindSet)"
+.br
+.RI "Binds a full key bind set and removes ALL previous key binds  "
+.ti -1c
+.RI "void \fBUpdate\fP ()"
+.br
+.RI "Updates the player controller and processes input  "
+.ti -1c
+.RI "const \fBFKeyBindSet\fP & \fBGetKeybindSet\fP () const"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Responsible for reading input and calling appropriate events  
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "PlayerController::PlayerController (gef::Platform & platform)"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "bool PlayerController::BindControllerEvent (const \fBFKeyBindController\fP controllerEvent, bool bUnique = \fCfalse\fP, bool bReplaceIfUnique = \fCfalse\fP)"
+
+.PP
+Binds a controller event to this player controller  
+.PP
+\fBParameters\fP
+.RS 4
+\fIcontrollerEvent\fP The event to be bound
+.br
+\fIbUnique\fP Should the event be unique, i\&.e\&. no other events bound to the same key
+.br
+\fIbReplaceIfUnique\fP Should we replace if the event is not unique
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+True, if the event was successfully bound
+.RE
+.PP
+
+.SS "void PlayerController::BindKeyBindSet (\fBFKeyBindSet\fP keyBindSet)"
+
+.PP
+Binds a full key bind set and removes ALL previous key binds  
+.PP
+\fBParameters\fP
+.RS 4
+\fIkeyBindSet\fP The key bind set to be bound
+.RE
+.PP
+
+.SS "bool PlayerController::BindKeyboardEvent (const \fBFKeyBindKeyboard\fP keyboardEvent, bool bUnique = \fCfalse\fP, bool bReplaceIfUnique = \fCfalse\fP)"
+
+.PP
+Binds a keyboard event to this player controller  
+.PP
+\fBParameters\fP
+.RS 4
+\fIkeyboardEvent\fP The event to be bound
+.br
+\fIbUnique\fP Should the event be unique, i\&.e\&. no other events bound to the same key
+.br
+\fIbReplaceIfUnique\fP Should we replace if the event is not unique
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+True, if the event was successfully bound
+.RE
+.PP
+
+.SS "bool PlayerController::BindMouseEvent (const \fBFKeyBindMouse\fP mouseEvent)"
+
+.PP
+Binds a mouse event to this player controller  
+.PP
+\fBParameters\fP
+.RS 4
+\fImouseEvent\fP The event to be bound
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+True, if the event was successfully bound
+.RE
+.PP
+
+.SS "const \fBFKeyBindSet\fP & PlayerController::GetKeybindSet () const"
+
+.SS "gef::Vector2 PlayerController::GetMousePosition ()"
+
+.PP
+Gets the mouse Position  
+.PP
+\fBReturns\fP
+.RS 4
+The mouse position on the screen
+.RE
+.PP
+
+.SS "void PlayerController::Update ()"
+
+.PP
+Updates the player controller and processes input  
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Hellwatch from the source code\&.

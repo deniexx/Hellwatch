@@ -1,0 +1,140 @@
+.TH "SpriteActor" 3 "Thu Apr 27 2023" "Hellwatch" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+SpriteActor \- An object that has a sprite   
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <SpriteActor\&.h>\fP
+.PP
+Inherits \fBWorldObject\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBSpriteActor\fP ()"
+.br
+.RI "Default constructor  "
+.ti -1c
+.RI "\fBSpriteActor\fP (float width, float height, gef::Texture *texture=nullptr, UInt32 colour=0xFFFFFFFF)"
+.br
+.RI "Constructor that sets up the sprite  "
+.ti -1c
+.RI "\fB~SpriteActor\fP ()"
+.br
+.ti -1c
+.RI "virtual void \fBSetTranslation\fP (const gef::Vector4 &inTranslation) override"
+.br
+.ti -1c
+.RI "virtual void \fBSetRotation\fP (const float rotation) override"
+.br
+.ti -1c
+.RI "virtual void \fBSetScale\fP (const gef::Vector4 &inScale)"
+.br
+.ti -1c
+.RI "void \fBSetTexture\fP (gef::Texture *texture)"
+.br
+.ti -1c
+.RI "void \fBSetSprite\fP (gef::Sprite *inSprite)"
+.br
+.ti -1c
+.RI "void \fBSetWidth\fP (float newWidth)"
+.br
+.ti -1c
+.RI "void \fBSetHeight\fP (float newHeight)"
+.br
+.ti -1c
+.RI "virtual void \fBRender\fP () override"
+.br
+.RI "Renders the object  "
+.ti -1c
+.RI "__forceinline gef::Sprite * \fBGetSprite\fP () const"
+.br
+.ti -1c
+.RI "__forceinline virtual const float \fBGetRotationF\fP () const override"
+.br
+.ti -1c
+.RI "__forceinline virtual const gef::Vector4 & \fBGetTranslation\fP () const"
+.br
+.ti -1c
+.RI "__forceinline virtual const gef::Vector4 & \fBGetScale\fP () const"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+An object that has a sprite  
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "SpriteActor::SpriteActor ()"
+
+.PP
+Default constructor  
+.SS "SpriteActor::SpriteActor (float width, float height, gef::Texture * texture = \fCnullptr\fP, UInt32 colour = \fC0xFFFFFFFF\fP)"
+
+.PP
+Constructor that sets up the sprite  
+.PP
+\fBParameters\fP
+.RS 4
+\fIwidth\fP Width of the sprite
+.br
+\fIheight\fP Height of the sprite
+.br
+\fItexture\fP Texture of the sprite
+.br
+\fIcolour\fP Colour of the sprite
+.RE
+.PP
+
+.SS "SpriteActor::~SpriteActor ()"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "__forceinline virtual const float SpriteActor::GetRotationF () const\fC [inline]\fP, \fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+Reimplemented from \fBWorldObject\fP\&.
+.SS "__forceinline virtual const gef::Vector4 & SpriteActor::GetScale () const\fC [inline]\fP, \fC [virtual]\fP"
+
+.PP
+Reimplemented from \fBWorldObject\fP\&.
+.SS "__forceinline gef::Sprite * SpriteActor::GetSprite () const\fC [inline]\fP"
+
+.SS "__forceinline virtual const gef::Vector4 & SpriteActor::GetTranslation () const\fC [inline]\fP, \fC [virtual]\fP"
+
+.PP
+Reimplemented from \fBWorldObject\fP\&.
+.SS "void SpriteActor::Render ()\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+Renders the object  
+.PP
+Reimplemented from \fBWorldObject\fP\&.
+.SS "void SpriteActor::SetHeight (float newHeight)\fC [inline]\fP"
+
+.SS "void SpriteActor::SetRotation (const float rotation)\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+Reimplemented from \fBWorldObject\fP\&.
+.SS "void SpriteActor::SetScale (const gef::Vector4 & inScale)\fC [virtual]\fP"
+
+.PP
+Reimplemented from \fBWorldObject\fP\&.
+.SS "void SpriteActor::SetSprite (gef::Sprite * inSprite)"
+
+.SS "void SpriteActor::SetTexture (gef::Texture * texture)"
+
+.SS "void SpriteActor::SetTranslation (const gef::Vector4 & inTranslation)\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+Reimplemented from \fBWorldObject\fP\&.
+.SS "void SpriteActor::SetWidth (float newWidth)\fC [inline]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Hellwatch from the source code\&.

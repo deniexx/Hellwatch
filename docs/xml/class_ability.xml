@@ -1,0 +1,848 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="class_ability" kind="class" language="C++" prot="public">
+    <compoundname>Ability</compoundname>
+    <derivedcompoundref refid="class_dash" prot="public" virt="non-virtual">Dash</derivedcompoundref>
+    <derivedcompoundref refid="class_ice_bolt" prot="public" virt="non-virtual">IceBolt</derivedcompoundref>
+    <derivedcompoundref refid="class_meteor" prot="public" virt="non-virtual">Meteor</derivedcompoundref>
+    <derivedcompoundref refid="class_piercing_strike" prot="public" virt="non-virtual">PiercingStrike</derivedcompoundref>
+    <includes refid="_ability_8h" local="no">Ability.h</includes>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="class_ability_1a4310ef2c96c00e405697f9983da58645" prot="protected" static="no" mutable="no">
+        <type><ref refid="namespace_ability_activation_key_1ab159d3c3f26196a9ff493b67ecf7e68c" kindref="member">AbilityActivationKey::Type</ref></type>
+        <definition>AbilityActivationKey::Type Ability::activationKey</definition>
+        <argsstring></argsstring>
+        <name>activationKey</name>
+        <qualifiedname>Ability::activationKey</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/Abilities/Ability.h" line="122" column="28" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/Abilities/Ability.h" bodystart="122" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_ability_1a0e5b9e690d512aa57f66a4f7ba3cb295" prot="protected" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Ability::cooldownTimer</definition>
+        <argsstring></argsstring>
+        <name>cooldownTimer</name>
+        <qualifiedname>Ability::cooldownTimer</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/Abilities/Ability.h" line="124" column="7" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/Abilities/Ability.h" bodystart="124" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_ability_1a6e6e8dc7387275d8c4cef1036d0b2a08" prot="protected" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Ability::cooldown</definition>
+        <argsstring></argsstring>
+        <name>cooldown</name>
+        <qualifiedname>Ability::cooldown</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/Abilities/Ability.h" line="125" column="7" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/Abilities/Ability.h" bodystart="125" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_ability_1aa080c6e4857a11599f25e1feb65aae9d" prot="protected" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Ability::damageAmount</definition>
+        <argsstring></argsstring>
+        <name>damageAmount</name>
+        <qualifiedname>Ability::damageAmount</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/Abilities/Ability.h" line="126" column="7" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/Abilities/Ability.h" bodystart="126" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_ability_1a3d60b8e01776b0f6f42aaa3fa8821aa7" prot="protected" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Ability::abilityCostAmount</definition>
+        <argsstring></argsstring>
+        <name>abilityCostAmount</name>
+        <qualifiedname>Ability::abilityCostAmount</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/Abilities/Ability.h" line="127" column="7" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/Abilities/Ability.h" bodystart="127" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_ability_1aa0aa42d055ea84389c3bd7bb7b61fd00" prot="protected" static="no" mutable="no">
+        <type><ref refid="namespace_hellwatch_attribute_1ad0a500e65129d06e4589f9bca54c4a7d" kindref="member">HellwatchAttribute::Type</ref></type>
+        <definition>HellwatchAttribute::Type Ability::abilityCostType</definition>
+        <argsstring></argsstring>
+        <name>abilityCostType</name>
+        <qualifiedname>Ability::abilityCostType</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/Abilities/Ability.h" line="128" column="26" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/Abilities/Ability.h" bodystart="128" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_ability_1a74f19e3368e28b7b61bf54cabe2da629" prot="protected" static="no" mutable="no">
+        <type><ref refid="namespace_cooldown_start_policy_1a99c3a8f4a331db7e6db8dfda1785b101" kindref="member">CooldownStartPolicy::Type</ref></type>
+        <definition>CooldownStartPolicy::Type Ability::cooldownStartPolicy</definition>
+        <argsstring></argsstring>
+        <name>cooldownStartPolicy</name>
+        <qualifiedname>Ability::cooldownStartPolicy</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/Abilities/Ability.h" line="129" column="27" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/Abilities/Ability.h" bodystart="129" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_ability_1afc72628992607694ae9e4a096557fead" prot="protected" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Ability::bIsTargeted</definition>
+        <argsstring></argsstring>
+        <name>bIsTargeted</name>
+        <qualifiedname>Ability::bIsTargeted</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/Abilities/Ability.h" line="132" column="6" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/Abilities/Ability.h" bodystart="132" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_ability_1ae2aac411168782dab7715c29817f23de" prot="protected" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Ability::bIsTargeting</definition>
+        <argsstring></argsstring>
+        <name>bIsTargeting</name>
+        <qualifiedname>Ability::bIsTargeting</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/Abilities/Ability.h" line="133" column="6" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/Abilities/Ability.h" bodystart="133" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_ability_1acc6fba5d131273ccbc0cf147b6f38eb2" prot="protected" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string Ability::abilityName</definition>
+        <argsstring></argsstring>
+        <name>abilityName</name>
+        <qualifiedname>Ability::abilityName</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/Abilities/Ability.h" line="135" column="13" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/Abilities/Ability.h" bodystart="135" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_ability_1ae426458572df63716f8f8b63e83d04ca" prot="protected" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Ability::bIsActive</definition>
+        <argsstring></argsstring>
+        <name>bIsActive</name>
+        <qualifiedname>Ability::bIsActive</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/Abilities/Ability.h" line="136" column="6" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/Abilities/Ability.h" bodystart="136" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_ability_1aa75c59af7fa1fd68787a211e66fd0173" prot="protected" static="no" mutable="no">
+        <type><ref refid="class_abilities_component" kindref="compound">AbilitiesComponent</ref> *</type>
+        <definition>AbilitiesComponent* Ability::owningComponent</definition>
+        <argsstring></argsstring>
+        <name>owningComponent</name>
+        <qualifiedname>Ability::owningComponent</qualifiedname>
+        <initializer>= nullptr</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/Abilities/Ability.h" line="137" column="20" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/Abilities/Ability.h" bodystart="137" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_ability_1a1e03282d1a96232143322ef89fcbb314" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Ability::Ability</definition>
+        <argsstring>()</argsstring>
+        <name>Ability</name>
+        <qualifiedname>Ability::Ability</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/Abilities/Ability.h" line="57" column="1" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/Abilities/Ability.cpp" bodystart="8" bodyend="19"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ability_1a291796c5cb356bcef9c6f6c0b2386ca2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Ability::Init</definition>
+        <argsstring>(AbilitiesComponent *inOwningComponent)</argsstring>
+        <name>Init</name>
+        <qualifiedname>Ability::Init</qualifiedname>
+        <param>
+          <type><ref refid="class_abilities_component" kindref="compound">AbilitiesComponent</ref> *</type>
+          <declname>inOwningComponent</declname>
+        </param>
+        <briefdescription>
+<para>Initializes the ability with the ability component  </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/Abilities/Ability.h" line="62" column="6" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/Abilities/Ability.cpp" bodystart="21" bodyend="25"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ability_1aaa83dbb12f79ceecc4d7b1cb3930d3d3" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void Ability::Update</definition>
+        <argsstring>(float deltaTime)</argsstring>
+        <name>Update</name>
+        <qualifiedname>Ability::Update</qualifiedname>
+        <param>
+          <type>float</type>
+          <declname>deltaTime</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/Abilities/Ability.h" line="64" column="14" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/Abilities/Ability.cpp" bodystart="27" bodyend="31"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ability_1a7815198848a6acf69bf1d76caf595820" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_activation_outcome" kindref="compound">ActivationOutcome</ref></type>
+        <definition>ActivationOutcome Ability::TryActivate</definition>
+        <argsstring>()</argsstring>
+        <name>TryActivate</name>
+        <qualifiedname>Ability::TryActivate</qualifiedname>
+        <briefdescription>
+<para>Attempts to activate this ability, returns an <ref refid="struct_activation_outcome" kindref="compound">ActivationOutcome</ref> struct  </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/Abilities/Ability.h" line="69" column="19" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/Abilities/Ability.cpp" bodystart="33" bodyend="49"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ability_1a52f7aee4243f1da13b544a038892e43b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Ability::CommitAbility</definition>
+        <argsstring>()</argsstring>
+        <name>CommitAbility</name>
+        <qualifiedname>Ability::CommitAbility</qualifiedname>
+        <briefdescription>
+<para>Attempts to commit the ability if it is targeted, does nothing if the ability is NOT targeted  </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/Abilities/Ability.h" line="74" column="6" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/Abilities/Ability.cpp" bodystart="51" bodyend="58"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ability_1ad7290141bc73d865773ac54477db7fb6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Ability::EndAbility</definition>
+        <argsstring>()</argsstring>
+        <name>EndAbility</name>
+        <qualifiedname>Ability::EndAbility</qualifiedname>
+        <briefdescription>
+<para>Attempts to end the ability, returns a bool whether it was successful  </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/Abilities/Ability.h" line="79" column="6" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/Abilities/Ability.cpp" bodystart="60" bodyend="69"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ability_1a13aa60092026728b42ade2811168c087" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Ability::SetActivationKey</definition>
+        <argsstring>(AbilityActivationKey::Type key)</argsstring>
+        <name>SetActivationKey</name>
+        <qualifiedname>Ability::SetActivationKey</qualifiedname>
+        <param>
+          <type><ref refid="namespace_ability_activation_key_1ab159d3c3f26196a9ff493b67ecf7e68c" kindref="member">AbilityActivationKey::Type</ref></type>
+          <declname>key</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/Abilities/Ability.h" line="144" column="6" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/Abilities/Ability.h" bodystart="144" bodyend="144"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ability_1a83e04cf64b10504ee3bc1cd10ad7219c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Ability::SetAbilityCostAmount</definition>
+        <argsstring>(float newCost)</argsstring>
+        <name>SetAbilityCostAmount</name>
+        <qualifiedname>Ability::SetAbilityCostAmount</qualifiedname>
+        <param>
+          <type>float</type>
+          <declname>newCost</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/Abilities/Ability.h" line="145" column="6" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/Abilities/Ability.h" bodystart="145" bodyend="145"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ability_1a36391efa24d0da869f43e4ba592241c8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Ability::SetAbilityCostType</definition>
+        <argsstring>(HellwatchAttribute::Type newCost)</argsstring>
+        <name>SetAbilityCostType</name>
+        <qualifiedname>Ability::SetAbilityCostType</qualifiedname>
+        <param>
+          <type><ref refid="namespace_hellwatch_attribute_1ad0a500e65129d06e4589f9bca54c4a7d" kindref="member">HellwatchAttribute::Type</ref></type>
+          <declname>newCost</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/Abilities/Ability.h" line="146" column="6" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/Abilities/Ability.h" bodystart="146" bodyend="146"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ability_1a6737d4900eb79147ca81aaa20a85218a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Ability::SetAbilityName</definition>
+        <argsstring>(std::string newName)</argsstring>
+        <name>SetAbilityName</name>
+        <qualifiedname>Ability::SetAbilityName</qualifiedname>
+        <param>
+          <type>std::string</type>
+          <declname>newName</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/Abilities/Ability.h" line="147" column="6" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/Abilities/Ability.h" bodystart="147" bodyend="147"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ability_1a072cbfb1685db6fd4a0723d519bc9176" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Ability::SetIsActive</definition>
+        <argsstring>(bool bNewState)</argsstring>
+        <name>SetIsActive</name>
+        <qualifiedname>Ability::SetIsActive</qualifiedname>
+        <param>
+          <type>bool</type>
+          <declname>bNewState</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/Abilities/Ability.h" line="148" column="6" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/Abilities/Ability.h" bodystart="148" bodyend="148"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ability_1a060e6f07d0c7510f7779418d69489fea" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Ability::SetCooldownStartPolicy</definition>
+        <argsstring>(CooldownStartPolicy::Type newPolicy)</argsstring>
+        <name>SetCooldownStartPolicy</name>
+        <qualifiedname>Ability::SetCooldownStartPolicy</qualifiedname>
+        <param>
+          <type><ref refid="namespace_cooldown_start_policy_1a99c3a8f4a331db7e6db8dfda1785b101" kindref="member">CooldownStartPolicy::Type</ref></type>
+          <declname>newPolicy</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/Abilities/Ability.h" line="149" column="6" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/Abilities/Ability.h" bodystart="149" bodyend="149"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ability_1aa7f8c3e16910914b751aa1e1e5731f8f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Ability::SetAbilityCooldown</definition>
+        <argsstring>(float newCooldown)</argsstring>
+        <name>SetAbilityCooldown</name>
+        <qualifiedname>Ability::SetAbilityCooldown</qualifiedname>
+        <param>
+          <type>float</type>
+          <declname>newCooldown</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/Abilities/Ability.h" line="150" column="6" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/Abilities/Ability.cpp" bodystart="149" bodyend="153"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ability_1a51b48c192967cf32ea352f5e735136d6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Ability::SetDamageAmount</definition>
+        <argsstring>(float newAmount)</argsstring>
+        <name>SetDamageAmount</name>
+        <qualifiedname>Ability::SetDamageAmount</qualifiedname>
+        <param>
+          <type>float</type>
+          <declname>newAmount</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/Abilities/Ability.h" line="151" column="6" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/Abilities/Ability.h" bodystart="151" bodyend="151"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ability_1a95990ec850dd39919d25c4c481935db5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Ability::SetIsTargeted</definition>
+        <argsstring>(bool bNewState)</argsstring>
+        <name>SetIsTargeted</name>
+        <qualifiedname>Ability::SetIsTargeted</qualifiedname>
+        <param>
+          <type>bool</type>
+          <declname>bNewState</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/Abilities/Ability.h" line="152" column="6" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/Abilities/Ability.h" bodystart="152" bodyend="152"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ability_1a5da322fcc571670d8b96385b67685a68" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Ability::SetIsTargeting</definition>
+        <argsstring>(bool bNewState)</argsstring>
+        <name>SetIsTargeting</name>
+        <qualifiedname>Ability::SetIsTargeting</qualifiedname>
+        <param>
+          <type>bool</type>
+          <declname>bNewState</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/Abilities/Ability.h" line="153" column="6" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/Abilities/Ability.h" bodystart="153" bodyend="153"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ability_1ac2b656dc59480f2973aaa3f0f59706bc" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>bool</type>
+        <definition>virtual bool Ability::IsActive</definition>
+        <argsstring>()</argsstring>
+        <name>IsActive</name>
+        <qualifiedname>Ability::IsActive</qualifiedname>
+        <briefdescription>
+<para>Checks if the ability is active  </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/Abilities/Ability.h" line="158" column="14" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/Abilities/Ability.h" bodystart="158" bodyend="158"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ability_1a7af0334ceb8c57dd4b114124409492b5" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>__forceinline <ref refid="namespace_ability_activation_key_1ab159d3c3f26196a9ff493b67ecf7e68c" kindref="member">AbilityActivationKey::Type</ref></type>
+        <definition>__forceinline AbilityActivationKey::Type Ability::GetActivationKey</definition>
+        <argsstring>() const</argsstring>
+        <name>GetActivationKey</name>
+        <qualifiedname>Ability::GetActivationKey</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/Abilities/Ability.h" line="163" column="42" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/Abilities/Ability.h" bodystart="163" bodyend="163"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ability_1a4e28b2c8ffd652b050612ee758f76958" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>__forceinline const std::string &amp;</type>
+        <definition>__forceinline const std::string &amp; Ability::GetAbilityName</definition>
+        <argsstring>() const</argsstring>
+        <name>GetAbilityName</name>
+        <qualifiedname>Ability::GetAbilityName</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/Abilities/Ability.h" line="164" column="33" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/Abilities/Ability.h" bodystart="164" bodyend="164"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ability_1adbd4d2c476e68c473b2872fd788eb2c2" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>__forceinline bool</type>
+        <definition>__forceinline bool Ability::IsInCooldown</definition>
+        <argsstring>() const</argsstring>
+        <name>IsInCooldown</name>
+        <qualifiedname>Ability::IsInCooldown</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/Abilities/Ability.h" line="165" column="20" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/Abilities/Ability.h" bodystart="165" bodyend="165"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ability_1a2a7a75401b5757d3b22ed26544bfdb19" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>__forceinline bool</type>
+        <definition>__forceinline bool Ability::IsAbilityTargeted</definition>
+        <argsstring>() const</argsstring>
+        <name>IsAbilityTargeted</name>
+        <qualifiedname>Ability::IsAbilityTargeted</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/Abilities/Ability.h" line="166" column="20" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/Abilities/Ability.h" bodystart="166" bodyend="166"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ability_1a2432f7d4c4159f75e8552d08b7ca51ed" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>__forceinline bool</type>
+        <definition>__forceinline bool Ability::IsAbilityTargeting</definition>
+        <argsstring>() const</argsstring>
+        <name>IsAbilityTargeting</name>
+        <qualifiedname>Ability::IsAbilityTargeting</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/Abilities/Ability.h" line="167" column="20" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/Abilities/Ability.h" bodystart="167" bodyend="167"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ability_1a063307977163faa4a3bcf7089cf70bb5" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>__forceinline float</type>
+        <definition>__forceinline float Ability::GetRemainingCooldown</definition>
+        <argsstring>() const</argsstring>
+        <name>GetRemainingCooldown</name>
+        <qualifiedname>Ability::GetRemainingCooldown</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/Abilities/Ability.h" line="168" column="21" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/Abilities/Ability.h" bodystart="168" bodyend="168"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ability_1a57f2e9a30ca6d2588fd721af77353d52" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float Ability::GetDamageAmount</definition>
+        <argsstring>()</argsstring>
+        <name>GetDamageAmount</name>
+        <qualifiedname>Ability::GetDamageAmount</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/Abilities/Ability.h" line="170" column="7" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/Abilities/Ability.cpp" bodystart="155" bodyend="166"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ability_1a50b5f7d8d3197869b3bc32d3c9bd4fd2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_abilities_component" kindref="compound">AbilitiesComponent</ref> *</type>
+        <definition>AbilitiesComponent * Ability::GetOwner</definition>
+        <argsstring>()</argsstring>
+        <name>GetOwner</name>
+        <qualifiedname>Ability::GetOwner</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/Abilities/Ability.h" line="171" column="20" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/Abilities/Ability.h" bodystart="171" bodyend="171"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ability_1ab567fcf9b39984aa3bf45343ffcbc086" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_attribute_component" kindref="compound">AttributeComponent</ref> *</type>
+        <definition>AttributeComponent * Ability::GetOwnerAttributes</definition>
+        <argsstring>()</argsstring>
+        <name>GetOwnerAttributes</name>
+        <qualifiedname>Ability::GetOwnerAttributes</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/Abilities/Ability.h" line="172" column="20" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/Abilities/Ability.cpp" bodystart="168" bodyend="171"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_ability_1a25388ebb622b414ef027eb33bf4a5cfb" prot="protected" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void Ability::PostInit</definition>
+        <argsstring>()</argsstring>
+        <name>PostInit</name>
+        <qualifiedname>Ability::PostInit</qualifiedname>
+        <reimplementedby refid="class_dash_1a3078ae06d66361da3e35af7b0efac786">PostInit</reimplementedby>
+        <reimplementedby refid="class_ice_bolt_1aaf128a2d87802fa2e09fb8e7c150646b">PostInit</reimplementedby>
+        <reimplementedby refid="class_meteor_1ab7f46bd407dcbb53214310a8f95c9307">PostInit</reimplementedby>
+        <reimplementedby refid="class_piercing_strike_1a3309a9ad1070cbd3e47e51ba50e92c20">PostInit</reimplementedby>
+        <briefdescription>
+<para>Called after ability has been initialized, do set up here  </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/Abilities/Ability.h" line="86" column="14" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/Abilities/Ability.cpp" bodystart="71" bodyend="73"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ability_1ace910398ed2eb9f58c8e85dbb7a72de2" prot="protected" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void Ability::Begin</definition>
+        <argsstring>()</argsstring>
+        <name>Begin</name>
+        <qualifiedname>Ability::Begin</qualifiedname>
+        <reimplementedby refid="class_dash_1ab37a52fcb0a2953ad7f5bcf698d9d65f">Begin</reimplementedby>
+        <reimplementedby refid="class_ice_bolt_1a5dc506246bfe473255626de565ca8af4">Begin</reimplementedby>
+        <reimplementedby refid="class_meteor_1a0c35a52087ee487518c3d4e9f0e36cb2">Begin</reimplementedby>
+        <reimplementedby refid="class_piercing_strike_1afc8244751f335b1ae83a42b252409ae9">Begin</reimplementedby>
+        <briefdescription>
+<para>Begins the ability, called if TryActivate was successful  </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/Abilities/Ability.h" line="91" column="14" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/Abilities/Ability.cpp" bodystart="75" bodyend="86"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ability_1a61a88edf359a3c6bd34868e58bf64f20" prot="protected" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void Ability::End</definition>
+        <argsstring>()</argsstring>
+        <name>End</name>
+        <qualifiedname>Ability::End</qualifiedname>
+        <reimplementedby refid="class_dash_1a15631a12a91058a2f41e4a8f80127378">End</reimplementedby>
+        <reimplementedby refid="class_ice_bolt_1a2b7a3bb2d1627b36331a5c2fee6334a7">End</reimplementedby>
+        <reimplementedby refid="class_meteor_1ad31eefb5e13589692a68f77ed022371c">End</reimplementedby>
+        <reimplementedby refid="class_piercing_strike_1a31b5a023d19f73ec307cbc6e452e85ea">End</reimplementedby>
+        <briefdescription>
+<para>Called on end of ability  </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/Abilities/Ability.h" line="96" column="14" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/Abilities/Ability.cpp" bodystart="88" bodyend="94"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ability_1a1b338496a61edb978f7f83570b9f03a4" prot="protected" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void Ability::Commit</definition>
+        <argsstring>()</argsstring>
+        <name>Commit</name>
+        <qualifiedname>Ability::Commit</qualifiedname>
+        <briefdescription>
+<para>Called after committing an ability, targeting has been confirmed  </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/Abilities/Ability.h" line="101" column="14" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/Abilities/Ability.cpp" bodystart="96" bodyend="98"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ability_1a172dfdc4273690de2476fda0b82e5ea6" prot="protected" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void Ability::BeginTargeting</definition>
+        <argsstring>()</argsstring>
+        <name>BeginTargeting</name>
+        <qualifiedname>Ability::BeginTargeting</qualifiedname>
+        <briefdescription>
+<para>Begins targeting, spawn an actor that follows the mouse to be able to identify the range of the ability  </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/Abilities/Ability.h" line="106" column="14" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/Abilities/Ability.cpp" bodystart="100" bodyend="102"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ability_1af82a917f3d8fc9260651c4cc59affb0e" prot="protected" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void Ability::EndTargeting</definition>
+        <argsstring>()</argsstring>
+        <name>EndTargeting</name>
+        <qualifiedname>Ability::EndTargeting</qualifiedname>
+        <briefdescription>
+<para>Ends targeting, remove the targeting actor  </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/Abilities/Ability.h" line="111" column="14" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/Abilities/Ability.cpp" bodystart="104" bodyend="106"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ability_1a4276e15e3a35b7887dd679eb5e332ff4" prot="protected" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool Ability::CanActivate</definition>
+        <argsstring>(ActivationOutcome &amp;OutActivationOutcome)</argsstring>
+        <name>CanActivate</name>
+        <qualifiedname>Ability::CanActivate</qualifiedname>
+        <param>
+          <type><ref refid="struct_activation_outcome" kindref="compound">ActivationOutcome</ref> &amp;</type>
+          <declname>OutActivationOutcome</declname>
+        </param>
+        <briefdescription>
+<para>Can the ability be activated  </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>OutActivationOutcome</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>This is an out parameter, holding information whether we can activate this ability, and if we can&apos;t why</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A boolean, whether we can activate this ability or not</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/Abilities/Ability.h" line="118" column="14" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/Abilities/Ability.cpp" bodystart="108" bodyend="147"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>A base ability class, designed to be inherited and provided with functionality  </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>Ability</label>
+        <link refid="class_ability"/>
+      </node>
+      <node id="2">
+        <label>Dash</label>
+        <link refid="class_dash"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>IceBolt</label>
+        <link refid="class_ice_bolt"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>Meteor</label>
+        <link refid="class_meteor"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>PiercingStrike</label>
+        <link refid="class_piercing_strike"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>AbilitiesComponent</label>
+        <link refid="class_abilities_component"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>Ability</label>
+        <link refid="class_ability"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>owningComponent</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>ActorComponent</label>
+        <link refid="class_actor_component"/>
+        <childnode refid="4" relation="usage">
+          <edgelabel>ownerActor</edgelabel>
+        </childnode>
+      </node>
+      <node id="4">
+        <label>WorldObject</label>
+        <link refid="class_world_object"/>
+        <childnode refid="4" relation="usage">
+          <edgelabel>owningObject</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/Abilities/Ability.h" line="53" column="1" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/Abilities/Ability.h" bodystart="54" bodyend="173"/>
+    <listofallmembers>
+      <member refid="class_ability_1a1e03282d1a96232143322ef89fcbb314" prot="public" virt="non-virtual"><scope>Ability</scope><name>Ability</name></member>
+      <member refid="class_ability_1a3d60b8e01776b0f6f42aaa3fa8821aa7" prot="protected" virt="non-virtual"><scope>Ability</scope><name>abilityCostAmount</name></member>
+      <member refid="class_ability_1aa0aa42d055ea84389c3bd7bb7b61fd00" prot="protected" virt="non-virtual"><scope>Ability</scope><name>abilityCostType</name></member>
+      <member refid="class_ability_1acc6fba5d131273ccbc0cf147b6f38eb2" prot="protected" virt="non-virtual"><scope>Ability</scope><name>abilityName</name></member>
+      <member refid="class_ability_1a4310ef2c96c00e405697f9983da58645" prot="protected" virt="non-virtual"><scope>Ability</scope><name>activationKey</name></member>
+      <member refid="class_ability_1ace910398ed2eb9f58c8e85dbb7a72de2" prot="protected" virt="virtual"><scope>Ability</scope><name>Begin</name></member>
+      <member refid="class_ability_1a172dfdc4273690de2476fda0b82e5ea6" prot="protected" virt="virtual"><scope>Ability</scope><name>BeginTargeting</name></member>
+      <member refid="class_ability_1ae426458572df63716f8f8b63e83d04ca" prot="protected" virt="non-virtual"><scope>Ability</scope><name>bIsActive</name></member>
+      <member refid="class_ability_1afc72628992607694ae9e4a096557fead" prot="protected" virt="non-virtual"><scope>Ability</scope><name>bIsTargeted</name></member>
+      <member refid="class_ability_1ae2aac411168782dab7715c29817f23de" prot="protected" virt="non-virtual"><scope>Ability</scope><name>bIsTargeting</name></member>
+      <member refid="class_ability_1a4276e15e3a35b7887dd679eb5e332ff4" prot="protected" virt="virtual"><scope>Ability</scope><name>CanActivate</name></member>
+      <member refid="class_ability_1a1b338496a61edb978f7f83570b9f03a4" prot="protected" virt="virtual"><scope>Ability</scope><name>Commit</name></member>
+      <member refid="class_ability_1a52f7aee4243f1da13b544a038892e43b" prot="public" virt="non-virtual"><scope>Ability</scope><name>CommitAbility</name></member>
+      <member refid="class_ability_1a6e6e8dc7387275d8c4cef1036d0b2a08" prot="protected" virt="non-virtual"><scope>Ability</scope><name>cooldown</name></member>
+      <member refid="class_ability_1a74f19e3368e28b7b61bf54cabe2da629" prot="protected" virt="non-virtual"><scope>Ability</scope><name>cooldownStartPolicy</name></member>
+      <member refid="class_ability_1a0e5b9e690d512aa57f66a4f7ba3cb295" prot="protected" virt="non-virtual"><scope>Ability</scope><name>cooldownTimer</name></member>
+      <member refid="class_ability_1aa080c6e4857a11599f25e1feb65aae9d" prot="protected" virt="non-virtual"><scope>Ability</scope><name>damageAmount</name></member>
+      <member refid="class_ability_1a61a88edf359a3c6bd34868e58bf64f20" prot="protected" virt="virtual"><scope>Ability</scope><name>End</name></member>
+      <member refid="class_ability_1ad7290141bc73d865773ac54477db7fb6" prot="public" virt="non-virtual"><scope>Ability</scope><name>EndAbility</name></member>
+      <member refid="class_ability_1af82a917f3d8fc9260651c4cc59affb0e" prot="protected" virt="virtual"><scope>Ability</scope><name>EndTargeting</name></member>
+      <member refid="class_ability_1a4e28b2c8ffd652b050612ee758f76958" prot="public" virt="non-virtual"><scope>Ability</scope><name>GetAbilityName</name></member>
+      <member refid="class_ability_1a7af0334ceb8c57dd4b114124409492b5" prot="public" virt="non-virtual"><scope>Ability</scope><name>GetActivationKey</name></member>
+      <member refid="class_ability_1a57f2e9a30ca6d2588fd721af77353d52" prot="public" virt="non-virtual"><scope>Ability</scope><name>GetDamageAmount</name></member>
+      <member refid="class_ability_1a50b5f7d8d3197869b3bc32d3c9bd4fd2" prot="public" virt="non-virtual"><scope>Ability</scope><name>GetOwner</name></member>
+      <member refid="class_ability_1ab567fcf9b39984aa3bf45343ffcbc086" prot="public" virt="non-virtual"><scope>Ability</scope><name>GetOwnerAttributes</name></member>
+      <member refid="class_ability_1a063307977163faa4a3bcf7089cf70bb5" prot="public" virt="non-virtual"><scope>Ability</scope><name>GetRemainingCooldown</name></member>
+      <member refid="class_ability_1a291796c5cb356bcef9c6f6c0b2386ca2" prot="public" virt="non-virtual"><scope>Ability</scope><name>Init</name></member>
+      <member refid="class_ability_1a2a7a75401b5757d3b22ed26544bfdb19" prot="public" virt="non-virtual"><scope>Ability</scope><name>IsAbilityTargeted</name></member>
+      <member refid="class_ability_1a2432f7d4c4159f75e8552d08b7ca51ed" prot="public" virt="non-virtual"><scope>Ability</scope><name>IsAbilityTargeting</name></member>
+      <member refid="class_ability_1ac2b656dc59480f2973aaa3f0f59706bc" prot="public" virt="virtual"><scope>Ability</scope><name>IsActive</name></member>
+      <member refid="class_ability_1adbd4d2c476e68c473b2872fd788eb2c2" prot="public" virt="non-virtual"><scope>Ability</scope><name>IsInCooldown</name></member>
+      <member refid="class_ability_1aa75c59af7fa1fd68787a211e66fd0173" prot="protected" virt="non-virtual"><scope>Ability</scope><name>owningComponent</name></member>
+      <member refid="class_ability_1a25388ebb622b414ef027eb33bf4a5cfb" prot="protected" virt="virtual"><scope>Ability</scope><name>PostInit</name></member>
+      <member refid="class_ability_1aa7f8c3e16910914b751aa1e1e5731f8f" prot="public" virt="non-virtual"><scope>Ability</scope><name>SetAbilityCooldown</name></member>
+      <member refid="class_ability_1a83e04cf64b10504ee3bc1cd10ad7219c" prot="public" virt="non-virtual"><scope>Ability</scope><name>SetAbilityCostAmount</name></member>
+      <member refid="class_ability_1a36391efa24d0da869f43e4ba592241c8" prot="public" virt="non-virtual"><scope>Ability</scope><name>SetAbilityCostType</name></member>
+      <member refid="class_ability_1a6737d4900eb79147ca81aaa20a85218a" prot="public" virt="non-virtual"><scope>Ability</scope><name>SetAbilityName</name></member>
+      <member refid="class_ability_1a13aa60092026728b42ade2811168c087" prot="public" virt="non-virtual"><scope>Ability</scope><name>SetActivationKey</name></member>
+      <member refid="class_ability_1a060e6f07d0c7510f7779418d69489fea" prot="public" virt="non-virtual"><scope>Ability</scope><name>SetCooldownStartPolicy</name></member>
+      <member refid="class_ability_1a51b48c192967cf32ea352f5e735136d6" prot="public" virt="non-virtual"><scope>Ability</scope><name>SetDamageAmount</name></member>
+      <member refid="class_ability_1a072cbfb1685db6fd4a0723d519bc9176" prot="public" virt="non-virtual"><scope>Ability</scope><name>SetIsActive</name></member>
+      <member refid="class_ability_1a95990ec850dd39919d25c4c481935db5" prot="public" virt="non-virtual"><scope>Ability</scope><name>SetIsTargeted</name></member>
+      <member refid="class_ability_1a5da322fcc571670d8b96385b67685a68" prot="public" virt="non-virtual"><scope>Ability</scope><name>SetIsTargeting</name></member>
+      <member refid="class_ability_1a7815198848a6acf69bf1d76caf595820" prot="public" virt="non-virtual"><scope>Ability</scope><name>TryActivate</name></member>
+      <member refid="class_ability_1aaa83dbb12f79ceecc4d7b1cb3930d3d3" prot="public" virt="virtual"><scope>Ability</scope><name>Update</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,428 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="_player_controller_8h" kind="file" language="C++">
+    <compoundname>PlayerController.h</compoundname>
+    <includes local="no">cstdint</includes>
+    <includes local="no">functional</includes>
+    <includes local="no">input/touch_input_manager.h</includes>
+    <includes local="no">input/keyboard.h</includes>
+    <includes refid="_utils_8h" local="yes">Utils.h</includes>
+    <includedby refid="_player_character_8h" local="yes">D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/PlayerCharacter.h</includedby>
+    <includedby refid="_player_controller_8cpp" local="yes">D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/PlayerController.cpp</includedby>
+    <includedby refid="_main_menu_8cpp" local="yes">D:/Uni/CMP208/Hellwatch/build/vs2017/UserInterface/MainMenu.cpp</includedby>
+    <includedby refid="_menu_8cpp" local="yes">D:/Uni/CMP208/Hellwatch/build/vs2017/UserInterface/Menu.cpp</includedby>
+    <includedby refid="_pause_menu_8cpp" local="yes">D:/Uni/CMP208/Hellwatch/build/vs2017/UserInterface/PauseMenu.cpp</includedby>
+    <includedby refid="_shop_menu_8cpp" local="yes">D:/Uni/CMP208/Hellwatch/build/vs2017/UserInterface/ShopMenu.cpp</includedby>
+    <includedby refid="scene__app_8cpp" local="yes">D:/Uni/CMP208/Hellwatch/scene_app.cpp</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/PlayerController.h</label>
+        <link refid="_player_controller_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>Utils.h</label>
+        <link refid="_utils_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+      </node>
+      <node id="20">
+        <label>obj_mesh_loader.h</label>
+        <link refid="obj__mesh__loader_8h"/>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>primitive_builder.h</label>
+        <link refid="primitive__builder_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>scene_app.h</label>
+        <link refid="scene__app_8h"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+      </node>
+      <node id="18">
+        <label>box2d/box2d.h</label>
+      </node>
+      <node id="16">
+        <label>cstddef</label>
+      </node>
+      <node id="2">
+        <label>cstdint</label>
+      </node>
+      <node id="3">
+        <label>functional</label>
+      </node>
+      <node id="26">
+        <label>future</label>
+      </node>
+      <node id="21">
+        <label>gef.h</label>
+      </node>
+      <node id="25">
+        <label>graphics/font.h</label>
+      </node>
+      <node id="15">
+        <label>graphics/material.h</label>
+      </node>
+      <node id="10">
+        <label>graphics/renderer_3d.h</label>
+      </node>
+      <node id="17">
+        <label>graphics/scene.h</label>
+      </node>
+      <node id="5">
+        <label>input/keyboard.h</label>
+      </node>
+      <node id="4">
+        <label>input/touch_input_manager.h</label>
+      </node>
+      <node id="22">
+        <label>map</label>
+      </node>
+      <node id="7">
+        <label>maths/Vector2.h</label>
+      </node>
+      <node id="28">
+        <label>maths/math_utils.h</label>
+      </node>
+      <node id="9">
+        <label>maths/matrix44.h</label>
+      </node>
+      <node id="13">
+        <label>maths/vector2.h</label>
+      </node>
+      <node id="8">
+        <label>maths/vector4.h</label>
+      </node>
+      <node id="27">
+        <label>random</label>
+      </node>
+      <node id="23">
+        <label>string</label>
+      </node>
+      <node id="12">
+        <label>system/application.h</label>
+      </node>
+      <node id="19">
+        <label>system/platform.h</label>
+      </node>
+      <node id="24">
+        <label>vector</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="4">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/Abilities/PlayerAbilities/Dash.cpp</label>
+        <link refid="_dash_8cpp"/>
+      </node>
+      <node id="3">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/Abilities/PlayerAbilities/Dash.h</label>
+        <link refid="_dash_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/Boss.cpp</label>
+        <link refid="_boss_8cpp"/>
+      </node>
+      <node id="7">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/Boss.h</label>
+        <link refid="_boss_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/Enemy.cpp</label>
+        <link refid="_enemy_8cpp"/>
+      </node>
+      <node id="6">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/Enemy.h</label>
+        <link refid="_enemy_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/PlayerCharacter.cpp</label>
+        <link refid="_player_character_8cpp"/>
+      </node>
+      <node id="2">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/PlayerCharacter.h</label>
+        <link refid="_player_character_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/RangedEnemy.cpp</label>
+        <link refid="_ranged_enemy_8cpp"/>
+      </node>
+      <node id="11">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/RangedEnemy.h</label>
+        <link refid="_ranged_enemy_8h"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/PlayerController.cpp</label>
+        <link refid="_player_controller_8cpp"/>
+      </node>
+      <node id="1">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/PlayerController.h</label>
+        <link refid="_player_controller_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/WaveManager.cpp</label>
+        <link refid="_wave_manager_8cpp"/>
+      </node>
+      <node id="16">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/UserInterface/MainMenu.cpp</label>
+        <link refid="_main_menu_8cpp"/>
+      </node>
+      <node id="17">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/UserInterface/Menu.cpp</label>
+        <link refid="_menu_8cpp"/>
+      </node>
+      <node id="18">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/UserInterface/PauseMenu.cpp</label>
+        <link refid="_pause_menu_8cpp"/>
+      </node>
+      <node id="14">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/UserInterface/ShopMenu.cpp</label>
+        <link refid="_shop_menu_8cpp"/>
+      </node>
+      <node id="13">
+        <label>D:/Uni/CMP208/Hellwatch/scene_app.cpp</label>
+        <link refid="scene__app_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="struct_f_key_bind_keyboard" prot="public">FKeyBindKeyboard</innerclass>
+    <innerclass refid="struct_f_key_bind_controller" prot="public">FKeyBindController</innerclass>
+    <innerclass refid="struct_f_key_bind_mouse" prot="public">FKeyBindMouse</innerclass>
+    <innerclass refid="struct_f_key_bind_set" prot="public">FKeyBindSet</innerclass>
+    <innerclass refid="class_player_controller" prot="public">PlayerController</innerclass>
+    <innernamespace refid="namespacegef">gef</innernamespace>
+    <innernamespace refid="namespace_hellwatch_input_action">HellwatchInputAction</innernamespace>
+    <innernamespace refid="namespace_hellwatch_controller_axis">HellwatchControllerAxis</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cstdint&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;functional&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;input/touch_input_manager.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;input/keyboard.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_utils_8h" kindref="compound">Utils.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacegef" kindref="compound">gef</ref></highlight></codeline>
+<codeline lineno="10"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">InputManager;</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">Platform;</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">SonyController;</highlight></codeline>
+<codeline lineno="14"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16" refid="namespace_hellwatch_input_action" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespace_hellwatch_input_action" kindref="compound">HellwatchInputAction</ref></highlight></codeline>
+<codeline lineno="17"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="18" refid="namespace_hellwatch_input_action_1ad39fcc17ea621da731d011339205f522" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="namespace_hellwatch_input_action_1ad39fcc17ea621da731d011339205f522" kindref="member">Type</ref></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="20" refid="namespace_hellwatch_input_action_1ad39fcc17ea621da731d011339205f522a1b668be2e7a287399767467c996dcdcb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespace_hellwatch_input_action_1ad39fcc17ea621da731d011339205f522a1b668be2e7a287399767467c996dcdcb" kindref="member">None</ref><sp/>=<sp/>0,</highlight></codeline>
+<codeline lineno="21" refid="namespace_hellwatch_input_action_1ad39fcc17ea621da731d011339205f522ac50db83d00684255156bb26fbadba101" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespace_hellwatch_input_action_1ad39fcc17ea621da731d011339205f522ac50db83d00684255156bb26fbadba101" kindref="member">Pressed</ref>,</highlight></codeline>
+<codeline lineno="22" refid="namespace_hellwatch_input_action_1ad39fcc17ea621da731d011339205f522a2e7461d356b36a8be3798d12aa43a81d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespace_hellwatch_input_action_1ad39fcc17ea621da731d011339205f522a2e7461d356b36a8be3798d12aa43a81d" kindref="member">Held</ref>,</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespace_hellwatch_input_action_1ad39fcc17ea621da731d011339205f522a6baa22c2058b4910e772c39c0e4104bf" kindref="member">Released</ref></highlight></codeline>
+<codeline lineno="24" refid="namespace_hellwatch_input_action_1ad39fcc17ea621da731d011339205f522a6baa22c2058b4910e772c39c0e4104bf" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="25"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27" refid="namespace_hellwatch_controller_axis" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespace_hellwatch_controller_axis" kindref="compound">HellwatchControllerAxis</ref></highlight></codeline>
+<codeline lineno="28"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="29" refid="namespace_hellwatch_controller_axis_1a6014138ce0ea9634c8a9c36539a7a967" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="namespace_hellwatch_controller_axis_1a6014138ce0ea9634c8a9c36539a7a967" kindref="member">Type</ref></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="31" refid="namespace_hellwatch_controller_axis_1a6014138ce0ea9634c8a9c36539a7a967af556634c68eda0587cb64022a5dec80d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespace_hellwatch_controller_axis_1a6014138ce0ea9634c8a9c36539a7a967af556634c68eda0587cb64022a5dec80d" kindref="member">None</ref><sp/>=<sp/>0,</highlight></codeline>
+<codeline lineno="32" refid="namespace_hellwatch_controller_axis_1a6014138ce0ea9634c8a9c36539a7a967a2c35b461f3a44e7f7e139b6829990d77" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespace_hellwatch_controller_axis_1a6014138ce0ea9634c8a9c36539a7a967a2c35b461f3a44e7f7e139b6829990d77" kindref="member">LeftStickXY</ref>,</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespace_hellwatch_controller_axis_1a6014138ce0ea9634c8a9c36539a7a967a052b1c55389f1a8945ac50fdf80d0220" kindref="member">RightStickXY</ref></highlight></codeline>
+<codeline lineno="34" refid="namespace_hellwatch_controller_axis_1a6014138ce0ea9634c8a9c36539a7a967a052b1c55389f1a8945ac50fdf80d0220" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="35"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>--------------------------------------<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="comment">/*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Key<sp/>bind<sp/>structs<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>--------------------------------------<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40" refid="struct_f_key_bind_keyboard" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_f_key_bind_keyboard" kindref="compound">FKeyBindKeyboard</ref></highlight></codeline>
+<codeline lineno="41"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="42" refid="struct_f_key_bind_keyboard_1a5af1767e769e14b7f3e66f5c1926ed6a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespace_hellwatch_input_action_1ad39fcc17ea621da731d011339205f522" kindref="member">HellwatchInputAction::Type</ref><sp/><ref refid="struct_f_key_bind_keyboard_1a5af1767e769e14b7f3e66f5c1926ed6a" kindref="member">inputAction</ref>;</highlight></codeline>
+<codeline lineno="43" refid="struct_f_key_bind_keyboard_1ac4a6383a3435b6ae4666585580d31fce" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>gef::Keyboard::KeyCode<sp/><ref refid="struct_f_key_bind_keyboard_1ac4a6383a3435b6ae4666585580d31fce" kindref="member">keyCode</ref>;</highlight></codeline>
+<codeline lineno="44" refid="struct_f_key_bind_keyboard_1a1743545acca699e351fae0996ad583bc" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::function&lt;void()&gt;<sp/><ref refid="struct_f_key_bind_keyboard_1a1743545acca699e351fae0996ad583bc" kindref="member">functionBind</ref>;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47" refid="struct_f_key_bind_controller" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_f_key_bind_controller" kindref="compound">FKeyBindController</ref></highlight></codeline>
+<codeline lineno="48"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="49" refid="struct_f_key_bind_controller_1a30a23da42d558b13a620780e9252e1b4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="struct_f_key_bind_controller_1a30a23da42d558b13a620780e9252e1b4" kindref="member">keyCode</ref>;</highlight></codeline>
+<codeline lineno="50" refid="struct_f_key_bind_controller_1a9439ad75707d54dacf3aff4d9532e80c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespace_hellwatch_input_action_1ad39fcc17ea621da731d011339205f522" kindref="member">HellwatchInputAction::Type</ref><sp/><ref refid="struct_f_key_bind_controller_1a9439ad75707d54dacf3aff4d9532e80c" kindref="member">inputAction</ref><sp/>=<sp/><ref refid="namespace_hellwatch_input_action_1ad39fcc17ea621da731d011339205f522a1b668be2e7a287399767467c996dcdcb" kindref="member">HellwatchInputAction::None</ref>;</highlight></codeline>
+<codeline lineno="51" refid="struct_f_key_bind_controller_1afd25023bd19b1e50223d80261426aa5a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespace_hellwatch_controller_axis_1a6014138ce0ea9634c8a9c36539a7a967" kindref="member">HellwatchControllerAxis::Type</ref><sp/><ref refid="struct_f_key_bind_controller_1afd25023bd19b1e50223d80261426aa5a" kindref="member">axis</ref><sp/>=<sp/><ref refid="namespace_hellwatch_controller_axis_1a6014138ce0ea9634c8a9c36539a7a967af556634c68eda0587cb64022a5dec80d" kindref="member">HellwatchControllerAxis::None</ref>;</highlight></codeline>
+<codeline lineno="52" refid="struct_f_key_bind_controller_1ad1881af9bbed2c677b1f11b8e5e3d5b6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::function&lt;void(gef::Vector2)&gt;<sp/><ref refid="struct_f_key_bind_controller_1ad1881af9bbed2c677b1f11b8e5e3d5b6" kindref="member">functionBind</ref>;</highlight></codeline>
+<codeline lineno="53"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55" refid="struct_f_key_bind_mouse" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_f_key_bind_mouse" kindref="compound">FKeyBindMouse</ref></highlight></codeline>
+<codeline lineno="56"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="57" refid="struct_f_key_bind_mouse_1a5bc7033239652acd4610ec1ca89ddf89" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>gef::TouchType<sp/><ref refid="struct_f_key_bind_mouse_1a5bc7033239652acd4610ec1ca89ddf89" kindref="member">clickAction</ref>;</highlight></codeline>
+<codeline lineno="58" refid="struct_f_key_bind_mouse_1a5845f86fa206d3ba7e4ab997960a3588" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::function&lt;void(gef::Vector2)&gt;<sp/><ref refid="struct_f_key_bind_mouse_1a5845f86fa206d3ba7e4ab997960a3588" kindref="member">functionBind</ref>;</highlight></codeline>
+<codeline lineno="59"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61" refid="struct_f_key_bind_set" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_f_key_bind_set" kindref="compound">FKeyBindSet</ref></highlight></codeline>
+<codeline lineno="62"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="63" refid="struct_f_key_bind_set_1a003faf9e27ce7e6933a32fac6900021f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;FKeyBindKeyboard&gt;<sp/><ref refid="struct_f_key_bind_set_1a003faf9e27ce7e6933a32fac6900021f" kindref="member">keyboardKeyBinds</ref>;</highlight></codeline>
+<codeline lineno="64" refid="struct_f_key_bind_set_1a135b83e0bfa3706469986a0036fe97fc" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;FKeyBindController&gt;<sp/><ref refid="struct_f_key_bind_set_1a135b83e0bfa3706469986a0036fe97fc" kindref="member">controllerKeyBinds</ref>;</highlight></codeline>
+<codeline lineno="65" refid="struct_f_key_bind_set_1a23f3845994019b3bdc4f0c1455f8eb04" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;FKeyBindMouse&gt;<sp/><ref refid="struct_f_key_bind_set_1a23f3845994019b3bdc4f0c1455f8eb04" kindref="member">mouseKeyBinds</ref>;</highlight></codeline>
+<codeline lineno="66"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71" refid="class_player_controller" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_player_controller" kindref="compound">PlayerController</ref></highlight></codeline>
+<codeline lineno="72"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_player_controller" kindref="compound">PlayerController</ref>(gef::Platform&amp;<sp/>platform);</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/>gef::Vector2<sp/><ref refid="class_player_controller_1a3cf1cb2523e6b8a78cdbaf9df577b3be" kindref="member">GetMousePosition</ref>();</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_player_controller_1a3ecff75f943f340bce2240d58eaf7f4f" kindref="member">BindKeyboardEvent</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="struct_f_key_bind_keyboard" kindref="compound">FKeyBindKeyboard</ref><sp/>keyboardEvent,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>bUnique<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>bReplaceIfUnique<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_player_controller_1a3b4ce10a473a2000d1b204c7830bff97" kindref="member">BindControllerEvent</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="struct_f_key_bind_controller" kindref="compound">FKeyBindController</ref><sp/>controllerEvent,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>bUnique<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>bReplaceIfUnique<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_player_controller_1a654bf416ea31cbe022ccc50c7e1832e8" kindref="member">BindMouseEvent</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="struct_f_key_bind_mouse" kindref="compound">FKeyBindMouse</ref><sp/>mouseEvent);</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_player_controller_1a92f0d14a05056e6296fc726fc7073410" kindref="member">BindKeyBindSet</ref>(<ref refid="struct_f_key_bind_set" kindref="compound">FKeyBindSet</ref><sp/>keyBindSet);</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_player_controller_1a2e0c380d64a88c8cfe60ce8452921227" kindref="member">Update</ref>();</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>--------------------------------------<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/><sp/><sp/><sp/><sp/><sp/>Process<sp/>key<sp/>binds<sp/>functions<sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>--------------------------------------<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="124"><highlight class="normal"></highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>EvaluateKeyboardKeybinds(gef::Keyboard*<sp/>keyboard);</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>EvaluateControllerKeybinds(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>gef::SonyController*<sp/>controller);</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>EvaluateMouseKeybinds(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>gef::TouchInputManager*<sp/>touchInput);</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>--------------------------------------<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Key<sp/>Binds<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>--------------------------------------<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;FKeyBindKeyboard&gt;<sp/>keyboardKeyBinds;</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;FKeyBindController&gt;<sp/>controllerKeyBinds;</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;FKeyBindMouse&gt;<sp/>mouseKeyBinds;</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"></highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>--------------------------------------<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Mouse<sp/>Stuff<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>--------------------------------------<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/>Int32<sp/>activeTouchID;</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/>gef::Vector2<sp/>touchPosition;</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"></highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/>gef::Vector2<sp/>lastMousePosition<sp/>=<sp/>gef::Vector2(0,<sp/>0);</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"></highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>--------------------------------------<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Input<sp/>Manager<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>--------------------------------------<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/>gef::InputManager*<sp/>inputManager;</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"></highlight></codeline>
+<codeline lineno="149"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"></highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="struct_f_key_bind_set" kindref="compound">FKeyBindSet</ref>&amp;<sp/><ref refid="class_player_controller_1ac23282a33a9bfc6972828f0ce385a52b" kindref="member">GetKeybindSet</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="152"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/PlayerController.h"/>
+  </compounddef>
+</doxygen>

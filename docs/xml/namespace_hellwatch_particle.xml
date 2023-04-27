@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="namespace_hellwatch_particle" kind="namespace" language="C++">
+    <compoundname>HellwatchParticle</compoundname>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="namespace_hellwatch_particle_1a93a028826056ca781710ef2830834f51" prot="public" static="no" strong="no">
+        <type></type>
+        <name>Type</name>
+        <qualifiedname>HellwatchParticle::Type</qualifiedname>
+        <enumvalue id="namespace_hellwatch_particle_1a93a028826056ca781710ef2830834f51a6436e49d303ed9b9a1fa51de335afc1d" prot="public">
+          <name>Explosion</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_hellwatch_particle_1a93a028826056ca781710ef2830834f51a31724befc90ab0517472666b48eedb0b" prot="public">
+          <name>Death</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_hellwatch_particle_1a93a028826056ca781710ef2830834f51acfc9f6dd38f3e82bbc2fb485f2beea26" prot="public">
+          <name>Dash</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/ParticleManager.h" line="14" column="1" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/ParticleManager.h" bodystart="15" bodyend="19"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/ParticleManager.h" line="12" column="1"/>
+  </compounddef>
+</doxygen>

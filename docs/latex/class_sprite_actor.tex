@@ -1,0 +1,209 @@
+\hypertarget{class_sprite_actor}{}\doxysection{Sprite\+Actor Class Reference}
+\label{class_sprite_actor}\index{SpriteActor@{SpriteActor}}
+
+
+An object that has a sprite   
+
+
+
+
+{\ttfamily \#include $<$Sprite\+Actor.\+h$>$}
+
+
+
+Inheritance diagram for Sprite\+Actor\+:
+% FIG 0
+
+
+Collaboration diagram for Sprite\+Actor\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_sprite_actor_a7cec018143780ec6eb5c6986909702b7}{Sprite\+Actor}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor  \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_sprite_actor_a621cb54068cc048f59c012c6c53a9b45}{Sprite\+Actor}} (float width, float height, gef\+::\+Texture $\ast$texture=nullptr, UInt32 colour=0x\+FFFFFFFF)
+\begin{DoxyCompactList}\small\item\em Constructor that sets up the sprite  \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_sprite_actor_a087bb8b789d29d3e7c71db58e4c2a5e0}{$\sim$\+Sprite\+Actor}} ()
+\item 
+virtual void \mbox{\hyperlink{class_sprite_actor_a9bee8a49bee219bae0190046e3ec5d1c}{Set\+Translation}} (const gef\+::\+Vector4 \&in\+Translation) override
+\item 
+virtual void \mbox{\hyperlink{class_sprite_actor_ad7d2b2ba00da6fd85e8dfd84d9aaa776}{Set\+Rotation}} (const float rotation) override
+\item 
+virtual void \mbox{\hyperlink{class_sprite_actor_a432a23017cf5aa8fe8b521ee5884c996}{Set\+Scale}} (const gef\+::\+Vector4 \&in\+Scale)
+\item 
+void \mbox{\hyperlink{class_sprite_actor_a2c4fffd3038c47dcda6592a398f6386c}{Set\+Texture}} (gef\+::\+Texture $\ast$texture)
+\item 
+void \mbox{\hyperlink{class_sprite_actor_a0369b43c4507873169b90af54f002da3}{Set\+Sprite}} (gef\+::\+Sprite $\ast$in\+Sprite)
+\item 
+void \mbox{\hyperlink{class_sprite_actor_a34892b4383f3a0dec1c43345b19a8e8e}{Set\+Width}} (float new\+Width)
+\item 
+void \mbox{\hyperlink{class_sprite_actor_adf4a1510ceb0dbf66a582614b1dfaddc}{Set\+Height}} (float new\+Height)
+\item 
+virtual void \mbox{\hyperlink{class_sprite_actor_a0820aad46981ac11174f67ab97433473}{Render}} () override
+\begin{DoxyCompactList}\small\item\em Renders the object  \end{DoxyCompactList}\item 
+\+\_\+\+\_\+forceinline gef\+::\+Sprite $\ast$ \mbox{\hyperlink{class_sprite_actor_a530cf84805cb957b99f95fd9a8c0c1e3}{Get\+Sprite}} () const
+\item 
+\+\_\+\+\_\+forceinline virtual const float \mbox{\hyperlink{class_sprite_actor_aaf810a489f9916ecd2d041cd61d39874}{Get\+RotationF}} () const override
+\item 
+\+\_\+\+\_\+forceinline virtual const gef\+::\+Vector4 \& \mbox{\hyperlink{class_sprite_actor_a4d9d23b93afa89ec5aa8e04786252b19}{Get\+Translation}} () const
+\item 
+\+\_\+\+\_\+forceinline virtual const gef\+::\+Vector4 \& \mbox{\hyperlink{class_sprite_actor_a473e053ec3e6e8a460020ba3833acc2e}{Get\+Scale}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+An object that has a sprite  
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_sprite_actor_a7cec018143780ec6eb5c6986909702b7}\label{class_sprite_actor_a7cec018143780ec6eb5c6986909702b7}} 
+\index{SpriteActor@{SpriteActor}!SpriteActor@{SpriteActor}}
+\index{SpriteActor@{SpriteActor}!SpriteActor@{SpriteActor}}
+\doxysubsubsection{\texorpdfstring{SpriteActor()}{SpriteActor()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Sprite\+Actor\+::\+Sprite\+Actor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Default constructor  
+
+\mbox{\Hypertarget{class_sprite_actor_a621cb54068cc048f59c012c6c53a9b45}\label{class_sprite_actor_a621cb54068cc048f59c012c6c53a9b45}} 
+\index{SpriteActor@{SpriteActor}!SpriteActor@{SpriteActor}}
+\index{SpriteActor@{SpriteActor}!SpriteActor@{SpriteActor}}
+\doxysubsubsection{\texorpdfstring{SpriteActor()}{SpriteActor()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Sprite\+Actor\+::\+Sprite\+Actor (\begin{DoxyParamCaption}\item[{float}]{width,  }\item[{float}]{height,  }\item[{gef\+::\+Texture $\ast$}]{texture = {\ttfamily nullptr},  }\item[{UInt32}]{colour = {\ttfamily 0xFFFFFFFF} }\end{DoxyParamCaption})}
+
+
+
+Constructor that sets up the sprite  
+
+
+\begin{DoxyParams}{Parameters}
+{\em width} & Width of the sprite\\
+\hline
+{\em height} & Height of the sprite\\
+\hline
+{\em texture} & Texture of the sprite\\
+\hline
+{\em colour} & Colour of the sprite\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_sprite_actor_a087bb8b789d29d3e7c71db58e4c2a5e0}\label{class_sprite_actor_a087bb8b789d29d3e7c71db58e4c2a5e0}} 
+\index{SpriteActor@{SpriteActor}!````~SpriteActor@{$\sim$SpriteActor}}
+\index{````~SpriteActor@{$\sim$SpriteActor}!SpriteActor@{SpriteActor}}
+\doxysubsubsection{\texorpdfstring{$\sim$SpriteActor()}{~SpriteActor()}}
+{\footnotesize\ttfamily Sprite\+Actor\+::$\sim$\+Sprite\+Actor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_sprite_actor_aaf810a489f9916ecd2d041cd61d39874}\label{class_sprite_actor_aaf810a489f9916ecd2d041cd61d39874}} 
+\index{SpriteActor@{SpriteActor}!GetRotationF@{GetRotationF}}
+\index{GetRotationF@{GetRotationF}!SpriteActor@{SpriteActor}}
+\doxysubsubsection{\texorpdfstring{GetRotationF()}{GetRotationF()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+forceinline virtual const float Sprite\+Actor\+::\+Get\+RotationF (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_world_object_aa959995cc385843f1e2b0139e4413ab5}{World\+Object}}.
+
+\mbox{\Hypertarget{class_sprite_actor_a473e053ec3e6e8a460020ba3833acc2e}\label{class_sprite_actor_a473e053ec3e6e8a460020ba3833acc2e}} 
+\index{SpriteActor@{SpriteActor}!GetScale@{GetScale}}
+\index{GetScale@{GetScale}!SpriteActor@{SpriteActor}}
+\doxysubsubsection{\texorpdfstring{GetScale()}{GetScale()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+forceinline virtual const gef\+::\+Vector4 \& Sprite\+Actor\+::\+Get\+Scale (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_world_object_a223b3653f965b7698ec28c9b4fc84e28}{World\+Object}}.
+
+\mbox{\Hypertarget{class_sprite_actor_a530cf84805cb957b99f95fd9a8c0c1e3}\label{class_sprite_actor_a530cf84805cb957b99f95fd9a8c0c1e3}} 
+\index{SpriteActor@{SpriteActor}!GetSprite@{GetSprite}}
+\index{GetSprite@{GetSprite}!SpriteActor@{SpriteActor}}
+\doxysubsubsection{\texorpdfstring{GetSprite()}{GetSprite()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+forceinline gef\+::\+Sprite $\ast$ Sprite\+Actor\+::\+Get\+Sprite (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_sprite_actor_a4d9d23b93afa89ec5aa8e04786252b19}\label{class_sprite_actor_a4d9d23b93afa89ec5aa8e04786252b19}} 
+\index{SpriteActor@{SpriteActor}!GetTranslation@{GetTranslation}}
+\index{GetTranslation@{GetTranslation}!SpriteActor@{SpriteActor}}
+\doxysubsubsection{\texorpdfstring{GetTranslation()}{GetTranslation()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+forceinline virtual const gef\+::\+Vector4 \& Sprite\+Actor\+::\+Get\+Translation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_world_object_a9967baa65719f1418641598a244306a5}{World\+Object}}.
+
+\mbox{\Hypertarget{class_sprite_actor_a0820aad46981ac11174f67ab97433473}\label{class_sprite_actor_a0820aad46981ac11174f67ab97433473}} 
+\index{SpriteActor@{SpriteActor}!Render@{Render}}
+\index{Render@{Render}!SpriteActor@{SpriteActor}}
+\doxysubsubsection{\texorpdfstring{Render()}{Render()}}
+{\footnotesize\ttfamily void Sprite\+Actor\+::\+Render (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Renders the object  
+
+
+
+Reimplemented from \mbox{\hyperlink{class_world_object_a2a30bf431fa478eb5d24683e1906c261}{World\+Object}}.
+
+\mbox{\Hypertarget{class_sprite_actor_adf4a1510ceb0dbf66a582614b1dfaddc}\label{class_sprite_actor_adf4a1510ceb0dbf66a582614b1dfaddc}} 
+\index{SpriteActor@{SpriteActor}!SetHeight@{SetHeight}}
+\index{SetHeight@{SetHeight}!SpriteActor@{SpriteActor}}
+\doxysubsubsection{\texorpdfstring{SetHeight()}{SetHeight()}}
+{\footnotesize\ttfamily void Sprite\+Actor\+::\+Set\+Height (\begin{DoxyParamCaption}\item[{float}]{new\+Height }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_sprite_actor_ad7d2b2ba00da6fd85e8dfd84d9aaa776}\label{class_sprite_actor_ad7d2b2ba00da6fd85e8dfd84d9aaa776}} 
+\index{SpriteActor@{SpriteActor}!SetRotation@{SetRotation}}
+\index{SetRotation@{SetRotation}!SpriteActor@{SpriteActor}}
+\doxysubsubsection{\texorpdfstring{SetRotation()}{SetRotation()}}
+{\footnotesize\ttfamily void Sprite\+Actor\+::\+Set\+Rotation (\begin{DoxyParamCaption}\item[{const float}]{rotation }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_world_object_ad73836d8146cc9e1d475eb74fb05481a}{World\+Object}}.
+
+\mbox{\Hypertarget{class_sprite_actor_a432a23017cf5aa8fe8b521ee5884c996}\label{class_sprite_actor_a432a23017cf5aa8fe8b521ee5884c996}} 
+\index{SpriteActor@{SpriteActor}!SetScale@{SetScale}}
+\index{SetScale@{SetScale}!SpriteActor@{SpriteActor}}
+\doxysubsubsection{\texorpdfstring{SetScale()}{SetScale()}}
+{\footnotesize\ttfamily void Sprite\+Actor\+::\+Set\+Scale (\begin{DoxyParamCaption}\item[{const gef\+::\+Vector4 \&}]{in\+Scale }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_world_object_ae00d341e9ac8909374dd556aaecbdb46}{World\+Object}}.
+
+\mbox{\Hypertarget{class_sprite_actor_a0369b43c4507873169b90af54f002da3}\label{class_sprite_actor_a0369b43c4507873169b90af54f002da3}} 
+\index{SpriteActor@{SpriteActor}!SetSprite@{SetSprite}}
+\index{SetSprite@{SetSprite}!SpriteActor@{SpriteActor}}
+\doxysubsubsection{\texorpdfstring{SetSprite()}{SetSprite()}}
+{\footnotesize\ttfamily void Sprite\+Actor\+::\+Set\+Sprite (\begin{DoxyParamCaption}\item[{gef\+::\+Sprite $\ast$}]{in\+Sprite }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_sprite_actor_a2c4fffd3038c47dcda6592a398f6386c}\label{class_sprite_actor_a2c4fffd3038c47dcda6592a398f6386c}} 
+\index{SpriteActor@{SpriteActor}!SetTexture@{SetTexture}}
+\index{SetTexture@{SetTexture}!SpriteActor@{SpriteActor}}
+\doxysubsubsection{\texorpdfstring{SetTexture()}{SetTexture()}}
+{\footnotesize\ttfamily void Sprite\+Actor\+::\+Set\+Texture (\begin{DoxyParamCaption}\item[{gef\+::\+Texture $\ast$}]{texture }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_sprite_actor_a9bee8a49bee219bae0190046e3ec5d1c}\label{class_sprite_actor_a9bee8a49bee219bae0190046e3ec5d1c}} 
+\index{SpriteActor@{SpriteActor}!SetTranslation@{SetTranslation}}
+\index{SetTranslation@{SetTranslation}!SpriteActor@{SpriteActor}}
+\doxysubsubsection{\texorpdfstring{SetTranslation()}{SetTranslation()}}
+{\footnotesize\ttfamily void Sprite\+Actor\+::\+Set\+Translation (\begin{DoxyParamCaption}\item[{const gef\+::\+Vector4 \&}]{in\+Translation }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_world_object_a830b64bbf6df3fc50284b0316c124133}{World\+Object}}.
+
+\mbox{\Hypertarget{class_sprite_actor_a34892b4383f3a0dec1c43345b19a8e8e}\label{class_sprite_actor_a34892b4383f3a0dec1c43345b19a8e8e}} 
+\index{SpriteActor@{SpriteActor}!SetWidth@{SetWidth}}
+\index{SetWidth@{SetWidth}!SpriteActor@{SpriteActor}}
+\doxysubsubsection{\texorpdfstring{SetWidth()}{SetWidth()}}
+{\footnotesize\ttfamily void Sprite\+Actor\+::\+Set\+Width (\begin{DoxyParamCaption}\item[{float}]{new\+Width }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Uni/\+CMP208/\+Hellwatch/build/vs2017/\+Actors/\mbox{\hyperlink{_sprite_actor_8h}{Sprite\+Actor.\+h}}\item 
+D\+:/\+Uni/\+CMP208/\+Hellwatch/build/vs2017/\+Actors/\mbox{\hyperlink{_sprite_actor_8cpp}{Sprite\+Actor.\+cpp}}\end{DoxyCompactItemize}

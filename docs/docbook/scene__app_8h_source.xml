@@ -1,0 +1,302 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_scene__app_8h_source" xml:lang="en-US">
+<title>D:/Uni/CMP208/Hellwatch/scene_app.h</title>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered">1 <emphasis role="preprocessor">#ifndef&#32;_SCENE_APP_H</emphasis>
+2 <emphasis role="preprocessor">#define&#32;_SCENE_APP_H</emphasis>
+3 
+4 <emphasis role="preprocessor">#include&#32;&lt;system/application.h&gt;</emphasis>
+5 <emphasis role="preprocessor">#include&#32;&lt;maths/vector2.h&gt;</emphasis>
+6 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="_primitive__builder_8h">primitive_builder.h</link>&quot;</emphasis>
+7 <emphasis role="preprocessor">#include&#32;&quot;graphics/scene.h&quot;</emphasis>
+8 <emphasis role="preprocessor">#include&#32;&quot;box2d/box2d.h&quot;</emphasis>
+9 <emphasis role="preprocessor">#include&#32;&quot;system/platform.h&quot;</emphasis>
+10 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="_obj__mesh__loader_8h">obj_mesh_loader.h</link>&quot;</emphasis>
+11 <emphasis role="preprocessor">#include&#32;&quot;graphics/font.h&quot;</emphasis>
+12 
+13 <emphasis role="preprocessor">#include&#32;&lt;vector&gt;</emphasis>
+14 <emphasis role="preprocessor">#include&#32;&lt;future&gt;</emphasis>
+15 <emphasis role="preprocessor">#include&#32;&lt;random&gt;</emphasis>
+16 
+17 <emphasis role="keyword">namespace&#32;</emphasis><link linkend="_namespace_game_state">GameState</link>
+18 {
+19 &#32;&#32;&#32;&#32;<emphasis role="keyword">enum</emphasis>&#32;<link linkend="_namespace_game_state_1aa2df68fe63beaaf10d3154d8eb490fe6">Type</link>
+20 &#32;&#32;&#32;&#32;{
+21 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_namespace_game_state_1aa2df68fe63beaaf10d3154d8eb490fe6a1c09055471a61c18afc1fc201e6d7d2a">Loading</link>,
+22 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_namespace_game_state_1aa2df68fe63beaaf10d3154d8eb490fe6afff9d63720dd6c0c621817980d02d9ee">MainMenu</link>,
+23 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_namespace_game_state_1aa2df68fe63beaaf10d3154d8eb490fe6aa1babbc78fafb7b98d14a8fcc880bd55">GameLoop</link>,
+24 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_namespace_game_state_1aa2df68fe63beaaf10d3154d8eb490fe6a6e1adcd2eb4fb5660e3baadd566e4873">PauseMenu</link>,
+25 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_namespace_game_state_1aa2df68fe63beaaf10d3154d8eb490fe6a11dfd10e2813b09f256dd86e3902dfe2">Shop</link>,
+26 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_namespace_game_state_1aa2df68fe63beaaf10d3154d8eb490fe6a797c961d3f35a579149051adc329e58e">GameEnd</link>
+27 &#32;&#32;&#32;&#32;};
+28 }
+29 
+30 <emphasis role="keyword">struct&#32;</emphasis><link linkend="_struct_f_camera_shake">FCameraShake</link>
+31 {
+32 &#32;&#32;&#32;&#32;gef::Vector4&#32;<link linkend="_struct_f_camera_shake_1ae28540e423d42a897f77f196f27bcde7">maxOffset</link>&#32;=&#32;gef::Vector4::kZero;
+33 &#32;&#32;&#32;&#32;gef::Vector4&#32;<link linkend="_struct_f_camera_shake_1a957c35cfc269421091fc884a21d41899">minOffset</link>&#32;=&#32;gef::Vector4::kZero;
+34 
+35 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">float</emphasis>&#32;<link linkend="_struct_f_camera_shake_1a0067a7fbb68d30a2f8d68511a6403e46">lerpAlpha</link>&#32;=&#32;0.f;
+36 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">float</emphasis>&#32;<link linkend="_struct_f_camera_shake_1a28904f65e3bcb603c865ba72bcbea0e2">duration</link>&#32;=&#32;1.f;
+37 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">float</emphasis>&#32;<link linkend="_struct_f_camera_shake_1a089db07499dd81ac8736501fbe46aa86">intensity</link>&#32;=&#32;1.f;
+38 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">float</emphasis>&#32;<link linkend="_struct_f_camera_shake_1a11948ae09ec868a32530378efd25f34f">cameraShakeStartTime</link>&#32;=&#32;0.f;
+39 
+40 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_struct_f_camera_shake_1a11241077b74ae4a78aab9c55f25f8827">bMovingForward</link>&#32;=&#32;<emphasis role="keyword">true</emphasis>;
+41 };
+42 
+43 <emphasis role="comment">//&#32;FRAMEWORK&#32;FORWARD&#32;DECLARATIONS</emphasis>
+44 <emphasis role="keyword">namespace&#32;</emphasis><link linkend="_namespacegef">gef</link>
+45 {
+46 &#32;&#32;&#32;&#32;<emphasis role="keyword">class&#32;</emphasis>Platform;
+47 &#32;&#32;&#32;&#32;<emphasis role="keyword">class&#32;</emphasis>SpriteRenderer;
+48 &#32;&#32;&#32;&#32;<emphasis role="keyword">class&#32;</emphasis>Font;
+49 &#32;&#32;&#32;&#32;<emphasis role="keyword">class&#32;</emphasis>InputManager;
+50 &#32;&#32;&#32;&#32;<emphasis role="keyword">class&#32;</emphasis>Renderer3D;
+51 &#32;&#32;&#32;&#32;<emphasis role="keyword">class&#32;</emphasis>Sprite;
+52 &#32;&#32;&#32;&#32;<emphasis role="keyword">class&#32;</emphasis>AudioManager;
+53 }
+54 
+55 <emphasis role="comment">/*&#32;Forward&#32;declarations&#32;*/</emphasis>
+56 <emphasis role="keyword">class&#32;</emphasis><link linkend="_class_mesh_actor">MeshActor</link>;
+57 <emphasis role="keyword">class&#32;</emphasis><link linkend="_class_sprite_actor">SpriteActor</link>;
+58 <emphasis role="keyword">class&#32;</emphasis><link linkend="_class_world_object">WorldObject</link>;
+59 <emphasis role="keyword">class&#32;</emphasis><link linkend="_class_player_character">PlayerCharacter</link>;
+60 <emphasis role="keyword">class&#32;</emphasis><link linkend="_class_enemy_dummy">EnemyDummy</link>;
+61 <emphasis role="keyword">class&#32;</emphasis><link linkend="_class_enemy">Enemy</link>;
+62 <emphasis role="keyword">class&#32;</emphasis><link linkend="_class_ranged_enemy">RangedEnemy</link>;
+63 <emphasis role="keyword">class&#32;</emphasis><link linkend="_class_wave_manager">WaveManager</link>;
+64 <emphasis role="keyword">class&#32;</emphasis><link linkend="_class_main_menu">MainMenu</link>;
+65 <emphasis role="keyword">class&#32;</emphasis><link linkend="_class_shop_menu">ShopMenu</link>;
+66 <emphasis role="keyword">class&#32;</emphasis><link linkend="_class_pause_menu">PauseMenu</link>;
+67 <emphasis role="keyword">class&#32;</emphasis><link linkend="_class_game_end_menu">GameEndMenu</link>;
+68 <emphasis role="keyword">class&#32;</emphasis><link linkend="_class_player_controller">PlayerController</link>;
+69 <emphasis role="keyword">class&#32;</emphasis><link linkend="_class_particle_manager">ParticleManager</link>;
+70 
+71 <emphasis role="keyword">typedef</emphasis>&#32;std::map&lt;std::string,&#32;gef::Texture*&gt;&#32;<link linkend="_scene__app_8h_1a5b57d40276b77cc074d878efc78bb980">TextureMap</link>;
+72 <emphasis role="keyword">typedef</emphasis>&#32;std::map&lt;std::string,&#32;int&gt;&#32;<link linkend="_scene__app_8h_1a8d89ee6a10feffd9323a0031e0bbea29">SoundMap</link>;
+73 
+74 <emphasis role="keyword">class&#32;</emphasis><link linkend="_class_scene_app">SceneApp</link>&#32;:&#32;<emphasis role="keyword">public</emphasis>&#32;gef::Application
+75 {
+76 <emphasis role="keyword">public</emphasis>:
+77 
+78 &#32;&#32;&#32;&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keyword">inline</emphasis>&#32;<link linkend="_class_scene_app">SceneApp</link>*&#32;SceneApp::instance;
+79 
+80 &#32;&#32;&#32;&#32;<link linkend="_class_scene_app">SceneApp</link>(gef::Platform&amp;&#32;platform);
+81 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_scene_app_1afbc3cd83343839fef53b5fcc2da630e6">Init</link>();
+82 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_scene_app_1ab815a8823c2248fcebdc7a06867bdb9b">CleanUp</link>();
+83 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_class_scene_app_1a48adec081291fea513f516bec9dcb898">Update</link>(<emphasis role="keywordtype">float</emphasis>&#32;frame_time);
+84 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_scene_app_1afd9eebbabf3fe176d9fe30b309c2130c">Render</link>();
+85 
+90 &#32;&#32;&#32;&#32;b2Body*&#32;<link linkend="_class_scene_app_1adcf5fcd2dfcb07d468c0ff4455e45bdd">CreateCollisionBody</link>(b2BodyDef&#32;bodyDef,&#32;b2FixtureDef&#32;fixtureDef,&#32;<link linkend="_class_world_object">WorldObject</link>*&#32;owningObject);
+91 
+92 <emphasis role="keyword">private</emphasis>:
+93 
+94 <emphasis role="comment">&#32;&#32;&#32;&#32;/************************************************************************/</emphasis>
+95 &#32;&#32;&#32;&#32;<emphasis role="comment">/*&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;CALLED&#32;ONCE&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;*/</emphasis>
+96 <emphasis role="comment">&#32;&#32;&#32;&#32;/************************************************************************/</emphasis>
+97 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;InitFont();
+98 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;CleanUpFont();
+99 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;SetupLights();
+100 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;InitGameLoop();
+101 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;InitMainMenu();
+102 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;InitShop();
+103 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;InitPauseMenu();
+104 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;InitGameEndMenu();
+105 
+106 <emphasis role="comment">&#32;&#32;&#32;&#32;/************************************************************************/</emphasis>
+107 &#32;&#32;&#32;&#32;<emphasis role="comment">/*&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;UPDATES&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;*/</emphasis>
+108 <emphasis role="comment">&#32;&#32;&#32;&#32;/************************************************************************/</emphasis>
+109 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;UpdateLoading(<emphasis role="keywordtype">float</emphasis>&#32;frame_time);
+110 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;UpdateMainMenu(<emphasis role="keywordtype">float</emphasis>&#32;frame_time);
+111 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;UpdateGameLoop(<emphasis role="keywordtype">float</emphasis>&#32;frame_time);
+112 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;UpdatePauseMenu(<emphasis role="keywordtype">float</emphasis>&#32;frame_time);
+113 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;UpdateShop();
+114 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;UpdateGameEnd();
+115 
+116 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;HandleCollision();
+117 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;CheckMarkedForDeletion();
+118 
+119 
+120 <emphasis role="comment">&#32;&#32;&#32;&#32;/************************************************************************/</emphasis>
+121 &#32;&#32;&#32;&#32;<emphasis role="comment">/*&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;RENDERING&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;*/</emphasis>
+122 <emphasis role="comment">&#32;&#32;&#32;&#32;/************************************************************************/</emphasis>
+123 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;DrawHUD();
+124 
+125 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;RenderLoading();
+126 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;RenderMainMenu();
+127 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;RenderGameLoop();
+128 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;RenderPauseMenu();
+129 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;RenderShop();
+130 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;RenderGameEnd();
+131 
+132 <emphasis role="comment">&#32;&#32;&#32;&#32;/*******************************************************</emphasis>
+133 <emphasis role="comment">&#32;&#32;&#32;&#32;*&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;GAME&#32;STATE&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;*</emphasis>
+134 <emphasis role="comment">&#32;&#32;&#32;&#32;*******************************************************/</emphasis>
+135 &#32;&#32;&#32;&#32;<link linkend="_namespace_game_state_1aa2df68fe63beaaf10d3154d8eb490fe6">GameState::Type</link>&#32;gameState;
+136 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;bGameLoopInitted&#32;=&#32;<emphasis role="keyword">false</emphasis>;
+137 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;bCommingFromMainMenu&#32;=&#32;<emphasis role="keyword">false</emphasis>;
+138 
+139 <emphasis role="comment">&#32;&#32;&#32;&#32;/*******************************************************</emphasis>
+140 <emphasis role="comment">&#32;&#32;&#32;&#32;*&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;ASSET&#32;LOADING&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;*</emphasis>
+141 <emphasis role="comment">&#32;&#32;&#32;&#32;*******************************************************/</emphasis>
+142 &#32;&#32;&#32;&#32;gef::Scene*&#32;LoadSceneAssets(gef::Platform&amp;&#32;platform,&#32;<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">char</emphasis>*&#32;filename);
+143 &#32;&#32;&#32;&#32;gef::Mesh*&#32;GetMeshFromSceneAssets(gef::Scene*&#32;scene);
+144 
+145 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;LoadAssets();
+146 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;BuildToLoadData();
+147 
+148 &#32;&#32;&#32;&#32;<link linkend="_class_primitive_builder">PrimitiveBuilder</link>*&#32;primitive_builder_;
+149 &#32;&#32;&#32;&#32;<link linkend="_obj__mesh__loader_8h_1ab6d74e55cf8354fe68dd64bd265a814e">MeshMap</link>&#32;meshes;
+150 &#32;&#32;&#32;&#32;<link linkend="_scene__app_8h_1a5b57d40276b77cc074d878efc78bb980">TextureMap</link>&#32;textures;
+151 
+152 <emphasis role="comment">&#32;&#32;&#32;&#32;/*******************************************************</emphasis>
+153 <emphasis role="comment">&#32;&#32;&#32;&#32;*&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;RENDERING&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;*</emphasis>
+154 <emphasis role="comment">&#32;&#32;&#32;&#32;*******************************************************/</emphasis>
+155 &#32;&#32;&#32;&#32;gef::SpriteRenderer*&#32;sprite_renderer_;
+156 &#32;&#32;&#32;&#32;gef::Font*&#32;font_;
+157 &#32;&#32;&#32;&#32;gef::Renderer3D*&#32;renderer_3d_;
+158 
+159 &#32;&#32;&#32;&#32;<emphasis role="comment">/*&#32;This&#32;is&#32;used&#32;to&#32;asynchronously&#32;load&#32;assets&#32;*/</emphasis>
+160 &#32;&#32;&#32;&#32;std::future&lt;GameState::Type&gt;&#32;loadFuture;
+161 
+162 &#32;&#32;&#32;&#32;<emphasis role="comment">/*&#32;Menu&#32;classes&#32;and&#32;wave&#32;manager&#32;*/</emphasis>
+163 &#32;&#32;&#32;&#32;<link linkend="_class_wave_manager">WaveManager</link>*&#32;waveManager;
+164 &#32;&#32;&#32;&#32;<link linkend="_class_main_menu">MainMenu</link>*&#32;mainMenu;
+165 &#32;&#32;&#32;&#32;<link linkend="_class_shop_menu">ShopMenu</link>*&#32;shopMenu;
+166 &#32;&#32;&#32;&#32;<link linkend="_class_pause_menu">PauseMenu</link>*&#32;pauseMenu;
+167 &#32;&#32;&#32;&#32;<link linkend="_class_game_end_menu">GameEndMenu</link>*&#32;gameEndMenu;
+168 
+169 &#32;&#32;&#32;&#32;<emphasis role="comment">/*&#32;We&#32;store&#32;this&#32;here&#32;for&#32;ease&#32;of&#32;access&#32;*/</emphasis>
+170 &#32;&#32;&#32;&#32;uint32_t&#32;playerMoney&#32;=&#32;0;
+171 
+172 &#32;&#32;&#32;&#32;<emphasis role="comment">/*&#32;Utility&#32;function&#32;to&#32;find&#32;sample&#32;name&#32;*/</emphasis>
+173 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;FindSampleFromName(std::string&#32;sampleName);
+174 
+175 <emphasis role="comment">&#32;&#32;&#32;&#32;/************************************************************************/</emphasis>
+176 &#32;&#32;&#32;&#32;<emphasis role="comment">/*&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;REQUIRED&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;*/</emphasis>
+177 <emphasis role="comment">&#32;&#32;&#32;&#32;/************************************************************************/</emphasis>
+178 &#32;&#32;&#32;&#32;gef::Sprite*&#32;loadingSprite;
+179 &#32;&#32;&#32;&#32;<link linkend="_class_player_character">PlayerCharacter</link>*&#32;playerCharacter;
+180 &#32;&#32;&#32;&#32;std::vector&lt;MeshActor*&gt;&#32;meshActors;
+181 &#32;&#32;&#32;&#32;std::vector&lt;SpriteActor*&gt;&#32;spriteActors;
+182 &#32;&#32;&#32;&#32;gef::Scene*&#32;scene_assets_;
+183 &#32;&#32;&#32;&#32;std::vector&lt;std::string&gt;&#32;meshesToLoad;
+184 &#32;&#32;&#32;&#32;std::map&lt;std::string,&#32;std::string&gt;&#32;texturesToLoad;
+185 &#32;&#32;&#32;&#32;std::map&lt;std::string,&#32;std::string&gt;&#32;soundsToLoad;
+186 
+187 &#32;&#32;&#32;&#32;gef::Sprite*&#32;pointerSprite;
+188 &#32;&#32;&#32;&#32;gef::Vector2&#32;pointerLocation&#32;=&#32;gef::Vector2(0,&#32;0);
+189 
+190 &#32;&#32;&#32;&#32;gef::Vector4&#32;cameraEye&#32;=&#32;gef::Vector4(0.0f,&#32;20.0f,&#32;0.0f);
+191 &#32;&#32;&#32;&#32;gef::Vector4&#32;cameraLookAt&#32;=&#32;gef::Vector4(0.0f,&#32;-1.0f,&#32;0.001f);
+192 &#32;&#32;&#32;&#32;gef::Vector4&#32;cameraUp&#32;=&#32;gef::Vector4(0.0f,&#32;1.0f,&#32;0.0f);
+193 
+194 &#32;&#32;&#32;&#32;<link linkend="_struct_f_camera_shake">FCameraShake</link>&#32;cameraShake&#32;=&#32;<link linkend="_struct_f_camera_shake">FCameraShake</link>();
+195 
+196 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">float</emphasis>&#32;fps_;
+197 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">float</emphasis>&#32;currentGameTime;
+198 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">float</emphasis>&#32;lastDeltaTime;
+199 
+200 <emphasis role="comment">&#32;&#32;&#32;&#32;/************************************************************************/</emphasis>
+201 &#32;&#32;&#32;&#32;<emphasis role="comment">/*&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;BOX2D&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;*/</emphasis>
+202 <emphasis role="comment">&#32;&#32;&#32;&#32;/************************************************************************/</emphasis>
+203 &#32;&#32;&#32;&#32;b2World*&#32;b2dWorld;
+204 &#32;&#32;&#32;&#32;b2Vec2&#32;gravity;
+205 
+206 
+207 <emphasis role="comment">&#32;&#32;&#32;&#32;/************************************************************************/</emphasis>
+208 &#32;&#32;&#32;&#32;<emphasis role="comment">/*&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;SOUND&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;*/</emphasis>
+209 <emphasis role="comment">&#32;&#32;&#32;&#32;/************************************************************************/</emphasis>
+210 &#32;&#32;&#32;&#32;gef::AudioManager*&#32;audioManager;
+211 &#32;&#32;&#32;&#32;<link linkend="_scene__app_8h_1a8d89ee6a10feffd9323a0031e0bbea29">SoundMap</link>&#32;sounds;
+212 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;masterVolume&#32;=&#32;30.f;
+213 
+214 &#32;&#32;&#32;&#32;<link linkend="_class_player_controller">PlayerController</link>*&#32;soundController;
+215 
+216 <emphasis role="comment">&#32;&#32;&#32;&#32;/************************************************************************/</emphasis>
+217 &#32;&#32;&#32;&#32;<emphasis role="comment">/*&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;RANDOM&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;*/</emphasis>
+218 <emphasis role="comment">&#32;&#32;&#32;&#32;/************************************************************************/</emphasis>
+219 &#32;&#32;&#32;&#32;std::default_random_engine&#32;rd;
+220 &#32;&#32;&#32;&#32;std::uniform_real_distribution&lt;float&gt;&#32;dist;
+221 
+222 <emphasis role="comment">&#32;&#32;&#32;&#32;/************************************************************************/</emphasis>
+223 &#32;&#32;&#32;&#32;<emphasis role="comment">/*&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;PARTICLES&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;*/</emphasis>
+224 <emphasis role="comment">&#32;&#32;&#32;&#32;/************************************************************************/</emphasis>
+225 &#32;&#32;&#32;&#32;<link linkend="_class_particle_manager">ParticleManager</link>*&#32;particleManager;
+226 
+227 <emphasis role="keyword">public</emphasis>:
+228 
+229 <emphasis role="comment">&#32;&#32;&#32;&#32;/************************************************************************/</emphasis>
+230 &#32;&#32;&#32;&#32;<emphasis role="comment">/*&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;GETTERS&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;*/</emphasis>
+231 <emphasis role="comment">&#32;&#32;&#32;&#32;/************************************************************************/</emphasis>
+232 &#32;&#32;&#32;&#32;__forceinline&#32;gef::Renderer3D*&#32;<link linkend="_class_scene_app_1ac0999a6034cf97a795506eb75dd3cc7f">GetRenderer3D</link>()<emphasis role="keyword">&#32;const&#32;</emphasis>{&#32;<emphasis role="keywordflow">return</emphasis>&#32;renderer_3d_;&#32;}
+233 &#32;&#32;&#32;&#32;__forceinline&#32;gef::SpriteRenderer*&#32;<link linkend="_class_scene_app_1acfe997c4a66416d0cf25324d47403abb">GetSpriteRenderer</link>()<emphasis role="keyword">&#32;const&#32;</emphasis>{&#32;<emphasis role="keywordflow">return</emphasis>&#32;sprite_renderer_;&#32;}
+234 &#32;&#32;&#32;&#32;__forceinline&#32;b2World*&#32;<link linkend="_class_scene_app_1ad1ff8bd221115d5e081490da02e2f398">GetBox2DWorld</link>()<emphasis role="keyword">&#32;const&#32;</emphasis>{&#32;<emphasis role="keywordflow">return</emphasis>&#32;b2dWorld;&#32;}
+235 &#32;&#32;&#32;&#32;__forceinline&#32;<emphasis role="keywordtype">float</emphasis>&#32;<link linkend="_class_scene_app_1a30039f31aff4d61fdce25d79425892fc">GetViewportWidth</link>()<emphasis role="keyword">&#32;const&#32;</emphasis>{&#32;<emphasis role="keywordflow">return</emphasis>&#32;platform_.width();&#32;}
+236 &#32;&#32;&#32;&#32;__forceinline&#32;<emphasis role="keywordtype">float</emphasis>&#32;<link linkend="_class_scene_app_1a0fc304ef89214b58b23adf26ec63f6ac">GetViewportHeight</link>()<emphasis role="keyword">&#32;const&#32;</emphasis>{&#32;<emphasis role="keywordflow">return</emphasis>&#32;platform_.height();&#32;}
+237 &#32;&#32;&#32;&#32;__forceinline&#32;<link linkend="_class_player_character">PlayerCharacter</link>*&#32;<link linkend="_class_scene_app_1a36cc2439051445972f7b29114f3b011b">GetPlayerCharacter</link>()<emphasis role="keyword">&#32;const&#32;</emphasis>{&#32;<emphasis role="keywordflow">return</emphasis>&#32;playerCharacter;&#32;}
+238 &#32;&#32;&#32;&#32;__forceinline&#32;<link linkend="_class_primitive_builder">PrimitiveBuilder</link>*&#32;<link linkend="_class_scene_app_1ad0422232eb1f735a48a20137eb6e953e">GetPrimitiveBuilder</link>()<emphasis role="keyword">&#32;const&#32;</emphasis>{&#32;<emphasis role="keywordflow">return</emphasis>&#32;primitive_builder_;&#32;}
+239 &#32;&#32;&#32;&#32;__forceinline&#32;gef::Vector4&#32;<link linkend="_class_scene_app_1aaec63e72c5b04a1f7a63f3ff81b8bdb7">GetCameraEye</link>()<emphasis role="keyword">&#32;const&#32;</emphasis>{&#32;<emphasis role="keywordflow">return</emphasis>&#32;cameraEye;&#32;}
+240 &#32;&#32;&#32;&#32;__forceinline&#32;gef::Vector4&#32;<link linkend="_class_scene_app_1ab94350ed26fa0140eaac7060d97db655">GetCameraLookAt</link>()<emphasis role="keyword">&#32;const&#32;</emphasis>{&#32;<emphasis role="keywordflow">return</emphasis>&#32;cameraLookAt;&#32;}
+241 &#32;&#32;&#32;&#32;__forceinline&#32;<emphasis role="keywordtype">float</emphasis>&#32;<link linkend="_class_scene_app_1ab0a3e09a2920c053f50d25ea03132ae7">GetCurrentGameTime</link>()<emphasis role="keyword">&#32;const&#32;</emphasis>{&#32;<emphasis role="keywordflow">return</emphasis>&#32;currentGameTime;&#32;}
+242 &#32;&#32;&#32;&#32;__forceinline&#32;<emphasis role="keywordtype">float</emphasis>&#32;<link linkend="_class_scene_app_1af624c2780cc0b7d913f63f7c4df74030">GetLastDeltaTime</link>()<emphasis role="keyword">&#32;const&#32;</emphasis>{&#32;<emphasis role="keywordflow">return</emphasis>&#32;lastDeltaTime;&#32;}
+243 
+244 &#32;&#32;&#32;&#32;gef::Mesh*&#32;<link linkend="_class_scene_app_1a6b6984ec718cb9ebad4be261df534cf1">RequestMeshByName</link>(std::string&#32;meshName);
+245 &#32;&#32;&#32;&#32;gef::Texture*&#32;<link linkend="_class_scene_app_1ac00c6ac20d92d7e8fd77d341a116e81d">RequestTextureByName</link>(std::string&#32;textureName);
+246 &#32;&#32;&#32;&#32;gef::Font*&#32;<link linkend="_class_scene_app_1a13fa1b28170df85ade3d18e329fbedc7">GetFont</link>()&#32;{&#32;<emphasis role="keywordflow">return</emphasis>&#32;font_;&#32;}
+247 &#32;&#32;&#32;&#32;gef::AudioManager*&#32;<link linkend="_class_scene_app_1a1b8d7ed84a7691d140c0b10d6cc01f7b">GetAudioManager</link>()&#32;{&#32;<emphasis role="keywordflow">return</emphasis>&#32;audioManager;&#32;}
+248 &#32;&#32;&#32;&#32;<emphasis role="keyword">const</emphasis>&#32;gef::Vector2&#32;<link linkend="_class_scene_app_1a2cb299beb00f7fea8f1de7c0cc6ab19b">GetLastTouchPosition</link>();
+249 
+250 &#32;&#32;&#32;&#32;<emphasis role="comment">/*&#32;Game&#32;State&#32;*/</emphasis>
+251 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_scene_app_1a3bc64bbc203e9cb597f2b47dc69f20e6">SetGameState</link>(<link linkend="_namespace_game_state_1aa2df68fe63beaaf10d3154d8eb490fe6">GameState::Type</link>&#32;newState);
+252 &#32;&#32;&#32;&#32;<link linkend="_namespace_game_state_1aa2df68fe63beaaf10d3154d8eb490fe6">GameState::Type</link>&#32;<link linkend="_class_scene_app_1a3218d41e2d667db80e8fed34b02b6221">GetGameState</link>()<emphasis role="keyword">&#32;const&#32;</emphasis>{&#32;<emphasis role="keywordflow">return</emphasis>&#32;gameState;&#32;}
+253 
+254 &#32;&#32;&#32;&#32;<emphasis role="comment">/*&#32;Player&#32;money&#32;*/</emphasis>
+255 &#32;&#32;&#32;&#32;<emphasis role="keyword">const</emphasis>&#32;uint32_t&#32;<link linkend="_class_scene_app_1ab4f8fc5ac0dc41a16f83089ff782b6f4">GetPlayerMoney</link>()&#32;{&#32;<emphasis role="keywordflow">return</emphasis>&#32;playerMoney;&#32;}
+256 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_scene_app_1aec4d56f9129795aaef4ad8f2a454e302">IncreasePlayerMoney</link>(uint32_t&#32;increaseAmount)&#32;{&#32;playerMoney&#32;+=&#32;increaseAmount;&#32;}
+257 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_scene_app_1ac7ebc87268f7eea380099954c5358fd3">ApplyCostToPlayerMoney</link>(uint32_t&#32;cost)&#32;{&#32;playerMoney&#32;-=&#32;cost;&#32;}
+258 
+259 &#32;&#32;&#32;&#32;<emphasis role="comment">/*&#32;Camera&#32;Shake&#32;*/</emphasis>
+260 
+265 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_scene_app_1a04b16337e0cd4af5f9b38f75ca623f34">ApplyCameraShake</link>(<link linkend="_struct_f_camera_shake">FCameraShake</link>&#32;newShake);
+266 
+267 &#32;&#32;&#32;&#32;<emphasis role="comment">/*&#32;Damage&#32;*/</emphasis>
+268 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_scene_app_1a85782170c9894dfebe3a8045063301c6">ApplyRadialDamage</link>(<emphasis role="keywordtype">float</emphasis>&#32;damageAmount,&#32;gef::Vector4&#32;origin,&#32;<emphasis role="keywordtype">float</emphasis>&#32;innerRadius,&#32;<emphasis role="keywordtype">float</emphasis>&#32;outerRadius);
+269 
+270 &#32;&#32;&#32;&#32;<emphasis role="comment">/*&#32;Sound&#32;*/</emphasis>
+271 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_scene_app_1a942b3809824f430117b26e9a7ad5acf6">PlaySample</link>(std::string&#32;sampleName,&#32;<emphasis role="keywordtype">float</emphasis>&#32;pitch&#32;=&#32;1,&#32;<emphasis role="keywordtype">bool</emphasis>&#32;bIsLooping&#32;=&#32;<emphasis role="keyword">false</emphasis>);
+272 
+273 &#32;&#32;&#32;&#32;<emphasis role="comment">/*&#32;Pointer&#32;functions&#32;*/</emphasis>
+274 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_scene_app_1a829d6b657cc270002fcf262d57e2f249">AddPointerLocationOffset</link>(gef::Vector2&#32;offset)&#32;{&#32;pointerLocation&#32;+=&#32;offset;&#32;}
+275 
+276 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_scene_app_1ab40943893a61a141c9fb25eec163a1f1">SetPointerLocation</link>(gef::Vector2&#32;newLocation)&#32;{&#32;pointerLocation&#32;=&#32;newLocation;&#32;}
+277 
+281 &#32;&#32;&#32;&#32;<emphasis role="keyword">template</emphasis>&#32;&lt;<emphasis role="keyword">typename</emphasis>&#32;MeshActorType&#32;=&#32;MeshActor&gt;
+282 &#32;&#32;&#32;&#32;MeshActorType*&#32;<link linkend="_class_scene_app_1a800b10254ae600ce80c0e69d765e8061">SpawnMeshActor</link>(gef::Mesh*&#32;mesh&#32;=&#32;<emphasis role="keyword">nullptr</emphasis>,&#32;gef::Vector4&#32;translation&#32;=&#32;gef::Vector4::kZero,&#32;gef::Vector4&#32;rotation&#32;=&#32;gef::Vector4::kZero,&#32;gef::Vector4&#32;scale&#32;=&#32;gef::Vector4::kOne,&#32;<link linkend="_class_world_object">WorldObject</link>*&#32;owner&#32;=&#32;<emphasis role="keyword">nullptr</emphasis>)
+283 &#32;&#32;&#32;&#32;{
+284 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;MeshActorType*&#32;meshActor&#32;=&#32;<emphasis role="keyword">new</emphasis>&#32;MeshActorType();
+285 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;meshActor-&gt;SetMesh(mesh);
+286 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;meshActor-&gt;SetRotation(rotation);
+287 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;meshActor-&gt;SetScale(scale);
+288 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;meshActor-&gt;Init(owner);
+289 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;meshActor-&gt;SetTranslation(translation);
+290 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;meshActors.push_back(meshActor);
+291 
+292 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;meshActor;
+293 &#32;&#32;&#32;&#32;}
+294 
+298 &#32;&#32;&#32;&#32;<emphasis role="keyword">template</emphasis>&lt;<emphasis role="keyword">typename</emphasis>&#32;SpriteActorType&#32;=&#32;SpriteActor&gt;
+299 &#32;&#32;&#32;&#32;SpriteActorType*&#32;<link linkend="_class_scene_app_1ab70d4d12950fa87533727b3fa6e42ee5">SpawnSpriteActor</link>(gef::Sprite*&#32;sprite&#32;=&#32;<emphasis role="keyword">nullptr</emphasis>,&#32;gef::Vector4&#32;position&#32;=&#32;gef::Vector4::kZero,&#32;<emphasis role="keywordtype">float</emphasis>&#32;rotation&#32;=&#32;0.f,&#32;<link linkend="_class_world_object">WorldObject</link>*&#32;owner&#32;=&#32;<emphasis role="keyword">nullptr</emphasis>)
+300 &#32;&#32;&#32;&#32;{
+301 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;SpriteActorType*&#32;spriteActor&#32;=&#32;<emphasis role="keyword">new</emphasis>&#32;SpriteActorType();
+302 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;spriteActor-&gt;SetSprite(sprite);
+303 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;spriteActor-&gt;SetTranslation(position);
+304 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;spriteActor-&gt;SetRotation(rotation);
+305 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;spriteActor-&gt;Init(owner);
+306 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;spriteActors.push_back(spriteActor);
+307 
+308 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;spriteActor;
+309 &#32;&#32;&#32;&#32;}
+310 };
+311 
+312 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">//&#32;_SCENE_APP_H</emphasis>
+</programlisting></section>

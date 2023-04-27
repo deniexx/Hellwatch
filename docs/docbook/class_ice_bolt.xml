@@ -1,0 +1,109 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_ice_bolt" xml:lang="en-US">
+<title>IceBolt Class Reference</title>
+<indexterm><primary>IceBolt</primary></indexterm>
+<para>
+
+<para>Fires an ice projectile that hits the first target ONLY  </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;IceBolt.h&gt;</computeroutput>
+</para>
+Inheritance diagram for IceBolt:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_ice_bolt__inherit__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Collaboration diagram for IceBolt:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_ice_bolt__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_ice_bolt_1afda105a085a8c933adfb02baee41224b">IceBolt</link> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Protected Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>virtual void <link linkend="_class_ice_bolt_1aaf128a2d87802fa2e09fb8e7c150646b">PostInit</link> () override</para>
+
+<para>Called after ability has been initialized, do set up here  </para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_class_ice_bolt_1a5dc506246bfe473255626de565ca8af4">Begin</link> () override</para>
+
+<para>Begins the ability, called if TryActivate was successful  </para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_class_ice_bolt_1a2b7a3bb2d1627b36331a5c2fee6334a7">End</link> () override</para>
+
+<para>Called on end of ability  </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Additional Inherited Members    </title>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Fires an ice projectile that hits the first target ONLY  </para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_ice_bolt_1afda105a085a8c933adfb02baee41224b"/><section>
+    <title>IceBolt()</title>
+<indexterm><primary>IceBolt</primary><secondary>IceBolt</secondary></indexterm>
+<indexterm><primary>IceBolt</primary><secondary>IceBolt</secondary></indexterm>
+<para><computeroutput>IceBolt::IceBolt ( )</computeroutput></para></section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_ice_bolt_1a5dc506246bfe473255626de565ca8af4"/><section>
+    <title>Begin()</title>
+<indexterm><primary>Begin</primary><secondary>IceBolt</secondary></indexterm>
+<indexterm><primary>IceBolt</primary><secondary>Begin</secondary></indexterm>
+<para><computeroutput>void IceBolt::Begin ( )<computeroutput>[override]</computeroutput>, <computeroutput>[protected]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Begins the ability, called if TryActivate was successful  </para>
+</para>
+<para>
+Reimplemented from <link linkend="_class_ability_1ace910398ed2eb9f58c8e85dbb7a72de2">Ability</link>.</para>
+</section>
+<anchor xml:id="_class_ice_bolt_1a2b7a3bb2d1627b36331a5c2fee6334a7"/><section>
+    <title>End()</title>
+<indexterm><primary>End</primary><secondary>IceBolt</secondary></indexterm>
+<indexterm><primary>IceBolt</primary><secondary>End</secondary></indexterm>
+<para><computeroutput>void IceBolt::End ( )<computeroutput>[override]</computeroutput>, <computeroutput>[protected]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Called on end of ability  </para>
+</para>
+<para>
+Reimplemented from <link linkend="_class_ability_1a61a88edf359a3c6bd34868e58bf64f20">Ability</link>.</para>
+</section>
+<anchor xml:id="_class_ice_bolt_1aaf128a2d87802fa2e09fb8e7c150646b"/><section>
+    <title>PostInit()</title>
+<indexterm><primary>PostInit</primary><secondary>IceBolt</secondary></indexterm>
+<indexterm><primary>IceBolt</primary><secondary>PostInit</secondary></indexterm>
+<para><computeroutput>void IceBolt::PostInit ( )<computeroutput>[override]</computeroutput>, <computeroutput>[protected]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Called after ability has been initialized, do set up here  </para>
+</para>
+<para>
+Reimplemented from <link linkend="_class_ability_1a25388ebb622b414ef027eb33bf4a5cfb">Ability</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following files:</para>
+D:/Uni/CMP208/Hellwatch/build/vs2017/Abilities/PlayerAbilities/<link linkend="__ice_bolt_8h">IceBolt.h</link>D:/Uni/CMP208/Hellwatch/build/vs2017/Abilities/PlayerAbilities/<link linkend="__ice_bolt_8cpp">IceBolt.cpp</link></section>
+</section>

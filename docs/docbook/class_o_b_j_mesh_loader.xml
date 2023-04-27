@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_o_b_j_mesh_loader" xml:lang="en-US">
+<title>OBJMeshLoader Class Reference</title>
+<indexterm><primary>OBJMeshLoader</primary></indexterm>
+<para>
+<computeroutput>#include &lt;obj_mesh_loader.h&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>bool <link linkend="_class_o_b_j_mesh_loader_1a8c7c99695bfcb18f362f68da3c8fe393">Load</link> (const char *filename, gef::Platform &amp;platform, <link linkend="_obj__mesh__loader_8h_1ab6d74e55cf8354fe68dd64bd265a814e">MeshMap</link> &amp;mesh_map)</para>
+</listitem>
+            <listitem><para>const std::string &amp; <link linkend="_class_o_b_j_mesh_loader_1ad7a08d9198699f8f8d38312b317c733e">GetLastError</link> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_o_b_j_mesh_loader_1ad7a08d9198699f8f8d38312b317c733e"/><section>
+    <title>GetLastError()</title>
+<indexterm><primary>GetLastError</primary><secondary>OBJMeshLoader</secondary></indexterm>
+<indexterm><primary>OBJMeshLoader</primary><secondary>GetLastError</secondary></indexterm>
+<para><computeroutput>const std::string &amp; OBJMeshLoader::GetLastError ( )<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_o_b_j_mesh_loader_1a8c7c99695bfcb18f362f68da3c8fe393"/><section>
+    <title>Load()</title>
+<indexterm><primary>Load</primary><secondary>OBJMeshLoader</secondary></indexterm>
+<indexterm><primary>OBJMeshLoader</primary><secondary>Load</secondary></indexterm>
+<para><computeroutput>bool OBJMeshLoader::Load (const char * filename, gef::Platform &amp; platform, <link linkend="_obj__mesh__loader_8h_1ab6d74e55cf8354fe68dd64bd265a814e">MeshMap</link> &amp; mesh_map)</computeroutput></para></section>
+<para>
+The documentation for this class was generated from the following files:</para>
+D:/Uni/CMP208/Hellwatch/<link linkend="_obj__mesh__loader_8h">obj_mesh_loader.h</link>D:/Uni/CMP208/Hellwatch/<link linkend="_obj__mesh__loader_8cpp">obj_mesh_loader.cpp</link></section>
+</section>

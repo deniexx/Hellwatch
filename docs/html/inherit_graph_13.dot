@@ -1,0 +1,17 @@
+digraph "Graphical Class Hierarchy"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  rankdir="LR";
+  Node0 [label="Menu",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_menu.html",tooltip="Base Menu class, that mainly handles actions that we bind to in child classes"];
+  Node0 -> Node1 [dir="back",color="steelblue1",style="solid"];
+  Node1 [label="GameEndMenu",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_game_end_menu.html",tooltip=" "];
+  Node0 -> Node2 [dir="back",color="steelblue1",style="solid"];
+  Node2 [label="MainMenu",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_main_menu.html",tooltip="Main Menu of the game"];
+  Node0 -> Node3 [dir="back",color="steelblue1",style="solid"];
+  Node3 [label="PauseMenu",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_pause_menu.html",tooltip="Pause Menu to be used in Pause GameState"];
+  Node0 -> Node4 [dir="back",color="steelblue1",style="solid"];
+  Node4 [label="ShopMenu",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_shop_menu.html",tooltip="Shop menu to be used in Shop GameState"];
+}

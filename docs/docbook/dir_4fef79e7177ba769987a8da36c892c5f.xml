@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_dir_4fef79e7177ba769987a8da36c892c5f" xml:lang="en-US">
+<title>D:/Uni/CMP208/Hellwatch/build Directory Reference</title>
+<indexterm><primary>D:/Uni/CMP208/Hellwatch/build Directory Reference</primary></indexterm>
+Directory dependency graph for build:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="dir_4fef79e7177ba769987a8da36c892c5f_dep.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Directories    </title>
+        <itemizedlist>
+            <listitem><para>directory <link linkend="_dir_8bceb31512fbf37cf44d454a95859b1c">vs2017</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

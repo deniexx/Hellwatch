@@ -1,0 +1,60 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__enemy_8h_source" xml:lang="en-US">
+<title>Enemy.h</title>
+<indexterm><primary>D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/Enemy.h</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered">1 <emphasis role="preprocessor">#pragma&#32;once</emphasis>
+2 
+3 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="__mesh_actor_8h">Actors/MeshActor.h</link>&quot;</emphasis>
+4 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="__attribute_component_8h">Attributes/AttributeComponent.h</link>&quot;</emphasis>
+5 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="__character_movement_component_8h">ActorComponents/CharacterMovementComponent.h</link>&quot;</emphasis>
+6 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="__player_character_8h">PlayerCharacter.h</link>&quot;</emphasis>
+7 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="_scene__app_8h">scene_app.h</link>&quot;</emphasis>
+8 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="__damage_on_collision_actor_8h">DamageOnCollisionActor.h</link>&quot;</emphasis>
+9 
+13 <emphasis role="keyword">namespace&#32;</emphasis><link linkend="_namespace_enemy_class">EnemyClass</link>
+14 {
+15 &#32;&#32;&#32;&#32;<emphasis role="keyword">enum</emphasis>&#32;<link linkend="_namespace_enemy_class_1a21f4473edd2d0cb0970f6505d46f0866">Type</link>
+16 &#32;&#32;&#32;&#32;{
+17 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_namespace_enemy_class_1a21f4473edd2d0cb0970f6505d46f0866a7a3e72f4e6ac314cad36a24f27c628a9">HEAVY</link>,
+18 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_namespace_enemy_class_1a21f4473edd2d0cb0970f6505d46f0866ab7b90fd5865f02a5159836adc5d221bf">NORMAL</link>,
+19 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_namespace_enemy_class_1a21f4473edd2d0cb0970f6505d46f0866ac49546fa32e67ada5d7619f084ef02cb">LIGHT</link>
+20 &#32;&#32;&#32;&#32;};
+21 }
+22 
+26 <emphasis role="keyword">class&#32;</emphasis><link linkend="_class_enemy">Enemy</link>&#32;:&#32;<emphasis role="keyword">public</emphasis>&#32;<link linkend="_class_mesh_actor">MeshActor</link>
+27 {
+28 &#32;&#32;&#32;&#32;<link linkend="__utils_8h_1afc0ee7bd35c161a2d80b8e8f04fd9213">GENERATED_BODY</link>(<link linkend="_class_mesh_actor">MeshActor</link>,&#32;<link linkend="_class_enemy">Enemy</link>)
+29 
+30 <emphasis role="keyword">public</emphasis>:
+31 
+32 &#32;&#32;&#32;&#32;<link linkend="_class_enemy_1a94f30d348b6d2840fd71675472ba38dd">Enemy</link>();
+33 
+37 &#32;&#32;&#32;&#32;<emphasis role="keyword">virtual</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_enemy_1a165cd1993b88023d7f1a45f9f2809b23">SetClass</link>(<link linkend="_namespace_enemy_class_1a21f4473edd2d0cb0970f6505d46f0866">EnemyClass::Type</link>&#32;type);
+38 
+39 &#32;&#32;&#32;&#32;<emphasis role="keyword">virtual</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_enemy_1ac49759f4d5262aea5e3b6e3f9f56896e">TakeDamage</link>(<emphasis role="keywordtype">float</emphasis>&#32;<link linkend="_class_enemy_1a1dbbafd85db9d46820a78f603af4d53a">damageAmount</link>)&#32;<emphasis role="keyword">override</emphasis>;
+40 
+44 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">float</emphasis>&#32;<link linkend="_class_enemy_1a724bfc292724ec7f61218051bfa0faf5">GetHealth</link>()&#32;{&#32;<emphasis role="keywordflow">return</emphasis>&#32;<link linkend="_class_enemy_1a985101af4d36bd5232edb964b061e423">attributes</link>&#32;?&#32;<link linkend="_class_enemy_1a985101af4d36bd5232edb964b061e423">attributes</link>-&gt;<link linkend="_class_attribute_component_1a580cf7f29236d87d448840840ad53bc6">GetCurrentAttributeValueByType</link>(<link linkend="_namespace_hellwatch_attribute_1ad0a500e65129d06e4589f9bca54c4a7da6d26574d573c085ec34ba30576725713">HellwatchAttribute::Health</link>)&#32;:&#32;0.f;&#32;}
+45 
+46 &#32;&#32;&#32;&#32;<emphasis role="keyword">virtual</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_enemy_1a723b79407b55383b2c327f674e3ab3bc">Update</link>(<emphasis role="keywordtype">float</emphasis>&#32;deltaTime)&#32;<emphasis role="keyword">override</emphasis>;
+47 
+48 &#32;&#32;&#32;&#32;<emphasis role="keyword">virtual</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_enemy_1a8fe269579634b8cad6d494254c766387">OnCollision</link>(b2Body*&#32;otherBody)&#32;<emphasis role="keyword">override</emphasis>;
+49 &#32;&#32;&#32;&#32;
+53 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_enemy_1a43ebf25f19b29fccb8cb71730b95749d">ScaleWithWave</link>(<emphasis role="keywordtype">int</emphasis>&#32;wave);
+54 
+55 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">float</emphasis>&#32;<link linkend="_class_enemy_1a1dbbafd85db9d46820a78f603af4d53a">damageAmount</link>;
+56 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">float</emphasis>&#32;<link linkend="_class_enemy_1a608edebc42e92ab5f253692c088a56d0">attackTime</link>;
+57 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">float</emphasis>&#32;<link linkend="_class_enemy_1a573af3a6b672a882ae23263bfbcdf440">attackCooldown</link>&#32;=&#32;2;
+58 
+59 <emphasis role="keyword">protected</emphasis>:
+60 
+61 &#32;&#32;&#32;&#32;<emphasis role="keyword">virtual</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_enemy_1a487c39395ee71759c8bf10707776755e">PostInit</link>()&#32;<emphasis role="keyword">override</emphasis>;
+62 
+63 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_class_enemy_1ac1779a7f33b1320de88c6a73415bae8c">playerMoneyToAdd</link>&#32;=&#32;30;
+64 &#32;&#32;&#32;&#32;<link linkend="_class_attribute_component">AttributeComponent</link>*&#32;<link linkend="_class_enemy_1a985101af4d36bd5232edb964b061e423">attributes</link>;
+65 &#32;&#32;&#32;&#32;<link linkend="_class_character_movement_component">CharacterMovementComponent</link>*&#32;<link linkend="_class_enemy_1a8d88db976bfb85797d1a161ae799f8e7">enemyMovement</link>;
+66 
+67 &#32;&#32;&#32;&#32;std::string&#32;<link linkend="_class_enemy_1a4bc75b6c8f42a2fc5a1a7b932342a074">hurtSound</link>&#32;=&#32;<emphasis role="stringliteral">&quot;MeleeHurt&quot;</emphasis>;
+68 
+72 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_enemy_1a4c732fc920f5da435fc97f9c55ae8531">IncreasePlayerMoney</link>();
+73 };
+</programlisting></section>

@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_dir_8bceb31512fbf37cf44d454a95859b1c" xml:lang="en-US">
+<title>D:/Uni/CMP208/Hellwatch/build/vs2017 Directory Reference</title>
+<indexterm><primary>D:/Uni/CMP208/Hellwatch/build/vs2017 Directory Reference</primary></indexterm>
+Directory dependency graph for vs2017:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="dir_8bceb31512fbf37cf44d454a95859b1c_dep.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Directories    </title>
+        <itemizedlist>
+            <listitem><para>directory <link linkend="_dir_dd83752153a5f8a26b8780fd171a1a5d">Abilities</link></para>
+</listitem>
+            <listitem><para>directory <link linkend="_dir_38fd5edcd14d1fce235d76d8a1a9749d">ActorComponents</link></para>
+</listitem>
+            <listitem><para>directory <link linkend="_dir_6445565d8f89f9d136c2de923fc4f388">Actors</link></para>
+</listitem>
+            <listitem><para>directory <link linkend="_dir_2ea205c9a7374d1270589c3dc4531a12">Attributes</link></para>
+</listitem>
+            <listitem><para>directory <link linkend="_dir_1e58e055197c872d2c7873964b7dea3e">GameFramework</link></para>
+</listitem>
+            <listitem><para>directory <link linkend="_dir_d38e094d59747ac109f8f0e7aad2480d">Interfaces</link></para>
+</listitem>
+            <listitem><para>directory <link linkend="_dir_9f6a9901ea431bd85629d2a16f7527de">UserInterface</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

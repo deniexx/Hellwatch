@@ -1,0 +1,17 @@
+digraph "PiercingStrike"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  Node1 [label="PiercingStrike",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip=" "];
+  Node2 -> Node1 [dir="back",color="steelblue1",style="solid"];
+  Node2 [label="Ability",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$class_ability.html",tooltip="A base ability class, designed to be inherited and provided with functionality"];
+  Node3 -> Node2 [dir="back",color="darkorchid3",style="dashed",label=" owningComponent" ];
+  Node3 [label="AbilitiesComponent",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$class_abilities_component.html",tooltip="A component allowing the object to use abilities @NOTE: Requires an attribute component to function p..."];
+  Node4 -> Node3 [dir="back",color="steelblue1",style="solid"];
+  Node4 [label="ActorComponent",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$class_actor_component.html",tooltip="Base class to be derived for actor components"];
+  Node5 -> Node4 [dir="back",color="darkorchid3",style="dashed",label=" ownerActor" ];
+  Node5 [label="WorldObject",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$class_world_object.html",tooltip=" "];
+  Node5 -> Node5 [dir="back",color="darkorchid3",style="dashed",label=" owningObject" ];
+}

@@ -1,0 +1,67 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_struct_f_camera_shake" xml:lang="en-US">
+<title>FCameraShake Struct Reference</title>
+<indexterm><primary>FCameraShake</primary></indexterm>
+<para>
+<computeroutput>#include &lt;scene_app.h&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>gef::Vector4 <link linkend="_struct_f_camera_shake_1ae28540e423d42a897f77f196f27bcde7">maxOffset</link> = gef::Vector4::kZero</para>
+</listitem>
+            <listitem><para>gef::Vector4 <link linkend="_struct_f_camera_shake_1a957c35cfc269421091fc884a21d41899">minOffset</link> = gef::Vector4::kZero</para>
+</listitem>
+            <listitem><para>float <link linkend="_struct_f_camera_shake_1a0067a7fbb68d30a2f8d68511a6403e46">lerpAlpha</link> = 0.f</para>
+</listitem>
+            <listitem><para>float <link linkend="_struct_f_camera_shake_1a28904f65e3bcb603c865ba72bcbea0e2">duration</link> = 1.f</para>
+</listitem>
+            <listitem><para>float <link linkend="_struct_f_camera_shake_1a089db07499dd81ac8736501fbe46aa86">intensity</link> = 1.f</para>
+</listitem>
+            <listitem><para>float <link linkend="_struct_f_camera_shake_1a11948ae09ec868a32530378efd25f34f">cameraShakeStartTime</link> = 0.f</para>
+</listitem>
+            <listitem><para>bool <link linkend="_struct_f_camera_shake_1a11241077b74ae4a78aab9c55f25f8827">bMovingForward</link> = true</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_struct_f_camera_shake_1a11241077b74ae4a78aab9c55f25f8827"/><section>
+    <title>bMovingForward</title>
+<indexterm><primary>bMovingForward</primary><secondary>FCameraShake</secondary></indexterm>
+<indexterm><primary>FCameraShake</primary><secondary>bMovingForward</secondary></indexterm>
+<para><computeroutput>bool FCameraShake::bMovingForward = true</computeroutput></para></section>
+<anchor xml:id="_struct_f_camera_shake_1a11948ae09ec868a32530378efd25f34f"/><section>
+    <title>cameraShakeStartTime</title>
+<indexterm><primary>cameraShakeStartTime</primary><secondary>FCameraShake</secondary></indexterm>
+<indexterm><primary>FCameraShake</primary><secondary>cameraShakeStartTime</secondary></indexterm>
+<para><computeroutput>float FCameraShake::cameraShakeStartTime = 0.f</computeroutput></para></section>
+<anchor xml:id="_struct_f_camera_shake_1a28904f65e3bcb603c865ba72bcbea0e2"/><section>
+    <title>duration</title>
+<indexterm><primary>duration</primary><secondary>FCameraShake</secondary></indexterm>
+<indexterm><primary>FCameraShake</primary><secondary>duration</secondary></indexterm>
+<para><computeroutput>float FCameraShake::duration = 1.f</computeroutput></para></section>
+<anchor xml:id="_struct_f_camera_shake_1a089db07499dd81ac8736501fbe46aa86"/><section>
+    <title>intensity</title>
+<indexterm><primary>intensity</primary><secondary>FCameraShake</secondary></indexterm>
+<indexterm><primary>FCameraShake</primary><secondary>intensity</secondary></indexterm>
+<para><computeroutput>float FCameraShake::intensity = 1.f</computeroutput></para></section>
+<anchor xml:id="_struct_f_camera_shake_1a0067a7fbb68d30a2f8d68511a6403e46"/><section>
+    <title>lerpAlpha</title>
+<indexterm><primary>lerpAlpha</primary><secondary>FCameraShake</secondary></indexterm>
+<indexterm><primary>FCameraShake</primary><secondary>lerpAlpha</secondary></indexterm>
+<para><computeroutput>float FCameraShake::lerpAlpha = 0.f</computeroutput></para></section>
+<anchor xml:id="_struct_f_camera_shake_1ae28540e423d42a897f77f196f27bcde7"/><section>
+    <title>maxOffset</title>
+<indexterm><primary>maxOffset</primary><secondary>FCameraShake</secondary></indexterm>
+<indexterm><primary>FCameraShake</primary><secondary>maxOffset</secondary></indexterm>
+<para><computeroutput>gef::Vector4 FCameraShake::maxOffset = gef::Vector4::kZero</computeroutput></para></section>
+<anchor xml:id="_struct_f_camera_shake_1a957c35cfc269421091fc884a21d41899"/><section>
+    <title>minOffset</title>
+<indexterm><primary>minOffset</primary><secondary>FCameraShake</secondary></indexterm>
+<indexterm><primary>FCameraShake</primary><secondary>minOffset</secondary></indexterm>
+<para><computeroutput>gef::Vector4 FCameraShake::minOffset = gef::Vector4::kZero</computeroutput></para></section>
+<para>
+The documentation for this struct was generated from the following file:</para>
+D:/Uni/CMP208/Hellwatch/<link linkend="_scene__app_8h">scene_app.h</link></section>
+</section>

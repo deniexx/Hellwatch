@@ -1,0 +1,1453 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="scene__app_8cpp" kind="file" language="C++">
+    <compoundname>scene_app.cpp</compoundname>
+    <includes refid="scene__app_8h" local="yes">scene_app.h</includes>
+    <includes local="no">system/platform.h</includes>
+    <includes local="no">graphics/sprite_renderer.h</includes>
+    <includes local="no">graphics/font.h</includes>
+    <includes local="no">system/debug_log.h</includes>
+    <includes local="no">graphics/renderer_3d.h</includes>
+    <includes local="no">maths/math_utils.h</includes>
+    <includes local="yes">graphics/sprite.h</includes>
+    <includes local="yes">assets/png_loader.h</includes>
+    <includes local="no">graphics/image_data.h</includes>
+    <includes local="no">audio/audio_manager.h</includes>
+    <includes local="yes">input/sony_controller_input_manager.h</includes>
+    <includes refid="_main_menu_8h" local="yes">UserInterface/MainMenu.h</includes>
+    <includes refid="_shop_menu_8h" local="yes">UserInterface/ShopMenu.h</includes>
+    <includes refid="_pause_menu_8h" local="yes">UserInterface/PauseMenu.h</includes>
+    <includes refid="_game_end_menu_8h" local="yes">UserInterface/GameEndMenu.h</includes>
+    <includes refid="_player_character_8h" local="yes">Actors/MeshActors/PlayerCharacter.h</includes>
+    <includes refid="_sprite_actor_8h" local="yes">Actors/SpriteActor.h</includes>
+    <includes refid="_enemy_8h" local="yes">Actors/MeshActors/Enemy.h</includes>
+    <includes refid="_ranged_enemy_8h" local="yes">Actors/MeshActors/RangedEnemy.h</includes>
+    <includes refid="_mesh_actor_8h" local="yes">Actors/MeshActor.h</includes>
+    <includes refid="_wave_manager_8h" local="yes">GameFramework/WaveManager.h</includes>
+    <includes refid="_player_controller_8h" local="yes">GameFramework/PlayerController.h</includes>
+    <includes local="no">thread</includes>
+    <includes refid="_particle_manager_8h" local="yes">GameFramework/ParticleManager.h</includes>
+    <incdepgraph>
+      <node id="36">
+        <label>Abilities/Ability.h</label>
+        <link refid="_ability_8h"/>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+      </node>
+      <node id="57">
+        <label>ActorComponents/ActorComponent.h</label>
+        <link refid="_actor_component_8h"/>
+      </node>
+      <node id="58">
+        <label>ActorComponents/CharacterMovementComponent.h</label>
+        <link refid="_character_movement_component_8h"/>
+        <childnode refid="57" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+      </node>
+      <node id="41">
+        <label>Actors/MeshActor.h</label>
+        <link refid="_mesh_actor_8h"/>
+        <childnode refid="42" relation="include">
+        </childnode>
+        <childnode refid="45" relation="include">
+        </childnode>
+        <childnode refid="46" relation="include">
+        </childnode>
+      </node>
+      <node id="59">
+        <label>DamageOnCollisionActor.h</label>
+        <link refid="_damage_on_collision_actor_8h"/>
+        <childnode refid="41" relation="include">
+        </childnode>
+      </node>
+      <node id="55">
+        <label>Actors/MeshActors/Enemy.h</label>
+        <link refid="_enemy_8h"/>
+        <childnode refid="41" relation="include">
+        </childnode>
+        <childnode refid="56" relation="include">
+        </childnode>
+        <childnode refid="58" relation="include">
+        </childnode>
+        <childnode refid="40" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="59" relation="include">
+        </childnode>
+      </node>
+      <node id="40">
+        <label>Actors/MeshActors/PlayerCharacter.h</label>
+        <link refid="_player_character_8h"/>
+        <childnode refid="41" relation="include">
+        </childnode>
+        <childnode refid="47" relation="include">
+        </childnode>
+        <childnode refid="52" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+      </node>
+      <node id="60">
+        <label>Actors/MeshActors/RangedEnemy.h</label>
+        <link refid="_ranged_enemy_8h"/>
+        <childnode refid="55" relation="include">
+        </childnode>
+      </node>
+      <node id="53">
+        <label>Actors/SpriteActor.h</label>
+        <link refid="_sprite_actor_8h"/>
+        <childnode refid="42" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="54" relation="include">
+        </childnode>
+      </node>
+      <node id="56">
+        <label>Attributes/AttributeComponent.h</label>
+        <link refid="_attribute_component_8h"/>
+        <childnode refid="57" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="35">
+        <label>Attributes/AttributeTypes.h</label>
+        <link refid="_attribute_types_8h"/>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="63">
+        <label>GameFramework/ParticleManager.h</label>
+        <link refid="_particle_manager_8h"/>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="54" relation="include">
+        </childnode>
+      </node>
+      <node id="47">
+        <label>GameFramework/PlayerController.h</label>
+        <link refid="_player_controller_8h"/>
+        <childnode refid="48" relation="include">
+        </childnode>
+        <childnode refid="49" relation="include">
+        </childnode>
+        <childnode refid="50" relation="include">
+        </childnode>
+        <childnode refid="51" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+      </node>
+      <node id="31">
+        <label>GameFramework/Utils.h</label>
+        <link refid="_utils_8h"/>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+      </node>
+      <node id="61">
+        <label>GameFramework/WaveManager.h</label>
+        <link refid="_wave_manager_8h"/>
+        <childnode refid="31" relation="include">
+        </childnode>
+      </node>
+      <node id="42">
+        <label>GameFramework/WorldObject.h</label>
+        <link refid="_world_object_8h"/>
+        <childnode refid="43" relation="include">
+        </childnode>
+        <childnode refid="44" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+      </node>
+      <node id="46">
+        <label>Interfaces/Damagable.h</label>
+        <link refid="_damagable_8h"/>
+      </node>
+      <node id="39">
+        <label>UserInterface/GameEndMenu.h</label>
+        <link refid="_game_end_menu_8h"/>
+        <childnode refid="30" relation="include">
+        </childnode>
+      </node>
+      <node id="29">
+        <label>UserInterface/MainMenu.h</label>
+        <link refid="_main_menu_8h"/>
+        <childnode refid="30" relation="include">
+        </childnode>
+      </node>
+      <node id="30">
+        <label>Menu.h</label>
+        <link refid="_menu_8h"/>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+      </node>
+      <node id="38">
+        <label>UserInterface/PauseMenu.h</label>
+        <link refid="_pause_menu_8h"/>
+        <childnode refid="30" relation="include">
+        </childnode>
+      </node>
+      <node id="34">
+        <label>UserInterface/ShopMenu.h</label>
+        <link refid="_shop_menu_8h"/>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>obj_mesh_loader.h</label>
+        <link refid="obj__mesh__loader_8h"/>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>primitive_builder.h</label>
+        <link refid="primitive__builder_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>D:/Uni/CMP208/Hellwatch/scene_app.cpp</label>
+        <link refid="scene__app_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="38" relation="include">
+        </childnode>
+        <childnode refid="39" relation="include">
+        </childnode>
+        <childnode refid="40" relation="include">
+        </childnode>
+        <childnode refid="53" relation="include">
+        </childnode>
+        <childnode refid="55" relation="include">
+        </childnode>
+        <childnode refid="60" relation="include">
+        </childnode>
+        <childnode refid="41" relation="include">
+        </childnode>
+        <childnode refid="61" relation="include">
+        </childnode>
+        <childnode refid="47" relation="include">
+        </childnode>
+        <childnode refid="62" relation="include">
+        </childnode>
+        <childnode refid="63" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>scene_app.h</label>
+        <link refid="scene__app_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+      <node id="25">
+        <label>assets/png_loader.h</label>
+      </node>
+      <node id="27">
+        <label>audio/audio_manager.h</label>
+      </node>
+      <node id="10">
+        <label>box2d/box2d.h</label>
+      </node>
+      <node id="37">
+        <label>cmath</label>
+      </node>
+      <node id="8">
+        <label>cstddef</label>
+      </node>
+      <node id="48">
+        <label>cstdint</label>
+      </node>
+      <node id="49">
+        <label>functional</label>
+      </node>
+      <node id="18">
+        <label>future</label>
+      </node>
+      <node id="13">
+        <label>gef.h</label>
+      </node>
+      <node id="17">
+        <label>graphics/font.h</label>
+      </node>
+      <node id="26">
+        <label>graphics/image_data.h</label>
+      </node>
+      <node id="7">
+        <label>graphics/material.h</label>
+      </node>
+      <node id="45">
+        <label>graphics/mesh.h</label>
+      </node>
+      <node id="22">
+        <label>graphics/renderer_3d.h</label>
+      </node>
+      <node id="9">
+        <label>graphics/scene.h</label>
+      </node>
+      <node id="52">
+        <label>graphics/skinned_mesh_instance.h</label>
+      </node>
+      <node id="24">
+        <label>graphics/sprite.h</label>
+      </node>
+      <node id="20">
+        <label>graphics/sprite_renderer.h</label>
+      </node>
+      <node id="54">
+        <label>graphics/texture.h</label>
+      </node>
+      <node id="51">
+        <label>input/keyboard.h</label>
+      </node>
+      <node id="28">
+        <label>input/sony_controller_input_manager.h</label>
+      </node>
+      <node id="50">
+        <label>input/touch_input_manager.h</label>
+      </node>
+      <node id="14">
+        <label>map</label>
+      </node>
+      <node id="43">
+        <label>maths/Matrix44.h</label>
+      </node>
+      <node id="32">
+        <label>maths/Vector2.h</label>
+      </node>
+      <node id="23">
+        <label>maths/math_utils.h</label>
+      </node>
+      <node id="33">
+        <label>maths/matrix44.h</label>
+      </node>
+      <node id="44">
+        <label>maths/quaternion.h</label>
+      </node>
+      <node id="4">
+        <label>maths/vector2.h</label>
+      </node>
+      <node id="6">
+        <label>maths/vector4.h</label>
+      </node>
+      <node id="19">
+        <label>random</label>
+      </node>
+      <node id="15">
+        <label>string</label>
+      </node>
+      <node id="3">
+        <label>system/application.h</label>
+      </node>
+      <node id="21">
+        <label>system/debug_log.h</label>
+      </node>
+      <node id="11">
+        <label>system/platform.h</label>
+      </node>
+      <node id="62">
+        <label>thread</label>
+      </node>
+      <node id="16">
+        <label>vector</label>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="scene__app_8h" kindref="compound">scene_app.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;system/platform.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;graphics/sprite_renderer.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;graphics/font.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;system/debug_log.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;graphics/renderer_3d.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;maths/math_utils.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;graphics/sprite.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;assets/png_loader.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;graphics/image_data.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;audio/audio_manager.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;input/sony_controller_input_manager.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_main_menu_8h" kindref="compound">UserInterface/MainMenu.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_shop_menu_8h" kindref="compound">UserInterface/ShopMenu.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_pause_menu_8h" kindref="compound">UserInterface/PauseMenu.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_game_end_menu_8h" kindref="compound">UserInterface/GameEndMenu.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_player_character_8h" kindref="compound">Actors/MeshActors/PlayerCharacter.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_sprite_actor_8h" kindref="compound">Actors/SpriteActor.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_enemy_8h" kindref="compound">Actors/MeshActors/Enemy.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_ranged_enemy_8h" kindref="compound">Actors/MeshActors/RangedEnemy.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_mesh_actor_8h" kindref="compound">Actors/MeshActor.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_wave_manager_8h" kindref="compound">GameFramework/WaveManager.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_player_controller_8h" kindref="compound">GameFramework/PlayerController.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;thread&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_particle_manager_8h" kindref="compound">GameFramework/ParticleManager.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><ref refid="class_scene_app_1a5a29382297d3aa47f437d98a3dd4acdc" kindref="member">SceneApp::SceneApp</ref>(gef::Platform&amp;<sp/>platform):</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/>Application(platform)</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/>,sprite_renderer_(NULL)</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/>,renderer_3d_(NULL)</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/>,primitive_builder_(NULL)</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/>,font_(NULL)</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/>,scene_assets_(NULL)</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/>,mainMenu(NULL)</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/>,shopMenu(NULL)</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/>,pauseMenu(NULL)</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/>,gameEndMenu(NULL)</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/>,audioManager(NULL)</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/>,currentGameTime(0.f)</highlight></codeline>
+<codeline lineno="41"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/>dist<sp/>=<sp/>std::uniform_real_distribution&lt;float&gt;(0.9,<sp/>1.1);</highlight></codeline>
+<codeline lineno="43"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>region<sp/>Init<sp/>and<sp/>CleanUp</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_scene_app_1afbc3cd83343839fef53b5fcc2da630e6" kindref="member">SceneApp::Init</ref>()</highlight></codeline>
+<codeline lineno="47"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_scene_app_1a3bc64bbc203e9cb597f2b47dc69f20e6" kindref="member">SetGameState</ref>(<ref refid="namespace_game_state_1aa2df68fe63beaaf10d3154d8eb490fe6a1c09055471a61c18afc1fc201e6d7d2a" kindref="member">GameState::Loading</ref>);</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!instance)</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>instance<sp/>=<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/>BuildToLoadData();</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/>sprite_renderer_<sp/>=<sp/>gef::SpriteRenderer::Create(platform_);</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Sounds<sp/>controls</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/>soundController<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_player_controller" kindref="compound">PlayerController</ref>(platform_);</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/>particleManager<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_particle_manager" kindref="compound">ParticleManager</ref>();</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/>particleManager-&gt;<ref refid="class_particle_manager_1a192bc9932f68795cf756541ad35cdadb" kindref="member">Init</ref>();</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Keyboard</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_f_key_bind_keyboard" kindref="compound">FKeyBindKeyboard</ref><sp/>keybind;</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/>keybind.<ref refid="struct_f_key_bind_keyboard_1ac4a6383a3435b6ae4666585580d31fce" kindref="member">keyCode</ref><sp/>=<sp/>gef::Keyboard::KC_EQUALS;</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/>keybind.<ref refid="struct_f_key_bind_keyboard_1a5af1767e769e14b7f3e66f5c1926ed6a" kindref="member">inputAction</ref><sp/>=<sp/><ref refid="namespace_hellwatch_input_action_1ad39fcc17ea621da731d011339205f522ac50db83d00684255156bb26fbadba101" kindref="member">HellwatchInputAction::Pressed</ref>;</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/>keybind.<ref refid="struct_f_key_bind_keyboard_1a1743545acca699e351fae0996ad583bc" kindref="member">functionBind</ref><sp/>=<sp/>[</highlight><highlight class="keyword">this</highlight><highlight class="normal">]()<sp/>{</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>masterVolume<sp/>+=<sp/>5;</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>audioManager-&gt;SetMasterVolume(masterVolume);<sp/></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/>soundController-&gt;<ref refid="class_player_controller_1a3ecff75f943f340bce2240d58eaf7f4f" kindref="member">BindKeyboardEvent</ref>(keybind);</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/>keybind.<ref refid="struct_f_key_bind_keyboard_1ac4a6383a3435b6ae4666585580d31fce" kindref="member">keyCode</ref><sp/>=<sp/>gef::Keyboard::KC_MINUS;</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/>keybind.<ref refid="struct_f_key_bind_keyboard_1a1743545acca699e351fae0996ad583bc" kindref="member">functionBind</ref><sp/>=<sp/>[</highlight><highlight class="keyword">this</highlight><highlight class="normal">]()<sp/>{</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>masterVolume<sp/>-=<sp/>5;</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>audioManager-&gt;SetMasterVolume(masterVolume);</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/>soundController-&gt;<ref refid="class_player_controller_1a3ecff75f943f340bce2240d58eaf7f4f" kindref="member">BindKeyboardEvent</ref>(keybind);</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Controller</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_f_key_bind_controller" kindref="compound">FKeyBindController</ref><sp/>controllerKeybind;</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/>controllerKeybind.<ref refid="struct_f_key_bind_controller_1a9439ad75707d54dacf3aff4d9532e80c" kindref="member">inputAction</ref><sp/>=<sp/><ref refid="namespace_hellwatch_input_action_1ad39fcc17ea621da731d011339205f522ac50db83d00684255156bb26fbadba101" kindref="member">HellwatchInputAction::Pressed</ref>;</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/>controllerKeybind.<ref refid="struct_f_key_bind_controller_1a30a23da42d558b13a620780e9252e1b4" kindref="member">keyCode</ref><sp/>=<sp/>gef_SONY_CTRL_UP;</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/>controllerKeybind.<ref refid="struct_f_key_bind_controller_1ad1881af9bbed2c677b1f11b8e5e3d5b6" kindref="member">functionBind</ref><sp/>=<sp/>[</highlight><highlight class="keyword">this</highlight><highlight class="normal">](gef::Vector2<sp/>delta)<sp/>{</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>masterVolume<sp/>+=<sp/>5;</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>audioManager-&gt;SetMasterVolume(masterVolume);</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/>soundController-&gt;<ref refid="class_player_controller_1a3b4ce10a473a2000d1b204c7830bff97" kindref="member">BindControllerEvent</ref>(controllerKeybind);</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/>controllerKeybind.<ref refid="struct_f_key_bind_controller_1a30a23da42d558b13a620780e9252e1b4" kindref="member">keyCode</ref><sp/>=<sp/>gef_SONY_CTRL_DOWN;</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/>controllerKeybind.<ref refid="struct_f_key_bind_controller_1ad1881af9bbed2c677b1f11b8e5e3d5b6" kindref="member">functionBind</ref><sp/>=<sp/>[</highlight><highlight class="keyword">this</highlight><highlight class="normal">](gef::Vector2<sp/>delta)<sp/>{</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>masterVolume<sp/>-=<sp/>5;</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>audioManager-&gt;SetMasterVolume(masterVolume);</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/>soundController-&gt;<ref refid="class_player_controller_1a3b4ce10a473a2000d1b204c7830bff97" kindref="member">BindControllerEvent</ref>(controllerKeybind);</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>create<sp/>the<sp/>renderer<sp/>for<sp/>draw<sp/>3D<sp/>geometry</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/>renderer_3d_<sp/>=<sp/>gef::Renderer3D::Create(platform_);</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/>gravity<sp/>=<sp/>b2Vec2(0.0f,<sp/>-0.f);</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/>b2dWorld<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>b2World(gravity);</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/>audioManager<sp/>=<sp/>gef::AudioManager::Create();</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>@TODO:<sp/>Find<sp/>samples<sp/>and<sp/>music</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/>InitFont();</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/>SetupLights();</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/>loadingSprite<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>gef::Sprite();</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/>pointerSprite<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>gef::Sprite();</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/>gef::PNGLoader<sp/>png_loader;</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/>gef::ImageData<sp/>imageData;</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/>png_loader.Load(</highlight><highlight class="stringliteral">&quot;Assets/Loading.png&quot;</highlight><highlight class="normal">,<sp/>platform_,<sp/>imageData);</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(imageData.image()<sp/>!=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>gef::Texture*<sp/>texture<sp/>=<sp/>gef::Texture::Create(platform_,<sp/>imageData);</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>loadingSprite-&gt;set_position(platform_.width()<sp/>/<sp/>2,<sp/>platform_.height()<sp/>/<sp/>2,<sp/>0.f);</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>loadingSprite-&gt;set_width(1920);</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>loadingSprite-&gt;set_height(1080);</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>loadingSprite-&gt;set_texture(texture);</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"></highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/>gef::ImageData<sp/>pointerData;</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/>png_loader.Load(</highlight><highlight class="stringliteral">&quot;Assets/Pointer.png&quot;</highlight><highlight class="normal">,<sp/>platform_,<sp/>pointerData);</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(pointerData.image()<sp/>!=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>gef::Texture*<sp/>texture<sp/>=<sp/>gef::Texture::Create(platform_,<sp/>pointerData);</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pointerSprite-&gt;set_position(platform_.width()<sp/>/<sp/>2,<sp/>platform_.height()<sp/>/<sp/>2,<sp/>0.f);</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pointerSprite-&gt;set_width(64);</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pointerSprite-&gt;set_height(64);</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pointerSprite-&gt;set_texture(texture);</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"></highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/>loadFuture<sp/>=<sp/>std::async(std::launch::async,<sp/>[</highlight><highlight class="keyword">this</highlight><highlight class="normal">]<sp/>{<sp/>LoadAssets();<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="namespace_game_state_1aa2df68fe63beaaf10d3154d8eb490fe6a1c09055471a61c18afc1fc201e6d7d2a" kindref="member">GameState::Type::Loading</ref>;<sp/>});</highlight></codeline>
+<codeline lineno="137"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"></highlight></codeline>
+<codeline lineno="139"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>SceneApp::InitMainMenu()</highlight></codeline>
+<codeline lineno="140"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(mainMenu<sp/>==<sp/>NULL)</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mainMenu<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_main_menu" kindref="compound">MainMenu</ref>();</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mainMenu-&gt;<ref refid="class_main_menu_1a77aaa0eb810c74a907165b6a1acec31f" kindref="member">Init</ref>();</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"></highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/>audioManager-&gt;SetMasterVolume(30.f);</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_scene_app_1a942b3809824f430117b26e9a7ad5acf6" kindref="member">PlaySample</ref>(</highlight><highlight class="stringliteral">&quot;MainMenu&quot;</highlight><highlight class="normal">,<sp/>1.f,<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"></highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/>bCommingFromMainMenu<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="151"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"></highlight></codeline>
+<codeline lineno="153"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>SceneApp::InitShop()</highlight></codeline>
+<codeline lineno="154"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(shopMenu<sp/>==<sp/>NULL)</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>shopMenu<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_shop_menu" kindref="compound">ShopMenu</ref>();</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>shopMenu-&gt;<ref refid="class_shop_menu_1ad00ead74fb0ef7f5a265c1725fa6ccbf" kindref="member">Init</ref>();</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="160"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"></highlight></codeline>
+<codeline lineno="162"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>SceneApp::InitGameLoop()</highlight></codeline>
+<codeline lineno="163"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(bGameLoopInitted<sp/>&amp;&amp;<sp/>!bCommingFromMainMenu)<sp/></highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(bGameLoopInitted<sp/>&amp;&amp;<sp/>bCommingFromMainMenu)</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>playerCharacter<sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/>waveManager;</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/>primitive_builder_;</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"></highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>meshActors.size();<sp/>++i)</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>meshActors[i]-&gt;MarkForDelete();</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"></highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>spriteActors.size();<sp/>++i)</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>spriteActors[i]-&gt;MarkForDelete();</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"></highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>playerMoney<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/>shopMenu;</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>shopMenu<sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"></highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/>gameEndMenu;</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>gameEndMenu<sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"></highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(bCommingFromMainMenu)</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>mainMenuMusicIndex<sp/>=<sp/>FindSampleFromName(</highlight><highlight class="stringliteral">&quot;MainMenu&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>audioManager-&gt;StopPlayingSampleVoice(mainMenuMusicIndex);</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"></highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_scene_app_1a942b3809824f430117b26e9a7ad5acf6" kindref="member">PlaySample</ref>(</highlight><highlight class="stringliteral">&quot;GameLoop&quot;</highlight><highlight class="normal">,<sp/>1.f,<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"></highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>bCommingFromMainMenu<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"></highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>initialise<sp/>primitive<sp/>builder<sp/>to<sp/>make<sp/>create<sp/>some<sp/>3D<sp/>geometry<sp/>easier</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/>primitive_builder_<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_primitive_builder" kindref="compound">PrimitiveBuilder</ref>(platform_);</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"></highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/>playerCharacter<sp/>=<sp/>SpawnMeshActor&lt;PlayerCharacter&gt;();</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"></highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/>waveManager<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_wave_manager" kindref="compound">WaveManager</ref>();</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/>waveManager-&gt;<ref refid="class_wave_manager_1a918f759b1a32b82fea823b5292b8a001" kindref="member">Init</ref>();</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"></highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/><sp/>b2BodyDef<sp/>newBodyDef;</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"><sp/><sp/><sp/><sp/>newBodyDef.type<sp/>=<sp/>b2_staticBody;</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/>newBodyDef.position.Set(0.f,<sp/>-2.f);</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"></highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/><sp/><sp/>b2PolygonShape<sp/>newDynamicBox;</highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/><sp/><sp/>newDynamicBox.SetAsBox(10.f,<sp/>1.f);</highlight></codeline>
+<codeline lineno="216"><highlight class="normal"></highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/>b2FixtureDef<sp/>newFixtureDef;</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"><sp/><sp/><sp/><sp/>newFixtureDef.shape<sp/>=<sp/>&amp;newDynamicBox;</highlight></codeline>
+<codeline lineno="219"><highlight class="normal"><sp/><sp/><sp/><sp/>newFixtureDef.density<sp/>=<sp/>1.f;</highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/><sp/><sp/>newFixtureDef.friction<sp/>=<sp/>0.3f;</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"></highlight></codeline>
+<codeline lineno="222"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Build<sp/>environment</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="223"><highlight class="normal"><sp/><sp/><sp/><sp/>gef::Material<sp/>mat;</highlight></codeline>
+<codeline lineno="224"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_mesh_actor" kindref="compound">MeshActor</ref>*<sp/>actor<sp/>=<sp/><ref refid="class_scene_app_1a800b10254ae600ce80c0e69d765e8061" kindref="member">SpawnMeshActor</ref>(primitive_builder_-&gt;<ref refid="class_primitive_builder_1af92fb7ac1b3d5c32243e28dbd71691da" kindref="member">CreateBoxMesh</ref>(gef::Vector4(50.f,<sp/>0.5f,<sp/>50.f)),<sp/>gef::Vector4(0.f,<sp/>-2.f,<sp/>0.f));</highlight></codeline>
+<codeline lineno="225"><highlight class="normal"><sp/><sp/><sp/><sp/>mat.set_colour(0xFFFFFFFF);</highlight></codeline>
+<codeline lineno="226"><highlight class="normal"><sp/><sp/><sp/><sp/>mat.set_texture(<ref refid="class_scene_app_1ac00c6ac20d92d7e8fd77d341a116e81d" kindref="member">RequestTextureByName</ref>(</highlight><highlight class="stringliteral">&quot;Environment&quot;</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="227"><highlight class="normal"><sp/><sp/><sp/><sp/>actor-&gt;<ref refid="class_mesh_actor_1a0217e1969a68278f2548e1553e2ab92b" kindref="member">SetMaterial</ref>(mat);</highlight></codeline>
+<codeline lineno="228"><highlight class="normal"></highlight></codeline>
+<codeline lineno="229"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;b2Vec2&gt;<sp/>blockPositions<sp/>=<sp/>{<sp/>b2Vec2(12.f,<sp/>12.f)</highlight></codeline>
+<codeline lineno="230"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>,<sp/>b2Vec2(-12.f,<sp/>-12.f)</highlight></codeline>
+<codeline lineno="231"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>,<sp/>b2Vec2(-12.f,<sp/>12.f)</highlight></codeline>
+<codeline lineno="232"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>,<sp/>b2Vec2(12.f,<sp/>-12.f)</highlight></codeline>
+<codeline lineno="233"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>,<sp/>b2Vec2(20.f,<sp/>0.f)</highlight></codeline>
+<codeline lineno="234"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>,<sp/>b2Vec2(-20.f,<sp/>0.f)</highlight></codeline>
+<codeline lineno="235"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>,<sp/>b2Vec2(0.f,<sp/>20.f)</highlight></codeline>
+<codeline lineno="236"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>,<sp/>b2Vec2(0.f,<sp/>-20.f)</highlight></codeline>
+<codeline lineno="237"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>,<sp/>b2Vec2(21.f,<sp/>21.f)</highlight></codeline>
+<codeline lineno="238"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>,<sp/>b2Vec2(21.f,<sp/>-21.f)</highlight></codeline>
+<codeline lineno="239"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>,<sp/>b2Vec2(-21.f,<sp/>-21.f)</highlight></codeline>
+<codeline lineno="240"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>,<sp/>b2Vec2(-21.f,<sp/>21.f)<sp/>};</highlight></codeline>
+<codeline lineno="241"><highlight class="normal"></highlight></codeline>
+<codeline lineno="242"><highlight class="normal"><sp/><sp/><sp/><sp/>b2BodyDef<sp/>envBodyDef;</highlight></codeline>
+<codeline lineno="243"><highlight class="normal"><sp/><sp/><sp/><sp/>b2FixtureDef<sp/>envFixture;</highlight></codeline>
+<codeline lineno="244"><highlight class="normal"></highlight></codeline>
+<codeline lineno="245"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>blockPositions.size();<sp/>++i)</highlight></codeline>
+<codeline lineno="246"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="247"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>x<sp/>=<sp/>blockPositions[i].x;</highlight></codeline>
+<codeline lineno="248"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>y<sp/>=<sp/>blockPositions[i].y;</highlight></codeline>
+<codeline lineno="249"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_mesh_actor" kindref="compound">MeshActor</ref>*<sp/>environment<sp/>=<sp/><ref refid="class_scene_app_1a800b10254ae600ce80c0e69d765e8061" kindref="member">SpawnMeshActor</ref>(<ref refid="class_scene_app_1a6b6984ec718cb9ebad4be261df534cf1" kindref="member">RequestMeshByName</ref>(</highlight><highlight class="stringliteral">&quot;EnvironmentBlock&quot;</highlight><highlight class="normal">),<sp/>gef::Vector4(x,<sp/>0.f,<sp/>y));</highlight></codeline>
+<codeline lineno="250"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>environment-&gt;<ref refid="class_mesh_actor_1a0217e1969a68278f2548e1553e2ab92b" kindref="member">SetMaterial</ref>(mat);</highlight></codeline>
+<codeline lineno="251"><highlight class="normal"></highlight></codeline>
+<codeline lineno="252"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>envBodyDef.type<sp/>=<sp/>b2_staticBody;</highlight></codeline>
+<codeline lineno="253"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>envBodyDef.position.Set(x,<sp/>y);</highlight></codeline>
+<codeline lineno="254"><highlight class="normal"></highlight></codeline>
+<codeline lineno="255"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>b2CircleShape<sp/>shape;</highlight></codeline>
+<codeline lineno="256"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>shape.m_radius<sp/>=<sp/>1.f;</highlight></codeline>
+<codeline lineno="257"><highlight class="normal"></highlight></codeline>
+<codeline lineno="258"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>envFixture.shape<sp/>=<sp/>&amp;shape;</highlight></codeline>
+<codeline lineno="259"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>envFixture.density<sp/>=<sp/>1.f;</highlight></codeline>
+<codeline lineno="260"><highlight class="normal"></highlight></codeline>
+<codeline lineno="261"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>environment-&gt;<ref refid="class_world_object_1a9f76e2def47f4d6be6bafb330ac0394b" kindref="member">ID</ref><sp/>=<sp/><ref refid="_utils_8h_1af4955eee766517b72730e7c165711a6c" kindref="member">ENVIRONMENT_ID</ref>;</highlight></codeline>
+<codeline lineno="262"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>environment-&gt;<ref refid="class_world_object_1a8817deac42a357d2ed476791c7b76511" kindref="member">SetCollisionBody</ref>(<ref refid="class_scene_app_1adcf5fcd2dfcb07d468c0ff4455e45bdd" kindref="member">CreateCollisionBody</ref>(envBodyDef,<sp/>envFixture,<sp/>environment));</highlight></codeline>
+<codeline lineno="263"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="264"><highlight class="normal"></highlight></codeline>
+<codeline lineno="265"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Left<sp/>and<sp/>Right<sp/>walls</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="266"><highlight class="normal"><sp/><sp/><sp/><sp/>gef::Material<sp/>blockMat;</highlight></codeline>
+<codeline lineno="267"><highlight class="normal"><sp/><sp/><sp/><sp/>blockMat.set_colour(0xFF000000);</highlight></codeline>
+<codeline lineno="268"><highlight class="normal"></highlight></codeline>
+<codeline lineno="269"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_mesh_actor" kindref="compound">MeshActor</ref>*<sp/>blockingWall<sp/>=<sp/><ref refid="class_scene_app_1a800b10254ae600ce80c0e69d765e8061" kindref="member">SpawnMeshActor</ref>(<ref refid="class_scene_app_1a6b6984ec718cb9ebad4be261df534cf1" kindref="member">RequestMeshByName</ref>(</highlight><highlight class="stringliteral">&quot;BlockingWall&quot;</highlight><highlight class="normal">),<sp/>gef::Vector4(30.f,<sp/>0.f,<sp/>0.f));</highlight></codeline>
+<codeline lineno="270"><highlight class="normal"><sp/><sp/><sp/><sp/>envBodyDef.position.Set(30.f,<sp/>0.f);</highlight></codeline>
+<codeline lineno="271"><highlight class="normal"><sp/><sp/><sp/><sp/>b2PolygonShape<sp/>envShape;</highlight></codeline>
+<codeline lineno="272"><highlight class="normal"><sp/><sp/><sp/><sp/>envShape.SetAsBox(1.f,<sp/>60.f);</highlight></codeline>
+<codeline lineno="273"><highlight class="normal"><sp/><sp/><sp/><sp/>envFixture.shape<sp/>=<sp/>&amp;envShape;</highlight></codeline>
+<codeline lineno="274"><highlight class="normal"><sp/><sp/><sp/><sp/>blockingWall-&gt;<ref refid="class_world_object_1a8817deac42a357d2ed476791c7b76511" kindref="member">SetCollisionBody</ref>(<ref refid="class_scene_app_1adcf5fcd2dfcb07d468c0ff4455e45bdd" kindref="member">CreateCollisionBody</ref>(envBodyDef,<sp/>envFixture,<sp/>blockingWall));</highlight></codeline>
+<codeline lineno="275"><highlight class="normal"><sp/><sp/><sp/><sp/>blockingWall-&gt;<ref refid="class_mesh_actor_1a0217e1969a68278f2548e1553e2ab92b" kindref="member">SetMaterial</ref>(blockMat);</highlight></codeline>
+<codeline lineno="276"><highlight class="normal"><sp/><sp/><sp/><sp/>blockingWall-&gt;<ref refid="class_world_object_1a9f76e2def47f4d6be6bafb330ac0394b" kindref="member">ID</ref><sp/>=<sp/><ref refid="_utils_8h_1af4955eee766517b72730e7c165711a6c" kindref="member">ENVIRONMENT_ID</ref>;</highlight></codeline>
+<codeline lineno="277"><highlight class="normal"></highlight></codeline>
+<codeline lineno="278"><highlight class="normal"><sp/><sp/><sp/><sp/>blockingWall<sp/>=<sp/><ref refid="class_scene_app_1a800b10254ae600ce80c0e69d765e8061" kindref="member">SpawnMeshActor</ref>(<ref refid="class_scene_app_1a6b6984ec718cb9ebad4be261df534cf1" kindref="member">RequestMeshByName</ref>(</highlight><highlight class="stringliteral">&quot;BlockingWall&quot;</highlight><highlight class="normal">),<sp/>gef::Vector4(-30.f,<sp/>0.f,<sp/>0.f));</highlight></codeline>
+<codeline lineno="279"><highlight class="normal"><sp/><sp/><sp/><sp/>envBodyDef.position.Set(-30.f,<sp/>0.f);</highlight></codeline>
+<codeline lineno="280"><highlight class="normal"><sp/><sp/><sp/><sp/>blockingWall-&gt;<ref refid="class_world_object_1a8817deac42a357d2ed476791c7b76511" kindref="member">SetCollisionBody</ref>(<ref refid="class_scene_app_1adcf5fcd2dfcb07d468c0ff4455e45bdd" kindref="member">CreateCollisionBody</ref>(envBodyDef,<sp/>envFixture,<sp/>blockingWall));</highlight></codeline>
+<codeline lineno="281"><highlight class="normal"><sp/><sp/><sp/><sp/>blockingWall-&gt;<ref refid="class_mesh_actor_1a0217e1969a68278f2548e1553e2ab92b" kindref="member">SetMaterial</ref>(blockMat);</highlight></codeline>
+<codeline lineno="282"><highlight class="normal"><sp/><sp/><sp/><sp/>blockingWall-&gt;<ref refid="class_world_object_1a9f76e2def47f4d6be6bafb330ac0394b" kindref="member">ID</ref><sp/>=<sp/><ref refid="_utils_8h_1af4955eee766517b72730e7c165711a6c" kindref="member">ENVIRONMENT_ID</ref>;</highlight></codeline>
+<codeline lineno="283"><highlight class="normal"></highlight></codeline>
+<codeline lineno="284"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Up<sp/>and<sp/>down</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="285"><highlight class="normal"><sp/><sp/><sp/><sp/>blockingWall<sp/>=<sp/><ref refid="class_scene_app_1a800b10254ae600ce80c0e69d765e8061" kindref="member">SpawnMeshActor</ref>(<ref refid="class_scene_app_1a6b6984ec718cb9ebad4be261df534cf1" kindref="member">RequestMeshByName</ref>(</highlight><highlight class="stringliteral">&quot;BlockingWallY&quot;</highlight><highlight class="normal">),<sp/>gef::Vector4(0.f,<sp/>0.f,<sp/>30.f));</highlight></codeline>
+<codeline lineno="286"><highlight class="normal"><sp/><sp/><sp/><sp/>envBodyDef.position.Set(0.f,<sp/>30.f);</highlight></codeline>
+<codeline lineno="287"><highlight class="normal"><sp/><sp/><sp/><sp/>envShape.SetAsBox(60.f,<sp/>1.f);</highlight></codeline>
+<codeline lineno="288"><highlight class="normal"><sp/><sp/><sp/><sp/>envFixture.shape<sp/>=<sp/>&amp;envShape;</highlight></codeline>
+<codeline lineno="289"><highlight class="normal"><sp/><sp/><sp/><sp/>blockingWall-&gt;<ref refid="class_world_object_1a8817deac42a357d2ed476791c7b76511" kindref="member">SetCollisionBody</ref>(<ref refid="class_scene_app_1adcf5fcd2dfcb07d468c0ff4455e45bdd" kindref="member">CreateCollisionBody</ref>(envBodyDef,<sp/>envFixture,<sp/>blockingWall));</highlight></codeline>
+<codeline lineno="290"><highlight class="normal"><sp/><sp/><sp/><sp/>blockingWall-&gt;<ref refid="class_mesh_actor_1a0217e1969a68278f2548e1553e2ab92b" kindref="member">SetMaterial</ref>(blockMat);</highlight></codeline>
+<codeline lineno="291"><highlight class="normal"><sp/><sp/><sp/><sp/>blockingWall-&gt;<ref refid="class_world_object_1a9f76e2def47f4d6be6bafb330ac0394b" kindref="member">ID</ref><sp/>=<sp/><ref refid="_utils_8h_1af4955eee766517b72730e7c165711a6c" kindref="member">ENVIRONMENT_ID</ref>;</highlight></codeline>
+<codeline lineno="292"><highlight class="normal"></highlight></codeline>
+<codeline lineno="293"><highlight class="normal"><sp/><sp/><sp/><sp/>blockingWall<sp/>=<sp/><ref refid="class_scene_app_1a800b10254ae600ce80c0e69d765e8061" kindref="member">SpawnMeshActor</ref>(<ref refid="class_scene_app_1a6b6984ec718cb9ebad4be261df534cf1" kindref="member">RequestMeshByName</ref>(</highlight><highlight class="stringliteral">&quot;BlockingWallY&quot;</highlight><highlight class="normal">),<sp/>gef::Vector4(0.f,<sp/>0.f,<sp/>-30.f));</highlight></codeline>
+<codeline lineno="294"><highlight class="normal"><sp/><sp/><sp/><sp/>envBodyDef.position.Set(0.f,<sp/>-30.f);</highlight></codeline>
+<codeline lineno="295"><highlight class="normal"><sp/><sp/><sp/><sp/>blockingWall-&gt;<ref refid="class_world_object_1a8817deac42a357d2ed476791c7b76511" kindref="member">SetCollisionBody</ref>(<ref refid="class_scene_app_1adcf5fcd2dfcb07d468c0ff4455e45bdd" kindref="member">CreateCollisionBody</ref>(envBodyDef,<sp/>envFixture,<sp/>blockingWall));</highlight></codeline>
+<codeline lineno="296"><highlight class="normal"><sp/><sp/><sp/><sp/>blockingWall-&gt;<ref refid="class_mesh_actor_1a0217e1969a68278f2548e1553e2ab92b" kindref="member">SetMaterial</ref>(blockMat);</highlight></codeline>
+<codeline lineno="297"><highlight class="normal"><sp/><sp/><sp/><sp/>blockingWall-&gt;<ref refid="class_world_object_1a9f76e2def47f4d6be6bafb330ac0394b" kindref="member">ID</ref><sp/>=<sp/><ref refid="_utils_8h_1af4955eee766517b72730e7c165711a6c" kindref="member">ENVIRONMENT_ID</ref>;</highlight></codeline>
+<codeline lineno="298"><highlight class="normal"></highlight></codeline>
+<codeline lineno="299"><highlight class="normal"><sp/><sp/><sp/><sp/>bGameLoopInitted<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="300"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="301"><highlight class="normal"></highlight></codeline>
+<codeline lineno="302"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>SceneApp::InitPauseMenu()</highlight></codeline>
+<codeline lineno="303"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="304"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(pauseMenu<sp/>==<sp/>NULL)</highlight></codeline>
+<codeline lineno="305"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="306"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pauseMenu<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_pause_menu" kindref="compound">PauseMenu</ref>();</highlight></codeline>
+<codeline lineno="307"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pauseMenu-&gt;<ref refid="class_pause_menu_1a029c44778ea655c2762cbddc8941a6f8" kindref="member">Init</ref>();</highlight></codeline>
+<codeline lineno="308"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="309"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="310"><highlight class="normal"></highlight></codeline>
+<codeline lineno="311"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>SceneApp::InitGameEndMenu()</highlight></codeline>
+<codeline lineno="312"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="313"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(gameEndMenu<sp/>==<sp/>NULL)</highlight></codeline>
+<codeline lineno="314"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="315"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>gameEndMenu<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_game_end_menu" kindref="compound">GameEndMenu</ref>();</highlight></codeline>
+<codeline lineno="316"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="317"><highlight class="normal"></highlight></codeline>
+<codeline lineno="318"><highlight class="normal"><sp/><sp/><sp/><sp/>gameEndMenu-&gt;<ref refid="class_game_end_menu_1ac4d3cf8e606c29eb97a258895fc0217a" kindref="member">Init</ref>();</highlight></codeline>
+<codeline lineno="319"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="320"><highlight class="normal"></highlight></codeline>
+<codeline lineno="321"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_scene_app_1ab815a8823c2248fcebdc7a06867bdb9b" kindref="member">SceneApp::CleanUp</ref>()</highlight></codeline>
+<codeline lineno="322"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="323"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>clean<sp/>up<sp/>scene<sp/>assets</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="324"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/>scene_assets_;</highlight></codeline>
+<codeline lineno="325"><highlight class="normal"><sp/><sp/><sp/><sp/>scene_assets_<sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="326"><highlight class="normal"></highlight></codeline>
+<codeline lineno="327"><highlight class="normal"><sp/><sp/><sp/><sp/>CleanUpFont();</highlight></codeline>
+<codeline lineno="328"><highlight class="normal"></highlight></codeline>
+<codeline lineno="329"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/>primitive_builder_;</highlight></codeline>
+<codeline lineno="330"><highlight class="normal"><sp/><sp/><sp/><sp/>primitive_builder_<sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="331"><highlight class="normal"></highlight></codeline>
+<codeline lineno="332"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/>renderer_3d_;</highlight></codeline>
+<codeline lineno="333"><highlight class="normal"><sp/><sp/><sp/><sp/>renderer_3d_<sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="334"><highlight class="normal"></highlight></codeline>
+<codeline lineno="335"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/>sprite_renderer_;</highlight></codeline>
+<codeline lineno="336"><highlight class="normal"><sp/><sp/><sp/><sp/>sprite_renderer_<sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="337"><highlight class="normal"></highlight></codeline>
+<codeline lineno="338"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/>b2dWorld;</highlight></codeline>
+<codeline lineno="339"><highlight class="normal"><sp/><sp/><sp/><sp/>b2dWorld<sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="340"><highlight class="normal"></highlight></codeline>
+<codeline lineno="341"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/>mainMenu;</highlight></codeline>
+<codeline lineno="342"><highlight class="normal"><sp/><sp/><sp/><sp/>mainMenu<sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="343"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="344"><highlight class="normal"></highlight></codeline>
+<codeline lineno="345"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>SceneApp::InitFont()</highlight></codeline>
+<codeline lineno="346"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="347"><highlight class="normal"><sp/><sp/><sp/><sp/>font_<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>gef::Font(platform_);</highlight></codeline>
+<codeline lineno="348"><highlight class="normal"><sp/><sp/><sp/><sp/>font_-&gt;Load(</highlight><highlight class="stringliteral">&quot;comic_sans&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="349"><highlight class="normal"></highlight></codeline>
+<codeline lineno="350"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="351"><highlight class="normal"></highlight></codeline>
+<codeline lineno="352"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>SceneApp::CleanUpFont()</highlight></codeline>
+<codeline lineno="353"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="354"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/>font_;</highlight></codeline>
+<codeline lineno="355"><highlight class="normal"><sp/><sp/><sp/><sp/>font_<sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="356"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="357"><highlight class="normal"></highlight></codeline>
+<codeline lineno="358"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>SceneApp::SetupLights()</highlight></codeline>
+<codeline lineno="359"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="360"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>grab<sp/>the<sp/>data<sp/>for<sp/>the<sp/>default<sp/>shader<sp/>used<sp/>for<sp/>rendering<sp/>3D<sp/>geometry</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="361"><highlight class="normal"><sp/><sp/><sp/><sp/>gef::Default3DShaderData&amp;<sp/>default_shader_data<sp/>=<sp/>renderer_3d_-&gt;default_shader_data();</highlight></codeline>
+<codeline lineno="362"><highlight class="normal"></highlight></codeline>
+<codeline lineno="363"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>set<sp/>the<sp/>ambient<sp/>light</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="364"><highlight class="normal"><sp/><sp/><sp/><sp/>default_shader_data.set_ambient_light_colour(gef::Colour(0.25f,<sp/>0.25f,<sp/>0.25f,<sp/>1.0f));</highlight></codeline>
+<codeline lineno="365"><highlight class="normal"></highlight></codeline>
+<codeline lineno="366"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>add<sp/>a<sp/>point<sp/>light<sp/>that<sp/>is<sp/>almost<sp/>white,<sp/>but<sp/>with<sp/>a<sp/>blue<sp/>tinge</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="367"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>the<sp/>position<sp/>of<sp/>the<sp/>light<sp/>is<sp/>set<sp/>far<sp/>away<sp/>so<sp/>it<sp/>acts<sp/>light<sp/>a<sp/>directional<sp/>light</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="368"><highlight class="normal"><sp/><sp/><sp/><sp/>gef::PointLight<sp/>default_point_light;</highlight></codeline>
+<codeline lineno="369"><highlight class="normal"><sp/><sp/><sp/><sp/>default_point_light.set_colour(gef::Colour(0.7f,<sp/>0.7f,<sp/>1.0f,<sp/>1.0f));</highlight></codeline>
+<codeline lineno="370"><highlight class="normal"><sp/><sp/><sp/><sp/>default_point_light.set_position(gef::Vector4(-500.0f,<sp/>400.0f,<sp/>700.0f));</highlight></codeline>
+<codeline lineno="371"><highlight class="normal"><sp/><sp/><sp/><sp/>default_shader_data.AddPointLight(default_point_light);</highlight></codeline>
+<codeline lineno="372"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="373"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>endregion</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="374"><highlight class="normal"></highlight></codeline>
+<codeline lineno="375"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>region<sp/>GameLoop</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="376"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_scene_app_1a48adec081291fea513f516bec9dcb898" kindref="member">SceneApp::Update</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>frame_time)</highlight></codeline>
+<codeline lineno="377"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="378"><highlight class="normal"><sp/><sp/><sp/><sp/>fps_<sp/>=<sp/>1.0f<sp/>/<sp/>frame_time;</highlight></codeline>
+<codeline lineno="379"><highlight class="normal"><sp/><sp/><sp/><sp/>currentGameTime<sp/>+=<sp/>frame_time;</highlight></codeline>
+<codeline lineno="380"><highlight class="normal"><sp/><sp/><sp/><sp/>lastDeltaTime<sp/>=<sp/>frame_time;</highlight></codeline>
+<codeline lineno="381"><highlight class="normal"><sp/><sp/><sp/><sp/>soundController-&gt;<ref refid="class_player_controller_1a2e0c380d64a88c8cfe60ce8452921227" kindref="member">Update</ref>();</highlight></codeline>
+<codeline lineno="382"><highlight class="normal"></highlight></codeline>
+<codeline lineno="383"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(pointerSprite)</highlight></codeline>
+<codeline lineno="384"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="385"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>gef::Vector2<sp/>lastTouch<sp/>=<sp/><ref refid="class_scene_app_1a2cb299beb00f7fea8f1de7c0cc6ab19b" kindref="member">GetLastTouchPosition</ref>();</highlight></codeline>
+<codeline lineno="386"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pointerSprite-&gt;set_position(lastTouch.x,<sp/>lastTouch.y,<sp/>0);</highlight></codeline>
+<codeline lineno="387"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="388"><highlight class="normal"></highlight></codeline>
+<codeline lineno="389"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal"><sp/>(gameState)</highlight></codeline>
+<codeline lineno="390"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="391"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="namespace_game_state_1aa2df68fe63beaaf10d3154d8eb490fe6a1c09055471a61c18afc1fc201e6d7d2a" kindref="member">GameState::Loading</ref>:</highlight></codeline>
+<codeline lineno="392"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>UpdateLoading(frame_time);</highlight></codeline>
+<codeline lineno="393"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="394"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="namespace_game_state_1aa2df68fe63beaaf10d3154d8eb490fe6afff9d63720dd6c0c621817980d02d9ee" kindref="member">GameState::MainMenu</ref>:</highlight></codeline>
+<codeline lineno="395"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>UpdateMainMenu(frame_time);</highlight></codeline>
+<codeline lineno="396"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="397"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="namespace_game_state_1aa2df68fe63beaaf10d3154d8eb490fe6aa1babbc78fafb7b98d14a8fcc880bd55" kindref="member">GameState::GameLoop</ref>:</highlight></codeline>
+<codeline lineno="398"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>UpdateGameLoop(frame_time);</highlight></codeline>
+<codeline lineno="399"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="400"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="namespace_game_state_1aa2df68fe63beaaf10d3154d8eb490fe6a6e1adcd2eb4fb5660e3baadd566e4873" kindref="member">GameState::PauseMenu</ref>:</highlight></codeline>
+<codeline lineno="401"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>UpdatePauseMenu(frame_time);</highlight></codeline>
+<codeline lineno="402"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="403"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="namespace_game_state_1aa2df68fe63beaaf10d3154d8eb490fe6a11dfd10e2813b09f256dd86e3902dfe2" kindref="member">GameState::Shop</ref>:</highlight></codeline>
+<codeline lineno="404"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>UpdateShop();</highlight></codeline>
+<codeline lineno="405"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="406"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="namespace_game_state_1aa2df68fe63beaaf10d3154d8eb490fe6a797c961d3f35a579149051adc329e58e" kindref="member">GameState::GameEnd</ref>:</highlight></codeline>
+<codeline lineno="407"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>UpdateGameEnd();</highlight></codeline>
+<codeline lineno="408"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="409"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="410"><highlight class="normal"></highlight></codeline>
+<codeline lineno="411"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="412"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="413"><highlight class="normal"></highlight></codeline>
+<codeline lineno="414"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>SceneApp::UpdateLoading(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>frame_time)</highlight></codeline>
+<codeline lineno="415"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="416"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(loadFuture._Is_ready())</highlight></codeline>
+<codeline lineno="417"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="418"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_scene_app_1a3bc64bbc203e9cb597f2b47dc69f20e6" kindref="member">SetGameState</ref>(<ref refid="namespace_game_state_1aa2df68fe63beaaf10d3154d8eb490fe6afff9d63720dd6c0c621817980d02d9ee" kindref="member">GameState::MainMenu</ref>);</highlight></codeline>
+<codeline lineno="419"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/>loadingSprite;</highlight></codeline>
+<codeline lineno="420"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="421"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="422"><highlight class="normal"></highlight></codeline>
+<codeline lineno="423"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>SceneApp::UpdateMainMenu(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>frame_time)</highlight></codeline>
+<codeline lineno="424"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="425"><highlight class="normal"><sp/><sp/><sp/><sp/>mainMenu-&gt;<ref refid="class_menu_1af29d71473a414e31e914bc637840cb3e" kindref="member">Update</ref>();</highlight></codeline>
+<codeline lineno="426"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="427"><highlight class="normal"></highlight></codeline>
+<codeline lineno="428"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>SceneApp::UpdateGameLoop(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>frame_time)</highlight></codeline>
+<codeline lineno="429"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="430"><highlight class="normal"><sp/><sp/><sp/><sp/>int32<sp/>velocityIterations<sp/>=<sp/>6;</highlight></codeline>
+<codeline lineno="431"><highlight class="normal"><sp/><sp/><sp/><sp/>int32<sp/>positionIterations<sp/>=<sp/>2;</highlight></codeline>
+<codeline lineno="432"><highlight class="normal"></highlight></codeline>
+<codeline lineno="433"><highlight class="normal"><sp/><sp/><sp/><sp/>b2dWorld-&gt;Step(frame_time,<sp/>velocityIterations,<sp/>positionIterations);</highlight></codeline>
+<codeline lineno="434"><highlight class="normal"><sp/><sp/><sp/><sp/>waveManager-&gt;<ref refid="class_wave_manager_1ae5ee18f81c4ea516839af94da831a24d" kindref="member">Update</ref>();</highlight></codeline>
+<codeline lineno="435"><highlight class="normal"><sp/><sp/><sp/><sp/>HandleCollision();</highlight></codeline>
+<codeline lineno="436"><highlight class="normal"></highlight></codeline>
+<codeline lineno="437"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>meshActors.size();<sp/>++i)</highlight></codeline>
+<codeline lineno="438"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="439"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(meshActors[i]<sp/>&amp;&amp;<sp/>meshActors[i]-&gt;ShouldUpdate())</highlight></codeline>
+<codeline lineno="440"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>meshActors[i]-&gt;Update(frame_time);</highlight></codeline>
+<codeline lineno="441"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="442"><highlight class="normal"></highlight></codeline>
+<codeline lineno="443"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>spriteActors.size();<sp/>++i)</highlight></codeline>
+<codeline lineno="444"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="445"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(spriteActors[i]<sp/>&amp;&amp;<sp/>spriteActors[i]-&gt;ShouldUpdate())</highlight></codeline>
+<codeline lineno="446"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>spriteActors[i]-&gt;Update(frame_time);</highlight></codeline>
+<codeline lineno="447"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="448"><highlight class="normal"></highlight></codeline>
+<codeline lineno="449"><highlight class="normal"><sp/><sp/><sp/><sp/>UpdateShop();</highlight></codeline>
+<codeline lineno="450"><highlight class="normal"><sp/><sp/><sp/><sp/>CheckMarkedForDeletion();</highlight></codeline>
+<codeline lineno="451"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="452"><highlight class="normal"></highlight></codeline>
+<codeline lineno="453"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>SceneApp::UpdateShop()</highlight></codeline>
+<codeline lineno="454"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="455"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(shopMenu)</highlight></codeline>
+<codeline lineno="456"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>shopMenu-&gt;<ref refid="class_shop_menu_1a17c43cd733173e8a19eaaff593dbfec7" kindref="member">Update</ref>();</highlight></codeline>
+<codeline lineno="457"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="458"><highlight class="normal"></highlight></codeline>
+<codeline lineno="459"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>SceneApp::UpdateGameEnd()</highlight></codeline>
+<codeline lineno="460"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="461"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(gameEndMenu)</highlight></codeline>
+<codeline lineno="462"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>gameEndMenu-&gt;<ref refid="class_menu_1af29d71473a414e31e914bc637840cb3e" kindref="member">Update</ref>();</highlight></codeline>
+<codeline lineno="463"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="464"><highlight class="normal"></highlight></codeline>
+<codeline lineno="465"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>SceneApp::UpdatePauseMenu(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>frame_time)</highlight></codeline>
+<codeline lineno="466"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="467"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(pauseMenu)</highlight></codeline>
+<codeline lineno="468"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pauseMenu-&gt;<ref refid="class_menu_1af29d71473a414e31e914bc637840cb3e" kindref="member">Update</ref>();</highlight></codeline>
+<codeline lineno="469"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="470"><highlight class="normal"></highlight></codeline>
+<codeline lineno="471"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_scene_app_1afd9eebbabf3fe176d9fe30b309c2130c" kindref="member">SceneApp::Render</ref>()</highlight></codeline>
+<codeline lineno="472"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="473"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>projection</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="474"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>fov<sp/>=<sp/>gef::DegToRad(45.0f);</highlight></codeline>
+<codeline lineno="475"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>aspect_ratio<sp/>=<sp/>(float)platform_.width()<sp/>/<sp/>(float)platform_.height();</highlight></codeline>
+<codeline lineno="476"><highlight class="normal"><sp/><sp/><sp/><sp/>gef::Matrix44<sp/>projection_matrix;</highlight></codeline>
+<codeline lineno="477"><highlight class="normal"><sp/><sp/><sp/><sp/>projection_matrix<sp/>=<sp/>platform_.PerspectiveProjectionFov(fov,<sp/>aspect_ratio,<sp/>0.001f,<sp/>100.0f);</highlight></codeline>
+<codeline lineno="478"><highlight class="normal"><sp/><sp/><sp/><sp/>renderer_3d_-&gt;set_projection_matrix(projection_matrix);</highlight></codeline>
+<codeline lineno="479"><highlight class="normal"></highlight></codeline>
+<codeline lineno="480"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal"><sp/>(gameState)</highlight></codeline>
+<codeline lineno="481"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="482"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="namespace_game_state_1aa2df68fe63beaaf10d3154d8eb490fe6a1c09055471a61c18afc1fc201e6d7d2a" kindref="member">GameState::Loading</ref>:</highlight></codeline>
+<codeline lineno="483"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>RenderLoading();</highlight></codeline>
+<codeline lineno="484"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="485"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="namespace_game_state_1aa2df68fe63beaaf10d3154d8eb490fe6afff9d63720dd6c0c621817980d02d9ee" kindref="member">GameState::MainMenu</ref>:</highlight></codeline>
+<codeline lineno="486"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>RenderMainMenu();</highlight></codeline>
+<codeline lineno="487"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="488"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="namespace_game_state_1aa2df68fe63beaaf10d3154d8eb490fe6aa1babbc78fafb7b98d14a8fcc880bd55" kindref="member">GameState::GameLoop</ref>:</highlight></codeline>
+<codeline lineno="489"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>RenderGameLoop();</highlight></codeline>
+<codeline lineno="490"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="491"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="namespace_game_state_1aa2df68fe63beaaf10d3154d8eb490fe6a6e1adcd2eb4fb5660e3baadd566e4873" kindref="member">GameState::PauseMenu</ref>:</highlight></codeline>
+<codeline lineno="492"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>RenderPauseMenu();</highlight></codeline>
+<codeline lineno="493"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="494"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="namespace_game_state_1aa2df68fe63beaaf10d3154d8eb490fe6a11dfd10e2813b09f256dd86e3902dfe2" kindref="member">GameState::Shop</ref>:</highlight></codeline>
+<codeline lineno="495"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>RenderShop();</highlight></codeline>
+<codeline lineno="496"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="497"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="namespace_game_state_1aa2df68fe63beaaf10d3154d8eb490fe6a797c961d3f35a579149051adc329e58e" kindref="member">GameState::GameEnd</ref>:</highlight></codeline>
+<codeline lineno="498"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>RenderGameEnd();</highlight></codeline>
+<codeline lineno="499"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="500"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="501"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="502"><highlight class="normal"></highlight></codeline>
+<codeline lineno="503"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>SceneApp::RenderLoading()</highlight></codeline>
+<codeline lineno="504"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="505"><highlight class="normal"><sp/><sp/><sp/><sp/>cameraLookAt<sp/>=<sp/>gef::Vector4(0.f,<sp/>0.f,<sp/>0.f);</highlight></codeline>
+<codeline lineno="506"><highlight class="normal"></highlight></codeline>
+<codeline lineno="507"><highlight class="normal"><sp/><sp/><sp/><sp/>gef::Matrix44<sp/>view_matrix;</highlight></codeline>
+<codeline lineno="508"><highlight class="normal"><sp/><sp/><sp/><sp/>view_matrix.LookAt(cameraEye,<sp/>cameraLookAt,<sp/>cameraUp);</highlight></codeline>
+<codeline lineno="509"><highlight class="normal"><sp/><sp/><sp/><sp/>renderer_3d_-&gt;set_view_matrix(view_matrix);</highlight></codeline>
+<codeline lineno="510"><highlight class="normal"></highlight></codeline>
+<codeline lineno="511"><highlight class="normal"><sp/><sp/><sp/><sp/>renderer_3d_-&gt;Begin();</highlight></codeline>
+<codeline lineno="512"><highlight class="normal"></highlight></codeline>
+<codeline lineno="513"><highlight class="normal"><sp/><sp/><sp/><sp/>renderer_3d_-&gt;End();</highlight></codeline>
+<codeline lineno="514"><highlight class="normal"></highlight></codeline>
+<codeline lineno="515"><highlight class="normal"><sp/><sp/><sp/><sp/>sprite_renderer_-&gt;Begin(</highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="516"><highlight class="normal"><sp/><sp/><sp/><sp/>sprite_renderer_-&gt;DrawSprite(*loadingSprite);</highlight></codeline>
+<codeline lineno="517"><highlight class="normal"><sp/><sp/><sp/><sp/>sprite_renderer_-&gt;End();</highlight></codeline>
+<codeline lineno="518"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="519"><highlight class="normal"></highlight></codeline>
+<codeline lineno="520"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>SceneApp::RenderShop()</highlight></codeline>
+<codeline lineno="521"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="522"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(playerCharacter<sp/>!=<sp/>NULL)</highlight></codeline>
+<codeline lineno="523"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="524"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cameraEye<sp/>=<sp/>playerCharacter-&gt;<ref refid="class_world_object_1a9967baa65719f1418641598a244306a5" kindref="member">GetTranslation</ref>();</highlight></codeline>
+<codeline lineno="525"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cameraEye.set_y(20.f);</highlight></codeline>
+<codeline lineno="526"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cameraEye.set_z(cameraEye.z()<sp/>-<sp/>10);</highlight></codeline>
+<codeline lineno="527"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cameraLookAt<sp/>=<sp/>playerCharacter-&gt;<ref refid="class_world_object_1a9967baa65719f1418641598a244306a5" kindref="member">GetTranslation</ref>();</highlight></codeline>
+<codeline lineno="528"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cameraLookAt.set_y(-1.f);</highlight></codeline>
+<codeline lineno="529"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="530"><highlight class="normal"></highlight></codeline>
+<codeline lineno="531"><highlight class="normal"><sp/><sp/><sp/><sp/>gef::Matrix44<sp/>view_matrix;</highlight></codeline>
+<codeline lineno="532"><highlight class="normal"><sp/><sp/><sp/><sp/>view_matrix.LookAt(cameraEye,<sp/>cameraLookAt,<sp/>cameraUp);</highlight></codeline>
+<codeline lineno="533"><highlight class="normal"><sp/><sp/><sp/><sp/>renderer_3d_-&gt;set_view_matrix(view_matrix);</highlight></codeline>
+<codeline lineno="534"><highlight class="normal"></highlight></codeline>
+<codeline lineno="535"><highlight class="normal"><sp/><sp/><sp/><sp/>renderer_3d_-&gt;Begin();</highlight></codeline>
+<codeline lineno="536"><highlight class="normal"></highlight></codeline>
+<codeline lineno="537"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>actor<sp/>:<sp/>meshActors)</highlight></codeline>
+<codeline lineno="538"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>actor-&gt;<ref refid="class_mesh_actor_1a9c8f4860ae03966a27c3ee22c2a2b5a1" kindref="member">Render</ref>();</highlight></codeline>
+<codeline lineno="539"><highlight class="normal"></highlight></codeline>
+<codeline lineno="540"><highlight class="normal"><sp/><sp/><sp/><sp/>renderer_3d_-&gt;End();</highlight></codeline>
+<codeline lineno="541"><highlight class="normal"></highlight></codeline>
+<codeline lineno="542"><highlight class="normal"><sp/><sp/><sp/><sp/>sprite_renderer_-&gt;Begin(</highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="543"><highlight class="normal"></highlight></codeline>
+<codeline lineno="544"><highlight class="normal"><sp/><sp/><sp/><sp/>DrawHUD();</highlight></codeline>
+<codeline lineno="545"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>actor<sp/>:<sp/>spriteActors)</highlight></codeline>
+<codeline lineno="546"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>actor-&gt;<ref refid="class_mesh_actor_1a9c8f4860ae03966a27c3ee22c2a2b5a1" kindref="member">Render</ref>();</highlight></codeline>
+<codeline lineno="547"><highlight class="normal"></highlight></codeline>
+<codeline lineno="548"><highlight class="normal"><sp/><sp/><sp/><sp/>shopMenu-&gt;<ref refid="class_shop_menu_1a17f8a9f65b1d66a40d3fed952bedde2b" kindref="member">DrawMenuHUD</ref>(font_,<sp/>sprite_renderer_);</highlight></codeline>
+<codeline lineno="549"><highlight class="normal"><sp/><sp/><sp/><sp/>sprite_renderer_-&gt;DrawSprite(*pointerSprite);</highlight></codeline>
+<codeline lineno="550"><highlight class="normal"><sp/><sp/><sp/><sp/>sprite_renderer_-&gt;End();</highlight></codeline>
+<codeline lineno="551"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="552"><highlight class="normal"></highlight></codeline>
+<codeline lineno="553"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>SceneApp::RenderGameEnd()</highlight></codeline>
+<codeline lineno="554"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="555"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(playerCharacter<sp/>!=<sp/>NULL)</highlight></codeline>
+<codeline lineno="556"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="557"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cameraEye<sp/>=<sp/>playerCharacter-&gt;<ref refid="class_world_object_1a9967baa65719f1418641598a244306a5" kindref="member">GetTranslation</ref>();</highlight></codeline>
+<codeline lineno="558"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cameraEye.set_y(20.f);</highlight></codeline>
+<codeline lineno="559"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cameraEye.set_z(cameraEye.z()<sp/>-<sp/>10);</highlight></codeline>
+<codeline lineno="560"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cameraLookAt<sp/>=<sp/>playerCharacter-&gt;<ref refid="class_world_object_1a9967baa65719f1418641598a244306a5" kindref="member">GetTranslation</ref>();</highlight></codeline>
+<codeline lineno="561"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cameraLookAt.set_y(-1.f);</highlight></codeline>
+<codeline lineno="562"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="563"><highlight class="normal"></highlight></codeline>
+<codeline lineno="564"><highlight class="normal"><sp/><sp/><sp/><sp/>gef::Matrix44<sp/>view_matrix;</highlight></codeline>
+<codeline lineno="565"><highlight class="normal"><sp/><sp/><sp/><sp/>view_matrix.LookAt(cameraEye,<sp/>cameraLookAt,<sp/>cameraUp);</highlight></codeline>
+<codeline lineno="566"><highlight class="normal"><sp/><sp/><sp/><sp/>renderer_3d_-&gt;set_view_matrix(view_matrix);</highlight></codeline>
+<codeline lineno="567"><highlight class="normal"></highlight></codeline>
+<codeline lineno="568"><highlight class="normal"><sp/><sp/><sp/><sp/>renderer_3d_-&gt;Begin();</highlight></codeline>
+<codeline lineno="569"><highlight class="normal"></highlight></codeline>
+<codeline lineno="570"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>actor<sp/>:<sp/>meshActors)</highlight></codeline>
+<codeline lineno="571"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>actor-&gt;<ref refid="class_mesh_actor_1a9c8f4860ae03966a27c3ee22c2a2b5a1" kindref="member">Render</ref>();</highlight></codeline>
+<codeline lineno="572"><highlight class="normal"></highlight></codeline>
+<codeline lineno="573"><highlight class="normal"><sp/><sp/><sp/><sp/>renderer_3d_-&gt;End();</highlight></codeline>
+<codeline lineno="574"><highlight class="normal"></highlight></codeline>
+<codeline lineno="575"><highlight class="normal"><sp/><sp/><sp/><sp/>sprite_renderer_-&gt;Begin(</highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="576"><highlight class="normal"></highlight></codeline>
+<codeline lineno="577"><highlight class="normal"><sp/><sp/><sp/><sp/>DrawHUD();</highlight></codeline>
+<codeline lineno="578"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>actor<sp/>:<sp/>spriteActors)</highlight></codeline>
+<codeline lineno="579"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>actor-&gt;<ref refid="class_mesh_actor_1a9c8f4860ae03966a27c3ee22c2a2b5a1" kindref="member">Render</ref>();</highlight></codeline>
+<codeline lineno="580"><highlight class="normal"></highlight></codeline>
+<codeline lineno="581"><highlight class="normal"><sp/><sp/><sp/><sp/>gameEndMenu-&gt;<ref refid="class_game_end_menu_1a6470014c7f3d8981a39e961ae5c3e6df" kindref="member">DrawMenuHUD</ref>(font_,<sp/>sprite_renderer_);</highlight></codeline>
+<codeline lineno="582"><highlight class="normal"><sp/><sp/><sp/><sp/>sprite_renderer_-&gt;DrawSprite(*pointerSprite);</highlight></codeline>
+<codeline lineno="583"><highlight class="normal"><sp/><sp/><sp/><sp/>sprite_renderer_-&gt;End();</highlight></codeline>
+<codeline lineno="584"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="585"><highlight class="normal"></highlight></codeline>
+<codeline lineno="586"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>SceneApp::RenderMainMenu()</highlight></codeline>
+<codeline lineno="587"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="588"><highlight class="normal"><sp/><sp/><sp/><sp/>cameraLookAt<sp/>=<sp/>gef::Vector4(0.f,<sp/>0.f,<sp/>0.f);</highlight></codeline>
+<codeline lineno="589"><highlight class="normal"></highlight></codeline>
+<codeline lineno="590"><highlight class="normal"><sp/><sp/><sp/><sp/>gef::Matrix44<sp/>view_matrix;</highlight></codeline>
+<codeline lineno="591"><highlight class="normal"><sp/><sp/><sp/><sp/>view_matrix.LookAt(cameraEye,<sp/>cameraLookAt,<sp/>cameraUp);</highlight></codeline>
+<codeline lineno="592"><highlight class="normal"><sp/><sp/><sp/><sp/>renderer_3d_-&gt;set_view_matrix(view_matrix);</highlight></codeline>
+<codeline lineno="593"><highlight class="normal"></highlight></codeline>
+<codeline lineno="594"><highlight class="normal"><sp/><sp/><sp/><sp/>renderer_3d_-&gt;Begin();</highlight></codeline>
+<codeline lineno="595"><highlight class="normal"></highlight></codeline>
+<codeline lineno="596"><highlight class="normal"><sp/><sp/><sp/><sp/>renderer_3d_-&gt;End();</highlight></codeline>
+<codeline lineno="597"><highlight class="normal"></highlight></codeline>
+<codeline lineno="598"><highlight class="normal"><sp/><sp/><sp/><sp/>sprite_renderer_-&gt;Begin(</highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="599"><highlight class="normal"><sp/><sp/><sp/><sp/>sprite_renderer_-&gt;DrawSprite(*mainMenu-&gt;<ref refid="class_menu_1a2737fb42e257221f78c86b9221795255" kindref="member">menuSprite</ref>);</highlight></codeline>
+<codeline lineno="600"><highlight class="normal"></highlight></codeline>
+<codeline lineno="601"><highlight class="normal"><sp/><sp/><sp/><sp/>sprite_renderer_-&gt;DrawSprite(*pointerSprite);</highlight></codeline>
+<codeline lineno="602"><highlight class="normal"><sp/><sp/><sp/><sp/>sprite_renderer_-&gt;End();</highlight></codeline>
+<codeline lineno="603"><highlight class="normal"></highlight></codeline>
+<codeline lineno="604"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(font_)</highlight></codeline>
+<codeline lineno="605"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="606"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mainMenu-&gt;<ref refid="class_menu_1acef1c8e0a83655c3b17c217567527f8b" kindref="member">DrawMenuHUD</ref>(font_,<sp/>sprite_renderer_);</highlight></codeline>
+<codeline lineno="607"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="608"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="609"><highlight class="normal"></highlight></codeline>
+<codeline lineno="610"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>SceneApp::RenderGameLoop()</highlight></codeline>
+<codeline lineno="611"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="612"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(playerCharacter<sp/>!=<sp/>NULL)</highlight></codeline>
+<codeline lineno="613"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="614"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cameraEye<sp/>=<sp/>playerCharacter-&gt;<ref refid="class_world_object_1a9967baa65719f1418641598a244306a5" kindref="member">GetTranslation</ref>();</highlight></codeline>
+<codeline lineno="615"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cameraEye.set_y(20.f);</highlight></codeline>
+<codeline lineno="616"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cameraEye.set_z(cameraEye.z()<sp/>-<sp/>10);</highlight></codeline>
+<codeline lineno="617"><highlight class="normal"></highlight></codeline>
+<codeline lineno="618"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>gef::Vector4<sp/>cameraShakeOffset<sp/>=<sp/>gef::Vector4::kZero;</highlight></codeline>
+<codeline lineno="619"><highlight class="normal"></highlight></codeline>
+<codeline lineno="620"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(cameraShake.<ref refid="struct_f_camera_shake_1a11948ae09ec868a32530378efd25f34f" kindref="member">cameraShakeStartTime</ref><sp/>+<sp/>cameraShake.<ref refid="struct_f_camera_shake_1a28904f65e3bcb603c865ba72bcbea0e2" kindref="member">duration</ref><sp/>&gt;<sp/>currentGameTime)</highlight></codeline>
+<codeline lineno="621"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="622"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cameraShakeOffset<sp/>=<sp/>Lerp(cameraShake.<ref refid="struct_f_camera_shake_1a957c35cfc269421091fc884a21d41899" kindref="member">minOffset</ref>,<sp/>cameraShake.<ref refid="struct_f_camera_shake_1ae28540e423d42a897f77f196f27bcde7" kindref="member">maxOffset</ref>,<sp/>cameraShake.<ref refid="struct_f_camera_shake_1a0067a7fbb68d30a2f8d68511a6403e46" kindref="member">lerpAlpha</ref>);</highlight></codeline>
+<codeline lineno="623"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(cameraShake.<ref refid="struct_f_camera_shake_1a0067a7fbb68d30a2f8d68511a6403e46" kindref="member">lerpAlpha</ref><sp/>&gt;<sp/>1.f)</highlight></codeline>
+<codeline lineno="624"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="625"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cameraShake.<ref refid="struct_f_camera_shake_1a11241077b74ae4a78aab9c55f25f8827" kindref="member">bMovingForward</ref><sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="626"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="627"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(cameraShake.<ref refid="struct_f_camera_shake_1a0067a7fbb68d30a2f8d68511a6403e46" kindref="member">lerpAlpha</ref><sp/>&lt;<sp/>0.f)</highlight></codeline>
+<codeline lineno="628"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="629"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cameraShake.<ref refid="struct_f_camera_shake_1a11241077b74ae4a78aab9c55f25f8827" kindref="member">bMovingForward</ref><sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="630"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="631"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>intensity<sp/>=<sp/>lastDeltaTime<sp/>*<sp/>cameraShake.<ref refid="struct_f_camera_shake_1a089db07499dd81ac8736501fbe46aa86" kindref="member">intensity</ref>;</highlight></codeline>
+<codeline lineno="632"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cameraShake.<ref refid="struct_f_camera_shake_1a0067a7fbb68d30a2f8d68511a6403e46" kindref="member">lerpAlpha</ref><sp/>=<sp/>cameraShake.<ref refid="struct_f_camera_shake_1a11241077b74ae4a78aab9c55f25f8827" kindref="member">bMovingForward</ref><sp/>?<sp/>cameraShake.<ref refid="struct_f_camera_shake_1a0067a7fbb68d30a2f8d68511a6403e46" kindref="member">lerpAlpha</ref><sp/>+<sp/>intensity<sp/>:<sp/>cameraShake.<ref refid="struct_f_camera_shake_1a0067a7fbb68d30a2f8d68511a6403e46" kindref="member">lerpAlpha</ref><sp/>-<sp/>intensity;</highlight></codeline>
+<codeline lineno="633"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="634"><highlight class="normal"></highlight></codeline>
+<codeline lineno="635"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cameraEye<sp/>+=<sp/>cameraShakeOffset;</highlight></codeline>
+<codeline lineno="636"><highlight class="normal"></highlight></codeline>
+<codeline lineno="637"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cameraLookAt<sp/>=<sp/>playerCharacter-&gt;<ref refid="class_world_object_1a9967baa65719f1418641598a244306a5" kindref="member">GetTranslation</ref>();</highlight></codeline>
+<codeline lineno="638"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cameraLookAt.set_y(-1.f);</highlight></codeline>
+<codeline lineno="639"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="640"><highlight class="normal"></highlight></codeline>
+<codeline lineno="641"><highlight class="normal"><sp/><sp/><sp/><sp/>gef::Matrix44<sp/>view_matrix;</highlight></codeline>
+<codeline lineno="642"><highlight class="normal"><sp/><sp/><sp/><sp/>view_matrix.LookAt(cameraEye,<sp/>cameraLookAt,<sp/>cameraUp);</highlight></codeline>
+<codeline lineno="643"><highlight class="normal"><sp/><sp/><sp/><sp/>renderer_3d_-&gt;set_view_matrix(view_matrix);</highlight></codeline>
+<codeline lineno="644"><highlight class="normal"></highlight></codeline>
+<codeline lineno="645"><highlight class="normal"><sp/><sp/><sp/><sp/>renderer_3d_-&gt;Begin();</highlight></codeline>
+<codeline lineno="646"><highlight class="normal"></highlight></codeline>
+<codeline lineno="647"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>actor<sp/>:<sp/>meshActors)</highlight></codeline>
+<codeline lineno="648"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>actor-&gt;<ref refid="class_mesh_actor_1a9c8f4860ae03966a27c3ee22c2a2b5a1" kindref="member">Render</ref>();</highlight></codeline>
+<codeline lineno="649"><highlight class="normal"></highlight></codeline>
+<codeline lineno="650"><highlight class="normal"><sp/><sp/><sp/><sp/>renderer_3d_-&gt;End();</highlight></codeline>
+<codeline lineno="651"><highlight class="normal"></highlight></codeline>
+<codeline lineno="652"><highlight class="normal"><sp/><sp/><sp/><sp/>sprite_renderer_-&gt;Begin(</highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="653"><highlight class="normal"></highlight></codeline>
+<codeline lineno="654"><highlight class="normal"><sp/><sp/><sp/><sp/>playerCharacter-&gt;<ref refid="class_player_character_1abf3fd7463bf99305b85490644ff3d276" kindref="member">DrawPlayerHUD</ref>();</highlight></codeline>
+<codeline lineno="655"><highlight class="normal"><sp/><sp/><sp/><sp/>DrawHUD();</highlight></codeline>
+<codeline lineno="656"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>actor<sp/>:<sp/>spriteActors)</highlight></codeline>
+<codeline lineno="657"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>actor-&gt;<ref refid="class_mesh_actor_1a9c8f4860ae03966a27c3ee22c2a2b5a1" kindref="member">Render</ref>();</highlight></codeline>
+<codeline lineno="658"><highlight class="normal"></highlight></codeline>
+<codeline lineno="659"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/>waveText<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;Wave:<sp/>&quot;</highlight><highlight class="normal"><sp/>+<sp/>std::to_string(waveManager-&gt;<ref refid="class_wave_manager_1a9440cd9b8ec292c041b5f794b2bb3217" kindref="member">currentWave</ref><sp/>+<sp/>1);</highlight></codeline>
+<codeline lineno="660"><highlight class="normal"><sp/><sp/><sp/><sp/>font_-&gt;RenderText(sprite_renderer_,<sp/>gef::Vector4(10,<sp/>70,<sp/>0),<sp/>1,<sp/>0xFFFFFFFF,<sp/>gef::TJ_LEFT,<sp/>waveText.c_str());</highlight></codeline>
+<codeline lineno="661"><highlight class="normal"></highlight></codeline>
+<codeline lineno="662"><highlight class="normal"><sp/><sp/><sp/><sp/>sprite_renderer_-&gt;DrawSprite(*pointerSprite);</highlight></codeline>
+<codeline lineno="663"><highlight class="normal"><sp/><sp/><sp/><sp/>sprite_renderer_-&gt;End();</highlight></codeline>
+<codeline lineno="664"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="665"><highlight class="normal"></highlight></codeline>
+<codeline lineno="666"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>SceneApp::RenderPauseMenu()</highlight></codeline>
+<codeline lineno="667"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="668"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(playerCharacter<sp/>!=<sp/>NULL)</highlight></codeline>
+<codeline lineno="669"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="670"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cameraEye<sp/>=<sp/>playerCharacter-&gt;<ref refid="class_world_object_1a9967baa65719f1418641598a244306a5" kindref="member">GetTranslation</ref>();</highlight></codeline>
+<codeline lineno="671"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cameraEye.set_y(20.f);</highlight></codeline>
+<codeline lineno="672"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cameraEye.set_z(cameraEye.z()<sp/>-<sp/>10);</highlight></codeline>
+<codeline lineno="673"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cameraLookAt<sp/>=<sp/>playerCharacter-&gt;<ref refid="class_world_object_1a9967baa65719f1418641598a244306a5" kindref="member">GetTranslation</ref>();</highlight></codeline>
+<codeline lineno="674"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cameraLookAt.set_y(-1.f);</highlight></codeline>
+<codeline lineno="675"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="676"><highlight class="normal"></highlight></codeline>
+<codeline lineno="677"><highlight class="normal"><sp/><sp/><sp/><sp/>gef::Matrix44<sp/>view_matrix;</highlight></codeline>
+<codeline lineno="678"><highlight class="normal"><sp/><sp/><sp/><sp/>view_matrix.LookAt(cameraEye,<sp/>cameraLookAt,<sp/>cameraUp);</highlight></codeline>
+<codeline lineno="679"><highlight class="normal"><sp/><sp/><sp/><sp/>renderer_3d_-&gt;set_view_matrix(view_matrix);</highlight></codeline>
+<codeline lineno="680"><highlight class="normal"></highlight></codeline>
+<codeline lineno="681"><highlight class="normal"><sp/><sp/><sp/><sp/>renderer_3d_-&gt;Begin();</highlight></codeline>
+<codeline lineno="682"><highlight class="normal"></highlight></codeline>
+<codeline lineno="683"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>actor<sp/>:<sp/>meshActors)</highlight></codeline>
+<codeline lineno="684"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>actor-&gt;<ref refid="class_mesh_actor_1a9c8f4860ae03966a27c3ee22c2a2b5a1" kindref="member">Render</ref>();</highlight></codeline>
+<codeline lineno="685"><highlight class="normal"></highlight></codeline>
+<codeline lineno="686"><highlight class="normal"><sp/><sp/><sp/><sp/>renderer_3d_-&gt;End();</highlight></codeline>
+<codeline lineno="687"><highlight class="normal"></highlight></codeline>
+<codeline lineno="688"><highlight class="normal"><sp/><sp/><sp/><sp/>sprite_renderer_-&gt;Begin(</highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="689"><highlight class="normal"></highlight></codeline>
+<codeline lineno="690"><highlight class="normal"><sp/><sp/><sp/><sp/>DrawHUD();</highlight></codeline>
+<codeline lineno="691"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>actor<sp/>:<sp/>spriteActors)</highlight></codeline>
+<codeline lineno="692"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>actor-&gt;<ref refid="class_mesh_actor_1a9c8f4860ae03966a27c3ee22c2a2b5a1" kindref="member">Render</ref>();</highlight></codeline>
+<codeline lineno="693"><highlight class="normal"></highlight></codeline>
+<codeline lineno="694"><highlight class="normal"><sp/><sp/><sp/><sp/>pauseMenu-&gt;<ref refid="class_menu_1acef1c8e0a83655c3b17c217567527f8b" kindref="member">DrawMenuHUD</ref>(font_,<sp/>sprite_renderer_);</highlight></codeline>
+<codeline lineno="695"><highlight class="normal"><sp/><sp/><sp/><sp/>sprite_renderer_-&gt;DrawSprite(*pointerSprite);</highlight></codeline>
+<codeline lineno="696"><highlight class="normal"><sp/><sp/><sp/><sp/>sprite_renderer_-&gt;End();</highlight></codeline>
+<codeline lineno="697"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="698"><highlight class="normal"></highlight></codeline>
+<codeline lineno="699"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>SceneApp::HandleCollision()</highlight></codeline>
+<codeline lineno="700"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="701"><highlight class="normal"><sp/><sp/><sp/><sp/>b2Contact*<sp/>contact<sp/>=<sp/>b2dWorld-&gt;GetContactList();</highlight></codeline>
+<codeline lineno="702"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>numContacts<sp/>=<sp/>b2dWorld-&gt;GetContactCount();</highlight></codeline>
+<codeline lineno="703"><highlight class="normal"></highlight></codeline>
+<codeline lineno="704"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>numContacts;<sp/>++i)</highlight></codeline>
+<codeline lineno="705"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="706"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(contact-&gt;IsTouching())</highlight></codeline>
+<codeline lineno="707"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="708"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>b2Body*<sp/>bodyA<sp/>=<sp/>contact-&gt;GetFixtureA()-&gt;GetBody();</highlight></codeline>
+<codeline lineno="709"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>b2Body*<sp/>bodyB<sp/>=<sp/>contact-&gt;GetFixtureB()-&gt;GetBody();</highlight></codeline>
+<codeline lineno="710"><highlight class="normal"></highlight></codeline>
+<codeline lineno="711"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_world_object" kindref="compound">WorldObject</ref>*<sp/>wo<sp/>=<sp/>(<ref refid="class_world_object" kindref="compound">WorldObject</ref>*)(bodyA-&gt;GetUserData().pointer);</highlight></codeline>
+<codeline lineno="712"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(wo<sp/>!=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="713"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>wo-&gt;<ref refid="class_world_object_1a7c563531a541e9f5ff4193443cedd515" kindref="member">OnCollision</ref>(bodyB);</highlight></codeline>
+<codeline lineno="714"><highlight class="normal"></highlight></codeline>
+<codeline lineno="715"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>wo<sp/>=<sp/>(<ref refid="class_world_object" kindref="compound">WorldObject</ref>*)(bodyB-&gt;GetUserData().pointer);</highlight></codeline>
+<codeline lineno="716"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(wo<sp/>!=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="717"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>wo-&gt;<ref refid="class_world_object_1a7c563531a541e9f5ff4193443cedd515" kindref="member">OnCollision</ref>(bodyA);</highlight></codeline>
+<codeline lineno="718"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="719"><highlight class="normal"></highlight></codeline>
+<codeline lineno="720"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>contact-&gt;GetNext();</highlight></codeline>
+<codeline lineno="721"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="722"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="723"><highlight class="normal"></highlight></codeline>
+<codeline lineno="724"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>SceneApp::CheckMarkedForDeletion()</highlight></codeline>
+<codeline lineno="725"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="726"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;MeshActor*&gt;<sp/>cleanMeshActors;</highlight></codeline>
+<codeline lineno="727"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;SpriteActor*&gt;<sp/>cleanSpriteActors;</highlight></codeline>
+<codeline lineno="728"><highlight class="normal"></highlight></codeline>
+<codeline lineno="729"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;WorldObject*&gt;<sp/>toBeDeleted;</highlight></codeline>
+<codeline lineno="730"><highlight class="normal"></highlight></codeline>
+<codeline lineno="731"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>actor<sp/>:<sp/>meshActors)</highlight></codeline>
+<codeline lineno="732"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="733"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(actor-&gt;<ref refid="class_world_object_1aaebbb0abbabef79ad542f01db4ef6101" kindref="member">GetIsMarkedForDelete</ref>())</highlight></codeline>
+<codeline lineno="734"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>toBeDeleted.push_back(actor);</highlight></codeline>
+<codeline lineno="735"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="736"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cleanMeshActors.push_back(actor);</highlight></codeline>
+<codeline lineno="737"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="738"><highlight class="normal"></highlight></codeline>
+<codeline lineno="739"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>actor<sp/>:<sp/>spriteActors)</highlight></codeline>
+<codeline lineno="740"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="741"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(actor-&gt;<ref refid="class_world_object_1aaebbb0abbabef79ad542f01db4ef6101" kindref="member">GetIsMarkedForDelete</ref>())</highlight></codeline>
+<codeline lineno="742"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>toBeDeleted.push_back(actor);</highlight></codeline>
+<codeline lineno="743"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="744"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cleanSpriteActors.push_back(actor);</highlight></codeline>
+<codeline lineno="745"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="746"><highlight class="normal"></highlight></codeline>
+<codeline lineno="747"><highlight class="normal"></highlight></codeline>
+<codeline lineno="748"><highlight class="normal"><sp/><sp/><sp/><sp/>meshActors<sp/>=<sp/>cleanMeshActors;</highlight></codeline>
+<codeline lineno="749"><highlight class="normal"><sp/><sp/><sp/><sp/>spriteActors<sp/>=<sp/>cleanSpriteActors;</highlight></codeline>
+<codeline lineno="750"><highlight class="normal"></highlight></codeline>
+<codeline lineno="751"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>toBeDeleted.size();<sp/>++i)</highlight></codeline>
+<codeline lineno="752"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/>toBeDeleted[i];</highlight></codeline>
+<codeline lineno="753"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="754"><highlight class="normal"></highlight></codeline>
+<codeline lineno="755"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>SceneApp::DrawHUD()</highlight></codeline>
+<codeline lineno="756"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="757"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(font_)</highlight></codeline>
+<codeline lineno="758"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="759"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>gef::Vector4<sp/>mousePos<sp/>=<sp/>ProjectScreenToWorldSpace(<ref refid="class_scene_app_1a2cb299beb00f7fea8f1de7c0cc6ab19b" kindref="member">GetLastTouchPosition</ref>());</highlight></codeline>
+<codeline lineno="760"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>gef::Vector4<sp/>characterPos<sp/>=<sp/>playerCharacter<sp/>?<sp/>playerCharacter-&gt;<ref refid="class_world_object_1a9967baa65719f1418641598a244306a5" kindref="member">GetTranslation</ref>()<sp/>:<sp/>gef::Vector4::kZero;</highlight></codeline>
+<codeline lineno="761"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>font_-&gt;RenderText(sprite_renderer_,<sp/>gef::Vector4(1800.0f,<sp/>1040.0f,<sp/>-0.9f),<sp/>1.0f,<sp/>0xffffffff,<sp/>gef::TJ_LEFT,<sp/></highlight><highlight class="stringliteral">&quot;FPS:<sp/>%.1f&quot;</highlight><highlight class="normal">,<sp/>fps_);</highlight></codeline>
+<codeline lineno="762"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>font_-&gt;RenderText(sprite_renderer_,<sp/>gef::Vector4(1740.0f,<sp/>1000.0f,<sp/>-0.9f),<sp/>1.0f,<sp/>0xffffffff,<sp/>gef::TJ_LEFT,<sp/></highlight><highlight class="stringliteral">&quot;Mouse:<sp/>%.1f,<sp/>%.1f&quot;</highlight><highlight class="normal">,<sp/>mousePos.x(),<sp/>mousePos.z());</highlight></codeline>
+<codeline lineno="763"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>font_-&gt;RenderText(sprite_renderer_,<sp/>gef::Vector4(1700.0f,<sp/>960.0f,<sp/>-0.9f),<sp/>1.0f,<sp/>0xffffffff,<sp/>gef::TJ_LEFT,<sp/></highlight><highlight class="stringliteral">&quot;Character:<sp/>%.1f,<sp/>%.1f&quot;</highlight><highlight class="normal">,<sp/>characterPos.x(),<sp/>characterPos.z());</highlight></codeline>
+<codeline lineno="764"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="765"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="766"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>endregion</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="767"><highlight class="normal"></highlight></codeline>
+<codeline lineno="768"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>region<sp/>SceneAssets</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="769"><highlight class="normal">gef::Scene*<sp/>SceneApp::LoadSceneAssets(gef::Platform&amp;<sp/>platform,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>filename)</highlight></codeline>
+<codeline lineno="770"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="771"><highlight class="normal"><sp/><sp/><sp/><sp/>gef::Scene*<sp/>scene<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>gef::Scene();</highlight></codeline>
+<codeline lineno="772"><highlight class="normal"></highlight></codeline>
+<codeline lineno="773"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(scene-&gt;ReadSceneFromFile(platform,<sp/>filename))</highlight></codeline>
+<codeline lineno="774"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="775"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>if<sp/>scene<sp/>file<sp/>loads<sp/>successful</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="776"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>create<sp/>material<sp/>and<sp/>mesh<sp/>resources<sp/>from<sp/>the<sp/>scene<sp/>data</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="777"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>scene-&gt;CreateMaterials(platform);</highlight></codeline>
+<codeline lineno="778"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>scene-&gt;CreateMeshes(platform);</highlight></codeline>
+<codeline lineno="779"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="780"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="781"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="782"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/>scene;</highlight></codeline>
+<codeline lineno="783"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>scene<sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="784"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="785"><highlight class="normal"></highlight></codeline>
+<codeline lineno="786"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>scene;</highlight></codeline>
+<codeline lineno="787"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="788"><highlight class="normal"></highlight></codeline>
+<codeline lineno="789"><highlight class="normal">gef::Mesh*<sp/>SceneApp::GetMeshFromSceneAssets(gef::Scene*<sp/>scene)</highlight></codeline>
+<codeline lineno="790"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="791"><highlight class="normal"><sp/><sp/><sp/><sp/>gef::Mesh*<sp/>mesh<sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="792"><highlight class="normal"></highlight></codeline>
+<codeline lineno="793"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>if<sp/>the<sp/>scene<sp/>data<sp/>contains<sp/>at<sp/>least<sp/>one<sp/>mesh</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="794"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>return<sp/>the<sp/>first<sp/>mesh</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="795"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(scene<sp/>&amp;&amp;<sp/>scene-&gt;meshes.size()<sp/>&gt;<sp/>0)</highlight></codeline>
+<codeline lineno="796"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mesh<sp/>=<sp/>scene-&gt;meshes.front();</highlight></codeline>
+<codeline lineno="797"><highlight class="normal"></highlight></codeline>
+<codeline lineno="798"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>mesh;</highlight></codeline>
+<codeline lineno="799"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="800"><highlight class="normal"></highlight></codeline>
+<codeline lineno="801"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>SceneApp::LoadAssets()</highlight></codeline>
+<codeline lineno="802"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="803"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_o_b_j_mesh_loader" kindref="compound">OBJMeshLoader</ref><sp/>meshLoader;</highlight></codeline>
+<codeline lineno="804"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal">&amp;<sp/>mesh<sp/>:<sp/>meshesToLoad)</highlight></codeline>
+<codeline lineno="805"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>meshLoader.<ref refid="class_o_b_j_mesh_loader_1a8c7c99695bfcb18f362f68da3c8fe393" kindref="member">Load</ref>(mesh.c_str(),<sp/>platform_,<sp/>meshes);</highlight></codeline>
+<codeline lineno="806"><highlight class="normal"></highlight></codeline>
+<codeline lineno="807"><highlight class="normal"><sp/><sp/><sp/><sp/>gef::PNGLoader<sp/>png_loader;</highlight></codeline>
+<codeline lineno="808"><highlight class="normal"><sp/><sp/><sp/><sp/>gef::ImageData<sp/>imageData;</highlight></codeline>
+<codeline lineno="809"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal">&amp;<sp/>text<sp/>:<sp/>texturesToLoad)</highlight></codeline>
+<codeline lineno="810"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="811"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>png_loader.Load(text.second.c_str(),<sp/>platform_,<sp/>imageData);</highlight></codeline>
+<codeline lineno="812"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(imageData.image()<sp/>!=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="813"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="814"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>gef::Texture*<sp/>texture<sp/>=<sp/>gef::Texture::Create(platform_,<sp/>imageData);</highlight></codeline>
+<codeline lineno="815"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>textures[text.first]<sp/>=<sp/>texture;</highlight></codeline>
+<codeline lineno="816"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="817"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="818"><highlight class="normal"></highlight></codeline>
+<codeline lineno="819"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal">&amp;<sp/>sound<sp/>:<sp/>soundsToLoad)</highlight></codeline>
+<codeline lineno="820"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="821"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sounds[sound.first]<sp/>=<sp/>audioManager-&gt;LoadSample(sound.second.c_str(),<sp/>platform_);</highlight></codeline>
+<codeline lineno="822"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="823"><highlight class="normal"></highlight></codeline>
+<codeline lineno="824"><highlight class="normal"><sp/><sp/><sp/><sp/>particleManager-&gt;<ref refid="class_particle_manager_1a03998e9980dd017daa61ce69a0ec194f" kindref="member">PrepareParticles</ref>();</highlight></codeline>
+<codeline lineno="825"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="826"><highlight class="normal"></highlight></codeline>
+<codeline lineno="827"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>SceneApp::BuildToLoadData()</highlight></codeline>
+<codeline lineno="828"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="829"><highlight class="normal"><sp/><sp/><sp/><sp/>meshesToLoad.push_back(</highlight><highlight class="stringliteral">&quot;Assets/MainCharacter.obj&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="830"><highlight class="normal"><sp/><sp/><sp/><sp/>meshesToLoad.push_back(</highlight><highlight class="stringliteral">&quot;Assets/IceBolt.obj&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="831"><highlight class="normal"><sp/><sp/><sp/><sp/>meshesToLoad.push_back(</highlight><highlight class="stringliteral">&quot;Assets/EnvironmentBlock.obj&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="832"><highlight class="normal"><sp/><sp/><sp/><sp/>meshesToLoad.push_back(</highlight><highlight class="stringliteral">&quot;Assets/BlockingWalls.obj&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="833"><highlight class="normal"><sp/><sp/><sp/><sp/>meshesToLoad.push_back(</highlight><highlight class="stringliteral">&quot;Assets/MeleeEnemy.obj&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="834"><highlight class="normal"><sp/><sp/><sp/><sp/>meshesToLoad.push_back(</highlight><highlight class="stringliteral">&quot;Assets/RangedEnemy.obj&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="835"><highlight class="normal"><sp/><sp/><sp/><sp/>meshesToLoad.push_back(</highlight><highlight class="stringliteral">&quot;Assets/Boss.obj&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="836"><highlight class="normal"></highlight></codeline>
+<codeline lineno="837"><highlight class="normal"><sp/><sp/><sp/><sp/>texturesToLoad[</highlight><highlight class="stringliteral">&quot;Ganfaul&quot;</highlight><highlight class="normal">]<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;Assets/Ganfaul_diffuse.png&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="838"><highlight class="normal"><sp/><sp/><sp/><sp/>texturesToLoad[</highlight><highlight class="stringliteral">&quot;Environment&quot;</highlight><highlight class="normal">]<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;Assets/Environment_diffuse.png&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="839"><highlight class="normal"><sp/><sp/><sp/><sp/>texturesToLoad[</highlight><highlight class="stringliteral">&quot;IceBolt&quot;</highlight><highlight class="normal">]<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;Assets/IceBolt_diffuse.png&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="840"><highlight class="normal"><sp/><sp/><sp/><sp/>texturesToLoad[</highlight><highlight class="stringliteral">&quot;BlockingWall&quot;</highlight><highlight class="normal">]<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;Assets/BlockingWall_diffuse.png&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="841"><highlight class="normal"><sp/><sp/><sp/><sp/>texturesToLoad[</highlight><highlight class="stringliteral">&quot;MeleeEnemy&quot;</highlight><highlight class="normal">]<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;Assets/MeleeEnemy_diffuse.png&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="842"><highlight class="normal"><sp/><sp/><sp/><sp/>texturesToLoad[</highlight><highlight class="stringliteral">&quot;RangedEnemy&quot;</highlight><highlight class="normal">]<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;Assets/RangedEnemy_diffuse.png&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="843"><highlight class="normal"><sp/><sp/><sp/><sp/>texturesToLoad[</highlight><highlight class="stringliteral">&quot;Meteor&quot;</highlight><highlight class="normal">]<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;Assets/Meteor_diffuse.png&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="844"><highlight class="normal"><sp/><sp/><sp/><sp/>texturesToLoad[</highlight><highlight class="stringliteral">&quot;Boss&quot;</highlight><highlight class="normal">]<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;Assets/Boss_diffuse.png&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="845"><highlight class="normal"></highlight></codeline>
+<codeline lineno="846"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Player<sp/>Abilities</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="847"><highlight class="normal"><sp/><sp/><sp/><sp/>texturesToLoad[</highlight><highlight class="stringliteral">&quot;IceBoltAbility&quot;</highlight><highlight class="normal">]<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;Assets/PlayerAbilities/IceBolt.png&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="848"><highlight class="normal"><sp/><sp/><sp/><sp/>texturesToLoad[</highlight><highlight class="stringliteral">&quot;DashAbility&quot;</highlight><highlight class="normal">]<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;Assets/PlayerAbilities/Dash.png&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="849"><highlight class="normal"><sp/><sp/><sp/><sp/>texturesToLoad[</highlight><highlight class="stringliteral">&quot;PiercingStrikeAbility&quot;</highlight><highlight class="normal">]<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;Assets/PlayerAbilities/PiercingStrike.png&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="850"><highlight class="normal"><sp/><sp/><sp/><sp/>texturesToLoad[</highlight><highlight class="stringliteral">&quot;MeteorAbility&quot;</highlight><highlight class="normal">]<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;Assets/PlayerAbilities/Meteor.png&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="851"><highlight class="normal"><sp/><sp/><sp/><sp/>texturesToLoad[</highlight><highlight class="stringliteral">&quot;AbilityBackground&quot;</highlight><highlight class="normal">]<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;Assets/PlayerAbilities/Background.png&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="852"><highlight class="normal"></highlight></codeline>
+<codeline lineno="853"><highlight class="normal"><sp/><sp/><sp/><sp/>soundsToLoad[</highlight><highlight class="stringliteral">&quot;Dash&quot;</highlight><highlight class="normal">]<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;Sounds/dash.wav&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="854"><highlight class="normal"><sp/><sp/><sp/><sp/>soundsToLoad[</highlight><highlight class="stringliteral">&quot;EnemyShoot&quot;</highlight><highlight class="normal">]<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;Sounds/enemyshoot.wav&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="855"><highlight class="normal"><sp/><sp/><sp/><sp/>soundsToLoad[</highlight><highlight class="stringliteral">&quot;Ice1&quot;</highlight><highlight class="normal">]<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;Sounds/ice1.wav&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="856"><highlight class="normal"><sp/><sp/><sp/><sp/>soundsToLoad[</highlight><highlight class="stringliteral">&quot;MeleeHurt&quot;</highlight><highlight class="normal">]<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;Sounds/meleehurt.wav&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="857"><highlight class="normal"><sp/><sp/><sp/><sp/>soundsToLoad[</highlight><highlight class="stringliteral">&quot;Meteor&quot;</highlight><highlight class="normal">]<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;Sounds/meteor.wav&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="858"><highlight class="normal"><sp/><sp/><sp/><sp/>soundsToLoad[</highlight><highlight class="stringliteral">&quot;MeteorImpact&quot;</highlight><highlight class="normal">]<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;Sounds/meteorimpact.wav&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="859"><highlight class="normal"><sp/><sp/><sp/><sp/>soundsToLoad[</highlight><highlight class="stringliteral">&quot;Piercing&quot;</highlight><highlight class="normal">]<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;Sounds/piercing.wav&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="860"><highlight class="normal"><sp/><sp/><sp/><sp/>soundsToLoad[</highlight><highlight class="stringliteral">&quot;PlayerHurt&quot;</highlight><highlight class="normal">]<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;Sounds/playerhurt.wav&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="861"><highlight class="normal"><sp/><sp/><sp/><sp/>soundsToLoad[</highlight><highlight class="stringliteral">&quot;RangedHurt&quot;</highlight><highlight class="normal">]<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;Sounds/rangedhurt.wav&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="862"><highlight class="normal"><sp/><sp/><sp/><sp/>soundsToLoad[</highlight><highlight class="stringliteral">&quot;MainMenu&quot;</highlight><highlight class="normal">]<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;Sounds/mainmenu.wav&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="863"><highlight class="normal"><sp/><sp/><sp/><sp/>soundsToLoad[</highlight><highlight class="stringliteral">&quot;GameLoop&quot;</highlight><highlight class="normal">]<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;Sounds/gameloop.wav&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="864"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="865"><highlight class="normal"></highlight></codeline>
+<codeline lineno="866"><highlight class="normal">gef::Mesh*<sp/><ref refid="class_scene_app_1a6b6984ec718cb9ebad4be261df534cf1" kindref="member">SceneApp::RequestMeshByName</ref>(std::string<sp/>meshName)</highlight></codeline>
+<codeline lineno="867"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="868"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>it<sp/>=<sp/>meshes.find(meshName);</highlight></codeline>
+<codeline lineno="869"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(it<sp/>!=<sp/>meshes.end())</highlight></codeline>
+<codeline lineno="870"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="871"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>meshes[meshName];</highlight></codeline>
+<codeline lineno="872"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="873"><highlight class="normal"></highlight></codeline>
+<codeline lineno="874"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="875"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="876"><highlight class="normal"></highlight></codeline>
+<codeline lineno="877"><highlight class="normal">gef::Texture*<sp/><ref refid="class_scene_app_1ac00c6ac20d92d7e8fd77d341a116e81d" kindref="member">SceneApp::RequestTextureByName</ref>(std::string<sp/>textureName)</highlight></codeline>
+<codeline lineno="878"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="879"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>it<sp/>=<sp/>textures.find(textureName);</highlight></codeline>
+<codeline lineno="880"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(it<sp/>!=<sp/>textures.end())</highlight></codeline>
+<codeline lineno="881"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="882"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>textures[textureName];</highlight></codeline>
+<codeline lineno="883"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="884"><highlight class="normal"></highlight></codeline>
+<codeline lineno="885"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="886"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="887"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>endregion</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="888"><highlight class="normal"></highlight></codeline>
+<codeline lineno="889"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>region<sp/>Others</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="890"><highlight class="normal">b2Body*<sp/><ref refid="class_scene_app_1adcf5fcd2dfcb07d468c0ff4455e45bdd" kindref="member">SceneApp::CreateCollisionBody</ref>(b2BodyDef<sp/>bodyDef,<sp/>b2FixtureDef<sp/>fixtureDef,<sp/><ref refid="class_world_object" kindref="compound">WorldObject</ref>*<sp/>owningObject)</highlight></codeline>
+<codeline lineno="891"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="892"><highlight class="normal"><sp/><sp/><sp/><sp/>b2Body*<sp/>body<sp/>=<sp/>b2dWorld-&gt;CreateBody(&amp;bodyDef);</highlight></codeline>
+<codeline lineno="893"><highlight class="normal"><sp/><sp/><sp/><sp/>body-&gt;CreateFixture(&amp;fixtureDef);</highlight></codeline>
+<codeline lineno="894"><highlight class="normal"></highlight></codeline>
+<codeline lineno="895"><highlight class="normal"><sp/><sp/><sp/><sp/>b2BodyUserData&amp;<sp/>userData<sp/>=<sp/>body-&gt;GetUserData();</highlight></codeline>
+<codeline lineno="896"><highlight class="normal"><sp/><sp/><sp/><sp/>userData.pointer<sp/>=<sp/>(uintptr_t)owningObject;</highlight></codeline>
+<codeline lineno="897"><highlight class="normal"></highlight></codeline>
+<codeline lineno="898"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>body;</highlight></codeline>
+<codeline lineno="899"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="900"><highlight class="normal"></highlight></codeline>
+<codeline lineno="901"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>gef::Vector2<sp/><ref refid="class_scene_app_1a2cb299beb00f7fea8f1de7c0cc6ab19b" kindref="member">SceneApp::GetLastTouchPosition</ref>()</highlight></codeline>
+<codeline lineno="902"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="903"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>pointerLocation;</highlight></codeline>
+<codeline lineno="904"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="905"><highlight class="normal"></highlight></codeline>
+<codeline lineno="906"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_scene_app_1a3bc64bbc203e9cb597f2b47dc69f20e6" kindref="member">SceneApp::SetGameState</ref>(<ref refid="namespace_game_state_1aa2df68fe63beaaf10d3154d8eb490fe6" kindref="member">GameState::Type</ref><sp/>newState)</highlight></codeline>
+<codeline lineno="907"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="908"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal"><sp/>(newState)</highlight></codeline>
+<codeline lineno="909"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="910"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="namespace_game_state_1aa2df68fe63beaaf10d3154d8eb490fe6afff9d63720dd6c0c621817980d02d9ee" kindref="member">GameState::MainMenu</ref>:</highlight></codeline>
+<codeline lineno="911"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="912"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>InitMainMenu();</highlight></codeline>
+<codeline lineno="913"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="914"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="915"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="namespace_game_state_1aa2df68fe63beaaf10d3154d8eb490fe6aa1babbc78fafb7b98d14a8fcc880bd55" kindref="member">GameState::GameLoop</ref>:</highlight></codeline>
+<codeline lineno="916"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="917"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(gameState<sp/>==<sp/><ref refid="namespace_game_state_1aa2df68fe63beaaf10d3154d8eb490fe6a11dfd10e2813b09f256dd86e3902dfe2" kindref="member">GameState::Shop</ref>)</highlight></codeline>
+<codeline lineno="918"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="919"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>waveManager-&gt;<ref refid="class_wave_manager_1aa56d31703d3d02067e75debabbfae300" kindref="member">StartWave</ref>();</highlight></codeline>
+<codeline lineno="920"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="921"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>InitGameLoop();</highlight></codeline>
+<codeline lineno="922"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="923"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="924"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="namespace_game_state_1aa2df68fe63beaaf10d3154d8eb490fe6a6e1adcd2eb4fb5660e3baadd566e4873" kindref="member">GameState::PauseMenu</ref>:</highlight></codeline>
+<codeline lineno="925"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="926"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>InitPauseMenu();</highlight></codeline>
+<codeline lineno="927"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="928"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="929"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="namespace_game_state_1aa2df68fe63beaaf10d3154d8eb490fe6a11dfd10e2813b09f256dd86e3902dfe2" kindref="member">GameState::Shop</ref>:</highlight></codeline>
+<codeline lineno="930"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="931"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>InitShop();</highlight></codeline>
+<codeline lineno="932"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="933"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="934"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="namespace_game_state_1aa2df68fe63beaaf10d3154d8eb490fe6a797c961d3f35a579149051adc329e58e" kindref="member">GameState::GameEnd</ref>:</highlight></codeline>
+<codeline lineno="935"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="936"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>InitGameEndMenu();</highlight></codeline>
+<codeline lineno="937"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="938"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="939"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="940"><highlight class="normal"></highlight></codeline>
+<codeline lineno="941"><highlight class="normal"><sp/><sp/><sp/><sp/>gameState<sp/>=<sp/>newState;</highlight></codeline>
+<codeline lineno="942"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="943"><highlight class="normal"></highlight></codeline>
+<codeline lineno="944"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_scene_app_1a85782170c9894dfebe3a8045063301c6" kindref="member">SceneApp::ApplyRadialDamage</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>damageAmount,<sp/>gef::Vector4<sp/>origin,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>innerRadius,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>outerRadius)</highlight></codeline>
+<codeline lineno="945"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="946"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;Enemy*&gt;<sp/>enemies<sp/>=<sp/>waveManager-&gt;<ref refid="class_wave_manager_1a2608b3fb9c41ad9a227143f66e1dd385" kindref="member">GetAllSpawnedEnemies</ref>();</highlight></codeline>
+<codeline lineno="947"><highlight class="normal"></highlight></codeline>
+<codeline lineno="948"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>enemies.size();<sp/>++i)</highlight></codeline>
+<codeline lineno="949"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="950"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(enemies[i]<sp/>&amp;&amp;<sp/>!enemies[i]-&gt;GetIsMarkedForDelete())</highlight></codeline>
+<codeline lineno="951"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="952"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>distance<sp/>=<sp/>(enemies[i]-&gt;GetTranslation()<sp/>-<sp/>origin).Length();</highlight></codeline>
+<codeline lineno="953"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(distance<sp/>&lt;<sp/>innerRadius)</highlight></codeline>
+<codeline lineno="954"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="955"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>enemies[i]-&gt;TakeDamage(damageAmount);</highlight></codeline>
+<codeline lineno="956"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="957"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(distance<sp/>&lt;<sp/>outerRadius)</highlight></codeline>
+<codeline lineno="958"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="959"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>enemies[i]-&gt;TakeDamage(gef::Lerp(damageAmount,<sp/>1,<sp/>distance<sp/>/<sp/>outerRadius));</highlight></codeline>
+<codeline lineno="960"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="961"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="962"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="963"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="964"><highlight class="normal"></highlight></codeline>
+<codeline lineno="965"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>SceneApp::FindSampleFromName(std::string<sp/>sampleName)</highlight></codeline>
+<codeline lineno="966"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="967"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>it<sp/>=<sp/>sounds.find(sampleName);</highlight></codeline>
+<codeline lineno="968"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(it<sp/>!=<sp/>sounds.end())</highlight></codeline>
+<codeline lineno="969"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="970"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>sounds[sampleName];</highlight></codeline>
+<codeline lineno="971"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="972"><highlight class="normal"></highlight></codeline>
+<codeline lineno="973"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>-1;</highlight></codeline>
+<codeline lineno="974"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="975"><highlight class="normal"></highlight></codeline>
+<codeline lineno="976"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_scene_app_1a942b3809824f430117b26e9a7ad5acf6" kindref="member">SceneApp::PlaySample</ref>(std::string<sp/>sampleName,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>pitch,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>bIsLooping)</highlight></codeline>
+<codeline lineno="977"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="978"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>sampleIndex<sp/>=<sp/>FindSampleFromName(sampleName);</highlight></codeline>
+<codeline lineno="979"><highlight class="normal"></highlight></codeline>
+<codeline lineno="980"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(sampleIndex<sp/>&gt;=<sp/>0)</highlight></codeline>
+<codeline lineno="981"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="982"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>pitchModulation<sp/>=<sp/>dist(rd);</highlight></codeline>
+<codeline lineno="983"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="984"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>audioManager-&gt;SetSamplePitch(sampleIndex,<sp/>pitch<sp/>*<sp/>pitchModulation);</highlight></codeline>
+<codeline lineno="985"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>audioManager-&gt;PlaySample(sampleIndex,<sp/>bIsLooping);</highlight></codeline>
+<codeline lineno="986"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="987"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="988"><highlight class="normal"></highlight></codeline>
+<codeline lineno="989"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_scene_app_1a04b16337e0cd4af5f9b38f75ca623f34" kindref="member">SceneApp::ApplyCameraShake</ref>(<ref refid="struct_f_camera_shake" kindref="compound">FCameraShake</ref><sp/>newShake)</highlight></codeline>
+<codeline lineno="990"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="991"><highlight class="normal"><sp/><sp/><sp/><sp/>cameraShake<sp/>=<sp/>newShake;</highlight></codeline>
+<codeline lineno="992"><highlight class="normal"><sp/><sp/><sp/><sp/>cameraShake.<ref refid="struct_f_camera_shake_1a11948ae09ec868a32530378efd25f34f" kindref="member">cameraShakeStartTime</ref><sp/>=<sp/><ref refid="class_scene_app_1ab0a3e09a2920c053f50d25ea03132ae7" kindref="member">GetCurrentGameTime</ref>();</highlight></codeline>
+<codeline lineno="993"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="994"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>endregion</highlight></codeline>
+    </programlisting>
+    <location file="D:/Uni/CMP208/Hellwatch/scene_app.cpp"/>
+  </compounddef>
+</doxygen>

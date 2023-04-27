@@ -1,0 +1,164 @@
+.TH "Enemy" 3 "Thu Apr 27 2023" "Hellwatch" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Enemy \- A base class for all enemies, implemented as a melee enemy   
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <Enemy\&.h>\fP
+.PP
+Inherits \fBMeshActor\fP\&.
+.PP
+Inherited by \fBBoss\fP, and \fBRangedEnemy\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBEnemy\fP ()"
+.br
+.ti -1c
+.RI "virtual void \fBSetClass\fP (\fBEnemyClass::Type\fP type)"
+.br
+.RI "Sets the enemy class and updates its parameters to fit the class  "
+.ti -1c
+.RI "virtual void \fBTakeDamage\fP (float \fBdamageAmount\fP) override"
+.br
+.ti -1c
+.RI "float \fBGetHealth\fP ()"
+.br
+.RI "Gets the current enemy health  "
+.ti -1c
+.RI "virtual void \fBUpdate\fP (float deltaTime) override"
+.br
+.RI "Update function, called every frame  "
+.ti -1c
+.RI "virtual void \fBOnCollision\fP (b2Body *otherBody) override"
+.br
+.RI "Function to respond to collision  "
+.ti -1c
+.RI "void \fBScaleWithWave\fP (int wave)"
+.br
+.RI "Scales the enemy health, damage and money it awards with the wave  "
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "float \fBdamageAmount\fP"
+.br
+.ti -1c
+.RI "float \fBattackTime\fP"
+.br
+.ti -1c
+.RI "float \fBattackCooldown\fP = 2"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "virtual void \fBPostInit\fP () override"
+.br
+.RI "Override this to Initialize variables or do any necessary work when the object is created  "
+.ti -1c
+.RI "void \fBIncreasePlayerMoney\fP ()"
+.br
+.RI "Increases the money the player has  "
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "int \fBplayerMoneyToAdd\fP = 30"
+.br
+.ti -1c
+.RI "\fBAttributeComponent\fP * \fBattributes\fP"
+.br
+.ti -1c
+.RI "\fBCharacterMovementComponent\fP * \fBenemyMovement\fP"
+.br
+.ti -1c
+.RI "std::string \fBhurtSound\fP = 'MeleeHurt'"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+A base class for all enemies, implemented as a melee enemy  
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "Enemy::Enemy ()"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "float Enemy::GetHealth ()\fC [inline]\fP"
+
+.PP
+Gets the current enemy health  
+.SS "void Enemy::IncreasePlayerMoney ()\fC [protected]\fP"
+
+.PP
+Increases the money the player has  
+.SS "void Enemy::OnCollision (b2Body * OtherBody)\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+Function to respond to collision  
+.PP
+Reimplemented from \fBWorldObject\fP\&.
+.SS "void Enemy::PostInit ()\fC [override]\fP, \fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+Override this to Initialize variables or do any necessary work when the object is created  
+.PP
+Reimplemented from \fBWorldObject\fP\&.
+.PP
+Reimplemented in \fBBoss\fP, and \fBRangedEnemy\fP\&.
+.SS "void Enemy::ScaleWithWave (int wave)"
+
+.PP
+Scales the enemy health, damage and money it awards with the wave  
+.SS "void Enemy::SetClass (\fBEnemyClass::Type\fP type)\fC [virtual]\fP"
+
+.PP
+Sets the enemy class and updates its parameters to fit the class  
+.SS "void Enemy::TakeDamage (float damageAmount)\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+Reimplemented from \fBMeshActor\fP\&.
+.SS "void Enemy::Update (float deltaTime)\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+Update function, called every frame  
+.PP
+\fBParameters\fP
+.RS 4
+\fIdeltaTime\fP Float variable for the frame time
+.RE
+.PP
+
+.PP
+Reimplemented from \fBMeshActor\fP\&.
+.PP
+Reimplemented in \fBBoss\fP, and \fBRangedEnemy\fP\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "float Enemy::attackCooldown = 2"
+
+.SS "float Enemy::attackTime"
+
+.SS "\fBAttributeComponent\fP* Enemy::attributes\fC [protected]\fP"
+
+.SS "float Enemy::damageAmount"
+
+.SS "\fBCharacterMovementComponent\fP* Enemy::enemyMovement\fC [protected]\fP"
+
+.SS "std::string Enemy::hurtSound = 'MeleeHurt'\fC [protected]\fP"
+
+.SS "int Enemy::playerMoneyToAdd = 30\fC [protected]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Hellwatch from the source code\&.

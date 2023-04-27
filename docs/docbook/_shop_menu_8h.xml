@@ -1,0 +1,54 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__shop_menu_8h" xml:lang="en-US">
+<title>D:/Uni/CMP208/Hellwatch/build/vs2017/UserInterface/ShopMenu.h File Reference</title>
+<indexterm><primary>D:/Uni/CMP208/Hellwatch/build/vs2017/UserInterface/ShopMenu.h</primary></indexterm>
+<programlisting linenumbering="unnumbered">#include &quot;Menu.h&quot;<?linebreak?>#include &quot;Attributes/AttributeTypes.h&quot;<?linebreak?>#include &quot;Abilities/Ability.h&quot;<?linebreak?></programlisting>Include dependency graph for ShopMenu.h:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_shop_menu_8h__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+This graph shows which files directly or indirectly include this file:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_shop_menu_8h__dep__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>class <link linkend="_class_shop_menu">ShopMenu</link></para>
+
+<para>Shop menu to be used in Shop <link linkend="_namespace_game_state">GameState</link>  </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="__shop_menu_8h_1a6484aecd6b2bd1669a592e349189cc35">UPGRADE_COST_FORMULA</link>(amountOfUpgrades)&#160;&#160;&#160;(upgradeCost * amountOfUpgrades) * 0.5 + 5</para>
+</listitem>
+            <listitem><para>#define <link linkend="__shop_menu_8h_1a4693ca27d43aba0ff1111f968ad1ed1e">MAX_COST</link>&#160;&#160;&#160;3000.f</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Macro Definition Documentation</title>
+<anchor xml:id="__shop_menu_8h_1a4693ca27d43aba0ff1111f968ad1ed1e"/><section>
+    <title>MAX_COST</title>
+<indexterm><primary>MAX_COST</primary><secondary>ShopMenu.h</secondary></indexterm>
+<indexterm><primary>ShopMenu.h</primary><secondary>MAX_COST</secondary></indexterm>
+<para><computeroutput>#define MAX_COST&#160;&#160;&#160;3000.f</computeroutput></para></section>
+<anchor xml:id="__shop_menu_8h_1a6484aecd6b2bd1669a592e349189cc35"/><section>
+    <title>UPGRADE_COST_FORMULA</title>
+<indexterm><primary>UPGRADE_COST_FORMULA</primary><secondary>ShopMenu.h</secondary></indexterm>
+<indexterm><primary>ShopMenu.h</primary><secondary>UPGRADE_COST_FORMULA</secondary></indexterm>
+<para><computeroutput>#define UPGRADE_COST_FORMULA( amountOfUpgrades)&#160;&#160;&#160;(upgradeCost * amountOfUpgrades) * 0.5 + 5</computeroutput></para></section>
+</section>
+</section>

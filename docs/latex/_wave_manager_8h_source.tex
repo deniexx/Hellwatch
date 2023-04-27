@@ -1,0 +1,62 @@
+\hypertarget{_wave_manager_8h_source}{}\doxysection{Wave\+Manager.\+h}
+\label{_wave_manager_8h_source}\index{D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/WaveManager.h@{D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/WaveManager.h}}
+\mbox{\hyperlink{_wave_manager_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{2 }
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_utils_8h}{GameFramework/Utils.h}}"{}}}
+\DoxyCodeLine{4 }
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#define USE\_WAVE\_FORMULA (currentWave + currentWave * 0.5) * 5}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#define SPAWN\_PERIOD\_AFTER\_WAVE\_DEFINITIONS 1.f}}
+\DoxyCodeLine{7 }
+\DoxyCodeLine{8 \textcolor{keyword}{class }\mbox{\hyperlink{class_enemy}{Enemy}};}
+\DoxyCodeLine{9 \textcolor{keyword}{class }\mbox{\hyperlink{class_ranged_enemy}{RangedEnemy}};}
+\DoxyCodeLine{10 \textcolor{keyword}{class }\mbox{\hyperlink{class_boss}{Boss}};}
+\DoxyCodeLine{11 }
+\DoxyCodeLine{15 \textcolor{keyword}{struct }\mbox{\hyperlink{struct_f_wave_definition}{FWaveDefinition}}}
+\DoxyCodeLine{16 \{}
+\DoxyCodeLine{17     uint32\_t \mbox{\hyperlink{struct_f_wave_definition_a8442421920c4b13c84d7beca39d3c0d9}{maxSpawns}};}
+\DoxyCodeLine{18     \textcolor{keywordtype}{float} \mbox{\hyperlink{struct_f_wave_definition_a6551dc7f6e996c43aeb18b7058723bb7}{spawnPeriod}};}
+\DoxyCodeLine{19 \};}
+\DoxyCodeLine{20 }
+\DoxyCodeLine{24 \textcolor{keyword}{class }\mbox{\hyperlink{class_wave_manager}{WaveManager}}}
+\DoxyCodeLine{25 \{}
+\DoxyCodeLine{26 }
+\DoxyCodeLine{27 \textcolor{keyword}{public}:}
+\DoxyCodeLine{28 }
+\DoxyCodeLine{29     \mbox{\hyperlink{class_wave_manager_a1c039c9a7a485f88b68a3f966ffe02c5}{WaveManager}}();}
+\DoxyCodeLine{30 }
+\DoxyCodeLine{34     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_wave_manager_a918f759b1a32b82fea823b5292b8a001}{Init}}();}
+\DoxyCodeLine{35 }
+\DoxyCodeLine{39     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_wave_manager_aa56d31703d3d02067e75debabbfae300}{StartWave}}();}
+\DoxyCodeLine{40 }
+\DoxyCodeLine{44     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_wave_manager_a751017f23187640be76f5db4b6eba243}{EndWave}}();}
+\DoxyCodeLine{45 }
+\DoxyCodeLine{46     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_wave_manager_ae5ee18f81c4ea516839af94da831a24d}{Update}}();}
+\DoxyCodeLine{47 }
+\DoxyCodeLine{51     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_wave_manager_ac60f15dad7ac55306c45b17babdfcb17}{CheckWaveState}}();}
+\DoxyCodeLine{52 }
+\DoxyCodeLine{56     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_wave_manager_acc8ea63b30bc4ccd02e7b12f1504595c}{SpawnEnemy}}();}
+\DoxyCodeLine{57 }
+\DoxyCodeLine{61     std::vector<Enemy*> \mbox{\hyperlink{class_wave_manager_a2608b3fb9c41ad9a227143f66e1dd385}{GetAllSpawnedEnemies}}()\textcolor{keyword}{ const }\{ \textcolor{keywordflow}{return} spawnedEnemies; \}}
+\DoxyCodeLine{62 }
+\DoxyCodeLine{63     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_wave_manager_a9440cd9b8ec292c041b5f794b2bb3217}{currentWave}} = 0;}
+\DoxyCodeLine{64 }
+\DoxyCodeLine{65 \textcolor{keyword}{private}:}
+\DoxyCodeLine{66 }
+\DoxyCodeLine{67     \textcolor{keywordtype}{bool} bInWave = \textcolor{keyword}{false};}
+\DoxyCodeLine{68     \textcolor{keywordtype}{bool} bSpawnsComplete = \textcolor{keyword}{false};}
+\DoxyCodeLine{69     \textcolor{keywordtype}{bool} bBossSpawned = \textcolor{keyword}{false};}
+\DoxyCodeLine{70 }
+\DoxyCodeLine{71     \mbox{\hyperlink{class_boss}{Boss}}* boss = \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{72 }
+\DoxyCodeLine{73     uint32\_t currentWaveSpawnedEnemiesAmount = 0;}
+\DoxyCodeLine{74     }
+\DoxyCodeLine{75     \textcolor{keywordtype}{float} lastSpawnTime = 0.f;}
+\DoxyCodeLine{76 }
+\DoxyCodeLine{77     std::vector<FWaveDefinition> waveDefinitions;}
+\DoxyCodeLine{78     std::vector<Enemy*> spawnedEnemies;}
+\DoxyCodeLine{79     std::vector<gef::Vector4> spawnLocations;}
+\DoxyCodeLine{80 \};}
+
+\end{DoxyCode}

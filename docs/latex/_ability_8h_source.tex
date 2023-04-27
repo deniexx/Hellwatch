@@ -1,0 +1,130 @@
+\hypertarget{_ability_8h_source}{}\doxysection{Ability.\+h}
+\label{_ability_8h_source}\index{D:/Uni/CMP208/Hellwatch/build/vs2017/Abilities/Ability.h@{D:/Uni/CMP208/Hellwatch/build/vs2017/Abilities/Ability.h}}
+\mbox{\hyperlink{_ability_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{2 }
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <cmath>}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_attribute_types_8h}{Attributes/AttributeTypes.h}}"{}}}
+\DoxyCodeLine{6 }
+\DoxyCodeLine{7 \textcolor{keyword}{class }\mbox{\hyperlink{class_abilities_component}{AbilitiesComponent}};}
+\DoxyCodeLine{8 \textcolor{keyword}{class }\mbox{\hyperlink{class_attribute_component}{AttributeComponent}};}
+\DoxyCodeLine{9 }
+\DoxyCodeLine{13 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespace_ability_activation_key}{AbilityActivationKey}}}
+\DoxyCodeLine{14 \{}
+\DoxyCodeLine{15     \textcolor{keyword}{enum} \mbox{\hyperlink{namespace_ability_activation_key_ab159d3c3f26196a9ff493b67ecf7e68c}{Type}} : \textcolor{keywordtype}{int}}
+\DoxyCodeLine{16     \{}
+\DoxyCodeLine{17         \mbox{\hyperlink{namespace_ability_activation_key_ab159d3c3f26196a9ff493b67ecf7e68cab6784d3bc8d889420937a8c25e9b1c87}{AbilityKey1}} = 0,}
+\DoxyCodeLine{18         \mbox{\hyperlink{namespace_ability_activation_key_ab159d3c3f26196a9ff493b67ecf7e68ca320fc572e7627361aa1df0f37543c0ac}{AbilityKey2}},}
+\DoxyCodeLine{19         \mbox{\hyperlink{namespace_ability_activation_key_ab159d3c3f26196a9ff493b67ecf7e68cad9c1b1c777eb7838b8da19f60dbc56d2}{AbilityKey3}},}
+\DoxyCodeLine{20         \mbox{\hyperlink{namespace_ability_activation_key_ab159d3c3f26196a9ff493b67ecf7e68ca9c88a5d3644987a1299d2142a134c9d9}{AbilityKey4}},}
+\DoxyCodeLine{21 }
+\DoxyCodeLine{22         \mbox{\hyperlink{namespace_ability_activation_key_ab159d3c3f26196a9ff493b67ecf7e68ca7681c632dadbc0ca58c3a03c7a9d53c2}{None}}}
+\DoxyCodeLine{23     \};}
+\DoxyCodeLine{24 \}}
+\DoxyCodeLine{25 }
+\DoxyCodeLine{29 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespace_cooldown_start_policy}{CooldownStartPolicy}}}
+\DoxyCodeLine{30 \{}
+\DoxyCodeLine{31     \textcolor{keyword}{enum} \mbox{\hyperlink{namespace_cooldown_start_policy_a99c3a8f4a331db7e6db8dfda1785b101}{Type}}}
+\DoxyCodeLine{32     \{}
+\DoxyCodeLine{33         \mbox{\hyperlink{namespace_cooldown_start_policy_a99c3a8f4a331db7e6db8dfda1785b101abdb334784b8226969ec44140a0951d92}{OnAbilityStart}},}
+\DoxyCodeLine{34         \mbox{\hyperlink{namespace_cooldown_start_policy_a99c3a8f4a331db7e6db8dfda1785b101af1b51dae9cd99c300bce560116641d60}{OnAbilityEnd}}}
+\DoxyCodeLine{35     \};}
+\DoxyCodeLine{36 \}}
+\DoxyCodeLine{37 }
+\DoxyCodeLine{41 \textcolor{keyword}{struct }\mbox{\hyperlink{struct_activation_outcome}{ActivationOutcome}}}
+\DoxyCodeLine{42 \{}
+\DoxyCodeLine{43     std::string \mbox{\hyperlink{struct_activation_outcome_a3867a87cde6f19f7d86e822b056ab7ad}{abilityName}};}
+\DoxyCodeLine{44     std::string \mbox{\hyperlink{struct_activation_outcome_a06932003ad89461fc36b0936072bfd97}{failReason}};}
+\DoxyCodeLine{45     \textcolor{keywordtype}{bool} \mbox{\hyperlink{struct_activation_outcome_a6bd503ece6732fc90dacbb08f0bffb40}{bWasSuccessful}} = 0;}
+\DoxyCodeLine{46 }
+\DoxyCodeLine{47     \mbox{\hyperlink{namespace_ability_activation_key_ab159d3c3f26196a9ff493b67ecf7e68c}{AbilityActivationKey::Type}} \mbox{\hyperlink{struct_activation_outcome_a85ab4e1d039f0aa58b36d9cc42a7d630}{keyOfAbility}} = \mbox{\hyperlink{namespace_ability_activation_key_ab159d3c3f26196a9ff493b67ecf7e68ca7681c632dadbc0ca58c3a03c7a9d53c2}{AbilityActivationKey::None}};}
+\DoxyCodeLine{48 \};}
+\DoxyCodeLine{49 }
+\DoxyCodeLine{53 \textcolor{keyword}{class }\mbox{\hyperlink{class_ability}{Ability}}}
+\DoxyCodeLine{54 \{}
+\DoxyCodeLine{55 \textcolor{keyword}{public}:}
+\DoxyCodeLine{56 }
+\DoxyCodeLine{57     \mbox{\hyperlink{class_ability_a1e03282d1a96232143322ef89fcbb314}{Ability}}();}
+\DoxyCodeLine{58 }
+\DoxyCodeLine{62     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_ability_a291796c5cb356bcef9c6f6c0b2386ca2}{Init}}(\mbox{\hyperlink{class_abilities_component}{AbilitiesComponent}}* inOwningComponent);}
+\DoxyCodeLine{63 }
+\DoxyCodeLine{64     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_ability_aaa83dbb12f79ceecc4d7b1cb3930d3d3}{Update}}(\textcolor{keywordtype}{float} deltaTime);}
+\DoxyCodeLine{65 }
+\DoxyCodeLine{69     \mbox{\hyperlink{struct_activation_outcome}{ActivationOutcome}} \mbox{\hyperlink{class_ability_a7815198848a6acf69bf1d76caf595820}{TryActivate}}();}
+\DoxyCodeLine{70 }
+\DoxyCodeLine{74     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_ability_a52f7aee4243f1da13b544a038892e43b}{CommitAbility}}();}
+\DoxyCodeLine{75 }
+\DoxyCodeLine{79     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_ability_ad7290141bc73d865773ac54477db7fb6}{EndAbility}}();}
+\DoxyCodeLine{80 }
+\DoxyCodeLine{81 \textcolor{keyword}{protected}:}
+\DoxyCodeLine{82 }
+\DoxyCodeLine{86     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_ability_a25388ebb622b414ef027eb33bf4a5cfb}{PostInit}}();}
+\DoxyCodeLine{87 }
+\DoxyCodeLine{91     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_ability_ace910398ed2eb9f58c8e85dbb7a72de2}{Begin}}();}
+\DoxyCodeLine{92 }
+\DoxyCodeLine{96     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_ability_a61a88edf359a3c6bd34868e58bf64f20}{End}}();}
+\DoxyCodeLine{97 }
+\DoxyCodeLine{101     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_ability_a1b338496a61edb978f7f83570b9f03a4}{Commit}}();}
+\DoxyCodeLine{102 }
+\DoxyCodeLine{106     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_ability_a172dfdc4273690de2476fda0b82e5ea6}{BeginTargeting}}();}
+\DoxyCodeLine{107 }
+\DoxyCodeLine{111     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_ability_af82a917f3d8fc9260651c4cc59affb0e}{EndTargeting}}();}
+\DoxyCodeLine{112 }
+\DoxyCodeLine{118     \textcolor{keyword}{virtual} \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_ability_a4276e15e3a35b7887dd679eb5e332ff4}{CanActivate}}(\mbox{\hyperlink{struct_activation_outcome}{ActivationOutcome}}\& OutActivationOutcome);}
+\DoxyCodeLine{119 }
+\DoxyCodeLine{120 \textcolor{keyword}{protected}:}
+\DoxyCodeLine{121 }
+\DoxyCodeLine{122     \mbox{\hyperlink{namespace_ability_activation_key_ab159d3c3f26196a9ff493b67ecf7e68c}{AbilityActivationKey::Type}} \mbox{\hyperlink{class_ability_a4310ef2c96c00e405697f9983da58645}{activationKey}};}
+\DoxyCodeLine{123 }
+\DoxyCodeLine{124     \textcolor{keywordtype}{float} \mbox{\hyperlink{class_ability_a0e5b9e690d512aa57f66a4f7ba3cb295}{cooldownTimer}};}
+\DoxyCodeLine{125     \textcolor{keywordtype}{float} \mbox{\hyperlink{class_ability_a6e6e8dc7387275d8c4cef1036d0b2a08}{cooldown}};}
+\DoxyCodeLine{126     \textcolor{keywordtype}{float} \mbox{\hyperlink{class_ability_aa080c6e4857a11599f25e1feb65aae9d}{damageAmount}};}
+\DoxyCodeLine{127     \textcolor{keywordtype}{float} \mbox{\hyperlink{class_ability_a3d60b8e01776b0f6f42aaa3fa8821aa7}{abilityCostAmount}};}
+\DoxyCodeLine{128     \mbox{\hyperlink{namespace_hellwatch_attribute_ad0a500e65129d06e4589f9bca54c4a7d}{HellwatchAttribute::Type}} \mbox{\hyperlink{class_ability_aa0aa42d055ea84389c3bd7bb7b61fd00}{abilityCostType}};}
+\DoxyCodeLine{129     \mbox{\hyperlink{namespace_cooldown_start_policy_a99c3a8f4a331db7e6db8dfda1785b101}{CooldownStartPolicy::Type}} \mbox{\hyperlink{class_ability_a74f19e3368e28b7b61bf54cabe2da629}{cooldownStartPolicy}};}
+\DoxyCodeLine{130 }
+\DoxyCodeLine{131     \textcolor{comment}{// Allows for targeting using the mouse and then committing it once targeting has finished}}
+\DoxyCodeLine{132     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_ability_afc72628992607694ae9e4a096557fead}{bIsTargeted}};}
+\DoxyCodeLine{133     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_ability_ae2aac411168782dab7715c29817f23de}{bIsTargeting}};}
+\DoxyCodeLine{134 }
+\DoxyCodeLine{135     std::string \mbox{\hyperlink{class_ability_acc6fba5d131273ccbc0cf147b6f38eb2}{abilityName}};}
+\DoxyCodeLine{136     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_ability_ae426458572df63716f8f8b63e83d04ca}{bIsActive}};}
+\DoxyCodeLine{137     \mbox{\hyperlink{class_abilities_component}{AbilitiesComponent}}* \mbox{\hyperlink{class_ability_aa75c59af7fa1fd68787a211e66fd0173}{owningComponent}} = \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{138 }
+\DoxyCodeLine{139 \textcolor{keyword}{public}:}
+\DoxyCodeLine{140 }
+\DoxyCodeLine{141 \textcolor{comment}{    /************************************************************************/}}
+\DoxyCodeLine{142     \textcolor{comment}{/*                              SETTERS                                 */}}
+\DoxyCodeLine{143 \textcolor{comment}{    /************************************************************************/}}
+\DoxyCodeLine{144     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_ability_a13aa60092026728b42ade2811168c087}{SetActivationKey}}(\mbox{\hyperlink{namespace_ability_activation_key_ab159d3c3f26196a9ff493b67ecf7e68c}{AbilityActivationKey::Type}} key) \{ \mbox{\hyperlink{class_ability_a4310ef2c96c00e405697f9983da58645}{activationKey}} = key; \}}
+\DoxyCodeLine{145     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_ability_a83e04cf64b10504ee3bc1cd10ad7219c}{SetAbilityCostAmount}}(\textcolor{keywordtype}{float} newCost) \{ \mbox{\hyperlink{class_ability_a3d60b8e01776b0f6f42aaa3fa8821aa7}{abilityCostAmount}} = newCost; \}}
+\DoxyCodeLine{146     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_ability_a36391efa24d0da869f43e4ba592241c8}{SetAbilityCostType}}(\mbox{\hyperlink{namespace_hellwatch_attribute_ad0a500e65129d06e4589f9bca54c4a7d}{HellwatchAttribute::Type}} newCost) \{ \mbox{\hyperlink{class_ability_aa0aa42d055ea84389c3bd7bb7b61fd00}{abilityCostType}} = newCost; \}}
+\DoxyCodeLine{147     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_ability_a6737d4900eb79147ca81aaa20a85218a}{SetAbilityName}}(std::string newName) \{ \mbox{\hyperlink{class_ability_acc6fba5d131273ccbc0cf147b6f38eb2}{abilityName}} = newName; \}}
+\DoxyCodeLine{148     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_ability_a072cbfb1685db6fd4a0723d519bc9176}{SetIsActive}}(\textcolor{keywordtype}{bool} bNewState) \{ \mbox{\hyperlink{class_ability_ae426458572df63716f8f8b63e83d04ca}{bIsActive}} = bNewState; \}}
+\DoxyCodeLine{149     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_ability_a060e6f07d0c7510f7779418d69489fea}{SetCooldownStartPolicy}}(\mbox{\hyperlink{namespace_cooldown_start_policy_a99c3a8f4a331db7e6db8dfda1785b101}{CooldownStartPolicy::Type}} newPolicy) \{ \mbox{\hyperlink{class_ability_a74f19e3368e28b7b61bf54cabe2da629}{cooldownStartPolicy}} = newPolicy; \}}
+\DoxyCodeLine{150     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_ability_aa7f8c3e16910914b751aa1e1e5731f8f}{SetAbilityCooldown}}(\textcolor{keywordtype}{float} newCooldown);}
+\DoxyCodeLine{151     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_ability_a51b48c192967cf32ea352f5e735136d6}{SetDamageAmount}}(\textcolor{keywordtype}{float} newAmount) \{ \mbox{\hyperlink{class_ability_aa080c6e4857a11599f25e1feb65aae9d}{damageAmount}} = newAmount; \}}
+\DoxyCodeLine{152     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_ability_a95990ec850dd39919d25c4c481935db5}{SetIsTargeted}}(\textcolor{keywordtype}{bool} bNewState) \{ \mbox{\hyperlink{class_ability_afc72628992607694ae9e4a096557fead}{bIsTargeted}} = bNewState; \}}
+\DoxyCodeLine{153     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_ability_a5da322fcc571670d8b96385b67685a68}{SetIsTargeting}}(\textcolor{keywordtype}{bool} bNewState) \{ \mbox{\hyperlink{class_ability_ae2aac411168782dab7715c29817f23de}{bIsTargeting}} = bNewState; \}}
+\DoxyCodeLine{154 }
+\DoxyCodeLine{158     \textcolor{keyword}{virtual} \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_ability_ac2b656dc59480f2973aaa3f0f59706bc}{IsActive}}() \{ \textcolor{keywordflow}{return} \mbox{\hyperlink{class_ability_ae426458572df63716f8f8b63e83d04ca}{bIsActive}}; \};}
+\DoxyCodeLine{159 }
+\DoxyCodeLine{160 \textcolor{comment}{    /************************************************************************/}}
+\DoxyCodeLine{161     \textcolor{comment}{/*                              GETTERS                                 */}}
+\DoxyCodeLine{162 \textcolor{comment}{    /************************************************************************/}}
+\DoxyCodeLine{163     \_\_forceinline \mbox{\hyperlink{namespace_ability_activation_key_ab159d3c3f26196a9ff493b67ecf7e68c}{AbilityActivationKey::Type}} \mbox{\hyperlink{class_ability_a7af0334ceb8c57dd4b114124409492b5}{GetActivationKey}}()\textcolor{keyword}{ const }\{ \textcolor{keywordflow}{return} \mbox{\hyperlink{class_ability_a4310ef2c96c00e405697f9983da58645}{activationKey}}; \}}
+\DoxyCodeLine{164     \_\_forceinline \textcolor{keyword}{const} std::string\& \mbox{\hyperlink{class_ability_a4e28b2c8ffd652b050612ee758f76958}{GetAbilityName}}()\textcolor{keyword}{ const }\{ \textcolor{keywordflow}{return} \mbox{\hyperlink{class_ability_acc6fba5d131273ccbc0cf147b6f38eb2}{abilityName}}; \}}
+\DoxyCodeLine{165     \_\_forceinline \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_ability_adbd4d2c476e68c473b2872fd788eb2c2}{IsInCooldown}}()\textcolor{keyword}{ const }\{ \textcolor{keywordflow}{return} \mbox{\hyperlink{class_ability_a6e6e8dc7387275d8c4cef1036d0b2a08}{cooldown}} > 0 \&\& \mbox{\hyperlink{class_ability_a0e5b9e690d512aa57f66a4f7ba3cb295}{cooldownTimer}} > 0.f; \}}
+\DoxyCodeLine{166     \_\_forceinline \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_ability_a2a7a75401b5757d3b22ed26544bfdb19}{IsAbilityTargeted}}()\textcolor{keyword}{ const }\{ \textcolor{keywordflow}{return} \mbox{\hyperlink{class_ability_afc72628992607694ae9e4a096557fead}{bIsTargeted}}; \}}
+\DoxyCodeLine{167     \_\_forceinline \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_ability_a2432f7d4c4159f75e8552d08b7ca51ed}{IsAbilityTargeting}}()\textcolor{keyword}{ const }\{ \textcolor{keywordflow}{return} \mbox{\hyperlink{class_ability_ae2aac411168782dab7715c29817f23de}{bIsTargeting}}; \}}
+\DoxyCodeLine{168     \_\_forceinline \textcolor{keywordtype}{float} \mbox{\hyperlink{class_ability_a063307977163faa4a3bcf7089cf70bb5}{GetRemainingCooldown}}()\textcolor{keyword}{ const }\{ \textcolor{keywordflow}{return} std::ceil(\mbox{\hyperlink{class_ability_a0e5b9e690d512aa57f66a4f7ba3cb295}{cooldownTimer}}); \}}
+\DoxyCodeLine{169 }
+\DoxyCodeLine{170     \textcolor{keywordtype}{float} \mbox{\hyperlink{class_ability_a57f2e9a30ca6d2588fd721af77353d52}{GetDamageAmount}}();}
+\DoxyCodeLine{171     \mbox{\hyperlink{class_abilities_component}{AbilitiesComponent}}* \mbox{\hyperlink{class_ability_a50b5f7d8d3197869b3bc32d3c9bd4fd2}{GetOwner}}() \{ \textcolor{keywordflow}{return} \mbox{\hyperlink{class_ability_aa75c59af7fa1fd68787a211e66fd0173}{owningComponent}}; \}}
+\DoxyCodeLine{172     \mbox{\hyperlink{class_attribute_component}{AttributeComponent}}* \mbox{\hyperlink{class_ability_ab567fcf9b39984aa3bf45343ffcbc086}{GetOwnerAttributes}}();}
+\DoxyCodeLine{173 \};}
+\DoxyCodeLine{174 }
+
+\end{DoxyCode}

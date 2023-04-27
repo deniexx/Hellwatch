@@ -1,0 +1,1787 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="class_scene_app" kind="class" language="C++" prot="public">
+    <compoundname>SceneApp</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">gef::Application</basecompoundref>
+    <includes refid="scene__app_8h" local="no">scene_app.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_scene_app_1a5d3a7556487c33e4746c468fa00689dd" prot="private" static="no" mutable="no">
+        <type><ref refid="namespace_game_state_1aa2df68fe63beaaf10d3154d8eb490fe6" kindref="member">GameState::Type</ref></type>
+        <definition>GameState::Type SceneApp::gameState</definition>
+        <argsstring></argsstring>
+        <name>gameState</name>
+        <qualifiedname>SceneApp::gameState</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/scene_app.h" line="135" column="17" bodyfile="D:/Uni/CMP208/Hellwatch/scene_app.h" bodystart="135" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_scene_app_1a5e58877e1666eafe401f5cddd431511d" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool SceneApp::bGameLoopInitted</definition>
+        <argsstring></argsstring>
+        <name>bGameLoopInitted</name>
+        <qualifiedname>SceneApp::bGameLoopInitted</qualifiedname>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/scene_app.h" line="136" column="6" bodyfile="D:/Uni/CMP208/Hellwatch/scene_app.h" bodystart="136" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_scene_app_1ac9cc70c9d9ddd066c839bd93abb42a49" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool SceneApp::bCommingFromMainMenu</definition>
+        <argsstring></argsstring>
+        <name>bCommingFromMainMenu</name>
+        <qualifiedname>SceneApp::bCommingFromMainMenu</qualifiedname>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/scene_app.h" line="137" column="6" bodyfile="D:/Uni/CMP208/Hellwatch/scene_app.h" bodystart="137" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_scene_app_1a82ad63c0fecc3ae0368a7ae6c3038caa" prot="private" static="no" mutable="no">
+        <type><ref refid="class_primitive_builder" kindref="compound">PrimitiveBuilder</ref> *</type>
+        <definition>PrimitiveBuilder* SceneApp::primitive_builder_</definition>
+        <argsstring></argsstring>
+        <name>primitive_builder_</name>
+        <qualifiedname>SceneApp::primitive_builder_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/scene_app.h" line="148" column="18" bodyfile="D:/Uni/CMP208/Hellwatch/scene_app.h" bodystart="148" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_scene_app_1a8cb42f2ef9761c1304cfbbde2c950f82" prot="private" static="no" mutable="no">
+        <type><ref refid="obj__mesh__loader_8h_1ab6d74e55cf8354fe68dd64bd265a814e" kindref="member">MeshMap</ref></type>
+        <definition>MeshMap SceneApp::meshes</definition>
+        <argsstring></argsstring>
+        <name>meshes</name>
+        <qualifiedname>SceneApp::meshes</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/scene_app.h" line="149" column="9" bodyfile="D:/Uni/CMP208/Hellwatch/scene_app.h" bodystart="149" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_scene_app_1a31e4044202cb1878a674f7a0fcbd1e1b" prot="private" static="no" mutable="no">
+        <type><ref refid="scene__app_8h_1a5b57d40276b77cc074d878efc78bb980" kindref="member">TextureMap</ref></type>
+        <definition>TextureMap SceneApp::textures</definition>
+        <argsstring></argsstring>
+        <name>textures</name>
+        <qualifiedname>SceneApp::textures</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/scene_app.h" line="150" column="12" bodyfile="D:/Uni/CMP208/Hellwatch/scene_app.h" bodystart="150" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_scene_app_1aecdaec5b1958858c67538bc06ef763ec" prot="private" static="no" mutable="no">
+        <type>gef::SpriteRenderer *</type>
+        <definition>gef::SpriteRenderer* SceneApp::sprite_renderer_</definition>
+        <argsstring></argsstring>
+        <name>sprite_renderer_</name>
+        <qualifiedname>SceneApp::sprite_renderer_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/scene_app.h" line="155" column="21" bodyfile="D:/Uni/CMP208/Hellwatch/scene_app.h" bodystart="155" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_scene_app_1a6a85f826272f2c291f789964cbbd331d" prot="private" static="no" mutable="no">
+        <type>gef::Font *</type>
+        <definition>gef::Font* SceneApp::font_</definition>
+        <argsstring></argsstring>
+        <name>font_</name>
+        <qualifiedname>SceneApp::font_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/scene_app.h" line="156" column="11" bodyfile="D:/Uni/CMP208/Hellwatch/scene_app.h" bodystart="156" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_scene_app_1a1fe406605619e67f3c78081dc648722a" prot="private" static="no" mutable="no">
+        <type>gef::Renderer3D *</type>
+        <definition>gef::Renderer3D* SceneApp::renderer_3d_</definition>
+        <argsstring></argsstring>
+        <name>renderer_3d_</name>
+        <qualifiedname>SceneApp::renderer_3d_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/scene_app.h" line="157" column="17" bodyfile="D:/Uni/CMP208/Hellwatch/scene_app.h" bodystart="157" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_scene_app_1a6d19a2e9b9d5f67f1c71b8cd4003236f" prot="private" static="no" mutable="no">
+        <type>std::future&lt; <ref refid="namespace_game_state_1aa2df68fe63beaaf10d3154d8eb490fe6" kindref="member">GameState::Type</ref> &gt;</type>
+        <definition>std::future&lt;GameState::Type&gt; SceneApp::loadFuture</definition>
+        <argsstring></argsstring>
+        <name>loadFuture</name>
+        <qualifiedname>SceneApp::loadFuture</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/scene_app.h" line="160" column="13" bodyfile="D:/Uni/CMP208/Hellwatch/scene_app.h" bodystart="160" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_scene_app_1a6e3f7247f64f6b0f89ebf096ccc186a3" prot="private" static="no" mutable="no">
+        <type><ref refid="class_wave_manager" kindref="compound">WaveManager</ref> *</type>
+        <definition>WaveManager* SceneApp::waveManager</definition>
+        <argsstring></argsstring>
+        <name>waveManager</name>
+        <qualifiedname>SceneApp::waveManager</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/scene_app.h" line="163" column="13" bodyfile="D:/Uni/CMP208/Hellwatch/scene_app.h" bodystart="163" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_scene_app_1aadb8a2acfc55d7256d3b01615237b53f" prot="private" static="no" mutable="no">
+        <type><ref refid="class_main_menu" kindref="compound">MainMenu</ref> *</type>
+        <definition>MainMenu* SceneApp::mainMenu</definition>
+        <argsstring></argsstring>
+        <name>mainMenu</name>
+        <qualifiedname>SceneApp::mainMenu</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/scene_app.h" line="164" column="10" bodyfile="D:/Uni/CMP208/Hellwatch/scene_app.h" bodystart="164" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_scene_app_1aa383f84e5bf2eb34c8970de590fe83f2" prot="private" static="no" mutable="no">
+        <type><ref refid="class_shop_menu" kindref="compound">ShopMenu</ref> *</type>
+        <definition>ShopMenu* SceneApp::shopMenu</definition>
+        <argsstring></argsstring>
+        <name>shopMenu</name>
+        <qualifiedname>SceneApp::shopMenu</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/scene_app.h" line="165" column="10" bodyfile="D:/Uni/CMP208/Hellwatch/scene_app.h" bodystart="165" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_scene_app_1a7ff89b2a13e32e34104f8eb7f13ac6b6" prot="private" static="no" mutable="no">
+        <type><ref refid="class_pause_menu" kindref="compound">PauseMenu</ref> *</type>
+        <definition>PauseMenu* SceneApp::pauseMenu</definition>
+        <argsstring></argsstring>
+        <name>pauseMenu</name>
+        <qualifiedname>SceneApp::pauseMenu</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/scene_app.h" line="166" column="11" bodyfile="D:/Uni/CMP208/Hellwatch/scene_app.h" bodystart="166" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_scene_app_1aa3806ccdca4db9902e9af9750d386f6f" prot="private" static="no" mutable="no">
+        <type><ref refid="class_game_end_menu" kindref="compound">GameEndMenu</ref> *</type>
+        <definition>GameEndMenu* SceneApp::gameEndMenu</definition>
+        <argsstring></argsstring>
+        <name>gameEndMenu</name>
+        <qualifiedname>SceneApp::gameEndMenu</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/scene_app.h" line="167" column="13" bodyfile="D:/Uni/CMP208/Hellwatch/scene_app.h" bodystart="167" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_scene_app_1a2fa982b35c38c584a72934124dca0aa8" prot="private" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t SceneApp::playerMoney</definition>
+        <argsstring></argsstring>
+        <name>playerMoney</name>
+        <qualifiedname>SceneApp::playerMoney</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/scene_app.h" line="170" column="10" bodyfile="D:/Uni/CMP208/Hellwatch/scene_app.h" bodystart="170" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_scene_app_1ad98c8e885bbd672e85221362021656c1" prot="private" static="no" mutable="no">
+        <type>gef::Sprite *</type>
+        <definition>gef::Sprite* SceneApp::loadingSprite</definition>
+        <argsstring></argsstring>
+        <name>loadingSprite</name>
+        <qualifiedname>SceneApp::loadingSprite</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/scene_app.h" line="178" column="13" bodyfile="D:/Uni/CMP208/Hellwatch/scene_app.h" bodystart="178" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_scene_app_1a8dc5edb5b6ce7a135b0a86c7df035b64" prot="private" static="no" mutable="no">
+        <type><ref refid="class_player_character" kindref="compound">PlayerCharacter</ref> *</type>
+        <definition>PlayerCharacter* SceneApp::playerCharacter</definition>
+        <argsstring></argsstring>
+        <name>playerCharacter</name>
+        <qualifiedname>SceneApp::playerCharacter</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/scene_app.h" line="179" column="17" bodyfile="D:/Uni/CMP208/Hellwatch/scene_app.h" bodystart="179" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_scene_app_1a42746443e19f6dae5e6b2d9f7eaf473e" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; <ref refid="class_mesh_actor" kindref="compound">MeshActor</ref> * &gt;</type>
+        <definition>std::vector&lt;MeshActor*&gt; SceneApp::meshActors</definition>
+        <argsstring></argsstring>
+        <name>meshActors</name>
+        <qualifiedname>SceneApp::meshActors</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/scene_app.h" line="180" column="13" bodyfile="D:/Uni/CMP208/Hellwatch/scene_app.h" bodystart="180" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_scene_app_1aa46d7e718e2e793a19a970cb2ec4ee31" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; <ref refid="class_sprite_actor" kindref="compound">SpriteActor</ref> * &gt;</type>
+        <definition>std::vector&lt;SpriteActor*&gt; SceneApp::spriteActors</definition>
+        <argsstring></argsstring>
+        <name>spriteActors</name>
+        <qualifiedname>SceneApp::spriteActors</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/scene_app.h" line="181" column="13" bodyfile="D:/Uni/CMP208/Hellwatch/scene_app.h" bodystart="181" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_scene_app_1ac11e8e4e089eb1d1631febe27f4d9808" prot="private" static="no" mutable="no">
+        <type>gef::Scene *</type>
+        <definition>gef::Scene* SceneApp::scene_assets_</definition>
+        <argsstring></argsstring>
+        <name>scene_assets_</name>
+        <qualifiedname>SceneApp::scene_assets_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/scene_app.h" line="182" column="12" bodyfile="D:/Uni/CMP208/Hellwatch/scene_app.h" bodystart="182" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_scene_app_1ad67f0db19483631c01eda75fdb7ab9b7" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; std::string &gt;</type>
+        <definition>std::vector&lt;std::string&gt; SceneApp::meshesToLoad</definition>
+        <argsstring></argsstring>
+        <name>meshesToLoad</name>
+        <qualifiedname>SceneApp::meshesToLoad</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/scene_app.h" line="183" column="13" bodyfile="D:/Uni/CMP208/Hellwatch/scene_app.h" bodystart="183" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_scene_app_1a992da62d19ab23c48fd9d292f6c3a9f3" prot="private" static="no" mutable="no">
+        <type>std::map&lt; std::string, std::string &gt;</type>
+        <definition>std::map&lt;std::string, std::string&gt; SceneApp::texturesToLoad</definition>
+        <argsstring></argsstring>
+        <name>texturesToLoad</name>
+        <qualifiedname>SceneApp::texturesToLoad</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/scene_app.h" line="184" column="10" bodyfile="D:/Uni/CMP208/Hellwatch/scene_app.h" bodystart="184" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_scene_app_1a4b02697005df75084605a8dda048d591" prot="private" static="no" mutable="no">
+        <type>std::map&lt; std::string, std::string &gt;</type>
+        <definition>std::map&lt;std::string, std::string&gt; SceneApp::soundsToLoad</definition>
+        <argsstring></argsstring>
+        <name>soundsToLoad</name>
+        <qualifiedname>SceneApp::soundsToLoad</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/scene_app.h" line="185" column="10" bodyfile="D:/Uni/CMP208/Hellwatch/scene_app.h" bodystart="185" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_scene_app_1a7b2d4a39dd167962c9b9351593469fe1" prot="private" static="no" mutable="no">
+        <type>gef::Sprite *</type>
+        <definition>gef::Sprite* SceneApp::pointerSprite</definition>
+        <argsstring></argsstring>
+        <name>pointerSprite</name>
+        <qualifiedname>SceneApp::pointerSprite</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/scene_app.h" line="187" column="13" bodyfile="D:/Uni/CMP208/Hellwatch/scene_app.h" bodystart="187" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_scene_app_1a553d17b3fd6926e7f0bd0be162adcb71" prot="private" static="no" mutable="no">
+        <type>gef::Vector2</type>
+        <definition>gef::Vector2 SceneApp::pointerLocation</definition>
+        <argsstring></argsstring>
+        <name>pointerLocation</name>
+        <qualifiedname>SceneApp::pointerLocation</qualifiedname>
+        <initializer>= gef::Vector2(0, 0)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/scene_app.h" line="188" column="14" bodyfile="D:/Uni/CMP208/Hellwatch/scene_app.h" bodystart="188" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_scene_app_1a7336b62b4d3e2762f35ed7b5f8faa9d4" prot="private" static="no" mutable="no">
+        <type>gef::Vector4</type>
+        <definition>gef::Vector4 SceneApp::cameraEye</definition>
+        <argsstring></argsstring>
+        <name>cameraEye</name>
+        <qualifiedname>SceneApp::cameraEye</qualifiedname>
+        <initializer>= gef::Vector4(0.0f, 20.0f, 0.0f)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/scene_app.h" line="190" column="14" bodyfile="D:/Uni/CMP208/Hellwatch/scene_app.h" bodystart="190" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_scene_app_1ab8a1fed11db540bddc041c4b81a287d3" prot="private" static="no" mutable="no">
+        <type>gef::Vector4</type>
+        <definition>gef::Vector4 SceneApp::cameraLookAt</definition>
+        <argsstring></argsstring>
+        <name>cameraLookAt</name>
+        <qualifiedname>SceneApp::cameraLookAt</qualifiedname>
+        <initializer>= gef::Vector4(0.0f, -1.0f, 0.001f)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/scene_app.h" line="191" column="14" bodyfile="D:/Uni/CMP208/Hellwatch/scene_app.h" bodystart="191" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_scene_app_1a85d4e75be9600791e02a664f66c78575" prot="private" static="no" mutable="no">
+        <type>gef::Vector4</type>
+        <definition>gef::Vector4 SceneApp::cameraUp</definition>
+        <argsstring></argsstring>
+        <name>cameraUp</name>
+        <qualifiedname>SceneApp::cameraUp</qualifiedname>
+        <initializer>= gef::Vector4(0.0f, 1.0f, 0.0f)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/scene_app.h" line="192" column="14" bodyfile="D:/Uni/CMP208/Hellwatch/scene_app.h" bodystart="192" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_scene_app_1a5b5861315462b1787e4139197f82e368" prot="private" static="no" mutable="no">
+        <type><ref refid="struct_f_camera_shake" kindref="compound">FCameraShake</ref></type>
+        <definition>FCameraShake SceneApp::cameraShake</definition>
+        <argsstring></argsstring>
+        <name>cameraShake</name>
+        <qualifiedname>SceneApp::cameraShake</qualifiedname>
+        <initializer>= <ref refid="struct_f_camera_shake" kindref="compound">FCameraShake</ref>()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/scene_app.h" line="194" column="14" bodyfile="D:/Uni/CMP208/Hellwatch/scene_app.h" bodystart="194" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_scene_app_1ab6f4119e39160606eeaeb151fcfb17bd" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float SceneApp::fps_</definition>
+        <argsstring></argsstring>
+        <name>fps_</name>
+        <qualifiedname>SceneApp::fps_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/scene_app.h" line="196" column="7" bodyfile="D:/Uni/CMP208/Hellwatch/scene_app.h" bodystart="196" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_scene_app_1a32a11fc11fa3fcc917351649d52f788f" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float SceneApp::currentGameTime</definition>
+        <argsstring></argsstring>
+        <name>currentGameTime</name>
+        <qualifiedname>SceneApp::currentGameTime</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/scene_app.h" line="197" column="7" bodyfile="D:/Uni/CMP208/Hellwatch/scene_app.h" bodystart="197" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_scene_app_1aa3b7e393217fd2c6eea932311f815026" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float SceneApp::lastDeltaTime</definition>
+        <argsstring></argsstring>
+        <name>lastDeltaTime</name>
+        <qualifiedname>SceneApp::lastDeltaTime</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/scene_app.h" line="198" column="7" bodyfile="D:/Uni/CMP208/Hellwatch/scene_app.h" bodystart="198" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_scene_app_1a1212495244b88152da68fef7add9fca7" prot="private" static="no" mutable="no">
+        <type>b2World *</type>
+        <definition>b2World* SceneApp::b2dWorld</definition>
+        <argsstring></argsstring>
+        <name>b2dWorld</name>
+        <qualifiedname>SceneApp::b2dWorld</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/scene_app.h" line="203" column="9" bodyfile="D:/Uni/CMP208/Hellwatch/scene_app.h" bodystart="203" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_scene_app_1aa8e973ec8db58fc70659249a4c3af4c3" prot="private" static="no" mutable="no">
+        <type>b2Vec2</type>
+        <definition>b2Vec2 SceneApp::gravity</definition>
+        <argsstring></argsstring>
+        <name>gravity</name>
+        <qualifiedname>SceneApp::gravity</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/scene_app.h" line="204" column="8" bodyfile="D:/Uni/CMP208/Hellwatch/scene_app.h" bodystart="204" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_scene_app_1a70ed4549ef0fe12b92c7a35ef1834dac" prot="private" static="no" mutable="no">
+        <type>gef::AudioManager *</type>
+        <definition>gef::AudioManager* SceneApp::audioManager</definition>
+        <argsstring></argsstring>
+        <name>audioManager</name>
+        <qualifiedname>SceneApp::audioManager</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/scene_app.h" line="210" column="19" bodyfile="D:/Uni/CMP208/Hellwatch/scene_app.h" bodystart="210" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_scene_app_1a37d6f90880ff2578e8a9de68034535d8" prot="private" static="no" mutable="no">
+        <type><ref refid="scene__app_8h_1a8d89ee6a10feffd9323a0031e0bbea29" kindref="member">SoundMap</ref></type>
+        <definition>SoundMap SceneApp::sounds</definition>
+        <argsstring></argsstring>
+        <name>sounds</name>
+        <qualifiedname>SceneApp::sounds</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/scene_app.h" line="211" column="10" bodyfile="D:/Uni/CMP208/Hellwatch/scene_app.h" bodystart="211" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_scene_app_1ab13c532bc49107361f36bd3fc9fc5f9f" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int SceneApp::masterVolume</definition>
+        <argsstring></argsstring>
+        <name>masterVolume</name>
+        <qualifiedname>SceneApp::masterVolume</qualifiedname>
+        <initializer>= 30.f</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/scene_app.h" line="212" column="5" bodyfile="D:/Uni/CMP208/Hellwatch/scene_app.h" bodystart="212" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_scene_app_1a63476137847dbf477d86a82b621eb3a8" prot="private" static="no" mutable="no">
+        <type><ref refid="class_player_controller" kindref="compound">PlayerController</ref> *</type>
+        <definition>PlayerController* SceneApp::soundController</definition>
+        <argsstring></argsstring>
+        <name>soundController</name>
+        <qualifiedname>SceneApp::soundController</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/scene_app.h" line="214" column="18" bodyfile="D:/Uni/CMP208/Hellwatch/scene_app.h" bodystart="214" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_scene_app_1acdca18cc64834403830e379463d7503e" prot="private" static="no" mutable="no">
+        <type>std::default_random_engine</type>
+        <definition>std::default_random_engine SceneApp::rd</definition>
+        <argsstring></argsstring>
+        <name>rd</name>
+        <qualifiedname>SceneApp::rd</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/scene_app.h" line="219" column="28" bodyfile="D:/Uni/CMP208/Hellwatch/scene_app.h" bodystart="219" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_scene_app_1a3ce39c88bb90c1aaddb82a26cb73282e" prot="private" static="no" mutable="no">
+        <type>std::uniform_real_distribution&lt; float &gt;</type>
+        <definition>std::uniform_real_distribution&lt;float&gt; SceneApp::dist</definition>
+        <argsstring></argsstring>
+        <name>dist</name>
+        <qualifiedname>SceneApp::dist</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/scene_app.h" line="220" column="32" bodyfile="D:/Uni/CMP208/Hellwatch/scene_app.h" bodystart="220" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_scene_app_1a58f623a898ecfc988bc782ff93d3fde1" prot="private" static="no" mutable="no">
+        <type><ref refid="class_particle_manager" kindref="compound">ParticleManager</ref> *</type>
+        <definition>ParticleManager* SceneApp::particleManager</definition>
+        <argsstring></argsstring>
+        <name>particleManager</name>
+        <qualifiedname>SceneApp::particleManager</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/scene_app.h" line="225" column="17" bodyfile="D:/Uni/CMP208/Hellwatch/scene_app.h" bodystart="225" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_scene_app_1a5a29382297d3aa47f437d98a3dd4acdc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>SceneApp::SceneApp</definition>
+        <argsstring>(gef::Platform &amp;platform)</argsstring>
+        <name>SceneApp</name>
+        <qualifiedname>SceneApp::SceneApp</qualifiedname>
+        <param>
+          <type>gef::Platform &amp;</type>
+          <declname>platform</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/scene_app.h" line="80" column="1" bodyfile="D:/Uni/CMP208/Hellwatch/scene_app.cpp" bodystart="28" bodyend="43"/>
+      </memberdef>
+      <memberdef kind="function" id="class_scene_app_1afbc3cd83343839fef53b5fcc2da630e6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SceneApp::Init</definition>
+        <argsstring>()</argsstring>
+        <name>Init</name>
+        <qualifiedname>SceneApp::Init</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/scene_app.h" line="81" column="6" bodyfile="D:/Uni/CMP208/Hellwatch/scene_app.cpp" bodystart="46" bodyend="137"/>
+      </memberdef>
+      <memberdef kind="function" id="class_scene_app_1ab815a8823c2248fcebdc7a06867bdb9b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SceneApp::CleanUp</definition>
+        <argsstring>()</argsstring>
+        <name>CleanUp</name>
+        <qualifiedname>SceneApp::CleanUp</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/scene_app.h" line="82" column="6" bodyfile="D:/Uni/CMP208/Hellwatch/scene_app.cpp" bodystart="321" bodyend="343"/>
+      </memberdef>
+      <memberdef kind="function" id="class_scene_app_1a48adec081291fea513f516bec9dcb898" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool SceneApp::Update</definition>
+        <argsstring>(float frame_time)</argsstring>
+        <name>Update</name>
+        <qualifiedname>SceneApp::Update</qualifiedname>
+        <param>
+          <type>float</type>
+          <declname>frame_time</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/scene_app.h" line="83" column="6" bodyfile="D:/Uni/CMP208/Hellwatch/scene_app.cpp" bodystart="376" bodyend="412"/>
+      </memberdef>
+      <memberdef kind="function" id="class_scene_app_1afd9eebbabf3fe176d9fe30b309c2130c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SceneApp::Render</definition>
+        <argsstring>()</argsstring>
+        <name>Render</name>
+        <qualifiedname>SceneApp::Render</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/scene_app.h" line="84" column="6" bodyfile="D:/Uni/CMP208/Hellwatch/scene_app.cpp" bodystart="471" bodyend="501"/>
+      </memberdef>
+      <memberdef kind="function" id="class_scene_app_1adcf5fcd2dfcb07d468c0ff4455e45bdd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>b2Body *</type>
+        <definition>b2Body * SceneApp::CreateCollisionBody</definition>
+        <argsstring>(b2BodyDef bodyDef, b2FixtureDef fixtureDef, WorldObject *owningObject)</argsstring>
+        <name>CreateCollisionBody</name>
+        <qualifiedname>SceneApp::CreateCollisionBody</qualifiedname>
+        <param>
+          <type>b2BodyDef</type>
+          <declname>bodyDef</declname>
+        </param>
+        <param>
+          <type>b2FixtureDef</type>
+          <declname>fixtureDef</declname>
+        </param>
+        <param>
+          <type><ref refid="class_world_object" kindref="compound">WorldObject</ref> *</type>
+          <declname>owningObject</declname>
+        </param>
+        <briefdescription>
+<para>Creates a collision body for a specified object, object can be null if using for things like environment or invisible walls @NOTE: The owning object will be used to call OnCollision function  </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/scene_app.h" line="90" column="8" bodyfile="D:/Uni/CMP208/Hellwatch/scene_app.cpp" bodystart="890" bodyend="899"/>
+      </memberdef>
+      <memberdef kind="function" id="class_scene_app_1ac0999a6034cf97a795506eb75dd3cc7f" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>__forceinline gef::Renderer3D *</type>
+        <definition>__forceinline gef::Renderer3D * SceneApp::GetRenderer3D</definition>
+        <argsstring>() const</argsstring>
+        <name>GetRenderer3D</name>
+        <qualifiedname>SceneApp::GetRenderer3D</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/scene_app.h" line="232" column="31" bodyfile="D:/Uni/CMP208/Hellwatch/scene_app.h" bodystart="232" bodyend="232"/>
+      </memberdef>
+      <memberdef kind="function" id="class_scene_app_1acfe997c4a66416d0cf25324d47403abb" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>__forceinline gef::SpriteRenderer *</type>
+        <definition>__forceinline gef::SpriteRenderer * SceneApp::GetSpriteRenderer</definition>
+        <argsstring>() const</argsstring>
+        <name>GetSpriteRenderer</name>
+        <qualifiedname>SceneApp::GetSpriteRenderer</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/scene_app.h" line="233" column="35" bodyfile="D:/Uni/CMP208/Hellwatch/scene_app.h" bodystart="233" bodyend="233"/>
+      </memberdef>
+      <memberdef kind="function" id="class_scene_app_1ad1ff8bd221115d5e081490da02e2f398" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>__forceinline b2World *</type>
+        <definition>__forceinline b2World * SceneApp::GetBox2DWorld</definition>
+        <argsstring>() const</argsstring>
+        <name>GetBox2DWorld</name>
+        <qualifiedname>SceneApp::GetBox2DWorld</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/scene_app.h" line="234" column="23" bodyfile="D:/Uni/CMP208/Hellwatch/scene_app.h" bodystart="234" bodyend="234"/>
+      </memberdef>
+      <memberdef kind="function" id="class_scene_app_1a30039f31aff4d61fdce25d79425892fc" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>__forceinline float</type>
+        <definition>__forceinline float SceneApp::GetViewportWidth</definition>
+        <argsstring>() const</argsstring>
+        <name>GetViewportWidth</name>
+        <qualifiedname>SceneApp::GetViewportWidth</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/scene_app.h" line="235" column="21" bodyfile="D:/Uni/CMP208/Hellwatch/scene_app.h" bodystart="235" bodyend="235"/>
+      </memberdef>
+      <memberdef kind="function" id="class_scene_app_1a0fc304ef89214b58b23adf26ec63f6ac" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>__forceinline float</type>
+        <definition>__forceinline float SceneApp::GetViewportHeight</definition>
+        <argsstring>() const</argsstring>
+        <name>GetViewportHeight</name>
+        <qualifiedname>SceneApp::GetViewportHeight</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/scene_app.h" line="236" column="21" bodyfile="D:/Uni/CMP208/Hellwatch/scene_app.h" bodystart="236" bodyend="236"/>
+      </memberdef>
+      <memberdef kind="function" id="class_scene_app_1a36cc2439051445972f7b29114f3b011b" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>__forceinline <ref refid="class_player_character" kindref="compound">PlayerCharacter</ref> *</type>
+        <definition>__forceinline PlayerCharacter * SceneApp::GetPlayerCharacter</definition>
+        <argsstring>() const</argsstring>
+        <name>GetPlayerCharacter</name>
+        <qualifiedname>SceneApp::GetPlayerCharacter</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/scene_app.h" line="237" column="31" bodyfile="D:/Uni/CMP208/Hellwatch/scene_app.h" bodystart="237" bodyend="237"/>
+      </memberdef>
+      <memberdef kind="function" id="class_scene_app_1ad0422232eb1f735a48a20137eb6e953e" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>__forceinline <ref refid="class_primitive_builder" kindref="compound">PrimitiveBuilder</ref> *</type>
+        <definition>__forceinline PrimitiveBuilder * SceneApp::GetPrimitiveBuilder</definition>
+        <argsstring>() const</argsstring>
+        <name>GetPrimitiveBuilder</name>
+        <qualifiedname>SceneApp::GetPrimitiveBuilder</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/scene_app.h" line="238" column="32" bodyfile="D:/Uni/CMP208/Hellwatch/scene_app.h" bodystart="238" bodyend="238"/>
+      </memberdef>
+      <memberdef kind="function" id="class_scene_app_1aaec63e72c5b04a1f7a63f3ff81b8bdb7" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>__forceinline gef::Vector4</type>
+        <definition>__forceinline gef::Vector4 SceneApp::GetCameraEye</definition>
+        <argsstring>() const</argsstring>
+        <name>GetCameraEye</name>
+        <qualifiedname>SceneApp::GetCameraEye</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/scene_app.h" line="239" column="28" bodyfile="D:/Uni/CMP208/Hellwatch/scene_app.h" bodystart="239" bodyend="239"/>
+      </memberdef>
+      <memberdef kind="function" id="class_scene_app_1ab94350ed26fa0140eaac7060d97db655" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>__forceinline gef::Vector4</type>
+        <definition>__forceinline gef::Vector4 SceneApp::GetCameraLookAt</definition>
+        <argsstring>() const</argsstring>
+        <name>GetCameraLookAt</name>
+        <qualifiedname>SceneApp::GetCameraLookAt</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/scene_app.h" line="240" column="28" bodyfile="D:/Uni/CMP208/Hellwatch/scene_app.h" bodystart="240" bodyend="240"/>
+      </memberdef>
+      <memberdef kind="function" id="class_scene_app_1ab0a3e09a2920c053f50d25ea03132ae7" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>__forceinline float</type>
+        <definition>__forceinline float SceneApp::GetCurrentGameTime</definition>
+        <argsstring>() const</argsstring>
+        <name>GetCurrentGameTime</name>
+        <qualifiedname>SceneApp::GetCurrentGameTime</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/scene_app.h" line="241" column="21" bodyfile="D:/Uni/CMP208/Hellwatch/scene_app.h" bodystart="241" bodyend="241"/>
+      </memberdef>
+      <memberdef kind="function" id="class_scene_app_1af624c2780cc0b7d913f63f7c4df74030" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>__forceinline float</type>
+        <definition>__forceinline float SceneApp::GetLastDeltaTime</definition>
+        <argsstring>() const</argsstring>
+        <name>GetLastDeltaTime</name>
+        <qualifiedname>SceneApp::GetLastDeltaTime</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/scene_app.h" line="242" column="21" bodyfile="D:/Uni/CMP208/Hellwatch/scene_app.h" bodystart="242" bodyend="242"/>
+      </memberdef>
+      <memberdef kind="function" id="class_scene_app_1a6b6984ec718cb9ebad4be261df534cf1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>gef::Mesh *</type>
+        <definition>gef::Mesh * SceneApp::RequestMeshByName</definition>
+        <argsstring>(std::string meshName)</argsstring>
+        <name>RequestMeshByName</name>
+        <qualifiedname>SceneApp::RequestMeshByName</qualifiedname>
+        <param>
+          <type>std::string</type>
+          <declname>meshName</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/scene_app.h" line="244" column="11" bodyfile="D:/Uni/CMP208/Hellwatch/scene_app.cpp" bodystart="866" bodyend="875"/>
+      </memberdef>
+      <memberdef kind="function" id="class_scene_app_1ac00c6ac20d92d7e8fd77d341a116e81d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>gef::Texture *</type>
+        <definition>gef::Texture * SceneApp::RequestTextureByName</definition>
+        <argsstring>(std::string textureName)</argsstring>
+        <name>RequestTextureByName</name>
+        <qualifiedname>SceneApp::RequestTextureByName</qualifiedname>
+        <param>
+          <type>std::string</type>
+          <declname>textureName</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/scene_app.h" line="245" column="14" bodyfile="D:/Uni/CMP208/Hellwatch/scene_app.cpp" bodystart="877" bodyend="886"/>
+      </memberdef>
+      <memberdef kind="function" id="class_scene_app_1a13fa1b28170df85ade3d18e329fbedc7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>gef::Font *</type>
+        <definition>gef::Font * SceneApp::GetFont</definition>
+        <argsstring>()</argsstring>
+        <name>GetFont</name>
+        <qualifiedname>SceneApp::GetFont</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/scene_app.h" line="246" column="11" bodyfile="D:/Uni/CMP208/Hellwatch/scene_app.h" bodystart="246" bodyend="246"/>
+      </memberdef>
+      <memberdef kind="function" id="class_scene_app_1a1b8d7ed84a7691d140c0b10d6cc01f7b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>gef::AudioManager *</type>
+        <definition>gef::AudioManager * SceneApp::GetAudioManager</definition>
+        <argsstring>()</argsstring>
+        <name>GetAudioManager</name>
+        <qualifiedname>SceneApp::GetAudioManager</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/scene_app.h" line="247" column="19" bodyfile="D:/Uni/CMP208/Hellwatch/scene_app.h" bodystart="247" bodyend="247"/>
+      </memberdef>
+      <memberdef kind="function" id="class_scene_app_1a2cb299beb00f7fea8f1de7c0cc6ab19b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const gef::Vector2</type>
+        <definition>const gef::Vector2 SceneApp::GetLastTouchPosition</definition>
+        <argsstring>()</argsstring>
+        <name>GetLastTouchPosition</name>
+        <qualifiedname>SceneApp::GetLastTouchPosition</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/scene_app.h" line="248" column="20" bodyfile="D:/Uni/CMP208/Hellwatch/scene_app.cpp" bodystart="901" bodyend="904"/>
+      </memberdef>
+      <memberdef kind="function" id="class_scene_app_1a3bc64bbc203e9cb597f2b47dc69f20e6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SceneApp::SetGameState</definition>
+        <argsstring>(GameState::Type newState)</argsstring>
+        <name>SetGameState</name>
+        <qualifiedname>SceneApp::SetGameState</qualifiedname>
+        <param>
+          <type><ref refid="namespace_game_state_1aa2df68fe63beaaf10d3154d8eb490fe6" kindref="member">GameState::Type</ref></type>
+          <declname>newState</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/scene_app.h" line="251" column="6" bodyfile="D:/Uni/CMP208/Hellwatch/scene_app.cpp" bodystart="906" bodyend="942"/>
+      </memberdef>
+      <memberdef kind="function" id="class_scene_app_1a3218d41e2d667db80e8fed34b02b6221" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="namespace_game_state_1aa2df68fe63beaaf10d3154d8eb490fe6" kindref="member">GameState::Type</ref></type>
+        <definition>GameState::Type SceneApp::GetGameState</definition>
+        <argsstring>() const</argsstring>
+        <name>GetGameState</name>
+        <qualifiedname>SceneApp::GetGameState</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/scene_app.h" line="252" column="17" bodyfile="D:/Uni/CMP208/Hellwatch/scene_app.h" bodystart="252" bodyend="252"/>
+      </memberdef>
+      <memberdef kind="function" id="class_scene_app_1ab4f8fc5ac0dc41a16f83089ff782b6f4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>const uint32_t</type>
+        <definition>const uint32_t SceneApp::GetPlayerMoney</definition>
+        <argsstring>()</argsstring>
+        <name>GetPlayerMoney</name>
+        <qualifiedname>SceneApp::GetPlayerMoney</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/scene_app.h" line="255" column="16" bodyfile="D:/Uni/CMP208/Hellwatch/scene_app.h" bodystart="255" bodyend="255"/>
+      </memberdef>
+      <memberdef kind="function" id="class_scene_app_1aec4d56f9129795aaef4ad8f2a454e302" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SceneApp::IncreasePlayerMoney</definition>
+        <argsstring>(uint32_t increaseAmount)</argsstring>
+        <name>IncreasePlayerMoney</name>
+        <qualifiedname>SceneApp::IncreasePlayerMoney</qualifiedname>
+        <param>
+          <type>uint32_t</type>
+          <declname>increaseAmount</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/scene_app.h" line="256" column="6" bodyfile="D:/Uni/CMP208/Hellwatch/scene_app.h" bodystart="256" bodyend="256"/>
+      </memberdef>
+      <memberdef kind="function" id="class_scene_app_1ac7ebc87268f7eea380099954c5358fd3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SceneApp::ApplyCostToPlayerMoney</definition>
+        <argsstring>(uint32_t cost)</argsstring>
+        <name>ApplyCostToPlayerMoney</name>
+        <qualifiedname>SceneApp::ApplyCostToPlayerMoney</qualifiedname>
+        <param>
+          <type>uint32_t</type>
+          <declname>cost</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/scene_app.h" line="257" column="6" bodyfile="D:/Uni/CMP208/Hellwatch/scene_app.h" bodystart="257" bodyend="257"/>
+      </memberdef>
+      <memberdef kind="function" id="class_scene_app_1a04b16337e0cd4af5f9b38f75ca623f34" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SceneApp::ApplyCameraShake</definition>
+        <argsstring>(FCameraShake newShake)</argsstring>
+        <name>ApplyCameraShake</name>
+        <qualifiedname>SceneApp::ApplyCameraShake</qualifiedname>
+        <param>
+          <type><ref refid="struct_f_camera_shake" kindref="compound">FCameraShake</ref></type>
+          <declname>newShake</declname>
+        </param>
+        <briefdescription>
+<para>Applies camera shake @NOTE: This overwrites the previous camera shake  </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/scene_app.h" line="265" column="6" bodyfile="D:/Uni/CMP208/Hellwatch/scene_app.cpp" bodystart="989" bodyend="993"/>
+      </memberdef>
+      <memberdef kind="function" id="class_scene_app_1a85782170c9894dfebe3a8045063301c6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SceneApp::ApplyRadialDamage</definition>
+        <argsstring>(float damageAmount, gef::Vector4 origin, float innerRadius, float outerRadius)</argsstring>
+        <name>ApplyRadialDamage</name>
+        <qualifiedname>SceneApp::ApplyRadialDamage</qualifiedname>
+        <param>
+          <type>float</type>
+          <declname>damageAmount</declname>
+        </param>
+        <param>
+          <type>gef::Vector4</type>
+          <declname>origin</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>innerRadius</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>outerRadius</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/scene_app.h" line="268" column="6" bodyfile="D:/Uni/CMP208/Hellwatch/scene_app.cpp" bodystart="944" bodyend="963"/>
+      </memberdef>
+      <memberdef kind="function" id="class_scene_app_1a942b3809824f430117b26e9a7ad5acf6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SceneApp::PlaySample</definition>
+        <argsstring>(std::string sampleName, float pitch=1, bool bIsLooping=false)</argsstring>
+        <name>PlaySample</name>
+        <qualifiedname>SceneApp::PlaySample</qualifiedname>
+        <param>
+          <type>std::string</type>
+          <declname>sampleName</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>pitch</declname>
+          <defval>1</defval>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>bIsLooping</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/scene_app.h" line="271" column="6" bodyfile="D:/Uni/CMP208/Hellwatch/scene_app.cpp" bodystart="976" bodyend="987"/>
+      </memberdef>
+      <memberdef kind="function" id="class_scene_app_1a829d6b657cc270002fcf262d57e2f249" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SceneApp::AddPointerLocationOffset</definition>
+        <argsstring>(gef::Vector2 offset)</argsstring>
+        <name>AddPointerLocationOffset</name>
+        <qualifiedname>SceneApp::AddPointerLocationOffset</qualifiedname>
+        <param>
+          <type>gef::Vector2</type>
+          <declname>offset</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/scene_app.h" line="274" column="6" bodyfile="D:/Uni/CMP208/Hellwatch/scene_app.h" bodystart="274" bodyend="274"/>
+      </memberdef>
+      <memberdef kind="function" id="class_scene_app_1ab40943893a61a141c9fb25eec163a1f1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SceneApp::SetPointerLocation</definition>
+        <argsstring>(gef::Vector2 newLocation)</argsstring>
+        <name>SetPointerLocation</name>
+        <qualifiedname>SceneApp::SetPointerLocation</qualifiedname>
+        <param>
+          <type>gef::Vector2</type>
+          <declname>newLocation</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/scene_app.h" line="276" column="6" bodyfile="D:/Uni/CMP208/Hellwatch/scene_app.h" bodystart="276" bodyend="276"/>
+      </memberdef>
+      <memberdef kind="function" id="class_scene_app_1a800b10254ae600ce80c0e69d765e8061" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename MeshActorType</type>
+            <defval><ref refid="class_mesh_actor" kindref="compound">MeshActor</ref></defval>
+          </param>
+        </templateparamlist>
+        <type>MeshActorType *</type>
+        <definition>MeshActorType * SceneApp::SpawnMeshActor</definition>
+        <argsstring>(gef::Mesh *mesh=nullptr, gef::Vector4 translation=gef::Vector4::kZero, gef::Vector4 rotation=gef::Vector4::kZero, gef::Vector4 scale=gef::Vector4::kOne, WorldObject *owner=nullptr)</argsstring>
+        <name>SpawnMeshActor</name>
+        <qualifiedname>SceneApp::SpawnMeshActor</qualifiedname>
+        <param>
+          <type>gef::Mesh *</type>
+          <declname>mesh</declname>
+          <defval>nullptr</defval>
+        </param>
+        <param>
+          <type>gef::Vector4</type>
+          <declname>translation</declname>
+          <defval>gef::Vector4::kZero</defval>
+        </param>
+        <param>
+          <type>gef::Vector4</type>
+          <declname>rotation</declname>
+          <defval>gef::Vector4::kZero</defval>
+        </param>
+        <param>
+          <type>gef::Vector4</type>
+          <declname>scale</declname>
+          <defval>gef::Vector4::kOne</defval>
+        </param>
+        <param>
+          <type><ref refid="class_world_object" kindref="compound">WorldObject</ref> *</type>
+          <declname>owner</declname>
+          <defval>nullptr</defval>
+        </param>
+        <briefdescription>
+<para>Spawns a <ref refid="class_mesh_actor" kindref="compound">MeshActor</ref> into the scene and gets it ready for rendering and updating  </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/scene_app.h" line="282" column="15" bodyfile="D:/Uni/CMP208/Hellwatch/scene_app.h" bodystart="282" bodyend="293"/>
+      </memberdef>
+      <memberdef kind="function" id="class_scene_app_1ab70d4d12950fa87533727b3fa6e42ee5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename SpriteActorType</type>
+            <defval><ref refid="class_sprite_actor" kindref="compound">SpriteActor</ref></defval>
+          </param>
+        </templateparamlist>
+        <type>SpriteActorType *</type>
+        <definition>SpriteActorType * SceneApp::SpawnSpriteActor</definition>
+        <argsstring>(gef::Sprite *sprite=nullptr, gef::Vector4 position=gef::Vector4::kZero, float rotation=0.f, WorldObject *owner=nullptr)</argsstring>
+        <name>SpawnSpriteActor</name>
+        <qualifiedname>SceneApp::SpawnSpriteActor</qualifiedname>
+        <param>
+          <type>gef::Sprite *</type>
+          <declname>sprite</declname>
+          <defval>nullptr</defval>
+        </param>
+        <param>
+          <type>gef::Vector4</type>
+          <declname>position</declname>
+          <defval>gef::Vector4::kZero</defval>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>rotation</declname>
+          <defval>0.f</defval>
+        </param>
+        <param>
+          <type><ref refid="class_world_object" kindref="compound">WorldObject</ref> *</type>
+          <declname>owner</declname>
+          <defval>nullptr</defval>
+        </param>
+        <briefdescription>
+<para>Spawns a <ref refid="class_sprite_actor" kindref="compound">SpriteActor</ref> into the scene and gets it ready for rendering and updating  </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/scene_app.h" line="299" column="17" bodyfile="D:/Uni/CMP208/Hellwatch/scene_app.h" bodystart="299" bodyend="309"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_scene_app_1a171208bf4f19b208d59a1a0b7557a36f" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SceneApp::InitFont</definition>
+        <argsstring>()</argsstring>
+        <name>InitFont</name>
+        <qualifiedname>SceneApp::InitFont</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/scene_app.h" line="97" column="6" bodyfile="D:/Uni/CMP208/Hellwatch/scene_app.cpp" bodystart="345" bodyend="350"/>
+      </memberdef>
+      <memberdef kind="function" id="class_scene_app_1a4ce48816f535fd67410acb38bd4066f5" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SceneApp::CleanUpFont</definition>
+        <argsstring>()</argsstring>
+        <name>CleanUpFont</name>
+        <qualifiedname>SceneApp::CleanUpFont</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/scene_app.h" line="98" column="6" bodyfile="D:/Uni/CMP208/Hellwatch/scene_app.cpp" bodystart="352" bodyend="356"/>
+      </memberdef>
+      <memberdef kind="function" id="class_scene_app_1ac244648f187136710aead2068064b4db" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SceneApp::SetupLights</definition>
+        <argsstring>()</argsstring>
+        <name>SetupLights</name>
+        <qualifiedname>SceneApp::SetupLights</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/scene_app.h" line="99" column="6" bodyfile="D:/Uni/CMP208/Hellwatch/scene_app.cpp" bodystart="358" bodyend="372"/>
+      </memberdef>
+      <memberdef kind="function" id="class_scene_app_1aa0dbda2623d4d32cda81fbfb5a97760a" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SceneApp::InitGameLoop</definition>
+        <argsstring>()</argsstring>
+        <name>InitGameLoop</name>
+        <qualifiedname>SceneApp::InitGameLoop</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/scene_app.h" line="100" column="6" bodyfile="D:/Uni/CMP208/Hellwatch/scene_app.cpp" bodystart="162" bodyend="300"/>
+      </memberdef>
+      <memberdef kind="function" id="class_scene_app_1a62ee5dc60899811104ea01db498f6d65" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SceneApp::InitMainMenu</definition>
+        <argsstring>()</argsstring>
+        <name>InitMainMenu</name>
+        <qualifiedname>SceneApp::InitMainMenu</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/scene_app.h" line="101" column="6" bodyfile="D:/Uni/CMP208/Hellwatch/scene_app.cpp" bodystart="139" bodyend="151"/>
+      </memberdef>
+      <memberdef kind="function" id="class_scene_app_1a7e7bed59b9f67f8b4dcb0994cd850ffe" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SceneApp::InitShop</definition>
+        <argsstring>()</argsstring>
+        <name>InitShop</name>
+        <qualifiedname>SceneApp::InitShop</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/scene_app.h" line="102" column="6" bodyfile="D:/Uni/CMP208/Hellwatch/scene_app.cpp" bodystart="153" bodyend="160"/>
+      </memberdef>
+      <memberdef kind="function" id="class_scene_app_1a8dfffee0d2ff620be8bf48f9d6b9196e" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SceneApp::InitPauseMenu</definition>
+        <argsstring>()</argsstring>
+        <name>InitPauseMenu</name>
+        <qualifiedname>SceneApp::InitPauseMenu</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/scene_app.h" line="103" column="6" bodyfile="D:/Uni/CMP208/Hellwatch/scene_app.cpp" bodystart="302" bodyend="309"/>
+      </memberdef>
+      <memberdef kind="function" id="class_scene_app_1a6006d24d1c61e057aea252d086f8ffff" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SceneApp::InitGameEndMenu</definition>
+        <argsstring>()</argsstring>
+        <name>InitGameEndMenu</name>
+        <qualifiedname>SceneApp::InitGameEndMenu</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/scene_app.h" line="104" column="6" bodyfile="D:/Uni/CMP208/Hellwatch/scene_app.cpp" bodystart="311" bodyend="319"/>
+      </memberdef>
+      <memberdef kind="function" id="class_scene_app_1afeb40fca84cdad8fc128ae3712360c11" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SceneApp::UpdateLoading</definition>
+        <argsstring>(float frame_time)</argsstring>
+        <name>UpdateLoading</name>
+        <qualifiedname>SceneApp::UpdateLoading</qualifiedname>
+        <param>
+          <type>float</type>
+          <declname>frame_time</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/scene_app.h" line="109" column="6" bodyfile="D:/Uni/CMP208/Hellwatch/scene_app.cpp" bodystart="414" bodyend="421"/>
+      </memberdef>
+      <memberdef kind="function" id="class_scene_app_1a3ba7a2993cea9c13b4a7c8cb2668a312" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SceneApp::UpdateMainMenu</definition>
+        <argsstring>(float frame_time)</argsstring>
+        <name>UpdateMainMenu</name>
+        <qualifiedname>SceneApp::UpdateMainMenu</qualifiedname>
+        <param>
+          <type>float</type>
+          <declname>frame_time</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/scene_app.h" line="110" column="6" bodyfile="D:/Uni/CMP208/Hellwatch/scene_app.cpp" bodystart="423" bodyend="426"/>
+      </memberdef>
+      <memberdef kind="function" id="class_scene_app_1abfcf2a864bc670141024453df142b191" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SceneApp::UpdateGameLoop</definition>
+        <argsstring>(float frame_time)</argsstring>
+        <name>UpdateGameLoop</name>
+        <qualifiedname>SceneApp::UpdateGameLoop</qualifiedname>
+        <param>
+          <type>float</type>
+          <declname>frame_time</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/scene_app.h" line="111" column="6" bodyfile="D:/Uni/CMP208/Hellwatch/scene_app.cpp" bodystart="428" bodyend="451"/>
+      </memberdef>
+      <memberdef kind="function" id="class_scene_app_1a08773b5085216866fc0350ef77560ebd" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SceneApp::UpdatePauseMenu</definition>
+        <argsstring>(float frame_time)</argsstring>
+        <name>UpdatePauseMenu</name>
+        <qualifiedname>SceneApp::UpdatePauseMenu</qualifiedname>
+        <param>
+          <type>float</type>
+          <declname>frame_time</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/scene_app.h" line="112" column="6" bodyfile="D:/Uni/CMP208/Hellwatch/scene_app.cpp" bodystart="465" bodyend="469"/>
+      </memberdef>
+      <memberdef kind="function" id="class_scene_app_1a79eccdb7cdeac4dc0cfa4f979b8a257d" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SceneApp::UpdateShop</definition>
+        <argsstring>()</argsstring>
+        <name>UpdateShop</name>
+        <qualifiedname>SceneApp::UpdateShop</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/scene_app.h" line="113" column="6" bodyfile="D:/Uni/CMP208/Hellwatch/scene_app.cpp" bodystart="453" bodyend="457"/>
+      </memberdef>
+      <memberdef kind="function" id="class_scene_app_1ab3524b8b9aa423a8be18d83dc12a5915" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SceneApp::UpdateGameEnd</definition>
+        <argsstring>()</argsstring>
+        <name>UpdateGameEnd</name>
+        <qualifiedname>SceneApp::UpdateGameEnd</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/scene_app.h" line="114" column="6" bodyfile="D:/Uni/CMP208/Hellwatch/scene_app.cpp" bodystart="459" bodyend="463"/>
+      </memberdef>
+      <memberdef kind="function" id="class_scene_app_1af7cdb80aff26fce9d64cd7dc3d735647" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SceneApp::HandleCollision</definition>
+        <argsstring>()</argsstring>
+        <name>HandleCollision</name>
+        <qualifiedname>SceneApp::HandleCollision</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/scene_app.h" line="116" column="6" bodyfile="D:/Uni/CMP208/Hellwatch/scene_app.cpp" bodystart="699" bodyend="722"/>
+      </memberdef>
+      <memberdef kind="function" id="class_scene_app_1aa5f20d520df679ffce3e76d161ea172f" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SceneApp::CheckMarkedForDeletion</definition>
+        <argsstring>()</argsstring>
+        <name>CheckMarkedForDeletion</name>
+        <qualifiedname>SceneApp::CheckMarkedForDeletion</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/scene_app.h" line="117" column="6" bodyfile="D:/Uni/CMP208/Hellwatch/scene_app.cpp" bodystart="724" bodyend="753"/>
+      </memberdef>
+      <memberdef kind="function" id="class_scene_app_1af4b6406225360d9134a5a2a440d49895" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SceneApp::DrawHUD</definition>
+        <argsstring>()</argsstring>
+        <name>DrawHUD</name>
+        <qualifiedname>SceneApp::DrawHUD</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/scene_app.h" line="123" column="6" bodyfile="D:/Uni/CMP208/Hellwatch/scene_app.cpp" bodystart="755" bodyend="765"/>
+      </memberdef>
+      <memberdef kind="function" id="class_scene_app_1aea34e1a25a1a851e8d3af0ed9dfd85cf" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SceneApp::RenderLoading</definition>
+        <argsstring>()</argsstring>
+        <name>RenderLoading</name>
+        <qualifiedname>SceneApp::RenderLoading</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/scene_app.h" line="125" column="6" bodyfile="D:/Uni/CMP208/Hellwatch/scene_app.cpp" bodystart="503" bodyend="518"/>
+      </memberdef>
+      <memberdef kind="function" id="class_scene_app_1a113d3e9df2b5750970b792112fcb1791" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SceneApp::RenderMainMenu</definition>
+        <argsstring>()</argsstring>
+        <name>RenderMainMenu</name>
+        <qualifiedname>SceneApp::RenderMainMenu</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/scene_app.h" line="126" column="6" bodyfile="D:/Uni/CMP208/Hellwatch/scene_app.cpp" bodystart="586" bodyend="608"/>
+      </memberdef>
+      <memberdef kind="function" id="class_scene_app_1afffb3ff22780f1eaaa307dd53e9e24d1" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SceneApp::RenderGameLoop</definition>
+        <argsstring>()</argsstring>
+        <name>RenderGameLoop</name>
+        <qualifiedname>SceneApp::RenderGameLoop</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/scene_app.h" line="127" column="6" bodyfile="D:/Uni/CMP208/Hellwatch/scene_app.cpp" bodystart="610" bodyend="664"/>
+      </memberdef>
+      <memberdef kind="function" id="class_scene_app_1a1388567b320f11a15a94d9b187f052ed" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SceneApp::RenderPauseMenu</definition>
+        <argsstring>()</argsstring>
+        <name>RenderPauseMenu</name>
+        <qualifiedname>SceneApp::RenderPauseMenu</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/scene_app.h" line="128" column="6" bodyfile="D:/Uni/CMP208/Hellwatch/scene_app.cpp" bodystart="666" bodyend="697"/>
+      </memberdef>
+      <memberdef kind="function" id="class_scene_app_1aba7c346f9a09e3a461a3e7c2e93874dd" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SceneApp::RenderShop</definition>
+        <argsstring>()</argsstring>
+        <name>RenderShop</name>
+        <qualifiedname>SceneApp::RenderShop</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/scene_app.h" line="129" column="6" bodyfile="D:/Uni/CMP208/Hellwatch/scene_app.cpp" bodystart="520" bodyend="551"/>
+      </memberdef>
+      <memberdef kind="function" id="class_scene_app_1a685aa415b9b7fbf34869c212c192a670" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SceneApp::RenderGameEnd</definition>
+        <argsstring>()</argsstring>
+        <name>RenderGameEnd</name>
+        <qualifiedname>SceneApp::RenderGameEnd</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/scene_app.h" line="130" column="6" bodyfile="D:/Uni/CMP208/Hellwatch/scene_app.cpp" bodystart="553" bodyend="584"/>
+      </memberdef>
+      <memberdef kind="function" id="class_scene_app_1a07916d454876fe34d081f24d4957426e" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>gef::Scene *</type>
+        <definition>gef::Scene * SceneApp::LoadSceneAssets</definition>
+        <argsstring>(gef::Platform &amp;platform, const char *filename)</argsstring>
+        <name>LoadSceneAssets</name>
+        <qualifiedname>SceneApp::LoadSceneAssets</qualifiedname>
+        <param>
+          <type>gef::Platform &amp;</type>
+          <declname>platform</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>filename</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/scene_app.h" line="142" column="12" bodyfile="D:/Uni/CMP208/Hellwatch/scene_app.cpp" bodystart="769" bodyend="787"/>
+      </memberdef>
+      <memberdef kind="function" id="class_scene_app_1aadc3edde6cace552a5a220cedd4ddbb3" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>gef::Mesh *</type>
+        <definition>gef::Mesh * SceneApp::GetMeshFromSceneAssets</definition>
+        <argsstring>(gef::Scene *scene)</argsstring>
+        <name>GetMeshFromSceneAssets</name>
+        <qualifiedname>SceneApp::GetMeshFromSceneAssets</qualifiedname>
+        <param>
+          <type>gef::Scene *</type>
+          <declname>scene</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/scene_app.h" line="143" column="11" bodyfile="D:/Uni/CMP208/Hellwatch/scene_app.cpp" bodystart="789" bodyend="799"/>
+      </memberdef>
+      <memberdef kind="function" id="class_scene_app_1abbc88abb8755fc074dfff27b7e839647" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SceneApp::LoadAssets</definition>
+        <argsstring>()</argsstring>
+        <name>LoadAssets</name>
+        <qualifiedname>SceneApp::LoadAssets</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/scene_app.h" line="145" column="6" bodyfile="D:/Uni/CMP208/Hellwatch/scene_app.cpp" bodystart="801" bodyend="825"/>
+      </memberdef>
+      <memberdef kind="function" id="class_scene_app_1a0aa7a899b4b613c6c24a69041dfb5d23" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SceneApp::BuildToLoadData</definition>
+        <argsstring>()</argsstring>
+        <name>BuildToLoadData</name>
+        <qualifiedname>SceneApp::BuildToLoadData</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/scene_app.h" line="146" column="6" bodyfile="D:/Uni/CMP208/Hellwatch/scene_app.cpp" bodystart="827" bodyend="864"/>
+      </memberdef>
+      <memberdef kind="function" id="class_scene_app_1aded735b3e6c3e7c0913133721f6a1f23" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int SceneApp::FindSampleFromName</definition>
+        <argsstring>(std::string sampleName)</argsstring>
+        <name>FindSampleFromName</name>
+        <qualifiedname>SceneApp::FindSampleFromName</qualifiedname>
+        <param>
+          <type>std::string</type>
+          <declname>sampleName</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/scene_app.h" line="173" column="5" bodyfile="D:/Uni/CMP208/Hellwatch/scene_app.cpp" bodystart="965" bodyend="974"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>SceneApp</label>
+        <link refid="class_scene_app"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>gef::Application</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>SceneApp</label>
+        <link refid="class_scene_app"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>gef::Application</label>
+      </node>
+    </collaborationgraph>
+    <location file="D:/Uni/CMP208/Hellwatch/scene_app.h" line="74" column="1" bodyfile="D:/Uni/CMP208/Hellwatch/scene_app.h" bodystart="75" bodyend="310"/>
+    <listofallmembers>
+      <member refid="class_scene_app_1a829d6b657cc270002fcf262d57e2f249" prot="public" virt="non-virtual"><scope>SceneApp</scope><name>AddPointerLocationOffset</name></member>
+      <member refid="class_scene_app_1a04b16337e0cd4af5f9b38f75ca623f34" prot="public" virt="non-virtual"><scope>SceneApp</scope><name>ApplyCameraShake</name></member>
+      <member refid="class_scene_app_1ac7ebc87268f7eea380099954c5358fd3" prot="public" virt="non-virtual"><scope>SceneApp</scope><name>ApplyCostToPlayerMoney</name></member>
+      <member refid="class_scene_app_1a85782170c9894dfebe3a8045063301c6" prot="public" virt="non-virtual"><scope>SceneApp</scope><name>ApplyRadialDamage</name></member>
+      <member refid="class_scene_app_1a70ed4549ef0fe12b92c7a35ef1834dac" prot="private" virt="non-virtual"><scope>SceneApp</scope><name>audioManager</name></member>
+      <member refid="class_scene_app_1a1212495244b88152da68fef7add9fca7" prot="private" virt="non-virtual"><scope>SceneApp</scope><name>b2dWorld</name></member>
+      <member refid="class_scene_app_1ac9cc70c9d9ddd066c839bd93abb42a49" prot="private" virt="non-virtual"><scope>SceneApp</scope><name>bCommingFromMainMenu</name></member>
+      <member refid="class_scene_app_1a5e58877e1666eafe401f5cddd431511d" prot="private" virt="non-virtual"><scope>SceneApp</scope><name>bGameLoopInitted</name></member>
+      <member refid="class_scene_app_1a0aa7a899b4b613c6c24a69041dfb5d23" prot="private" virt="non-virtual"><scope>SceneApp</scope><name>BuildToLoadData</name></member>
+      <member refid="class_scene_app_1a7336b62b4d3e2762f35ed7b5f8faa9d4" prot="private" virt="non-virtual"><scope>SceneApp</scope><name>cameraEye</name></member>
+      <member refid="class_scene_app_1ab8a1fed11db540bddc041c4b81a287d3" prot="private" virt="non-virtual"><scope>SceneApp</scope><name>cameraLookAt</name></member>
+      <member refid="class_scene_app_1a5b5861315462b1787e4139197f82e368" prot="private" virt="non-virtual"><scope>SceneApp</scope><name>cameraShake</name></member>
+      <member refid="class_scene_app_1a85d4e75be9600791e02a664f66c78575" prot="private" virt="non-virtual"><scope>SceneApp</scope><name>cameraUp</name></member>
+      <member refid="class_scene_app_1aa5f20d520df679ffce3e76d161ea172f" prot="private" virt="non-virtual"><scope>SceneApp</scope><name>CheckMarkedForDeletion</name></member>
+      <member refid="class_scene_app_1ab815a8823c2248fcebdc7a06867bdb9b" prot="public" virt="non-virtual"><scope>SceneApp</scope><name>CleanUp</name></member>
+      <member refid="class_scene_app_1a4ce48816f535fd67410acb38bd4066f5" prot="private" virt="non-virtual"><scope>SceneApp</scope><name>CleanUpFont</name></member>
+      <member refid="class_scene_app_1adcf5fcd2dfcb07d468c0ff4455e45bdd" prot="public" virt="non-virtual"><scope>SceneApp</scope><name>CreateCollisionBody</name></member>
+      <member refid="class_scene_app_1a32a11fc11fa3fcc917351649d52f788f" prot="private" virt="non-virtual"><scope>SceneApp</scope><name>currentGameTime</name></member>
+      <member refid="class_scene_app_1a3ce39c88bb90c1aaddb82a26cb73282e" prot="private" virt="non-virtual"><scope>SceneApp</scope><name>dist</name></member>
+      <member refid="class_scene_app_1af4b6406225360d9134a5a2a440d49895" prot="private" virt="non-virtual"><scope>SceneApp</scope><name>DrawHUD</name></member>
+      <member refid="class_scene_app_1aded735b3e6c3e7c0913133721f6a1f23" prot="private" virt="non-virtual"><scope>SceneApp</scope><name>FindSampleFromName</name></member>
+      <member refid="class_scene_app_1a6a85f826272f2c291f789964cbbd331d" prot="private" virt="non-virtual"><scope>SceneApp</scope><name>font_</name></member>
+      <member refid="class_scene_app_1ab6f4119e39160606eeaeb151fcfb17bd" prot="private" virt="non-virtual"><scope>SceneApp</scope><name>fps_</name></member>
+      <member refid="class_scene_app_1aa3806ccdca4db9902e9af9750d386f6f" prot="private" virt="non-virtual"><scope>SceneApp</scope><name>gameEndMenu</name></member>
+      <member refid="class_scene_app_1a5d3a7556487c33e4746c468fa00689dd" prot="private" virt="non-virtual"><scope>SceneApp</scope><name>gameState</name></member>
+      <member refid="class_scene_app_1a1b8d7ed84a7691d140c0b10d6cc01f7b" prot="public" virt="non-virtual"><scope>SceneApp</scope><name>GetAudioManager</name></member>
+      <member refid="class_scene_app_1ad1ff8bd221115d5e081490da02e2f398" prot="public" virt="non-virtual"><scope>SceneApp</scope><name>GetBox2DWorld</name></member>
+      <member refid="class_scene_app_1aaec63e72c5b04a1f7a63f3ff81b8bdb7" prot="public" virt="non-virtual"><scope>SceneApp</scope><name>GetCameraEye</name></member>
+      <member refid="class_scene_app_1ab94350ed26fa0140eaac7060d97db655" prot="public" virt="non-virtual"><scope>SceneApp</scope><name>GetCameraLookAt</name></member>
+      <member refid="class_scene_app_1ab0a3e09a2920c053f50d25ea03132ae7" prot="public" virt="non-virtual"><scope>SceneApp</scope><name>GetCurrentGameTime</name></member>
+      <member refid="class_scene_app_1a13fa1b28170df85ade3d18e329fbedc7" prot="public" virt="non-virtual"><scope>SceneApp</scope><name>GetFont</name></member>
+      <member refid="class_scene_app_1a3218d41e2d667db80e8fed34b02b6221" prot="public" virt="non-virtual"><scope>SceneApp</scope><name>GetGameState</name></member>
+      <member refid="class_scene_app_1af624c2780cc0b7d913f63f7c4df74030" prot="public" virt="non-virtual"><scope>SceneApp</scope><name>GetLastDeltaTime</name></member>
+      <member refid="class_scene_app_1a2cb299beb00f7fea8f1de7c0cc6ab19b" prot="public" virt="non-virtual"><scope>SceneApp</scope><name>GetLastTouchPosition</name></member>
+      <member refid="class_scene_app_1aadc3edde6cace552a5a220cedd4ddbb3" prot="private" virt="non-virtual"><scope>SceneApp</scope><name>GetMeshFromSceneAssets</name></member>
+      <member refid="class_scene_app_1a36cc2439051445972f7b29114f3b011b" prot="public" virt="non-virtual"><scope>SceneApp</scope><name>GetPlayerCharacter</name></member>
+      <member refid="class_scene_app_1ab4f8fc5ac0dc41a16f83089ff782b6f4" prot="public" virt="non-virtual"><scope>SceneApp</scope><name>GetPlayerMoney</name></member>
+      <member refid="class_scene_app_1ad0422232eb1f735a48a20137eb6e953e" prot="public" virt="non-virtual"><scope>SceneApp</scope><name>GetPrimitiveBuilder</name></member>
+      <member refid="class_scene_app_1ac0999a6034cf97a795506eb75dd3cc7f" prot="public" virt="non-virtual"><scope>SceneApp</scope><name>GetRenderer3D</name></member>
+      <member refid="class_scene_app_1acfe997c4a66416d0cf25324d47403abb" prot="public" virt="non-virtual"><scope>SceneApp</scope><name>GetSpriteRenderer</name></member>
+      <member refid="class_scene_app_1a0fc304ef89214b58b23adf26ec63f6ac" prot="public" virt="non-virtual"><scope>SceneApp</scope><name>GetViewportHeight</name></member>
+      <member refid="class_scene_app_1a30039f31aff4d61fdce25d79425892fc" prot="public" virt="non-virtual"><scope>SceneApp</scope><name>GetViewportWidth</name></member>
+      <member refid="class_scene_app_1aa8e973ec8db58fc70659249a4c3af4c3" prot="private" virt="non-virtual"><scope>SceneApp</scope><name>gravity</name></member>
+      <member refid="class_scene_app_1af7cdb80aff26fce9d64cd7dc3d735647" prot="private" virt="non-virtual"><scope>SceneApp</scope><name>HandleCollision</name></member>
+      <member refid="class_scene_app_1aec4d56f9129795aaef4ad8f2a454e302" prot="public" virt="non-virtual"><scope>SceneApp</scope><name>IncreasePlayerMoney</name></member>
+      <member refid="class_scene_app_1afbc3cd83343839fef53b5fcc2da630e6" prot="public" virt="non-virtual"><scope>SceneApp</scope><name>Init</name></member>
+      <member refid="class_scene_app_1a171208bf4f19b208d59a1a0b7557a36f" prot="private" virt="non-virtual"><scope>SceneApp</scope><name>InitFont</name></member>
+      <member refid="class_scene_app_1a6006d24d1c61e057aea252d086f8ffff" prot="private" virt="non-virtual"><scope>SceneApp</scope><name>InitGameEndMenu</name></member>
+      <member refid="class_scene_app_1aa0dbda2623d4d32cda81fbfb5a97760a" prot="private" virt="non-virtual"><scope>SceneApp</scope><name>InitGameLoop</name></member>
+      <member refid="class_scene_app_1a62ee5dc60899811104ea01db498f6d65" prot="private" virt="non-virtual"><scope>SceneApp</scope><name>InitMainMenu</name></member>
+      <member refid="class_scene_app_1a8dfffee0d2ff620be8bf48f9d6b9196e" prot="private" virt="non-virtual"><scope>SceneApp</scope><name>InitPauseMenu</name></member>
+      <member refid="class_scene_app_1a7e7bed59b9f67f8b4dcb0994cd850ffe" prot="private" virt="non-virtual"><scope>SceneApp</scope><name>InitShop</name></member>
+      <member refid="class_scene_app_1aa3b7e393217fd2c6eea932311f815026" prot="private" virt="non-virtual"><scope>SceneApp</scope><name>lastDeltaTime</name></member>
+      <member refid="class_scene_app_1abbc88abb8755fc074dfff27b7e839647" prot="private" virt="non-virtual"><scope>SceneApp</scope><name>LoadAssets</name></member>
+      <member refid="class_scene_app_1a6d19a2e9b9d5f67f1c71b8cd4003236f" prot="private" virt="non-virtual"><scope>SceneApp</scope><name>loadFuture</name></member>
+      <member refid="class_scene_app_1ad98c8e885bbd672e85221362021656c1" prot="private" virt="non-virtual"><scope>SceneApp</scope><name>loadingSprite</name></member>
+      <member refid="class_scene_app_1a07916d454876fe34d081f24d4957426e" prot="private" virt="non-virtual"><scope>SceneApp</scope><name>LoadSceneAssets</name></member>
+      <member refid="class_scene_app_1aadb8a2acfc55d7256d3b01615237b53f" prot="private" virt="non-virtual"><scope>SceneApp</scope><name>mainMenu</name></member>
+      <member refid="class_scene_app_1ab13c532bc49107361f36bd3fc9fc5f9f" prot="private" virt="non-virtual"><scope>SceneApp</scope><name>masterVolume</name></member>
+      <member refid="class_scene_app_1a42746443e19f6dae5e6b2d9f7eaf473e" prot="private" virt="non-virtual"><scope>SceneApp</scope><name>meshActors</name></member>
+      <member refid="class_scene_app_1a8cb42f2ef9761c1304cfbbde2c950f82" prot="private" virt="non-virtual"><scope>SceneApp</scope><name>meshes</name></member>
+      <member refid="class_scene_app_1ad67f0db19483631c01eda75fdb7ab9b7" prot="private" virt="non-virtual"><scope>SceneApp</scope><name>meshesToLoad</name></member>
+      <member refid="class_scene_app_1a58f623a898ecfc988bc782ff93d3fde1" prot="private" virt="non-virtual"><scope>SceneApp</scope><name>particleManager</name></member>
+      <member refid="class_scene_app_1a7ff89b2a13e32e34104f8eb7f13ac6b6" prot="private" virt="non-virtual"><scope>SceneApp</scope><name>pauseMenu</name></member>
+      <member refid="class_scene_app_1a8dc5edb5b6ce7a135b0a86c7df035b64" prot="private" virt="non-virtual"><scope>SceneApp</scope><name>playerCharacter</name></member>
+      <member refid="class_scene_app_1a2fa982b35c38c584a72934124dca0aa8" prot="private" virt="non-virtual"><scope>SceneApp</scope><name>playerMoney</name></member>
+      <member refid="class_scene_app_1a942b3809824f430117b26e9a7ad5acf6" prot="public" virt="non-virtual"><scope>SceneApp</scope><name>PlaySample</name></member>
+      <member refid="class_scene_app_1a553d17b3fd6926e7f0bd0be162adcb71" prot="private" virt="non-virtual"><scope>SceneApp</scope><name>pointerLocation</name></member>
+      <member refid="class_scene_app_1a7b2d4a39dd167962c9b9351593469fe1" prot="private" virt="non-virtual"><scope>SceneApp</scope><name>pointerSprite</name></member>
+      <member refid="class_scene_app_1a82ad63c0fecc3ae0368a7ae6c3038caa" prot="private" virt="non-virtual"><scope>SceneApp</scope><name>primitive_builder_</name></member>
+      <member refid="class_scene_app_1acdca18cc64834403830e379463d7503e" prot="private" virt="non-virtual"><scope>SceneApp</scope><name>rd</name></member>
+      <member refid="class_scene_app_1afd9eebbabf3fe176d9fe30b309c2130c" prot="public" virt="non-virtual"><scope>SceneApp</scope><name>Render</name></member>
+      <member refid="class_scene_app_1a1fe406605619e67f3c78081dc648722a" prot="private" virt="non-virtual"><scope>SceneApp</scope><name>renderer_3d_</name></member>
+      <member refid="class_scene_app_1a685aa415b9b7fbf34869c212c192a670" prot="private" virt="non-virtual"><scope>SceneApp</scope><name>RenderGameEnd</name></member>
+      <member refid="class_scene_app_1afffb3ff22780f1eaaa307dd53e9e24d1" prot="private" virt="non-virtual"><scope>SceneApp</scope><name>RenderGameLoop</name></member>
+      <member refid="class_scene_app_1aea34e1a25a1a851e8d3af0ed9dfd85cf" prot="private" virt="non-virtual"><scope>SceneApp</scope><name>RenderLoading</name></member>
+      <member refid="class_scene_app_1a113d3e9df2b5750970b792112fcb1791" prot="private" virt="non-virtual"><scope>SceneApp</scope><name>RenderMainMenu</name></member>
+      <member refid="class_scene_app_1a1388567b320f11a15a94d9b187f052ed" prot="private" virt="non-virtual"><scope>SceneApp</scope><name>RenderPauseMenu</name></member>
+      <member refid="class_scene_app_1aba7c346f9a09e3a461a3e7c2e93874dd" prot="private" virt="non-virtual"><scope>SceneApp</scope><name>RenderShop</name></member>
+      <member refid="class_scene_app_1a6b6984ec718cb9ebad4be261df534cf1" prot="public" virt="non-virtual"><scope>SceneApp</scope><name>RequestMeshByName</name></member>
+      <member refid="class_scene_app_1ac00c6ac20d92d7e8fd77d341a116e81d" prot="public" virt="non-virtual"><scope>SceneApp</scope><name>RequestTextureByName</name></member>
+      <member refid="class_scene_app_1ac11e8e4e089eb1d1631febe27f4d9808" prot="private" virt="non-virtual"><scope>SceneApp</scope><name>scene_assets_</name></member>
+      <member refid="class_scene_app_1a5a29382297d3aa47f437d98a3dd4acdc" prot="public" virt="non-virtual"><scope>SceneApp</scope><name>SceneApp</name></member>
+      <member refid="class_scene_app_1a3bc64bbc203e9cb597f2b47dc69f20e6" prot="public" virt="non-virtual"><scope>SceneApp</scope><name>SetGameState</name></member>
+      <member refid="class_scene_app_1ab40943893a61a141c9fb25eec163a1f1" prot="public" virt="non-virtual"><scope>SceneApp</scope><name>SetPointerLocation</name></member>
+      <member refid="class_scene_app_1ac244648f187136710aead2068064b4db" prot="private" virt="non-virtual"><scope>SceneApp</scope><name>SetupLights</name></member>
+      <member refid="class_scene_app_1aa383f84e5bf2eb34c8970de590fe83f2" prot="private" virt="non-virtual"><scope>SceneApp</scope><name>shopMenu</name></member>
+      <member refid="class_scene_app_1a63476137847dbf477d86a82b621eb3a8" prot="private" virt="non-virtual"><scope>SceneApp</scope><name>soundController</name></member>
+      <member refid="class_scene_app_1a37d6f90880ff2578e8a9de68034535d8" prot="private" virt="non-virtual"><scope>SceneApp</scope><name>sounds</name></member>
+      <member refid="class_scene_app_1a4b02697005df75084605a8dda048d591" prot="private" virt="non-virtual"><scope>SceneApp</scope><name>soundsToLoad</name></member>
+      <member refid="class_scene_app_1a800b10254ae600ce80c0e69d765e8061" prot="public" virt="non-virtual"><scope>SceneApp</scope><name>SpawnMeshActor</name></member>
+      <member refid="class_scene_app_1ab70d4d12950fa87533727b3fa6e42ee5" prot="public" virt="non-virtual"><scope>SceneApp</scope><name>SpawnSpriteActor</name></member>
+      <member refid="class_scene_app_1aecdaec5b1958858c67538bc06ef763ec" prot="private" virt="non-virtual"><scope>SceneApp</scope><name>sprite_renderer_</name></member>
+      <member refid="class_scene_app_1aa46d7e718e2e793a19a970cb2ec4ee31" prot="private" virt="non-virtual"><scope>SceneApp</scope><name>spriteActors</name></member>
+      <member refid="class_scene_app_1a31e4044202cb1878a674f7a0fcbd1e1b" prot="private" virt="non-virtual"><scope>SceneApp</scope><name>textures</name></member>
+      <member refid="class_scene_app_1a992da62d19ab23c48fd9d292f6c3a9f3" prot="private" virt="non-virtual"><scope>SceneApp</scope><name>texturesToLoad</name></member>
+      <member refid="class_scene_app_1a48adec081291fea513f516bec9dcb898" prot="public" virt="non-virtual"><scope>SceneApp</scope><name>Update</name></member>
+      <member refid="class_scene_app_1ab3524b8b9aa423a8be18d83dc12a5915" prot="private" virt="non-virtual"><scope>SceneApp</scope><name>UpdateGameEnd</name></member>
+      <member refid="class_scene_app_1abfcf2a864bc670141024453df142b191" prot="private" virt="non-virtual"><scope>SceneApp</scope><name>UpdateGameLoop</name></member>
+      <member refid="class_scene_app_1afeb40fca84cdad8fc128ae3712360c11" prot="private" virt="non-virtual"><scope>SceneApp</scope><name>UpdateLoading</name></member>
+      <member refid="class_scene_app_1a3ba7a2993cea9c13b4a7c8cb2668a312" prot="private" virt="non-virtual"><scope>SceneApp</scope><name>UpdateMainMenu</name></member>
+      <member refid="class_scene_app_1a08773b5085216866fc0350ef77560ebd" prot="private" virt="non-virtual"><scope>SceneApp</scope><name>UpdatePauseMenu</name></member>
+      <member refid="class_scene_app_1a79eccdb7cdeac4dc0cfa4f979b8a257d" prot="private" virt="non-virtual"><scope>SceneApp</scope><name>UpdateShop</name></member>
+      <member refid="class_scene_app_1a6e3f7247f64f6b0f89ebf096ccc186a3" prot="private" virt="non-virtual"><scope>SceneApp</scope><name>waveManager</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

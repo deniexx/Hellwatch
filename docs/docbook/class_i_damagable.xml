@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_i_damagable" xml:lang="en-US">
+<title>IDamagable Class Reference</title>
+<indexterm><primary>IDamagable</primary></indexterm>
+<para>
+
+<para>Interface to be added, when we want the specific class to be able to take damage  </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;Damagable.h&gt;</computeroutput>
+</para>
+Inheritance diagram for IDamagable:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_i_damagable__inherit__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<section>
+<title>Detailed Description</title>
+
+<para>Interface to be added, when we want the specific class to be able to take damage  </para>
+<para>
+The documentation for this class was generated from the following file:</para>
+D:/Uni/CMP208/Hellwatch/build/vs2017/Interfaces/<link linkend="__damagable_8h">Damagable.h</link></section>
+</section>

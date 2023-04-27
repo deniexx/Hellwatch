@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__pause_menu_8h_source" xml:lang="en-US">
+<title>PauseMenu.h</title>
+<indexterm><primary>D:/Uni/CMP208/Hellwatch/build/vs2017/UserInterface/PauseMenu.h</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered">1 <emphasis role="preprocessor">#pragma&#32;once</emphasis>
+2 
+3 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="__menu_8h">Menu.h</link>&quot;</emphasis>
+4 
+8 <emphasis role="keyword">class&#32;</emphasis><link linkend="_class_pause_menu">PauseMenu</link>&#32;:&#32;<emphasis role="keyword">public</emphasis>&#32;<link linkend="_class_menu">Menu</link>
+9 {
+10 <emphasis role="keyword">public</emphasis>:
+11 
+12 &#32;&#32;&#32;&#32;<emphasis role="keyword">virtual</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_pause_menu_1a029c44778ea655c2762cbddc8941a6f8">Init</link>()&#32;<emphasis role="keyword">override</emphasis>;
+13 
+14 <emphasis role="keyword">private</emphasis>:
+15 
+19 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;ResumeGame();
+20 
+24 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;ExitToMainMenu();
+25 };
+26 
+</programlisting></section>

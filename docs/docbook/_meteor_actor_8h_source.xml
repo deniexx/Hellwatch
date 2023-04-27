@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__meteor_actor_8h_source" xml:lang="en-US">
+<title>MeteorActor.h</title>
+<indexterm><primary>D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/MeteorActor.h</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered">1 <emphasis role="preprocessor">#pragma&#32;once</emphasis>
+2 
+3 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="__mesh_actor_8h">Actors/MeshActor.h</link>&quot;</emphasis>
+4 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="__utils_8h">GameFramework/Utils.h</link>&quot;</emphasis>
+5 
+6 <emphasis role="keyword">class&#32;</emphasis><link linkend="_class_meteor_actor">MeteorActor</link>&#32;:&#32;<emphasis role="keyword">public</emphasis>&#32;<link linkend="_class_mesh_actor">MeshActor</link>
+7 {
+8 &#32;&#32;&#32;&#32;<link linkend="__utils_8h_1afc0ee7bd35c161a2d80b8e8f04fd9213">GENERATED_BODY</link>(<link linkend="_class_mesh_actor">MeshActor</link>,&#32;<link linkend="_class_meteor_actor">MeteorActor</link>)
+9 
+10 <emphasis role="keyword">public</emphasis>:
+11 
+15 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_meteor_actor_1af958d034e0ee905ef1ad42c3cb7e2e7d">SetDamageAmount</link>(<emphasis role="keywordtype">float</emphasis>&#32;newAmount)&#32;{&#32;<link linkend="_class_meteor_actor_1a89d596eab0b2175b66e85d02a5f1c055">damageAmount</link>&#32;=&#32;newAmount;&#32;}
+16 
+20 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_meteor_actor_1a8426bedb425c8dcdc1311ee2b70f2c38">SetApplyDamageOn</link>(<link linkend="_namespace_apply_damage_on_1aab4652342cac35cdff458c5aa2bad289">ApplyDamageOn::Type</link>&#32;newState)&#32;{&#32;<link linkend="_class_meteor_actor_1ab4bb033ead5bfecb16eae10dcedd5bcb">applyDamageOn</link>&#32;=&#32;newState;&#32;}
+21 
+26 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_meteor_actor_1a804452922893086186d9c7cba86ba772">SetSpinning</link>(<emphasis role="keywordtype">bool</emphasis>&#32;bNewState)&#32;{&#32;<link linkend="_class_meteor_actor_1ac7ad468c3a6c2077dbbfdfb6a99c5b31">bSpinning</link>&#32;=&#32;bNewState;&#32;}
+27 
+28 &#32;&#32;&#32;&#32;<emphasis role="keyword">virtual</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_meteor_actor_1ab6359799dcd7d0c88bbe0f9aae848819">Update</link>(<emphasis role="keywordtype">float</emphasis>&#32;deltaTime)&#32;<emphasis role="keyword">override</emphasis>;
+29 
+30 &#32;&#32;&#32;&#32;gef::Vector4&#32;<link linkend="_class_meteor_actor_1adaff72a4a16bc8aebd4a20c996aecc8e">startPosition</link>;
+31 &#32;&#32;&#32;&#32;gef::Vector4&#32;<link linkend="_class_meteor_actor_1a03a7f34ddeac63d24f0db59568398e80">targetPosition</link>;
+32 
+33 <emphasis role="keyword">protected</emphasis>:
+34 
+35 &#32;&#32;&#32;&#32;<link linkend="_namespace_apply_damage_on_1aab4652342cac35cdff458c5aa2bad289">ApplyDamageOn::Type</link>&#32;<link linkend="_class_meteor_actor_1ab4bb033ead5bfecb16eae10dcedd5bcb">applyDamageOn</link>&#32;=&#32;<link linkend="_namespace_apply_damage_on_1aab4652342cac35cdff458c5aa2bad289a17c0a2d2e83ad970a7bb7395c9819d1f">ApplyDamageOn::EnemiesOnly</link>;
+36 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_class_meteor_actor_1ac7ad468c3a6c2077dbbfdfb6a99c5b31">bSpinning</link>&#32;=&#32;<emphasis role="keyword">false</emphasis>;
+37 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">float</emphasis>&#32;<link linkend="_class_meteor_actor_1a89d596eab0b2175b66e85d02a5f1c055">damageAmount</link>&#32;=&#32;0.f;
+38 
+39 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">float</emphasis>&#32;<link linkend="_class_meteor_actor_1a946ed0ef11c565381b8686d74283c262">lerpAlpha</link>&#32;=&#32;0.f;
+40 };
+41 
+</programlisting></section>

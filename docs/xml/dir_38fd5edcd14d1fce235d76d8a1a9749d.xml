@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="dir_38fd5edcd14d1fce235d76d8a1a9749d" kind="dir">
+    <compoundname>D:/Uni/CMP208/Hellwatch/build/vs2017/ActorComponents</compoundname>
+    <innerfile refid="_abilities_component_8cpp">AbilitiesComponent.cpp</innerfile>
+    <innerfile refid="_abilities_component_8h">AbilitiesComponent.h</innerfile>
+    <innerfile refid="_actor_component_8cpp">ActorComponent.cpp</innerfile>
+    <innerfile refid="_actor_component_8h">ActorComponent.h</innerfile>
+    <innerfile refid="_character_movement_component_8cpp">CharacterMovementComponent.cpp</innerfile>
+    <innerfile refid="_character_movement_component_8h">CharacterMovementComponent.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/ActorComponents/"/>
+  </compounddef>
+</doxygen>

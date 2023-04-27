@@ -1,0 +1,186 @@
+.TH "PlayerCharacter" 3 "Thu Apr 27 2023" "Hellwatch" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+PlayerCharacter \- The class that the player uses during the GameLoop \fBGameState\fP   
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <PlayerCharacter\&.h>\fP
+.PP
+Inherits \fBMeshActor\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBPlayerCharacter\fP ()"
+.br
+.ti -1c
+.RI "virtual void \fBPostInit\fP () override"
+.br
+.RI "Override this to Initialize variables or do any necessary work when the object is created  "
+.ti -1c
+.RI "virtual void \fBUpdate\fP (float deltaTime) override"
+.br
+.RI "Update function, called every frame  "
+.ti -1c
+.RI "virtual void \fBTakeDamage\fP (float damageAmount) override"
+.br
+.ti -1c
+.RI "void \fBApplyInvincibilityForDuration\fP (float invincibilityDuration)"
+.br
+.RI "Applies invincibility for specified duration  "
+.ti -1c
+.RI "void \fBDrawPlayerHUD\fP ()"
+.br
+.ti -1c
+.RI "\fBPlayerController\fP * \fBGetController\fP () const"
+.br
+.ti -1c
+.RI "\fBCharacterMovementComponent\fP * \fBGetCharacterMovement\fP () const"
+.br
+.ti -1c
+.RI "\fBAttributeComponent\fP * \fBGetCharacterAttributes\fP () const"
+.br
+.ti -1c
+.RI "\fBAbilitiesComponent\fP * \fBGetCharacterAbilities\fP () const"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBMoveLeft\fP ()"
+.br
+.ti -1c
+.RI "void \fBMoveRight\fP ()"
+.br
+.ti -1c
+.RI "void \fBMoveForward\fP ()"
+.br
+.ti -1c
+.RI "void \fBMoveBack\fP ()"
+.br
+.ti -1c
+.RI "void \fBActivateAbility1\fP ()"
+.br
+.ti -1c
+.RI "void \fBActivateAbility2\fP ()"
+.br
+.ti -1c
+.RI "void \fBActivateAbility3\fP ()"
+.br
+.ti -1c
+.RI "void \fBActivateAbility4\fP ()"
+.br
+.ti -1c
+.RI "void \fBOnControllerLeftStick\fP (gef::Vector2 delta)"
+.br
+.ti -1c
+.RI "void \fBOnControllerActivateAbility1\fP (gef::Vector2 delta)"
+.br
+.ti -1c
+.RI "void \fBOnControllerActivateAbility2\fP (gef::Vector2 delta)"
+.br
+.ti -1c
+.RI "void \fBOnControllerActivateAbility3\fP (gef::Vector2 delta)"
+.br
+.ti -1c
+.RI "void \fBOnControllerActivateAbility4\fP (gef::Vector2 delta)"
+.br
+.ti -1c
+.RI "void \fBOnControllerInvertUpDownMovement\fP (gef::Vector2 delta)"
+.br
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBPlayerController\fP * \fBcontroller\fP"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+The class that the player uses during the GameLoop \fBGameState\fP  
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "PlayerCharacter::PlayerCharacter ()"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "void PlayerCharacter::ActivateAbility1 ()\fC [protected]\fP"
+
+.SS "void PlayerCharacter::ActivateAbility2 ()\fC [protected]\fP"
+
+.SS "void PlayerCharacter::ActivateAbility3 ()\fC [protected]\fP"
+
+.SS "void PlayerCharacter::ActivateAbility4 ()\fC [protected]\fP"
+
+.SS "void PlayerCharacter::ApplyInvincibilityForDuration (float invincibilityDuration)"
+
+.PP
+Applies invincibility for specified duration  
+.SS "void PlayerCharacter::DrawPlayerHUD ()"
+
+.SS "\fBAbilitiesComponent\fP * PlayerCharacter::GetCharacterAbilities () const\fC [inline]\fP"
+
+.SS "\fBAttributeComponent\fP * PlayerCharacter::GetCharacterAttributes () const\fC [inline]\fP"
+
+.SS "\fBCharacterMovementComponent\fP * PlayerCharacter::GetCharacterMovement () const\fC [inline]\fP"
+
+.SS "\fBPlayerController\fP * PlayerCharacter::GetController () const\fC [inline]\fP"
+
+.SS "void PlayerCharacter::MoveBack ()\fC [protected]\fP"
+
+.SS "void PlayerCharacter::MoveForward ()\fC [protected]\fP"
+
+.SS "void PlayerCharacter::MoveLeft ()\fC [protected]\fP"
+
+.SS "void PlayerCharacter::MoveRight ()\fC [protected]\fP"
+
+.SS "void PlayerCharacter::OnControllerActivateAbility1 (gef::Vector2 delta)\fC [protected]\fP"
+
+.SS "void PlayerCharacter::OnControllerActivateAbility2 (gef::Vector2 delta)\fC [protected]\fP"
+
+.SS "void PlayerCharacter::OnControllerActivateAbility3 (gef::Vector2 delta)\fC [protected]\fP"
+
+.SS "void PlayerCharacter::OnControllerActivateAbility4 (gef::Vector2 delta)\fC [protected]\fP"
+
+.SS "void PlayerCharacter::OnControllerInvertUpDownMovement (gef::Vector2 delta)\fC [protected]\fP"
+
+.SS "void PlayerCharacter::OnControllerLeftStick (gef::Vector2 delta)\fC [protected]\fP"
+
+.SS "void PlayerCharacter::PostInit ()\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+Override this to Initialize variables or do any necessary work when the object is created  
+.PP
+Reimplemented from \fBWorldObject\fP\&.
+.SS "void PlayerCharacter::TakeDamage (float damageAmount)\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+Reimplemented from \fBMeshActor\fP\&.
+.SS "void PlayerCharacter::Update (float deltaTime)\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+Update function, called every frame  
+.PP
+\fBParameters\fP
+.RS 4
+\fIdeltaTime\fP Float variable for the frame time
+.RE
+.PP
+
+.PP
+Reimplemented from \fBMeshActor\fP\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBPlayerController\fP* PlayerCharacter::controller\fC [protected]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Hellwatch from the source code\&.

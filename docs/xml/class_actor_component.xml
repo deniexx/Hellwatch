@@ -1,0 +1,152 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="class_actor_component" kind="class" language="C++" prot="public">
+    <compoundname>ActorComponent</compoundname>
+    <derivedcompoundref refid="class_abilities_component" prot="public" virt="non-virtual">AbilitiesComponent</derivedcompoundref>
+    <derivedcompoundref refid="class_attribute_component" prot="public" virt="non-virtual">AttributeComponent</derivedcompoundref>
+    <derivedcompoundref refid="class_character_movement_component" prot="public" virt="non-virtual">CharacterMovementComponent</derivedcompoundref>
+    <includes refid="_actor_component_8h" local="no">ActorComponent.h</includes>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="class_actor_component_1a2766e186399b24f5d7e2d143ffa26e05" prot="protected" static="no" mutable="no">
+        <type><ref refid="class_world_object" kindref="compound">WorldObject</ref> *</type>
+        <definition>WorldObject* ActorComponent::ownerActor</definition>
+        <argsstring></argsstring>
+        <name>ownerActor</name>
+        <qualifiedname>ActorComponent::ownerActor</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/ActorComponents/ActorComponent.h" line="19" column="13" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/ActorComponents/ActorComponent.h" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_actor_component_1ab4ea0eaffa2c616a209e2887f80902f2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ActorComponent::Init</definition>
+        <argsstring>(WorldObject *inOwnerActor)</argsstring>
+        <name>Init</name>
+        <qualifiedname>ActorComponent::Init</qualifiedname>
+        <param>
+          <type><ref refid="class_world_object" kindref="compound">WorldObject</ref> *</type>
+          <declname>inOwnerActor</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/ActorComponents/ActorComponent.h" line="12" column="6" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/ActorComponents/ActorComponent.cpp" bodystart="5" bodyend="9"/>
+      </memberdef>
+      <memberdef kind="function" id="class_actor_component_1af730b3c7d2b4154e1fb0962db7750f6b" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void ActorComponent::UpdateComponent</definition>
+        <argsstring>(float deltaTime)</argsstring>
+        <name>UpdateComponent</name>
+        <qualifiedname>ActorComponent::UpdateComponent</qualifiedname>
+        <reimplementedby refid="class_attribute_component_1ae67a6fc2951e19257274edb42eec023f">UpdateComponent</reimplementedby>
+        <reimplementedby refid="class_abilities_component_1a96732cdae01d866200dc66a89200695f">UpdateComponent</reimplementedby>
+        <reimplementedby refid="class_character_movement_component_1a44e667731d0323b2dfcdf80ee6e7f3ba">UpdateComponent</reimplementedby>
+        <param>
+          <type>float</type>
+          <declname>deltaTime</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/ActorComponents/ActorComponent.h" line="13" column="14" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/ActorComponents/ActorComponent.cpp" bodystart="15" bodyend="17"/>
+      </memberdef>
+      <memberdef kind="function" id="class_actor_component_1a3705d464da5f840eca1d14bcce07372d" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>__forceinline <ref refid="class_world_object" kindref="compound">WorldObject</ref> *</type>
+        <definition>__forceinline WorldObject * ActorComponent::GetOwner</definition>
+        <argsstring>() const</argsstring>
+        <name>GetOwner</name>
+        <qualifiedname>ActorComponent::GetOwner</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/ActorComponents/ActorComponent.h" line="23" column="27" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/ActorComponents/ActorComponent.h" bodystart="23" bodyend="23"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_actor_component_1a467d082f3fedd6cf2acacb117450f90e" prot="protected" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void ActorComponent::PostInit</definition>
+        <argsstring>()</argsstring>
+        <name>PostInit</name>
+        <qualifiedname>ActorComponent::PostInit</qualifiedname>
+        <reimplementedby refid="class_abilities_component_1aa1a55ce45b753097f0e2d7d4db4a419b">PostInit</reimplementedby>
+        <reimplementedby refid="class_character_movement_component_1a7c20d542f943ec133dd3f1df7fee988e">PostInit</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/ActorComponents/ActorComponent.h" line="17" column="14" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/ActorComponents/ActorComponent.cpp" bodystart="11" bodyend="13"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Base class to be derived for actor components  </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>AbilitiesComponent</label>
+        <link refid="class_abilities_component"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>ActorComponent</label>
+        <link refid="class_actor_component"/>
+      </node>
+      <node id="3">
+        <label>AttributeComponent</label>
+        <link refid="class_attribute_component"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>CharacterMovementComponent</label>
+        <link refid="class_character_movement_component"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>ActorComponent</label>
+        <link refid="class_actor_component"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>ownerActor</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>WorldObject</label>
+        <link refid="class_world_object"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>owningObject</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/ActorComponents/ActorComponent.h" line="8" column="1" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/ActorComponents/ActorComponent.h" bodystart="9" bodyend="24"/>
+    <listofallmembers>
+      <member refid="class_actor_component_1a3705d464da5f840eca1d14bcce07372d" prot="public" virt="non-virtual"><scope>ActorComponent</scope><name>GetOwner</name></member>
+      <member refid="class_actor_component_1ab4ea0eaffa2c616a209e2887f80902f2" prot="public" virt="non-virtual"><scope>ActorComponent</scope><name>Init</name></member>
+      <member refid="class_actor_component_1a2766e186399b24f5d7e2d143ffa26e05" prot="protected" virt="non-virtual"><scope>ActorComponent</scope><name>ownerActor</name></member>
+      <member refid="class_actor_component_1a467d082f3fedd6cf2acacb117450f90e" prot="protected" virt="virtual"><scope>ActorComponent</scope><name>PostInit</name></member>
+      <member refid="class_actor_component_1af730b3c7d2b4154e1fb0962db7750f6b" prot="public" virt="virtual"><scope>ActorComponent</scope><name>UpdateComponent</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

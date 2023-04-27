@@ -1,0 +1,64 @@
+.TH "ParticleActor" 3 "Thu Apr 27 2023" "Hellwatch" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ParticleActor
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <ParticleActor\&.h>\fP
+.PP
+Inherits \fBMeshActor\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBSetParticleData\fP (const \fBFParticleData\fP &newData)"
+.br
+.RI "Sets new particle data  "
+.ti -1c
+.RI "void \fBPlay\fP ()"
+.br
+.RI "Plays the particles  "
+.ti -1c
+.RI "void \fBStop\fP ()"
+.br
+.RI "Stops the particles  "
+.ti -1c
+.RI "virtual void \fBUpdate\fP (float deltaTime) override"
+.br
+.RI "Update function, called every frame  "
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Member Function Documentation"
+.PP 
+.SS "void ParticleActor::Play ()"
+
+.PP
+Plays the particles  
+.SS "void ParticleActor::SetParticleData (const \fBFParticleData\fP & newData)\fC [inline]\fP"
+
+.PP
+Sets new particle data  
+.SS "void ParticleActor::Stop ()"
+
+.PP
+Stops the particles  
+.SS "void ParticleActor::Update (float deltaTime)\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+Update function, called every frame  
+.PP
+\fBParameters\fP
+.RS 4
+\fIdeltaTime\fP Float variable for the frame time
+.RE
+.PP
+
+.PP
+Reimplemented from \fBMeshActor\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Hellwatch from the source code\&.

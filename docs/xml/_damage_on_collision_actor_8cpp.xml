@@ -1,0 +1,238 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="_damage_on_collision_actor_8cpp" kind="file" language="C++">
+    <compoundname>DamageOnCollisionActor.cpp</compoundname>
+    <includes refid="_damage_on_collision_actor_8h" local="yes">DamageOnCollisionActor.h</includes>
+    <incdepgraph>
+      <node id="3">
+        <label>Actors/MeshActor.h</label>
+        <link refid="_mesh_actor_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/DamageOnCollisionActor.cpp</label>
+        <link refid="_damage_on_collision_actor_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>DamageOnCollisionActor.h</label>
+        <link refid="_damage_on_collision_actor_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>Utils.h</label>
+        <link refid="_utils_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>GameFramework/WorldObject.h</label>
+        <link refid="_world_object_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="31">
+        <label>Interfaces/Damagable.h</label>
+        <link refid="_damagable_8h"/>
+      </node>
+      <node id="21">
+        <label>obj_mesh_loader.h</label>
+        <link refid="obj__mesh__loader_8h"/>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>primitive_builder.h</label>
+        <link refid="primitive__builder_8h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>scene_app.h</label>
+        <link refid="scene__app_8h"/>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+      </node>
+      <node id="19">
+        <label>box2d/box2d.h</label>
+      </node>
+      <node id="17">
+        <label>cstddef</label>
+      </node>
+      <node id="27">
+        <label>future</label>
+      </node>
+      <node id="22">
+        <label>gef.h</label>
+      </node>
+      <node id="26">
+        <label>graphics/font.h</label>
+      </node>
+      <node id="16">
+        <label>graphics/material.h</label>
+      </node>
+      <node id="30">
+        <label>graphics/mesh.h</label>
+      </node>
+      <node id="11">
+        <label>graphics/renderer_3d.h</label>
+      </node>
+      <node id="18">
+        <label>graphics/scene.h</label>
+      </node>
+      <node id="23">
+        <label>map</label>
+      </node>
+      <node id="5">
+        <label>maths/Matrix44.h</label>
+      </node>
+      <node id="8">
+        <label>maths/Vector2.h</label>
+      </node>
+      <node id="29">
+        <label>maths/math_utils.h</label>
+      </node>
+      <node id="10">
+        <label>maths/matrix44.h</label>
+      </node>
+      <node id="6">
+        <label>maths/quaternion.h</label>
+      </node>
+      <node id="14">
+        <label>maths/vector2.h</label>
+      </node>
+      <node id="9">
+        <label>maths/vector4.h</label>
+      </node>
+      <node id="28">
+        <label>random</label>
+      </node>
+      <node id="24">
+        <label>string</label>
+      </node>
+      <node id="13">
+        <label>system/application.h</label>
+      </node>
+      <node id="20">
+        <label>system/platform.h</label>
+      </node>
+      <node id="25">
+        <label>vector</label>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_damage_on_collision_actor_8h" kindref="compound">DamageOnCollisionActor.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_damage_on_collision_actor_1ad097fd69169453c518a8a7b151311edc" kindref="member">DamageOnCollisionActor::OnCollision</ref>(b2Body*<sp/>otherBody)</highlight></codeline>
+<codeline lineno="4"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(otherBody)</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_mesh_actor" kindref="compound">MeshActor</ref>*<sp/>actor<sp/>=<sp/>(<ref refid="class_mesh_actor" kindref="compound">MeshActor</ref>*)otherBody-&gt;GetUserData().pointer;</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(actor)</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>bApplyDamage<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="class_damage_on_collision_actor_1a07b7703b8e3db5ad89fa3a7bb30750c2" kindref="member">applyDamageOn</ref><sp/>==<sp/><ref refid="namespace_apply_damage_on_1aab4652342cac35cdff458c5aa2bad289af658fe1d6a4dd178955748cb85f117ac" kindref="member">ApplyDamageOn::PlayerOnly</ref>)</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>bApplyDamage<sp/>=<sp/>actor-&gt;<ref refid="class_world_object_1a9f76e2def47f4d6be6bafb330ac0394b" kindref="member">ID</ref><sp/>==<sp/><ref refid="_utils_8h_1ae50e546c560a653d3409bd594d34dc0d" kindref="member">PLAYER_ID</ref>;</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="class_damage_on_collision_actor_1a07b7703b8e3db5ad89fa3a7bb30750c2" kindref="member">applyDamageOn</ref><sp/>==<sp/><ref refid="namespace_apply_damage_on_1aab4652342cac35cdff458c5aa2bad289a17c0a2d2e83ad970a7bb7395c9819d1f" kindref="member">ApplyDamageOn::EnemiesOnly</ref>)</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>bApplyDamage<sp/>=<sp/>actor-&gt;<ref refid="class_world_object_1a9f76e2def47f4d6be6bafb330ac0394b" kindref="member">ID</ref><sp/>==<sp/><ref refid="_utils_8h_1a85fe7dfc8d35e0e6ee68ceb22ab3b57b" kindref="member">ENEMY_ID</ref>;</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>bApplyDamage<sp/>=<sp/>(actor-&gt;<ref refid="class_world_object_1a9f76e2def47f4d6be6bafb330ac0394b" kindref="member">ID</ref><sp/>==<sp/><ref refid="_utils_8h_1a85fe7dfc8d35e0e6ee68ceb22ab3b57b" kindref="member">ENEMY_ID</ref>)<sp/>||<sp/>(actor-&gt;<ref refid="class_world_object_1a9f76e2def47f4d6be6bafb330ac0394b" kindref="member">ID</ref><sp/>==<sp/><ref refid="_utils_8h_1ae50e546c560a653d3409bd594d34dc0d" kindref="member">PLAYER_ID</ref>);</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(bApplyDamage)</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>actor-&gt;<ref refid="class_mesh_actor_1a31a231014625686e8d40e561a7028931" kindref="member">TakeDamage</ref>(<ref refid="class_damage_on_collision_actor_1a8684d8897c9e9725d32a771f08e0b4a3" kindref="member">damageAmount</ref>);</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!<ref refid="class_damage_on_collision_actor_1aee4412e69f1df05a5a77223176b0c6fb" kindref="member">bIsPiercing</ref>)</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_world_object_1a4402fa17dfd062fc97750d581d4f774b" kindref="member">MarkForDelete</ref>();</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(actor-&gt;<ref refid="class_world_object_1a9f76e2def47f4d6be6bafb330ac0394b" kindref="member">ID</ref><sp/>==<sp/><ref refid="_utils_8h_1af4955eee766517b72730e7c165711a6c" kindref="member">ENVIRONMENT_ID</ref>)</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_world_object_1a4402fa17dfd062fc97750d581d4f774b" kindref="member">MarkForDelete</ref>();</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="40"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_damage_on_collision_actor_1a468c69c421db3d272bf18c46cbb15c2a" kindref="member">DamageOnCollisionActor::Update</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>deltaTime)</highlight></codeline>
+<codeline lineno="43"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/>Super::Update(deltaTime);</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="class_damage_on_collision_actor_1a3ba78bead6c77dd82c141968a971bd4f" kindref="member">bSpinning</ref>)</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>gef::Vector4<sp/>actorRot<sp/>=<sp/><ref refid="class_world_object_1a271e4b4870fadf60e285576f94b31e79" kindref="member">GetRotation</ref>();</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>actorRot.set_y(actorRot.y()<sp/>+<sp/>deltaTime<sp/>*<sp/>100.f);</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_mesh_actor_1a295a747ea81d8b09e084c488ab183fbb" kindref="member">SetRotation</ref>(actorRot);</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="52"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/DamageOnCollisionActor.cpp"/>
+  </compounddef>
+</doxygen>

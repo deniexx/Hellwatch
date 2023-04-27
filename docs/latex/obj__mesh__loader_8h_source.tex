@@ -1,0 +1,38 @@
+\hypertarget{obj__mesh__loader_8h_source}{}\doxysection{D\+:/\+Uni/\+CMP208/\+Hellwatch/obj\+\_\+mesh\+\_\+loader.h}
+\mbox{\hyperlink{obj__mesh__loader_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{2 }
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#include <gef.h>}}
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <map>}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include <maths/vector4.h>}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include <maths/vector2.h>}}
+\DoxyCodeLine{9 }
+\DoxyCodeLine{10 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacegef}{gef}}}
+\DoxyCodeLine{11 \{}
+\DoxyCodeLine{12     \textcolor{keyword}{class }Platform;}
+\DoxyCodeLine{13     \textcolor{keyword}{class }Model;}
+\DoxyCodeLine{14     \textcolor{keyword}{class }Texture;}
+\DoxyCodeLine{15     \textcolor{keyword}{class }Mesh;}
+\DoxyCodeLine{16     \textcolor{keyword}{class }Material;}
+\DoxyCodeLine{17 \}}
+\DoxyCodeLine{18 }
+\DoxyCodeLine{19 \textcolor{keyword}{typedef} std::map<std::string, gef::Mesh*> \mbox{\hyperlink{obj__mesh__loader_8h_ab6d74e55cf8354fe68dd64bd265a814e}{MeshMap}};}
+\DoxyCodeLine{20 }
+\DoxyCodeLine{21 \textcolor{keyword}{class }\mbox{\hyperlink{class_o_b_j_mesh_loader}{OBJMeshLoader}}}
+\DoxyCodeLine{22 \{}
+\DoxyCodeLine{23 \textcolor{keyword}{public}:}
+\DoxyCodeLine{24      \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_o_b_j_mesh_loader_a8c7c99695bfcb18f362f68da3c8fe393}{Load}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char}* filename, gef::Platform\& platform, \mbox{\hyperlink{obj__mesh__loader_8h_ab6d74e55cf8354fe68dd64bd265a814e}{MeshMap}}\& mesh\_map);}
+\DoxyCodeLine{25      \textcolor{keyword}{const} std::string\& \mbox{\hyperlink{class_o_b_j_mesh_loader_ad7a08d9198699f8f8d38312b317c733e}{GetLastError}}() \{ \textcolor{keywordflow}{return} last\_error\_; \}}
+\DoxyCodeLine{26 \textcolor{keyword}{private}:}
+\DoxyCodeLine{27     \textcolor{keyword}{const} std::string GetFolderName(\textcolor{keyword}{const} \textcolor{keywordtype}{char}* filename);}
+\DoxyCodeLine{28     gef::Mesh* OBJMeshLoader::CreateMesh(gef::Platform\& platform, std::vector<Int32>\& face\_indices, std::vector<gef::Vector4>\& positions, std::vector<gef::Vector4>\& normals, std::vector<gef::Vector2>\& uvs, std::vector<gef::Material*>\& material\_list, std::vector<Int32>\& primitive\_indices, std::vector<Int32>\& texture\_indices);}
+\DoxyCodeLine{29     \textcolor{keywordtype}{bool} LoadMaterials(gef::Platform\& platform, \textcolor{keyword}{const} \textcolor{keywordtype}{char}* filename, \textcolor{keyword}{const} std::string\& folder\_name, std::map<std::string, Int32>\& materials, std::vector<gef::Material*>\& material\_list);}
+\DoxyCodeLine{30 \textcolor{keyword}{private}:}
+\DoxyCodeLine{31     std::string last\_error\_;}
+\DoxyCodeLine{32 \};}
+\DoxyCodeLine{33 }
+
+\end{DoxyCode}

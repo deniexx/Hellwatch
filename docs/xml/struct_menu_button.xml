@@ -1,0 +1,109 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="struct_menu_button" kind="struct" language="C++" prot="public">
+    <compoundname>MenuButton</compoundname>
+    <includes refid="_menu_8h" local="no">Menu.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_menu_button_1a50a2575f7a437f6ae6bcef25f904301e" prot="public" static="no" mutable="no">
+        <type>gef::Vector4</type>
+        <definition>gef::Vector4 MenuButton::position</definition>
+        <argsstring></argsstring>
+        <name>position</name>
+        <qualifiedname>MenuButton::position</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/UserInterface/Menu.h" line="11" column="14" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/UserInterface/Menu.h" bodystart="11" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_menu_button_1a41cfc44472326f1da939089a1b3b791e" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t MenuButton::color</definition>
+        <argsstring></argsstring>
+        <name>color</name>
+        <qualifiedname>MenuButton::color</qualifiedname>
+        <initializer>= 0xffffffff</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/UserInterface/Menu.h" line="12" column="10" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/UserInterface/Menu.h" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_menu_button_1a3248c3e6aebedd07e092b36014bddc13" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float MenuButton::scale</definition>
+        <argsstring></argsstring>
+        <name>scale</name>
+        <qualifiedname>MenuButton::scale</qualifiedname>
+        <initializer>= 1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/UserInterface/Menu.h" line="13" column="7" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/UserInterface/Menu.h" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_menu_button_1a616c2081a729821f35c44b4be80e771b" prot="public" static="no" mutable="no">
+        <type>gef::TextJustification</type>
+        <definition>gef::TextJustification MenuButton::justification</definition>
+        <argsstring></argsstring>
+        <name>justification</name>
+        <qualifiedname>MenuButton::justification</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/UserInterface/Menu.h" line="14" column="24" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/UserInterface/Menu.h" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_menu_button_1a23f34c6529bb20a890225fdb069c5afc" prot="public" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string MenuButton::buttonText</definition>
+        <argsstring></argsstring>
+        <name>buttonText</name>
+        <qualifiedname>MenuButton::buttonText</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/UserInterface/Menu.h" line="15" column="13" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/UserInterface/Menu.h" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_menu_button_1a16cdea6d06499ccaf865be569f5c3adb" prot="public" static="no" mutable="no">
+        <type>std::function&lt; void()&gt;</type>
+        <definition>std::function&lt;void()&gt; MenuButton::callbackFunction</definition>
+        <argsstring></argsstring>
+        <name>callbackFunction</name>
+        <qualifiedname>MenuButton::callbackFunction</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/UserInterface/Menu.h" line="16" column="15" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/UserInterface/Menu.h" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>A <ref refid="class_menu" kindref="compound">Menu</ref> button definition, used for rendering and callbacks  </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/UserInterface/Menu.h" line="9" column="1" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/UserInterface/Menu.h" bodystart="10" bodyend="17"/>
+    <listofallmembers>
+      <member refid="struct_menu_button_1a23f34c6529bb20a890225fdb069c5afc" prot="public" virt="non-virtual"><scope>MenuButton</scope><name>buttonText</name></member>
+      <member refid="struct_menu_button_1a16cdea6d06499ccaf865be569f5c3adb" prot="public" virt="non-virtual"><scope>MenuButton</scope><name>callbackFunction</name></member>
+      <member refid="struct_menu_button_1a41cfc44472326f1da939089a1b3b791e" prot="public" virt="non-virtual"><scope>MenuButton</scope><name>color</name></member>
+      <member refid="struct_menu_button_1a616c2081a729821f35c44b4be80e771b" prot="public" virt="non-virtual"><scope>MenuButton</scope><name>justification</name></member>
+      <member refid="struct_menu_button_1a50a2575f7a437f6ae6bcef25f904301e" prot="public" virt="non-virtual"><scope>MenuButton</scope><name>position</name></member>
+      <member refid="struct_menu_button_1a3248c3e6aebedd07e092b36014bddc13" prot="public" virt="non-virtual"><scope>MenuButton</scope><name>scale</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

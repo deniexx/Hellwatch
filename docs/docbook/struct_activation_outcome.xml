@@ -1,0 +1,56 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_struct_activation_outcome" xml:lang="en-US">
+<title>ActivationOutcome Struct Reference</title>
+<indexterm><primary>ActivationOutcome</primary></indexterm>
+<para>
+
+<para>Outcome of attempting to activate this ability  </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;Ability.h&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>std::string <link linkend="_struct_activation_outcome_1a3867a87cde6f19f7d86e822b056ab7ad">abilityName</link></para>
+</listitem>
+            <listitem><para>std::string <link linkend="_struct_activation_outcome_1a06932003ad89461fc36b0936072bfd97">failReason</link></para>
+</listitem>
+            <listitem><para>bool <link linkend="_struct_activation_outcome_1a6bd503ece6732fc90dacbb08f0bffb40">bWasSuccessful</link> = 0</para>
+</listitem>
+            <listitem><para><link linkend="_namespace_ability_activation_key_1ab159d3c3f26196a9ff493b67ecf7e68c">AbilityActivationKey::Type</link> <link linkend="_struct_activation_outcome_1a85ab4e1d039f0aa58b36d9cc42a7d630">keyOfAbility</link> = <link linkend="_namespace_ability_activation_key_1ab159d3c3f26196a9ff493b67ecf7e68ca7681c632dadbc0ca58c3a03c7a9d53c2">AbilityActivationKey::None</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Outcome of attempting to activate this ability  </para>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_struct_activation_outcome_1a3867a87cde6f19f7d86e822b056ab7ad"/><section>
+    <title>abilityName</title>
+<indexterm><primary>abilityName</primary><secondary>ActivationOutcome</secondary></indexterm>
+<indexterm><primary>ActivationOutcome</primary><secondary>abilityName</secondary></indexterm>
+<para><computeroutput>std::string ActivationOutcome::abilityName</computeroutput></para></section>
+<anchor xml:id="_struct_activation_outcome_1a6bd503ece6732fc90dacbb08f0bffb40"/><section>
+    <title>bWasSuccessful</title>
+<indexterm><primary>bWasSuccessful</primary><secondary>ActivationOutcome</secondary></indexterm>
+<indexterm><primary>ActivationOutcome</primary><secondary>bWasSuccessful</secondary></indexterm>
+<para><computeroutput>bool ActivationOutcome::bWasSuccessful = 0</computeroutput></para></section>
+<anchor xml:id="_struct_activation_outcome_1a06932003ad89461fc36b0936072bfd97"/><section>
+    <title>failReason</title>
+<indexterm><primary>failReason</primary><secondary>ActivationOutcome</secondary></indexterm>
+<indexterm><primary>ActivationOutcome</primary><secondary>failReason</secondary></indexterm>
+<para><computeroutput>std::string ActivationOutcome::failReason</computeroutput></para></section>
+<anchor xml:id="_struct_activation_outcome_1a85ab4e1d039f0aa58b36d9cc42a7d630"/><section>
+    <title>keyOfAbility</title>
+<indexterm><primary>keyOfAbility</primary><secondary>ActivationOutcome</secondary></indexterm>
+<indexterm><primary>ActivationOutcome</primary><secondary>keyOfAbility</secondary></indexterm>
+<para><computeroutput><link linkend="_namespace_ability_activation_key_1ab159d3c3f26196a9ff493b67ecf7e68c">AbilityActivationKey::Type</link> ActivationOutcome::keyOfAbility = <link linkend="_namespace_ability_activation_key_1ab159d3c3f26196a9ff493b67ecf7e68ca7681c632dadbc0ca58c3a03c7a9d53c2">AbilityActivationKey::None</link></computeroutput></para></section>
+<para>
+The documentation for this struct was generated from the following file:</para>
+D:/Uni/CMP208/Hellwatch/build/vs2017/Abilities/<link linkend="__ability_8h">Ability.h</link></section>
+</section>

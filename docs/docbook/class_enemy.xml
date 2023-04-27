@@ -1,0 +1,255 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_enemy" xml:lang="en-US">
+<title>Enemy Class Reference</title>
+<indexterm><primary>Enemy</primary></indexterm>
+<para>
+
+<para>A base class for all enemies, implemented as a melee enemy  </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;Enemy.h&gt;</computeroutput>
+</para>
+Inheritance diagram for Enemy:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_enemy__inherit__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Collaboration diagram for Enemy:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_enemy__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_enemy_1a94f30d348b6d2840fd71675472ba38dd">Enemy</link> ()</para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_class_enemy_1a165cd1993b88023d7f1a45f9f2809b23">SetClass</link> (<link linkend="_namespace_enemy_class_1a21f4473edd2d0cb0970f6505d46f0866">EnemyClass::Type</link> type)</para>
+
+<para>Sets the enemy class and updates its parameters to fit the class  </para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_class_enemy_1ac49759f4d5262aea5e3b6e3f9f56896e">TakeDamage</link> (float <link linkend="_class_enemy_1a1dbbafd85db9d46820a78f603af4d53a">damageAmount</link>) override</para>
+</listitem>
+            <listitem><para>float <link linkend="_class_enemy_1a724bfc292724ec7f61218051bfa0faf5">GetHealth</link> ()</para>
+
+<para>Gets the current enemy health  </para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_class_enemy_1a723b79407b55383b2c327f674e3ab3bc">Update</link> (float deltaTime) override</para>
+
+<para>Update function, called every frame  </para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_class_enemy_1a8fe269579634b8cad6d494254c766387">OnCollision</link> (b2Body *otherBody) override</para>
+
+<para>Function to respond to collision  </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_enemy_1a43ebf25f19b29fccb8cb71730b95749d">ScaleWithWave</link> (int wave)</para>
+
+<para>Scales the enemy health, damage and money it awards with the wave  </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>float <link linkend="_class_enemy_1a1dbbafd85db9d46820a78f603af4d53a">damageAmount</link></para>
+</listitem>
+            <listitem><para>float <link linkend="_class_enemy_1a608edebc42e92ab5f253692c088a56d0">attackTime</link></para>
+</listitem>
+            <listitem><para>float <link linkend="_class_enemy_1a573af3a6b672a882ae23263bfbcdf440">attackCooldown</link> = 2</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Protected Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>virtual void <link linkend="_class_enemy_1a487c39395ee71759c8bf10707776755e">PostInit</link> () override</para>
+
+<para>Override this to Initialize variables or do any necessary work when the object is created  </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_enemy_1a4c732fc920f5da435fc97f9c55ae8531">IncreasePlayerMoney</link> ()</para>
+
+<para>Increases the money the player has  </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Protected Attributes    </title>
+        <itemizedlist>
+            <listitem><para>int <link linkend="_class_enemy_1ac1779a7f33b1320de88c6a73415bae8c">playerMoneyToAdd</link> = 30</para>
+</listitem>
+            <listitem><para><link linkend="_class_attribute_component">AttributeComponent</link> * <link linkend="_class_enemy_1a985101af4d36bd5232edb964b061e423">attributes</link></para>
+</listitem>
+            <listitem><para><link linkend="_class_character_movement_component">CharacterMovementComponent</link> * <link linkend="_class_enemy_1a8d88db976bfb85797d1a161ae799f8e7">enemyMovement</link></para>
+</listitem>
+            <listitem><para>std::string <link linkend="_class_enemy_1a4bc75b6c8f42a2fc5a1a7b932342a074">hurtSound</link> = &quot;MeleeHurt&quot;</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>A base class for all enemies, implemented as a melee enemy  </para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_enemy_1a94f30d348b6d2840fd71675472ba38dd"/><section>
+    <title>Enemy()</title>
+<indexterm><primary>Enemy</primary><secondary>Enemy</secondary></indexterm>
+<indexterm><primary>Enemy</primary><secondary>Enemy</secondary></indexterm>
+<para><computeroutput>Enemy::Enemy ( )</computeroutput></para></section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_enemy_1a724bfc292724ec7f61218051bfa0faf5"/><section>
+    <title>GetHealth()</title>
+<indexterm><primary>GetHealth</primary><secondary>Enemy</secondary></indexterm>
+<indexterm><primary>Enemy</primary><secondary>GetHealth</secondary></indexterm>
+<para><computeroutput>float Enemy::GetHealth ( )<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Gets the current enemy health  </para>
+</para>
+</section>
+<anchor xml:id="_class_enemy_1a4c732fc920f5da435fc97f9c55ae8531"/><section>
+    <title>IncreasePlayerMoney()</title>
+<indexterm><primary>IncreasePlayerMoney</primary><secondary>Enemy</secondary></indexterm>
+<indexterm><primary>Enemy</primary><secondary>IncreasePlayerMoney</secondary></indexterm>
+<para><computeroutput>void Enemy::IncreasePlayerMoney ( )<computeroutput>[protected]</computeroutput></computeroutput></para><para>
+
+<para>Increases the money the player has  </para>
+</para>
+</section>
+<anchor xml:id="_class_enemy_1a8fe269579634b8cad6d494254c766387"/><section>
+    <title>OnCollision()</title>
+<indexterm><primary>OnCollision</primary><secondary>Enemy</secondary></indexterm>
+<indexterm><primary>Enemy</primary><secondary>OnCollision</secondary></indexterm>
+<para><computeroutput>void Enemy::OnCollision (b2Body * OtherBody)<computeroutput>[override]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Function to respond to collision  </para>
+</para>
+<para>
+Reimplemented from <link linkend="_class_world_object_1a7c563531a541e9f5ff4193443cedd515">WorldObject</link>.</para>
+</section>
+<anchor xml:id="_class_enemy_1a487c39395ee71759c8bf10707776755e"/><section>
+    <title>PostInit()</title>
+<indexterm><primary>PostInit</primary><secondary>Enemy</secondary></indexterm>
+<indexterm><primary>Enemy</primary><secondary>PostInit</secondary></indexterm>
+<para><computeroutput>void Enemy::PostInit ( )<computeroutput>[override]</computeroutput>, <computeroutput>[protected]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Override this to Initialize variables or do any necessary work when the object is created  </para>
+</para>
+<para>
+Reimplemented from <link linkend="_class_world_object_1a8500a6a24c62699fa103a68349407a3f">WorldObject</link>.</para>
+<para>
+Reimplemented in <link linkend="_class_boss_1aca38363ac8587bf7012d4c6dec8600a9">Boss</link>, and <link linkend="_class_ranged_enemy_1a4a8ff52aaf8cffb2b4cfe94360113043">RangedEnemy</link>.</para>
+</section>
+<anchor xml:id="_class_enemy_1a43ebf25f19b29fccb8cb71730b95749d"/><section>
+    <title>ScaleWithWave()</title>
+<indexterm><primary>ScaleWithWave</primary><secondary>Enemy</secondary></indexterm>
+<indexterm><primary>Enemy</primary><secondary>ScaleWithWave</secondary></indexterm>
+<para><computeroutput>void Enemy::ScaleWithWave (int wave)</computeroutput></para><para>
+
+<para>Scales the enemy health, damage and money it awards with the wave  </para>
+</para>
+</section>
+<anchor xml:id="_class_enemy_1a165cd1993b88023d7f1a45f9f2809b23"/><section>
+    <title>SetClass()</title>
+<indexterm><primary>SetClass</primary><secondary>Enemy</secondary></indexterm>
+<indexterm><primary>Enemy</primary><secondary>SetClass</secondary></indexterm>
+<para><computeroutput>void Enemy::SetClass (<link linkend="_namespace_enemy_class_1a21f4473edd2d0cb0970f6505d46f0866">EnemyClass::Type</link> type)<computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Sets the enemy class and updates its parameters to fit the class  </para>
+</para>
+</section>
+<anchor xml:id="_class_enemy_1ac49759f4d5262aea5e3b6e3f9f56896e"/><section>
+    <title>TakeDamage()</title>
+<indexterm><primary>TakeDamage</primary><secondary>Enemy</secondary></indexterm>
+<indexterm><primary>Enemy</primary><secondary>TakeDamage</secondary></indexterm>
+<para><computeroutput>void Enemy::TakeDamage (float damageAmount)<computeroutput>[override]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+Reimplemented from <link linkend="_class_mesh_actor_1a31a231014625686e8d40e561a7028931">MeshActor</link>.</para>
+</section>
+<anchor xml:id="_class_enemy_1a723b79407b55383b2c327f674e3ab3bc"/><section>
+    <title>Update()</title>
+<indexterm><primary>Update</primary><secondary>Enemy</secondary></indexterm>
+<indexterm><primary>Enemy</primary><secondary>Update</secondary></indexterm>
+<para><computeroutput>void Enemy::Update (float deltaTime)<computeroutput>[override]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Update function, called every frame  </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>deltaTime</entry><entry>
+<para>Float variable for the frame time</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Reimplemented from <link linkend="_class_mesh_actor_1a3743470557ddbbc88bc73e4dd283d6bf">MeshActor</link>.</para>
+<para>
+Reimplemented in <link linkend="_class_boss_1aa0943d1fb2d9037e30a2fdc6952878cb">Boss</link>, and <link linkend="_class_ranged_enemy_1a1f40730c4f733c7e0cdcb7b7a27c89a3">RangedEnemy</link>.</para>
+</section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_class_enemy_1a573af3a6b672a882ae23263bfbcdf440"/><section>
+    <title>attackCooldown</title>
+<indexterm><primary>attackCooldown</primary><secondary>Enemy</secondary></indexterm>
+<indexterm><primary>Enemy</primary><secondary>attackCooldown</secondary></indexterm>
+<para><computeroutput>float Enemy::attackCooldown = 2</computeroutput></para></section>
+<anchor xml:id="_class_enemy_1a608edebc42e92ab5f253692c088a56d0"/><section>
+    <title>attackTime</title>
+<indexterm><primary>attackTime</primary><secondary>Enemy</secondary></indexterm>
+<indexterm><primary>Enemy</primary><secondary>attackTime</secondary></indexterm>
+<para><computeroutput>float Enemy::attackTime</computeroutput></para></section>
+<anchor xml:id="_class_enemy_1a985101af4d36bd5232edb964b061e423"/><section>
+    <title>attributes</title>
+<indexterm><primary>attributes</primary><secondary>Enemy</secondary></indexterm>
+<indexterm><primary>Enemy</primary><secondary>attributes</secondary></indexterm>
+<para><computeroutput><link linkend="_class_attribute_component">AttributeComponent</link>* Enemy::attributes<computeroutput>[protected]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_enemy_1a1dbbafd85db9d46820a78f603af4d53a"/><section>
+    <title>damageAmount</title>
+<indexterm><primary>damageAmount</primary><secondary>Enemy</secondary></indexterm>
+<indexterm><primary>Enemy</primary><secondary>damageAmount</secondary></indexterm>
+<para><computeroutput>float Enemy::damageAmount</computeroutput></para></section>
+<anchor xml:id="_class_enemy_1a8d88db976bfb85797d1a161ae799f8e7"/><section>
+    <title>enemyMovement</title>
+<indexterm><primary>enemyMovement</primary><secondary>Enemy</secondary></indexterm>
+<indexterm><primary>Enemy</primary><secondary>enemyMovement</secondary></indexterm>
+<para><computeroutput><link linkend="_class_character_movement_component">CharacterMovementComponent</link>* Enemy::enemyMovement<computeroutput>[protected]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_enemy_1a4bc75b6c8f42a2fc5a1a7b932342a074"/><section>
+    <title>hurtSound</title>
+<indexterm><primary>hurtSound</primary><secondary>Enemy</secondary></indexterm>
+<indexterm><primary>Enemy</primary><secondary>hurtSound</secondary></indexterm>
+<para><computeroutput>std::string Enemy::hurtSound = &quot;MeleeHurt&quot;<computeroutput>[protected]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_enemy_1ac1779a7f33b1320de88c6a73415bae8c"/><section>
+    <title>playerMoneyToAdd</title>
+<indexterm><primary>playerMoneyToAdd</primary><secondary>Enemy</secondary></indexterm>
+<indexterm><primary>Enemy</primary><secondary>playerMoneyToAdd</secondary></indexterm>
+<para><computeroutput>int Enemy::playerMoneyToAdd = 30<computeroutput>[protected]</computeroutput></computeroutput></para></section>
+<para>
+The documentation for this class was generated from the following files:</para>
+D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/<link linkend="__enemy_8h">Enemy.h</link>D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/<link linkend="__enemy_8cpp">Enemy.cpp</link></section>
+</section>

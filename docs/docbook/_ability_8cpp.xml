@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__ability_8cpp" xml:lang="en-US">
+<title>D:/Uni/CMP208/Hellwatch/build/vs2017/Abilities/Ability.cpp File Reference</title>
+<indexterm><primary>D:/Uni/CMP208/Hellwatch/build/vs2017/Abilities/Ability.cpp</primary></indexterm>
+<programlisting linenumbering="unnumbered">#include &quot;Ability.h&quot;<?linebreak?>#include &quot;ActorComponents/ActorComponent.h&quot;<?linebreak?>#include &quot;ActorComponents/AbilitiesComponent.h&quot;<?linebreak?>#include &quot;Attributes/AttributeComponent.h&quot;<?linebreak?>#include &quot;GameFramework/WorldObject.h&quot;<?linebreak?></programlisting>Include dependency graph for Ability.cpp:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_ability_8cpp__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>

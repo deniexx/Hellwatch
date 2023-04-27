@@ -1,0 +1,536 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="class_mesh_actor" kind="class" language="C++" prot="public">
+    <compoundname>MeshActor</compoundname>
+    <basecompoundref refid="class_world_object" prot="public" virt="non-virtual">WorldObject</basecompoundref>
+    <basecompoundref refid="class_i_damagable" prot="public" virt="non-virtual">IDamagable</basecompoundref>
+    <derivedcompoundref refid="class_damage_on_collision_actor" prot="public" virt="non-virtual">DamageOnCollisionActor</derivedcompoundref>
+    <derivedcompoundref refid="class_enemy" prot="public" virt="non-virtual">Enemy</derivedcompoundref>
+    <derivedcompoundref refid="class_enemy_dummy" prot="public" virt="non-virtual">EnemyDummy</derivedcompoundref>
+    <derivedcompoundref refid="class_meteor_actor" prot="public" virt="non-virtual">MeteorActor</derivedcompoundref>
+    <derivedcompoundref refid="class_particle_actor" prot="public" virt="non-virtual">ParticleActor</derivedcompoundref>
+    <derivedcompoundref refid="class_player_character" prot="public" virt="non-virtual">PlayerCharacter</derivedcompoundref>
+    <includes refid="_mesh_actor_8h" local="no">MeshActor.h</includes>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="class_mesh_actor_1a8eb71848a77c1c7ffb0f88d526a633e3" prot="protected" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string MeshActor::meshName</definition>
+        <argsstring></argsstring>
+        <name>meshName</name>
+        <qualifiedname>MeshActor::meshName</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActor.h" line="38" column="13" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActor.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_mesh_actor_1a8585ace5ca84b7903f216c77661a5787" prot="protected" static="no" mutable="no">
+        <type>gef::Material</type>
+        <definition>gef::Material MeshActor::material</definition>
+        <argsstring></argsstring>
+        <name>material</name>
+        <qualifiedname>MeshActor::material</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActor.h" line="39" column="15" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActor.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_mesh_actor_1a858b488e44d63ff8eda02e173fa4da7a" prot="protected" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool MeshActor::bOverrideMaterial</definition>
+        <argsstring></argsstring>
+        <name>bOverrideMaterial</name>
+        <qualifiedname>MeshActor::bOverrideMaterial</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActor.h" line="40" column="6" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActor.h" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_mesh_actor_1a24bb67a591063384d123d0d9c2d34f9f" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; <ref refid="class_actor_component" kindref="compound">ActorComponent</ref> * &gt;</type>
+        <definition>std::vector&lt;ActorComponent*&gt; MeshActor::components</definition>
+        <argsstring></argsstring>
+        <name>components</name>
+        <qualifiedname>MeshActor::components</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActor.h" line="44" column="13" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActor.h" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_mesh_actor_1a5bbc82526d9b03b24f0763e7ceb6a4fe" prot="private" static="no" mutable="no">
+        <type>gef::Mesh *</type>
+        <definition>gef::Mesh* MeshActor::mesh</definition>
+        <argsstring></argsstring>
+        <name>mesh</name>
+        <qualifiedname>MeshActor::mesh</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActor.h" line="45" column="11" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActor.h" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_mesh_actor_1af40424bf59441cfb3362f8ef3e1fbb68" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>MeshActor::MeshActor</definition>
+        <argsstring>()</argsstring>
+        <name>MeshActor</name>
+        <qualifiedname>MeshActor::MeshActor</qualifiedname>
+        <briefdescription>
+<para>Defaults constructor  </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActor.h" line="22" column="1" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActor.cpp" bodystart="7" bodyend="15"/>
+      </memberdef>
+      <memberdef kind="function" id="class_mesh_actor_1aed30e8021f75c3221ab6f02cb1fcfcba" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>MeshActor::MeshActor</definition>
+        <argsstring>(gef::Mesh *inMesh)</argsstring>
+        <name>MeshActor</name>
+        <qualifiedname>MeshActor::MeshActor</qualifiedname>
+        <param>
+          <type>gef::Mesh *</type>
+          <declname>inMesh</declname>
+        </param>
+        <briefdescription>
+<para>Constructor which assigns the mesh  </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>inMesh</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Mesh to be assigned</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActor.h" line="28" column="1" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActor.cpp" bodystart="17" bodyend="21"/>
+      </memberdef>
+      <memberdef kind="function" id="class_mesh_actor_1a9c8f4860ae03966a27c3ee22c2a2b5a1" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void MeshActor::Render</definition>
+        <argsstring>() override</argsstring>
+        <name>Render</name>
+        <qualifiedname>MeshActor::Render</qualifiedname>
+        <reimplements refid="class_world_object_1a2a30bf431fa478eb5d24683e1906c261">Render</reimplements>
+        <briefdescription>
+<para>Renders the object  </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActor.h" line="30" column="14" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActor.cpp" bodystart="23" bodyend="36"/>
+      </memberdef>
+      <memberdef kind="function" id="class_mesh_actor_1a3743470557ddbbc88bc73e4dd283d6bf" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void MeshActor::Update</definition>
+        <argsstring>(float deltaTime) override</argsstring>
+        <name>Update</name>
+        <qualifiedname>MeshActor::Update</qualifiedname>
+        <reimplements refid="class_world_object_1a828815709498f192bf138ecfe416c529">Update</reimplements>
+        <reimplementedby refid="class_boss_1aa0943d1fb2d9037e30a2fdc6952878cb">Update</reimplementedby>
+        <reimplementedby refid="class_damage_on_collision_actor_1a468c69c421db3d272bf18c46cbb15c2a">Update</reimplementedby>
+        <reimplementedby refid="class_enemy_1a723b79407b55383b2c327f674e3ab3bc">Update</reimplementedby>
+        <reimplementedby refid="class_meteor_actor_1ab6359799dcd7d0c88bbe0f9aae848819">Update</reimplementedby>
+        <reimplementedby refid="class_particle_actor_1a5ed58a9e57286e08cf8a650aaf22f43f">Update</reimplementedby>
+        <reimplementedby refid="class_player_character_1ad681ccd09dc1ed4c0242bfa0d981d584">Update</reimplementedby>
+        <reimplementedby refid="class_ranged_enemy_1a1f40730c4f733c7e0cdcb7b7a27c89a3">Update</reimplementedby>
+        <param>
+          <type>float</type>
+          <declname>deltaTime</declname>
+        </param>
+        <briefdescription>
+<para>Update function, called every frame  </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>deltaTime</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Float variable for the frame time</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActor.h" line="32" column="14" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActor.cpp" bodystart="38" bodyend="52"/>
+      </memberdef>
+      <memberdef kind="function" id="class_mesh_actor_1a31a231014625686e8d40e561a7028931" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void MeshActor::TakeDamage</definition>
+        <argsstring>(float damageAmount)</argsstring>
+        <name>TakeDamage</name>
+        <qualifiedname>MeshActor::TakeDamage</qualifiedname>
+        <reimplements refid="class_i_damagable_1ae0da9b7810f5341862864c8ba8078be3">TakeDamage</reimplements>
+        <reimplementedby refid="class_enemy_dummy_1a1e336fb794e413b2379f09c4fe648259">TakeDamage</reimplementedby>
+        <reimplementedby refid="class_enemy_1ac49759f4d5262aea5e3b6e3f9f56896e">TakeDamage</reimplementedby>
+        <reimplementedby refid="class_player_character_1ac89349d4afba371e044e4c5816ba68c8">TakeDamage</reimplementedby>
+        <param>
+          <type>float</type>
+          <declname>damageAmount</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActor.h" line="34" column="14" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActor.h" bodystart="34" bodyend="34"/>
+      </memberdef>
+      <memberdef kind="function" id="class_mesh_actor_1a25950ae28c6abf2e9e3dc64cfa19c0c7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void MeshActor::SetMesh</definition>
+        <argsstring>(gef::Mesh *inMesh)</argsstring>
+        <name>SetMesh</name>
+        <qualifiedname>MeshActor::SetMesh</qualifiedname>
+        <param>
+          <type>gef::Mesh *</type>
+          <declname>inMesh</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActor.h" line="52" column="6" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActor.h" bodystart="52" bodyend="52"/>
+      </memberdef>
+      <memberdef kind="function" id="class_mesh_actor_1a86f27025c3484267804fdaa5e6082fd4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MeshActor::SetMeshName</definition>
+        <argsstring>(std::string newName)</argsstring>
+        <name>SetMeshName</name>
+        <qualifiedname>MeshActor::SetMeshName</qualifiedname>
+        <param>
+          <type>std::string</type>
+          <declname>newName</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActor.h" line="53" column="6" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActor.cpp" bodystart="54" bodyend="61"/>
+      </memberdef>
+      <memberdef kind="function" id="class_mesh_actor_1a0217e1969a68278f2548e1553e2ab92b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void MeshActor::SetMaterial</definition>
+        <argsstring>(gef::Material newMaterial)</argsstring>
+        <name>SetMaterial</name>
+        <qualifiedname>MeshActor::SetMaterial</qualifiedname>
+        <param>
+          <type>gef::Material</type>
+          <declname>newMaterial</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActor.h" line="55" column="6" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActor.h" bodystart="55" bodyend="59"/>
+      </memberdef>
+      <memberdef kind="function" id="class_mesh_actor_1a295a747ea81d8b09e084c488ab183fbb" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void MeshActor::SetRotation</definition>
+        <argsstring>(const gef::Vector4 &amp;inRotation) override</argsstring>
+        <name>SetRotation</name>
+        <qualifiedname>MeshActor::SetRotation</qualifiedname>
+        <reimplements refid="class_world_object_1a18ba8b67b53f7df01220643617ecd75c">SetRotation</reimplements>
+        <param>
+          <type>const gef::Vector4 &amp;</type>
+          <declname>inRotation</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActor.h" line="60" column="14" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActor.cpp" bodystart="63" bodyend="67"/>
+      </memberdef>
+      <memberdef kind="function" id="class_mesh_actor_1a906146d34e290e3bd7132a4dcbfad8a1" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>__forceinline const gef::Mesh *</type>
+        <definition>__forceinline const gef::Mesh * MeshActor::GetMesh</definition>
+        <argsstring>() const</argsstring>
+        <name>GetMesh</name>
+        <qualifiedname>MeshActor::GetMesh</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActor.h" line="66" column="31" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActor.h" bodystart="66" bodyend="66"/>
+      </memberdef>
+      <memberdef kind="function" id="class_mesh_actor_1a7eef4e0218a4363460a0375585037012" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>__forceinline const std::vector&lt; <ref refid="class_actor_component" kindref="compound">ActorComponent</ref> * &gt; &amp;</type>
+        <definition>__forceinline const std::vector&lt; ActorComponent * &gt; &amp; MeshActor::GetComponents</definition>
+        <argsstring>()</argsstring>
+        <name>GetComponents</name>
+        <qualifiedname>MeshActor::GetComponents</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActor.h" line="67" column="33" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActor.h" bodystart="67" bodyend="67"/>
+      </memberdef>
+      <memberdef kind="function" id="class_mesh_actor_1a03ae156a0a281ff9eb128c7c7b44d983" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>__forceinline const std::string &amp;</type>
+        <definition>__forceinline const std::string &amp; MeshActor::GetMeshName</definition>
+        <argsstring>()</argsstring>
+        <name>GetMeshName</name>
+        <qualifiedname>MeshActor::GetMeshName</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActor.h" line="68" column="33" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActor.h" bodystart="68" bodyend="68"/>
+      </memberdef>
+      <memberdef kind="function" id="class_mesh_actor_1a639c1c33b5f22210351fd94ec7d78c43" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename ComponentType</type>
+            <defval><ref refid="class_actor_component" kindref="compound">ActorComponent</ref></defval>
+          </param>
+        </templateparamlist>
+        <type>ComponentType *</type>
+        <definition>ComponentType * MeshActor::GetComponent</definition>
+        <argsstring>()</argsstring>
+        <name>GetComponent</name>
+        <qualifiedname>MeshActor::GetComponent</qualifiedname>
+        <briefdescription>
+<para>Gets the first component of the specified type from the Actor  </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActor.h" line="96" column="15" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActor.h" bodystart="96" bodyend="105"/>
+      </memberdef>
+      <memberdef kind="function" id="class_mesh_actor_1aa824a26a7c24d187f15aa3e9beba11f6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename ComponentType</type>
+            <defval><ref refid="class_actor_component" kindref="compound">ActorComponent</ref></defval>
+          </param>
+        </templateparamlist>
+        <type>std::vector&lt; ComponentType * &gt; &amp;</type>
+        <definition>std::vector&lt; ComponentType * &gt; &amp; MeshActor::GetComponents</definition>
+        <argsstring>()</argsstring>
+        <name>GetComponents</name>
+        <qualifiedname>MeshActor::GetComponents</qualifiedname>
+        <briefdescription>
+<para>Gets all the components of the specified type from the Actor  </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActor.h" line="111" column="13" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActor.h" bodystart="111" bodyend="123"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_mesh_actor_1af9b992a02356ead76d3c36a031bf6eea" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename ComponentType</type>
+            <defval><ref refid="class_actor_component" kindref="compound">ActorComponent</ref></defval>
+          </param>
+        </templateparamlist>
+        <type>ComponentType *</type>
+        <definition>ComponentType * MeshActor::CreateComponent</definition>
+        <argsstring>()</argsstring>
+        <name>CreateComponent</name>
+        <qualifiedname>MeshActor::CreateComponent</qualifiedname>
+        <briefdescription>
+<para>Creates and return the specified component, if no component is specified it will create the base class of <ref refid="class_actor_component" kindref="compound">ActorComponent</ref>  </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActor.h" line="80" column="15" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActor.h" bodystart="80" bodyend="87"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>An object that has a mesh  </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="6">
+        <label>Boss</label>
+        <link refid="class_boss"/>
+        <childnode refid="5" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>DamageOnCollisionActor</label>
+        <link refid="class_damage_on_collision_actor"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>Enemy</label>
+        <link refid="class_enemy"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>EnemyDummy</label>
+        <link refid="class_enemy_dummy"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>IDamagable</label>
+        <link refid="class_i_damagable"/>
+      </node>
+      <node id="1">
+        <label>MeshActor</label>
+        <link refid="class_mesh_actor"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>MeteorActor</label>
+        <link refid="class_meteor_actor"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>ParticleActor</label>
+        <link refid="class_particle_actor"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>PlayerCharacter</label>
+        <link refid="class_player_character"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>RangedEnemy</label>
+        <link refid="class_ranged_enemy"/>
+        <childnode refid="5" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>WorldObject</label>
+        <link refid="class_world_object"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="3">
+        <label>IDamagable</label>
+        <link refid="class_i_damagable"/>
+      </node>
+      <node id="1">
+        <label>MeshActor</label>
+        <link refid="class_mesh_actor"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>WorldObject</label>
+        <link refid="class_world_object"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>owningObject</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActor.h" line="13" column="1" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActor.h" bodystart="14" bodyend="124"/>
+    <listofallmembers>
+      <member refid="class_world_object_1ac10cc37682a3a3cce8405411fbd8f4c3" prot="protected" virt="non-virtual"><scope>MeshActor</scope><name>bDisableUpdate</name></member>
+      <member refid="class_world_object_1a60c2b1f707b5694f97dd950996d05e11" prot="protected" virt="non-virtual"><scope>MeshActor</scope><name>bMarkedForDelete</name></member>
+      <member refid="class_mesh_actor_1a858b488e44d63ff8eda02e173fa4da7a" prot="protected" virt="non-virtual"><scope>MeshActor</scope><name>bOverrideMaterial</name></member>
+      <member refid="class_world_object_1a4c83c0d8e3817aac3ef2080ec0972802" prot="protected" virt="non-virtual"><scope>MeshActor</scope><name>BuildTransform</name></member>
+      <member refid="class_world_object_1a025ba78ec5cc2607f7e62750a7c37749" prot="protected" virt="non-virtual"><scope>MeshActor</scope><name>collisionBody</name></member>
+      <member refid="class_mesh_actor_1a24bb67a591063384d123d0d9c2d34f9f" prot="private" virt="non-virtual"><scope>MeshActor</scope><name>components</name></member>
+      <member refid="class_mesh_actor_1af9b992a02356ead76d3c36a031bf6eea" prot="protected" virt="non-virtual"><scope>MeshActor</scope><name>CreateComponent</name></member>
+      <member refid="class_world_object_1a650a599e9ffa751eaba296c4ef6ec2d2" prot="public" virt="non-virtual"><scope>MeshActor</scope><name>DisableUpdate</name></member>
+      <member refid="class_world_object_1a42e101b6adf4911396d95acc5b1741d8" prot="public" virt="non-virtual"><scope>MeshActor</scope><name>EnableUpdate</name></member>
+      <member refid="class_world_object_1aa3b5f5e5e1ed26c94265854e2858bdee" prot="public" virt="non-virtual"><scope>MeshActor</scope><name>GetCollisionBody</name></member>
+      <member refid="class_mesh_actor_1a639c1c33b5f22210351fd94ec7d78c43" prot="public" virt="non-virtual"><scope>MeshActor</scope><name>GetComponent</name></member>
+      <member refid="class_mesh_actor_1a7eef4e0218a4363460a0375585037012" prot="public" virt="non-virtual"><scope>MeshActor</scope><name>GetComponents</name></member>
+      <member refid="class_mesh_actor_1aa824a26a7c24d187f15aa3e9beba11f6" prot="public" virt="non-virtual"><scope>MeshActor</scope><name>GetComponents</name></member>
+      <member refid="class_world_object_1aaebbb0abbabef79ad542f01db4ef6101" prot="public" virt="non-virtual"><scope>MeshActor</scope><name>GetIsMarkedForDelete</name></member>
+      <member refid="class_mesh_actor_1a906146d34e290e3bd7132a4dcbfad8a1" prot="public" virt="non-virtual"><scope>MeshActor</scope><name>GetMesh</name></member>
+      <member refid="class_mesh_actor_1a03ae156a0a281ff9eb128c7c7b44d983" prot="public" virt="non-virtual"><scope>MeshActor</scope><name>GetMeshName</name></member>
+      <member refid="class_world_object_1a0fdf372cdda0fb026916b60e19e657a0" prot="public" virt="non-virtual"><scope>MeshActor</scope><name>GetOwner</name></member>
+      <member refid="class_world_object_1a271e4b4870fadf60e285576f94b31e79" prot="public" virt="virtual"><scope>MeshActor</scope><name>GetRotation</name></member>
+      <member refid="class_world_object_1aa959995cc385843f1e2b0139e4413ab5" prot="public" virt="virtual"><scope>MeshActor</scope><name>GetRotationF</name></member>
+      <member refid="class_world_object_1a223b3653f965b7698ec28c9b4fc84e28" prot="public" virt="virtual"><scope>MeshActor</scope><name>GetScale</name></member>
+      <member refid="class_world_object_1a1302aea00b9a5f348459f55e9dd50725" prot="public" virt="non-virtual"><scope>MeshActor</scope><name>GetTransform</name></member>
+      <member refid="class_world_object_1a9967baa65719f1418641598a244306a5" prot="public" virt="virtual"><scope>MeshActor</scope><name>GetTranslation</name></member>
+      <member refid="class_world_object_1a9f76e2def47f4d6be6bafb330ac0394b" prot="public" virt="non-virtual"><scope>MeshActor</scope><name>ID</name></member>
+      <member refid="class_world_object_1aa2d0bc51a9b2dac1930c37e2401e8934" prot="public" virt="non-virtual"><scope>MeshActor</scope><name>Init</name></member>
+      <member refid="class_world_object_1a4402fa17dfd062fc97750d581d4f774b" prot="public" virt="non-virtual"><scope>MeshActor</scope><name>MarkForDelete</name></member>
+      <member refid="class_mesh_actor_1a8585ace5ca84b7903f216c77661a5787" prot="protected" virt="non-virtual"><scope>MeshActor</scope><name>material</name></member>
+      <member refid="class_mesh_actor_1a5bbc82526d9b03b24f0763e7ceb6a4fe" prot="private" virt="non-virtual"><scope>MeshActor</scope><name>mesh</name></member>
+      <member refid="class_mesh_actor_1af40424bf59441cfb3362f8ef3e1fbb68" prot="public" virt="non-virtual"><scope>MeshActor</scope><name>MeshActor</name></member>
+      <member refid="class_mesh_actor_1aed30e8021f75c3221ab6f02cb1fcfcba" prot="public" virt="non-virtual"><scope>MeshActor</scope><name>MeshActor</name></member>
+      <member refid="class_mesh_actor_1a8eb71848a77c1c7ffb0f88d526a633e3" prot="protected" virt="non-virtual"><scope>MeshActor</scope><name>meshName</name></member>
+      <member refid="class_world_object_1a7c563531a541e9f5ff4193443cedd515" prot="public" virt="virtual"><scope>MeshActor</scope><name>OnCollision</name></member>
+      <member refid="class_world_object_1a8917ba1d61e12c12f7246c7b95cd4094" prot="protected" virt="non-virtual"><scope>MeshActor</scope><name>owningObject</name></member>
+      <member refid="class_world_object_1a8500a6a24c62699fa103a68349407a3f" prot="public" virt="virtual"><scope>MeshActor</scope><name>PostInit</name></member>
+      <member refid="class_mesh_actor_1a9c8f4860ae03966a27c3ee22c2a2b5a1" prot="public" virt="virtual"><scope>MeshActor</scope><name>Render</name></member>
+      <member refid="class_world_object_1a519b69f0419703cfbe08580d4b2ab408" prot="protected" virt="non-virtual"><scope>MeshActor</scope><name>rotationVec</name></member>
+      <member refid="class_world_object_1a45f28fb0c7cf14a6c92ab72eaa4eb9a9" prot="protected" virt="non-virtual"><scope>MeshActor</scope><name>scale</name></member>
+      <member refid="class_world_object_1a8817deac42a357d2ed476791c7b76511" prot="public" virt="non-virtual"><scope>MeshActor</scope><name>SetCollisionBody</name></member>
+      <member refid="class_mesh_actor_1a0217e1969a68278f2548e1553e2ab92b" prot="public" virt="non-virtual"><scope>MeshActor</scope><name>SetMaterial</name></member>
+      <member refid="class_mesh_actor_1a25950ae28c6abf2e9e3dc64cfa19c0c7" prot="public" virt="non-virtual"><scope>MeshActor</scope><name>SetMesh</name></member>
+      <member refid="class_mesh_actor_1a86f27025c3484267804fdaa5e6082fd4" prot="public" virt="non-virtual"><scope>MeshActor</scope><name>SetMeshName</name></member>
+      <member refid="class_mesh_actor_1a295a747ea81d8b09e084c488ab183fbb" prot="public" virt="virtual"><scope>MeshActor</scope><name>SetRotation</name></member>
+      <member refid="class_world_object_1ad73836d8146cc9e1d475eb74fb05481a" prot="public" virt="virtual" ambiguityscope="WorldObject::"><scope>MeshActor</scope><name>SetRotation</name></member>
+      <member refid="class_world_object_1ae00d341e9ac8909374dd556aaecbdb46" prot="public" virt="virtual"><scope>MeshActor</scope><name>SetScale</name></member>
+      <member refid="class_world_object_1a830b64bbf6df3fc50284b0316c124133" prot="public" virt="virtual"><scope>MeshActor</scope><name>SetTranslation</name></member>
+      <member refid="class_world_object_1a78b0b88900685e80feffc6921fd9f370" prot="public" virt="non-virtual"><scope>MeshActor</scope><name>ShouldUpdate</name></member>
+      <member refid="class_mesh_actor_1a31a231014625686e8d40e561a7028931" prot="public" virt="virtual"><scope>MeshActor</scope><name>TakeDamage</name></member>
+      <member refid="class_world_object_1a9e5ac0cc278f5766b6020950fdabbe75" prot="protected" virt="non-virtual"><scope>MeshActor</scope><name>transformMat</name></member>
+      <member refid="class_world_object_1a78bd9162f55826c5c68706d688578cf8" prot="protected" virt="non-virtual"><scope>MeshActor</scope><name>translation</name></member>
+      <member refid="class_mesh_actor_1a3743470557ddbbc88bc73e4dd283d6bf" prot="public" virt="virtual"><scope>MeshActor</scope><name>Update</name></member>
+      <member refid="class_world_object_1a632d2e78acdcbc0aef09951134340d4e" prot="public" virt="non-virtual"><scope>MeshActor</scope><name>WorldObject</name></member>
+      <member refid="class_world_object_1a287e5b87a26133cd35f3015268d2a5a3" prot="public" virt="non-virtual"><scope>MeshActor</scope><name>~WorldObject</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

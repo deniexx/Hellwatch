@@ -1,0 +1,91 @@
+\hypertarget{class_actor_component}{}\doxysection{Actor\+Component Class Reference}
+\label{class_actor_component}\index{ActorComponent@{ActorComponent}}
+
+
+Base class to be derived for actor components   
+
+
+
+
+{\ttfamily \#include $<$Actor\+Component.\+h$>$}
+
+
+
+Inheritance diagram for Actor\+Component\+:
+% FIG 0
+
+
+Collaboration diagram for Actor\+Component\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_actor_component_ab4ea0eaffa2c616a209e2887f80902f2}{Init}} (\mbox{\hyperlink{class_world_object}{World\+Object}} $\ast$in\+Owner\+Actor)
+\item 
+virtual void \mbox{\hyperlink{class_actor_component_af730b3c7d2b4154e1fb0962db7750f6b}{Update\+Component}} (float delta\+Time)
+\item 
+\+\_\+\+\_\+forceinline \mbox{\hyperlink{class_world_object}{World\+Object}} $\ast$ \mbox{\hyperlink{class_actor_component_a3705d464da5f840eca1d14bcce07372d}{Get\+Owner}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_actor_component_a467d082f3fedd6cf2acacb117450f90e}{Post\+Init}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_world_object}{World\+Object}} $\ast$ \mbox{\hyperlink{class_actor_component_a2766e186399b24f5d7e2d143ffa26e05}{owner\+Actor}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Base class to be derived for actor components  
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_actor_component_a3705d464da5f840eca1d14bcce07372d}\label{class_actor_component_a3705d464da5f840eca1d14bcce07372d}} 
+\index{ActorComponent@{ActorComponent}!GetOwner@{GetOwner}}
+\index{GetOwner@{GetOwner}!ActorComponent@{ActorComponent}}
+\doxysubsubsection{\texorpdfstring{GetOwner()}{GetOwner()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+forceinline \mbox{\hyperlink{class_world_object}{World\+Object}} $\ast$ Actor\+Component\+::\+Get\+Owner (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_actor_component_ab4ea0eaffa2c616a209e2887f80902f2}\label{class_actor_component_ab4ea0eaffa2c616a209e2887f80902f2}} 
+\index{ActorComponent@{ActorComponent}!Init@{Init}}
+\index{Init@{Init}!ActorComponent@{ActorComponent}}
+\doxysubsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily void Actor\+Component\+::\+Init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_world_object}{World\+Object}} $\ast$}]{in\+Owner\+Actor }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_actor_component_a467d082f3fedd6cf2acacb117450f90e}\label{class_actor_component_a467d082f3fedd6cf2acacb117450f90e}} 
+\index{ActorComponent@{ActorComponent}!PostInit@{PostInit}}
+\index{PostInit@{PostInit}!ActorComponent@{ActorComponent}}
+\doxysubsubsection{\texorpdfstring{PostInit()}{PostInit()}}
+{\footnotesize\ttfamily void Actor\+Component\+::\+Post\+Init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{class_abilities_component_aa1a55ce45b753097f0e2d7d4db4a419b}{Abilities\+Component}}, and \mbox{\hyperlink{class_character_movement_component_a7c20d542f943ec133dd3f1df7fee988e}{Character\+Movement\+Component}}.
+
+\mbox{\Hypertarget{class_actor_component_af730b3c7d2b4154e1fb0962db7750f6b}\label{class_actor_component_af730b3c7d2b4154e1fb0962db7750f6b}} 
+\index{ActorComponent@{ActorComponent}!UpdateComponent@{UpdateComponent}}
+\index{UpdateComponent@{UpdateComponent}!ActorComponent@{ActorComponent}}
+\doxysubsubsection{\texorpdfstring{UpdateComponent()}{UpdateComponent()}}
+{\footnotesize\ttfamily void Actor\+Component\+::\+Update\+Component (\begin{DoxyParamCaption}\item[{float}]{delta\+Time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{class_attribute_component_ae67a6fc2951e19257274edb42eec023f}{Attribute\+Component}}, \mbox{\hyperlink{class_abilities_component_a96732cdae01d866200dc66a89200695f}{Abilities\+Component}}, and \mbox{\hyperlink{class_character_movement_component_a44e667731d0323b2dfcdf80ee6e7f3ba}{Character\+Movement\+Component}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_actor_component_a2766e186399b24f5d7e2d143ffa26e05}\label{class_actor_component_a2766e186399b24f5d7e2d143ffa26e05}} 
+\index{ActorComponent@{ActorComponent}!ownerActor@{ownerActor}}
+\index{ownerActor@{ownerActor}!ActorComponent@{ActorComponent}}
+\doxysubsubsection{\texorpdfstring{ownerActor}{ownerActor}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_world_object}{World\+Object}}$\ast$ Actor\+Component\+::owner\+Actor\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Uni/\+CMP208/\+Hellwatch/build/vs2017/\+Actor\+Components/\mbox{\hyperlink{_actor_component_8h}{Actor\+Component.\+h}}\item 
+D\+:/\+Uni/\+CMP208/\+Hellwatch/build/vs2017/\+Actor\+Components/\mbox{\hyperlink{_actor_component_8cpp}{Actor\+Component.\+cpp}}\end{DoxyCompactItemize}

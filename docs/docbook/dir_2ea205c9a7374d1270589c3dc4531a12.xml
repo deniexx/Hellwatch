@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_dir_2ea205c9a7374d1270589c3dc4531a12" xml:lang="en-US">
+<title>D:/Uni/CMP208/Hellwatch/build/vs2017/Attributes Directory Reference</title>
+<indexterm><primary>D:/Uni/CMP208/Hellwatch/build/vs2017/Attributes Directory Reference</primary></indexterm>
+Directory dependency graph for Attributes:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="dir_2ea205c9a7374d1270589c3dc4531a12_dep.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Files    </title>
+        <itemizedlist>
+            <listitem><para>file <link linkend="__attribute_component_8cpp">AttributeComponent.cpp</link></para>
+</listitem>
+            <listitem><para>file <link linkend="__attribute_component_8h">AttributeComponent.h</link></para>
+</listitem>
+            <listitem><para>file <link linkend="__attribute_types_8h">AttributeTypes.h</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

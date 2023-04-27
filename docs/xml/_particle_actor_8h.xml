@@ -1,0 +1,254 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="_particle_actor_8h" kind="file" language="C++">
+    <compoundname>ParticleActor.h</compoundname>
+    <includes local="no">string</includes>
+    <includes local="no">vector</includes>
+    <includes refid="_mesh_actor_8h" local="yes">../MeshActor.h</includes>
+    <includedby refid="_particle_actor_8cpp" local="yes">D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/ParticleActor.cpp</includedby>
+    <includedby refid="_particle_manager_8cpp" local="yes">D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/ParticleManager.cpp</includedby>
+    <incdepgraph>
+      <node id="4">
+        <label>../MeshActor.h</label>
+        <link refid="_mesh_actor_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/ParticleActor.h</label>
+        <link refid="_particle_actor_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>Utils.h</label>
+        <link refid="_utils_8h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>GameFramework/WorldObject.h</label>
+        <link refid="_world_object_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="30">
+        <label>Interfaces/Damagable.h</label>
+        <link refid="_damagable_8h"/>
+      </node>
+      <node id="22">
+        <label>obj_mesh_loader.h</label>
+        <link refid="obj__mesh__loader_8h"/>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>primitive_builder.h</label>
+        <link refid="primitive__builder_8h"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>scene_app.h</label>
+        <link refid="scene__app_8h"/>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+      </node>
+      <node id="20">
+        <label>box2d/box2d.h</label>
+      </node>
+      <node id="18">
+        <label>cstddef</label>
+      </node>
+      <node id="26">
+        <label>future</label>
+      </node>
+      <node id="23">
+        <label>gef.h</label>
+      </node>
+      <node id="25">
+        <label>graphics/font.h</label>
+      </node>
+      <node id="17">
+        <label>graphics/material.h</label>
+      </node>
+      <node id="29">
+        <label>graphics/mesh.h</label>
+      </node>
+      <node id="12">
+        <label>graphics/renderer_3d.h</label>
+      </node>
+      <node id="19">
+        <label>graphics/scene.h</label>
+      </node>
+      <node id="24">
+        <label>map</label>
+      </node>
+      <node id="6">
+        <label>maths/Matrix44.h</label>
+      </node>
+      <node id="9">
+        <label>maths/Vector2.h</label>
+      </node>
+      <node id="28">
+        <label>maths/math_utils.h</label>
+      </node>
+      <node id="11">
+        <label>maths/matrix44.h</label>
+      </node>
+      <node id="7">
+        <label>maths/quaternion.h</label>
+      </node>
+      <node id="15">
+        <label>maths/vector2.h</label>
+      </node>
+      <node id="10">
+        <label>maths/vector4.h</label>
+      </node>
+      <node id="27">
+        <label>random</label>
+      </node>
+      <node id="2">
+        <label>string</label>
+      </node>
+      <node id="14">
+        <label>system/application.h</label>
+      </node>
+      <node id="21">
+        <label>system/platform.h</label>
+      </node>
+      <node id="3">
+        <label>vector</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/ParticleActor.cpp</label>
+        <link refid="_particle_actor_8cpp"/>
+      </node>
+      <node id="1">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/ParticleActor.h</label>
+        <link refid="_particle_actor_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/ParticleManager.cpp</label>
+        <link refid="_particle_manager_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="struct_f_particle_data" prot="public">FParticleData</innerclass>
+    <innerclass refid="class_particle_actor" prot="public">ParticleActor</innerclass>
+    <innernamespace refid="namespacegef">gef</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;vector&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../MeshActor.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7" refid="namespacegef" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacegef" kindref="compound">gef</ref></highlight></codeline>
+<codeline lineno="8"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">Texture;</highlight></codeline>
+<codeline lineno="10"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12" refid="struct_f_particle_data" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_f_particle_data" kindref="compound">FParticleData</ref></highlight></codeline>
+<codeline lineno="13"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="14" refid="struct_f_particle_data_1a059353bdabbbac1a3b74c7b322a5280e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;gef::Texture*&gt;<sp/><ref refid="struct_f_particle_data_1a059353bdabbbac1a3b74c7b322a5280e" kindref="member">textures</ref>;</highlight></codeline>
+<codeline lineno="15" refid="struct_f_particle_data_1a5ec56fa1191a3971105010b03473502d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="struct_f_particle_data_1a5ec56fa1191a3971105010b03473502d" kindref="member">startTime</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="16" refid="struct_f_particle_data_1a93f26d0a1f582ee5e7c48853afe34fed" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="struct_f_particle_data_1a93f26d0a1f582ee5e7c48853afe34fed" kindref="member">duration</ref><sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18" refid="struct_f_particle_data_1a555a566a858a38fac2a460b135d98fe7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="struct_f_particle_data_1a555a566a858a38fac2a460b135d98fe7" kindref="member">lingerTime</ref><sp/>=<sp/>0.25;</highlight></codeline>
+<codeline lineno="19" refid="struct_f_particle_data_1a17c186ca0a48309c1a664ccdd563684d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>gef::Vector4<sp/><ref refid="struct_f_particle_data_1a17c186ca0a48309c1a664ccdd563684d" kindref="member">scale</ref><sp/>=<sp/>gef::Vector4::kOne;</highlight></codeline>
+<codeline lineno="20"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22" refid="class_particle_actor" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_particle_actor" kindref="compound">ParticleActor</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="class_mesh_actor" kindref="compound">MeshActor</ref></highlight></codeline>
+<codeline lineno="23"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29" refid="class_particle_actor_1aac7c62cbf5b02d9f925b1384ec53b65c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_particle_actor_1aac7c62cbf5b02d9f925b1384ec53b65c" kindref="member">SetParticleData</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="struct_f_particle_data" kindref="compound">FParticleData</ref>&amp;<sp/>newData)<sp/>{<sp/>particleData<sp/>=<sp/>newData;<sp/>}</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_particle_actor_1afc281ad9a6f6803c645b077106600234" kindref="member">Play</ref>();</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_particle_actor_1a5ef5f56da7eadd86f647ab3f519061be" kindref="member">Stop</ref>();</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_particle_actor_1a5ed58a9e57286e08cf8a650aaf22f43f" kindref="member">Update</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>deltaTime)<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>bIsPlaying<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>bIsLingering<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_f_particle_data" kindref="compound">FParticleData</ref><sp/>particleData<sp/>=<sp/><ref refid="struct_f_particle_data" kindref="compound">FParticleData</ref>();</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>lingerStartTime<sp/>=<sp/>0.f;</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>lastTextureTime<sp/>=<sp/>0.f;</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>timeBetweenTextures<sp/>=<sp/>0.f;</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>currentTextureIndex<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="53"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/ParticleActor.h"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,54 @@
+\hypertarget{_sprite_actor_8h_source}{}\doxysection{Sprite\+Actor.\+h}
+\label{_sprite_actor_8h_source}\index{D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/SpriteActor.h@{D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/SpriteActor.h}}
+\mbox{\hyperlink{_sprite_actor_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{2 }
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_world_object_8h}{GameFramework/WorldObject.h}}"{}}}
+\DoxyCodeLine{4 }
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include "{}graphics/sprite.h"{}}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include "{}graphics/texture.h"{}}}
+\DoxyCodeLine{7 }
+\DoxyCodeLine{11 \textcolor{keyword}{class }\mbox{\hyperlink{class_sprite_actor}{SpriteActor}} : \textcolor{keyword}{public} \mbox{\hyperlink{class_world_object}{WorldObject}}}
+\DoxyCodeLine{12 \{}
+\DoxyCodeLine{13     \mbox{\hyperlink{_utils_8h_afc0ee7bd35c161a2d80b8e8f04fd9213}{GENERATED\_BODY}}(\mbox{\hyperlink{class_world_object}{WorldObject}}, \mbox{\hyperlink{class_sprite_actor}{SpriteActor}})}
+\DoxyCodeLine{14 }
+\DoxyCodeLine{15 \textcolor{keyword}{public}:}
+\DoxyCodeLine{16 }
+\DoxyCodeLine{20     \mbox{\hyperlink{class_sprite_actor_a7cec018143780ec6eb5c6986909702b7}{SpriteActor}}();}
+\DoxyCodeLine{21 }
+\DoxyCodeLine{29     \mbox{\hyperlink{class_sprite_actor_a7cec018143780ec6eb5c6986909702b7}{SpriteActor}}(\textcolor{keywordtype}{float} width, \textcolor{keywordtype}{float} height, gef::Texture* texture = \textcolor{keyword}{nullptr}, UInt32 colour = 0xFFFFFFFF);}
+\DoxyCodeLine{30 }
+\DoxyCodeLine{31     \mbox{\hyperlink{class_sprite_actor_a087bb8b789d29d3e7c71db58e4c2a5e0}{\string~SpriteActor}}();}
+\DoxyCodeLine{32 }
+\DoxyCodeLine{33 \textcolor{keyword}{private}:}
+\DoxyCodeLine{34 }
+\DoxyCodeLine{35     gef::Sprite* sprite = \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{36 }
+\DoxyCodeLine{37 \textcolor{keyword}{public}:}
+\DoxyCodeLine{38 }
+\DoxyCodeLine{39 \textcolor{comment}{    /************************************************************************/}}
+\DoxyCodeLine{40     \textcolor{comment}{/*                              SETTERS                                 */}}
+\DoxyCodeLine{41 \textcolor{comment}{    /************************************************************************/}}
+\DoxyCodeLine{42     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_sprite_actor_a9bee8a49bee219bae0190046e3ec5d1c}{SetTranslation}}(\textcolor{keyword}{const} gef::Vector4\& inTranslation) \textcolor{keyword}{override};}
+\DoxyCodeLine{43     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_sprite_actor_ad7d2b2ba00da6fd85e8dfd84d9aaa776}{SetRotation}}(\textcolor{keyword}{const} \textcolor{keywordtype}{float} rotation) \textcolor{keyword}{override};}
+\DoxyCodeLine{44     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_sprite_actor_a432a23017cf5aa8fe8b521ee5884c996}{SetScale}}(\textcolor{keyword}{const} gef::Vector4\& inScale);}
+\DoxyCodeLine{45     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_sprite_actor_a2c4fffd3038c47dcda6592a398f6386c}{SetTexture}}(gef::Texture* texture);}
+\DoxyCodeLine{46     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_sprite_actor_a0369b43c4507873169b90af54f002da3}{SetSprite}}(gef::Sprite* inSprite);}
+\DoxyCodeLine{47     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_sprite_actor_a34892b4383f3a0dec1c43345b19a8e8e}{SetWidth}}(\textcolor{keywordtype}{float} newWidth) \{ sprite-\/>set\_width(newWidth); \}}
+\DoxyCodeLine{48     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_sprite_actor_adf4a1510ceb0dbf66a582614b1dfaddc}{SetHeight}}(\textcolor{keywordtype}{float} newHeight) \{ sprite-\/>set\_height(newHeight); \}}
+\DoxyCodeLine{49 }
+\DoxyCodeLine{50     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_sprite_actor_a0820aad46981ac11174f67ab97433473}{Render}}() \textcolor{keyword}{override};}
+\DoxyCodeLine{51 }
+\DoxyCodeLine{52 }
+\DoxyCodeLine{53 \textcolor{comment}{    /************************************************************************/}}
+\DoxyCodeLine{54     \textcolor{comment}{/*                              GETTERS                                 */}}
+\DoxyCodeLine{55 \textcolor{comment}{    /************************************************************************/}}
+\DoxyCodeLine{56     \_\_forceinline gef::Sprite* \mbox{\hyperlink{class_sprite_actor_a530cf84805cb957b99f95fd9a8c0c1e3}{GetSprite}}()\textcolor{keyword}{ const }\{ \textcolor{keywordflow}{return} sprite; \}}
+\DoxyCodeLine{57     \_\_forceinline \textcolor{keyword}{const} \textcolor{keyword}{virtual} \textcolor{keywordtype}{float} \mbox{\hyperlink{class_sprite_actor_aaf810a489f9916ecd2d041cd61d39874}{GetRotationF}}()\textcolor{keyword}{ const override }\{ \textcolor{keywordflow}{return} sprite-\/>rotation(); \}}
+\DoxyCodeLine{58     \_\_forceinline \textcolor{keyword}{const} \textcolor{keyword}{virtual} gef::Vector4\& \mbox{\hyperlink{class_sprite_actor_a4d9d23b93afa89ec5aa8e04786252b19}{GetTranslation}}()\textcolor{keyword}{ const }\{ \textcolor{keywordflow}{return} sprite-\/>position(); \}}
+\DoxyCodeLine{59     \_\_forceinline \textcolor{keyword}{const} \textcolor{keyword}{virtual} gef::Vector4\& \mbox{\hyperlink{class_sprite_actor_a473e053ec3e6e8a460020ba3833acc2e}{GetScale}}()\textcolor{keyword}{ const }\{ \textcolor{keywordflow}{return} gef::Vector4(sprite-\/>width(), sprite-\/>height(), 0); \}}
+\DoxyCodeLine{60 \};}
+\DoxyCodeLine{61 }
+
+\end{DoxyCode}

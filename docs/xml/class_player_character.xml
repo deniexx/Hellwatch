@@ -1,0 +1,724 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="class_player_character" kind="class" language="C++" prot="public">
+    <compoundname>PlayerCharacter</compoundname>
+    <basecompoundref refid="class_mesh_actor" prot="public" virt="non-virtual">MeshActor</basecompoundref>
+    <includes refid="_player_character_8h" local="no">PlayerCharacter.h</includes>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="class_player_character_1a32fa60c60ab920a4bf3682d8d64efb2f" prot="protected" static="no" mutable="no">
+        <type><ref refid="class_player_controller" kindref="compound">PlayerController</ref> *</type>
+        <definition>PlayerController* PlayerCharacter::controller</definition>
+        <argsstring></argsstring>
+        <name>controller</name>
+        <qualifiedname>PlayerCharacter::controller</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/PlayerCharacter.h" line="37" column="18" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/PlayerCharacter.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_player_character_1a5b4fd39726d9e9ebfa6cd9803d187dd2" prot="private" static="no" mutable="no">
+        <type><ref refid="class_character_movement_component" kindref="compound">CharacterMovementComponent</ref> *</type>
+        <definition>CharacterMovementComponent* PlayerCharacter::characterMovement</definition>
+        <argsstring></argsstring>
+        <name>characterMovement</name>
+        <qualifiedname>PlayerCharacter::characterMovement</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/PlayerCharacter.h" line="62" column="28" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/PlayerCharacter.h" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_player_character_1a9af62ba067b35384d4e9815142516c7e" prot="private" static="no" mutable="no">
+        <type><ref refid="class_abilities_component" kindref="compound">AbilitiesComponent</ref> *</type>
+        <definition>AbilitiesComponent* PlayerCharacter::abilitiesComponent</definition>
+        <argsstring></argsstring>
+        <name>abilitiesComponent</name>
+        <qualifiedname>PlayerCharacter::abilitiesComponent</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/PlayerCharacter.h" line="63" column="20" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/PlayerCharacter.h" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_player_character_1a3818fd9a7618c737d872a0c3dbbf4f9d" prot="private" static="no" mutable="no">
+        <type><ref refid="class_attribute_component" kindref="compound">AttributeComponent</ref> *</type>
+        <definition>AttributeComponent* PlayerCharacter::attributes</definition>
+        <argsstring></argsstring>
+        <name>attributes</name>
+        <qualifiedname>PlayerCharacter::attributes</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/PlayerCharacter.h" line="64" column="20" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/PlayerCharacter.h" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_player_character_1a6bac75c11a6a00032b481369938f434f" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float PlayerCharacter::invincibilityEndTime</definition>
+        <argsstring></argsstring>
+        <name>invincibilityEndTime</name>
+        <qualifiedname>PlayerCharacter::invincibilityEndTime</qualifiedname>
+        <initializer>= 0.f</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/PlayerCharacter.h" line="67" column="7" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/PlayerCharacter.h" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_player_character_1a6e9d841fd37b4466f58e7e2a2b48813a" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool PlayerCharacter::bInvertMovement</definition>
+        <argsstring></argsstring>
+        <name>bInvertMovement</name>
+        <qualifiedname>PlayerCharacter::bInvertMovement</qualifiedname>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/PlayerCharacter.h" line="73" column="6" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/PlayerCharacter.h" bodystart="73" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_player_character_1a83ff09c25455ee9f9da58d1288c0c012" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; gef::Sprite &gt;</type>
+        <definition>std::vector&lt;gef::Sprite&gt; PlayerCharacter::abilitySprites</definition>
+        <argsstring></argsstring>
+        <name>abilitySprites</name>
+        <qualifiedname>PlayerCharacter::abilitySprites</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/PlayerCharacter.h" line="75" column="13" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/PlayerCharacter.h" bodystart="75" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_player_character_1af735306f8b8cf5c224045b499db8cfcf" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; gef::Sprite &gt;</type>
+        <definition>std::vector&lt;gef::Sprite&gt; PlayerCharacter::backgroundSprites</definition>
+        <argsstring></argsstring>
+        <name>backgroundSprites</name>
+        <qualifiedname>PlayerCharacter::backgroundSprites</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/PlayerCharacter.h" line="76" column="13" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/PlayerCharacter.h" bodystart="76" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_player_character_1a7967ebf9667737ea726529533faf4c80" prot="private" static="no" mutable="no">
+        <type>gef::Sprite</type>
+        <definition>gef::Sprite PlayerCharacter::background</definition>
+        <argsstring></argsstring>
+        <name>background</name>
+        <qualifiedname>PlayerCharacter::background</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/PlayerCharacter.h" line="77" column="13" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/PlayerCharacter.h" bodystart="77" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_player_character_1af3ac12a41f58d860fb716138578bd95f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>PlayerCharacter::PlayerCharacter</definition>
+        <argsstring>()</argsstring>
+        <name>PlayerCharacter</name>
+        <qualifiedname>PlayerCharacter::PlayerCharacter</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/PlayerCharacter.h" line="22" column="1" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/PlayerCharacter.cpp" bodystart="12" bodyend="17"/>
+      </memberdef>
+      <memberdef kind="function" id="class_player_character_1ad12c09c28194b1c5ed39aa4b5c21cbd6" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void PlayerCharacter::PostInit</definition>
+        <argsstring>() override</argsstring>
+        <name>PostInit</name>
+        <qualifiedname>PlayerCharacter::PostInit</qualifiedname>
+        <reimplements refid="class_world_object_1a8500a6a24c62699fa103a68349407a3f">PostInit</reimplements>
+        <briefdescription>
+<para>Override this to Initialize variables or do any necessary work when the object is created  </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/PlayerCharacter.h" line="24" column="14" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/PlayerCharacter.cpp" bodystart="19" bodyend="85"/>
+      </memberdef>
+      <memberdef kind="function" id="class_player_character_1ad681ccd09dc1ed4c0242bfa0d981d584" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void PlayerCharacter::Update</definition>
+        <argsstring>(float deltaTime) override</argsstring>
+        <name>Update</name>
+        <qualifiedname>PlayerCharacter::Update</qualifiedname>
+        <reimplements refid="class_mesh_actor_1a3743470557ddbbc88bc73e4dd283d6bf">Update</reimplements>
+        <param>
+          <type>float</type>
+          <declname>deltaTime</declname>
+        </param>
+        <briefdescription>
+<para>Update function, called every frame  </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>deltaTime</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Float variable for the frame time</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/PlayerCharacter.h" line="25" column="14" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/PlayerCharacter.cpp" bodystart="242" bodyend="247"/>
+      </memberdef>
+      <memberdef kind="function" id="class_player_character_1ac89349d4afba371e044e4c5816ba68c8" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void PlayerCharacter::TakeDamage</definition>
+        <argsstring>(float damageAmount) override</argsstring>
+        <name>TakeDamage</name>
+        <qualifiedname>PlayerCharacter::TakeDamage</qualifiedname>
+        <reimplements refid="class_mesh_actor_1a31a231014625686e8d40e561a7028931">TakeDamage</reimplements>
+        <param>
+          <type>float</type>
+          <declname>damageAmount</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/PlayerCharacter.h" line="26" column="14" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/PlayerCharacter.cpp" bodystart="379" bodyend="396"/>
+      </memberdef>
+      <memberdef kind="function" id="class_player_character_1a0415b6e06c971db05a79ae18176f6e99" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PlayerCharacter::ApplyInvincibilityForDuration</definition>
+        <argsstring>(float invincibilityDuration)</argsstring>
+        <name>ApplyInvincibilityForDuration</name>
+        <qualifiedname>PlayerCharacter::ApplyInvincibilityForDuration</qualifiedname>
+        <param>
+          <type>float</type>
+          <declname>invincibilityDuration</declname>
+        </param>
+        <briefdescription>
+<para>Applies invincibility for specified duration  </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/PlayerCharacter.h" line="31" column="6" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/PlayerCharacter.cpp" bodystart="398" bodyend="401"/>
+      </memberdef>
+      <memberdef kind="function" id="class_player_character_1abf3fd7463bf99305b85490644ff3d276" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PlayerCharacter::DrawPlayerHUD</definition>
+        <argsstring>()</argsstring>
+        <name>DrawPlayerHUD</name>
+        <qualifiedname>PlayerCharacter::DrawPlayerHUD</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/PlayerCharacter.h" line="33" column="6" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/PlayerCharacter.cpp" bodystart="249" bodyend="280"/>
+      </memberdef>
+      <memberdef kind="function" id="class_player_character_1af75d11f2b93d26046988f3316888fdbc" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_player_controller" kindref="compound">PlayerController</ref> *</type>
+        <definition>PlayerController * PlayerCharacter::GetController</definition>
+        <argsstring>() const</argsstring>
+        <name>GetController</name>
+        <qualifiedname>PlayerCharacter::GetController</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/PlayerCharacter.h" line="81" column="18" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/PlayerCharacter.h" bodystart="81" bodyend="81"/>
+      </memberdef>
+      <memberdef kind="function" id="class_player_character_1ac890f6a156f0b6f48aa9c62a6a307932" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_character_movement_component" kindref="compound">CharacterMovementComponent</ref> *</type>
+        <definition>CharacterMovementComponent * PlayerCharacter::GetCharacterMovement</definition>
+        <argsstring>() const</argsstring>
+        <name>GetCharacterMovement</name>
+        <qualifiedname>PlayerCharacter::GetCharacterMovement</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/PlayerCharacter.h" line="82" column="28" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/PlayerCharacter.h" bodystart="82" bodyend="82"/>
+      </memberdef>
+      <memberdef kind="function" id="class_player_character_1a35f60a491cce521c070536f0c9eec6f6" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_attribute_component" kindref="compound">AttributeComponent</ref> *</type>
+        <definition>AttributeComponent * PlayerCharacter::GetCharacterAttributes</definition>
+        <argsstring>() const</argsstring>
+        <name>GetCharacterAttributes</name>
+        <qualifiedname>PlayerCharacter::GetCharacterAttributes</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/PlayerCharacter.h" line="83" column="20" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/PlayerCharacter.h" bodystart="83" bodyend="83"/>
+      </memberdef>
+      <memberdef kind="function" id="class_player_character_1a1b142fd480a0b6326069058a0109668a" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_abilities_component" kindref="compound">AbilitiesComponent</ref> *</type>
+        <definition>AbilitiesComponent * PlayerCharacter::GetCharacterAbilities</definition>
+        <argsstring>() const</argsstring>
+        <name>GetCharacterAbilities</name>
+        <qualifiedname>PlayerCharacter::GetCharacterAbilities</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/PlayerCharacter.h" line="84" column="20" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/PlayerCharacter.h" bodystart="84" bodyend="84"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_player_character_1a71db2dd63c1e1ee33c1636d07c663bd2" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PlayerCharacter::MoveLeft</definition>
+        <argsstring>()</argsstring>
+        <name>MoveLeft</name>
+        <qualifiedname>PlayerCharacter::MoveLeft</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/PlayerCharacter.h" line="42" column="6" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/PlayerCharacter.cpp" bodystart="282" bodyend="286"/>
+      </memberdef>
+      <memberdef kind="function" id="class_player_character_1a27a3a3bd797b494f4262a0d9cc23a7da" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PlayerCharacter::MoveRight</definition>
+        <argsstring>()</argsstring>
+        <name>MoveRight</name>
+        <qualifiedname>PlayerCharacter::MoveRight</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/PlayerCharacter.h" line="43" column="6" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/PlayerCharacter.cpp" bodystart="288" bodyend="292"/>
+      </memberdef>
+      <memberdef kind="function" id="class_player_character_1a3e2db13c832d8ad72f91f35626318029" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PlayerCharacter::MoveForward</definition>
+        <argsstring>()</argsstring>
+        <name>MoveForward</name>
+        <qualifiedname>PlayerCharacter::MoveForward</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/PlayerCharacter.h" line="45" column="6" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/PlayerCharacter.cpp" bodystart="294" bodyend="298"/>
+      </memberdef>
+      <memberdef kind="function" id="class_player_character_1a66f35da8ae003995f4f9984edf1aa503" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PlayerCharacter::MoveBack</definition>
+        <argsstring>()</argsstring>
+        <name>MoveBack</name>
+        <qualifiedname>PlayerCharacter::MoveBack</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/PlayerCharacter.h" line="46" column="6" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/PlayerCharacter.cpp" bodystart="300" bodyend="304"/>
+      </memberdef>
+      <memberdef kind="function" id="class_player_character_1ae3414c7f6a3ecb97de258a3c48e5042c" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PlayerCharacter::ActivateAbility1</definition>
+        <argsstring>()</argsstring>
+        <name>ActivateAbility1</name>
+        <qualifiedname>PlayerCharacter::ActivateAbility1</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/PlayerCharacter.h" line="48" column="6" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/PlayerCharacter.cpp" bodystart="306" bodyend="309"/>
+      </memberdef>
+      <memberdef kind="function" id="class_player_character_1abf9975cee8626a88bfda0083d5ec32ab" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PlayerCharacter::ActivateAbility2</definition>
+        <argsstring>()</argsstring>
+        <name>ActivateAbility2</name>
+        <qualifiedname>PlayerCharacter::ActivateAbility2</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/PlayerCharacter.h" line="49" column="6" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/PlayerCharacter.cpp" bodystart="311" bodyend="314"/>
+      </memberdef>
+      <memberdef kind="function" id="class_player_character_1af678379492ff14630742460e81d191b7" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PlayerCharacter::ActivateAbility3</definition>
+        <argsstring>()</argsstring>
+        <name>ActivateAbility3</name>
+        <qualifiedname>PlayerCharacter::ActivateAbility3</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/PlayerCharacter.h" line="50" column="6" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/PlayerCharacter.cpp" bodystart="316" bodyend="319"/>
+      </memberdef>
+      <memberdef kind="function" id="class_player_character_1a5a51435bd69ade9c5e2ea48319f6299d" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PlayerCharacter::ActivateAbility4</definition>
+        <argsstring>()</argsstring>
+        <name>ActivateAbility4</name>
+        <qualifiedname>PlayerCharacter::ActivateAbility4</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/PlayerCharacter.h" line="51" column="6" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/PlayerCharacter.cpp" bodystart="321" bodyend="324"/>
+      </memberdef>
+      <memberdef kind="function" id="class_player_character_1a294eaf7133b810dc22a0caf95a98dcb1" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PlayerCharacter::OnControllerLeftStick</definition>
+        <argsstring>(gef::Vector2 delta)</argsstring>
+        <name>OnControllerLeftStick</name>
+        <qualifiedname>PlayerCharacter::OnControllerLeftStick</qualifiedname>
+        <param>
+          <type>gef::Vector2</type>
+          <declname>delta</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/PlayerCharacter.h" line="53" column="6" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/PlayerCharacter.cpp" bodystart="326" bodyend="352"/>
+      </memberdef>
+      <memberdef kind="function" id="class_player_character_1ae91b2ed2e883c4e311568689ba946fba" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PlayerCharacter::OnControllerActivateAbility1</definition>
+        <argsstring>(gef::Vector2 delta)</argsstring>
+        <name>OnControllerActivateAbility1</name>
+        <qualifiedname>PlayerCharacter::OnControllerActivateAbility1</qualifiedname>
+        <param>
+          <type>gef::Vector2</type>
+          <declname>delta</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/PlayerCharacter.h" line="54" column="6" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/PlayerCharacter.cpp" bodystart="354" bodyend="357"/>
+      </memberdef>
+      <memberdef kind="function" id="class_player_character_1aad1ce1a4a76bff1adc2adde12d89a25d" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PlayerCharacter::OnControllerActivateAbility2</definition>
+        <argsstring>(gef::Vector2 delta)</argsstring>
+        <name>OnControllerActivateAbility2</name>
+        <qualifiedname>PlayerCharacter::OnControllerActivateAbility2</qualifiedname>
+        <param>
+          <type>gef::Vector2</type>
+          <declname>delta</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/PlayerCharacter.h" line="55" column="6" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/PlayerCharacter.cpp" bodystart="359" bodyend="362"/>
+      </memberdef>
+      <memberdef kind="function" id="class_player_character_1aa44656f4422f9b2dd5b9f662eb3f7add" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PlayerCharacter::OnControllerActivateAbility3</definition>
+        <argsstring>(gef::Vector2 delta)</argsstring>
+        <name>OnControllerActivateAbility3</name>
+        <qualifiedname>PlayerCharacter::OnControllerActivateAbility3</qualifiedname>
+        <param>
+          <type>gef::Vector2</type>
+          <declname>delta</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/PlayerCharacter.h" line="56" column="6" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/PlayerCharacter.cpp" bodystart="364" bodyend="367"/>
+      </memberdef>
+      <memberdef kind="function" id="class_player_character_1a48ccee58814a3244be3ba5f8ba0b056c" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PlayerCharacter::OnControllerActivateAbility4</definition>
+        <argsstring>(gef::Vector2 delta)</argsstring>
+        <name>OnControllerActivateAbility4</name>
+        <qualifiedname>PlayerCharacter::OnControllerActivateAbility4</qualifiedname>
+        <param>
+          <type>gef::Vector2</type>
+          <declname>delta</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/PlayerCharacter.h" line="57" column="6" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/PlayerCharacter.cpp" bodystart="369" bodyend="372"/>
+      </memberdef>
+      <memberdef kind="function" id="class_player_character_1a0da3ea447b3274eef8d2aab1ca9a22d2" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PlayerCharacter::OnControllerInvertUpDownMovement</definition>
+        <argsstring>(gef::Vector2 delta)</argsstring>
+        <name>OnControllerInvertUpDownMovement</name>
+        <qualifiedname>PlayerCharacter::OnControllerInvertUpDownMovement</qualifiedname>
+        <param>
+          <type>gef::Vector2</type>
+          <declname>delta</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/PlayerCharacter.h" line="58" column="6" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/PlayerCharacter.cpp" bodystart="374" bodyend="377"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_player_character_1a155ebfbab514ce942b15a9c23df7b1f0" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PlayerCharacter::BindKeys</definition>
+        <argsstring>()</argsstring>
+        <name>BindKeys</name>
+        <qualifiedname>PlayerCharacter::BindKeys</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/PlayerCharacter.h" line="69" column="6" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/PlayerCharacter.cpp" bodystart="87" bodyend="167"/>
+      </memberdef>
+      <memberdef kind="function" id="class_player_character_1aac04cdc5f51279db6e72bec94c96aa4f" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PlayerCharacter::InitializeComponents</definition>
+        <argsstring>()</argsstring>
+        <name>InitializeComponents</name>
+        <qualifiedname>PlayerCharacter::InitializeComponents</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/PlayerCharacter.h" line="70" column="6" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/PlayerCharacter.cpp" bodystart="169" bodyend="191"/>
+      </memberdef>
+      <memberdef kind="function" id="class_player_character_1a0c31ceb8a05bdd185f6b8e853a228b89" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PlayerCharacter::InitializeAbilitySystem</definition>
+        <argsstring>()</argsstring>
+        <name>InitializeAbilitySystem</name>
+        <qualifiedname>PlayerCharacter::InitializeAbilitySystem</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/PlayerCharacter.h" line="71" column="6" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/PlayerCharacter.cpp" bodystart="193" bodyend="240"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>The class that the player uses during the GameLoop <ref refid="namespace_game_state" kindref="compound">GameState</ref>  </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="4">
+        <label>IDamagable</label>
+        <link refid="class_i_damagable"/>
+      </node>
+      <node id="2">
+        <label>MeshActor</label>
+        <link refid="class_mesh_actor"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>PlayerCharacter</label>
+        <link refid="class_player_character"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>WorldObject</label>
+        <link refid="class_world_object"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="4">
+        <label>IDamagable</label>
+        <link refid="class_i_damagable"/>
+      </node>
+      <node id="2">
+        <label>MeshActor</label>
+        <link refid="class_mesh_actor"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>PlayerCharacter</label>
+        <link refid="class_player_character"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>controller</edgelabel>
+        </childnode>
+      </node>
+      <node id="5">
+        <label>PlayerController</label>
+        <link refid="class_player_controller"/>
+      </node>
+      <node id="3">
+        <label>WorldObject</label>
+        <link refid="class_world_object"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>owningObject</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/PlayerCharacter.h" line="16" column="1" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/PlayerCharacter.h" bodystart="17" bodyend="86"/>
+    <listofallmembers>
+      <member refid="class_player_character_1a9af62ba067b35384d4e9815142516c7e" prot="private" virt="non-virtual"><scope>PlayerCharacter</scope><name>abilitiesComponent</name></member>
+      <member refid="class_player_character_1a83ff09c25455ee9f9da58d1288c0c012" prot="private" virt="non-virtual"><scope>PlayerCharacter</scope><name>abilitySprites</name></member>
+      <member refid="class_player_character_1ae3414c7f6a3ecb97de258a3c48e5042c" prot="protected" virt="non-virtual"><scope>PlayerCharacter</scope><name>ActivateAbility1</name></member>
+      <member refid="class_player_character_1abf9975cee8626a88bfda0083d5ec32ab" prot="protected" virt="non-virtual"><scope>PlayerCharacter</scope><name>ActivateAbility2</name></member>
+      <member refid="class_player_character_1af678379492ff14630742460e81d191b7" prot="protected" virt="non-virtual"><scope>PlayerCharacter</scope><name>ActivateAbility3</name></member>
+      <member refid="class_player_character_1a5a51435bd69ade9c5e2ea48319f6299d" prot="protected" virt="non-virtual"><scope>PlayerCharacter</scope><name>ActivateAbility4</name></member>
+      <member refid="class_player_character_1a0415b6e06c971db05a79ae18176f6e99" prot="public" virt="non-virtual"><scope>PlayerCharacter</scope><name>ApplyInvincibilityForDuration</name></member>
+      <member refid="class_player_character_1a3818fd9a7618c737d872a0c3dbbf4f9d" prot="private" virt="non-virtual"><scope>PlayerCharacter</scope><name>attributes</name></member>
+      <member refid="class_player_character_1a7967ebf9667737ea726529533faf4c80" prot="private" virt="non-virtual"><scope>PlayerCharacter</scope><name>background</name></member>
+      <member refid="class_player_character_1af735306f8b8cf5c224045b499db8cfcf" prot="private" virt="non-virtual"><scope>PlayerCharacter</scope><name>backgroundSprites</name></member>
+      <member refid="class_world_object_1ac10cc37682a3a3cce8405411fbd8f4c3" prot="protected" virt="non-virtual"><scope>PlayerCharacter</scope><name>bDisableUpdate</name></member>
+      <member refid="class_player_character_1a155ebfbab514ce942b15a9c23df7b1f0" prot="private" virt="non-virtual"><scope>PlayerCharacter</scope><name>BindKeys</name></member>
+      <member refid="class_player_character_1a6e9d841fd37b4466f58e7e2a2b48813a" prot="private" virt="non-virtual"><scope>PlayerCharacter</scope><name>bInvertMovement</name></member>
+      <member refid="class_world_object_1a60c2b1f707b5694f97dd950996d05e11" prot="protected" virt="non-virtual"><scope>PlayerCharacter</scope><name>bMarkedForDelete</name></member>
+      <member refid="class_mesh_actor_1a858b488e44d63ff8eda02e173fa4da7a" prot="protected" virt="non-virtual"><scope>PlayerCharacter</scope><name>bOverrideMaterial</name></member>
+      <member refid="class_world_object_1a4c83c0d8e3817aac3ef2080ec0972802" prot="protected" virt="non-virtual"><scope>PlayerCharacter</scope><name>BuildTransform</name></member>
+      <member refid="class_player_character_1a5b4fd39726d9e9ebfa6cd9803d187dd2" prot="private" virt="non-virtual"><scope>PlayerCharacter</scope><name>characterMovement</name></member>
+      <member refid="class_world_object_1a025ba78ec5cc2607f7e62750a7c37749" prot="protected" virt="non-virtual"><scope>PlayerCharacter</scope><name>collisionBody</name></member>
+      <member refid="class_player_character_1a32fa60c60ab920a4bf3682d8d64efb2f" prot="protected" virt="non-virtual"><scope>PlayerCharacter</scope><name>controller</name></member>
+      <member refid="class_mesh_actor_1af9b992a02356ead76d3c36a031bf6eea" prot="protected" virt="non-virtual"><scope>PlayerCharacter</scope><name>CreateComponent</name></member>
+      <member refid="class_world_object_1a650a599e9ffa751eaba296c4ef6ec2d2" prot="public" virt="non-virtual"><scope>PlayerCharacter</scope><name>DisableUpdate</name></member>
+      <member refid="class_player_character_1abf3fd7463bf99305b85490644ff3d276" prot="public" virt="non-virtual"><scope>PlayerCharacter</scope><name>DrawPlayerHUD</name></member>
+      <member refid="class_world_object_1a42e101b6adf4911396d95acc5b1741d8" prot="public" virt="non-virtual"><scope>PlayerCharacter</scope><name>EnableUpdate</name></member>
+      <member refid="class_player_character_1a1b142fd480a0b6326069058a0109668a" prot="public" virt="non-virtual"><scope>PlayerCharacter</scope><name>GetCharacterAbilities</name></member>
+      <member refid="class_player_character_1a35f60a491cce521c070536f0c9eec6f6" prot="public" virt="non-virtual"><scope>PlayerCharacter</scope><name>GetCharacterAttributes</name></member>
+      <member refid="class_player_character_1ac890f6a156f0b6f48aa9c62a6a307932" prot="public" virt="non-virtual"><scope>PlayerCharacter</scope><name>GetCharacterMovement</name></member>
+      <member refid="class_world_object_1aa3b5f5e5e1ed26c94265854e2858bdee" prot="public" virt="non-virtual"><scope>PlayerCharacter</scope><name>GetCollisionBody</name></member>
+      <member refid="class_mesh_actor_1a639c1c33b5f22210351fd94ec7d78c43" prot="public" virt="non-virtual"><scope>PlayerCharacter</scope><name>GetComponent</name></member>
+      <member refid="class_mesh_actor_1a7eef4e0218a4363460a0375585037012" prot="public" virt="non-virtual"><scope>PlayerCharacter</scope><name>GetComponents</name></member>
+      <member refid="class_mesh_actor_1aa824a26a7c24d187f15aa3e9beba11f6" prot="public" virt="non-virtual"><scope>PlayerCharacter</scope><name>GetComponents</name></member>
+      <member refid="class_player_character_1af75d11f2b93d26046988f3316888fdbc" prot="public" virt="non-virtual"><scope>PlayerCharacter</scope><name>GetController</name></member>
+      <member refid="class_world_object_1aaebbb0abbabef79ad542f01db4ef6101" prot="public" virt="non-virtual"><scope>PlayerCharacter</scope><name>GetIsMarkedForDelete</name></member>
+      <member refid="class_mesh_actor_1a906146d34e290e3bd7132a4dcbfad8a1" prot="public" virt="non-virtual"><scope>PlayerCharacter</scope><name>GetMesh</name></member>
+      <member refid="class_mesh_actor_1a03ae156a0a281ff9eb128c7c7b44d983" prot="public" virt="non-virtual"><scope>PlayerCharacter</scope><name>GetMeshName</name></member>
+      <member refid="class_world_object_1a0fdf372cdda0fb026916b60e19e657a0" prot="public" virt="non-virtual"><scope>PlayerCharacter</scope><name>GetOwner</name></member>
+      <member refid="class_world_object_1a271e4b4870fadf60e285576f94b31e79" prot="public" virt="virtual"><scope>PlayerCharacter</scope><name>GetRotation</name></member>
+      <member refid="class_world_object_1aa959995cc385843f1e2b0139e4413ab5" prot="public" virt="virtual"><scope>PlayerCharacter</scope><name>GetRotationF</name></member>
+      <member refid="class_world_object_1a223b3653f965b7698ec28c9b4fc84e28" prot="public" virt="virtual"><scope>PlayerCharacter</scope><name>GetScale</name></member>
+      <member refid="class_world_object_1a1302aea00b9a5f348459f55e9dd50725" prot="public" virt="non-virtual"><scope>PlayerCharacter</scope><name>GetTransform</name></member>
+      <member refid="class_world_object_1a9967baa65719f1418641598a244306a5" prot="public" virt="virtual"><scope>PlayerCharacter</scope><name>GetTranslation</name></member>
+      <member refid="class_world_object_1a9f76e2def47f4d6be6bafb330ac0394b" prot="public" virt="non-virtual"><scope>PlayerCharacter</scope><name>ID</name></member>
+      <member refid="class_world_object_1aa2d0bc51a9b2dac1930c37e2401e8934" prot="public" virt="non-virtual"><scope>PlayerCharacter</scope><name>Init</name></member>
+      <member refid="class_player_character_1a0c31ceb8a05bdd185f6b8e853a228b89" prot="private" virt="non-virtual"><scope>PlayerCharacter</scope><name>InitializeAbilitySystem</name></member>
+      <member refid="class_player_character_1aac04cdc5f51279db6e72bec94c96aa4f" prot="private" virt="non-virtual"><scope>PlayerCharacter</scope><name>InitializeComponents</name></member>
+      <member refid="class_player_character_1a6bac75c11a6a00032b481369938f434f" prot="private" virt="non-virtual"><scope>PlayerCharacter</scope><name>invincibilityEndTime</name></member>
+      <member refid="class_world_object_1a4402fa17dfd062fc97750d581d4f774b" prot="public" virt="non-virtual"><scope>PlayerCharacter</scope><name>MarkForDelete</name></member>
+      <member refid="class_mesh_actor_1a8585ace5ca84b7903f216c77661a5787" prot="protected" virt="non-virtual"><scope>PlayerCharacter</scope><name>material</name></member>
+      <member refid="class_mesh_actor_1af40424bf59441cfb3362f8ef3e1fbb68" prot="public" virt="non-virtual"><scope>PlayerCharacter</scope><name>MeshActor</name></member>
+      <member refid="class_mesh_actor_1aed30e8021f75c3221ab6f02cb1fcfcba" prot="public" virt="non-virtual"><scope>PlayerCharacter</scope><name>MeshActor</name></member>
+      <member refid="class_mesh_actor_1a8eb71848a77c1c7ffb0f88d526a633e3" prot="protected" virt="non-virtual"><scope>PlayerCharacter</scope><name>meshName</name></member>
+      <member refid="class_player_character_1a66f35da8ae003995f4f9984edf1aa503" prot="protected" virt="non-virtual"><scope>PlayerCharacter</scope><name>MoveBack</name></member>
+      <member refid="class_player_character_1a3e2db13c832d8ad72f91f35626318029" prot="protected" virt="non-virtual"><scope>PlayerCharacter</scope><name>MoveForward</name></member>
+      <member refid="class_player_character_1a71db2dd63c1e1ee33c1636d07c663bd2" prot="protected" virt="non-virtual"><scope>PlayerCharacter</scope><name>MoveLeft</name></member>
+      <member refid="class_player_character_1a27a3a3bd797b494f4262a0d9cc23a7da" prot="protected" virt="non-virtual"><scope>PlayerCharacter</scope><name>MoveRight</name></member>
+      <member refid="class_world_object_1a7c563531a541e9f5ff4193443cedd515" prot="public" virt="virtual"><scope>PlayerCharacter</scope><name>OnCollision</name></member>
+      <member refid="class_player_character_1ae91b2ed2e883c4e311568689ba946fba" prot="protected" virt="non-virtual"><scope>PlayerCharacter</scope><name>OnControllerActivateAbility1</name></member>
+      <member refid="class_player_character_1aad1ce1a4a76bff1adc2adde12d89a25d" prot="protected" virt="non-virtual"><scope>PlayerCharacter</scope><name>OnControllerActivateAbility2</name></member>
+      <member refid="class_player_character_1aa44656f4422f9b2dd5b9f662eb3f7add" prot="protected" virt="non-virtual"><scope>PlayerCharacter</scope><name>OnControllerActivateAbility3</name></member>
+      <member refid="class_player_character_1a48ccee58814a3244be3ba5f8ba0b056c" prot="protected" virt="non-virtual"><scope>PlayerCharacter</scope><name>OnControllerActivateAbility4</name></member>
+      <member refid="class_player_character_1a0da3ea447b3274eef8d2aab1ca9a22d2" prot="protected" virt="non-virtual"><scope>PlayerCharacter</scope><name>OnControllerInvertUpDownMovement</name></member>
+      <member refid="class_player_character_1a294eaf7133b810dc22a0caf95a98dcb1" prot="protected" virt="non-virtual"><scope>PlayerCharacter</scope><name>OnControllerLeftStick</name></member>
+      <member refid="class_world_object_1a8917ba1d61e12c12f7246c7b95cd4094" prot="protected" virt="non-virtual"><scope>PlayerCharacter</scope><name>owningObject</name></member>
+      <member refid="class_player_character_1af3ac12a41f58d860fb716138578bd95f" prot="public" virt="non-virtual"><scope>PlayerCharacter</scope><name>PlayerCharacter</name></member>
+      <member refid="class_player_character_1ad12c09c28194b1c5ed39aa4b5c21cbd6" prot="public" virt="virtual"><scope>PlayerCharacter</scope><name>PostInit</name></member>
+      <member refid="class_mesh_actor_1a9c8f4860ae03966a27c3ee22c2a2b5a1" prot="public" virt="virtual"><scope>PlayerCharacter</scope><name>Render</name></member>
+      <member refid="class_world_object_1a519b69f0419703cfbe08580d4b2ab408" prot="protected" virt="non-virtual"><scope>PlayerCharacter</scope><name>rotationVec</name></member>
+      <member refid="class_world_object_1a45f28fb0c7cf14a6c92ab72eaa4eb9a9" prot="protected" virt="non-virtual"><scope>PlayerCharacter</scope><name>scale</name></member>
+      <member refid="class_world_object_1a8817deac42a357d2ed476791c7b76511" prot="public" virt="non-virtual"><scope>PlayerCharacter</scope><name>SetCollisionBody</name></member>
+      <member refid="class_mesh_actor_1a0217e1969a68278f2548e1553e2ab92b" prot="public" virt="non-virtual"><scope>PlayerCharacter</scope><name>SetMaterial</name></member>
+      <member refid="class_mesh_actor_1a25950ae28c6abf2e9e3dc64cfa19c0c7" prot="public" virt="non-virtual"><scope>PlayerCharacter</scope><name>SetMesh</name></member>
+      <member refid="class_mesh_actor_1a86f27025c3484267804fdaa5e6082fd4" prot="public" virt="non-virtual"><scope>PlayerCharacter</scope><name>SetMeshName</name></member>
+      <member refid="class_mesh_actor_1a295a747ea81d8b09e084c488ab183fbb" prot="public" virt="virtual"><scope>PlayerCharacter</scope><name>SetRotation</name></member>
+      <member refid="class_world_object_1ad73836d8146cc9e1d475eb74fb05481a" prot="public" virt="virtual" ambiguityscope="WorldObject::"><scope>PlayerCharacter</scope><name>SetRotation</name></member>
+      <member refid="class_world_object_1ae00d341e9ac8909374dd556aaecbdb46" prot="public" virt="virtual"><scope>PlayerCharacter</scope><name>SetScale</name></member>
+      <member refid="class_world_object_1a830b64bbf6df3fc50284b0316c124133" prot="public" virt="virtual"><scope>PlayerCharacter</scope><name>SetTranslation</name></member>
+      <member refid="class_world_object_1a78b0b88900685e80feffc6921fd9f370" prot="public" virt="non-virtual"><scope>PlayerCharacter</scope><name>ShouldUpdate</name></member>
+      <member refid="class_player_character_1ac89349d4afba371e044e4c5816ba68c8" prot="public" virt="virtual"><scope>PlayerCharacter</scope><name>TakeDamage</name></member>
+      <member refid="class_world_object_1a9e5ac0cc278f5766b6020950fdabbe75" prot="protected" virt="non-virtual"><scope>PlayerCharacter</scope><name>transformMat</name></member>
+      <member refid="class_world_object_1a78bd9162f55826c5c68706d688578cf8" prot="protected" virt="non-virtual"><scope>PlayerCharacter</scope><name>translation</name></member>
+      <member refid="class_player_character_1ad681ccd09dc1ed4c0242bfa0d981d584" prot="public" virt="virtual"><scope>PlayerCharacter</scope><name>Update</name></member>
+      <member refid="class_world_object_1a632d2e78acdcbc0aef09951134340d4e" prot="public" virt="non-virtual"><scope>PlayerCharacter</scope><name>WorldObject</name></member>
+      <member refid="class_world_object_1a287e5b87a26133cd35f3015268d2a5a3" prot="public" virt="non-virtual"><scope>PlayerCharacter</scope><name>~WorldObject</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_obj__mesh__loader_8h_source" xml:lang="en-US">
+<title>D:/Uni/CMP208/Hellwatch/obj_mesh_loader.h</title>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered">1 <emphasis role="preprocessor">#pragma&#32;once</emphasis>
+2 
+3 <emphasis role="preprocessor">#include&#32;&lt;gef.h&gt;</emphasis>
+4 <emphasis role="preprocessor">#include&#32;&lt;map&gt;</emphasis>
+5 <emphasis role="preprocessor">#include&#32;&lt;string&gt;</emphasis>
+6 <emphasis role="preprocessor">#include&#32;&lt;vector&gt;</emphasis>
+7 <emphasis role="preprocessor">#include&#32;&lt;maths/vector4.h&gt;</emphasis>
+8 <emphasis role="preprocessor">#include&#32;&lt;maths/vector2.h&gt;</emphasis>
+9 
+10 <emphasis role="keyword">namespace&#32;</emphasis><link linkend="_namespacegef">gef</link>
+11 {
+12 &#32;&#32;&#32;&#32;<emphasis role="keyword">class&#32;</emphasis>Platform;
+13 &#32;&#32;&#32;&#32;<emphasis role="keyword">class&#32;</emphasis>Model;
+14 &#32;&#32;&#32;&#32;<emphasis role="keyword">class&#32;</emphasis>Texture;
+15 &#32;&#32;&#32;&#32;<emphasis role="keyword">class&#32;</emphasis>Mesh;
+16 &#32;&#32;&#32;&#32;<emphasis role="keyword">class&#32;</emphasis>Material;
+17 }
+18 
+19 <emphasis role="keyword">typedef</emphasis>&#32;std::map&lt;std::string,&#32;gef::Mesh*&gt;&#32;<link linkend="_obj__mesh__loader_8h_1ab6d74e55cf8354fe68dd64bd265a814e">MeshMap</link>;
+20 
+21 <emphasis role="keyword">class&#32;</emphasis><link linkend="_class_o_b_j_mesh_loader">OBJMeshLoader</link>
+22 {
+23 <emphasis role="keyword">public</emphasis>:
+24 &#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_class_o_b_j_mesh_loader_1a8c7c99695bfcb18f362f68da3c8fe393">Load</link>(<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">char</emphasis>*&#32;filename,&#32;gef::Platform&amp;&#32;platform,&#32;<link linkend="_obj__mesh__loader_8h_1ab6d74e55cf8354fe68dd64bd265a814e">MeshMap</link>&amp;&#32;mesh_map);
+25 &#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">const</emphasis>&#32;std::string&amp;&#32;<link linkend="_class_o_b_j_mesh_loader_1ad7a08d9198699f8f8d38312b317c733e">GetLastError</link>()&#32;{&#32;<emphasis role="keywordflow">return</emphasis>&#32;last_error_;&#32;}
+26 <emphasis role="keyword">private</emphasis>:
+27 &#32;&#32;&#32;&#32;<emphasis role="keyword">const</emphasis>&#32;std::string&#32;GetFolderName(<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">char</emphasis>*&#32;filename);
+28 &#32;&#32;&#32;&#32;gef::Mesh*&#32;OBJMeshLoader::CreateMesh(gef::Platform&amp;&#32;platform,&#32;std::vector&lt;Int32&gt;&amp;&#32;face_indices,&#32;std::vector&lt;gef::Vector4&gt;&amp;&#32;positions,&#32;std::vector&lt;gef::Vector4&gt;&amp;&#32;normals,&#32;std::vector&lt;gef::Vector2&gt;&amp;&#32;uvs,&#32;std::vector&lt;gef::Material*&gt;&amp;&#32;material_list,&#32;std::vector&lt;Int32&gt;&amp;&#32;primitive_indices,&#32;std::vector&lt;Int32&gt;&amp;&#32;texture_indices);
+29 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;LoadMaterials(gef::Platform&amp;&#32;platform,&#32;<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">char</emphasis>*&#32;filename,&#32;<emphasis role="keyword">const</emphasis>&#32;std::string&amp;&#32;folder_name,&#32;std::map&lt;std::string,&#32;Int32&gt;&amp;&#32;materials,&#32;std::vector&lt;gef::Material*&gt;&amp;&#32;material_list);
+30 <emphasis role="keyword">private</emphasis>:
+31 &#32;&#32;&#32;&#32;std::string&#32;last_error_;
+32 };
+33 
+</programlisting></section>

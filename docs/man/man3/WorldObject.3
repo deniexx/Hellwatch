@@ -1,0 +1,264 @@
+.TH "WorldObject" 3 "Thu Apr 27 2023" "Hellwatch" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+WorldObject
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <WorldObject\&.h>\fP
+.PP
+Inherited by \fBMeshActor\fP, and \fBSpriteActor\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBWorldObject\fP ()"
+.br
+.RI "Default constructor  "
+.ti -1c
+.RI "\fB~WorldObject\fP ()"
+.br
+.ti -1c
+.RI "void \fBInit\fP (\fBWorldObject\fP *owner=nullptr)"
+.br
+.RI "This function initializes the world object, should only be called by the spawn object scene function\&.  "
+.ti -1c
+.RI "virtual void \fBPostInit\fP ()"
+.br
+.RI "Override this to Initialize variables or do any necessary work when the object is created  "
+.ti -1c
+.RI "virtual void \fBUpdate\fP (float deltaTime)"
+.br
+.RI "Update function, called every frame  "
+.ti -1c
+.RI "virtual void \fBRender\fP ()"
+.br
+.RI "Renders the object  "
+.ti -1c
+.RI "virtual void \fBOnCollision\fP (b2Body *OtherBody)"
+.br
+.RI "Function to respond to collision  "
+.ti -1c
+.RI "virtual void \fBSetTranslation\fP (const gef::Vector4 &inTranslation)"
+.br
+.ti -1c
+.RI "virtual void \fBSetRotation\fP (const gef::Vector4 &inRotation)"
+.br
+.ti -1c
+.RI "virtual void \fBSetRotation\fP (const float inRotation)"
+.br
+.ti -1c
+.RI "virtual void \fBSetScale\fP (const gef::Vector4 &inScale)"
+.br
+.ti -1c
+.RI "void \fBSetCollisionBody\fP (b2Body *inCollisionBody)"
+.br
+.ti -1c
+.RI "__forceinline virtual const gef::Vector4 & \fBGetTranslation\fP () const"
+.br
+.ti -1c
+.RI "__forceinline virtual const gef::Vector4 & \fBGetRotation\fP () const"
+.br
+.ti -1c
+.RI "__forceinline virtual const float \fBGetRotationF\fP () const"
+.br
+.ti -1c
+.RI "__forceinline virtual const gef::Vector4 & \fBGetScale\fP () const"
+.br
+.ti -1c
+.RI "__forceinline const gef::Matrix44 & \fBGetTransform\fP () const"
+.br
+.ti -1c
+.RI "__forceinline \fBWorldObject\fP * \fBGetOwner\fP () const"
+.br
+.ti -1c
+.RI "__forceinline b2Body * \fBGetCollisionBody\fP () const"
+.br
+.ti -1c
+.RI "__forceinline void \fBMarkForDelete\fP ()"
+.br
+.ti -1c
+.RI "__forceinline void \fBDisableUpdate\fP ()"
+.br
+.ti -1c
+.RI "__forceinline void \fBEnableUpdate\fP ()"
+.br
+.ti -1c
+.RI "__forceinline bool \fBShouldUpdate\fP ()"
+.br
+.ti -1c
+.RI "__forceinline const bool \fBGetIsMarkedForDelete\fP () const"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "int \fBID\fP = \fBNO_ID\fP"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBBuildTransform\fP ()"
+.br
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "b2Body * \fBcollisionBody\fP = nullptr"
+.br
+.ti -1c
+.RI "gef::Matrix44 \fBtransformMat\fP"
+.br
+.ti -1c
+.RI "\fBWorldObject\fP * \fBowningObject\fP"
+.br
+.ti -1c
+.RI "gef::Vector4 \fBtranslation\fP"
+.br
+.ti -1c
+.RI "gef::Vector4 \fBscale\fP"
+.br
+.ti -1c
+.RI "gef::Vector4 \fBrotationVec\fP"
+.br
+.ti -1c
+.RI "bool \fBbMarkedForDelete\fP = false"
+.br
+.ti -1c
+.RI "bool \fBbDisableUpdate\fP = false"
+.br
+.in -1c
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "WorldObject::WorldObject ()"
+
+.PP
+Default constructor  
+.SS "WorldObject::~WorldObject ()"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "void WorldObject::BuildTransform ()\fC [protected]\fP"
+
+.SS "__forceinline void WorldObject::DisableUpdate ()\fC [inline]\fP"
+
+.SS "__forceinline void WorldObject::EnableUpdate ()\fC [inline]\fP"
+
+.SS "__forceinline b2Body * WorldObject::GetCollisionBody () const\fC [inline]\fP"
+
+.SS "__forceinline const bool WorldObject::GetIsMarkedForDelete () const\fC [inline]\fP"
+
+.SS "__forceinline \fBWorldObject\fP * WorldObject::GetOwner () const\fC [inline]\fP"
+
+.SS "__forceinline virtual const gef::Vector4 & WorldObject::GetRotation () const\fC [inline]\fP, \fC [virtual]\fP"
+
+.SS "__forceinline virtual const float WorldObject::GetRotationF () const\fC [inline]\fP, \fC [virtual]\fP"
+
+.PP
+Reimplemented in \fBSpriteActor\fP\&.
+.SS "__forceinline virtual const gef::Vector4 & WorldObject::GetScale () const\fC [inline]\fP, \fC [virtual]\fP"
+
+.PP
+Reimplemented in \fBSpriteActor\fP\&.
+.SS "__forceinline const gef::Matrix44 & WorldObject::GetTransform () const\fC [inline]\fP"
+
+.SS "__forceinline virtual const gef::Vector4 & WorldObject::GetTranslation () const\fC [inline]\fP, \fC [virtual]\fP"
+
+.PP
+Reimplemented in \fBSpriteActor\fP\&.
+.SS "void WorldObject::Init (\fBWorldObject\fP * owner = \fCnullptr\fP)"
+
+.PP
+This function initializes the world object, should only be called by the spawn object scene function\&.  
+.PP
+\fBParameters\fP
+.RS 4
+\fIscene\fP The owninig scene of the object
+.br
+\fIowner\fP The owning object of this object
+.RE
+.PP
+
+.SS "__forceinline void WorldObject::MarkForDelete ()\fC [inline]\fP"
+
+.SS "void WorldObject::OnCollision (b2Body * OtherBody)\fC [virtual]\fP"
+
+.PP
+Function to respond to collision  
+.PP
+Reimplemented in \fBDamageOnCollisionActor\fP, and \fBEnemy\fP\&.
+.SS "void WorldObject::PostInit ()\fC [virtual]\fP"
+
+.PP
+Override this to Initialize variables or do any necessary work when the object is created  
+.PP
+Reimplemented in \fBBoss\fP, \fBEnemy\fP, \fBEnemyDummy\fP, \fBPlayerCharacter\fP, and \fBRangedEnemy\fP\&.
+.SS "void WorldObject::Render ()\fC [virtual]\fP"
+
+.PP
+Renders the object  
+.PP
+Reimplemented in \fBMeshActor\fP, and \fBSpriteActor\fP\&.
+.SS "void WorldObject::SetCollisionBody (b2Body * inCollisionBody)"
+
+.SS "void WorldObject::SetRotation (const float inRotation)\fC [virtual]\fP"
+
+.PP
+Reimplemented in \fBSpriteActor\fP\&.
+.SS "void WorldObject::SetRotation (const gef::Vector4 & inRotation)\fC [virtual]\fP"
+
+.PP
+Reimplemented in \fBMeshActor\fP\&.
+.SS "void WorldObject::SetScale (const gef::Vector4 & inScale)\fC [virtual]\fP"
+
+.PP
+Reimplemented in \fBSpriteActor\fP\&.
+.SS "void WorldObject::SetTranslation (const gef::Vector4 & inTranslation)\fC [virtual]\fP"
+
+.PP
+Reimplemented in \fBSpriteActor\fP\&.
+.SS "__forceinline bool WorldObject::ShouldUpdate ()\fC [inline]\fP"
+
+.SS "void WorldObject::Update (float deltaTime)\fC [virtual]\fP"
+
+.PP
+Update function, called every frame  
+.PP
+\fBParameters\fP
+.RS 4
+\fIdeltaTime\fP Float variable for the frame time
+.RE
+.PP
+
+.PP
+Reimplemented in \fBMeshActor\fP, \fBBoss\fP, \fBDamageOnCollisionActor\fP, \fBEnemy\fP, \fBMeteorActor\fP, \fBParticleActor\fP, \fBPlayerCharacter\fP, and \fBRangedEnemy\fP\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "bool WorldObject::bDisableUpdate = false\fC [protected]\fP"
+
+.SS "bool WorldObject::bMarkedForDelete = false\fC [protected]\fP"
+
+.SS "b2Body* WorldObject::collisionBody = nullptr\fC [protected]\fP"
+
+.SS "int WorldObject::ID = \fBNO_ID\fP"
+
+.SS "\fBWorldObject\fP* WorldObject::owningObject\fC [protected]\fP"
+
+.SS "gef::Vector4 WorldObject::rotationVec\fC [protected]\fP"
+
+.SS "gef::Vector4 WorldObject::scale\fC [protected]\fP"
+
+.SS "gef::Matrix44 WorldObject::transformMat\fC [protected]\fP"
+
+.SS "gef::Vector4 WorldObject::translation\fC [protected]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Hellwatch from the source code\&.

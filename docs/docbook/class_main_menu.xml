@@ -1,0 +1,64 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_main_menu" xml:lang="en-US">
+<title>MainMenu Class Reference</title>
+<indexterm><primary>MainMenu</primary></indexterm>
+<para>
+
+<para>Main <link linkend="_class_menu">Menu</link> of the game  </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;MainMenu.h&gt;</computeroutput>
+</para>
+Inheritance diagram for MainMenu:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_main_menu__inherit__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Collaboration diagram for MainMenu:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_main_menu__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>virtual void <link linkend="_class_main_menu_1a77aaa0eb810c74a907165b6a1acec31f">Init</link> ()</para>
+
+<para>Initializes the menu  </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Additional Inherited Members    </title>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Main <link linkend="_class_menu">Menu</link> of the game  </para>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_main_menu_1a77aaa0eb810c74a907165b6a1acec31f"/><section>
+    <title>Init()</title>
+<indexterm><primary>Init</primary><secondary>MainMenu</secondary></indexterm>
+<indexterm><primary>MainMenu</primary><secondary>Init</secondary></indexterm>
+<para><computeroutput>void MainMenu::Init ( )<computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Initializes the menu  </para>
+</para>
+<para>
+Implements <link linkend="_class_menu_1a0c64b7333b29000c8b219d2ebc28c03b">Menu</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following files:</para>
+D:/Uni/CMP208/Hellwatch/build/vs2017/UserInterface/<link linkend="__main_menu_8h">MainMenu.h</link>D:/Uni/CMP208/Hellwatch/build/vs2017/UserInterface/<link linkend="__main_menu_8cpp">MainMenu.cpp</link></section>
+</section>

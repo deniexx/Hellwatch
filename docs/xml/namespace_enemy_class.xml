@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="namespace_enemy_class" kind="namespace" language="C++">
+    <compoundname>EnemyClass</compoundname>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="namespace_enemy_class_1a21f4473edd2d0cb0970f6505d46f0866" prot="public" static="no" strong="no">
+        <type></type>
+        <name>Type</name>
+        <qualifiedname>EnemyClass::Type</qualifiedname>
+        <enumvalue id="namespace_enemy_class_1a21f4473edd2d0cb0970f6505d46f0866a7a3e72f4e6ac314cad36a24f27c628a9" prot="public">
+          <name>HEAVY</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_enemy_class_1a21f4473edd2d0cb0970f6505d46f0866ab7b90fd5865f02a5159836adc5d221bf" prot="public">
+          <name>NORMAL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_enemy_class_1a21f4473edd2d0cb0970f6505d46f0866ac49546fa32e67ada5d7619f084ef02cb" prot="public">
+          <name>LIGHT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/Enemy.h" line="15" column="1" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/Enemy.h" bodystart="16" bodyend="20"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para><ref refid="class_enemy" kindref="compound">Enemy</ref> class enum, used to add multipliers to stats  </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/Enemy.h" line="13" column="1"/>
+  </compounddef>
+</doxygen>

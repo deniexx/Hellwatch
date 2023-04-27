@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_namespace_hellwatch_particle" xml:lang="en-US">
+<title>HellwatchParticle Namespace Reference</title>
+<indexterm><primary>HellwatchParticle</primary></indexterm>
+<simplesect>
+    <title>Enumerations    </title>
+        <itemizedlist>
+            <listitem><para>enum <link linkend="_namespace_hellwatch_particle_1a93a028826056ca781710ef2830834f51">Type</link> { <link linkend="_namespace_hellwatch_particle_1a93a028826056ca781710ef2830834f51a6436e49d303ed9b9a1fa51de335afc1d">Explosion</link>
+, <link linkend="_namespace_hellwatch_particle_1a93a028826056ca781710ef2830834f51a31724befc90ab0517472666b48eedb0b">Death</link>
+, <link linkend="_namespace_hellwatch_particle_1a93a028826056ca781710ef2830834f51acfc9f6dd38f3e82bbc2fb485f2beea26">Dash</link>
+ }</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Enumeration Type Documentation</title>
+<anchor xml:id="_namespace_hellwatch_particle_1a93a028826056ca781710ef2830834f51"/><section>
+    <title>Type</title>
+<indexterm><primary>Type</primary><secondary>HellwatchParticle</secondary></indexterm>
+<indexterm><primary>HellwatchParticle</primary><secondary>Type</secondary></indexterm>
+<para><computeroutput>enum <link linkend="_namespace_hellwatch_particle_1a93a028826056ca781710ef2830834f51">HellwatchParticle::Type</link></computeroutput></para><informaltable frame="all">
+<title>Enumerator</title>
+    <tgroup cols="2" align="left" colsep="1" rowsep="1">
+      <colspec colname='c1'/>
+      <colspec colname='c2'/>
+<tbody>
+<row><entry><indexterm><primary>Explosion</primary><secondary>HellwatchParticle</secondary></indexterm>
+<indexterm><primary>HellwatchParticle</primary><secondary>Explosion</secondary></indexterm>
+<anchor xml:id="_namespace_hellwatch_particle_1a93a028826056ca781710ef2830834f51a6436e49d303ed9b9a1fa51de335afc1d"/>Explosion</entry><entry></entry></row><row><entry><indexterm><primary>Death</primary><secondary>HellwatchParticle</secondary></indexterm>
+<indexterm><primary>HellwatchParticle</primary><secondary>Death</secondary></indexterm>
+<anchor xml:id="_namespace_hellwatch_particle_1a93a028826056ca781710ef2830834f51a31724befc90ab0517472666b48eedb0b"/>Death</entry><entry></entry></row><row><entry><indexterm><primary>Dash</primary><secondary>HellwatchParticle</secondary></indexterm>
+<indexterm><primary>HellwatchParticle</primary><secondary>Dash</secondary></indexterm>
+<anchor xml:id="_namespace_hellwatch_particle_1a93a028826056ca781710ef2830834f51acfc9f6dd38f3e82bbc2fb485f2beea26"/>Dash</entry><entry></entry></row>    </tbody>
+    </tgroup>
+</informaltable>
+</section>
+</section>
+</section>

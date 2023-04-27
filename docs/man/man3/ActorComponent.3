@@ -1,0 +1,65 @@
+.TH "ActorComponent" 3 "Thu Apr 27 2023" "Hellwatch" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ActorComponent \- Base class to be derived for actor components   
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <ActorComponent\&.h>\fP
+.PP
+Inherited by \fBAbilitiesComponent\fP, \fBAttributeComponent\fP, and \fBCharacterMovementComponent\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBInit\fP (\fBWorldObject\fP *inOwnerActor)"
+.br
+.ti -1c
+.RI "virtual void \fBUpdateComponent\fP (float deltaTime)"
+.br
+.ti -1c
+.RI "__forceinline \fBWorldObject\fP * \fBGetOwner\fP () const"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "virtual void \fBPostInit\fP ()"
+.br
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBWorldObject\fP * \fBownerActor\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Base class to be derived for actor components  
+.SH "Member Function Documentation"
+.PP 
+.SS "__forceinline \fBWorldObject\fP * ActorComponent::GetOwner () const\fC [inline]\fP"
+
+.SS "void ActorComponent::Init (\fBWorldObject\fP * inOwnerActor)"
+
+.SS "void ActorComponent::PostInit ()\fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+Reimplemented in \fBAbilitiesComponent\fP, and \fBCharacterMovementComponent\fP\&.
+.SS "void ActorComponent::UpdateComponent (float deltaTime)\fC [virtual]\fP"
+
+.PP
+Reimplemented in \fBAttributeComponent\fP, \fBAbilitiesComponent\fP, and \fBCharacterMovementComponent\fP\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBWorldObject\fP* ActorComponent::ownerActor\fC [protected]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Hellwatch from the source code\&.

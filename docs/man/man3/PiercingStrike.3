@@ -1,0 +1,53 @@
+.TH "PiercingStrike" 3 "Thu Apr 27 2023" "Hellwatch" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+PiercingStrike
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <PiercingStrike\&.h>\fP
+.PP
+Inherits \fBAbility\fP\&.
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "virtual void \fBPostInit\fP () override"
+.br
+.RI "Called after ability has been initialized, do set up here  "
+.ti -1c
+.RI "virtual void \fBBegin\fP () override"
+.br
+.RI "Begins the ability, called if TryActivate was successful  "
+.ti -1c
+.RI "virtual void \fBEnd\fP () override"
+.br
+.RI "Called on end of ability  "
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Member Function Documentation"
+.PP 
+.SS "void PiercingStrike::Begin ()\fC [override]\fP, \fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+Begins the ability, called if TryActivate was successful  
+.PP
+Reimplemented from \fBAbility\fP\&.
+.SS "void PiercingStrike::End ()\fC [override]\fP, \fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+Called on end of ability  
+.PP
+Reimplemented from \fBAbility\fP\&.
+.SS "void PiercingStrike::PostInit ()\fC [override]\fP, \fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+Called after ability has been initialized, do set up here  
+.PP
+Reimplemented from \fBAbility\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Hellwatch from the source code\&.

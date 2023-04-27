@@ -1,0 +1,101 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="class_i_damagable" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>IDamagable</compoundname>
+    <derivedcompoundref refid="class_mesh_actor" prot="public" virt="non-virtual">MeshActor</derivedcompoundref>
+    <includes refid="_damagable_8h" local="no">Damagable.h</includes>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_i_damagable_1ae0da9b7810f5341862864c8ba8078be3" prot="private" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void IDamagable::TakeDamage</definition>
+        <argsstring>(float damageAmount)=0</argsstring>
+        <name>TakeDamage</name>
+        <qualifiedname>IDamagable::TakeDamage</qualifiedname>
+        <reimplementedby refid="class_mesh_actor_1a31a231014625686e8d40e561a7028931">TakeDamage</reimplementedby>
+        <reimplementedby refid="class_enemy_dummy_1a1e336fb794e413b2379f09c4fe648259">TakeDamage</reimplementedby>
+        <reimplementedby refid="class_enemy_1ac49759f4d5262aea5e3b6e3f9f56896e">TakeDamage</reimplementedby>
+        <reimplementedby refid="class_player_character_1ac89349d4afba371e044e4c5816ba68c8">TakeDamage</reimplementedby>
+        <param>
+          <type>float</type>
+          <declname>damageAmount</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/Interfaces/Damagable.h" line="8" column="14"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Interface to be added, when we want the specific class to be able to take damage  </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="5">
+        <label>Boss</label>
+        <link refid="class_boss"/>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>DamageOnCollisionActor</label>
+        <link refid="class_damage_on_collision_actor"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>Enemy</label>
+        <link refid="class_enemy"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>EnemyDummy</label>
+        <link refid="class_enemy_dummy"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>IDamagable</label>
+        <link refid="class_i_damagable"/>
+      </node>
+      <node id="2">
+        <label>MeshActor</label>
+        <link refid="class_mesh_actor"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>MeteorActor</label>
+        <link refid="class_meteor_actor"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>ParticleActor</label>
+        <link refid="class_particle_actor"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>PlayerCharacter</label>
+        <link refid="class_player_character"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>RangedEnemy</label>
+        <link refid="class_ranged_enemy"/>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/Interfaces/Damagable.h" line="6" column="1" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/Interfaces/Damagable.h" bodystart="7" bodyend="9"/>
+    <listofallmembers>
+      <member refid="class_i_damagable_1ae0da9b7810f5341862864c8ba8078be3" prot="private" virt="pure-virtual"><scope>IDamagable</scope><name>TakeDamage</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

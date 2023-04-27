@@ -1,0 +1,248 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_menu" xml:lang="en-US">
+<title>Menu Class Reference</title>
+<indexterm><primary>Menu</primary></indexterm>
+<para>
+
+<para>Base <link linkend="_class_menu">Menu</link> class, that mainly handles actions that we bind to in child classes  </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;Menu.h&gt;</computeroutput>
+</para>
+Inheritance diagram for Menu:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_menu__inherit__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Collaboration diagram for Menu:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_menu__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_menu_1a831387f51358cfb88cd018e1777bc980">~Menu</link> ()</para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_class_menu_1a0c64b7333b29000c8b219d2ebc28c03b">Init</link> ()=0</para>
+
+<para>Initializes the menu  </para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_class_menu_1af29d71473a414e31e914bc637840cb3e">Update</link> ()</para>
+
+<para>Updates the controller of the menu and checks for highlights  </para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_class_menu_1acef1c8e0a83655c3b17c217567527f8b">DrawMenuHUD</link> (gef::Font *font_, gef::SpriteRenderer *sprite_renderer_)</para>
+
+<para>Draws the menu HUD  </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_player_controller">PlayerController</link> * <link linkend="_class_menu_1a0187883a2d424dadf01b0218d1db7d12">menuController</link></para>
+</listitem>
+            <listitem><para>std::vector&lt; <link linkend="_struct_menu_button">MenuButton</link> &gt; <link linkend="_class_menu_1a6005d125bc4b0372bcd6d2719cb9a994">menuButtons</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_class_menu_1a1551f565b2ae79bf65449810f4ea81d5">currentButtonFocused</link> = 0</para>
+</listitem>
+            <listitem><para>gef::Sprite * <link linkend="_class_menu_1a2737fb42e257221f78c86b9221795255">menuSprite</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Protected Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_class_menu_1a98395444d03f38df02fa9c2aed1fb797">OnUpButtonPressed</link> ()</para>
+
+<para>When the player presses a button to navigate up the menu  </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_menu_1a6b8e73974658482814f99b63ecc4d470">OnDownButtonPressed</link> ()</para>
+
+<para>When the player presses a button to navigate down the menu  </para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_class_menu_1a2370ebbed22dfd0c10491bd8ae45b771">OnMouseButtonPressed</link> (gef::Vector2 mousePos)</para>
+
+<para>When the player presses the mouse button, checks if the mouse is over any buttons and if it is, it activates it  </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_menu_1a8023104df1848b95c94e1c46fba209ca">OnControllerUpButton</link> (gef::Vector2 dir)</para>
+
+<para>When the player presses a button to navigate up the menu  </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_menu_1a50e7901f94713c0719e0774474d981c2">OnControllerDownButton</link> (gef::Vector2 dir)</para>
+
+<para>When the player presses a button to navigate down the menu  </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_menu_1a8bd9fce86817a1125bf7d2e371551689">OnControllerSubmitButton</link> (gef::Vector2 dir)</para>
+
+<para>When the player presses a button to navigate down the menu  </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_menu_1a2f2b184a3f4000ce78d9e948c95cced4">CheckForHighlight</link> ()</para>
+
+<para>Checks whether to highlight any buttons  </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_menu_1a78e162d9e5571f0bb3e93c02cc0f76df">PressMenuButton</link> ()</para>
+
+<para>Presses the currently selected menu button  </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Base <link linkend="_class_menu">Menu</link> class, that mainly handles actions that we bind to in child classes  </para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_menu_1a831387f51358cfb88cd018e1777bc980"/><section>
+    <title>~Menu()</title>
+<indexterm><primary>~Menu</primary><secondary>Menu</secondary></indexterm>
+<indexterm><primary>Menu</primary><secondary>~Menu</secondary></indexterm>
+<para><computeroutput>Menu::~Menu ( )</computeroutput></para></section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_menu_1a2f2b184a3f4000ce78d9e948c95cced4"/><section>
+    <title>CheckForHighlight()</title>
+<indexterm><primary>CheckForHighlight</primary><secondary>Menu</secondary></indexterm>
+<indexterm><primary>Menu</primary><secondary>CheckForHighlight</secondary></indexterm>
+<para><computeroutput>void Menu::CheckForHighlight ( )<computeroutput>[protected]</computeroutput></computeroutput></para><para>
+
+<para>Checks whether to highlight any buttons  </para>
+</para>
+</section>
+<anchor xml:id="_class_menu_1acef1c8e0a83655c3b17c217567527f8b"/><section>
+    <title>DrawMenuHUD()</title>
+<indexterm><primary>DrawMenuHUD</primary><secondary>Menu</secondary></indexterm>
+<indexterm><primary>Menu</primary><secondary>DrawMenuHUD</secondary></indexterm>
+<para><computeroutput>void Menu::DrawMenuHUD (gef::Font * font_, gef::SpriteRenderer * sprite_renderer_)<computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Draws the menu HUD  </para>
+</para>
+<para>
+Reimplemented in <link linkend="_class_game_end_menu_1a6470014c7f3d8981a39e961ae5c3e6df">GameEndMenu</link>, and <link linkend="_class_shop_menu_1a17f8a9f65b1d66a40d3fed952bedde2b">ShopMenu</link>.</para>
+</section>
+<anchor xml:id="_class_menu_1a0c64b7333b29000c8b219d2ebc28c03b"/><section>
+    <title>Init()</title>
+<indexterm><primary>Init</primary><secondary>Menu</secondary></indexterm>
+<indexterm><primary>Menu</primary><secondary>Init</secondary></indexterm>
+<para><computeroutput>virtual void Menu::Init ( )<computeroutput>[pure virtual]</computeroutput></computeroutput></para><para>
+
+<para>Initializes the menu  </para>
+</para>
+<para>
+Implemented in <link linkend="_class_game_end_menu_1ac4d3cf8e606c29eb97a258895fc0217a">GameEndMenu</link>, <link linkend="_class_main_menu_1a77aaa0eb810c74a907165b6a1acec31f">MainMenu</link>, <link linkend="_class_shop_menu_1ad00ead74fb0ef7f5a265c1725fa6ccbf">ShopMenu</link>, and <link linkend="_class_pause_menu_1a029c44778ea655c2762cbddc8941a6f8">PauseMenu</link>.</para>
+</section>
+<anchor xml:id="_class_menu_1a50e7901f94713c0719e0774474d981c2"/><section>
+    <title>OnControllerDownButton()</title>
+<indexterm><primary>OnControllerDownButton</primary><secondary>Menu</secondary></indexterm>
+<indexterm><primary>Menu</primary><secondary>OnControllerDownButton</secondary></indexterm>
+<para><computeroutput>void Menu::OnControllerDownButton (gef::Vector2 dir)<computeroutput>[protected]</computeroutput></computeroutput></para><para>
+
+<para>When the player presses a button to navigate down the menu  </para>
+</para>
+</section>
+<anchor xml:id="_class_menu_1a8bd9fce86817a1125bf7d2e371551689"/><section>
+    <title>OnControllerSubmitButton()</title>
+<indexterm><primary>OnControllerSubmitButton</primary><secondary>Menu</secondary></indexterm>
+<indexterm><primary>Menu</primary><secondary>OnControllerSubmitButton</secondary></indexterm>
+<para><computeroutput>void Menu::OnControllerSubmitButton (gef::Vector2 dir)<computeroutput>[protected]</computeroutput></computeroutput></para><para>
+
+<para>When the player presses a button to navigate down the menu  </para>
+</para>
+</section>
+<anchor xml:id="_class_menu_1a8023104df1848b95c94e1c46fba209ca"/><section>
+    <title>OnControllerUpButton()</title>
+<indexterm><primary>OnControllerUpButton</primary><secondary>Menu</secondary></indexterm>
+<indexterm><primary>Menu</primary><secondary>OnControllerUpButton</secondary></indexterm>
+<para><computeroutput>void Menu::OnControllerUpButton (gef::Vector2 dir)<computeroutput>[protected]</computeroutput></computeroutput></para><para>
+
+<para>When the player presses a button to navigate up the menu  </para>
+</para>
+</section>
+<anchor xml:id="_class_menu_1a6b8e73974658482814f99b63ecc4d470"/><section>
+    <title>OnDownButtonPressed()</title>
+<indexterm><primary>OnDownButtonPressed</primary><secondary>Menu</secondary></indexterm>
+<indexterm><primary>Menu</primary><secondary>OnDownButtonPressed</secondary></indexterm>
+<para><computeroutput>void Menu::OnDownButtonPressed ( )<computeroutput>[protected]</computeroutput></computeroutput></para><para>
+
+<para>When the player presses a button to navigate down the menu  </para>
+</para>
+</section>
+<anchor xml:id="_class_menu_1a2370ebbed22dfd0c10491bd8ae45b771"/><section>
+    <title>OnMouseButtonPressed()</title>
+<indexterm><primary>OnMouseButtonPressed</primary><secondary>Menu</secondary></indexterm>
+<indexterm><primary>Menu</primary><secondary>OnMouseButtonPressed</secondary></indexterm>
+<para><computeroutput>void Menu::OnMouseButtonPressed (gef::Vector2 mousePos)<computeroutput>[protected]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>When the player presses the mouse button, checks if the mouse is over any buttons and if it is, it activates it  </para>
+</para>
+<para>
+Reimplemented in <link linkend="_class_shop_menu_1a9d9a71e0eb5eb51a917b46402e9fbc9a">ShopMenu</link>.</para>
+</section>
+<anchor xml:id="_class_menu_1a98395444d03f38df02fa9c2aed1fb797"/><section>
+    <title>OnUpButtonPressed()</title>
+<indexterm><primary>OnUpButtonPressed</primary><secondary>Menu</secondary></indexterm>
+<indexterm><primary>Menu</primary><secondary>OnUpButtonPressed</secondary></indexterm>
+<para><computeroutput>void Menu::OnUpButtonPressed ( )<computeroutput>[protected]</computeroutput></computeroutput></para><para>
+
+<para>When the player presses a button to navigate up the menu  </para>
+</para>
+</section>
+<anchor xml:id="_class_menu_1a78e162d9e5571f0bb3e93c02cc0f76df"/><section>
+    <title>PressMenuButton()</title>
+<indexterm><primary>PressMenuButton</primary><secondary>Menu</secondary></indexterm>
+<indexterm><primary>Menu</primary><secondary>PressMenuButton</secondary></indexterm>
+<para><computeroutput>void Menu::PressMenuButton ( )<computeroutput>[protected]</computeroutput></computeroutput></para><para>
+
+<para>Presses the currently selected menu button  </para>
+</para>
+</section>
+<anchor xml:id="_class_menu_1af29d71473a414e31e914bc637840cb3e"/><section>
+    <title>Update()</title>
+<indexterm><primary>Update</primary><secondary>Menu</secondary></indexterm>
+<indexterm><primary>Menu</primary><secondary>Update</secondary></indexterm>
+<para><computeroutput>void Menu::Update ( )<computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Updates the controller of the menu and checks for highlights  </para>
+</para>
+<para>
+Reimplemented in <link linkend="_class_shop_menu_1a17c43cd733173e8a19eaaff593dbfec7">ShopMenu</link>.</para>
+</section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_class_menu_1a1551f565b2ae79bf65449810f4ea81d5"/><section>
+    <title>currentButtonFocused</title>
+<indexterm><primary>currentButtonFocused</primary><secondary>Menu</secondary></indexterm>
+<indexterm><primary>Menu</primary><secondary>currentButtonFocused</secondary></indexterm>
+<para><computeroutput>int Menu::currentButtonFocused = 0</computeroutput></para></section>
+<anchor xml:id="_class_menu_1a6005d125bc4b0372bcd6d2719cb9a994"/><section>
+    <title>menuButtons</title>
+<indexterm><primary>menuButtons</primary><secondary>Menu</secondary></indexterm>
+<indexterm><primary>Menu</primary><secondary>menuButtons</secondary></indexterm>
+<para><computeroutput>std::vector&lt;<link linkend="_struct_menu_button">MenuButton</link>&gt; Menu::menuButtons</computeroutput></para></section>
+<anchor xml:id="_class_menu_1a0187883a2d424dadf01b0218d1db7d12"/><section>
+    <title>menuController</title>
+<indexterm><primary>menuController</primary><secondary>Menu</secondary></indexterm>
+<indexterm><primary>Menu</primary><secondary>menuController</secondary></indexterm>
+<para><computeroutput><link linkend="_class_player_controller">PlayerController</link>* Menu::menuController</computeroutput></para></section>
+<anchor xml:id="_class_menu_1a2737fb42e257221f78c86b9221795255"/><section>
+    <title>menuSprite</title>
+<indexterm><primary>menuSprite</primary><secondary>Menu</secondary></indexterm>
+<indexterm><primary>Menu</primary><secondary>menuSprite</secondary></indexterm>
+<para><computeroutput>gef::Sprite* Menu::menuSprite</computeroutput></para></section>
+<para>
+The documentation for this class was generated from the following files:</para>
+D:/Uni/CMP208/Hellwatch/build/vs2017/UserInterface/<link linkend="__menu_8h">Menu.h</link>D:/Uni/CMP208/Hellwatch/build/vs2017/UserInterface/<link linkend="__menu_8cpp">Menu.cpp</link></section>
+</section>

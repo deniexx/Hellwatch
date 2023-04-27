@@ -1,0 +1,28 @@
+\hypertarget{_actor_component_8h_source}{}\doxysection{Actor\+Component.\+h}
+\label{_actor_component_8h_source}\index{D:/Uni/CMP208/Hellwatch/build/vs2017/ActorComponents/ActorComponent.h@{D:/Uni/CMP208/Hellwatch/build/vs2017/ActorComponents/ActorComponent.h}}
+\mbox{\hyperlink{_actor_component_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{2 }
+\DoxyCodeLine{3 \textcolor{keyword}{class }\mbox{\hyperlink{class_world_object}{WorldObject}};}
+\DoxyCodeLine{4 }
+\DoxyCodeLine{8 \textcolor{keyword}{class }\mbox{\hyperlink{class_actor_component}{ActorComponent}}}
+\DoxyCodeLine{9 \{}
+\DoxyCodeLine{10 \textcolor{keyword}{public}:}
+\DoxyCodeLine{11     }
+\DoxyCodeLine{12     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_actor_component_ab4ea0eaffa2c616a209e2887f80902f2}{Init}}(\mbox{\hyperlink{class_world_object}{WorldObject}}* inOwnerActor);}
+\DoxyCodeLine{13     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_actor_component_af730b3c7d2b4154e1fb0962db7750f6b}{UpdateComponent}}(\textcolor{keywordtype}{float} deltaTime);}
+\DoxyCodeLine{14 }
+\DoxyCodeLine{15 \textcolor{keyword}{protected}:}
+\DoxyCodeLine{16 }
+\DoxyCodeLine{17     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_actor_component_a467d082f3fedd6cf2acacb117450f90e}{PostInit}}();}
+\DoxyCodeLine{18 }
+\DoxyCodeLine{19     \mbox{\hyperlink{class_world_object}{WorldObject}}* \mbox{\hyperlink{class_actor_component_a2766e186399b24f5d7e2d143ffa26e05}{ownerActor}};}
+\DoxyCodeLine{20 }
+\DoxyCodeLine{21 \textcolor{keyword}{public}:}
+\DoxyCodeLine{22 }
+\DoxyCodeLine{23     \_\_forceinline \mbox{\hyperlink{class_world_object}{WorldObject}}* \mbox{\hyperlink{class_actor_component_a3705d464da5f840eca1d14bcce07372d}{GetOwner}}()\textcolor{keyword}{ const }\{ \textcolor{keywordflow}{return} \mbox{\hyperlink{class_actor_component_a2766e186399b24f5d7e2d143ffa26e05}{ownerActor}}; \}}
+\DoxyCodeLine{24 \};}
+\DoxyCodeLine{25 }
+
+\end{DoxyCode}

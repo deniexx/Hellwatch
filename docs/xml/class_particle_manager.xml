@@ -1,0 +1,173 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="class_particle_manager" kind="class" language="C++" prot="public">
+    <compoundname>ParticleManager</compoundname>
+    <includes refid="_particle_manager_8h" local="no">ParticleManager.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_particle_manager_1a47518315cab3995a2485ec4b9d17a51f" prot="private" static="no" mutable="no">
+        <type>std::map&lt; <ref refid="namespace_hellwatch_particle_1a93a028826056ca781710ef2830834f51" kindref="member">HellwatchParticle::Type</ref>, std::vector&lt; gef::Texture * &gt; &gt;</type>
+        <definition>std::map&lt;HellwatchParticle::Type, std::vector&lt;gef::Texture*&gt; &gt; ParticleManager::particlesMap</definition>
+        <argsstring></argsstring>
+        <name>particlesMap</name>
+        <qualifiedname>ParticleManager::particlesMap</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/ParticleManager.h" line="52" column="10" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/ParticleManager.h" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_particle_manager_1a192bc9932f68795cf756541ad35cdadb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ParticleManager::Init</definition>
+        <argsstring>()</argsstring>
+        <name>Init</name>
+        <qualifiedname>ParticleManager::Init</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/ParticleManager.h" line="28" column="6" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/ParticleManager.cpp" bodystart="9" bodyend="15"/>
+      </memberdef>
+      <memberdef kind="function" id="class_particle_manager_1a03998e9980dd017daa61ce69a0ec194f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ParticleManager::PrepareParticles</definition>
+        <argsstring>()</argsstring>
+        <name>PrepareParticles</name>
+        <qualifiedname>ParticleManager::PrepareParticles</qualifiedname>
+        <briefdescription>
+<para>Prepares the particles  </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/ParticleManager.h" line="33" column="6" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/ParticleManager.cpp" bodystart="17" bodyend="58"/>
+      </memberdef>
+      <memberdef kind="function" id="class_particle_manager_1a74b7e3175e7bf9df045540cedf8c5f05" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ParticleManager::PlayParticlesAtLocation</definition>
+        <argsstring>(HellwatchParticle::Type type, gef::Vector4 location)</argsstring>
+        <name>PlayParticlesAtLocation</name>
+        <qualifiedname>ParticleManager::PlayParticlesAtLocation</qualifiedname>
+        <param>
+          <type><ref refid="namespace_hellwatch_particle_1a93a028826056ca781710ef2830834f51" kindref="member">HellwatchParticle::Type</ref></type>
+          <declname>type</declname>
+        </param>
+        <param>
+          <type>gef::Vector4</type>
+          <declname>location</declname>
+        </param>
+        <briefdescription>
+<para>Plays particles at location  </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/ParticleManager.h" line="38" column="6" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/ParticleManager.cpp" bodystart="60" bodyend="63"/>
+      </memberdef>
+      <memberdef kind="function" id="class_particle_manager_1a658b27d3101859ab17000c8a7493fff6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ParticleManager::PlayParticlesAtLocation</definition>
+        <argsstring>(HellwatchParticle::Type type, gef::Vector4 location, float duration)</argsstring>
+        <name>PlayParticlesAtLocation</name>
+        <qualifiedname>ParticleManager::PlayParticlesAtLocation</qualifiedname>
+        <param>
+          <type><ref refid="namespace_hellwatch_particle_1a93a028826056ca781710ef2830834f51" kindref="member">HellwatchParticle::Type</ref></type>
+          <declname>type</declname>
+        </param>
+        <param>
+          <type>gef::Vector4</type>
+          <declname>location</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>duration</declname>
+        </param>
+        <briefdescription>
+<para>Plays particles at location  </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/ParticleManager.h" line="43" column="6" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/ParticleManager.cpp" bodystart="65" bodyend="68"/>
+      </memberdef>
+      <memberdef kind="function" id="class_particle_manager_1a1be5203232c7be5ff6eb46f110f28cb0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ParticleManager::PlayParticlesAtLocation</definition>
+        <argsstring>(HellwatchParticle::Type type, gef::Vector4 location, float duration, float lingerTime)</argsstring>
+        <name>PlayParticlesAtLocation</name>
+        <qualifiedname>ParticleManager::PlayParticlesAtLocation</qualifiedname>
+        <param>
+          <type><ref refid="namespace_hellwatch_particle_1a93a028826056ca781710ef2830834f51" kindref="member">HellwatchParticle::Type</ref></type>
+          <declname>type</declname>
+        </param>
+        <param>
+          <type>gef::Vector4</type>
+          <declname>location</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>duration</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>lingerTime</declname>
+        </param>
+        <briefdescription>
+<para>Plays particles at location  </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/ParticleManager.h" line="48" column="6" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/ParticleManager.cpp" bodystart="70" bodyend="96"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_particle_manager_1ae041992165008118c73fcfeb1cb46304" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ParticleManager::LoadTexturesForParticles</definition>
+        <argsstring>(HellwatchParticle::Type type, std::vector&lt; std::string &gt; paths)</argsstring>
+        <name>LoadTexturesForParticles</name>
+        <qualifiedname>ParticleManager::LoadTexturesForParticles</qualifiedname>
+        <param>
+          <type><ref refid="namespace_hellwatch_particle_1a93a028826056ca781710ef2830834f51" kindref="member">HellwatchParticle::Type</ref></type>
+          <declname>type</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; std::string &gt;</type>
+          <declname>paths</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/ParticleManager.h" line="54" column="6" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/ParticleManager.cpp" bodystart="98" bodyend="114"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/ParticleManager.h" line="22" column="1" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/ParticleManager.h" bodystart="23" bodyend="55"/>
+    <listofallmembers>
+      <member refid="class_particle_manager_1a192bc9932f68795cf756541ad35cdadb" prot="public" virt="non-virtual"><scope>ParticleManager</scope><name>Init</name></member>
+      <member refid="class_particle_manager_1ae041992165008118c73fcfeb1cb46304" prot="private" virt="non-virtual"><scope>ParticleManager</scope><name>LoadTexturesForParticles</name></member>
+      <member refid="class_particle_manager_1a47518315cab3995a2485ec4b9d17a51f" prot="private" virt="non-virtual"><scope>ParticleManager</scope><name>particlesMap</name></member>
+      <member refid="class_particle_manager_1a74b7e3175e7bf9df045540cedf8c5f05" prot="public" virt="non-virtual"><scope>ParticleManager</scope><name>PlayParticlesAtLocation</name></member>
+      <member refid="class_particle_manager_1a658b27d3101859ab17000c8a7493fff6" prot="public" virt="non-virtual"><scope>ParticleManager</scope><name>PlayParticlesAtLocation</name></member>
+      <member refid="class_particle_manager_1a1be5203232c7be5ff6eb46f110f28cb0" prot="public" virt="non-virtual"><scope>ParticleManager</scope><name>PlayParticlesAtLocation</name></member>
+      <member refid="class_particle_manager_1a03998e9980dd017daa61ce69a0ec194f" prot="public" virt="non-virtual"><scope>ParticleManager</scope><name>PrepareParticles</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

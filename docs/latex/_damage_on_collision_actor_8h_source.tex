@@ -1,0 +1,37 @@
+\hypertarget{_damage_on_collision_actor_8h_source}{}\doxysection{Damage\+On\+Collision\+Actor.\+h}
+\label{_damage_on_collision_actor_8h_source}\index{D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/DamageOnCollisionActor.h@{D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/DamageOnCollisionActor.h}}
+\mbox{\hyperlink{_damage_on_collision_actor_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{2 }
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_mesh_actor_8h}{Actors/MeshActor.h}}"{}}}
+\DoxyCodeLine{4 }
+\DoxyCodeLine{8 \textcolor{keyword}{class }\mbox{\hyperlink{class_damage_on_collision_actor}{DamageOnCollisionActor}} : \textcolor{keyword}{public} \mbox{\hyperlink{class_mesh_actor}{MeshActor}}}
+\DoxyCodeLine{9 \{}
+\DoxyCodeLine{10     \mbox{\hyperlink{_utils_8h_afc0ee7bd35c161a2d80b8e8f04fd9213}{GENERATED\_BODY}}(\mbox{\hyperlink{class_mesh_actor}{MeshActor}}, \mbox{\hyperlink{class_damage_on_collision_actor}{DamageOnCollisionActor}})}
+\DoxyCodeLine{11 }
+\DoxyCodeLine{12 \textcolor{keyword}{public}:}
+\DoxyCodeLine{13 }
+\DoxyCodeLine{17     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_damage_on_collision_actor_ad097fd69169453c518a8a7b151311edc}{OnCollision}}(b2Body* otherBody) \textcolor{keyword}{override};}
+\DoxyCodeLine{18 }
+\DoxyCodeLine{22     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_damage_on_collision_actor_af7de29e57bbf7b66d4e618fb3c612257}{SetDamageAmount}}(\textcolor{keywordtype}{float} newAmount) \{ \mbox{\hyperlink{class_damage_on_collision_actor_a8684d8897c9e9725d32a771f08e0b4a3}{damageAmount}} = newAmount; \}}
+\DoxyCodeLine{23 }
+\DoxyCodeLine{27     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_damage_on_collision_actor_a715ad5963092224ae96d9fa30dc1b12e}{SetApplyDamageOn}}(\mbox{\hyperlink{namespace_apply_damage_on_aab4652342cac35cdff458c5aa2bad289}{ApplyDamageOn::Type}} newState) \{ \mbox{\hyperlink{class_damage_on_collision_actor_a07b7703b8e3db5ad89fa3a7bb30750c2}{applyDamageOn}} = newState; \}}
+\DoxyCodeLine{28 }
+\DoxyCodeLine{33     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_damage_on_collision_actor_aeb7e7f169bc0e4b22628788716e401ae}{SetSpinning}}(\textcolor{keywordtype}{bool} bNewState) \{ \mbox{\hyperlink{class_damage_on_collision_actor_a3ba78bead6c77dd82c141968a971bd4f}{bSpinning}} = bNewState; \}}
+\DoxyCodeLine{34 }
+\DoxyCodeLine{38     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_damage_on_collision_actor_aaeb5e7abbad19c5f60a521f0016d3acf}{SetIsPiercing}}(\textcolor{keywordtype}{bool} bNewState) \{ \mbox{\hyperlink{class_damage_on_collision_actor_aee4412e69f1df05a5a77223176b0c6fb}{bIsPiercing}} = bNewState; \}}
+\DoxyCodeLine{39 }
+\DoxyCodeLine{40 }
+\DoxyCodeLine{41     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_damage_on_collision_actor_a468c69c421db3d272bf18c46cbb15c2a}{Update}}(\textcolor{keywordtype}{float} deltaTime) \textcolor{keyword}{override};}
+\DoxyCodeLine{42 }
+\DoxyCodeLine{43 \textcolor{keyword}{protected}:}
+\DoxyCodeLine{44 }
+\DoxyCodeLine{45     \mbox{\hyperlink{namespace_apply_damage_on_aab4652342cac35cdff458c5aa2bad289}{ApplyDamageOn::Type}} \mbox{\hyperlink{class_damage_on_collision_actor_a07b7703b8e3db5ad89fa3a7bb30750c2}{applyDamageOn}} = \mbox{\hyperlink{namespace_apply_damage_on_aab4652342cac35cdff458c5aa2bad289a17c0a2d2e83ad970a7bb7395c9819d1f}{ApplyDamageOn::EnemiesOnly}};}
+\DoxyCodeLine{46     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_damage_on_collision_actor_a3ba78bead6c77dd82c141968a971bd4f}{bSpinning}} = \textcolor{keyword}{false};}
+\DoxyCodeLine{47     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_damage_on_collision_actor_aee4412e69f1df05a5a77223176b0c6fb}{bIsPiercing}} = \textcolor{keyword}{false};}
+\DoxyCodeLine{48     \textcolor{keywordtype}{float} \mbox{\hyperlink{class_damage_on_collision_actor_a8684d8897c9e9725d32a771f08e0b4a3}{damageAmount}} = 0.f;}
+\DoxyCodeLine{49 \};}
+\DoxyCodeLine{50 }
+
+\end{DoxyCode}

@@ -1,0 +1,52 @@
+.TH "D:/Uni/CMP208/Hellwatch/build/vs2017/Abilities/Ability.h" 3 "Thu Apr 27 2023" "Hellwatch" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+D:/Uni/CMP208/Hellwatch/build/vs2017/Abilities/Ability.h
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <string>\fP
+.br
+\fC#include <cmath>\fP
+.br
+\fC#include 'Attributes/AttributeTypes\&.h'\fP
+.br
+
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "struct \fBActivationOutcome\fP"
+.br
+.RI "Outcome of attempting to activate this ability  "
+.ti -1c
+.RI "class \fBAbility\fP"
+.br
+.RI "A base ability class, designed to be inherited and provided with functionality  "
+.in -1c
+.SS "Namespaces"
+
+.in +1c
+.ti -1c
+.RI "namespace \fBAbilityActivationKey\fP"
+.br
+.RI "The key that will be used to activate this ability 1, 2, 3, 4  "
+.ti -1c
+.RI "namespace \fBCooldownStartPolicy\fP"
+.br
+.RI "When should cooldown start, on start of ability or end of ability  "
+.in -1c
+.SS "Enumerations"
+
+.in +1c
+.ti -1c
+.RI "enum \fBAbilityActivationKey::Type\fP : int { \fBAbilityActivationKey::AbilityKey1\fP = 0, \fBAbilityActivationKey::AbilityKey2\fP, \fBAbilityActivationKey::AbilityKey3\fP, \fBAbilityActivationKey::AbilityKey4\fP, \fBAbilityActivationKey::None\fP }"
+.br
+.ti -1c
+.RI "enum \fBCooldownStartPolicy::Type\fP { \fBCooldownStartPolicy::OnAbilityStart\fP, \fBCooldownStartPolicy::OnAbilityEnd\fP }"
+.br
+.in -1c
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Hellwatch from the source code\&.

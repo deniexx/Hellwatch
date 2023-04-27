@@ -1,0 +1,171 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_character_movement_component" xml:lang="en-US">
+<title>CharacterMovementComponent Class Reference</title>
+<indexterm><primary>CharacterMovementComponent</primary></indexterm>
+<para>
+
+<para>A component that handles moving the character  </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;CharacterMovementComponent.h&gt;</computeroutput>
+</para>
+Inheritance diagram for CharacterMovementComponent:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_character_movement_component__inherit__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Collaboration diagram for CharacterMovementComponent:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_character_movement_component__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_character_movement_component_1a3b46719028da4715fcb1aa41000ef690">CharacterMovementComponent</link> ()</para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_class_character_movement_component_1a44e667731d0323b2dfcdf80ee6e7f3ba">UpdateComponent</link> (float deltaTime) override</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_character_movement_component_1a63d4bb5a09a7addb1664b0f5183ec13c">ApplyMovementForceInDirection</link> (b2Vec2 force)</para>
+
+<para>Applies Movement force in a direction, that is scaled with the acceleration  </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_character_movement_component_1a6cb4c791b22b66c29aa830e40d947d0c">SetCollisionBody</link> (b2Body *newBody)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_character_movement_component_1a5c8c5c00d78dc4d38e14c502e9567695">SetFrozen</link> (bool bNewState)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_character_movement_component_1ab3ab4283107113582bc6c7f670c86b3c">SetMaximumSpeed</link> (float newMaximumSpeed)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_character_movement_component_1aa0c6001da09d289c9cdc6a2332293ab6">SetAcceleration</link> (float newAcceleration)</para>
+</listitem>
+            <listitem><para>__forceinline bool <link linkend="_class_character_movement_component_1a95de1dc66286d10e4099b26ee46bdd7b">IsFrozen</link> () const</para>
+</listitem>
+            <listitem><para>__forceinline float <link linkend="_class_character_movement_component_1a0a0b9e6ccb23a433d86991de1d9a2ad8">GetSpeed</link> () const</para>
+</listitem>
+            <listitem><para>__forceinline float <link linkend="_class_character_movement_component_1a1c326e239d25123a6e6ab1893b7c3006">GetMaximumSpeed</link> ()</para>
+</listitem>
+            <listitem><para>__forceinline float <link linkend="_class_character_movement_component_1a07ae2e8b49579f6737117051c3391ed1">GetAcceleration</link> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Protected Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>virtual void <link linkend="_class_character_movement_component_1a7c20d542f943ec133dd3f1df7fee988e">PostInit</link> () override</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Additional Inherited Members    </title>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>A component that handles moving the character  </para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_character_movement_component_1a3b46719028da4715fcb1aa41000ef690"/><section>
+    <title>CharacterMovementComponent()</title>
+<indexterm><primary>CharacterMovementComponent</primary><secondary>CharacterMovementComponent</secondary></indexterm>
+<indexterm><primary>CharacterMovementComponent</primary><secondary>CharacterMovementComponent</secondary></indexterm>
+<para><computeroutput>CharacterMovementComponent::CharacterMovementComponent ( )</computeroutput></para></section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_character_movement_component_1a63d4bb5a09a7addb1664b0f5183ec13c"/><section>
+    <title>ApplyMovementForceInDirection()</title>
+<indexterm><primary>ApplyMovementForceInDirection</primary><secondary>CharacterMovementComponent</secondary></indexterm>
+<indexterm><primary>CharacterMovementComponent</primary><secondary>ApplyMovementForceInDirection</secondary></indexterm>
+<para><computeroutput>void CharacterMovementComponent::ApplyMovementForceInDirection (b2Vec2 force)</computeroutput></para><para>
+
+<para>Applies Movement force in a direction, that is scaled with the acceleration  </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>force</entry><entry></entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_class_character_movement_component_1a07ae2e8b49579f6737117051c3391ed1"/><section>
+    <title>GetAcceleration()</title>
+<indexterm><primary>GetAcceleration</primary><secondary>CharacterMovementComponent</secondary></indexterm>
+<indexterm><primary>CharacterMovementComponent</primary><secondary>GetAcceleration</secondary></indexterm>
+<para><computeroutput>__forceinline float CharacterMovementComponent::GetAcceleration ( )<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_character_movement_component_1a1c326e239d25123a6e6ab1893b7c3006"/><section>
+    <title>GetMaximumSpeed()</title>
+<indexterm><primary>GetMaximumSpeed</primary><secondary>CharacterMovementComponent</secondary></indexterm>
+<indexterm><primary>CharacterMovementComponent</primary><secondary>GetMaximumSpeed</secondary></indexterm>
+<para><computeroutput>__forceinline float CharacterMovementComponent::GetMaximumSpeed ( )<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_character_movement_component_1a0a0b9e6ccb23a433d86991de1d9a2ad8"/><section>
+    <title>GetSpeed()</title>
+<indexterm><primary>GetSpeed</primary><secondary>CharacterMovementComponent</secondary></indexterm>
+<indexterm><primary>CharacterMovementComponent</primary><secondary>GetSpeed</secondary></indexterm>
+<para><computeroutput>__forceinline float CharacterMovementComponent::GetSpeed ( ) const<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_character_movement_component_1a95de1dc66286d10e4099b26ee46bdd7b"/><section>
+    <title>IsFrozen()</title>
+<indexterm><primary>IsFrozen</primary><secondary>CharacterMovementComponent</secondary></indexterm>
+<indexterm><primary>CharacterMovementComponent</primary><secondary>IsFrozen</secondary></indexterm>
+<para><computeroutput>__forceinline bool CharacterMovementComponent::IsFrozen ( ) const<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_character_movement_component_1a7c20d542f943ec133dd3f1df7fee988e"/><section>
+    <title>PostInit()</title>
+<indexterm><primary>PostInit</primary><secondary>CharacterMovementComponent</secondary></indexterm>
+<indexterm><primary>CharacterMovementComponent</primary><secondary>PostInit</secondary></indexterm>
+<para><computeroutput>void CharacterMovementComponent::PostInit ( )<computeroutput>[override]</computeroutput>, <computeroutput>[protected]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+Reimplemented from <link linkend="_class_actor_component_1a467d082f3fedd6cf2acacb117450f90e">ActorComponent</link>.</para>
+</section>
+<anchor xml:id="_class_character_movement_component_1aa0c6001da09d289c9cdc6a2332293ab6"/><section>
+    <title>SetAcceleration()</title>
+<indexterm><primary>SetAcceleration</primary><secondary>CharacterMovementComponent</secondary></indexterm>
+<indexterm><primary>CharacterMovementComponent</primary><secondary>SetAcceleration</secondary></indexterm>
+<para><computeroutput>void CharacterMovementComponent::SetAcceleration (float newAcceleration)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_character_movement_component_1a6cb4c791b22b66c29aa830e40d947d0c"/><section>
+    <title>SetCollisionBody()</title>
+<indexterm><primary>SetCollisionBody</primary><secondary>CharacterMovementComponent</secondary></indexterm>
+<indexterm><primary>CharacterMovementComponent</primary><secondary>SetCollisionBody</secondary></indexterm>
+<para><computeroutput>void CharacterMovementComponent::SetCollisionBody (b2Body * newBody)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_character_movement_component_1a5c8c5c00d78dc4d38e14c502e9567695"/><section>
+    <title>SetFrozen()</title>
+<indexterm><primary>SetFrozen</primary><secondary>CharacterMovementComponent</secondary></indexterm>
+<indexterm><primary>CharacterMovementComponent</primary><secondary>SetFrozen</secondary></indexterm>
+<para><computeroutput>void CharacterMovementComponent::SetFrozen (bool bNewState)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_character_movement_component_1ab3ab4283107113582bc6c7f670c86b3c"/><section>
+    <title>SetMaximumSpeed()</title>
+<indexterm><primary>SetMaximumSpeed</primary><secondary>CharacterMovementComponent</secondary></indexterm>
+<indexterm><primary>CharacterMovementComponent</primary><secondary>SetMaximumSpeed</secondary></indexterm>
+<para><computeroutput>void CharacterMovementComponent::SetMaximumSpeed (float newMaximumSpeed)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_character_movement_component_1a44e667731d0323b2dfcdf80ee6e7f3ba"/><section>
+    <title>UpdateComponent()</title>
+<indexterm><primary>UpdateComponent</primary><secondary>CharacterMovementComponent</secondary></indexterm>
+<indexterm><primary>CharacterMovementComponent</primary><secondary>UpdateComponent</secondary></indexterm>
+<para><computeroutput>void CharacterMovementComponent::UpdateComponent (float deltaTime)<computeroutput>[override]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+Reimplemented from <link linkend="_class_actor_component_1af730b3c7d2b4154e1fb0962db7750f6b">ActorComponent</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following files:</para>
+D:/Uni/CMP208/Hellwatch/build/vs2017/ActorComponents/<link linkend="__character_movement_component_8h">CharacterMovementComponent.h</link>D:/Uni/CMP208/Hellwatch/build/vs2017/ActorComponents/<link linkend="__character_movement_component_8cpp">CharacterMovementComponent.cpp</link></section>
+</section>

@@ -1,0 +1,497 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="_shop_menu_8cpp" kind="file" language="C++">
+    <compoundname>ShopMenu.cpp</compoundname>
+    <includes refid="_shop_menu_8h" local="yes">ShopMenu.h</includes>
+    <includes refid="_player_controller_8h" local="yes">GameFramework/PlayerController.h</includes>
+    <includes local="yes">graphics/sprite.h</includes>
+    <includes local="yes">assets/png_loader.h</includes>
+    <includes local="no">graphics/image_data.h</includes>
+    <includes local="yes">graphics/texture.h</includes>
+    <includes refid="_player_character_8h" local="yes">Actors/MeshActors/PlayerCharacter.h</includes>
+    <includes refid="_attribute_component_8h" local="yes">Attributes/AttributeComponent.h</includes>
+    <includes local="yes">input/sony_controller_input_manager.h</includes>
+    <incdepgraph>
+      <node id="28">
+        <label>Abilities/Ability.h</label>
+        <link refid="_ability_8h"/>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+      </node>
+      <node id="48">
+        <label>ActorComponents/ActorComponent.h</label>
+        <link refid="_actor_component_8h"/>
+      </node>
+      <node id="40">
+        <label>Actors/MeshActor.h</label>
+        <link refid="_mesh_actor_8h"/>
+        <childnode refid="41" relation="include">
+        </childnode>
+        <childnode refid="44" relation="include">
+        </childnode>
+        <childnode refid="45" relation="include">
+        </childnode>
+      </node>
+      <node id="39">
+        <label>Actors/MeshActors/PlayerCharacter.h</label>
+        <link refid="_player_character_8h"/>
+        <childnode refid="40" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="46" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+      </node>
+      <node id="47">
+        <label>Attributes/AttributeComponent.h</label>
+        <link refid="_attribute_component_8h"/>
+        <childnode refid="48" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+      </node>
+      <node id="27">
+        <label>Attributes/AttributeTypes.h</label>
+        <link refid="_attribute_types_8h"/>
+        <childnode refid="21" relation="include">
+        </childnode>
+      </node>
+      <node id="30">
+        <label>GameFramework/PlayerController.h</label>
+        <link refid="_player_controller_8h"/>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>GameFramework/Utils.h</label>
+        <link refid="_utils_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+      </node>
+      <node id="41">
+        <label>GameFramework/WorldObject.h</label>
+        <link refid="_world_object_8h"/>
+        <childnode refid="42" relation="include">
+        </childnode>
+        <childnode refid="43" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="45">
+        <label>Interfaces/Damagable.h</label>
+        <link refid="_damagable_8h"/>
+      </node>
+      <node id="3">
+        <label>Menu.h</label>
+        <link refid="_menu_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/UserInterface/ShopMenu.cpp</label>
+        <link refid="_shop_menu_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+        <childnode refid="38" relation="include">
+        </childnode>
+        <childnode refid="39" relation="include">
+        </childnode>
+        <childnode refid="47" relation="include">
+        </childnode>
+        <childnode refid="49" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>ShopMenu.h</label>
+        <link refid="_shop_menu_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+      </node>
+      <node id="18">
+        <label>obj_mesh_loader.h</label>
+        <link refid="obj__mesh__loader_8h"/>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>primitive_builder.h</label>
+        <link refid="primitive__builder_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>scene_app.h</label>
+        <link refid="scene__app_8h"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+      </node>
+      <node id="36">
+        <label>assets/png_loader.h</label>
+      </node>
+      <node id="16">
+        <label>box2d/box2d.h</label>
+      </node>
+      <node id="29">
+        <label>cmath</label>
+      </node>
+      <node id="14">
+        <label>cstddef</label>
+      </node>
+      <node id="31">
+        <label>cstdint</label>
+      </node>
+      <node id="32">
+        <label>functional</label>
+      </node>
+      <node id="24">
+        <label>future</label>
+      </node>
+      <node id="19">
+        <label>gef.h</label>
+      </node>
+      <node id="23">
+        <label>graphics/font.h</label>
+      </node>
+      <node id="37">
+        <label>graphics/image_data.h</label>
+      </node>
+      <node id="13">
+        <label>graphics/material.h</label>
+      </node>
+      <node id="44">
+        <label>graphics/mesh.h</label>
+      </node>
+      <node id="8">
+        <label>graphics/renderer_3d.h</label>
+      </node>
+      <node id="15">
+        <label>graphics/scene.h</label>
+      </node>
+      <node id="46">
+        <label>graphics/skinned_mesh_instance.h</label>
+      </node>
+      <node id="35">
+        <label>graphics/sprite.h</label>
+      </node>
+      <node id="38">
+        <label>graphics/texture.h</label>
+      </node>
+      <node id="34">
+        <label>input/keyboard.h</label>
+      </node>
+      <node id="49">
+        <label>input/sony_controller_input_manager.h</label>
+      </node>
+      <node id="33">
+        <label>input/touch_input_manager.h</label>
+      </node>
+      <node id="20">
+        <label>map</label>
+      </node>
+      <node id="42">
+        <label>maths/Matrix44.h</label>
+      </node>
+      <node id="5">
+        <label>maths/Vector2.h</label>
+      </node>
+      <node id="26">
+        <label>maths/math_utils.h</label>
+      </node>
+      <node id="7">
+        <label>maths/matrix44.h</label>
+      </node>
+      <node id="43">
+        <label>maths/quaternion.h</label>
+      </node>
+      <node id="11">
+        <label>maths/vector2.h</label>
+      </node>
+      <node id="6">
+        <label>maths/vector4.h</label>
+      </node>
+      <node id="25">
+        <label>random</label>
+      </node>
+      <node id="21">
+        <label>string</label>
+      </node>
+      <node id="10">
+        <label>system/application.h</label>
+      </node>
+      <node id="17">
+        <label>system/platform.h</label>
+      </node>
+      <node id="22">
+        <label>vector</label>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_shop_menu_8h" kindref="compound">ShopMenu.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_player_controller_8h" kindref="compound">GameFramework/PlayerController.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;graphics/sprite.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;assets/png_loader.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;graphics/image_data.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;graphics/texture.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_player_character_8h" kindref="compound">Actors/MeshActors/PlayerCharacter.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_attribute_component_8h" kindref="compound">Attributes/AttributeComponent.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;input/sony_controller_input_manager.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_shop_menu_1ad00ead74fb0ef7f5a265c1725fa6ccbf" kindref="member">ShopMenu::Init</ref>()</highlight></codeline>
+<codeline lineno="12"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Set<sp/>up<sp/>buttons</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_menu_button" kindref="compound">MenuButton</ref><sp/>increaseAttributeButton;</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/>increaseAttributeButton.<ref refid="struct_menu_button_1a23f34c6529bb20a890225fdb069c5afc" kindref="member">buttonText</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;Vitality<sp/>+&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/>increaseAttributeButton.<ref refid="struct_menu_button_1a41cfc44472326f1da939089a1b3b791e" kindref="member">color</ref><sp/>=<sp/>0xFF0000FF;</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/>increaseAttributeButton.<ref refid="struct_menu_button_1a616c2081a729821f35c44b4be80e771b" kindref="member">justification</ref><sp/>=<sp/>gef::TJ_LEFT;</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/>increaseAttributeButton.<ref refid="struct_menu_button_1a3248c3e6aebedd07e092b36014bddc13" kindref="member">scale</ref><sp/>=<sp/>3.f;</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/>increaseAttributeButton.<ref refid="struct_menu_button_1a50a2575f7a437f6ae6bcef25f904301e" kindref="member">position</ref><sp/>=<sp/>gef::Vector4(160.f,<sp/>400.f,<sp/>0.f);</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/>increaseAttributeButton.<ref refid="struct_menu_button_1a16cdea6d06499ccaf865be569f5c3adb" kindref="member">callbackFunction</ref><sp/>=<sp/><ref refid="_utils_8h_1addcf0f43bf2efc658ec99c4911957967" kindref="member">bindFunc</ref>(IncreaseVitality);</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_menu_1a6005d125bc4b0372bcd6d2719cb9a994" kindref="member">menuButtons</ref>.push_back(increaseAttributeButton);</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/>increaseAttributeButton.<ref refid="struct_menu_button_1a23f34c6529bb20a890225fdb069c5afc" kindref="member">buttonText</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;Wisdom<sp/>+&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/>increaseAttributeButton.<ref refid="struct_menu_button_1a50a2575f7a437f6ae6bcef25f904301e" kindref="member">position</ref><sp/>=<sp/>gef::Vector4(160.f,<sp/>600.f,<sp/>0.f);</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/>increaseAttributeButton.<ref refid="struct_menu_button_1a16cdea6d06499ccaf865be569f5c3adb" kindref="member">callbackFunction</ref><sp/>=<sp/><ref refid="_utils_8h_1addcf0f43bf2efc658ec99c4911957967" kindref="member">bindFunc</ref>(IncreaseWisdom);</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_menu_1a6005d125bc4b0372bcd6d2719cb9a994" kindref="member">menuButtons</ref>.push_back(increaseAttributeButton);</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>increaseAttributeButton.<ref refid="struct_menu_button_1a23f34c6529bb20a890225fdb069c5afc" kindref="member">buttonText</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;Toughness<sp/>+&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/>increaseAttributeButton.<ref refid="struct_menu_button_1a50a2575f7a437f6ae6bcef25f904301e" kindref="member">position</ref><sp/>=<sp/>gef::Vector4(1300.f,<sp/>400.f,<sp/>0.f);</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/>increaseAttributeButton.<ref refid="struct_menu_button_1a16cdea6d06499ccaf865be569f5c3adb" kindref="member">callbackFunction</ref><sp/>=<sp/><ref refid="_utils_8h_1addcf0f43bf2efc658ec99c4911957967" kindref="member">bindFunc</ref>(IncreaseToughness);</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_menu_1a6005d125bc4b0372bcd6d2719cb9a994" kindref="member">menuButtons</ref>.push_back(increaseAttributeButton);</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/>increaseAttributeButton.<ref refid="struct_menu_button_1a23f34c6529bb20a890225fdb069c5afc" kindref="member">buttonText</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;Energy<sp/>+&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/>increaseAttributeButton.<ref refid="struct_menu_button_1a50a2575f7a437f6ae6bcef25f904301e" kindref="member">position</ref><sp/>=<sp/>gef::Vector4(1300.f,<sp/>600.f,<sp/>0.f);</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/>increaseAttributeButton.<ref refid="struct_menu_button_1a16cdea6d06499ccaf865be569f5c3adb" kindref="member">callbackFunction</ref><sp/>=<sp/><ref refid="_utils_8h_1addcf0f43bf2efc658ec99c4911957967" kindref="member">bindFunc</ref>(IncreaseEnergy);</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_menu_1a6005d125bc4b0372bcd6d2719cb9a994" kindref="member">menuButtons</ref>.push_back(increaseAttributeButton);</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/>increaseAttributeButton.<ref refid="struct_menu_button_1a23f34c6529bb20a890225fdb069c5afc" kindref="member">buttonText</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;Close<sp/>Shop&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/>increaseAttributeButton.<ref refid="struct_menu_button_1a50a2575f7a437f6ae6bcef25f904301e" kindref="member">position</ref><sp/>=<sp/>gef::Vector4(750.f,<sp/>900.f,<sp/>0.f);</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/>increaseAttributeButton.<ref refid="struct_menu_button_1a16cdea6d06499ccaf865be569f5c3adb" kindref="member">callbackFunction</ref><sp/>=<sp/><ref refid="_utils_8h_1addcf0f43bf2efc658ec99c4911957967" kindref="member">bindFunc</ref>(CloseShop);</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_menu_1a6005d125bc4b0372bcd6d2719cb9a994" kindref="member">menuButtons</ref>.push_back(increaseAttributeButton);</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Create<sp/>controller,<sp/>so<sp/>that<sp/>we<sp/>can<sp/>navigate<sp/>the<sp/>menu</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_menu_1a0187883a2d424dadf01b0218d1db7d12" kindref="member">menuController</ref><sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_player_controller" kindref="compound">PlayerController</ref>(SceneApp::instance-&gt;platform());</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_f_key_bind_keyboard" kindref="compound">FKeyBindKeyboard</ref><sp/>keyboardKeybind;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Move<sp/>down<sp/>on<sp/>menu<sp/>keybinds</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/>keyboardKeybind.<ref refid="struct_f_key_bind_keyboard_1a5af1767e769e14b7f3e66f5c1926ed6a" kindref="member">inputAction</ref><sp/>=<sp/><ref refid="namespace_hellwatch_input_action_1ad39fcc17ea621da731d011339205f522a6baa22c2058b4910e772c39c0e4104bf" kindref="member">HellwatchInputAction::Released</ref>;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/>keyboardKeybind.<ref refid="struct_f_key_bind_keyboard_1ac4a6383a3435b6ae4666585580d31fce" kindref="member">keyCode</ref><sp/>=<sp/>gef::Keyboard::KC_S;</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/>keyboardKeybind.<ref refid="struct_f_key_bind_keyboard_1a1743545acca699e351fae0996ad583bc" kindref="member">functionBind</ref><sp/>=<sp/><ref refid="_utils_8h_1addcf0f43bf2efc658ec99c4911957967" kindref="member">bindFunc</ref>(<ref refid="class_menu_1a6b8e73974658482814f99b63ecc4d470" kindref="member">OnDownButtonPressed</ref>);</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_menu_1a0187883a2d424dadf01b0218d1db7d12" kindref="member">menuController</ref>-&gt;<ref refid="class_player_controller_1a3ecff75f943f340bce2240d58eaf7f4f" kindref="member">BindKeyboardEvent</ref>(keyboardKeybind);</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/>keyboardKeybind.<ref refid="struct_f_key_bind_keyboard_1ac4a6383a3435b6ae4666585580d31fce" kindref="member">keyCode</ref><sp/>=<sp/>gef::Keyboard::KC_DOWN;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_menu_1a0187883a2d424dadf01b0218d1db7d12" kindref="member">menuController</ref>-&gt;<ref refid="class_player_controller_1a3ecff75f943f340bce2240d58eaf7f4f" kindref="member">BindKeyboardEvent</ref>(keyboardKeybind);</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Move<sp/>up<sp/>on<sp/>menu<sp/>keybinds</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/>keyboardKeybind.<ref refid="struct_f_key_bind_keyboard_1ac4a6383a3435b6ae4666585580d31fce" kindref="member">keyCode</ref><sp/>=<sp/>gef::Keyboard::KC_UP;</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/>keyboardKeybind.<ref refid="struct_f_key_bind_keyboard_1a1743545acca699e351fae0996ad583bc" kindref="member">functionBind</ref><sp/>=<sp/><ref refid="_utils_8h_1addcf0f43bf2efc658ec99c4911957967" kindref="member">bindFunc</ref>(<ref refid="class_menu_1a98395444d03f38df02fa9c2aed1fb797" kindref="member">OnUpButtonPressed</ref>);</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_menu_1a0187883a2d424dadf01b0218d1db7d12" kindref="member">menuController</ref>-&gt;<ref refid="class_player_controller_1a3ecff75f943f340bce2240d58eaf7f4f" kindref="member">BindKeyboardEvent</ref>(keyboardKeybind);</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/>keyboardKeybind.<ref refid="struct_f_key_bind_keyboard_1ac4a6383a3435b6ae4666585580d31fce" kindref="member">keyCode</ref><sp/>=<sp/>gef::Keyboard::KC_W;</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_menu_1a0187883a2d424dadf01b0218d1db7d12" kindref="member">menuController</ref>-&gt;<ref refid="class_player_controller_1a3ecff75f943f340bce2240d58eaf7f4f" kindref="member">BindKeyboardEvent</ref>(keyboardKeybind);</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Submit<sp/>keybind</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/>keyboardKeybind.<ref refid="struct_f_key_bind_keyboard_1ac4a6383a3435b6ae4666585580d31fce" kindref="member">keyCode</ref><sp/>=<sp/>gef::Keyboard::KC_RETURN;</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/>keyboardKeybind.<ref refid="struct_f_key_bind_keyboard_1a1743545acca699e351fae0996ad583bc" kindref="member">functionBind</ref><sp/>=<sp/><ref refid="_utils_8h_1addcf0f43bf2efc658ec99c4911957967" kindref="member">bindFunc</ref>(<ref refid="class_menu_1a78e162d9e5571f0bb3e93c02cc0f76df" kindref="member">PressMenuButton</ref>);</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_menu_1a0187883a2d424dadf01b0218d1db7d12" kindref="member">menuController</ref>-&gt;<ref refid="class_player_controller_1a3ecff75f943f340bce2240d58eaf7f4f" kindref="member">BindKeyboardEvent</ref>(keyboardKeybind);</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Mouse<sp/>click<sp/>to<sp/>submit<sp/>keybind</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_f_key_bind_mouse" kindref="compound">FKeyBindMouse</ref><sp/>mouseKeybind;</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/>mouseKeybind.<ref refid="struct_f_key_bind_mouse_1a5bc7033239652acd4610ec1ca89ddf89" kindref="member">clickAction</ref><sp/>=<sp/>gef::TT_NEW;</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/>mouseKeybind.<ref refid="struct_f_key_bind_mouse_1a5845f86fa206d3ba7e4ab997960a3588" kindref="member">functionBind</ref><sp/>=<sp/><ref refid="_utils_8h_1ad2c68575874b116204c5bd611d701513" kindref="member">bindFunc_ONEParam</ref>(<ref refid="class_shop_menu_1a9d9a71e0eb5eb51a917b46402e9fbc9a" kindref="member">OnMouseButtonPressed</ref>,<sp/>gef::Vector2,<sp/>mousePos);</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_menu_1a0187883a2d424dadf01b0218d1db7d12" kindref="member">menuController</ref>-&gt;<ref refid="class_player_controller_1a654bf416ea31cbe022ccc50c7e1832e8" kindref="member">BindMouseEvent</ref>(mouseKeybind);</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Controller<sp/>events</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_f_key_bind_controller" kindref="compound">FKeyBindController</ref><sp/>controllerKeybind;</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/>controllerKeybind.<ref refid="struct_f_key_bind_controller_1a9439ad75707d54dacf3aff4d9532e80c" kindref="member">inputAction</ref><sp/>=<sp/><ref refid="namespace_hellwatch_input_action_1ad39fcc17ea621da731d011339205f522ac50db83d00684255156bb26fbadba101" kindref="member">HellwatchInputAction::Pressed</ref>;</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/>controllerKeybind.<ref refid="struct_f_key_bind_controller_1a30a23da42d558b13a620780e9252e1b4" kindref="member">keyCode</ref><sp/>=<sp/>gef_SONY_CTRL_DOWN;</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/>controllerKeybind.<ref refid="struct_f_key_bind_controller_1ad1881af9bbed2c677b1f11b8e5e3d5b6" kindref="member">functionBind</ref><sp/>=<sp/><ref refid="_utils_8h_1ad2c68575874b116204c5bd611d701513" kindref="member">bindFunc_ONEParam</ref>(<ref refid="class_menu_1a50e7901f94713c0719e0774474d981c2" kindref="member">OnControllerDownButton</ref>,<sp/>gef::Vector2,<sp/>dir);</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_menu_1a0187883a2d424dadf01b0218d1db7d12" kindref="member">menuController</ref>-&gt;<ref refid="class_player_controller_1a3b4ce10a473a2000d1b204c7830bff97" kindref="member">BindControllerEvent</ref>(controllerKeybind);</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/>controllerKeybind.<ref refid="struct_f_key_bind_controller_1a30a23da42d558b13a620780e9252e1b4" kindref="member">keyCode</ref><sp/>=<sp/>gef_SONY_CTRL_UP;</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/>controllerKeybind.<ref refid="struct_f_key_bind_controller_1ad1881af9bbed2c677b1f11b8e5e3d5b6" kindref="member">functionBind</ref><sp/>=<sp/><ref refid="_utils_8h_1ad2c68575874b116204c5bd611d701513" kindref="member">bindFunc_ONEParam</ref>(<ref refid="class_menu_1a8023104df1848b95c94e1c46fba209ca" kindref="member">OnControllerUpButton</ref>,<sp/>gef::Vector2,<sp/>dir);</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_menu_1a0187883a2d424dadf01b0218d1db7d12" kindref="member">menuController</ref>-&gt;<ref refid="class_player_controller_1a3b4ce10a473a2000d1b204c7830bff97" kindref="member">BindControllerEvent</ref>(controllerKeybind);</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/>controllerKeybind.<ref refid="struct_f_key_bind_controller_1a30a23da42d558b13a620780e9252e1b4" kindref="member">keyCode</ref><sp/>=<sp/>gef_SONY_CTRL_CROSS;</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/>controllerKeybind.<ref refid="struct_f_key_bind_controller_1ad1881af9bbed2c677b1f11b8e5e3d5b6" kindref="member">functionBind</ref><sp/>=<sp/><ref refid="_utils_8h_1ad2c68575874b116204c5bd611d701513" kindref="member">bindFunc_ONEParam</ref>(<ref refid="class_menu_1a8bd9fce86817a1125bf7d2e371551689" kindref="member">OnControllerSubmitButton</ref>,<sp/>gef::Vector2,<sp/>dir);</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_menu_1a0187883a2d424dadf01b0218d1db7d12" kindref="member">menuController</ref>-&gt;<ref refid="class_player_controller_1a3b4ce10a473a2000d1b204c7830bff97" kindref="member">BindControllerEvent</ref>(controllerKeybind);</highlight></codeline>
+<codeline lineno="89"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_shop_menu_1a17c43cd733173e8a19eaaff593dbfec7" kindref="member">ShopMenu::Update</ref>()</highlight></codeline>
+<codeline lineno="92"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_menu_1af29d71473a414e31e914bc637840cb3e" kindref="member">Menu::Update</ref>();</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_menu_1a6005d125bc4b0372bcd6d2719cb9a994" kindref="member">menuButtons</ref>[0].buttonText<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;+<sp/>Vitality<sp/>(&quot;</highlight><highlight class="normal"><sp/>+<sp/>std::to_string((</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)SceneApp::instance-&gt;GetPlayerCharacter()-&gt;GetCharacterAttributes()-&gt;GetCurrentAttributeValueByType(<ref refid="namespace_hellwatch_attribute_1ad0a500e65129d06e4589f9bca54c4a7da32b2fa4bc40129b2f09aa2a9a4192d50" kindref="member">HellwatchAttribute::Vitality</ref>))<sp/>+<sp/></highlight><highlight class="stringliteral">&quot;)&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_menu_1a6005d125bc4b0372bcd6d2719cb9a994" kindref="member">menuButtons</ref>[1].buttonText<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;+<sp/>Wisdom<sp/>(&quot;</highlight><highlight class="normal"><sp/>+<sp/>std::to_string((</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)SceneApp::instance-&gt;GetPlayerCharacter()-&gt;GetCharacterAttributes()-&gt;GetCurrentAttributeValueByType(<ref refid="namespace_hellwatch_attribute_1ad0a500e65129d06e4589f9bca54c4a7da1863c83b1312f525ab940b88fd83a2f8" kindref="member">HellwatchAttribute::Wisdom</ref>))<sp/>+<sp/></highlight><highlight class="stringliteral">&quot;)&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_menu_1a6005d125bc4b0372bcd6d2719cb9a994" kindref="member">menuButtons</ref>[2].buttonText<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;+<sp/>Toughness<sp/>(&quot;</highlight><highlight class="normal"><sp/>+<sp/>std::to_string((</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)SceneApp::instance-&gt;GetPlayerCharacter()-&gt;GetCharacterAttributes()-&gt;GetCurrentAttributeValueByType(<ref refid="namespace_hellwatch_attribute_1ad0a500e65129d06e4589f9bca54c4a7da7a4d8b401430813782ca3155c614b3af" kindref="member">HellwatchAttribute::Toughness</ref>))<sp/>+<sp/></highlight><highlight class="stringliteral">&quot;)&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_menu_1a6005d125bc4b0372bcd6d2719cb9a994" kindref="member">menuButtons</ref>[3].buttonText<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;+<sp/>Energy<sp/>(&quot;</highlight><highlight class="normal"><sp/>+<sp/>std::to_string((</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)SceneApp::instance-&gt;GetPlayerCharacter()-&gt;GetCharacterAttributes()-&gt;GetCurrentAttributeValueByType(<ref refid="namespace_hellwatch_attribute_1ad0a500e65129d06e4589f9bca54c4a7daf89b5eb0bb9f25288755790fff1e0603" kindref="member">HellwatchAttribute::Energy</ref>))<sp/>+<sp/></highlight><highlight class="stringliteral">&quot;)&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="99"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_shop_menu_1a17f8a9f65b1d66a40d3fed952bedde2b" kindref="member">ShopMenu::DrawMenuHUD</ref>(gef::Font*<sp/>font_,<sp/>gef::SpriteRenderer*<sp/>sprite_renderer_)</highlight></codeline>
+<codeline lineno="102"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_menu_1acef1c8e0a83655c3b17c217567527f8b" kindref="member">Menu::DrawMenuHUD</ref>(font_,<sp/>sprite_renderer_);</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/>moneyAmount<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;Money:<sp/>&quot;</highlight><highlight class="normal"><sp/>+<sp/>std::to_string(SceneApp::instance-&gt;GetPlayerMoney());</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/>upgradeCostStr<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;Cost:<sp/>&quot;</highlight><highlight class="normal"><sp/>+<sp/>std::to_string(upgradeCost);</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/>font_-&gt;RenderText(sprite_renderer_,<sp/>gef::Vector4(100,<sp/>200,<sp/>0,<sp/>0),<sp/>1,<sp/>0xFF00FFFF,<sp/>gef::TJ_LEFT,<sp/>moneyAmount.c_str());</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/>font_-&gt;RenderText(sprite_renderer_,<sp/>gef::Vector4(100,<sp/>250,<sp/>0,<sp/>0),<sp/>1,<sp/>0xFF00FFFF,<sp/>gef::TJ_LEFT,<sp/>upgradeCostStr.c_str());</highlight></codeline>
+<codeline lineno="109"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_shop_menu_1a9d9a71e0eb5eb51a917b46402e9fbc9a" kindref="member">ShopMenu::OnMouseButtonPressed</ref>(gef::Vector2<sp/>mousePos)</highlight></codeline>
+<codeline lineno="112"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal">&amp;<sp/>button<sp/>:<sp/><ref refid="class_menu_1a6005d125bc4b0372bcd6d2719cb9a994" kindref="member">menuButtons</ref>)</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="class_menu_1a0187883a2d424dadf01b0218d1db7d12" kindref="member">menuController</ref>)</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(mousePos.x<sp/>&gt;<sp/>button.position.x()<sp/>-<sp/>20<sp/>&amp;&amp;<sp/>mousePos.x<sp/>&lt;<sp/>button.position.x()<sp/>+<sp/>250<sp/>&amp;&amp;<sp/>mousePos.y<sp/>&gt;<sp/>button.position.y()<sp/>&amp;&amp;<sp/>mousePos.y<sp/>&lt;<sp/>button.position.y()<sp/>+<sp/>90)</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>button.callbackFunction();</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="124"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"></highlight></codeline>
+<codeline lineno="126"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>ShopMenu::IncreaseVitality()</highlight></codeline>
+<codeline lineno="127"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/>IncreaseAttribute(<ref refid="namespace_hellwatch_attribute_1ad0a500e65129d06e4589f9bca54c4a7da32b2fa4bc40129b2f09aa2a9a4192d50" kindref="member">HellwatchAttribute::Vitality</ref>);</highlight></codeline>
+<codeline lineno="129"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"></highlight></codeline>
+<codeline lineno="131"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>ShopMenu::IncreaseWisdom()</highlight></codeline>
+<codeline lineno="132"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/>IncreaseAttribute(<ref refid="namespace_hellwatch_attribute_1ad0a500e65129d06e4589f9bca54c4a7da1863c83b1312f525ab940b88fd83a2f8" kindref="member">HellwatchAttribute::Wisdom</ref>);</highlight></codeline>
+<codeline lineno="134"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"></highlight></codeline>
+<codeline lineno="136"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>ShopMenu::IncreaseToughness()</highlight></codeline>
+<codeline lineno="137"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/>IncreaseAttribute(<ref refid="namespace_hellwatch_attribute_1ad0a500e65129d06e4589f9bca54c4a7da7a4d8b401430813782ca3155c614b3af" kindref="member">HellwatchAttribute::Toughness</ref>);</highlight></codeline>
+<codeline lineno="139"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"></highlight></codeline>
+<codeline lineno="141"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>ShopMenu::IncreaseEnergy()</highlight></codeline>
+<codeline lineno="142"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/>IncreaseAttribute(<ref refid="namespace_hellwatch_attribute_1ad0a500e65129d06e4589f9bca54c4a7daf89b5eb0bb9f25288755790fff1e0603" kindref="member">HellwatchAttribute::Energy</ref>);</highlight></codeline>
+<codeline lineno="144"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"></highlight></codeline>
+<codeline lineno="146"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>ShopMenu::CloseShop()</highlight></codeline>
+<codeline lineno="147"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/>SceneApp::instance-&gt;SetGameState(<ref refid="namespace_game_state_1aa2df68fe63beaaf10d3154d8eb490fe6aa1babbc78fafb7b98d14a8fcc880bd55" kindref="member">GameState::GameLoop</ref>);</highlight></codeline>
+<codeline lineno="149"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"></highlight></codeline>
+<codeline lineno="151"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>ShopMenu::IncreaseAttribute(<ref refid="namespace_hellwatch_attribute_1ad0a500e65129d06e4589f9bca54c4a7d" kindref="member">HellwatchAttribute::Type</ref><sp/>attribute)</highlight></codeline>
+<codeline lineno="152"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!DoesPlayerHaveMoneyForUpgrade())</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"></highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/>SceneApp::instance-&gt;ApplyCostToPlayerMoney(upgradeCost);</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/>IncreaseUpgradeCost();</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"></highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_player_character" kindref="compound">PlayerCharacter</ref>*<sp/>pc<sp/>=<sp/>SceneApp::instance-&gt;GetPlayerCharacter();</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_attribute_component" kindref="compound">AttributeComponent</ref>*<sp/>attributes<sp/>=<sp/>pc<sp/>?<sp/>pc-&gt;<ref refid="class_player_character_1a35f60a491cce521c070536f0c9eec6f6" kindref="member">GetCharacterAttributes</ref>()<sp/>:<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"></highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(attributes)</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>attributes-&gt;<ref refid="class_attribute_component_1a2a29edbf9c15e3296eb8ac4f5b59e8c9" kindref="member">ApplyAttributeChange</ref>(attribute,<sp/>1);</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="168"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"></highlight></codeline>
+<codeline lineno="170"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>ShopMenu::IncreaseUpgradeCost()</highlight></codeline>
+<codeline lineno="171"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/>++upgradesAmount;</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/>upgradeCost<sp/>=<sp/><ref refid="_shop_menu_8h_1a6484aecd6b2bd1669a592e349189cc35" kindref="member">UPGRADE_COST_FORMULA</ref>(upgradesAmount);</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"></highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(upgradeCost<sp/>&gt;<sp/><ref refid="_shop_menu_8h_1a4693ca27d43aba0ff1111f968ad1ed1e" kindref="member">MAX_COST</ref>)</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>upgradeCost<sp/>=<sp/><ref refid="_shop_menu_8h_1a4693ca27d43aba0ff1111f968ad1ed1e" kindref="member">MAX_COST</ref>;</highlight></codeline>
+<codeline lineno="177"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"></highlight></codeline>
+<codeline lineno="179"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>ShopMenu::DoesPlayerHaveMoneyForUpgrade()</highlight></codeline>
+<codeline lineno="180"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>SceneApp::instance-&gt;GetPlayerMoney()<sp/>&gt;<sp/>upgradeCost;</highlight></codeline>
+<codeline lineno="182"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/UserInterface/ShopMenu.cpp"/>
+  </compounddef>
+</doxygen>

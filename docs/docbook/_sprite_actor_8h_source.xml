@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__sprite_actor_8h_source" xml:lang="en-US">
+<title>SpriteActor.h</title>
+<indexterm><primary>D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/SpriteActor.h</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered">1 <emphasis role="preprocessor">#pragma&#32;once</emphasis>
+2 
+3 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="__world_object_8h">GameFramework/WorldObject.h</link>&quot;</emphasis>
+4 
+5 <emphasis role="preprocessor">#include&#32;&quot;graphics/sprite.h&quot;</emphasis>
+6 <emphasis role="preprocessor">#include&#32;&quot;graphics/texture.h&quot;</emphasis>
+7 
+11 <emphasis role="keyword">class&#32;</emphasis><link linkend="_class_sprite_actor">SpriteActor</link>&#32;:&#32;<emphasis role="keyword">public</emphasis>&#32;<link linkend="_class_world_object">WorldObject</link>
+12 {
+13 &#32;&#32;&#32;&#32;<link linkend="__utils_8h_1afc0ee7bd35c161a2d80b8e8f04fd9213">GENERATED_BODY</link>(<link linkend="_class_world_object">WorldObject</link>,&#32;<link linkend="_class_sprite_actor">SpriteActor</link>)
+14 
+15 <emphasis role="keyword">public</emphasis>:
+16 
+20 &#32;&#32;&#32;&#32;<link linkend="_class_sprite_actor_1a7cec018143780ec6eb5c6986909702b7">SpriteActor</link>();
+21 
+29 &#32;&#32;&#32;&#32;<link linkend="_class_sprite_actor_1a7cec018143780ec6eb5c6986909702b7">SpriteActor</link>(<emphasis role="keywordtype">float</emphasis>&#32;width,&#32;<emphasis role="keywordtype">float</emphasis>&#32;height,&#32;gef::Texture*&#32;texture&#32;=&#32;<emphasis role="keyword">nullptr</emphasis>,&#32;UInt32&#32;colour&#32;=&#32;0xFFFFFFFF);
+30 
+31 &#32;&#32;&#32;&#32;<link linkend="_class_sprite_actor_1a087bb8b789d29d3e7c71db58e4c2a5e0">~SpriteActor</link>();
+32 
+33 <emphasis role="keyword">private</emphasis>:
+34 
+35 &#32;&#32;&#32;&#32;gef::Sprite*&#32;sprite&#32;=&#32;<emphasis role="keyword">nullptr</emphasis>;
+36 
+37 <emphasis role="keyword">public</emphasis>:
+38 
+39 <emphasis role="comment">&#32;&#32;&#32;&#32;/************************************************************************/</emphasis>
+40 &#32;&#32;&#32;&#32;<emphasis role="comment">/*&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;SETTERS&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;*/</emphasis>
+41 <emphasis role="comment">&#32;&#32;&#32;&#32;/************************************************************************/</emphasis>
+42 &#32;&#32;&#32;&#32;<emphasis role="keyword">virtual</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_sprite_actor_1a9bee8a49bee219bae0190046e3ec5d1c">SetTranslation</link>(<emphasis role="keyword">const</emphasis>&#32;gef::Vector4&amp;&#32;inTranslation)&#32;<emphasis role="keyword">override</emphasis>;
+43 &#32;&#32;&#32;&#32;<emphasis role="keyword">virtual</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_sprite_actor_1ad7d2b2ba00da6fd85e8dfd84d9aaa776">SetRotation</link>(<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">float</emphasis>&#32;rotation)&#32;<emphasis role="keyword">override</emphasis>;
+44 &#32;&#32;&#32;&#32;<emphasis role="keyword">virtual</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_sprite_actor_1a432a23017cf5aa8fe8b521ee5884c996">SetScale</link>(<emphasis role="keyword">const</emphasis>&#32;gef::Vector4&amp;&#32;inScale);
+45 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_sprite_actor_1a2c4fffd3038c47dcda6592a398f6386c">SetTexture</link>(gef::Texture*&#32;texture);
+46 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_sprite_actor_1a0369b43c4507873169b90af54f002da3">SetSprite</link>(gef::Sprite*&#32;inSprite);
+47 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_sprite_actor_1a34892b4383f3a0dec1c43345b19a8e8e">SetWidth</link>(<emphasis role="keywordtype">float</emphasis>&#32;newWidth)&#32;{&#32;sprite-&gt;set_width(newWidth);&#32;}
+48 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_sprite_actor_1adf4a1510ceb0dbf66a582614b1dfaddc">SetHeight</link>(<emphasis role="keywordtype">float</emphasis>&#32;newHeight)&#32;{&#32;sprite-&gt;set_height(newHeight);&#32;}
+49 
+50 &#32;&#32;&#32;&#32;<emphasis role="keyword">virtual</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_sprite_actor_1a0820aad46981ac11174f67ab97433473">Render</link>()&#32;<emphasis role="keyword">override</emphasis>;
+51 
+52 
+53 <emphasis role="comment">&#32;&#32;&#32;&#32;/************************************************************************/</emphasis>
+54 &#32;&#32;&#32;&#32;<emphasis role="comment">/*&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;GETTERS&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;*/</emphasis>
+55 <emphasis role="comment">&#32;&#32;&#32;&#32;/************************************************************************/</emphasis>
+56 &#32;&#32;&#32;&#32;__forceinline&#32;gef::Sprite*&#32;<link linkend="_class_sprite_actor_1a530cf84805cb957b99f95fd9a8c0c1e3">GetSprite</link>()<emphasis role="keyword">&#32;const&#32;</emphasis>{&#32;<emphasis role="keywordflow">return</emphasis>&#32;sprite;&#32;}
+57 &#32;&#32;&#32;&#32;__forceinline&#32;<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keyword">virtual</emphasis>&#32;<emphasis role="keywordtype">float</emphasis>&#32;<link linkend="_class_sprite_actor_1aaf810a489f9916ecd2d041cd61d39874">GetRotationF</link>()<emphasis role="keyword">&#32;const&#32;override&#32;</emphasis>{&#32;<emphasis role="keywordflow">return</emphasis>&#32;sprite-&gt;rotation();&#32;}
+58 &#32;&#32;&#32;&#32;__forceinline&#32;<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keyword">virtual</emphasis>&#32;gef::Vector4&amp;&#32;<link linkend="_class_sprite_actor_1a4d9d23b93afa89ec5aa8e04786252b19">GetTranslation</link>()<emphasis role="keyword">&#32;const&#32;</emphasis>{&#32;<emphasis role="keywordflow">return</emphasis>&#32;sprite-&gt;position();&#32;}
+59 &#32;&#32;&#32;&#32;__forceinline&#32;<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keyword">virtual</emphasis>&#32;gef::Vector4&amp;&#32;<link linkend="_class_sprite_actor_1a473e053ec3e6e8a460020ba3833acc2e">GetScale</link>()<emphasis role="keyword">&#32;const&#32;</emphasis>{&#32;<emphasis role="keywordflow">return</emphasis>&#32;gef::Vector4(sprite-&gt;width(),&#32;sprite-&gt;height(),&#32;0);&#32;}
+60 };
+61 
+</programlisting></section>

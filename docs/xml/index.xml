@@ -1,0 +1,883 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.9.5" xml:lang="en-US">
+  <compound refid="class_abilities_component" kind="class"><name>AbilitiesComponent</name>
+    <member refid="class_abilities_component_1ab70864987fe015c2bcb368e5389d1ff1" kind="variable"><name>availableAbilities</name></member>
+    <member refid="class_abilities_component_1a169b5181aae2bc52970812fe81088b4e" kind="variable"><name>equippedAbilities</name></member>
+    <member refid="class_abilities_component_1a6b30bddc17dc4ac56c1b1047e372807d" kind="variable"><name>attributes</name></member>
+    <member refid="class_abilities_component_1a2002c80ff8a5e6de25e5269310c6dfa5" kind="function"><name>AddAbility</name></member>
+    <member refid="class_abilities_component_1a06d5228f074b929c061cf34af9460be4" kind="function"><name>EquipAbility</name></member>
+    <member refid="class_abilities_component_1a092acad2af7f3c106d117a3c51a04971" kind="function"><name>ActivateAbilityByKey</name></member>
+    <member refid="class_abilities_component_1aae3dce0a0f06941f91f8c14dc1a3878e" kind="function"><name>ActivateAbilityByName</name></member>
+    <member refid="class_abilities_component_1a3d01f13b661e8d6bfe3c0a8f2d6af7ea" kind="function"><name>EndAbilityByKey</name></member>
+    <member refid="class_abilities_component_1a310f5751a58f69fba41f473b492e5582" kind="function"><name>EndAbilityByName</name></member>
+    <member refid="class_abilities_component_1ab57de1cda84055ee7564f0709e03777f" kind="function"><name>RegisterAttributes</name></member>
+    <member refid="class_abilities_component_1a10a7a5652a4d850b5845766224a43c54" kind="function"><name>IsAbilityInCooldown</name></member>
+    <member refid="class_abilities_component_1a46f90af4015a7e4fa9679f5743547d94" kind="function"><name>GetAbilityCooldown</name></member>
+    <member refid="class_abilities_component_1a96732cdae01d866200dc66a89200695f" kind="function"><name>UpdateComponent</name></member>
+    <member refid="class_abilities_component_1aa2e9909a907d358e34fc58a387f0e493" kind="function"><name>GetAttributeComponent</name></member>
+    <member refid="class_abilities_component_1aa1a55ce45b753097f0e2d7d4db4a419b" kind="function"><name>PostInit</name></member>
+    <member refid="class_abilities_component_1aa5411a75ed0c4a3e313972839bda7f0c" kind="function"><name>HasAbility</name></member>
+    <member refid="class_abilities_component_1a175cfd7b1d64ee5df1fc7fdd0496d394" kind="function"><name>HasAbility</name></member>
+    <member refid="class_abilities_component_1acfb21b719e4f0c3db3eba06a7230f5a3" kind="function"><name>IsAbilityEquipped</name></member>
+    <member refid="class_abilities_component_1a302ed60df54311fa73cb9dad668cd049" kind="function"><name>FindAbility</name></member>
+    <member refid="class_abilities_component_1a87742cf5ff675505251d1fec68933057" kind="function"><name>EquipAbilityInternal</name></member>
+  </compound>
+  <compound refid="class_ability" kind="class"><name>Ability</name>
+    <member refid="class_ability_1a4310ef2c96c00e405697f9983da58645" kind="variable"><name>activationKey</name></member>
+    <member refid="class_ability_1a0e5b9e690d512aa57f66a4f7ba3cb295" kind="variable"><name>cooldownTimer</name></member>
+    <member refid="class_ability_1a6e6e8dc7387275d8c4cef1036d0b2a08" kind="variable"><name>cooldown</name></member>
+    <member refid="class_ability_1aa080c6e4857a11599f25e1feb65aae9d" kind="variable"><name>damageAmount</name></member>
+    <member refid="class_ability_1a3d60b8e01776b0f6f42aaa3fa8821aa7" kind="variable"><name>abilityCostAmount</name></member>
+    <member refid="class_ability_1aa0aa42d055ea84389c3bd7bb7b61fd00" kind="variable"><name>abilityCostType</name></member>
+    <member refid="class_ability_1a74f19e3368e28b7b61bf54cabe2da629" kind="variable"><name>cooldownStartPolicy</name></member>
+    <member refid="class_ability_1afc72628992607694ae9e4a096557fead" kind="variable"><name>bIsTargeted</name></member>
+    <member refid="class_ability_1ae2aac411168782dab7715c29817f23de" kind="variable"><name>bIsTargeting</name></member>
+    <member refid="class_ability_1acc6fba5d131273ccbc0cf147b6f38eb2" kind="variable"><name>abilityName</name></member>
+    <member refid="class_ability_1ae426458572df63716f8f8b63e83d04ca" kind="variable"><name>bIsActive</name></member>
+    <member refid="class_ability_1aa75c59af7fa1fd68787a211e66fd0173" kind="variable"><name>owningComponent</name></member>
+    <member refid="class_ability_1a1e03282d1a96232143322ef89fcbb314" kind="function"><name>Ability</name></member>
+    <member refid="class_ability_1a291796c5cb356bcef9c6f6c0b2386ca2" kind="function"><name>Init</name></member>
+    <member refid="class_ability_1aaa83dbb12f79ceecc4d7b1cb3930d3d3" kind="function"><name>Update</name></member>
+    <member refid="class_ability_1a7815198848a6acf69bf1d76caf595820" kind="function"><name>TryActivate</name></member>
+    <member refid="class_ability_1a52f7aee4243f1da13b544a038892e43b" kind="function"><name>CommitAbility</name></member>
+    <member refid="class_ability_1ad7290141bc73d865773ac54477db7fb6" kind="function"><name>EndAbility</name></member>
+    <member refid="class_ability_1a13aa60092026728b42ade2811168c087" kind="function"><name>SetActivationKey</name></member>
+    <member refid="class_ability_1a83e04cf64b10504ee3bc1cd10ad7219c" kind="function"><name>SetAbilityCostAmount</name></member>
+    <member refid="class_ability_1a36391efa24d0da869f43e4ba592241c8" kind="function"><name>SetAbilityCostType</name></member>
+    <member refid="class_ability_1a6737d4900eb79147ca81aaa20a85218a" kind="function"><name>SetAbilityName</name></member>
+    <member refid="class_ability_1a072cbfb1685db6fd4a0723d519bc9176" kind="function"><name>SetIsActive</name></member>
+    <member refid="class_ability_1a060e6f07d0c7510f7779418d69489fea" kind="function"><name>SetCooldownStartPolicy</name></member>
+    <member refid="class_ability_1aa7f8c3e16910914b751aa1e1e5731f8f" kind="function"><name>SetAbilityCooldown</name></member>
+    <member refid="class_ability_1a51b48c192967cf32ea352f5e735136d6" kind="function"><name>SetDamageAmount</name></member>
+    <member refid="class_ability_1a95990ec850dd39919d25c4c481935db5" kind="function"><name>SetIsTargeted</name></member>
+    <member refid="class_ability_1a5da322fcc571670d8b96385b67685a68" kind="function"><name>SetIsTargeting</name></member>
+    <member refid="class_ability_1ac2b656dc59480f2973aaa3f0f59706bc" kind="function"><name>IsActive</name></member>
+    <member refid="class_ability_1a7af0334ceb8c57dd4b114124409492b5" kind="function"><name>GetActivationKey</name></member>
+    <member refid="class_ability_1a4e28b2c8ffd652b050612ee758f76958" kind="function"><name>GetAbilityName</name></member>
+    <member refid="class_ability_1adbd4d2c476e68c473b2872fd788eb2c2" kind="function"><name>IsInCooldown</name></member>
+    <member refid="class_ability_1a2a7a75401b5757d3b22ed26544bfdb19" kind="function"><name>IsAbilityTargeted</name></member>
+    <member refid="class_ability_1a2432f7d4c4159f75e8552d08b7ca51ed" kind="function"><name>IsAbilityTargeting</name></member>
+    <member refid="class_ability_1a063307977163faa4a3bcf7089cf70bb5" kind="function"><name>GetRemainingCooldown</name></member>
+    <member refid="class_ability_1a57f2e9a30ca6d2588fd721af77353d52" kind="function"><name>GetDamageAmount</name></member>
+    <member refid="class_ability_1a50b5f7d8d3197869b3bc32d3c9bd4fd2" kind="function"><name>GetOwner</name></member>
+    <member refid="class_ability_1ab567fcf9b39984aa3bf45343ffcbc086" kind="function"><name>GetOwnerAttributes</name></member>
+    <member refid="class_ability_1a25388ebb622b414ef027eb33bf4a5cfb" kind="function"><name>PostInit</name></member>
+    <member refid="class_ability_1ace910398ed2eb9f58c8e85dbb7a72de2" kind="function"><name>Begin</name></member>
+    <member refid="class_ability_1a61a88edf359a3c6bd34868e58bf64f20" kind="function"><name>End</name></member>
+    <member refid="class_ability_1a1b338496a61edb978f7f83570b9f03a4" kind="function"><name>Commit</name></member>
+    <member refid="class_ability_1a172dfdc4273690de2476fda0b82e5ea6" kind="function"><name>BeginTargeting</name></member>
+    <member refid="class_ability_1af82a917f3d8fc9260651c4cc59affb0e" kind="function"><name>EndTargeting</name></member>
+    <member refid="class_ability_1a4276e15e3a35b7887dd679eb5e332ff4" kind="function"><name>CanActivate</name></member>
+  </compound>
+  <compound refid="struct_activation_outcome" kind="struct"><name>ActivationOutcome</name>
+    <member refid="struct_activation_outcome_1a3867a87cde6f19f7d86e822b056ab7ad" kind="variable"><name>abilityName</name></member>
+    <member refid="struct_activation_outcome_1a06932003ad89461fc36b0936072bfd97" kind="variable"><name>failReason</name></member>
+    <member refid="struct_activation_outcome_1a6bd503ece6732fc90dacbb08f0bffb40" kind="variable"><name>bWasSuccessful</name></member>
+    <member refid="struct_activation_outcome_1a85ab4e1d039f0aa58b36d9cc42a7d630" kind="variable"><name>keyOfAbility</name></member>
+  </compound>
+  <compound refid="class_actor_component" kind="class"><name>ActorComponent</name>
+    <member refid="class_actor_component_1a2766e186399b24f5d7e2d143ffa26e05" kind="variable"><name>ownerActor</name></member>
+    <member refid="class_actor_component_1ab4ea0eaffa2c616a209e2887f80902f2" kind="function"><name>Init</name></member>
+    <member refid="class_actor_component_1af730b3c7d2b4154e1fb0962db7750f6b" kind="function"><name>UpdateComponent</name></member>
+    <member refid="class_actor_component_1a3705d464da5f840eca1d14bcce07372d" kind="function"><name>GetOwner</name></member>
+    <member refid="class_actor_component_1a467d082f3fedd6cf2acacb117450f90e" kind="function"><name>PostInit</name></member>
+  </compound>
+  <compound refid="class_attribute_component" kind="class"><name>AttributeComponent</name>
+    <member refid="class_attribute_component_1aa3171b0f558b7397e01977881435fcc2" kind="variable"><name>attributes</name></member>
+    <member refid="class_attribute_component_1aeb57d0991e47cce857af4f489df0cac8" kind="function"><name>GENERATED_BODY</name></member>
+    <member refid="class_attribute_component_1a065f9da003275b56c2b600345238f331" kind="function"><name>OnAttributeChanged</name></member>
+    <member refid="class_attribute_component_1a580cf7f29236d87d448840840ad53bc6" kind="function"><name>GetCurrentAttributeValueByType</name></member>
+    <member refid="class_attribute_component_1ac3a3cdb64a8ddf33f584b07cb6fb3546" kind="function"><name>GetMaxAttributeValueByType</name></member>
+    <member refid="class_attribute_component_1ac8bc3fd1392349fb859ddf83e3e8e027" kind="function"><name>CheckHasEnoughOfAttributeByType</name></member>
+    <member refid="class_attribute_component_1ab359fd856c0eaee6fda4c81765c9b336" kind="function"><name>SetAttributeCurrentValue</name></member>
+    <member refid="class_attribute_component_1a1ed8d3136ef683d442d1ff7523d219b0" kind="function"><name>SetAttributeMaxValue</name></member>
+    <member refid="class_attribute_component_1ada89535490c847acf8574d39d35c837c" kind="function"><name>SetAttributeCurrentAndMaxValue</name></member>
+    <member refid="class_attribute_component_1a2a29edbf9c15e3296eb8ac4f5b59e8c9" kind="function"><name>ApplyAttributeChange</name></member>
+    <member refid="class_attribute_component_1a381ad0a8f330864674b1cf80bc27f858" kind="function"><name>ApplyAttributeMaxValueChange</name></member>
+    <member refid="class_attribute_component_1a3677b4bee550b858f87f5e62148d1e10" kind="function"><name>InitAttributesBySpec</name></member>
+    <member refid="class_attribute_component_1a6f76a7c8bb5bf45d085ffb001cec45d5" kind="function"><name>AddAttribute</name></member>
+    <member refid="class_attribute_component_1ac864c662a9b8d2155fa8142078ce3dff" kind="function"><name>ApplyAttributeMultiplier</name></member>
+    <member refid="class_attribute_component_1ae67a6fc2951e19257274edb42eec023f" kind="function"><name>UpdateComponent</name></member>
+  </compound>
+  <compound refid="class_boss" kind="class"><name>Boss</name>
+    <member refid="class_boss_1acf6e40d0e800c3d6ea2b529c4351da9c" kind="variable"><name>isJumping</name></member>
+    <member refid="class_boss_1a605d9ab656bcc24ef4b8591bf740f72e" kind="variable"><name>pastMidpoint</name></member>
+    <member refid="class_boss_1a0945edb506e027ea61cbfd0750b4bd0b" kind="variable"><name>playerPosition</name></member>
+    <member refid="class_boss_1ab988b026b0a44d5b9695b1fae80f4bff" kind="variable"><name>bossPosition</name></member>
+    <member refid="class_boss_1a66b3a8266b0ce9a045cf6d6d41ca3fc4" kind="variable"><name>midpoint</name></member>
+    <member refid="class_boss_1a5f8bd3dedd5d923284440df4dce7c6d5" kind="variable"><name>alpha</name></member>
+    <member refid="class_boss_1af287739a9fe8cb9501795656d34f3018" kind="function"><name>Boss</name></member>
+    <member refid="class_boss_1aa0943d1fb2d9037e30a2fdc6952878cb" kind="function"><name>Update</name></member>
+    <member refid="class_boss_1aca38363ac8587bf7012d4c6dec8600a9" kind="function"><name>PostInit</name></member>
+  </compound>
+  <compound refid="class_character_movement_component" kind="class"><name>CharacterMovementComponent</name>
+    <member refid="class_character_movement_component_1a4e8e0f808e75bd50f1cee2686a328b66" kind="variable"><name>ownerCollision</name></member>
+    <member refid="class_character_movement_component_1a91207e6a8c4436e20c3daaaf719891bb" kind="variable"><name>maximumSpeed</name></member>
+    <member refid="class_character_movement_component_1a6b2665455f62b2baeb6f06d1a36549fd" kind="variable"><name>acceleration</name></member>
+    <member refid="class_character_movement_component_1ac0253496c823d2ba3a812e206b058784" kind="variable"><name>bFrozen</name></member>
+    <member refid="class_character_movement_component_1a3b46719028da4715fcb1aa41000ef690" kind="function"><name>CharacterMovementComponent</name></member>
+    <member refid="class_character_movement_component_1a44e667731d0323b2dfcdf80ee6e7f3ba" kind="function"><name>UpdateComponent</name></member>
+    <member refid="class_character_movement_component_1a63d4bb5a09a7addb1664b0f5183ec13c" kind="function"><name>ApplyMovementForceInDirection</name></member>
+    <member refid="class_character_movement_component_1a6cb4c791b22b66c29aa830e40d947d0c" kind="function"><name>SetCollisionBody</name></member>
+    <member refid="class_character_movement_component_1a5c8c5c00d78dc4d38e14c502e9567695" kind="function"><name>SetFrozen</name></member>
+    <member refid="class_character_movement_component_1ab3ab4283107113582bc6c7f670c86b3c" kind="function"><name>SetMaximumSpeed</name></member>
+    <member refid="class_character_movement_component_1aa0c6001da09d289c9cdc6a2332293ab6" kind="function"><name>SetAcceleration</name></member>
+    <member refid="class_character_movement_component_1a95de1dc66286d10e4099b26ee46bdd7b" kind="function"><name>IsFrozen</name></member>
+    <member refid="class_character_movement_component_1a0a0b9e6ccb23a433d86991de1d9a2ad8" kind="function"><name>GetSpeed</name></member>
+    <member refid="class_character_movement_component_1a1c326e239d25123a6e6ab1893b7c3006" kind="function"><name>GetMaximumSpeed</name></member>
+    <member refid="class_character_movement_component_1a07ae2e8b49579f6737117051c3391ed1" kind="function"><name>GetAcceleration</name></member>
+    <member refid="class_character_movement_component_1a7c20d542f943ec133dd3f1df7fee988e" kind="function"><name>PostInit</name></member>
+  </compound>
+  <compound refid="class_damage_on_collision_actor" kind="class"><name>DamageOnCollisionActor</name>
+    <member refid="class_damage_on_collision_actor_1a07b7703b8e3db5ad89fa3a7bb30750c2" kind="variable"><name>applyDamageOn</name></member>
+    <member refid="class_damage_on_collision_actor_1a3ba78bead6c77dd82c141968a971bd4f" kind="variable"><name>bSpinning</name></member>
+    <member refid="class_damage_on_collision_actor_1aee4412e69f1df05a5a77223176b0c6fb" kind="variable"><name>bIsPiercing</name></member>
+    <member refid="class_damage_on_collision_actor_1a8684d8897c9e9725d32a771f08e0b4a3" kind="variable"><name>damageAmount</name></member>
+    <member refid="class_damage_on_collision_actor_1ad097fd69169453c518a8a7b151311edc" kind="function"><name>OnCollision</name></member>
+    <member refid="class_damage_on_collision_actor_1af7de29e57bbf7b66d4e618fb3c612257" kind="function"><name>SetDamageAmount</name></member>
+    <member refid="class_damage_on_collision_actor_1a715ad5963092224ae96d9fa30dc1b12e" kind="function"><name>SetApplyDamageOn</name></member>
+    <member refid="class_damage_on_collision_actor_1aeb7e7f169bc0e4b22628788716e401ae" kind="function"><name>SetSpinning</name></member>
+    <member refid="class_damage_on_collision_actor_1aaeb5e7abbad19c5f60a521f0016d3acf" kind="function"><name>SetIsPiercing</name></member>
+    <member refid="class_damage_on_collision_actor_1a468c69c421db3d272bf18c46cbb15c2a" kind="function"><name>Update</name></member>
+  </compound>
+  <compound refid="class_dash" kind="class"><name>Dash</name>
+    <member refid="class_dash_1abc38667dc53c7207c42b0808cb88967e" kind="function"><name>Dash</name></member>
+    <member refid="class_dash_1a3078ae06d66361da3e35af7b0efac786" kind="function"><name>PostInit</name></member>
+    <member refid="class_dash_1ab37a52fcb0a2953ad7f5bcf698d9d65f" kind="function"><name>Begin</name></member>
+    <member refid="class_dash_1a15631a12a91058a2f41e4a8f80127378" kind="function"><name>End</name></member>
+  </compound>
+  <compound refid="class_enemy" kind="class"><name>Enemy</name>
+    <member refid="class_enemy_1a1dbbafd85db9d46820a78f603af4d53a" kind="variable"><name>damageAmount</name></member>
+    <member refid="class_enemy_1a608edebc42e92ab5f253692c088a56d0" kind="variable"><name>attackTime</name></member>
+    <member refid="class_enemy_1a573af3a6b672a882ae23263bfbcdf440" kind="variable"><name>attackCooldown</name></member>
+    <member refid="class_enemy_1ac1779a7f33b1320de88c6a73415bae8c" kind="variable"><name>playerMoneyToAdd</name></member>
+    <member refid="class_enemy_1a985101af4d36bd5232edb964b061e423" kind="variable"><name>attributes</name></member>
+    <member refid="class_enemy_1a8d88db976bfb85797d1a161ae799f8e7" kind="variable"><name>enemyMovement</name></member>
+    <member refid="class_enemy_1a4bc75b6c8f42a2fc5a1a7b932342a074" kind="variable"><name>hurtSound</name></member>
+    <member refid="class_enemy_1a94f30d348b6d2840fd71675472ba38dd" kind="function"><name>Enemy</name></member>
+    <member refid="class_enemy_1a165cd1993b88023d7f1a45f9f2809b23" kind="function"><name>SetClass</name></member>
+    <member refid="class_enemy_1ac49759f4d5262aea5e3b6e3f9f56896e" kind="function"><name>TakeDamage</name></member>
+    <member refid="class_enemy_1a724bfc292724ec7f61218051bfa0faf5" kind="function"><name>GetHealth</name></member>
+    <member refid="class_enemy_1a723b79407b55383b2c327f674e3ab3bc" kind="function"><name>Update</name></member>
+    <member refid="class_enemy_1a8fe269579634b8cad6d494254c766387" kind="function"><name>OnCollision</name></member>
+    <member refid="class_enemy_1a43ebf25f19b29fccb8cb71730b95749d" kind="function"><name>ScaleWithWave</name></member>
+    <member refid="class_enemy_1a487c39395ee71759c8bf10707776755e" kind="function"><name>PostInit</name></member>
+    <member refid="class_enemy_1a4c732fc920f5da435fc97f9c55ae8531" kind="function"><name>IncreasePlayerMoney</name></member>
+  </compound>
+  <compound refid="class_enemy_dummy" kind="class"><name>EnemyDummy</name>
+    <member refid="class_enemy_dummy_1a111efeae54d359caa2c1f7f908ea4517" kind="variable"><name>attributes</name></member>
+    <member refid="class_enemy_dummy_1a1e336fb794e413b2379f09c4fe648259" kind="function"><name>TakeDamage</name></member>
+    <member refid="class_enemy_dummy_1aacc92c582fd4013912b3d06b6d1c9e11" kind="function"><name>GetHealth</name></member>
+    <member refid="class_enemy_dummy_1a64da679c5eaca270f5181638bce62bcd" kind="function"><name>PostInit</name></member>
+  </compound>
+  <compound refid="struct_f_attribute" kind="struct"><name>FAttribute</name>
+    <member refid="struct_f_attribute_1adacbd546c31cd3eeb6cc209a7a407e84" kind="variable"><name>attributeType</name></member>
+    <member refid="struct_f_attribute_1a9056ea5412f85f588763afc561fda841" kind="variable"><name>maxAmount</name></member>
+    <member refid="struct_f_attribute_1af950f31a8ba7e36e9a06091afed1edfe" kind="variable"><name>currentAmount</name></member>
+    <member refid="struct_f_attribute_1ac7a54aa8f158329ab1a12146fe56e0f1" kind="variable"><name>bClampedToZero</name></member>
+  </compound>
+  <compound refid="struct_f_camera_shake" kind="struct"><name>FCameraShake</name>
+    <member refid="struct_f_camera_shake_1ae28540e423d42a897f77f196f27bcde7" kind="variable"><name>maxOffset</name></member>
+    <member refid="struct_f_camera_shake_1a957c35cfc269421091fc884a21d41899" kind="variable"><name>minOffset</name></member>
+    <member refid="struct_f_camera_shake_1a0067a7fbb68d30a2f8d68511a6403e46" kind="variable"><name>lerpAlpha</name></member>
+    <member refid="struct_f_camera_shake_1a28904f65e3bcb603c865ba72bcbea0e2" kind="variable"><name>duration</name></member>
+    <member refid="struct_f_camera_shake_1a089db07499dd81ac8736501fbe46aa86" kind="variable"><name>intensity</name></member>
+    <member refid="struct_f_camera_shake_1a11948ae09ec868a32530378efd25f34f" kind="variable"><name>cameraShakeStartTime</name></member>
+    <member refid="struct_f_camera_shake_1a11241077b74ae4a78aab9c55f25f8827" kind="variable"><name>bMovingForward</name></member>
+  </compound>
+  <compound refid="struct_f_key_bind_controller" kind="struct"><name>FKeyBindController</name>
+    <member refid="struct_f_key_bind_controller_1a30a23da42d558b13a620780e9252e1b4" kind="variable"><name>keyCode</name></member>
+    <member refid="struct_f_key_bind_controller_1a9439ad75707d54dacf3aff4d9532e80c" kind="variable"><name>inputAction</name></member>
+    <member refid="struct_f_key_bind_controller_1afd25023bd19b1e50223d80261426aa5a" kind="variable"><name>axis</name></member>
+    <member refid="struct_f_key_bind_controller_1ad1881af9bbed2c677b1f11b8e5e3d5b6" kind="variable"><name>functionBind</name></member>
+  </compound>
+  <compound refid="struct_f_key_bind_keyboard" kind="struct"><name>FKeyBindKeyboard</name>
+    <member refid="struct_f_key_bind_keyboard_1a5af1767e769e14b7f3e66f5c1926ed6a" kind="variable"><name>inputAction</name></member>
+    <member refid="struct_f_key_bind_keyboard_1ac4a6383a3435b6ae4666585580d31fce" kind="variable"><name>keyCode</name></member>
+    <member refid="struct_f_key_bind_keyboard_1a1743545acca699e351fae0996ad583bc" kind="variable"><name>functionBind</name></member>
+  </compound>
+  <compound refid="struct_f_key_bind_mouse" kind="struct"><name>FKeyBindMouse</name>
+    <member refid="struct_f_key_bind_mouse_1a5bc7033239652acd4610ec1ca89ddf89" kind="variable"><name>clickAction</name></member>
+    <member refid="struct_f_key_bind_mouse_1a5845f86fa206d3ba7e4ab997960a3588" kind="variable"><name>functionBind</name></member>
+  </compound>
+  <compound refid="struct_f_key_bind_set" kind="struct"><name>FKeyBindSet</name>
+    <member refid="struct_f_key_bind_set_1a003faf9e27ce7e6933a32fac6900021f" kind="variable"><name>keyboardKeyBinds</name></member>
+    <member refid="struct_f_key_bind_set_1a135b83e0bfa3706469986a0036fe97fc" kind="variable"><name>controllerKeyBinds</name></member>
+    <member refid="struct_f_key_bind_set_1a23f3845994019b3bdc4f0c1455f8eb04" kind="variable"><name>mouseKeyBinds</name></member>
+  </compound>
+  <compound refid="struct_f_particle_data" kind="struct"><name>FParticleData</name>
+    <member refid="struct_f_particle_data_1a059353bdabbbac1a3b74c7b322a5280e" kind="variable"><name>textures</name></member>
+    <member refid="struct_f_particle_data_1a5ec56fa1191a3971105010b03473502d" kind="variable"><name>startTime</name></member>
+    <member refid="struct_f_particle_data_1a93f26d0a1f582ee5e7c48853afe34fed" kind="variable"><name>duration</name></member>
+    <member refid="struct_f_particle_data_1a555a566a858a38fac2a460b135d98fe7" kind="variable"><name>lingerTime</name></member>
+    <member refid="struct_f_particle_data_1a17c186ca0a48309c1a664ccdd563684d" kind="variable"><name>scale</name></member>
+  </compound>
+  <compound refid="struct_f_wave_definition" kind="struct"><name>FWaveDefinition</name>
+    <member refid="struct_f_wave_definition_1a8442421920c4b13c84d7beca39d3c0d9" kind="variable"><name>maxSpawns</name></member>
+    <member refid="struct_f_wave_definition_1a6551dc7f6e996c43aeb18b7058723bb7" kind="variable"><name>spawnPeriod</name></member>
+  </compound>
+  <compound refid="class_game_end_menu" kind="class"><name>GameEndMenu</name>
+    <member refid="class_game_end_menu_1ab036ff9771027937409c9d98d6c9f630" kind="variable"><name>gameEndText</name></member>
+    <member refid="class_game_end_menu_1ac4d3cf8e606c29eb97a258895fc0217a" kind="function"><name>Init</name></member>
+    <member refid="class_game_end_menu_1a6470014c7f3d8981a39e961ae5c3e6df" kind="function"><name>DrawMenuHUD</name></member>
+    <member refid="class_game_end_menu_1a46d839f84cee36c2a50ad3ca538488a9" kind="function"><name>OnMainMenuButtonClicked</name></member>
+    <member refid="class_game_end_menu_1adeb99c0d610234cca3dec136edc3e555" kind="function"><name>OnExitButtonClicked</name></member>
+    <member refid="class_game_end_menu_1ad5f429dbaedd3c4b9b41cafbb31b8e53" kind="function"><name>OnContinueButtonClicked</name></member>
+  </compound>
+  <compound refid="class_ice_bolt" kind="class"><name>IceBolt</name>
+    <member refid="class_ice_bolt_1afda105a085a8c933adfb02baee41224b" kind="function"><name>IceBolt</name></member>
+    <member refid="class_ice_bolt_1aaf128a2d87802fa2e09fb8e7c150646b" kind="function"><name>PostInit</name></member>
+    <member refid="class_ice_bolt_1a5dc506246bfe473255626de565ca8af4" kind="function"><name>Begin</name></member>
+    <member refid="class_ice_bolt_1a2b7a3bb2d1627b36331a5c2fee6334a7" kind="function"><name>End</name></member>
+  </compound>
+  <compound refid="class_i_damagable" kind="class"><name>IDamagable</name>
+    <member refid="class_i_damagable_1ae0da9b7810f5341862864c8ba8078be3" kind="function"><name>TakeDamage</name></member>
+  </compound>
+  <compound refid="class_main_menu" kind="class"><name>MainMenu</name>
+    <member refid="class_main_menu_1a77aaa0eb810c74a907165b6a1acec31f" kind="function"><name>Init</name></member>
+    <member refid="class_main_menu_1aa01367344346478a014600f8bc7450d0" kind="function"><name>OnStartButtonClicked</name></member>
+    <member refid="class_main_menu_1a0fe1a23396381d58448997c5ceb9152f" kind="function"><name>OnExitButtonClicked</name></member>
+  </compound>
+  <compound refid="class_menu" kind="class"><name>Menu</name>
+    <member refid="class_menu_1a0187883a2d424dadf01b0218d1db7d12" kind="variable"><name>menuController</name></member>
+    <member refid="class_menu_1a6005d125bc4b0372bcd6d2719cb9a994" kind="variable"><name>menuButtons</name></member>
+    <member refid="class_menu_1a1551f565b2ae79bf65449810f4ea81d5" kind="variable"><name>currentButtonFocused</name></member>
+    <member refid="class_menu_1a2737fb42e257221f78c86b9221795255" kind="variable"><name>menuSprite</name></member>
+    <member refid="class_menu_1a831387f51358cfb88cd018e1777bc980" kind="function"><name>~Menu</name></member>
+    <member refid="class_menu_1a0c64b7333b29000c8b219d2ebc28c03b" kind="function"><name>Init</name></member>
+    <member refid="class_menu_1af29d71473a414e31e914bc637840cb3e" kind="function"><name>Update</name></member>
+    <member refid="class_menu_1acef1c8e0a83655c3b17c217567527f8b" kind="function"><name>DrawMenuHUD</name></member>
+    <member refid="class_menu_1a98395444d03f38df02fa9c2aed1fb797" kind="function"><name>OnUpButtonPressed</name></member>
+    <member refid="class_menu_1a6b8e73974658482814f99b63ecc4d470" kind="function"><name>OnDownButtonPressed</name></member>
+    <member refid="class_menu_1a2370ebbed22dfd0c10491bd8ae45b771" kind="function"><name>OnMouseButtonPressed</name></member>
+    <member refid="class_menu_1a8023104df1848b95c94e1c46fba209ca" kind="function"><name>OnControllerUpButton</name></member>
+    <member refid="class_menu_1a50e7901f94713c0719e0774474d981c2" kind="function"><name>OnControllerDownButton</name></member>
+    <member refid="class_menu_1a8bd9fce86817a1125bf7d2e371551689" kind="function"><name>OnControllerSubmitButton</name></member>
+    <member refid="class_menu_1a2f2b184a3f4000ce78d9e948c95cced4" kind="function"><name>CheckForHighlight</name></member>
+    <member refid="class_menu_1a78e162d9e5571f0bb3e93c02cc0f76df" kind="function"><name>PressMenuButton</name></member>
+  </compound>
+  <compound refid="struct_menu_button" kind="struct"><name>MenuButton</name>
+    <member refid="struct_menu_button_1a50a2575f7a437f6ae6bcef25f904301e" kind="variable"><name>position</name></member>
+    <member refid="struct_menu_button_1a41cfc44472326f1da939089a1b3b791e" kind="variable"><name>color</name></member>
+    <member refid="struct_menu_button_1a3248c3e6aebedd07e092b36014bddc13" kind="variable"><name>scale</name></member>
+    <member refid="struct_menu_button_1a616c2081a729821f35c44b4be80e771b" kind="variable"><name>justification</name></member>
+    <member refid="struct_menu_button_1a23f34c6529bb20a890225fdb069c5afc" kind="variable"><name>buttonText</name></member>
+    <member refid="struct_menu_button_1a16cdea6d06499ccaf865be569f5c3adb" kind="variable"><name>callbackFunction</name></member>
+  </compound>
+  <compound refid="class_mesh_actor" kind="class"><name>MeshActor</name>
+    <member refid="class_mesh_actor_1a8eb71848a77c1c7ffb0f88d526a633e3" kind="variable"><name>meshName</name></member>
+    <member refid="class_mesh_actor_1a8585ace5ca84b7903f216c77661a5787" kind="variable"><name>material</name></member>
+    <member refid="class_mesh_actor_1a858b488e44d63ff8eda02e173fa4da7a" kind="variable"><name>bOverrideMaterial</name></member>
+    <member refid="class_mesh_actor_1a24bb67a591063384d123d0d9c2d34f9f" kind="variable"><name>components</name></member>
+    <member refid="class_mesh_actor_1a5bbc82526d9b03b24f0763e7ceb6a4fe" kind="variable"><name>mesh</name></member>
+    <member refid="class_mesh_actor_1af40424bf59441cfb3362f8ef3e1fbb68" kind="function"><name>MeshActor</name></member>
+    <member refid="class_mesh_actor_1aed30e8021f75c3221ab6f02cb1fcfcba" kind="function"><name>MeshActor</name></member>
+    <member refid="class_mesh_actor_1a9c8f4860ae03966a27c3ee22c2a2b5a1" kind="function"><name>Render</name></member>
+    <member refid="class_mesh_actor_1a3743470557ddbbc88bc73e4dd283d6bf" kind="function"><name>Update</name></member>
+    <member refid="class_mesh_actor_1a31a231014625686e8d40e561a7028931" kind="function"><name>TakeDamage</name></member>
+    <member refid="class_mesh_actor_1a25950ae28c6abf2e9e3dc64cfa19c0c7" kind="function"><name>SetMesh</name></member>
+    <member refid="class_mesh_actor_1a86f27025c3484267804fdaa5e6082fd4" kind="function"><name>SetMeshName</name></member>
+    <member refid="class_mesh_actor_1a0217e1969a68278f2548e1553e2ab92b" kind="function"><name>SetMaterial</name></member>
+    <member refid="class_mesh_actor_1a295a747ea81d8b09e084c488ab183fbb" kind="function"><name>SetRotation</name></member>
+    <member refid="class_mesh_actor_1a906146d34e290e3bd7132a4dcbfad8a1" kind="function"><name>GetMesh</name></member>
+    <member refid="class_mesh_actor_1a7eef4e0218a4363460a0375585037012" kind="function"><name>GetComponents</name></member>
+    <member refid="class_mesh_actor_1a03ae156a0a281ff9eb128c7c7b44d983" kind="function"><name>GetMeshName</name></member>
+    <member refid="class_mesh_actor_1a639c1c33b5f22210351fd94ec7d78c43" kind="function"><name>GetComponent</name></member>
+    <member refid="class_mesh_actor_1aa824a26a7c24d187f15aa3e9beba11f6" kind="function"><name>GetComponents</name></member>
+    <member refid="class_mesh_actor_1af9b992a02356ead76d3c36a031bf6eea" kind="function"><name>CreateComponent</name></member>
+  </compound>
+  <compound refid="class_meteor" kind="class"><name>Meteor</name>
+    <member refid="class_meteor_1a09f3937f77f2636139d641626685a6d3" kind="function"><name>Meteor</name></member>
+    <member refid="class_meteor_1ab7f46bd407dcbb53214310a8f95c9307" kind="function"><name>PostInit</name></member>
+    <member refid="class_meteor_1a0c35a52087ee487518c3d4e9f0e36cb2" kind="function"><name>Begin</name></member>
+    <member refid="class_meteor_1ad31eefb5e13589692a68f77ed022371c" kind="function"><name>End</name></member>
+  </compound>
+  <compound refid="class_meteor_actor" kind="class"><name>MeteorActor</name>
+    <member refid="class_meteor_actor_1adaff72a4a16bc8aebd4a20c996aecc8e" kind="variable"><name>startPosition</name></member>
+    <member refid="class_meteor_actor_1a03a7f34ddeac63d24f0db59568398e80" kind="variable"><name>targetPosition</name></member>
+    <member refid="class_meteor_actor_1ab4bb033ead5bfecb16eae10dcedd5bcb" kind="variable"><name>applyDamageOn</name></member>
+    <member refid="class_meteor_actor_1ac7ad468c3a6c2077dbbfdfb6a99c5b31" kind="variable"><name>bSpinning</name></member>
+    <member refid="class_meteor_actor_1a89d596eab0b2175b66e85d02a5f1c055" kind="variable"><name>damageAmount</name></member>
+    <member refid="class_meteor_actor_1a946ed0ef11c565381b8686d74283c262" kind="variable"><name>lerpAlpha</name></member>
+    <member refid="class_meteor_actor_1af958d034e0ee905ef1ad42c3cb7e2e7d" kind="function"><name>SetDamageAmount</name></member>
+    <member refid="class_meteor_actor_1a8426bedb425c8dcdc1311ee2b70f2c38" kind="function"><name>SetApplyDamageOn</name></member>
+    <member refid="class_meteor_actor_1a804452922893086186d9c7cba86ba772" kind="function"><name>SetSpinning</name></member>
+    <member refid="class_meteor_actor_1ab6359799dcd7d0c88bbe0f9aae848819" kind="function"><name>Update</name></member>
+  </compound>
+  <compound refid="class_o_b_j_mesh_loader" kind="class"><name>OBJMeshLoader</name>
+    <member refid="class_o_b_j_mesh_loader_1a2b5ad3c422c7d204d737ba4be254cce3" kind="variable"><name>last_error_</name></member>
+    <member refid="class_o_b_j_mesh_loader_1a8c7c99695bfcb18f362f68da3c8fe393" kind="function"><name>Load</name></member>
+    <member refid="class_o_b_j_mesh_loader_1ad7a08d9198699f8f8d38312b317c733e" kind="function"><name>GetLastError</name></member>
+    <member refid="class_o_b_j_mesh_loader_1a153b1c2fbd6a2915ef99df389b0a6afb" kind="function"><name>GetFolderName</name></member>
+    <member refid="class_o_b_j_mesh_loader_1a1450b078f7202b7f959665288de1593b" kind="function"><name>CreateMesh</name></member>
+    <member refid="class_o_b_j_mesh_loader_1af505e17d2acdd72896d6440906cd3cdb" kind="function"><name>LoadMaterials</name></member>
+  </compound>
+  <compound refid="class_particle_actor" kind="class"><name>ParticleActor</name>
+    <member refid="class_particle_actor_1a484fa416668d2c8b8a6021924674f54f" kind="variable"><name>bIsPlaying</name></member>
+    <member refid="class_particle_actor_1a5688c3b1562ba7ddb449817e2d73c594" kind="variable"><name>bIsLingering</name></member>
+    <member refid="class_particle_actor_1ab5cf657267147e7ad3259a426e021791" kind="variable"><name>particleData</name></member>
+    <member refid="class_particle_actor_1a7883f464b0034d806113dfadee6f3870" kind="variable"><name>lingerStartTime</name></member>
+    <member refid="class_particle_actor_1aa1f1f241991ff7326e9ac230fbf63edd" kind="variable"><name>lastTextureTime</name></member>
+    <member refid="class_particle_actor_1a97b85161bb5d2893b333082465d9b683" kind="variable"><name>timeBetweenTextures</name></member>
+    <member refid="class_particle_actor_1a892673c41341c86fdafcaaf2efc54fda" kind="variable"><name>currentTextureIndex</name></member>
+    <member refid="class_particle_actor_1aac7c62cbf5b02d9f925b1384ec53b65c" kind="function"><name>SetParticleData</name></member>
+    <member refid="class_particle_actor_1afc281ad9a6f6803c645b077106600234" kind="function"><name>Play</name></member>
+    <member refid="class_particle_actor_1a5ef5f56da7eadd86f647ab3f519061be" kind="function"><name>Stop</name></member>
+    <member refid="class_particle_actor_1a5ed58a9e57286e08cf8a650aaf22f43f" kind="function"><name>Update</name></member>
+  </compound>
+  <compound refid="class_particle_manager" kind="class"><name>ParticleManager</name>
+    <member refid="class_particle_manager_1a47518315cab3995a2485ec4b9d17a51f" kind="variable"><name>particlesMap</name></member>
+    <member refid="class_particle_manager_1a192bc9932f68795cf756541ad35cdadb" kind="function"><name>Init</name></member>
+    <member refid="class_particle_manager_1a03998e9980dd017daa61ce69a0ec194f" kind="function"><name>PrepareParticles</name></member>
+    <member refid="class_particle_manager_1a74b7e3175e7bf9df045540cedf8c5f05" kind="function"><name>PlayParticlesAtLocation</name></member>
+    <member refid="class_particle_manager_1a658b27d3101859ab17000c8a7493fff6" kind="function"><name>PlayParticlesAtLocation</name></member>
+    <member refid="class_particle_manager_1a1be5203232c7be5ff6eb46f110f28cb0" kind="function"><name>PlayParticlesAtLocation</name></member>
+    <member refid="class_particle_manager_1ae041992165008118c73fcfeb1cb46304" kind="function"><name>LoadTexturesForParticles</name></member>
+  </compound>
+  <compound refid="class_pause_menu" kind="class"><name>PauseMenu</name>
+    <member refid="class_pause_menu_1a029c44778ea655c2762cbddc8941a6f8" kind="function"><name>Init</name></member>
+    <member refid="class_pause_menu_1a0763dfecee722a895acd7e4fcf4e8f6d" kind="function"><name>ResumeGame</name></member>
+    <member refid="class_pause_menu_1a9b93c682d62646666faf5588217e01ad" kind="function"><name>ExitToMainMenu</name></member>
+  </compound>
+  <compound refid="class_piercing_strike" kind="class"><name>PiercingStrike</name>
+    <member refid="class_piercing_strike_1a3309a9ad1070cbd3e47e51ba50e92c20" kind="function"><name>PostInit</name></member>
+    <member refid="class_piercing_strike_1afc8244751f335b1ae83a42b252409ae9" kind="function"><name>Begin</name></member>
+    <member refid="class_piercing_strike_1a31b5a023d19f73ec307cbc6e452e85ea" kind="function"><name>End</name></member>
+  </compound>
+  <compound refid="class_player_character" kind="class"><name>PlayerCharacter</name>
+    <member refid="class_player_character_1a32fa60c60ab920a4bf3682d8d64efb2f" kind="variable"><name>controller</name></member>
+    <member refid="class_player_character_1a5b4fd39726d9e9ebfa6cd9803d187dd2" kind="variable"><name>characterMovement</name></member>
+    <member refid="class_player_character_1a9af62ba067b35384d4e9815142516c7e" kind="variable"><name>abilitiesComponent</name></member>
+    <member refid="class_player_character_1a3818fd9a7618c737d872a0c3dbbf4f9d" kind="variable"><name>attributes</name></member>
+    <member refid="class_player_character_1a6bac75c11a6a00032b481369938f434f" kind="variable"><name>invincibilityEndTime</name></member>
+    <member refid="class_player_character_1a6e9d841fd37b4466f58e7e2a2b48813a" kind="variable"><name>bInvertMovement</name></member>
+    <member refid="class_player_character_1a83ff09c25455ee9f9da58d1288c0c012" kind="variable"><name>abilitySprites</name></member>
+    <member refid="class_player_character_1af735306f8b8cf5c224045b499db8cfcf" kind="variable"><name>backgroundSprites</name></member>
+    <member refid="class_player_character_1a7967ebf9667737ea726529533faf4c80" kind="variable"><name>background</name></member>
+    <member refid="class_player_character_1af3ac12a41f58d860fb716138578bd95f" kind="function"><name>PlayerCharacter</name></member>
+    <member refid="class_player_character_1ad12c09c28194b1c5ed39aa4b5c21cbd6" kind="function"><name>PostInit</name></member>
+    <member refid="class_player_character_1ad681ccd09dc1ed4c0242bfa0d981d584" kind="function"><name>Update</name></member>
+    <member refid="class_player_character_1ac89349d4afba371e044e4c5816ba68c8" kind="function"><name>TakeDamage</name></member>
+    <member refid="class_player_character_1a0415b6e06c971db05a79ae18176f6e99" kind="function"><name>ApplyInvincibilityForDuration</name></member>
+    <member refid="class_player_character_1abf3fd7463bf99305b85490644ff3d276" kind="function"><name>DrawPlayerHUD</name></member>
+    <member refid="class_player_character_1af75d11f2b93d26046988f3316888fdbc" kind="function"><name>GetController</name></member>
+    <member refid="class_player_character_1ac890f6a156f0b6f48aa9c62a6a307932" kind="function"><name>GetCharacterMovement</name></member>
+    <member refid="class_player_character_1a35f60a491cce521c070536f0c9eec6f6" kind="function"><name>GetCharacterAttributes</name></member>
+    <member refid="class_player_character_1a1b142fd480a0b6326069058a0109668a" kind="function"><name>GetCharacterAbilities</name></member>
+    <member refid="class_player_character_1a71db2dd63c1e1ee33c1636d07c663bd2" kind="function"><name>MoveLeft</name></member>
+    <member refid="class_player_character_1a27a3a3bd797b494f4262a0d9cc23a7da" kind="function"><name>MoveRight</name></member>
+    <member refid="class_player_character_1a3e2db13c832d8ad72f91f35626318029" kind="function"><name>MoveForward</name></member>
+    <member refid="class_player_character_1a66f35da8ae003995f4f9984edf1aa503" kind="function"><name>MoveBack</name></member>
+    <member refid="class_player_character_1ae3414c7f6a3ecb97de258a3c48e5042c" kind="function"><name>ActivateAbility1</name></member>
+    <member refid="class_player_character_1abf9975cee8626a88bfda0083d5ec32ab" kind="function"><name>ActivateAbility2</name></member>
+    <member refid="class_player_character_1af678379492ff14630742460e81d191b7" kind="function"><name>ActivateAbility3</name></member>
+    <member refid="class_player_character_1a5a51435bd69ade9c5e2ea48319f6299d" kind="function"><name>ActivateAbility4</name></member>
+    <member refid="class_player_character_1a294eaf7133b810dc22a0caf95a98dcb1" kind="function"><name>OnControllerLeftStick</name></member>
+    <member refid="class_player_character_1ae91b2ed2e883c4e311568689ba946fba" kind="function"><name>OnControllerActivateAbility1</name></member>
+    <member refid="class_player_character_1aad1ce1a4a76bff1adc2adde12d89a25d" kind="function"><name>OnControllerActivateAbility2</name></member>
+    <member refid="class_player_character_1aa44656f4422f9b2dd5b9f662eb3f7add" kind="function"><name>OnControllerActivateAbility3</name></member>
+    <member refid="class_player_character_1a48ccee58814a3244be3ba5f8ba0b056c" kind="function"><name>OnControllerActivateAbility4</name></member>
+    <member refid="class_player_character_1a0da3ea447b3274eef8d2aab1ca9a22d2" kind="function"><name>OnControllerInvertUpDownMovement</name></member>
+    <member refid="class_player_character_1a155ebfbab514ce942b15a9c23df7b1f0" kind="function"><name>BindKeys</name></member>
+    <member refid="class_player_character_1aac04cdc5f51279db6e72bec94c96aa4f" kind="function"><name>InitializeComponents</name></member>
+    <member refid="class_player_character_1a0c31ceb8a05bdd185f6b8e853a228b89" kind="function"><name>InitializeAbilitySystem</name></member>
+  </compound>
+  <compound refid="class_player_controller" kind="class"><name>PlayerController</name>
+    <member refid="class_player_controller_1a94f1f959a2a8ec997462f0ef91da27d9" kind="variable"><name>keyboardKeyBinds</name></member>
+    <member refid="class_player_controller_1a785b99c28d0a619a9d7391a710a7f099" kind="variable"><name>controllerKeyBinds</name></member>
+    <member refid="class_player_controller_1af2cbb66c6c8cc39c10b0f1bc515aaede" kind="variable"><name>mouseKeyBinds</name></member>
+    <member refid="class_player_controller_1a1d0f9e31b7e6f94dff8ef548589670e5" kind="variable"><name>activeTouchID</name></member>
+    <member refid="class_player_controller_1af885ef527da02e6b61f21ec10cfdb0da" kind="variable"><name>touchPosition</name></member>
+    <member refid="class_player_controller_1a289560f2ea4b60a1170a2577d3f587a9" kind="variable"><name>lastMousePosition</name></member>
+    <member refid="class_player_controller_1a25e55daeec802eed65640779d3c99192" kind="variable"><name>inputManager</name></member>
+    <member refid="class_player_controller_1a6be0ad925daf5880250ef87881eedbf6" kind="function"><name>PlayerController</name></member>
+    <member refid="class_player_controller_1a3cf1cb2523e6b8a78cdbaf9df577b3be" kind="function"><name>GetMousePosition</name></member>
+    <member refid="class_player_controller_1a3ecff75f943f340bce2240d58eaf7f4f" kind="function"><name>BindKeyboardEvent</name></member>
+    <member refid="class_player_controller_1a3b4ce10a473a2000d1b204c7830bff97" kind="function"><name>BindControllerEvent</name></member>
+    <member refid="class_player_controller_1a654bf416ea31cbe022ccc50c7e1832e8" kind="function"><name>BindMouseEvent</name></member>
+    <member refid="class_player_controller_1a92f0d14a05056e6296fc726fc7073410" kind="function"><name>BindKeyBindSet</name></member>
+    <member refid="class_player_controller_1a2e0c380d64a88c8cfe60ce8452921227" kind="function"><name>Update</name></member>
+    <member refid="class_player_controller_1ac23282a33a9bfc6972828f0ce385a52b" kind="function"><name>GetKeybindSet</name></member>
+    <member refid="class_player_controller_1a3c5d859b003e7c71124f04bc02c868fa" kind="function"><name>EvaluateKeyboardKeybinds</name></member>
+    <member refid="class_player_controller_1a7a5f17eb6df7586d9f4a80f5ed392746" kind="function"><name>EvaluateControllerKeybinds</name></member>
+    <member refid="class_player_controller_1a0738544860b989a5597d7866a4420912" kind="function"><name>EvaluateMouseKeybinds</name></member>
+  </compound>
+  <compound refid="class_primitive_builder" kind="class"><name>PrimitiveBuilder</name>
+    <member refid="class_primitive_builder_1a6bfbd619adebd14a9fe02b68521e279d" kind="variable"><name>platform_</name></member>
+    <member refid="class_primitive_builder_1aa3205470b24e5273efb50e359a547b23" kind="variable"><name>default_cube_mesh_</name></member>
+    <member refid="class_primitive_builder_1aa3179d29464e6f9f0b84d59bcea6f3d1" kind="variable"><name>default_sphere_mesh_</name></member>
+    <member refid="class_primitive_builder_1a7757d609903f9cff6a9bd7f1a239fe27" kind="variable"><name>red_material_</name></member>
+    <member refid="class_primitive_builder_1a72a6196f7dc9bba9f3887c9a5fe0e485" kind="variable"><name>blue_material_</name></member>
+    <member refid="class_primitive_builder_1a0c4022f7c66fb130f59d9d2e1c9aee31" kind="variable"><name>green_material_</name></member>
+    <member refid="class_primitive_builder_1a6384d138d3c7193b9791959801d882d1" kind="function"><name>PrimitiveBuilder</name></member>
+    <member refid="class_primitive_builder_1a70ac6a74c6a3fe209cabf315b0f7bf4d" kind="function"><name>~PrimitiveBuilder</name></member>
+    <member refid="class_primitive_builder_1a1b4b6db65689d27a2bc3cad69803b079" kind="function"><name>Init</name></member>
+    <member refid="class_primitive_builder_1aed9655474f22afaa00ff015c454bd736" kind="function"><name>CleanUp</name></member>
+    <member refid="class_primitive_builder_1af92fb7ac1b3d5c32243e28dbd71691da" kind="function"><name>CreateBoxMesh</name></member>
+    <member refid="class_primitive_builder_1a5f05e266f6b78f97ac03abfda1a6d44e" kind="function"><name>CreateSphereMesh</name></member>
+    <member refid="class_primitive_builder_1a0b7bbc2b5dae0e538e5a7da02e99743a" kind="function"><name>GetDefaultCubeMesh</name></member>
+    <member refid="class_primitive_builder_1a50a4fb54f668bbe3b43940c64529b195" kind="function"><name>GetDefaultSphereMesh</name></member>
+    <member refid="class_primitive_builder_1aa5daad54593016deff15e0f172df5815" kind="function"><name>red_material</name></member>
+    <member refid="class_primitive_builder_1a0b9b7e23d8d653d949da7da85b5b51b0" kind="function"><name>green_material</name></member>
+    <member refid="class_primitive_builder_1a1cc3cb55ef97d82a1ad402e937f2e449" kind="function"><name>blue_material</name></member>
+  </compound>
+  <compound refid="class_ranged_enemy" kind="class"><name>RangedEnemy</name>
+    <member refid="class_ranged_enemy_1ad3ef88fd54dfba53f6c8ccac3dc9a37a" kind="function"><name>RangedEnemy</name></member>
+    <member refid="class_ranged_enemy_1a1f40730c4f733c7e0cdcb7b7a27c89a3" kind="function"><name>Update</name></member>
+    <member refid="class_ranged_enemy_1a48a75ec89e0c9c10dd85e3bfe3aed866" kind="function"><name>Shoot</name></member>
+    <member refid="class_ranged_enemy_1a4a8ff52aaf8cffb2b4cfe94360113043" kind="function"><name>PostInit</name></member>
+  </compound>
+  <compound refid="class_scene_app" kind="class"><name>SceneApp</name>
+    <member refid="class_scene_app_1a5d3a7556487c33e4746c468fa00689dd" kind="variable"><name>gameState</name></member>
+    <member refid="class_scene_app_1a5e58877e1666eafe401f5cddd431511d" kind="variable"><name>bGameLoopInitted</name></member>
+    <member refid="class_scene_app_1ac9cc70c9d9ddd066c839bd93abb42a49" kind="variable"><name>bCommingFromMainMenu</name></member>
+    <member refid="class_scene_app_1a82ad63c0fecc3ae0368a7ae6c3038caa" kind="variable"><name>primitive_builder_</name></member>
+    <member refid="class_scene_app_1a8cb42f2ef9761c1304cfbbde2c950f82" kind="variable"><name>meshes</name></member>
+    <member refid="class_scene_app_1a31e4044202cb1878a674f7a0fcbd1e1b" kind="variable"><name>textures</name></member>
+    <member refid="class_scene_app_1aecdaec5b1958858c67538bc06ef763ec" kind="variable"><name>sprite_renderer_</name></member>
+    <member refid="class_scene_app_1a6a85f826272f2c291f789964cbbd331d" kind="variable"><name>font_</name></member>
+    <member refid="class_scene_app_1a1fe406605619e67f3c78081dc648722a" kind="variable"><name>renderer_3d_</name></member>
+    <member refid="class_scene_app_1a6d19a2e9b9d5f67f1c71b8cd4003236f" kind="variable"><name>loadFuture</name></member>
+    <member refid="class_scene_app_1a6e3f7247f64f6b0f89ebf096ccc186a3" kind="variable"><name>waveManager</name></member>
+    <member refid="class_scene_app_1aadb8a2acfc55d7256d3b01615237b53f" kind="variable"><name>mainMenu</name></member>
+    <member refid="class_scene_app_1aa383f84e5bf2eb34c8970de590fe83f2" kind="variable"><name>shopMenu</name></member>
+    <member refid="class_scene_app_1a7ff89b2a13e32e34104f8eb7f13ac6b6" kind="variable"><name>pauseMenu</name></member>
+    <member refid="class_scene_app_1aa3806ccdca4db9902e9af9750d386f6f" kind="variable"><name>gameEndMenu</name></member>
+    <member refid="class_scene_app_1a2fa982b35c38c584a72934124dca0aa8" kind="variable"><name>playerMoney</name></member>
+    <member refid="class_scene_app_1ad98c8e885bbd672e85221362021656c1" kind="variable"><name>loadingSprite</name></member>
+    <member refid="class_scene_app_1a8dc5edb5b6ce7a135b0a86c7df035b64" kind="variable"><name>playerCharacter</name></member>
+    <member refid="class_scene_app_1a42746443e19f6dae5e6b2d9f7eaf473e" kind="variable"><name>meshActors</name></member>
+    <member refid="class_scene_app_1aa46d7e718e2e793a19a970cb2ec4ee31" kind="variable"><name>spriteActors</name></member>
+    <member refid="class_scene_app_1ac11e8e4e089eb1d1631febe27f4d9808" kind="variable"><name>scene_assets_</name></member>
+    <member refid="class_scene_app_1ad67f0db19483631c01eda75fdb7ab9b7" kind="variable"><name>meshesToLoad</name></member>
+    <member refid="class_scene_app_1a992da62d19ab23c48fd9d292f6c3a9f3" kind="variable"><name>texturesToLoad</name></member>
+    <member refid="class_scene_app_1a4b02697005df75084605a8dda048d591" kind="variable"><name>soundsToLoad</name></member>
+    <member refid="class_scene_app_1a7b2d4a39dd167962c9b9351593469fe1" kind="variable"><name>pointerSprite</name></member>
+    <member refid="class_scene_app_1a553d17b3fd6926e7f0bd0be162adcb71" kind="variable"><name>pointerLocation</name></member>
+    <member refid="class_scene_app_1a7336b62b4d3e2762f35ed7b5f8faa9d4" kind="variable"><name>cameraEye</name></member>
+    <member refid="class_scene_app_1ab8a1fed11db540bddc041c4b81a287d3" kind="variable"><name>cameraLookAt</name></member>
+    <member refid="class_scene_app_1a85d4e75be9600791e02a664f66c78575" kind="variable"><name>cameraUp</name></member>
+    <member refid="class_scene_app_1a5b5861315462b1787e4139197f82e368" kind="variable"><name>cameraShake</name></member>
+    <member refid="class_scene_app_1ab6f4119e39160606eeaeb151fcfb17bd" kind="variable"><name>fps_</name></member>
+    <member refid="class_scene_app_1a32a11fc11fa3fcc917351649d52f788f" kind="variable"><name>currentGameTime</name></member>
+    <member refid="class_scene_app_1aa3b7e393217fd2c6eea932311f815026" kind="variable"><name>lastDeltaTime</name></member>
+    <member refid="class_scene_app_1a1212495244b88152da68fef7add9fca7" kind="variable"><name>b2dWorld</name></member>
+    <member refid="class_scene_app_1aa8e973ec8db58fc70659249a4c3af4c3" kind="variable"><name>gravity</name></member>
+    <member refid="class_scene_app_1a70ed4549ef0fe12b92c7a35ef1834dac" kind="variable"><name>audioManager</name></member>
+    <member refid="class_scene_app_1a37d6f90880ff2578e8a9de68034535d8" kind="variable"><name>sounds</name></member>
+    <member refid="class_scene_app_1ab13c532bc49107361f36bd3fc9fc5f9f" kind="variable"><name>masterVolume</name></member>
+    <member refid="class_scene_app_1a63476137847dbf477d86a82b621eb3a8" kind="variable"><name>soundController</name></member>
+    <member refid="class_scene_app_1acdca18cc64834403830e379463d7503e" kind="variable"><name>rd</name></member>
+    <member refid="class_scene_app_1a3ce39c88bb90c1aaddb82a26cb73282e" kind="variable"><name>dist</name></member>
+    <member refid="class_scene_app_1a58f623a898ecfc988bc782ff93d3fde1" kind="variable"><name>particleManager</name></member>
+    <member refid="class_scene_app_1a5a29382297d3aa47f437d98a3dd4acdc" kind="function"><name>SceneApp</name></member>
+    <member refid="class_scene_app_1afbc3cd83343839fef53b5fcc2da630e6" kind="function"><name>Init</name></member>
+    <member refid="class_scene_app_1ab815a8823c2248fcebdc7a06867bdb9b" kind="function"><name>CleanUp</name></member>
+    <member refid="class_scene_app_1a48adec081291fea513f516bec9dcb898" kind="function"><name>Update</name></member>
+    <member refid="class_scene_app_1afd9eebbabf3fe176d9fe30b309c2130c" kind="function"><name>Render</name></member>
+    <member refid="class_scene_app_1adcf5fcd2dfcb07d468c0ff4455e45bdd" kind="function"><name>CreateCollisionBody</name></member>
+    <member refid="class_scene_app_1ac0999a6034cf97a795506eb75dd3cc7f" kind="function"><name>GetRenderer3D</name></member>
+    <member refid="class_scene_app_1acfe997c4a66416d0cf25324d47403abb" kind="function"><name>GetSpriteRenderer</name></member>
+    <member refid="class_scene_app_1ad1ff8bd221115d5e081490da02e2f398" kind="function"><name>GetBox2DWorld</name></member>
+    <member refid="class_scene_app_1a30039f31aff4d61fdce25d79425892fc" kind="function"><name>GetViewportWidth</name></member>
+    <member refid="class_scene_app_1a0fc304ef89214b58b23adf26ec63f6ac" kind="function"><name>GetViewportHeight</name></member>
+    <member refid="class_scene_app_1a36cc2439051445972f7b29114f3b011b" kind="function"><name>GetPlayerCharacter</name></member>
+    <member refid="class_scene_app_1ad0422232eb1f735a48a20137eb6e953e" kind="function"><name>GetPrimitiveBuilder</name></member>
+    <member refid="class_scene_app_1aaec63e72c5b04a1f7a63f3ff81b8bdb7" kind="function"><name>GetCameraEye</name></member>
+    <member refid="class_scene_app_1ab94350ed26fa0140eaac7060d97db655" kind="function"><name>GetCameraLookAt</name></member>
+    <member refid="class_scene_app_1ab0a3e09a2920c053f50d25ea03132ae7" kind="function"><name>GetCurrentGameTime</name></member>
+    <member refid="class_scene_app_1af624c2780cc0b7d913f63f7c4df74030" kind="function"><name>GetLastDeltaTime</name></member>
+    <member refid="class_scene_app_1a6b6984ec718cb9ebad4be261df534cf1" kind="function"><name>RequestMeshByName</name></member>
+    <member refid="class_scene_app_1ac00c6ac20d92d7e8fd77d341a116e81d" kind="function"><name>RequestTextureByName</name></member>
+    <member refid="class_scene_app_1a13fa1b28170df85ade3d18e329fbedc7" kind="function"><name>GetFont</name></member>
+    <member refid="class_scene_app_1a1b8d7ed84a7691d140c0b10d6cc01f7b" kind="function"><name>GetAudioManager</name></member>
+    <member refid="class_scene_app_1a2cb299beb00f7fea8f1de7c0cc6ab19b" kind="function"><name>GetLastTouchPosition</name></member>
+    <member refid="class_scene_app_1a3bc64bbc203e9cb597f2b47dc69f20e6" kind="function"><name>SetGameState</name></member>
+    <member refid="class_scene_app_1a3218d41e2d667db80e8fed34b02b6221" kind="function"><name>GetGameState</name></member>
+    <member refid="class_scene_app_1ab4f8fc5ac0dc41a16f83089ff782b6f4" kind="function"><name>GetPlayerMoney</name></member>
+    <member refid="class_scene_app_1aec4d56f9129795aaef4ad8f2a454e302" kind="function"><name>IncreasePlayerMoney</name></member>
+    <member refid="class_scene_app_1ac7ebc87268f7eea380099954c5358fd3" kind="function"><name>ApplyCostToPlayerMoney</name></member>
+    <member refid="class_scene_app_1a04b16337e0cd4af5f9b38f75ca623f34" kind="function"><name>ApplyCameraShake</name></member>
+    <member refid="class_scene_app_1a85782170c9894dfebe3a8045063301c6" kind="function"><name>ApplyRadialDamage</name></member>
+    <member refid="class_scene_app_1a942b3809824f430117b26e9a7ad5acf6" kind="function"><name>PlaySample</name></member>
+    <member refid="class_scene_app_1a829d6b657cc270002fcf262d57e2f249" kind="function"><name>AddPointerLocationOffset</name></member>
+    <member refid="class_scene_app_1ab40943893a61a141c9fb25eec163a1f1" kind="function"><name>SetPointerLocation</name></member>
+    <member refid="class_scene_app_1a800b10254ae600ce80c0e69d765e8061" kind="function"><name>SpawnMeshActor</name></member>
+    <member refid="class_scene_app_1ab70d4d12950fa87533727b3fa6e42ee5" kind="function"><name>SpawnSpriteActor</name></member>
+    <member refid="class_scene_app_1a171208bf4f19b208d59a1a0b7557a36f" kind="function"><name>InitFont</name></member>
+    <member refid="class_scene_app_1a4ce48816f535fd67410acb38bd4066f5" kind="function"><name>CleanUpFont</name></member>
+    <member refid="class_scene_app_1ac244648f187136710aead2068064b4db" kind="function"><name>SetupLights</name></member>
+    <member refid="class_scene_app_1aa0dbda2623d4d32cda81fbfb5a97760a" kind="function"><name>InitGameLoop</name></member>
+    <member refid="class_scene_app_1a62ee5dc60899811104ea01db498f6d65" kind="function"><name>InitMainMenu</name></member>
+    <member refid="class_scene_app_1a7e7bed59b9f67f8b4dcb0994cd850ffe" kind="function"><name>InitShop</name></member>
+    <member refid="class_scene_app_1a8dfffee0d2ff620be8bf48f9d6b9196e" kind="function"><name>InitPauseMenu</name></member>
+    <member refid="class_scene_app_1a6006d24d1c61e057aea252d086f8ffff" kind="function"><name>InitGameEndMenu</name></member>
+    <member refid="class_scene_app_1afeb40fca84cdad8fc128ae3712360c11" kind="function"><name>UpdateLoading</name></member>
+    <member refid="class_scene_app_1a3ba7a2993cea9c13b4a7c8cb2668a312" kind="function"><name>UpdateMainMenu</name></member>
+    <member refid="class_scene_app_1abfcf2a864bc670141024453df142b191" kind="function"><name>UpdateGameLoop</name></member>
+    <member refid="class_scene_app_1a08773b5085216866fc0350ef77560ebd" kind="function"><name>UpdatePauseMenu</name></member>
+    <member refid="class_scene_app_1a79eccdb7cdeac4dc0cfa4f979b8a257d" kind="function"><name>UpdateShop</name></member>
+    <member refid="class_scene_app_1ab3524b8b9aa423a8be18d83dc12a5915" kind="function"><name>UpdateGameEnd</name></member>
+    <member refid="class_scene_app_1af7cdb80aff26fce9d64cd7dc3d735647" kind="function"><name>HandleCollision</name></member>
+    <member refid="class_scene_app_1aa5f20d520df679ffce3e76d161ea172f" kind="function"><name>CheckMarkedForDeletion</name></member>
+    <member refid="class_scene_app_1af4b6406225360d9134a5a2a440d49895" kind="function"><name>DrawHUD</name></member>
+    <member refid="class_scene_app_1aea34e1a25a1a851e8d3af0ed9dfd85cf" kind="function"><name>RenderLoading</name></member>
+    <member refid="class_scene_app_1a113d3e9df2b5750970b792112fcb1791" kind="function"><name>RenderMainMenu</name></member>
+    <member refid="class_scene_app_1afffb3ff22780f1eaaa307dd53e9e24d1" kind="function"><name>RenderGameLoop</name></member>
+    <member refid="class_scene_app_1a1388567b320f11a15a94d9b187f052ed" kind="function"><name>RenderPauseMenu</name></member>
+    <member refid="class_scene_app_1aba7c346f9a09e3a461a3e7c2e93874dd" kind="function"><name>RenderShop</name></member>
+    <member refid="class_scene_app_1a685aa415b9b7fbf34869c212c192a670" kind="function"><name>RenderGameEnd</name></member>
+    <member refid="class_scene_app_1a07916d454876fe34d081f24d4957426e" kind="function"><name>LoadSceneAssets</name></member>
+    <member refid="class_scene_app_1aadc3edde6cace552a5a220cedd4ddbb3" kind="function"><name>GetMeshFromSceneAssets</name></member>
+    <member refid="class_scene_app_1abbc88abb8755fc074dfff27b7e839647" kind="function"><name>LoadAssets</name></member>
+    <member refid="class_scene_app_1a0aa7a899b4b613c6c24a69041dfb5d23" kind="function"><name>BuildToLoadData</name></member>
+    <member refid="class_scene_app_1aded735b3e6c3e7c0913133721f6a1f23" kind="function"><name>FindSampleFromName</name></member>
+  </compound>
+  <compound refid="class_shop_menu" kind="class"><name>ShopMenu</name>
+    <member refid="class_shop_menu_1a871220fbad41d5514b8d244efc2469bc" kind="variable"><name>upgradeCost</name></member>
+    <member refid="class_shop_menu_1a6dbcaf333f4276df1b592563f74936c6" kind="variable"><name>upgradesAmount</name></member>
+    <member refid="class_shop_menu_1ad00ead74fb0ef7f5a265c1725fa6ccbf" kind="function"><name>Init</name></member>
+    <member refid="class_shop_menu_1a17c43cd733173e8a19eaaff593dbfec7" kind="function"><name>Update</name></member>
+    <member refid="class_shop_menu_1a17f8a9f65b1d66a40d3fed952bedde2b" kind="function"><name>DrawMenuHUD</name></member>
+    <member refid="class_shop_menu_1a9d9a71e0eb5eb51a917b46402e9fbc9a" kind="function"><name>OnMouseButtonPressed</name></member>
+    <member refid="class_shop_menu_1a4b03f91a778de0ba798b61ec87667f1b" kind="function"><name>IncreaseVitality</name></member>
+    <member refid="class_shop_menu_1a4a33b049e4775fe1868ac008d841cc58" kind="function"><name>IncreaseWisdom</name></member>
+    <member refid="class_shop_menu_1a120bb8c5f73a60254733124b87f6859d" kind="function"><name>IncreaseToughness</name></member>
+    <member refid="class_shop_menu_1a7a8fd886b170db52ee4476982ce78f93" kind="function"><name>IncreaseEnergy</name></member>
+    <member refid="class_shop_menu_1ad1894becbf0a9f3fc8d3045b8b604438" kind="function"><name>CloseShop</name></member>
+    <member refid="class_shop_menu_1a10e3d5682a16284752905ed67bf6b689" kind="function"><name>IncreaseAttribute</name></member>
+    <member refid="class_shop_menu_1a2dd4a19db5f49b409753a25f697e5d59" kind="function"><name>IncreaseUpgradeCost</name></member>
+    <member refid="class_shop_menu_1a6bde1debb909bcff4f6afde29a78c5ab" kind="function"><name>DoesPlayerHaveMoneyForUpgrade</name></member>
+  </compound>
+  <compound refid="class_sprite_actor" kind="class"><name>SpriteActor</name>
+    <member refid="class_sprite_actor_1a4b867e45b37939302f3a0792043efcdc" kind="variable"><name>sprite</name></member>
+    <member refid="class_sprite_actor_1a7cec018143780ec6eb5c6986909702b7" kind="function"><name>SpriteActor</name></member>
+    <member refid="class_sprite_actor_1a621cb54068cc048f59c012c6c53a9b45" kind="function"><name>SpriteActor</name></member>
+    <member refid="class_sprite_actor_1a087bb8b789d29d3e7c71db58e4c2a5e0" kind="function"><name>~SpriteActor</name></member>
+    <member refid="class_sprite_actor_1a9bee8a49bee219bae0190046e3ec5d1c" kind="function"><name>SetTranslation</name></member>
+    <member refid="class_sprite_actor_1ad7d2b2ba00da6fd85e8dfd84d9aaa776" kind="function"><name>SetRotation</name></member>
+    <member refid="class_sprite_actor_1a432a23017cf5aa8fe8b521ee5884c996" kind="function"><name>SetScale</name></member>
+    <member refid="class_sprite_actor_1a2c4fffd3038c47dcda6592a398f6386c" kind="function"><name>SetTexture</name></member>
+    <member refid="class_sprite_actor_1a0369b43c4507873169b90af54f002da3" kind="function"><name>SetSprite</name></member>
+    <member refid="class_sprite_actor_1a34892b4383f3a0dec1c43345b19a8e8e" kind="function"><name>SetWidth</name></member>
+    <member refid="class_sprite_actor_1adf4a1510ceb0dbf66a582614b1dfaddc" kind="function"><name>SetHeight</name></member>
+    <member refid="class_sprite_actor_1a0820aad46981ac11174f67ab97433473" kind="function"><name>Render</name></member>
+    <member refid="class_sprite_actor_1a530cf84805cb957b99f95fd9a8c0c1e3" kind="function"><name>GetSprite</name></member>
+    <member refid="class_sprite_actor_1aaf810a489f9916ecd2d041cd61d39874" kind="function"><name>GetRotationF</name></member>
+    <member refid="class_sprite_actor_1a4d9d23b93afa89ec5aa8e04786252b19" kind="function"><name>GetTranslation</name></member>
+    <member refid="class_sprite_actor_1a473e053ec3e6e8a460020ba3833acc2e" kind="function"><name>GetScale</name></member>
+  </compound>
+  <compound refid="class_wave_manager" kind="class"><name>WaveManager</name>
+    <member refid="class_wave_manager_1a9440cd9b8ec292c041b5f794b2bb3217" kind="variable"><name>currentWave</name></member>
+    <member refid="class_wave_manager_1a14685fc0542377bf570845c6429b8d47" kind="variable"><name>bInWave</name></member>
+    <member refid="class_wave_manager_1af6a2d5f29691c357d74f8cb1b1191cd3" kind="variable"><name>bSpawnsComplete</name></member>
+    <member refid="class_wave_manager_1ad4f1b036ed460da8f85441db10228e35" kind="variable"><name>bBossSpawned</name></member>
+    <member refid="class_wave_manager_1af50a8f0fd508efb11fe70ac81cbef521" kind="variable"><name>boss</name></member>
+    <member refid="class_wave_manager_1a0c10217f3b79b6eb32c9414ca13a4841" kind="variable"><name>currentWaveSpawnedEnemiesAmount</name></member>
+    <member refid="class_wave_manager_1a3336da9211a7c58b767ebb60c5af712a" kind="variable"><name>lastSpawnTime</name></member>
+    <member refid="class_wave_manager_1a21e6e268cfa618055943b044fa2cb4ab" kind="variable"><name>waveDefinitions</name></member>
+    <member refid="class_wave_manager_1abc5d23581f57ec211d9077729db1f37f" kind="variable"><name>spawnedEnemies</name></member>
+    <member refid="class_wave_manager_1ae61ed89a77ebeeef2a4f6c63f56a208e" kind="variable"><name>spawnLocations</name></member>
+    <member refid="class_wave_manager_1a1c039c9a7a485f88b68a3f966ffe02c5" kind="function"><name>WaveManager</name></member>
+    <member refid="class_wave_manager_1a918f759b1a32b82fea823b5292b8a001" kind="function"><name>Init</name></member>
+    <member refid="class_wave_manager_1aa56d31703d3d02067e75debabbfae300" kind="function"><name>StartWave</name></member>
+    <member refid="class_wave_manager_1a751017f23187640be76f5db4b6eba243" kind="function"><name>EndWave</name></member>
+    <member refid="class_wave_manager_1ae5ee18f81c4ea516839af94da831a24d" kind="function"><name>Update</name></member>
+    <member refid="class_wave_manager_1ac60f15dad7ac55306c45b17babdfcb17" kind="function"><name>CheckWaveState</name></member>
+    <member refid="class_wave_manager_1acc8ea63b30bc4ccd02e7b12f1504595c" kind="function"><name>SpawnEnemy</name></member>
+    <member refid="class_wave_manager_1a2608b3fb9c41ad9a227143f66e1dd385" kind="function"><name>GetAllSpawnedEnemies</name></member>
+  </compound>
+  <compound refid="class_world_object" kind="class"><name>WorldObject</name>
+    <member refid="class_world_object_1a9f76e2def47f4d6be6bafb330ac0394b" kind="variable"><name>ID</name></member>
+    <member refid="class_world_object_1a025ba78ec5cc2607f7e62750a7c37749" kind="variable"><name>collisionBody</name></member>
+    <member refid="class_world_object_1a9e5ac0cc278f5766b6020950fdabbe75" kind="variable"><name>transformMat</name></member>
+    <member refid="class_world_object_1a8917ba1d61e12c12f7246c7b95cd4094" kind="variable"><name>owningObject</name></member>
+    <member refid="class_world_object_1a78bd9162f55826c5c68706d688578cf8" kind="variable"><name>translation</name></member>
+    <member refid="class_world_object_1a45f28fb0c7cf14a6c92ab72eaa4eb9a9" kind="variable"><name>scale</name></member>
+    <member refid="class_world_object_1a519b69f0419703cfbe08580d4b2ab408" kind="variable"><name>rotationVec</name></member>
+    <member refid="class_world_object_1a60c2b1f707b5694f97dd950996d05e11" kind="variable"><name>bMarkedForDelete</name></member>
+    <member refid="class_world_object_1ac10cc37682a3a3cce8405411fbd8f4c3" kind="variable"><name>bDisableUpdate</name></member>
+    <member refid="class_world_object_1a632d2e78acdcbc0aef09951134340d4e" kind="function"><name>WorldObject</name></member>
+    <member refid="class_world_object_1a287e5b87a26133cd35f3015268d2a5a3" kind="function"><name>~WorldObject</name></member>
+    <member refid="class_world_object_1aa2d0bc51a9b2dac1930c37e2401e8934" kind="function"><name>Init</name></member>
+    <member refid="class_world_object_1a8500a6a24c62699fa103a68349407a3f" kind="function"><name>PostInit</name></member>
+    <member refid="class_world_object_1a828815709498f192bf138ecfe416c529" kind="function"><name>Update</name></member>
+    <member refid="class_world_object_1a2a30bf431fa478eb5d24683e1906c261" kind="function"><name>Render</name></member>
+    <member refid="class_world_object_1a7c563531a541e9f5ff4193443cedd515" kind="function"><name>OnCollision</name></member>
+    <member refid="class_world_object_1a830b64bbf6df3fc50284b0316c124133" kind="function"><name>SetTranslation</name></member>
+    <member refid="class_world_object_1a18ba8b67b53f7df01220643617ecd75c" kind="function"><name>SetRotation</name></member>
+    <member refid="class_world_object_1ad73836d8146cc9e1d475eb74fb05481a" kind="function"><name>SetRotation</name></member>
+    <member refid="class_world_object_1ae00d341e9ac8909374dd556aaecbdb46" kind="function"><name>SetScale</name></member>
+    <member refid="class_world_object_1a8817deac42a357d2ed476791c7b76511" kind="function"><name>SetCollisionBody</name></member>
+    <member refid="class_world_object_1a9967baa65719f1418641598a244306a5" kind="function"><name>GetTranslation</name></member>
+    <member refid="class_world_object_1a271e4b4870fadf60e285576f94b31e79" kind="function"><name>GetRotation</name></member>
+    <member refid="class_world_object_1aa959995cc385843f1e2b0139e4413ab5" kind="function"><name>GetRotationF</name></member>
+    <member refid="class_world_object_1a223b3653f965b7698ec28c9b4fc84e28" kind="function"><name>GetScale</name></member>
+    <member refid="class_world_object_1a1302aea00b9a5f348459f55e9dd50725" kind="function"><name>GetTransform</name></member>
+    <member refid="class_world_object_1a0fdf372cdda0fb026916b60e19e657a0" kind="function"><name>GetOwner</name></member>
+    <member refid="class_world_object_1aa3b5f5e5e1ed26c94265854e2858bdee" kind="function"><name>GetCollisionBody</name></member>
+    <member refid="class_world_object_1a4402fa17dfd062fc97750d581d4f774b" kind="function"><name>MarkForDelete</name></member>
+    <member refid="class_world_object_1a650a599e9ffa751eaba296c4ef6ec2d2" kind="function"><name>DisableUpdate</name></member>
+    <member refid="class_world_object_1a42e101b6adf4911396d95acc5b1741d8" kind="function"><name>EnableUpdate</name></member>
+    <member refid="class_world_object_1a78b0b88900685e80feffc6921fd9f370" kind="function"><name>ShouldUpdate</name></member>
+    <member refid="class_world_object_1aaebbb0abbabef79ad542f01db4ef6101" kind="function"><name>GetIsMarkedForDelete</name></member>
+    <member refid="class_world_object_1a4c83c0d8e3817aac3ef2080ec0972802" kind="function"><name>BuildTransform</name></member>
+  </compound>
+  <compound refid="namespace_ability_activation_key" kind="namespace"><name>AbilityActivationKey</name>
+    <member refid="namespace_ability_activation_key_1ab159d3c3f26196a9ff493b67ecf7e68c" kind="enum"><name>Type</name></member>
+    <member refid="namespace_ability_activation_key_1ab159d3c3f26196a9ff493b67ecf7e68cab6784d3bc8d889420937a8c25e9b1c87" kind="enumvalue"><name>AbilityKey1</name></member>
+    <member refid="namespace_ability_activation_key_1ab159d3c3f26196a9ff493b67ecf7e68ca320fc572e7627361aa1df0f37543c0ac" kind="enumvalue"><name>AbilityKey2</name></member>
+    <member refid="namespace_ability_activation_key_1ab159d3c3f26196a9ff493b67ecf7e68cad9c1b1c777eb7838b8da19f60dbc56d2" kind="enumvalue"><name>AbilityKey3</name></member>
+    <member refid="namespace_ability_activation_key_1ab159d3c3f26196a9ff493b67ecf7e68ca9c88a5d3644987a1299d2142a134c9d9" kind="enumvalue"><name>AbilityKey4</name></member>
+    <member refid="namespace_ability_activation_key_1ab159d3c3f26196a9ff493b67ecf7e68ca7681c632dadbc0ca58c3a03c7a9d53c2" kind="enumvalue"><name>None</name></member>
+  </compound>
+  <compound refid="namespace_apply_damage_on" kind="namespace"><name>ApplyDamageOn</name>
+    <member refid="namespace_apply_damage_on_1aab4652342cac35cdff458c5aa2bad289" kind="enum"><name>Type</name></member>
+    <member refid="namespace_apply_damage_on_1aab4652342cac35cdff458c5aa2bad289a17c0a2d2e83ad970a7bb7395c9819d1f" kind="enumvalue"><name>EnemiesOnly</name></member>
+    <member refid="namespace_apply_damage_on_1aab4652342cac35cdff458c5aa2bad289af658fe1d6a4dd178955748cb85f117ac" kind="enumvalue"><name>PlayerOnly</name></member>
+    <member refid="namespace_apply_damage_on_1aab4652342cac35cdff458c5aa2bad289a1b46eaf8b75eb03bd8e0c31036b8d89b" kind="enumvalue"><name>EnemiesAndPlayer</name></member>
+  </compound>
+  <compound refid="namespace_cooldown_start_policy" kind="namespace"><name>CooldownStartPolicy</name>
+    <member refid="namespace_cooldown_start_policy_1a99c3a8f4a331db7e6db8dfda1785b101" kind="enum"><name>Type</name></member>
+    <member refid="namespace_cooldown_start_policy_1a99c3a8f4a331db7e6db8dfda1785b101abdb334784b8226969ec44140a0951d92" kind="enumvalue"><name>OnAbilityStart</name></member>
+    <member refid="namespace_cooldown_start_policy_1a99c3a8f4a331db7e6db8dfda1785b101af1b51dae9cd99c300bce560116641d60" kind="enumvalue"><name>OnAbilityEnd</name></member>
+  </compound>
+  <compound refid="namespace_enemy_class" kind="namespace"><name>EnemyClass</name>
+    <member refid="namespace_enemy_class_1a21f4473edd2d0cb0970f6505d46f0866" kind="enum"><name>Type</name></member>
+    <member refid="namespace_enemy_class_1a21f4473edd2d0cb0970f6505d46f0866a7a3e72f4e6ac314cad36a24f27c628a9" kind="enumvalue"><name>HEAVY</name></member>
+    <member refid="namespace_enemy_class_1a21f4473edd2d0cb0970f6505d46f0866ab7b90fd5865f02a5159836adc5d221bf" kind="enumvalue"><name>NORMAL</name></member>
+    <member refid="namespace_enemy_class_1a21f4473edd2d0cb0970f6505d46f0866ac49546fa32e67ada5d7619f084ef02cb" kind="enumvalue"><name>LIGHT</name></member>
+  </compound>
+  <compound refid="namespace_game_state" kind="namespace"><name>GameState</name>
+    <member refid="namespace_game_state_1aa2df68fe63beaaf10d3154d8eb490fe6" kind="enum"><name>Type</name></member>
+    <member refid="namespace_game_state_1aa2df68fe63beaaf10d3154d8eb490fe6a1c09055471a61c18afc1fc201e6d7d2a" kind="enumvalue"><name>Loading</name></member>
+    <member refid="namespace_game_state_1aa2df68fe63beaaf10d3154d8eb490fe6afff9d63720dd6c0c621817980d02d9ee" kind="enumvalue"><name>MainMenu</name></member>
+    <member refid="namespace_game_state_1aa2df68fe63beaaf10d3154d8eb490fe6aa1babbc78fafb7b98d14a8fcc880bd55" kind="enumvalue"><name>GameLoop</name></member>
+    <member refid="namespace_game_state_1aa2df68fe63beaaf10d3154d8eb490fe6a6e1adcd2eb4fb5660e3baadd566e4873" kind="enumvalue"><name>PauseMenu</name></member>
+    <member refid="namespace_game_state_1aa2df68fe63beaaf10d3154d8eb490fe6a11dfd10e2813b09f256dd86e3902dfe2" kind="enumvalue"><name>Shop</name></member>
+    <member refid="namespace_game_state_1aa2df68fe63beaaf10d3154d8eb490fe6a797c961d3f35a579149051adc329e58e" kind="enumvalue"><name>GameEnd</name></member>
+  </compound>
+  <compound refid="namespacegef" kind="namespace"><name>gef</name>
+  </compound>
+  <compound refid="namespace_hellwatch_attribute" kind="namespace"><name>HellwatchAttribute</name>
+    <member refid="namespace_hellwatch_attribute_1ad0a500e65129d06e4589f9bca54c4a7d" kind="enum"><name>Type</name></member>
+    <member refid="namespace_hellwatch_attribute_1ad0a500e65129d06e4589f9bca54c4a7da6d26574d573c085ec34ba30576725713" kind="enumvalue"><name>Health</name></member>
+    <member refid="namespace_hellwatch_attribute_1ad0a500e65129d06e4589f9bca54c4a7dad3c5decb2b14966e4ae3e8e07fc975a4" kind="enumvalue"><name>Mana</name></member>
+    <member refid="namespace_hellwatch_attribute_1ad0a500e65129d06e4589f9bca54c4a7da32b2fa4bc40129b2f09aa2a9a4192d50" kind="enumvalue"><name>Vitality</name></member>
+    <member refid="namespace_hellwatch_attribute_1ad0a500e65129d06e4589f9bca54c4a7da1863c83b1312f525ab940b88fd83a2f8" kind="enumvalue"><name>Wisdom</name></member>
+    <member refid="namespace_hellwatch_attribute_1ad0a500e65129d06e4589f9bca54c4a7da7a4d8b401430813782ca3155c614b3af" kind="enumvalue"><name>Toughness</name></member>
+    <member refid="namespace_hellwatch_attribute_1ad0a500e65129d06e4589f9bca54c4a7daf89b5eb0bb9f25288755790fff1e0603" kind="enumvalue"><name>Energy</name></member>
+    <member refid="namespace_hellwatch_attribute_1ad0a500e65129d06e4589f9bca54c4a7da1a1cde64b50095f2d28168d2c6b80240" kind="enumvalue"><name>None</name></member>
+  </compound>
+  <compound refid="namespace_hellwatch_controller_axis" kind="namespace"><name>HellwatchControllerAxis</name>
+    <member refid="namespace_hellwatch_controller_axis_1a6014138ce0ea9634c8a9c36539a7a967" kind="enum"><name>Type</name></member>
+    <member refid="namespace_hellwatch_controller_axis_1a6014138ce0ea9634c8a9c36539a7a967af556634c68eda0587cb64022a5dec80d" kind="enumvalue"><name>None</name></member>
+    <member refid="namespace_hellwatch_controller_axis_1a6014138ce0ea9634c8a9c36539a7a967a2c35b461f3a44e7f7e139b6829990d77" kind="enumvalue"><name>LeftStickXY</name></member>
+    <member refid="namespace_hellwatch_controller_axis_1a6014138ce0ea9634c8a9c36539a7a967a052b1c55389f1a8945ac50fdf80d0220" kind="enumvalue"><name>RightStickXY</name></member>
+  </compound>
+  <compound refid="namespace_hellwatch_input_action" kind="namespace"><name>HellwatchInputAction</name>
+    <member refid="namespace_hellwatch_input_action_1ad39fcc17ea621da731d011339205f522" kind="enum"><name>Type</name></member>
+    <member refid="namespace_hellwatch_input_action_1ad39fcc17ea621da731d011339205f522a1b668be2e7a287399767467c996dcdcb" kind="enumvalue"><name>None</name></member>
+    <member refid="namespace_hellwatch_input_action_1ad39fcc17ea621da731d011339205f522ac50db83d00684255156bb26fbadba101" kind="enumvalue"><name>Pressed</name></member>
+    <member refid="namespace_hellwatch_input_action_1ad39fcc17ea621da731d011339205f522a2e7461d356b36a8be3798d12aa43a81d" kind="enumvalue"><name>Held</name></member>
+    <member refid="namespace_hellwatch_input_action_1ad39fcc17ea621da731d011339205f522a6baa22c2058b4910e772c39c0e4104bf" kind="enumvalue"><name>Released</name></member>
+  </compound>
+  <compound refid="namespace_hellwatch_particle" kind="namespace"><name>HellwatchParticle</name>
+    <member refid="namespace_hellwatch_particle_1a93a028826056ca781710ef2830834f51" kind="enum"><name>Type</name></member>
+    <member refid="namespace_hellwatch_particle_1a93a028826056ca781710ef2830834f51a6436e49d303ed9b9a1fa51de335afc1d" kind="enumvalue"><name>Explosion</name></member>
+    <member refid="namespace_hellwatch_particle_1a93a028826056ca781710ef2830834f51a31724befc90ab0517472666b48eedb0b" kind="enumvalue"><name>Death</name></member>
+    <member refid="namespace_hellwatch_particle_1a93a028826056ca781710ef2830834f51acfc9f6dd38f3e82bbc2fb485f2beea26" kind="enumvalue"><name>Dash</name></member>
+  </compound>
+  <compound refid="_ability_8cpp" kind="file"><name>Ability.cpp</name>
+  </compound>
+  <compound refid="_ability_8h" kind="file"><name>Ability.h</name>
+  </compound>
+  <compound refid="_dash_8cpp" kind="file"><name>Dash.cpp</name>
+  </compound>
+  <compound refid="_dash_8h" kind="file"><name>Dash.h</name>
+  </compound>
+  <compound refid="_ice_bolt_8cpp" kind="file"><name>IceBolt.cpp</name>
+  </compound>
+  <compound refid="_ice_bolt_8h" kind="file"><name>IceBolt.h</name>
+  </compound>
+  <compound refid="_meteor_8cpp" kind="file"><name>Meteor.cpp</name>
+  </compound>
+  <compound refid="_meteor_8h" kind="file"><name>Meteor.h</name>
+  </compound>
+  <compound refid="_piercing_strike_8cpp" kind="file"><name>PiercingStrike.cpp</name>
+  </compound>
+  <compound refid="_piercing_strike_8h" kind="file"><name>PiercingStrike.h</name>
+  </compound>
+  <compound refid="_abilities_component_8cpp" kind="file"><name>AbilitiesComponent.cpp</name>
+  </compound>
+  <compound refid="_abilities_component_8h" kind="file"><name>AbilitiesComponent.h</name>
+  </compound>
+  <compound refid="_actor_component_8cpp" kind="file"><name>ActorComponent.cpp</name>
+  </compound>
+  <compound refid="_actor_component_8h" kind="file"><name>ActorComponent.h</name>
+  </compound>
+  <compound refid="_character_movement_component_8cpp" kind="file"><name>CharacterMovementComponent.cpp</name>
+  </compound>
+  <compound refid="_character_movement_component_8h" kind="file"><name>CharacterMovementComponent.h</name>
+  </compound>
+  <compound refid="_mesh_actor_8cpp" kind="file"><name>MeshActor.cpp</name>
+  </compound>
+  <compound refid="_mesh_actor_8h" kind="file"><name>MeshActor.h</name>
+  </compound>
+  <compound refid="_boss_8cpp" kind="file"><name>Boss.cpp</name>
+  </compound>
+  <compound refid="_boss_8h" kind="file"><name>Boss.h</name>
+  </compound>
+  <compound refid="_damage_on_collision_actor_8cpp" kind="file"><name>DamageOnCollisionActor.cpp</name>
+  </compound>
+  <compound refid="_damage_on_collision_actor_8h" kind="file"><name>DamageOnCollisionActor.h</name>
+  </compound>
+  <compound refid="_enemy_8cpp" kind="file"><name>Enemy.cpp</name>
+  </compound>
+  <compound refid="_enemy_8h" kind="file"><name>Enemy.h</name>
+  </compound>
+  <compound refid="_enemy_dummy_8cpp" kind="file"><name>EnemyDummy.cpp</name>
+  </compound>
+  <compound refid="_enemy_dummy_8h" kind="file"><name>EnemyDummy.h</name>
+  </compound>
+  <compound refid="_meteor_actor_8cpp" kind="file"><name>MeteorActor.cpp</name>
+  </compound>
+  <compound refid="_meteor_actor_8h" kind="file"><name>MeteorActor.h</name>
+  </compound>
+  <compound refid="_particle_actor_8cpp" kind="file"><name>ParticleActor.cpp</name>
+  </compound>
+  <compound refid="_particle_actor_8h" kind="file"><name>ParticleActor.h</name>
+  </compound>
+  <compound refid="_player_character_8cpp" kind="file"><name>PlayerCharacter.cpp</name>
+  </compound>
+  <compound refid="_player_character_8h" kind="file"><name>PlayerCharacter.h</name>
+  </compound>
+  <compound refid="_ranged_enemy_8cpp" kind="file"><name>RangedEnemy.cpp</name>
+  </compound>
+  <compound refid="_ranged_enemy_8h" kind="file"><name>RangedEnemy.h</name>
+  </compound>
+  <compound refid="_sprite_actor_8cpp" kind="file"><name>SpriteActor.cpp</name>
+  </compound>
+  <compound refid="_sprite_actor_8h" kind="file"><name>SpriteActor.h</name>
+  </compound>
+  <compound refid="_attribute_component_8cpp" kind="file"><name>AttributeComponent.cpp</name>
+  </compound>
+  <compound refid="_attribute_component_8h" kind="file"><name>AttributeComponent.h</name>
+    <member refid="_attribute_component_8h_1a6268eb19c060bd95c2268b25c27ce85c" kind="define"><name>BASE_REGEN_RATIO</name></member>
+  </compound>
+  <compound refid="_attribute_types_8h" kind="file"><name>AttributeTypes.h</name>
+    <member refid="_attribute_types_8h_1a3ce347dddc9a8d39089800b37f476077" kind="function"><name>AttributeToString</name></member>
+  </compound>
+  <compound refid="_particle_manager_8cpp" kind="file"><name>ParticleManager.cpp</name>
+  </compound>
+  <compound refid="_particle_manager_8h" kind="file"><name>ParticleManager.h</name>
+  </compound>
+  <compound refid="_player_controller_8cpp" kind="file"><name>PlayerController.cpp</name>
+  </compound>
+  <compound refid="_player_controller_8h" kind="file"><name>PlayerController.h</name>
+  </compound>
+  <compound refid="_utils_8h" kind="file"><name>Utils.h</name>
+    <member refid="_utils_8h_1a642e16f35aa1e585c25e405ede76e115" kind="define"><name>NO_ID</name></member>
+    <member refid="_utils_8h_1ae50e546c560a653d3409bd594d34dc0d" kind="define"><name>PLAYER_ID</name></member>
+    <member refid="_utils_8h_1a85fe7dfc8d35e0e6ee68ceb22ab3b57b" kind="define"><name>ENEMY_ID</name></member>
+    <member refid="_utils_8h_1af4955eee766517b72730e7c165711a6c" kind="define"><name>ENVIRONMENT_ID</name></member>
+    <member refid="_utils_8h_1a598a3330b3c21701223ee0ca14316eca" kind="define"><name>PI</name></member>
+    <member refid="_utils_8h_1afc0ee7bd35c161a2d80b8e8f04fd9213" kind="define"><name>GENERATED_BODY</name></member>
+    <member refid="_utils_8h_1addcf0f43bf2efc658ec99c4911957967" kind="define"><name>bindFunc</name></member>
+    <member refid="_utils_8h_1ad2c68575874b116204c5bd611d701513" kind="define"><name>bindFunc_ONEParam</name></member>
+    <member refid="_utils_8h_1a8dc74a463255788898ad6d2a82f7fe89" kind="define"><name>bindFunc_TWOParams</name></member>
+    <member refid="_utils_8h_1a293f714dcb517d7dbe317dda57921a35" kind="define"><name>bindFunc_THREEParam</name></member>
+    <member refid="_utils_8h_1a4604f826239490e2607d6c77ab3342a4" kind="define"><name>bindFunc_FOURParams</name></member>
+    <member refid="_utils_8h_1ab1f86d0a9b054701150547f6d57a6e9b" kind="define"><name>bindFunc_FIVEParams</name></member>
+    <member refid="_utils_8h_1af34d57503748181af1f24c995687763b" kind="function"><name>Clamp</name></member>
+    <member refid="_utils_8h_1a13c000eb49675481a5739e0469a3ca5b" kind="function"><name>ProjectScreenToWorldSpace</name></member>
+    <member refid="_utils_8h_1ad146791218b4988af44dcbb3ba5b25a2" kind="function"><name>ProjectWorldToScreenSpace</name></member>
+    <member refid="_utils_8h_1ae45a4236dfaff965983e95c66ae17c80" kind="function"><name>FindAngle</name></member>
+    <member refid="_utils_8h_1a124ad7fce789088ac0f27bda4dafce00" kind="function"><name>Lerp</name></member>
+  </compound>
+  <compound refid="_wave_manager_8cpp" kind="file"><name>WaveManager.cpp</name>
+  </compound>
+  <compound refid="_wave_manager_8h" kind="file"><name>WaveManager.h</name>
+    <member refid="_wave_manager_8h_1a61d1084c2f3105aa6fe0935321c38056" kind="define"><name>USE_WAVE_FORMULA</name></member>
+    <member refid="_wave_manager_8h_1a7611b1145603b267db98d53c153808b5" kind="define"><name>SPAWN_PERIOD_AFTER_WAVE_DEFINITIONS</name></member>
+  </compound>
+  <compound refid="_world_object_8cpp" kind="file"><name>WorldObject.cpp</name>
+  </compound>
+  <compound refid="_world_object_8h" kind="file"><name>WorldObject.h</name>
+  </compound>
+  <compound refid="_damagable_8h" kind="file"><name>Damagable.h</name>
+  </compound>
+  <compound refid="_game_end_menu_8cpp" kind="file"><name>GameEndMenu.cpp</name>
+  </compound>
+  <compound refid="_game_end_menu_8h" kind="file"><name>GameEndMenu.h</name>
+  </compound>
+  <compound refid="_main_menu_8cpp" kind="file"><name>MainMenu.cpp</name>
+  </compound>
+  <compound refid="_main_menu_8h" kind="file"><name>MainMenu.h</name>
+  </compound>
+  <compound refid="_menu_8cpp" kind="file"><name>Menu.cpp</name>
+  </compound>
+  <compound refid="_menu_8h" kind="file"><name>Menu.h</name>
+  </compound>
+  <compound refid="_pause_menu_8cpp" kind="file"><name>PauseMenu.cpp</name>
+  </compound>
+  <compound refid="_pause_menu_8h" kind="file"><name>PauseMenu.h</name>
+  </compound>
+  <compound refid="_shop_menu_8cpp" kind="file"><name>ShopMenu.cpp</name>
+  </compound>
+  <compound refid="_shop_menu_8h" kind="file"><name>ShopMenu.h</name>
+    <member refid="_shop_menu_8h_1a6484aecd6b2bd1669a592e349189cc35" kind="define"><name>UPGRADE_COST_FORMULA</name></member>
+    <member refid="_shop_menu_8h_1a4693ca27d43aba0ff1111f968ad1ed1e" kind="define"><name>MAX_COST</name></member>
+  </compound>
+  <compound refid="main__d3d11_8cpp" kind="file"><name>main_d3d11.cpp</name>
+    <member refid="main__d3d11_8cpp_1a69cc9008095a7d96918395b56d077919" kind="variable"><name>sceLibcHeapSize</name></member>
+    <member refid="main__d3d11_8cpp_1a6d2b26871686f59e5bd2f789540ed0e5" kind="function"><name>WinMain</name></member>
+  </compound>
+  <compound refid="main__vita_8cpp" kind="file"><name>main_vita.cpp</name>
+    <member refid="main__vita_8cpp_1a69cc9008095a7d96918395b56d077919" kind="variable"><name>sceLibcHeapSize</name></member>
+    <member refid="main__vita_8cpp_1a840291bc02cba5474a4cb46a9b9566fe" kind="function"><name>main</name></member>
+  </compound>
+  <compound refid="obj__mesh__loader_8cpp" kind="file"><name>obj_mesh_loader.cpp</name>
+    <member refid="obj__mesh__loader_8cpp_1a1907c8274ead526bc264388c3ae2e000" kind="function"><name>StringEndsWith</name></member>
+  </compound>
+  <compound refid="obj__mesh__loader_8h" kind="file"><name>obj_mesh_loader.h</name>
+    <member refid="obj__mesh__loader_8h_1ab6d74e55cf8354fe68dd64bd265a814e" kind="typedef"><name>MeshMap</name></member>
+  </compound>
+  <compound refid="primitive__builder_8cpp" kind="file"><name>primitive_builder.cpp</name>
+    <member refid="primitive__builder_8cpp_1ad0cbeb2f8f13e9647bdf74910dd64d56" kind="function"><name>CalculateSphereSurfaceNormal</name></member>
+  </compound>
+  <compound refid="primitive__builder_8h" kind="file"><name>primitive_builder.h</name>
+  </compound>
+  <compound refid="_r_e_a_d_m_e_8md" kind="file"><name>README.md</name>
+  </compound>
+  <compound refid="scene__app_8cpp" kind="file"><name>scene_app.cpp</name>
+  </compound>
+  <compound refid="scene__app_8h" kind="file"><name>scene_app.h</name>
+    <member refid="scene__app_8h_1a5b57d40276b77cc074d878efc78bb980" kind="typedef"><name>TextureMap</name></member>
+    <member refid="scene__app_8h_1a8d89ee6a10feffd9323a0031e0bbea29" kind="typedef"><name>SoundMap</name></member>
+  </compound>
+  <compound refid="md__d___uni__c_m_p208__hellwatch__r_e_a_d_m_e" kind="page"><name>md_D__Uni_CMP208_Hellwatch_README</name>
+  </compound>
+  <compound refid="dir_dd83752153a5f8a26b8780fd171a1a5d" kind="dir"><name>D:/Uni/CMP208/Hellwatch/build/vs2017/Abilities</name>
+  </compound>
+  <compound refid="dir_38fd5edcd14d1fce235d76d8a1a9749d" kind="dir"><name>D:/Uni/CMP208/Hellwatch/build/vs2017/ActorComponents</name>
+  </compound>
+  <compound refid="dir_6445565d8f89f9d136c2de923fc4f388" kind="dir"><name>D:/Uni/CMP208/Hellwatch/build/vs2017/Actors</name>
+  </compound>
+  <compound refid="dir_2ea205c9a7374d1270589c3dc4531a12" kind="dir"><name>D:/Uni/CMP208/Hellwatch/build/vs2017/Attributes</name>
+  </compound>
+  <compound refid="dir_4fef79e7177ba769987a8da36c892c5f" kind="dir"><name>D:/Uni/CMP208/Hellwatch/build</name>
+  </compound>
+  <compound refid="dir_1e58e055197c872d2c7873964b7dea3e" kind="dir"><name>D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework</name>
+  </compound>
+  <compound refid="dir_d38e094d59747ac109f8f0e7aad2480d" kind="dir"><name>D:/Uni/CMP208/Hellwatch/build/vs2017/Interfaces</name>
+  </compound>
+  <compound refid="dir_f2357408680af1772b236fff8f3cf74b" kind="dir"><name>D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors</name>
+  </compound>
+  <compound refid="dir_e51422e516d0a4e62b73cc6733cd5d2a" kind="dir"><name>D:/Uni/CMP208/Hellwatch/build/vs2017/Abilities/PlayerAbilities</name>
+  </compound>
+  <compound refid="dir_9f6a9901ea431bd85629d2a16f7527de" kind="dir"><name>D:/Uni/CMP208/Hellwatch/build/vs2017/UserInterface</name>
+  </compound>
+  <compound refid="dir_8bceb31512fbf37cf44d454a95859b1c" kind="dir"><name>D:/Uni/CMP208/Hellwatch/build/vs2017</name>
+  </compound>
+</doxygenindex>

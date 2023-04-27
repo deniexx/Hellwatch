@@ -1,0 +1,107 @@
+.TH "CharacterMovementComponent" 3 "Thu Apr 27 2023" "Hellwatch" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+CharacterMovementComponent \- A component that handles moving the character   
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <CharacterMovementComponent\&.h>\fP
+.PP
+Inherits \fBActorComponent\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBCharacterMovementComponent\fP ()"
+.br
+.ti -1c
+.RI "virtual void \fBUpdateComponent\fP (float deltaTime) override"
+.br
+.ti -1c
+.RI "void \fBApplyMovementForceInDirection\fP (b2Vec2 force)"
+.br
+.RI "Applies Movement force in a direction, that is scaled with the acceleration  "
+.ti -1c
+.RI "void \fBSetCollisionBody\fP (b2Body *newBody)"
+.br
+.ti -1c
+.RI "void \fBSetFrozen\fP (bool bNewState)"
+.br
+.ti -1c
+.RI "void \fBSetMaximumSpeed\fP (float newMaximumSpeed)"
+.br
+.ti -1c
+.RI "void \fBSetAcceleration\fP (float newAcceleration)"
+.br
+.ti -1c
+.RI "__forceinline bool \fBIsFrozen\fP () const"
+.br
+.ti -1c
+.RI "__forceinline float \fBGetSpeed\fP () const"
+.br
+.ti -1c
+.RI "__forceinline float \fBGetMaximumSpeed\fP ()"
+.br
+.ti -1c
+.RI "__forceinline float \fBGetAcceleration\fP ()"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "virtual void \fBPostInit\fP () override"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+A component that handles moving the character  
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "CharacterMovementComponent::CharacterMovementComponent ()"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "void CharacterMovementComponent::ApplyMovementForceInDirection (b2Vec2 force)"
+
+.PP
+Applies Movement force in a direction, that is scaled with the acceleration  
+.PP
+\fBParameters\fP
+.RS 4
+\fIforce\fP 
+.RE
+.PP
+
+.SS "__forceinline float CharacterMovementComponent::GetAcceleration ()\fC [inline]\fP"
+
+.SS "__forceinline float CharacterMovementComponent::GetMaximumSpeed ()\fC [inline]\fP"
+
+.SS "__forceinline float CharacterMovementComponent::GetSpeed () const\fC [inline]\fP"
+
+.SS "__forceinline bool CharacterMovementComponent::IsFrozen () const\fC [inline]\fP"
+
+.SS "void CharacterMovementComponent::PostInit ()\fC [override]\fP, \fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+Reimplemented from \fBActorComponent\fP\&.
+.SS "void CharacterMovementComponent::SetAcceleration (float newAcceleration)\fC [inline]\fP"
+
+.SS "void CharacterMovementComponent::SetCollisionBody (b2Body * newBody)\fC [inline]\fP"
+
+.SS "void CharacterMovementComponent::SetFrozen (bool bNewState)\fC [inline]\fP"
+
+.SS "void CharacterMovementComponent::SetMaximumSpeed (float newMaximumSpeed)\fC [inline]\fP"
+
+.SS "void CharacterMovementComponent::UpdateComponent (float deltaTime)\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+Reimplemented from \fBActorComponent\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Hellwatch from the source code\&.

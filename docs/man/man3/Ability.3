@@ -1,0 +1,317 @@
+.TH "Ability" 3 "Thu Apr 27 2023" "Hellwatch" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Ability \- A base ability class, designed to be inherited and provided with functionality   
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <Ability\&.h>\fP
+.PP
+Inherited by \fBDash\fP, \fBIceBolt\fP, \fBMeteor\fP, and \fBPiercingStrike\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBAbility\fP ()"
+.br
+.ti -1c
+.RI "void \fBInit\fP (\fBAbilitiesComponent\fP *inOwningComponent)"
+.br
+.RI "Initializes the ability with the ability component  "
+.ti -1c
+.RI "virtual void \fBUpdate\fP (float deltaTime)"
+.br
+.ti -1c
+.RI "\fBActivationOutcome\fP \fBTryActivate\fP ()"
+.br
+.RI "Attempts to activate this ability, returns an \fBActivationOutcome\fP struct  "
+.ti -1c
+.RI "void \fBCommitAbility\fP ()"
+.br
+.RI "Attempts to commit the ability if it is targeted, does nothing if the ability is NOT targeted  "
+.ti -1c
+.RI "bool \fBEndAbility\fP ()"
+.br
+.RI "Attempts to end the ability, returns a bool whether it was successful  "
+.ti -1c
+.RI "void \fBSetActivationKey\fP (\fBAbilityActivationKey::Type\fP key)"
+.br
+.ti -1c
+.RI "void \fBSetAbilityCostAmount\fP (float newCost)"
+.br
+.ti -1c
+.RI "void \fBSetAbilityCostType\fP (\fBHellwatchAttribute::Type\fP newCost)"
+.br
+.ti -1c
+.RI "void \fBSetAbilityName\fP (std::string newName)"
+.br
+.ti -1c
+.RI "void \fBSetIsActive\fP (bool bNewState)"
+.br
+.ti -1c
+.RI "void \fBSetCooldownStartPolicy\fP (\fBCooldownStartPolicy::Type\fP newPolicy)"
+.br
+.ti -1c
+.RI "void \fBSetAbilityCooldown\fP (float newCooldown)"
+.br
+.ti -1c
+.RI "void \fBSetDamageAmount\fP (float newAmount)"
+.br
+.ti -1c
+.RI "void \fBSetIsTargeted\fP (bool bNewState)"
+.br
+.ti -1c
+.RI "void \fBSetIsTargeting\fP (bool bNewState)"
+.br
+.ti -1c
+.RI "virtual bool \fBIsActive\fP ()"
+.br
+.RI "Checks if the ability is active  "
+.ti -1c
+.RI "__forceinline \fBAbilityActivationKey::Type\fP \fBGetActivationKey\fP () const"
+.br
+.ti -1c
+.RI "__forceinline const std::string & \fBGetAbilityName\fP () const"
+.br
+.ti -1c
+.RI "__forceinline bool \fBIsInCooldown\fP () const"
+.br
+.ti -1c
+.RI "__forceinline bool \fBIsAbilityTargeted\fP () const"
+.br
+.ti -1c
+.RI "__forceinline bool \fBIsAbilityTargeting\fP () const"
+.br
+.ti -1c
+.RI "__forceinline float \fBGetRemainingCooldown\fP () const"
+.br
+.ti -1c
+.RI "float \fBGetDamageAmount\fP ()"
+.br
+.ti -1c
+.RI "\fBAbilitiesComponent\fP * \fBGetOwner\fP ()"
+.br
+.ti -1c
+.RI "\fBAttributeComponent\fP * \fBGetOwnerAttributes\fP ()"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "virtual void \fBPostInit\fP ()"
+.br
+.RI "Called after ability has been initialized, do set up here  "
+.ti -1c
+.RI "virtual void \fBBegin\fP ()"
+.br
+.RI "Begins the ability, called if TryActivate was successful  "
+.ti -1c
+.RI "virtual void \fBEnd\fP ()"
+.br
+.RI "Called on end of ability  "
+.ti -1c
+.RI "virtual void \fBCommit\fP ()"
+.br
+.RI "Called after committing an ability, targeting has been confirmed  "
+.ti -1c
+.RI "virtual void \fBBeginTargeting\fP ()"
+.br
+.RI "Begins targeting, spawn an actor that follows the mouse to be able to identify the range of the ability  "
+.ti -1c
+.RI "virtual void \fBEndTargeting\fP ()"
+.br
+.RI "Ends targeting, remove the targeting actor  "
+.ti -1c
+.RI "virtual bool \fBCanActivate\fP (\fBActivationOutcome\fP &OutActivationOutcome)"
+.br
+.RI "Can the ability be activated  "
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBAbilityActivationKey::Type\fP \fBactivationKey\fP"
+.br
+.ti -1c
+.RI "float \fBcooldownTimer\fP"
+.br
+.ti -1c
+.RI "float \fBcooldown\fP"
+.br
+.ti -1c
+.RI "float \fBdamageAmount\fP"
+.br
+.ti -1c
+.RI "float \fBabilityCostAmount\fP"
+.br
+.ti -1c
+.RI "\fBHellwatchAttribute::Type\fP \fBabilityCostType\fP"
+.br
+.ti -1c
+.RI "\fBCooldownStartPolicy::Type\fP \fBcooldownStartPolicy\fP"
+.br
+.ti -1c
+.RI "bool \fBbIsTargeted\fP"
+.br
+.ti -1c
+.RI "bool \fBbIsTargeting\fP"
+.br
+.ti -1c
+.RI "std::string \fBabilityName\fP"
+.br
+.ti -1c
+.RI "bool \fBbIsActive\fP"
+.br
+.ti -1c
+.RI "\fBAbilitiesComponent\fP * \fBowningComponent\fP = nullptr"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+A base ability class, designed to be inherited and provided with functionality  
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "Ability::Ability ()"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "void Ability::Begin ()\fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+Begins the ability, called if TryActivate was successful  
+.PP
+Reimplemented in \fBDash\fP, \fBIceBolt\fP, \fBMeteor\fP, and \fBPiercingStrike\fP\&.
+.SS "void Ability::BeginTargeting ()\fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+Begins targeting, spawn an actor that follows the mouse to be able to identify the range of the ability  
+.SS "bool Ability::CanActivate (\fBActivationOutcome\fP & OutActivationOutcome)\fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+Can the ability be activated  
+.PP
+\fBParameters\fP
+.RS 4
+\fIOutActivationOutcome\fP This is an out parameter, holding information whether we can activate this ability, and if we can't why
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+A boolean, whether we can activate this ability or not
+.RE
+.PP
+
+.SS "void Ability::Commit ()\fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+Called after committing an ability, targeting has been confirmed  
+.SS "void Ability::CommitAbility ()"
+
+.PP
+Attempts to commit the ability if it is targeted, does nothing if the ability is NOT targeted  
+.SS "void Ability::End ()\fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+Called on end of ability  
+.PP
+Reimplemented in \fBDash\fP, \fBIceBolt\fP, \fBMeteor\fP, and \fBPiercingStrike\fP\&.
+.SS "bool Ability::EndAbility ()"
+
+.PP
+Attempts to end the ability, returns a bool whether it was successful  
+.SS "void Ability::EndTargeting ()\fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+Ends targeting, remove the targeting actor  
+.SS "__forceinline const std::string & Ability::GetAbilityName () const\fC [inline]\fP"
+
+.SS "__forceinline \fBAbilityActivationKey::Type\fP Ability::GetActivationKey () const\fC [inline]\fP"
+
+.SS "float Ability::GetDamageAmount ()"
+
+.SS "\fBAbilitiesComponent\fP * Ability::GetOwner ()\fC [inline]\fP"
+
+.SS "\fBAttributeComponent\fP * Ability::GetOwnerAttributes ()"
+
+.SS "__forceinline float Ability::GetRemainingCooldown () const\fC [inline]\fP"
+
+.SS "void Ability::Init (\fBAbilitiesComponent\fP * inOwningComponent)"
+
+.PP
+Initializes the ability with the ability component  
+.SS "__forceinline bool Ability::IsAbilityTargeted () const\fC [inline]\fP"
+
+.SS "__forceinline bool Ability::IsAbilityTargeting () const\fC [inline]\fP"
+
+.SS "virtual bool Ability::IsActive ()\fC [inline]\fP, \fC [virtual]\fP"
+
+.PP
+Checks if the ability is active  
+.SS "__forceinline bool Ability::IsInCooldown () const\fC [inline]\fP"
+
+.SS "void Ability::PostInit ()\fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+Called after ability has been initialized, do set up here  
+.PP
+Reimplemented in \fBDash\fP, \fBIceBolt\fP, \fBMeteor\fP, and \fBPiercingStrike\fP\&.
+.SS "void Ability::SetAbilityCooldown (float newCooldown)"
+
+.SS "void Ability::SetAbilityCostAmount (float newCost)\fC [inline]\fP"
+
+.SS "void Ability::SetAbilityCostType (\fBHellwatchAttribute::Type\fP newCost)\fC [inline]\fP"
+
+.SS "void Ability::SetAbilityName (std::string newName)\fC [inline]\fP"
+
+.SS "void Ability::SetActivationKey (\fBAbilityActivationKey::Type\fP key)\fC [inline]\fP"
+
+.SS "void Ability::SetCooldownStartPolicy (\fBCooldownStartPolicy::Type\fP newPolicy)\fC [inline]\fP"
+
+.SS "void Ability::SetDamageAmount (float newAmount)\fC [inline]\fP"
+
+.SS "void Ability::SetIsActive (bool bNewState)\fC [inline]\fP"
+
+.SS "void Ability::SetIsTargeted (bool bNewState)\fC [inline]\fP"
+
+.SS "void Ability::SetIsTargeting (bool bNewState)\fC [inline]\fP"
+
+.SS "\fBActivationOutcome\fP Ability::TryActivate ()"
+
+.PP
+Attempts to activate this ability, returns an \fBActivationOutcome\fP struct  
+.SS "void Ability::Update (float deltaTime)\fC [virtual]\fP"
+
+.SH "Member Data Documentation"
+.PP 
+.SS "float Ability::abilityCostAmount\fC [protected]\fP"
+
+.SS "\fBHellwatchAttribute::Type\fP Ability::abilityCostType\fC [protected]\fP"
+
+.SS "std::string Ability::abilityName\fC [protected]\fP"
+
+.SS "\fBAbilityActivationKey::Type\fP Ability::activationKey\fC [protected]\fP"
+
+.SS "bool Ability::bIsActive\fC [protected]\fP"
+
+.SS "bool Ability::bIsTargeted\fC [protected]\fP"
+
+.SS "bool Ability::bIsTargeting\fC [protected]\fP"
+
+.SS "float Ability::cooldown\fC [protected]\fP"
+
+.SS "\fBCooldownStartPolicy::Type\fP Ability::cooldownStartPolicy\fC [protected]\fP"
+
+.SS "float Ability::cooldownTimer\fC [protected]\fP"
+
+.SS "float Ability::damageAmount\fC [protected]\fP"
+
+.SS "\fBAbilitiesComponent\fP* Ability::owningComponent = nullptr\fC [protected]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Hellwatch from the source code\&.

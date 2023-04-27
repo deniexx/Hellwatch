@@ -1,0 +1,84 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_piercing_strike" xml:lang="en-US">
+<title>PiercingStrike Class Reference</title>
+<indexterm><primary>PiercingStrike</primary></indexterm>
+<para>
+<computeroutput>#include &lt;PiercingStrike.h&gt;</computeroutput>
+</para>
+Inheritance diagram for PiercingStrike:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_piercing_strike__inherit__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Collaboration diagram for PiercingStrike:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_piercing_strike__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Protected Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>virtual void <link linkend="_class_piercing_strike_1a3309a9ad1070cbd3e47e51ba50e92c20">PostInit</link> () override</para>
+
+<para>Called after ability has been initialized, do set up here  </para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_class_piercing_strike_1afc8244751f335b1ae83a42b252409ae9">Begin</link> () override</para>
+
+<para>Begins the ability, called if TryActivate was successful  </para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_class_piercing_strike_1a31b5a023d19f73ec307cbc6e452e85ea">End</link> () override</para>
+
+<para>Called on end of ability  </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Additional Inherited Members    </title>
+</simplesect>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_piercing_strike_1afc8244751f335b1ae83a42b252409ae9"/><section>
+    <title>Begin()</title>
+<indexterm><primary>Begin</primary><secondary>PiercingStrike</secondary></indexterm>
+<indexterm><primary>PiercingStrike</primary><secondary>Begin</secondary></indexterm>
+<para><computeroutput>void PiercingStrike::Begin ( )<computeroutput>[override]</computeroutput>, <computeroutput>[protected]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Begins the ability, called if TryActivate was successful  </para>
+</para>
+<para>
+Reimplemented from <link linkend="_class_ability_1ace910398ed2eb9f58c8e85dbb7a72de2">Ability</link>.</para>
+</section>
+<anchor xml:id="_class_piercing_strike_1a31b5a023d19f73ec307cbc6e452e85ea"/><section>
+    <title>End()</title>
+<indexterm><primary>End</primary><secondary>PiercingStrike</secondary></indexterm>
+<indexterm><primary>PiercingStrike</primary><secondary>End</secondary></indexterm>
+<para><computeroutput>void PiercingStrike::End ( )<computeroutput>[override]</computeroutput>, <computeroutput>[protected]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Called on end of ability  </para>
+</para>
+<para>
+Reimplemented from <link linkend="_class_ability_1a61a88edf359a3c6bd34868e58bf64f20">Ability</link>.</para>
+</section>
+<anchor xml:id="_class_piercing_strike_1a3309a9ad1070cbd3e47e51ba50e92c20"/><section>
+    <title>PostInit()</title>
+<indexterm><primary>PostInit</primary><secondary>PiercingStrike</secondary></indexterm>
+<indexterm><primary>PiercingStrike</primary><secondary>PostInit</secondary></indexterm>
+<para><computeroutput>void PiercingStrike::PostInit ( )<computeroutput>[override]</computeroutput>, <computeroutput>[protected]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Called after ability has been initialized, do set up here  </para>
+</para>
+<para>
+Reimplemented from <link linkend="_class_ability_1a25388ebb622b414ef027eb33bf4a5cfb">Ability</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following files:</para>
+D:/Uni/CMP208/Hellwatch/build/vs2017/Abilities/PlayerAbilities/<link linkend="__piercing_strike_8h">PiercingStrike.h</link>D:/Uni/CMP208/Hellwatch/build/vs2017/Abilities/PlayerAbilities/<link linkend="__piercing_strike_8cpp">PiercingStrike.cpp</link></section>
+</section>

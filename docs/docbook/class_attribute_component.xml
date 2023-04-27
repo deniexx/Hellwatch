@@ -1,0 +1,211 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_attribute_component" xml:lang="en-US">
+<title>AttributeComponent Class Reference</title>
+<indexterm><primary>AttributeComponent</primary></indexterm>
+<para>
+<computeroutput>#include &lt;AttributeComponent.h&gt;</computeroutput>
+</para>
+Inheritance diagram for AttributeComponent:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_attribute_component__inherit__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Collaboration diagram for AttributeComponent:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_attribute_component__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>const float <link linkend="_class_attribute_component_1a580cf7f29236d87d448840840ad53bc6">GetCurrentAttributeValueByType</link> (<link linkend="_namespace_hellwatch_attribute_1ad0a500e65129d06e4589f9bca54c4a7d">HellwatchAttribute::Type</link> type) const</para>
+
+<para>Gets the current attribute value  </para>
+</listitem>
+            <listitem><para>const float <link linkend="_class_attribute_component_1ac3a3cdb64a8ddf33f584b07cb6fb3546">GetMaxAttributeValueByType</link> (<link linkend="_namespace_hellwatch_attribute_1ad0a500e65129d06e4589f9bca54c4a7d">HellwatchAttribute::Type</link> type) const</para>
+
+<para>Gets the max attribute value  </para>
+</listitem>
+            <listitem><para>const bool <link linkend="_class_attribute_component_1ac8bc3fd1392349fb859ddf83e3e8e027">CheckHasEnoughOfAttributeByType</link> (<link linkend="_namespace_hellwatch_attribute_1ad0a500e65129d06e4589f9bca54c4a7d">HellwatchAttribute::Type</link> type, float amountNeeded)</para>
+
+<para>Checks if we have enough of the specified attribute  </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_attribute_component_1ab359fd856c0eaee6fda4c81765c9b336">SetAttributeCurrentValue</link> (<link linkend="_namespace_hellwatch_attribute_1ad0a500e65129d06e4589f9bca54c4a7d">HellwatchAttribute::Type</link> type, float newValue)</para>
+
+<para>Sets the attribute current to the new given value  </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_attribute_component_1a1ed8d3136ef683d442d1ff7523d219b0">SetAttributeMaxValue</link> (<link linkend="_namespace_hellwatch_attribute_1ad0a500e65129d06e4589f9bca54c4a7d">HellwatchAttribute::Type</link> type, float newValue)</para>
+
+<para>Sets the attribute max value to the new given value  </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_attribute_component_1ada89535490c847acf8574d39d35c837c">SetAttributeCurrentAndMaxValue</link> (<link linkend="_namespace_hellwatch_attribute_1ad0a500e65129d06e4589f9bca54c4a7d">HellwatchAttribute::Type</link>, float newValue)</para>
+
+<para>Sets the attribute current and max value to the new given value  </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_attribute_component_1a2a29edbf9c15e3296eb8ac4f5b59e8c9">ApplyAttributeChange</link> (<link linkend="_namespace_hellwatch_attribute_1ad0a500e65129d06e4589f9bca54c4a7d">HellwatchAttribute::Type</link> type, float delta)</para>
+
+<para>Applies an attribute change to the specified attribute, can be positive or negative  </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_attribute_component_1a381ad0a8f330864674b1cf80bc27f858">ApplyAttributeMaxValueChange</link> (<link linkend="_namespace_hellwatch_attribute_1ad0a500e65129d06e4589f9bca54c4a7d">HellwatchAttribute::Type</link> type, float delta)</para>
+
+<para>Applies an attribute change to the specified attribute&apos;s max value, can be positive or negative  </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_attribute_component_1a3677b4bee550b858f87f5e62148d1e10">InitAttributesBySpec</link> (std::vector&lt; <link linkend="_struct_f_attribute">FAttribute</link> &gt; &amp;attributesToInit)</para>
+
+<para>Initializes attribute component by spec, spec meaning a container of multiple attributes  </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_attribute_component_1a6f76a7c8bb5bf45d085ffb001cec45d5">AddAttribute</link> (<link linkend="_struct_f_attribute">FAttribute</link> &amp;attributeToAdd)</para>
+
+<para>Adds an attribute @NOTE: We can not have 2 attributes of the same type, if that happens, the new attribute will be ignore and we will keep the old one  </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_attribute_component_1ac864c662a9b8d2155fa8142078ce3dff">ApplyAttributeMultiplier</link> (<link linkend="_namespace_hellwatch_attribute_1ad0a500e65129d06e4589f9bca54c4a7d">HellwatchAttribute::Type</link> type, float multipliyer)</para>
+
+<para>Applies a multiplier to an attribute  </para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_class_attribute_component_1ae67a6fc2951e19257274edb42eec023f">UpdateComponent</link> (float deltaTime)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Additional Inherited Members    </title>
+</simplesect>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_attribute_component_1a6f76a7c8bb5bf45d085ffb001cec45d5"/><section>
+    <title>AddAttribute()</title>
+<indexterm><primary>AddAttribute</primary><secondary>AttributeComponent</secondary></indexterm>
+<indexterm><primary>AttributeComponent</primary><secondary>AddAttribute</secondary></indexterm>
+<para><computeroutput>void AttributeComponent::AddAttribute (<link linkend="_struct_f_attribute">FAttribute</link> &amp; attributeToAdd)</computeroutput></para><para>
+
+<para>Adds an attribute @NOTE: We can not have 2 attributes of the same type, if that happens, the new attribute will be ignore and we will keep the old one  </para>
+</para>
+</section>
+<anchor xml:id="_class_attribute_component_1a2a29edbf9c15e3296eb8ac4f5b59e8c9"/><section>
+    <title>ApplyAttributeChange()</title>
+<indexterm><primary>ApplyAttributeChange</primary><secondary>AttributeComponent</secondary></indexterm>
+<indexterm><primary>AttributeComponent</primary><secondary>ApplyAttributeChange</secondary></indexterm>
+<para><computeroutput>void AttributeComponent::ApplyAttributeChange (<link linkend="_namespace_hellwatch_attribute_1ad0a500e65129d06e4589f9bca54c4a7d">HellwatchAttribute::Type</link> type, float delta)</computeroutput></para><para>
+
+<para>Applies an attribute change to the specified attribute, can be positive or negative  </para>
+</para>
+</section>
+<anchor xml:id="_class_attribute_component_1a381ad0a8f330864674b1cf80bc27f858"/><section>
+    <title>ApplyAttributeMaxValueChange()</title>
+<indexterm><primary>ApplyAttributeMaxValueChange</primary><secondary>AttributeComponent</secondary></indexterm>
+<indexterm><primary>AttributeComponent</primary><secondary>ApplyAttributeMaxValueChange</secondary></indexterm>
+<para><computeroutput>void AttributeComponent::ApplyAttributeMaxValueChange (<link linkend="_namespace_hellwatch_attribute_1ad0a500e65129d06e4589f9bca54c4a7d">HellwatchAttribute::Type</link> type, float delta)</computeroutput></para><para>
+
+<para>Applies an attribute change to the specified attribute&apos;s max value, can be positive or negative  </para>
+</para>
+</section>
+<anchor xml:id="_class_attribute_component_1ac864c662a9b8d2155fa8142078ce3dff"/><section>
+    <title>ApplyAttributeMultiplier()</title>
+<indexterm><primary>ApplyAttributeMultiplier</primary><secondary>AttributeComponent</secondary></indexterm>
+<indexterm><primary>AttributeComponent</primary><secondary>ApplyAttributeMultiplier</secondary></indexterm>
+<para><computeroutput>void AttributeComponent::ApplyAttributeMultiplier (<link linkend="_namespace_hellwatch_attribute_1ad0a500e65129d06e4589f9bca54c4a7d">HellwatchAttribute::Type</link> type, float multipliyer)</computeroutput></para><para>
+
+<para>Applies a multiplier to an attribute  </para>
+</para>
+</section>
+<anchor xml:id="_class_attribute_component_1ac8bc3fd1392349fb859ddf83e3e8e027"/><section>
+    <title>CheckHasEnoughOfAttributeByType()</title>
+<indexterm><primary>CheckHasEnoughOfAttributeByType</primary><secondary>AttributeComponent</secondary></indexterm>
+<indexterm><primary>AttributeComponent</primary><secondary>CheckHasEnoughOfAttributeByType</secondary></indexterm>
+<para><computeroutput>const bool AttributeComponent::CheckHasEnoughOfAttributeByType (<link linkend="_namespace_hellwatch_attribute_1ad0a500e65129d06e4589f9bca54c4a7d">HellwatchAttribute::Type</link> type, float amountNeeded)</computeroutput></para><para>
+
+<para>Checks if we have enough of the specified attribute  </para>
+</para>
+</section>
+<anchor xml:id="_class_attribute_component_1a580cf7f29236d87d448840840ad53bc6"/><section>
+    <title>GetCurrentAttributeValueByType()</title>
+<indexterm><primary>GetCurrentAttributeValueByType</primary><secondary>AttributeComponent</secondary></indexterm>
+<indexterm><primary>AttributeComponent</primary><secondary>GetCurrentAttributeValueByType</secondary></indexterm>
+<para><computeroutput>const float AttributeComponent::GetCurrentAttributeValueByType (<link linkend="_namespace_hellwatch_attribute_1ad0a500e65129d06e4589f9bca54c4a7d">HellwatchAttribute::Type</link> type) const</computeroutput></para><para>
+
+<para>Gets the current attribute value  </para>
+</para>
+</section>
+<anchor xml:id="_class_attribute_component_1ac3a3cdb64a8ddf33f584b07cb6fb3546"/><section>
+    <title>GetMaxAttributeValueByType()</title>
+<indexterm><primary>GetMaxAttributeValueByType</primary><secondary>AttributeComponent</secondary></indexterm>
+<indexterm><primary>AttributeComponent</primary><secondary>GetMaxAttributeValueByType</secondary></indexterm>
+<para><computeroutput>const float AttributeComponent::GetMaxAttributeValueByType (<link linkend="_namespace_hellwatch_attribute_1ad0a500e65129d06e4589f9bca54c4a7d">HellwatchAttribute::Type</link> type) const</computeroutput></para><para>
+
+<para>Gets the max attribute value  </para>
+</para>
+</section>
+<anchor xml:id="_class_attribute_component_1a3677b4bee550b858f87f5e62148d1e10"/><section>
+    <title>InitAttributesBySpec()</title>
+<indexterm><primary>InitAttributesBySpec</primary><secondary>AttributeComponent</secondary></indexterm>
+<indexterm><primary>AttributeComponent</primary><secondary>InitAttributesBySpec</secondary></indexterm>
+<para><computeroutput>void AttributeComponent::InitAttributesBySpec (std::vector&lt; <link linkend="_struct_f_attribute">FAttribute</link> &gt; &amp; attributesToInit)</computeroutput></para><para>
+
+<para>Initializes attribute component by spec, spec meaning a container of multiple attributes  </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>attributesToInit</entry><entry></entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_class_attribute_component_1ada89535490c847acf8574d39d35c837c"/><section>
+    <title>SetAttributeCurrentAndMaxValue()</title>
+<indexterm><primary>SetAttributeCurrentAndMaxValue</primary><secondary>AttributeComponent</secondary></indexterm>
+<indexterm><primary>AttributeComponent</primary><secondary>SetAttributeCurrentAndMaxValue</secondary></indexterm>
+<para><computeroutput>void AttributeComponent::SetAttributeCurrentAndMaxValue (<link linkend="_namespace_hellwatch_attribute_1ad0a500e65129d06e4589f9bca54c4a7d">HellwatchAttribute::Type</link> type, float newValue)</computeroutput></para><para>
+
+<para>Sets the attribute current and max value to the new given value  </para>
+</para>
+</section>
+<anchor xml:id="_class_attribute_component_1ab359fd856c0eaee6fda4c81765c9b336"/><section>
+    <title>SetAttributeCurrentValue()</title>
+<indexterm><primary>SetAttributeCurrentValue</primary><secondary>AttributeComponent</secondary></indexterm>
+<indexterm><primary>AttributeComponent</primary><secondary>SetAttributeCurrentValue</secondary></indexterm>
+<para><computeroutput>void AttributeComponent::SetAttributeCurrentValue (<link linkend="_namespace_hellwatch_attribute_1ad0a500e65129d06e4589f9bca54c4a7d">HellwatchAttribute::Type</link> type, float newValue)</computeroutput></para><para>
+
+<para>Sets the attribute current to the new given value  </para>
+</para>
+</section>
+<anchor xml:id="_class_attribute_component_1a1ed8d3136ef683d442d1ff7523d219b0"/><section>
+    <title>SetAttributeMaxValue()</title>
+<indexterm><primary>SetAttributeMaxValue</primary><secondary>AttributeComponent</secondary></indexterm>
+<indexterm><primary>AttributeComponent</primary><secondary>SetAttributeMaxValue</secondary></indexterm>
+<para><computeroutput>void AttributeComponent::SetAttributeMaxValue (<link linkend="_namespace_hellwatch_attribute_1ad0a500e65129d06e4589f9bca54c4a7d">HellwatchAttribute::Type</link> type, float newValue)</computeroutput></para><para>
+
+<para>Sets the attribute max value to the new given value  </para>
+</para>
+</section>
+<anchor xml:id="_class_attribute_component_1ae67a6fc2951e19257274edb42eec023f"/><section>
+    <title>UpdateComponent()</title>
+<indexterm><primary>UpdateComponent</primary><secondary>AttributeComponent</secondary></indexterm>
+<indexterm><primary>AttributeComponent</primary><secondary>UpdateComponent</secondary></indexterm>
+<para><computeroutput>void AttributeComponent::UpdateComponent (float deltaTime)<computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+Reimplemented from <link linkend="_class_actor_component_1af730b3c7d2b4154e1fb0962db7750f6b">ActorComponent</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following files:</para>
+D:/Uni/CMP208/Hellwatch/build/vs2017/Attributes/<link linkend="__attribute_component_8h">AttributeComponent.h</link>D:/Uni/CMP208/Hellwatch/build/vs2017/Attributes/<link linkend="__attribute_component_8cpp">AttributeComponent.cpp</link></section>
+</section>

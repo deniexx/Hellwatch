@@ -1,0 +1,28 @@
+digraph "WorldObject"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  Node1 [label="WorldObject",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [dir="back",color="steelblue1",style="solid"];
+  Node2 [label="MeshActor",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$class_mesh_actor.html",tooltip="An object that has a mesh"];
+  Node2 -> Node3 [dir="back",color="steelblue1",style="solid"];
+  Node3 [label="DamageOnCollisionActor",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$class_damage_on_collision_actor.html",tooltip="Actor to spawn to perform damage on collision"];
+  Node2 -> Node4 [dir="back",color="steelblue1",style="solid"];
+  Node4 [label="Enemy",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$class_enemy.html",tooltip="A base class for all enemies, implemented as a melee enemy"];
+  Node4 -> Node5 [dir="back",color="steelblue1",style="solid"];
+  Node5 [label="Boss",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$class_boss.html",tooltip=" "];
+  Node4 -> Node6 [dir="back",color="steelblue1",style="solid"];
+  Node6 [label="RangedEnemy",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$class_ranged_enemy.html",tooltip="Ranged enemy implementation, tries to keep distance and shoots from afar"];
+  Node2 -> Node7 [dir="back",color="steelblue1",style="solid"];
+  Node7 [label="EnemyDummy",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$class_enemy_dummy.html",tooltip="A dummy enemy class used for testing damage"];
+  Node2 -> Node8 [dir="back",color="steelblue1",style="solid"];
+  Node8 [label="MeteorActor",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$class_meteor_actor.html",tooltip=" "];
+  Node2 -> Node9 [dir="back",color="steelblue1",style="solid"];
+  Node9 [label="ParticleActor",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$class_particle_actor.html",tooltip=" "];
+  Node2 -> Node10 [dir="back",color="steelblue1",style="solid"];
+  Node10 [label="PlayerCharacter",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$class_player_character.html",tooltip="The class that the player uses during the GameLoop GameState"];
+  Node1 -> Node11 [dir="back",color="steelblue1",style="solid"];
+  Node11 [label="SpriteActor",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$class_sprite_actor.html",tooltip="An object that has a sprite"];
+}

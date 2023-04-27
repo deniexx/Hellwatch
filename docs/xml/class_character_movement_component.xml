@@ -1,0 +1,335 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="class_character_movement_component" kind="class" language="C++" prot="public">
+    <compoundname>CharacterMovementComponent</compoundname>
+    <basecompoundref refid="class_actor_component" prot="public" virt="non-virtual">ActorComponent</basecompoundref>
+    <includes refid="_character_movement_component_8h" local="no">CharacterMovementComponent.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_character_movement_component_1a4e8e0f808e75bd50f1cee2686a328b66" prot="private" static="no" mutable="no">
+        <type>b2Body *</type>
+        <definition>b2Body* CharacterMovementComponent::ownerCollision</definition>
+        <argsstring></argsstring>
+        <name>ownerCollision</name>
+        <qualifiedname>CharacterMovementComponent::ownerCollision</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/ActorComponents/CharacterMovementComponent.h" line="31" column="8" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/ActorComponents/CharacterMovementComponent.h" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_character_movement_component_1a91207e6a8c4436e20c3daaaf719891bb" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float CharacterMovementComponent::maximumSpeed</definition>
+        <argsstring></argsstring>
+        <name>maximumSpeed</name>
+        <qualifiedname>CharacterMovementComponent::maximumSpeed</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/ActorComponents/CharacterMovementComponent.h" line="32" column="7" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/ActorComponents/CharacterMovementComponent.h" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_character_movement_component_1a6b2665455f62b2baeb6f06d1a36549fd" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float CharacterMovementComponent::acceleration</definition>
+        <argsstring></argsstring>
+        <name>acceleration</name>
+        <qualifiedname>CharacterMovementComponent::acceleration</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/ActorComponents/CharacterMovementComponent.h" line="33" column="7" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/ActorComponents/CharacterMovementComponent.h" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_character_movement_component_1ac0253496c823d2ba3a812e206b058784" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool CharacterMovementComponent::bFrozen</definition>
+        <argsstring></argsstring>
+        <name>bFrozen</name>
+        <qualifiedname>CharacterMovementComponent::bFrozen</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/ActorComponents/CharacterMovementComponent.h" line="34" column="6" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/ActorComponents/CharacterMovementComponent.h" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_character_movement_component_1a3b46719028da4715fcb1aa41000ef690" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>CharacterMovementComponent::CharacterMovementComponent</definition>
+        <argsstring>()</argsstring>
+        <name>CharacterMovementComponent</name>
+        <qualifiedname>CharacterMovementComponent::CharacterMovementComponent</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/ActorComponents/CharacterMovementComponent.h" line="15" column="1" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/ActorComponents/CharacterMovementComponent.cpp" bodystart="4" bodyend="10"/>
+      </memberdef>
+      <memberdef kind="function" id="class_character_movement_component_1a44e667731d0323b2dfcdf80ee6e7f3ba" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void CharacterMovementComponent::UpdateComponent</definition>
+        <argsstring>(float deltaTime) override</argsstring>
+        <name>UpdateComponent</name>
+        <qualifiedname>CharacterMovementComponent::UpdateComponent</qualifiedname>
+        <reimplements refid="class_actor_component_1af730b3c7d2b4154e1fb0962db7750f6b">UpdateComponent</reimplements>
+        <param>
+          <type>float</type>
+          <declname>deltaTime</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/ActorComponents/CharacterMovementComponent.h" line="17" column="14" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/ActorComponents/CharacterMovementComponent.cpp" bodystart="17" bodyend="36"/>
+      </memberdef>
+      <memberdef kind="function" id="class_character_movement_component_1a63d4bb5a09a7addb1664b0f5183ec13c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CharacterMovementComponent::ApplyMovementForceInDirection</definition>
+        <argsstring>(b2Vec2 force)</argsstring>
+        <name>ApplyMovementForceInDirection</name>
+        <qualifiedname>CharacterMovementComponent::ApplyMovementForceInDirection</qualifiedname>
+        <param>
+          <type>b2Vec2</type>
+          <declname>force</declname>
+        </param>
+        <briefdescription>
+<para>Applies Movement force in a direction, that is scaled with the acceleration  </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>force</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/ActorComponents/CharacterMovementComponent.h" line="23" column="6" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/ActorComponents/CharacterMovementComponent.cpp" bodystart="38" bodyend="45"/>
+      </memberdef>
+      <memberdef kind="function" id="class_character_movement_component_1a6cb4c791b22b66c29aa830e40d947d0c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void CharacterMovementComponent::SetCollisionBody</definition>
+        <argsstring>(b2Body *newBody)</argsstring>
+        <name>SetCollisionBody</name>
+        <qualifiedname>CharacterMovementComponent::SetCollisionBody</qualifiedname>
+        <param>
+          <type>b2Body *</type>
+          <declname>newBody</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/ActorComponents/CharacterMovementComponent.h" line="41" column="6" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/ActorComponents/CharacterMovementComponent.h" bodystart="41" bodyend="41"/>
+      </memberdef>
+      <memberdef kind="function" id="class_character_movement_component_1a5c8c5c00d78dc4d38e14c502e9567695" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void CharacterMovementComponent::SetFrozen</definition>
+        <argsstring>(bool bNewState)</argsstring>
+        <name>SetFrozen</name>
+        <qualifiedname>CharacterMovementComponent::SetFrozen</qualifiedname>
+        <param>
+          <type>bool</type>
+          <declname>bNewState</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/ActorComponents/CharacterMovementComponent.h" line="42" column="6" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/ActorComponents/CharacterMovementComponent.h" bodystart="42" bodyend="42"/>
+      </memberdef>
+      <memberdef kind="function" id="class_character_movement_component_1ab3ab4283107113582bc6c7f670c86b3c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void CharacterMovementComponent::SetMaximumSpeed</definition>
+        <argsstring>(float newMaximumSpeed)</argsstring>
+        <name>SetMaximumSpeed</name>
+        <qualifiedname>CharacterMovementComponent::SetMaximumSpeed</qualifiedname>
+        <param>
+          <type>float</type>
+          <declname>newMaximumSpeed</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/ActorComponents/CharacterMovementComponent.h" line="43" column="6" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/ActorComponents/CharacterMovementComponent.h" bodystart="43" bodyend="43"/>
+      </memberdef>
+      <memberdef kind="function" id="class_character_movement_component_1aa0c6001da09d289c9cdc6a2332293ab6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void CharacterMovementComponent::SetAcceleration</definition>
+        <argsstring>(float newAcceleration)</argsstring>
+        <name>SetAcceleration</name>
+        <qualifiedname>CharacterMovementComponent::SetAcceleration</qualifiedname>
+        <param>
+          <type>float</type>
+          <declname>newAcceleration</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/ActorComponents/CharacterMovementComponent.h" line="44" column="6" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/ActorComponents/CharacterMovementComponent.h" bodystart="44" bodyend="44"/>
+      </memberdef>
+      <memberdef kind="function" id="class_character_movement_component_1a95de1dc66286d10e4099b26ee46bdd7b" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>__forceinline bool</type>
+        <definition>__forceinline bool CharacterMovementComponent::IsFrozen</definition>
+        <argsstring>() const</argsstring>
+        <name>IsFrozen</name>
+        <qualifiedname>CharacterMovementComponent::IsFrozen</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/ActorComponents/CharacterMovementComponent.h" line="49" column="20" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/ActorComponents/CharacterMovementComponent.h" bodystart="49" bodyend="49"/>
+      </memberdef>
+      <memberdef kind="function" id="class_character_movement_component_1a0a0b9e6ccb23a433d86991de1d9a2ad8" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>__forceinline float</type>
+        <definition>__forceinline float CharacterMovementComponent::GetSpeed</definition>
+        <argsstring>() const</argsstring>
+        <name>GetSpeed</name>
+        <qualifiedname>CharacterMovementComponent::GetSpeed</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/ActorComponents/CharacterMovementComponent.h" line="50" column="21" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/ActorComponents/CharacterMovementComponent.h" bodystart="50" bodyend="50"/>
+      </memberdef>
+      <memberdef kind="function" id="class_character_movement_component_1a1c326e239d25123a6e6ab1893b7c3006" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>__forceinline float</type>
+        <definition>__forceinline float CharacterMovementComponent::GetMaximumSpeed</definition>
+        <argsstring>()</argsstring>
+        <name>GetMaximumSpeed</name>
+        <qualifiedname>CharacterMovementComponent::GetMaximumSpeed</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/ActorComponents/CharacterMovementComponent.h" line="51" column="21" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/ActorComponents/CharacterMovementComponent.h" bodystart="51" bodyend="51"/>
+      </memberdef>
+      <memberdef kind="function" id="class_character_movement_component_1a07ae2e8b49579f6737117051c3391ed1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>__forceinline float</type>
+        <definition>__forceinline float CharacterMovementComponent::GetAcceleration</definition>
+        <argsstring>()</argsstring>
+        <name>GetAcceleration</name>
+        <qualifiedname>CharacterMovementComponent::GetAcceleration</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/ActorComponents/CharacterMovementComponent.h" line="52" column="21" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/ActorComponents/CharacterMovementComponent.h" bodystart="52" bodyend="52"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_character_movement_component_1a7c20d542f943ec133dd3f1df7fee988e" prot="protected" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void CharacterMovementComponent::PostInit</definition>
+        <argsstring>() override</argsstring>
+        <name>PostInit</name>
+        <qualifiedname>CharacterMovementComponent::PostInit</qualifiedname>
+        <reimplements refid="class_actor_component_1a467d082f3fedd6cf2acacb117450f90e">PostInit</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/ActorComponents/CharacterMovementComponent.h" line="27" column="14" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/ActorComponents/CharacterMovementComponent.cpp" bodystart="12" bodyend="15"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>A component that handles moving the character  </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>ActorComponent</label>
+        <link refid="class_actor_component"/>
+      </node>
+      <node id="1">
+        <label>CharacterMovementComponent</label>
+        <link refid="class_character_movement_component"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>ActorComponent</label>
+        <link refid="class_actor_component"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>ownerActor</edgelabel>
+        </childnode>
+      </node>
+      <node id="1">
+        <label>CharacterMovementComponent</label>
+        <link refid="class_character_movement_component"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>WorldObject</label>
+        <link refid="class_world_object"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>owningObject</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/ActorComponents/CharacterMovementComponent.h" line="9" column="1" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/ActorComponents/CharacterMovementComponent.h" bodystart="10" bodyend="53"/>
+    <listofallmembers>
+      <member refid="class_character_movement_component_1a6b2665455f62b2baeb6f06d1a36549fd" prot="private" virt="non-virtual"><scope>CharacterMovementComponent</scope><name>acceleration</name></member>
+      <member refid="class_character_movement_component_1a63d4bb5a09a7addb1664b0f5183ec13c" prot="public" virt="non-virtual"><scope>CharacterMovementComponent</scope><name>ApplyMovementForceInDirection</name></member>
+      <member refid="class_character_movement_component_1ac0253496c823d2ba3a812e206b058784" prot="private" virt="non-virtual"><scope>CharacterMovementComponent</scope><name>bFrozen</name></member>
+      <member refid="class_character_movement_component_1a3b46719028da4715fcb1aa41000ef690" prot="public" virt="non-virtual"><scope>CharacterMovementComponent</scope><name>CharacterMovementComponent</name></member>
+      <member refid="class_character_movement_component_1a07ae2e8b49579f6737117051c3391ed1" prot="public" virt="non-virtual"><scope>CharacterMovementComponent</scope><name>GetAcceleration</name></member>
+      <member refid="class_character_movement_component_1a1c326e239d25123a6e6ab1893b7c3006" prot="public" virt="non-virtual"><scope>CharacterMovementComponent</scope><name>GetMaximumSpeed</name></member>
+      <member refid="class_actor_component_1a3705d464da5f840eca1d14bcce07372d" prot="public" virt="non-virtual"><scope>CharacterMovementComponent</scope><name>GetOwner</name></member>
+      <member refid="class_character_movement_component_1a0a0b9e6ccb23a433d86991de1d9a2ad8" prot="public" virt="non-virtual"><scope>CharacterMovementComponent</scope><name>GetSpeed</name></member>
+      <member refid="class_actor_component_1ab4ea0eaffa2c616a209e2887f80902f2" prot="public" virt="non-virtual"><scope>CharacterMovementComponent</scope><name>Init</name></member>
+      <member refid="class_character_movement_component_1a95de1dc66286d10e4099b26ee46bdd7b" prot="public" virt="non-virtual"><scope>CharacterMovementComponent</scope><name>IsFrozen</name></member>
+      <member refid="class_character_movement_component_1a91207e6a8c4436e20c3daaaf719891bb" prot="private" virt="non-virtual"><scope>CharacterMovementComponent</scope><name>maximumSpeed</name></member>
+      <member refid="class_actor_component_1a2766e186399b24f5d7e2d143ffa26e05" prot="protected" virt="non-virtual"><scope>CharacterMovementComponent</scope><name>ownerActor</name></member>
+      <member refid="class_character_movement_component_1a4e8e0f808e75bd50f1cee2686a328b66" prot="private" virt="non-virtual"><scope>CharacterMovementComponent</scope><name>ownerCollision</name></member>
+      <member refid="class_character_movement_component_1a7c20d542f943ec133dd3f1df7fee988e" prot="protected" virt="virtual"><scope>CharacterMovementComponent</scope><name>PostInit</name></member>
+      <member refid="class_character_movement_component_1aa0c6001da09d289c9cdc6a2332293ab6" prot="public" virt="non-virtual"><scope>CharacterMovementComponent</scope><name>SetAcceleration</name></member>
+      <member refid="class_character_movement_component_1a6cb4c791b22b66c29aa830e40d947d0c" prot="public" virt="non-virtual"><scope>CharacterMovementComponent</scope><name>SetCollisionBody</name></member>
+      <member refid="class_character_movement_component_1a5c8c5c00d78dc4d38e14c502e9567695" prot="public" virt="non-virtual"><scope>CharacterMovementComponent</scope><name>SetFrozen</name></member>
+      <member refid="class_character_movement_component_1ab3ab4283107113582bc6c7f670c86b3c" prot="public" virt="non-virtual"><scope>CharacterMovementComponent</scope><name>SetMaximumSpeed</name></member>
+      <member refid="class_character_movement_component_1a44e667731d0323b2dfcdf80ee6e7f3ba" prot="public" virt="virtual"><scope>CharacterMovementComponent</scope><name>UpdateComponent</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

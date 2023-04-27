@@ -1,0 +1,40 @@
+.TH "FKeyBindController" 3 "Thu Apr 27 2023" "Hellwatch" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+FKeyBindController
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <PlayerController\&.h>\fP
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "int \fBkeyCode\fP"
+.br
+.ti -1c
+.RI "\fBHellwatchInputAction::Type\fP \fBinputAction\fP = \fBHellwatchInputAction::None\fP"
+.br
+.ti -1c
+.RI "\fBHellwatchControllerAxis::Type\fP \fBaxis\fP = \fBHellwatchControllerAxis::None\fP"
+.br
+.ti -1c
+.RI "std::function< void(gef::Vector2)> \fBfunctionBind\fP"
+.br
+.in -1c
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBHellwatchControllerAxis::Type\fP FKeyBindController::axis = \fBHellwatchControllerAxis::None\fP"
+
+.SS "std::function<void(gef::Vector2)> FKeyBindController::functionBind"
+
+.SS "\fBHellwatchInputAction::Type\fP FKeyBindController::inputAction = \fBHellwatchInputAction::None\fP"
+
+.SS "int FKeyBindController::keyCode"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Hellwatch from the source code\&.

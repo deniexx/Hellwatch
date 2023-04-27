@@ -1,0 +1,450 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="class_abilities_component" kind="class" language="C++" prot="public">
+    <compoundname>AbilitiesComponent</compoundname>
+    <basecompoundref refid="class_actor_component" prot="public" virt="non-virtual">ActorComponent</basecompoundref>
+    <includes refid="_abilities_component_8h" local="no">AbilitiesComponent.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_abilities_component_1ab70864987fe015c2bcb368e5389d1ff1" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; <ref refid="class_ability" kindref="compound">Ability</ref> * &gt;</type>
+        <definition>std::vector&lt;Ability*&gt; AbilitiesComponent::availableAbilities</definition>
+        <argsstring></argsstring>
+        <name>availableAbilities</name>
+        <qualifiedname>AbilitiesComponent::availableAbilities</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/ActorComponents/AbilitiesComponent.h" line="76" column="13" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/ActorComponents/AbilitiesComponent.h" bodystart="76" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_abilities_component_1a169b5181aae2bc52970812fe81088b4e" prot="private" static="no" mutable="no">
+        <type><ref refid="class_ability" kindref="compound">Ability</ref> *</type>
+        <definition>Ability* AbilitiesComponent::equippedAbilities[4]</definition>
+        <argsstring>[4]</argsstring>
+        <name>equippedAbilities</name>
+        <qualifiedname>AbilitiesComponent::equippedAbilities</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/ActorComponents/AbilitiesComponent.h" line="77" column="9" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/ActorComponents/AbilitiesComponent.h" bodystart="77" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_abilities_component_1a6b30bddc17dc4ac56c1b1047e372807d" prot="private" static="no" mutable="no">
+        <type><ref refid="class_attribute_component" kindref="compound">AttributeComponent</ref> *</type>
+        <definition>AttributeComponent* AbilitiesComponent::attributes</definition>
+        <argsstring></argsstring>
+        <name>attributes</name>
+        <qualifiedname>AbilitiesComponent::attributes</qualifiedname>
+        <initializer>= nullptr</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/ActorComponents/AbilitiesComponent.h" line="78" column="20" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/ActorComponents/AbilitiesComponent.h" bodystart="78" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_abilities_component_1a2002c80ff8a5e6de25e5269310c6dfa5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AbilitiesComponent::AddAbility</definition>
+        <argsstring>(Ability *abilityToAdd)</argsstring>
+        <name>AddAbility</name>
+        <qualifiedname>AbilitiesComponent::AddAbility</qualifiedname>
+        <param>
+          <type><ref refid="class_ability" kindref="compound">Ability</ref> *</type>
+          <declname>abilityToAdd</declname>
+        </param>
+        <briefdescription>
+<para>Adds an ability to our system @NOTE: It does not equip it, just adds it to the available abilities vector  </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/ActorComponents/AbilitiesComponent.h" line="23" column="6" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/ActorComponents/AbilitiesComponent.cpp" bodystart="76" bodyend="80"/>
+      </memberdef>
+      <memberdef kind="function" id="class_abilities_component_1a06d5228f074b929c061cf34af9460be4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AbilitiesComponent::EquipAbility</definition>
+        <argsstring>(std::string abilityName, AbilityActivationKey::Type keyToEquipAt)</argsstring>
+        <name>EquipAbility</name>
+        <qualifiedname>AbilitiesComponent::EquipAbility</qualifiedname>
+        <param>
+          <type>std::string</type>
+          <declname>abilityName</declname>
+        </param>
+        <param>
+          <type><ref refid="namespace_ability_activation_key_1ab159d3c3f26196a9ff493b67ecf7e68c" kindref="member">AbilityActivationKey::Type</ref></type>
+          <declname>keyToEquipAt</declname>
+        </param>
+        <briefdescription>
+<para>Equips an ability, at a specific key  </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/ActorComponents/AbilitiesComponent.h" line="28" column="6" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/ActorComponents/AbilitiesComponent.cpp" bodystart="82" bodyend="91"/>
+      </memberdef>
+      <memberdef kind="function" id="class_abilities_component_1a092acad2af7f3c106d117a3c51a04971" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AbilitiesComponent::ActivateAbilityByKey</definition>
+        <argsstring>(AbilityActivationKey::Type key)</argsstring>
+        <name>ActivateAbilityByKey</name>
+        <qualifiedname>AbilitiesComponent::ActivateAbilityByKey</qualifiedname>
+        <param>
+          <type><ref refid="namespace_ability_activation_key_1ab159d3c3f26196a9ff493b67ecf7e68c" kindref="member">AbilityActivationKey::Type</ref></type>
+          <declname>key</declname>
+        </param>
+        <briefdescription>
+<para>Attempts to activate ability by key  </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/ActorComponents/AbilitiesComponent.h" line="33" column="6" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/ActorComponents/AbilitiesComponent.cpp" bodystart="93" bodyend="97"/>
+      </memberdef>
+      <memberdef kind="function" id="class_abilities_component_1aae3dce0a0f06941f91f8c14dc1a3878e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AbilitiesComponent::ActivateAbilityByName</definition>
+        <argsstring>(std::string name)</argsstring>
+        <name>ActivateAbilityByName</name>
+        <qualifiedname>AbilitiesComponent::ActivateAbilityByName</qualifiedname>
+        <param>
+          <type>std::string</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+<para>Attempts to activate ability by its name @NOTE: Preferred to use ActivateAbilityByKey version  </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/ActorComponents/AbilitiesComponent.h" line="39" column="6" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/ActorComponents/AbilitiesComponent.cpp" bodystart="99" bodyend="108"/>
+      </memberdef>
+      <memberdef kind="function" id="class_abilities_component_1a3d01f13b661e8d6bfe3c0a8f2d6af7ea" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AbilitiesComponent::EndAbilityByKey</definition>
+        <argsstring>(AbilityActivationKey::Type key)</argsstring>
+        <name>EndAbilityByKey</name>
+        <qualifiedname>AbilitiesComponent::EndAbilityByKey</qualifiedname>
+        <param>
+          <type><ref refid="namespace_ability_activation_key_1ab159d3c3f26196a9ff493b67ecf7e68c" kindref="member">AbilityActivationKey::Type</ref></type>
+          <declname>key</declname>
+        </param>
+        <briefdescription>
+<para>Ends an ability by key, we can use this if we prematurely end ability, etc...  </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/ActorComponents/AbilitiesComponent.h" line="44" column="6" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/ActorComponents/AbilitiesComponent.cpp" bodystart="110" bodyend="114"/>
+      </memberdef>
+      <memberdef kind="function" id="class_abilities_component_1a310f5751a58f69fba41f473b492e5582" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AbilitiesComponent::EndAbilityByName</definition>
+        <argsstring>(std::string name)</argsstring>
+        <name>EndAbilityByName</name>
+        <qualifiedname>AbilitiesComponent::EndAbilityByName</qualifiedname>
+        <param>
+          <type>std::string</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+<para>Ends an ability by name, we can use this if we prematurely end ability, etc... Preferred to use EndAbilityByKey version  </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/ActorComponents/AbilitiesComponent.h" line="51" column="6" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/ActorComponents/AbilitiesComponent.cpp" bodystart="116" bodyend="125"/>
+      </memberdef>
+      <memberdef kind="function" id="class_abilities_component_1ab57de1cda84055ee7564f0709e03777f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AbilitiesComponent::RegisterAttributes</definition>
+        <argsstring>(AttributeComponent *newAttributes)</argsstring>
+        <name>RegisterAttributes</name>
+        <qualifiedname>AbilitiesComponent::RegisterAttributes</qualifiedname>
+        <param>
+          <type><ref refid="class_attribute_component" kindref="compound">AttributeComponent</ref> *</type>
+          <declname>newAttributes</declname>
+        </param>
+        <briefdescription>
+<para>Registers an attribute component to this ability system  </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/ActorComponents/AbilitiesComponent.h" line="56" column="6" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/ActorComponents/AbilitiesComponent.cpp" bodystart="127" bodyend="130"/>
+      </memberdef>
+      <memberdef kind="function" id="class_abilities_component_1a10a7a5652a4d850b5845766224a43c54" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AbilitiesComponent::IsAbilityInCooldown</definition>
+        <argsstring>(int key)</argsstring>
+        <name>IsAbilityInCooldown</name>
+        <qualifiedname>AbilitiesComponent::IsAbilityInCooldown</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>key</declname>
+        </param>
+        <briefdescription>
+<para>Checks whether an ability is in cooldown  </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/ActorComponents/AbilitiesComponent.h" line="61" column="6" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/ActorComponents/AbilitiesComponent.cpp" bodystart="132" bodyend="135"/>
+      </memberdef>
+      <memberdef kind="function" id="class_abilities_component_1a46f90af4015a7e4fa9679f5743547d94" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int AbilitiesComponent::GetAbilityCooldown</definition>
+        <argsstring>(int key)</argsstring>
+        <name>GetAbilityCooldown</name>
+        <qualifiedname>AbilitiesComponent::GetAbilityCooldown</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>key</declname>
+        </param>
+        <briefdescription>
+<para>Gets the ability cooldown  </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/ActorComponents/AbilitiesComponent.h" line="66" column="5" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/ActorComponents/AbilitiesComponent.cpp" bodystart="137" bodyend="140"/>
+      </memberdef>
+      <memberdef kind="function" id="class_abilities_component_1a96732cdae01d866200dc66a89200695f" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void AbilitiesComponent::UpdateComponent</definition>
+        <argsstring>(float deltaTime) override</argsstring>
+        <name>UpdateComponent</name>
+        <qualifiedname>AbilitiesComponent::UpdateComponent</qualifiedname>
+        <reimplements refid="class_actor_component_1af730b3c7d2b4154e1fb0962db7750f6b">UpdateComponent</reimplements>
+        <param>
+          <type>float</type>
+          <declname>deltaTime</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/ActorComponents/AbilitiesComponent.h" line="68" column="14" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/ActorComponents/AbilitiesComponent.cpp" bodystart="67" bodyend="74"/>
+      </memberdef>
+      <memberdef kind="function" id="class_abilities_component_1aa2e9909a907d358e34fc58a387f0e493" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_attribute_component" kindref="compound">AttributeComponent</ref> *</type>
+        <definition>AttributeComponent * AbilitiesComponent::GetAttributeComponent</definition>
+        <argsstring>() const</argsstring>
+        <name>GetAttributeComponent</name>
+        <qualifiedname>AbilitiesComponent::GetAttributeComponent</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/ActorComponents/AbilitiesComponent.h" line="88" column="20" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/ActorComponents/AbilitiesComponent.h" bodystart="88" bodyend="88"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_abilities_component_1aa1a55ce45b753097f0e2d7d4db4a419b" prot="protected" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void AbilitiesComponent::PostInit</definition>
+        <argsstring>() override</argsstring>
+        <name>PostInit</name>
+        <qualifiedname>AbilitiesComponent::PostInit</qualifiedname>
+        <reimplements refid="class_actor_component_1a467d082f3fedd6cf2acacb117450f90e">PostInit</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/ActorComponents/AbilitiesComponent.h" line="72" column="14" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/ActorComponents/AbilitiesComponent.cpp" bodystart="3" bodyend="7"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_abilities_component_1aa5411a75ed0c4a3e313972839bda7f0c" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AbilitiesComponent::HasAbility</definition>
+        <argsstring>(Ability *abilityToCheck)</argsstring>
+        <name>HasAbility</name>
+        <qualifiedname>AbilitiesComponent::HasAbility</qualifiedname>
+        <param>
+          <type><ref refid="class_ability" kindref="compound">Ability</ref> *</type>
+          <declname>abilityToCheck</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/ActorComponents/AbilitiesComponent.h" line="80" column="6" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/ActorComponents/AbilitiesComponent.cpp" bodystart="9" bodyend="19"/>
+      </memberdef>
+      <memberdef kind="function" id="class_abilities_component_1a175cfd7b1d64ee5df1fc7fdd0496d394" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AbilitiesComponent::HasAbility</definition>
+        <argsstring>(const std::string &amp;abilityToCheck)</argsstring>
+        <name>HasAbility</name>
+        <qualifiedname>AbilitiesComponent::HasAbility</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>abilityToCheck</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/ActorComponents/AbilitiesComponent.h" line="81" column="6" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/ActorComponents/AbilitiesComponent.cpp" bodystart="21" bodyend="31"/>
+      </memberdef>
+      <memberdef kind="function" id="class_abilities_component_1acfb21b719e4f0c3db3eba06a7230f5a3" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AbilitiesComponent::IsAbilityEquipped</definition>
+        <argsstring>(Ability *abilityToCheck)</argsstring>
+        <name>IsAbilityEquipped</name>
+        <qualifiedname>AbilitiesComponent::IsAbilityEquipped</qualifiedname>
+        <param>
+          <type><ref refid="class_ability" kindref="compound">Ability</ref> *</type>
+          <declname>abilityToCheck</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/ActorComponents/AbilitiesComponent.h" line="82" column="6" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/ActorComponents/AbilitiesComponent.cpp" bodystart="33" bodyend="43"/>
+      </memberdef>
+      <memberdef kind="function" id="class_abilities_component_1a302ed60df54311fa73cb9dad668cd049" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_ability" kindref="compound">Ability</ref> *</type>
+        <definition>Ability * AbilitiesComponent::FindAbility</definition>
+        <argsstring>(const std::string &amp;abilityName)</argsstring>
+        <name>FindAbility</name>
+        <qualifiedname>AbilitiesComponent::FindAbility</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>abilityName</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/ActorComponents/AbilitiesComponent.h" line="83" column="9" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/ActorComponents/AbilitiesComponent.cpp" bodystart="45" bodyend="55"/>
+      </memberdef>
+      <memberdef kind="function" id="class_abilities_component_1a87742cf5ff675505251d1fec68933057" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AbilitiesComponent::EquipAbilityInternal</definition>
+        <argsstring>(Ability *abilityToEquip, AbilityActivationKey::Type keyToEquipAt)</argsstring>
+        <name>EquipAbilityInternal</name>
+        <qualifiedname>AbilitiesComponent::EquipAbilityInternal</qualifiedname>
+        <param>
+          <type><ref refid="class_ability" kindref="compound">Ability</ref> *</type>
+          <declname>abilityToEquip</declname>
+        </param>
+        <param>
+          <type><ref refid="namespace_ability_activation_key_1ab159d3c3f26196a9ff493b67ecf7e68c" kindref="member">AbilityActivationKey::Type</ref></type>
+          <declname>keyToEquipAt</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/ActorComponents/AbilitiesComponent.h" line="84" column="6" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/ActorComponents/AbilitiesComponent.cpp" bodystart="57" bodyend="65"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>A component allowing the object to use abilities @NOTE: Requires an attribute component to function properly  </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>AbilitiesComponent</label>
+        <link refid="class_abilities_component"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>ActorComponent</label>
+        <link refid="class_actor_component"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>AbilitiesComponent</label>
+        <link refid="class_abilities_component"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>ActorComponent</label>
+        <link refid="class_actor_component"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>ownerActor</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>WorldObject</label>
+        <link refid="class_world_object"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>owningObject</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/ActorComponents/AbilitiesComponent.h" line="14" column="1" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/ActorComponents/AbilitiesComponent.h" bodystart="15" bodyend="90"/>
+    <listofallmembers>
+      <member refid="class_abilities_component_1a092acad2af7f3c106d117a3c51a04971" prot="public" virt="non-virtual"><scope>AbilitiesComponent</scope><name>ActivateAbilityByKey</name></member>
+      <member refid="class_abilities_component_1aae3dce0a0f06941f91f8c14dc1a3878e" prot="public" virt="non-virtual"><scope>AbilitiesComponent</scope><name>ActivateAbilityByName</name></member>
+      <member refid="class_abilities_component_1a2002c80ff8a5e6de25e5269310c6dfa5" prot="public" virt="non-virtual"><scope>AbilitiesComponent</scope><name>AddAbility</name></member>
+      <member refid="class_abilities_component_1a6b30bddc17dc4ac56c1b1047e372807d" prot="private" virt="non-virtual"><scope>AbilitiesComponent</scope><name>attributes</name></member>
+      <member refid="class_abilities_component_1ab70864987fe015c2bcb368e5389d1ff1" prot="private" virt="non-virtual"><scope>AbilitiesComponent</scope><name>availableAbilities</name></member>
+      <member refid="class_abilities_component_1a3d01f13b661e8d6bfe3c0a8f2d6af7ea" prot="public" virt="non-virtual"><scope>AbilitiesComponent</scope><name>EndAbilityByKey</name></member>
+      <member refid="class_abilities_component_1a310f5751a58f69fba41f473b492e5582" prot="public" virt="non-virtual"><scope>AbilitiesComponent</scope><name>EndAbilityByName</name></member>
+      <member refid="class_abilities_component_1a06d5228f074b929c061cf34af9460be4" prot="public" virt="non-virtual"><scope>AbilitiesComponent</scope><name>EquipAbility</name></member>
+      <member refid="class_abilities_component_1a87742cf5ff675505251d1fec68933057" prot="private" virt="non-virtual"><scope>AbilitiesComponent</scope><name>EquipAbilityInternal</name></member>
+      <member refid="class_abilities_component_1a169b5181aae2bc52970812fe81088b4e" prot="private" virt="non-virtual"><scope>AbilitiesComponent</scope><name>equippedAbilities</name></member>
+      <member refid="class_abilities_component_1a302ed60df54311fa73cb9dad668cd049" prot="private" virt="non-virtual"><scope>AbilitiesComponent</scope><name>FindAbility</name></member>
+      <member refid="class_abilities_component_1a46f90af4015a7e4fa9679f5743547d94" prot="public" virt="non-virtual"><scope>AbilitiesComponent</scope><name>GetAbilityCooldown</name></member>
+      <member refid="class_abilities_component_1aa2e9909a907d358e34fc58a387f0e493" prot="public" virt="non-virtual"><scope>AbilitiesComponent</scope><name>GetAttributeComponent</name></member>
+      <member refid="class_actor_component_1a3705d464da5f840eca1d14bcce07372d" prot="public" virt="non-virtual"><scope>AbilitiesComponent</scope><name>GetOwner</name></member>
+      <member refid="class_abilities_component_1aa5411a75ed0c4a3e313972839bda7f0c" prot="private" virt="non-virtual"><scope>AbilitiesComponent</scope><name>HasAbility</name></member>
+      <member refid="class_abilities_component_1a175cfd7b1d64ee5df1fc7fdd0496d394" prot="private" virt="non-virtual"><scope>AbilitiesComponent</scope><name>HasAbility</name></member>
+      <member refid="class_actor_component_1ab4ea0eaffa2c616a209e2887f80902f2" prot="public" virt="non-virtual"><scope>AbilitiesComponent</scope><name>Init</name></member>
+      <member refid="class_abilities_component_1acfb21b719e4f0c3db3eba06a7230f5a3" prot="private" virt="non-virtual"><scope>AbilitiesComponent</scope><name>IsAbilityEquipped</name></member>
+      <member refid="class_abilities_component_1a10a7a5652a4d850b5845766224a43c54" prot="public" virt="non-virtual"><scope>AbilitiesComponent</scope><name>IsAbilityInCooldown</name></member>
+      <member refid="class_actor_component_1a2766e186399b24f5d7e2d143ffa26e05" prot="protected" virt="non-virtual"><scope>AbilitiesComponent</scope><name>ownerActor</name></member>
+      <member refid="class_abilities_component_1aa1a55ce45b753097f0e2d7d4db4a419b" prot="protected" virt="virtual"><scope>AbilitiesComponent</scope><name>PostInit</name></member>
+      <member refid="class_abilities_component_1ab57de1cda84055ee7564f0709e03777f" prot="public" virt="non-virtual"><scope>AbilitiesComponent</scope><name>RegisterAttributes</name></member>
+      <member refid="class_abilities_component_1a96732cdae01d866200dc66a89200695f" prot="public" virt="virtual"><scope>AbilitiesComponent</scope><name>UpdateComponent</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

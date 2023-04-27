@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="dir_6445565d8f89f9d136c2de923fc4f388" kind="dir">
+    <compoundname>D:/Uni/CMP208/Hellwatch/build/vs2017/Actors</compoundname>
+    <innerdir refid="dir_f2357408680af1772b236fff8f3cf74b">D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors</innerdir>
+    <innerfile refid="_mesh_actor_8cpp">MeshActor.cpp</innerfile>
+    <innerfile refid="_mesh_actor_8h">MeshActor.h</innerfile>
+    <innerfile refid="_sprite_actor_8cpp">SpriteActor.cpp</innerfile>
+    <innerfile refid="_sprite_actor_8h">SpriteActor.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/"/>
+  </compounddef>
+</doxygen>

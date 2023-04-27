@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="struct_f_wave_definition" kind="struct" language="C++" prot="public">
+    <compoundname>FWaveDefinition</compoundname>
+    <includes refid="_wave_manager_8h" local="no">WaveManager.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_f_wave_definition_1a8442421920c4b13c84d7beca39d3c0d9" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t FWaveDefinition::maxSpawns</definition>
+        <argsstring></argsstring>
+        <name>maxSpawns</name>
+        <qualifiedname>FWaveDefinition::maxSpawns</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/WaveManager.h" line="17" column="10" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/WaveManager.h" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_f_wave_definition_1a6551dc7f6e996c43aeb18b7058723bb7" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float FWaveDefinition::spawnPeriod</definition>
+        <argsstring></argsstring>
+        <name>spawnPeriod</name>
+        <qualifiedname>FWaveDefinition::spawnPeriod</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/WaveManager.h" line="18" column="7" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/WaveManager.h" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>A definition for a wave, the max number of spawned enemies and the period of spawning them  </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/WaveManager.h" line="15" column="1" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/WaveManager.h" bodystart="16" bodyend="19"/>
+    <listofallmembers>
+      <member refid="struct_f_wave_definition_1a8442421920c4b13c84d7beca39d3c0d9" prot="public" virt="non-virtual"><scope>FWaveDefinition</scope><name>maxSpawns</name></member>
+      <member refid="struct_f_wave_definition_1a6551dc7f6e996c43aeb18b7058723bb7" prot="public" virt="non-virtual"><scope>FWaveDefinition</scope><name>spawnPeriod</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

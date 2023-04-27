@@ -1,0 +1,304 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="class_wave_manager" kind="class" language="C++" prot="public">
+    <compoundname>WaveManager</compoundname>
+    <includes refid="_wave_manager_8h" local="no">WaveManager.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_wave_manager_1a9440cd9b8ec292c041b5f794b2bb3217" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int WaveManager::currentWave</definition>
+        <argsstring></argsstring>
+        <name>currentWave</name>
+        <qualifiedname>WaveManager::currentWave</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/WaveManager.h" line="63" column="5" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/WaveManager.h" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_wave_manager_1a14685fc0542377bf570845c6429b8d47" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool WaveManager::bInWave</definition>
+        <argsstring></argsstring>
+        <name>bInWave</name>
+        <qualifiedname>WaveManager::bInWave</qualifiedname>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/WaveManager.h" line="67" column="6" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/WaveManager.h" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_wave_manager_1af6a2d5f29691c357d74f8cb1b1191cd3" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool WaveManager::bSpawnsComplete</definition>
+        <argsstring></argsstring>
+        <name>bSpawnsComplete</name>
+        <qualifiedname>WaveManager::bSpawnsComplete</qualifiedname>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/WaveManager.h" line="68" column="6" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/WaveManager.h" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_wave_manager_1ad4f1b036ed460da8f85441db10228e35" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool WaveManager::bBossSpawned</definition>
+        <argsstring></argsstring>
+        <name>bBossSpawned</name>
+        <qualifiedname>WaveManager::bBossSpawned</qualifiedname>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/WaveManager.h" line="69" column="6" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/WaveManager.h" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_wave_manager_1af50a8f0fd508efb11fe70ac81cbef521" prot="private" static="no" mutable="no">
+        <type><ref refid="class_boss" kindref="compound">Boss</ref> *</type>
+        <definition>Boss* WaveManager::boss</definition>
+        <argsstring></argsstring>
+        <name>boss</name>
+        <qualifiedname>WaveManager::boss</qualifiedname>
+        <initializer>= nullptr</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/WaveManager.h" line="71" column="6" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/WaveManager.h" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_wave_manager_1a0c10217f3b79b6eb32c9414ca13a4841" prot="private" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t WaveManager::currentWaveSpawnedEnemiesAmount</definition>
+        <argsstring></argsstring>
+        <name>currentWaveSpawnedEnemiesAmount</name>
+        <qualifiedname>WaveManager::currentWaveSpawnedEnemiesAmount</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/WaveManager.h" line="73" column="10" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/WaveManager.h" bodystart="73" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_wave_manager_1a3336da9211a7c58b767ebb60c5af712a" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float WaveManager::lastSpawnTime</definition>
+        <argsstring></argsstring>
+        <name>lastSpawnTime</name>
+        <qualifiedname>WaveManager::lastSpawnTime</qualifiedname>
+        <initializer>= 0.f</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/WaveManager.h" line="75" column="7" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/WaveManager.h" bodystart="75" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_wave_manager_1a21e6e268cfa618055943b044fa2cb4ab" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; <ref refid="struct_f_wave_definition" kindref="compound">FWaveDefinition</ref> &gt;</type>
+        <definition>std::vector&lt;FWaveDefinition&gt; WaveManager::waveDefinitions</definition>
+        <argsstring></argsstring>
+        <name>waveDefinitions</name>
+        <qualifiedname>WaveManager::waveDefinitions</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/WaveManager.h" line="77" column="13" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/WaveManager.h" bodystart="77" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_wave_manager_1abc5d23581f57ec211d9077729db1f37f" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; <ref refid="class_enemy" kindref="compound">Enemy</ref> * &gt;</type>
+        <definition>std::vector&lt;Enemy*&gt; WaveManager::spawnedEnemies</definition>
+        <argsstring></argsstring>
+        <name>spawnedEnemies</name>
+        <qualifiedname>WaveManager::spawnedEnemies</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/WaveManager.h" line="78" column="13" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/WaveManager.h" bodystart="78" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_wave_manager_1ae61ed89a77ebeeef2a4f6c63f56a208e" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; gef::Vector4 &gt;</type>
+        <definition>std::vector&lt;gef::Vector4&gt; WaveManager::spawnLocations</definition>
+        <argsstring></argsstring>
+        <name>spawnLocations</name>
+        <qualifiedname>WaveManager::spawnLocations</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/WaveManager.h" line="79" column="13" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/WaveManager.h" bodystart="79" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_wave_manager_1a1c039c9a7a485f88b68a3f966ffe02c5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>WaveManager::WaveManager</definition>
+        <argsstring>()</argsstring>
+        <name>WaveManager</name>
+        <qualifiedname>WaveManager::WaveManager</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/WaveManager.h" line="29" column="1" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/WaveManager.cpp" bodystart="8" bodyend="10"/>
+      </memberdef>
+      <memberdef kind="function" id="class_wave_manager_1a918f759b1a32b82fea823b5292b8a001" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void WaveManager::Init</definition>
+        <argsstring>()</argsstring>
+        <name>Init</name>
+        <qualifiedname>WaveManager::Init</qualifiedname>
+        <briefdescription>
+<para>Must be called, initializes the wave definitions  </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/WaveManager.h" line="34" column="6" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/WaveManager.cpp" bodystart="12" bodyend="81"/>
+      </memberdef>
+      <memberdef kind="function" id="class_wave_manager_1aa56d31703d3d02067e75debabbfae300" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void WaveManager::StartWave</definition>
+        <argsstring>()</argsstring>
+        <name>StartWave</name>
+        <qualifiedname>WaveManager::StartWave</qualifiedname>
+        <briefdescription>
+<para>Starts the next wave  </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/WaveManager.h" line="39" column="6" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/WaveManager.cpp" bodystart="83" bodyend="87"/>
+      </memberdef>
+      <memberdef kind="function" id="class_wave_manager_1a751017f23187640be76f5db4b6eba243" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void WaveManager::EndWave</definition>
+        <argsstring>()</argsstring>
+        <name>EndWave</name>
+        <qualifiedname>WaveManager::EndWave</qualifiedname>
+        <briefdescription>
+<para>Ends the current wave  </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/WaveManager.h" line="44" column="6" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/WaveManager.cpp" bodystart="89" bodyend="102"/>
+      </memberdef>
+      <memberdef kind="function" id="class_wave_manager_1ae5ee18f81c4ea516839af94da831a24d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void WaveManager::Update</definition>
+        <argsstring>()</argsstring>
+        <name>Update</name>
+        <qualifiedname>WaveManager::Update</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/WaveManager.h" line="46" column="6" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/WaveManager.cpp" bodystart="104" bodyend="118"/>
+      </memberdef>
+      <memberdef kind="function" id="class_wave_manager_1ac60f15dad7ac55306c45b17babdfcb17" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void WaveManager::CheckWaveState</definition>
+        <argsstring>()</argsstring>
+        <name>CheckWaveState</name>
+        <qualifiedname>WaveManager::CheckWaveState</qualifiedname>
+        <briefdescription>
+<para>Checks whether all enemies have been spawned, and if any are alive  </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/WaveManager.h" line="51" column="6" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/WaveManager.cpp" bodystart="120" bodyend="145"/>
+      </memberdef>
+      <memberdef kind="function" id="class_wave_manager_1acc8ea63b30bc4ccd02e7b12f1504595c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void WaveManager::SpawnEnemy</definition>
+        <argsstring>()</argsstring>
+        <name>SpawnEnemy</name>
+        <qualifiedname>WaveManager::SpawnEnemy</qualifiedname>
+        <briefdescription>
+<para>Spawns a random enemy and sets its class to a random one  </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/WaveManager.h" line="56" column="6" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/WaveManager.cpp" bodystart="147" bodyend="186"/>
+      </memberdef>
+      <memberdef kind="function" id="class_wave_manager_1a2608b3fb9c41ad9a227143f66e1dd385" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::vector&lt; <ref refid="class_enemy" kindref="compound">Enemy</ref> * &gt;</type>
+        <definition>std::vector&lt; Enemy * &gt; WaveManager::GetAllSpawnedEnemies</definition>
+        <argsstring>() const</argsstring>
+        <name>GetAllSpawnedEnemies</name>
+        <qualifiedname>WaveManager::GetAllSpawnedEnemies</qualifiedname>
+        <briefdescription>
+<para>Gets all the currently spawned enemies  </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/WaveManager.h" line="61" column="13" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/WaveManager.h" bodystart="61" bodyend="61"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Manages the spawning of enemies and tracking the progress of waves  </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/WaveManager.h" line="24" column="1" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/WaveManager.h" bodystart="25" bodyend="80"/>
+    <listofallmembers>
+      <member refid="class_wave_manager_1ad4f1b036ed460da8f85441db10228e35" prot="private" virt="non-virtual"><scope>WaveManager</scope><name>bBossSpawned</name></member>
+      <member refid="class_wave_manager_1a14685fc0542377bf570845c6429b8d47" prot="private" virt="non-virtual"><scope>WaveManager</scope><name>bInWave</name></member>
+      <member refid="class_wave_manager_1af50a8f0fd508efb11fe70ac81cbef521" prot="private" virt="non-virtual"><scope>WaveManager</scope><name>boss</name></member>
+      <member refid="class_wave_manager_1af6a2d5f29691c357d74f8cb1b1191cd3" prot="private" virt="non-virtual"><scope>WaveManager</scope><name>bSpawnsComplete</name></member>
+      <member refid="class_wave_manager_1ac60f15dad7ac55306c45b17babdfcb17" prot="public" virt="non-virtual"><scope>WaveManager</scope><name>CheckWaveState</name></member>
+      <member refid="class_wave_manager_1a9440cd9b8ec292c041b5f794b2bb3217" prot="public" virt="non-virtual"><scope>WaveManager</scope><name>currentWave</name></member>
+      <member refid="class_wave_manager_1a0c10217f3b79b6eb32c9414ca13a4841" prot="private" virt="non-virtual"><scope>WaveManager</scope><name>currentWaveSpawnedEnemiesAmount</name></member>
+      <member refid="class_wave_manager_1a751017f23187640be76f5db4b6eba243" prot="public" virt="non-virtual"><scope>WaveManager</scope><name>EndWave</name></member>
+      <member refid="class_wave_manager_1a2608b3fb9c41ad9a227143f66e1dd385" prot="public" virt="non-virtual"><scope>WaveManager</scope><name>GetAllSpawnedEnemies</name></member>
+      <member refid="class_wave_manager_1a918f759b1a32b82fea823b5292b8a001" prot="public" virt="non-virtual"><scope>WaveManager</scope><name>Init</name></member>
+      <member refid="class_wave_manager_1a3336da9211a7c58b767ebb60c5af712a" prot="private" virt="non-virtual"><scope>WaveManager</scope><name>lastSpawnTime</name></member>
+      <member refid="class_wave_manager_1abc5d23581f57ec211d9077729db1f37f" prot="private" virt="non-virtual"><scope>WaveManager</scope><name>spawnedEnemies</name></member>
+      <member refid="class_wave_manager_1acc8ea63b30bc4ccd02e7b12f1504595c" prot="public" virt="non-virtual"><scope>WaveManager</scope><name>SpawnEnemy</name></member>
+      <member refid="class_wave_manager_1ae61ed89a77ebeeef2a4f6c63f56a208e" prot="private" virt="non-virtual"><scope>WaveManager</scope><name>spawnLocations</name></member>
+      <member refid="class_wave_manager_1aa56d31703d3d02067e75debabbfae300" prot="public" virt="non-virtual"><scope>WaveManager</scope><name>StartWave</name></member>
+      <member refid="class_wave_manager_1ae5ee18f81c4ea516839af94da831a24d" prot="public" virt="non-virtual"><scope>WaveManager</scope><name>Update</name></member>
+      <member refid="class_wave_manager_1a21e6e268cfa618055943b044fa2cb4ab" prot="private" virt="non-virtual"><scope>WaveManager</scope><name>waveDefinitions</name></member>
+      <member refid="class_wave_manager_1a1c039c9a7a485f88b68a3f966ffe02c5" prot="public" virt="non-virtual"><scope>WaveManager</scope><name>WaveManager</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

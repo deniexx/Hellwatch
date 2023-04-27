@@ -1,0 +1,70 @@
+.TH "RangedEnemy" 3 "Thu Apr 27 2023" "Hellwatch" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+RangedEnemy \- Ranged enemy implementation, tries to keep distance and shoots from afar   
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <RangedEnemy\&.h>\fP
+.PP
+Inherits \fBEnemy\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBRangedEnemy\fP ()"
+.br
+.ti -1c
+.RI "virtual void \fBUpdate\fP (float deltaTime) override"
+.br
+.RI "Update function, called every frame  "
+.ti -1c
+.RI "virtual void \fBShoot\fP (float deltaTime)"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "virtual void \fBPostInit\fP () override"
+.br
+.RI "Override this to Initialize variables or do any necessary work when the object is created  "
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+Ranged enemy implementation, tries to keep distance and shoots from afar  
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "RangedEnemy::RangedEnemy ()"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "void RangedEnemy::PostInit ()\fC [override]\fP, \fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+Override this to Initialize variables or do any necessary work when the object is created  
+.PP
+Reimplemented from \fBEnemy\fP\&.
+.SS "void RangedEnemy::Shoot (float deltaTime)\fC [virtual]\fP"
+
+.SS "void RangedEnemy::Update (float deltaTime)\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+Update function, called every frame  
+.PP
+\fBParameters\fP
+.RS 4
+\fIdeltaTime\fP Float variable for the frame time
+.RE
+.PP
+
+.PP
+Reimplemented from \fBEnemy\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Hellwatch from the source code\&.

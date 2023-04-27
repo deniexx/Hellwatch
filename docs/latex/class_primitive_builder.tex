@@ -1,0 +1,257 @@
+\hypertarget{class_primitive_builder}{}\doxysection{Primitive\+Builder Class Reference}
+\label{class_primitive_builder}\index{PrimitiveBuilder@{PrimitiveBuilder}}
+
+
+{\ttfamily \#include $<$primitive\+\_\+builder.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_primitive_builder_a6384d138d3c7193b9791959801d882d1}{Primitive\+Builder}} (gef\+::\+Platform \&platform)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_primitive_builder_a70ac6a74c6a3fe209cabf315b0f7bf4d}{$\sim$\+Primitive\+Builder}} ()
+\begin{DoxyCompactList}\small\item\em Default destructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_primitive_builder_a1b4b6db65689d27a2bc3cad69803b079}{Init}} ()
+\begin{DoxyCompactList}\small\item\em Initialises the primitive builder. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_primitive_builder_aed9655474f22afaa00ff015c454bd736}{Clean\+Up}} ()
+\begin{DoxyCompactList}\small\item\em Clean up resources created by the primitive builder. \end{DoxyCompactList}\item 
+gef\+::\+Mesh $\ast$ \mbox{\hyperlink{class_primitive_builder_af92fb7ac1b3d5c32243e28dbd71691da}{Create\+Box\+Mesh}} (const gef\+::\+Vector4 \&half\+\_\+size, gef\+::\+Vector4 centre=gef\+::\+Vector4(0.\+0f, 0.\+0f, 0.\+0f), gef\+::\+Material $\ast$$\ast$materials=NULL)
+\begin{DoxyCompactList}\small\item\em Creates a box shaped mesh. \end{DoxyCompactList}\item 
+gef\+::\+Mesh $\ast$ \mbox{\hyperlink{class_primitive_builder_a5f05e266f6b78f97ac03abfda1a6d44e}{Create\+Sphere\+Mesh}} (const float radius, const int phi, const int theta, gef\+::\+Vector4 centre=gef\+::\+Vector4(0.\+0f, 0.\+0f, 0.\+0f), gef\+::\+Material $\ast$material=NULL)
+\begin{DoxyCompactList}\small\item\em Creates a sphere shaped mesh. \end{DoxyCompactList}\item 
+const gef\+::\+Mesh $\ast$ \mbox{\hyperlink{class_primitive_builder_a0b7bbc2b5dae0e538e5a7da02e99743a}{Get\+Default\+Cube\+Mesh}} () const
+\begin{DoxyCompactList}\small\item\em Get the default cube mesh. \end{DoxyCompactList}\item 
+const gef\+::\+Mesh $\ast$ \mbox{\hyperlink{class_primitive_builder_a50a4fb54f668bbe3b43940c64529b195}{Get\+Default\+Sphere\+Mesh}} () const
+\begin{DoxyCompactList}\small\item\em Get the default sphere mesh. \end{DoxyCompactList}\item 
+const gef\+::\+Material \& \mbox{\hyperlink{class_primitive_builder_aa5daad54593016deff15e0f172df5815}{red\+\_\+material}} () const
+\begin{DoxyCompactList}\small\item\em Get the red material. \end{DoxyCompactList}\item 
+const gef\+::\+Material \& \mbox{\hyperlink{class_primitive_builder_a0b9b7e23d8d653d949da7da85b5b51b0}{green\+\_\+material}} () const
+\begin{DoxyCompactList}\small\item\em Get the red material. \end{DoxyCompactList}\item 
+const gef\+::\+Material \& \mbox{\hyperlink{class_primitive_builder_a1cc3cb55ef97d82a1ad402e937f2e449}{blue\+\_\+material}} () const
+\begin{DoxyCompactList}\small\item\em Get the blue material. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+gef\+::\+Platform \& \mbox{\hyperlink{class_primitive_builder_a6bfbd619adebd14a9fe02b68521e279d}{platform\+\_\+}}
+\item 
+gef\+::\+Mesh $\ast$ \mbox{\hyperlink{class_primitive_builder_aa3205470b24e5273efb50e359a547b23}{default\+\_\+cube\+\_\+mesh\+\_\+}}
+\item 
+gef\+::\+Mesh $\ast$ \mbox{\hyperlink{class_primitive_builder_aa3179d29464e6f9f0b84d59bcea6f3d1}{default\+\_\+sphere\+\_\+mesh\+\_\+}}
+\item 
+gef\+::\+Material \mbox{\hyperlink{class_primitive_builder_a7757d609903f9cff6a9bd7f1a239fe27}{red\+\_\+material\+\_\+}}
+\item 
+gef\+::\+Material \mbox{\hyperlink{class_primitive_builder_a72a6196f7dc9bba9f3887c9a5fe0e485}{blue\+\_\+material\+\_\+}}
+\item 
+gef\+::\+Material \mbox{\hyperlink{class_primitive_builder_a0c4022f7c66fb130f59d9d2e1c9aee31}{green\+\_\+material\+\_\+}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_primitive_builder_a6384d138d3c7193b9791959801d882d1}\label{class_primitive_builder_a6384d138d3c7193b9791959801d882d1}} 
+\index{PrimitiveBuilder@{PrimitiveBuilder}!PrimitiveBuilder@{PrimitiveBuilder}}
+\index{PrimitiveBuilder@{PrimitiveBuilder}!PrimitiveBuilder@{PrimitiveBuilder}}
+\doxysubsubsection{\texorpdfstring{PrimitiveBuilder()}{PrimitiveBuilder()}}
+{\footnotesize\ttfamily Primitive\+Builder\+::\+Primitive\+Builder (\begin{DoxyParamCaption}\item[{gef\+::\+Platform \&}]{platform }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em platform} & The platform the primitive builder is being created on. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_primitive_builder_a70ac6a74c6a3fe209cabf315b0f7bf4d}\label{class_primitive_builder_a70ac6a74c6a3fe209cabf315b0f7bf4d}} 
+\index{PrimitiveBuilder@{PrimitiveBuilder}!````~PrimitiveBuilder@{$\sim$PrimitiveBuilder}}
+\index{````~PrimitiveBuilder@{$\sim$PrimitiveBuilder}!PrimitiveBuilder@{PrimitiveBuilder}}
+\doxysubsubsection{\texorpdfstring{$\sim$PrimitiveBuilder()}{~PrimitiveBuilder()}}
+{\footnotesize\ttfamily Primitive\+Builder\+::$\sim$\+Primitive\+Builder (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Default destructor. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_primitive_builder_a1cc3cb55ef97d82a1ad402e937f2e449}\label{class_primitive_builder_a1cc3cb55ef97d82a1ad402e937f2e449}} 
+\index{PrimitiveBuilder@{PrimitiveBuilder}!blue\_material@{blue\_material}}
+\index{blue\_material@{blue\_material}!PrimitiveBuilder@{PrimitiveBuilder}}
+\doxysubsubsection{\texorpdfstring{blue\_material()}{blue\_material()}}
+{\footnotesize\ttfamily const gef\+::\+Material \& Primitive\+Builder\+::blue\+\_\+material (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the blue material. 
+
+\begin{DoxyReturn}{Returns}
+The reference to the blue material. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_primitive_builder_aed9655474f22afaa00ff015c454bd736}\label{class_primitive_builder_aed9655474f22afaa00ff015c454bd736}} 
+\index{PrimitiveBuilder@{PrimitiveBuilder}!CleanUp@{CleanUp}}
+\index{CleanUp@{CleanUp}!PrimitiveBuilder@{PrimitiveBuilder}}
+\doxysubsubsection{\texorpdfstring{CleanUp()}{CleanUp()}}
+{\footnotesize\ttfamily void Primitive\+Builder\+::\+Clean\+Up (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Clean up resources created by the primitive builder. 
+
+\mbox{\Hypertarget{class_primitive_builder_af92fb7ac1b3d5c32243e28dbd71691da}\label{class_primitive_builder_af92fb7ac1b3d5c32243e28dbd71691da}} 
+\index{PrimitiveBuilder@{PrimitiveBuilder}!CreateBoxMesh@{CreateBoxMesh}}
+\index{CreateBoxMesh@{CreateBoxMesh}!PrimitiveBuilder@{PrimitiveBuilder}}
+\doxysubsubsection{\texorpdfstring{CreateBoxMesh()}{CreateBoxMesh()}}
+{\footnotesize\ttfamily gef\+::\+Mesh $\ast$ Primitive\+Builder\+::\+Create\+Box\+Mesh (\begin{DoxyParamCaption}\item[{const gef\+::\+Vector4 \&}]{half\+\_\+size,  }\item[{gef\+::\+Vector4}]{centre = {\ttfamily gef\+:\+:Vector4(0.0f,~0.0f,~0.0f)},  }\item[{gef\+::\+Material $\ast$$\ast$}]{materials = {\ttfamily NULL} }\end{DoxyParamCaption})}
+
+
+
+Creates a box shaped mesh. 
+
+\begin{DoxyReturn}{Returns}
+The mesh created 
+\end{DoxyReturn}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em half\+\_\+size} & The half size of the box. \\
+\hline
+\mbox{\texttt{ in}}  & {\em centre} & The centre of the box. \\
+\hline
+\mbox{\texttt{ in}}  & {\em materials} & an array of Material pointers. One for each face. 6 in total. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_primitive_builder_a5f05e266f6b78f97ac03abfda1a6d44e}\label{class_primitive_builder_a5f05e266f6b78f97ac03abfda1a6d44e}} 
+\index{PrimitiveBuilder@{PrimitiveBuilder}!CreateSphereMesh@{CreateSphereMesh}}
+\index{CreateSphereMesh@{CreateSphereMesh}!PrimitiveBuilder@{PrimitiveBuilder}}
+\doxysubsubsection{\texorpdfstring{CreateSphereMesh()}{CreateSphereMesh()}}
+{\footnotesize\ttfamily gef\+::\+Mesh $\ast$ Primitive\+Builder\+::\+Create\+Sphere\+Mesh (\begin{DoxyParamCaption}\item[{const float}]{radius,  }\item[{const int}]{phi,  }\item[{const int}]{theta,  }\item[{gef\+::\+Vector4}]{centre = {\ttfamily gef\+:\+:Vector4(0.0f,~0.0f,~0.0f)},  }\item[{gef\+::\+Material $\ast$}]{material = {\ttfamily NULL} }\end{DoxyParamCaption})}
+
+
+
+Creates a sphere shaped mesh. 
+
+\begin{DoxyReturn}{Returns}
+The mesh created 
+\end{DoxyReturn}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em radius} & The radius of the sphere. \\
+\hline
+\mbox{\texttt{ in}}  & {\em centre} & The centre of the centre. \\
+\hline
+\mbox{\texttt{ in}}  & {\em materials} & Pointer to material used to render all faces. NULL is valid. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_primitive_builder_a0b7bbc2b5dae0e538e5a7da02e99743a}\label{class_primitive_builder_a0b7bbc2b5dae0e538e5a7da02e99743a}} 
+\index{PrimitiveBuilder@{PrimitiveBuilder}!GetDefaultCubeMesh@{GetDefaultCubeMesh}}
+\index{GetDefaultCubeMesh@{GetDefaultCubeMesh}!PrimitiveBuilder@{PrimitiveBuilder}}
+\doxysubsubsection{\texorpdfstring{GetDefaultCubeMesh()}{GetDefaultCubeMesh()}}
+{\footnotesize\ttfamily const gef\+::\+Mesh $\ast$ Primitive\+Builder\+::\+Get\+Default\+Cube\+Mesh (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the default cube mesh. 
+
+\begin{DoxyReturn}{Returns}
+The mesh for the default cube. 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+The default cube has dimensions 1 x 1 x 1 with the centre at 0, 0, 0. 
+\end{DoxyNote}
+\mbox{\Hypertarget{class_primitive_builder_a50a4fb54f668bbe3b43940c64529b195}\label{class_primitive_builder_a50a4fb54f668bbe3b43940c64529b195}} 
+\index{PrimitiveBuilder@{PrimitiveBuilder}!GetDefaultSphereMesh@{GetDefaultSphereMesh}}
+\index{GetDefaultSphereMesh@{GetDefaultSphereMesh}!PrimitiveBuilder@{PrimitiveBuilder}}
+\doxysubsubsection{\texorpdfstring{GetDefaultSphereMesh()}{GetDefaultSphereMesh()}}
+{\footnotesize\ttfamily const gef\+::\+Mesh $\ast$ Primitive\+Builder\+::\+Get\+Default\+Sphere\+Mesh (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the default sphere mesh. 
+
+\begin{DoxyReturn}{Returns}
+The mesh for the default cube. 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+The default sphere has radius 0.\+5 with the centre at 0, 0, 0. 
+\end{DoxyNote}
+\mbox{\Hypertarget{class_primitive_builder_a0b9b7e23d8d653d949da7da85b5b51b0}\label{class_primitive_builder_a0b9b7e23d8d653d949da7da85b5b51b0}} 
+\index{PrimitiveBuilder@{PrimitiveBuilder}!green\_material@{green\_material}}
+\index{green\_material@{green\_material}!PrimitiveBuilder@{PrimitiveBuilder}}
+\doxysubsubsection{\texorpdfstring{green\_material()}{green\_material()}}
+{\footnotesize\ttfamily const gef\+::\+Material \& Primitive\+Builder\+::green\+\_\+material (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the red material. 
+
+\begin{DoxyReturn}{Returns}
+The reference to the green material. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_primitive_builder_a1b4b6db65689d27a2bc3cad69803b079}\label{class_primitive_builder_a1b4b6db65689d27a2bc3cad69803b079}} 
+\index{PrimitiveBuilder@{PrimitiveBuilder}!Init@{Init}}
+\index{Init@{Init}!PrimitiveBuilder@{PrimitiveBuilder}}
+\doxysubsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily void Primitive\+Builder\+::\+Init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Initialises the primitive builder. 
+
+\mbox{\Hypertarget{class_primitive_builder_aa5daad54593016deff15e0f172df5815}\label{class_primitive_builder_aa5daad54593016deff15e0f172df5815}} 
+\index{PrimitiveBuilder@{PrimitiveBuilder}!red\_material@{red\_material}}
+\index{red\_material@{red\_material}!PrimitiveBuilder@{PrimitiveBuilder}}
+\doxysubsubsection{\texorpdfstring{red\_material()}{red\_material()}}
+{\footnotesize\ttfamily const gef\+::\+Material \& Primitive\+Builder\+::red\+\_\+material (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the red material. 
+
+\begin{DoxyReturn}{Returns}
+The reference to the red material. 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_primitive_builder_a72a6196f7dc9bba9f3887c9a5fe0e485}\label{class_primitive_builder_a72a6196f7dc9bba9f3887c9a5fe0e485}} 
+\index{PrimitiveBuilder@{PrimitiveBuilder}!blue\_material\_@{blue\_material\_}}
+\index{blue\_material\_@{blue\_material\_}!PrimitiveBuilder@{PrimitiveBuilder}}
+\doxysubsubsection{\texorpdfstring{blue\_material\_}{blue\_material\_}}
+{\footnotesize\ttfamily gef\+::\+Material Primitive\+Builder\+::blue\+\_\+material\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_primitive_builder_aa3205470b24e5273efb50e359a547b23}\label{class_primitive_builder_aa3205470b24e5273efb50e359a547b23}} 
+\index{PrimitiveBuilder@{PrimitiveBuilder}!default\_cube\_mesh\_@{default\_cube\_mesh\_}}
+\index{default\_cube\_mesh\_@{default\_cube\_mesh\_}!PrimitiveBuilder@{PrimitiveBuilder}}
+\doxysubsubsection{\texorpdfstring{default\_cube\_mesh\_}{default\_cube\_mesh\_}}
+{\footnotesize\ttfamily gef\+::\+Mesh$\ast$ Primitive\+Builder\+::default\+\_\+cube\+\_\+mesh\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_primitive_builder_aa3179d29464e6f9f0b84d59bcea6f3d1}\label{class_primitive_builder_aa3179d29464e6f9f0b84d59bcea6f3d1}} 
+\index{PrimitiveBuilder@{PrimitiveBuilder}!default\_sphere\_mesh\_@{default\_sphere\_mesh\_}}
+\index{default\_sphere\_mesh\_@{default\_sphere\_mesh\_}!PrimitiveBuilder@{PrimitiveBuilder}}
+\doxysubsubsection{\texorpdfstring{default\_sphere\_mesh\_}{default\_sphere\_mesh\_}}
+{\footnotesize\ttfamily gef\+::\+Mesh$\ast$ Primitive\+Builder\+::default\+\_\+sphere\+\_\+mesh\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_primitive_builder_a0c4022f7c66fb130f59d9d2e1c9aee31}\label{class_primitive_builder_a0c4022f7c66fb130f59d9d2e1c9aee31}} 
+\index{PrimitiveBuilder@{PrimitiveBuilder}!green\_material\_@{green\_material\_}}
+\index{green\_material\_@{green\_material\_}!PrimitiveBuilder@{PrimitiveBuilder}}
+\doxysubsubsection{\texorpdfstring{green\_material\_}{green\_material\_}}
+{\footnotesize\ttfamily gef\+::\+Material Primitive\+Builder\+::green\+\_\+material\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_primitive_builder_a6bfbd619adebd14a9fe02b68521e279d}\label{class_primitive_builder_a6bfbd619adebd14a9fe02b68521e279d}} 
+\index{PrimitiveBuilder@{PrimitiveBuilder}!platform\_@{platform\_}}
+\index{platform\_@{platform\_}!PrimitiveBuilder@{PrimitiveBuilder}}
+\doxysubsubsection{\texorpdfstring{platform\_}{platform\_}}
+{\footnotesize\ttfamily gef\+::\+Platform\& Primitive\+Builder\+::platform\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_primitive_builder_a7757d609903f9cff6a9bd7f1a239fe27}\label{class_primitive_builder_a7757d609903f9cff6a9bd7f1a239fe27}} 
+\index{PrimitiveBuilder@{PrimitiveBuilder}!red\_material\_@{red\_material\_}}
+\index{red\_material\_@{red\_material\_}!PrimitiveBuilder@{PrimitiveBuilder}}
+\doxysubsubsection{\texorpdfstring{red\_material\_}{red\_material\_}}
+{\footnotesize\ttfamily gef\+::\+Material Primitive\+Builder\+::red\+\_\+material\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Uni/\+CMP208/\+Hellwatch/\mbox{\hyperlink{primitive__builder_8h}{primitive\+\_\+builder.\+h}}\item 
+D\+:/\+Uni/\+CMP208/\+Hellwatch/\mbox{\hyperlink{primitive__builder_8cpp}{primitive\+\_\+builder.\+cpp}}\end{DoxyCompactItemize}

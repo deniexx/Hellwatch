@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__boss_8h_source" xml:lang="en-US">
+<title>Boss.h</title>
+<indexterm><primary>D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/Boss.h</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered">1 <emphasis role="preprocessor">#pragma&#32;once</emphasis>
+2 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="__enemy_8h">Enemy.h</link>&quot;</emphasis>
+3 <emphasis role="preprocessor">#include&#32;&lt;maths/vector4.h&gt;</emphasis>
+4 
+5 <emphasis role="keyword">class&#32;</emphasis><link linkend="_class_boss">Boss</link>&#32;:&#32;<emphasis role="keyword">public</emphasis>&#32;<link linkend="_class_enemy">Enemy</link>
+6 {
+7 &#32;&#32;&#32;&#32;<link linkend="__utils_8h_1afc0ee7bd35c161a2d80b8e8f04fd9213">GENERATED_BODY</link>(<link linkend="_class_mesh_actor">MeshActor</link>,&#32;<link linkend="_class_boss">Boss</link>)
+8 
+9 <emphasis role="keyword">public</emphasis>:
+10 &#32;&#32;&#32;&#32;<link linkend="_class_boss_1af287739a9fe8cb9501795656d34f3018">Boss</link>();
+11 &#32;&#32;&#32;&#32;<emphasis role="keyword">virtual</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_boss_1aa0943d1fb2d9037e30a2fdc6952878cb">Update</link>(<emphasis role="keywordtype">float</emphasis>&#32;deltaTime)&#32;<emphasis role="keyword">override</emphasis>;
+12 &#32;&#32;&#32;&#32;<emphasis role="comment">//virtual&#32;void&#32;Slam(float&#32;deltaTime);</emphasis>
+13 &#32;&#32;&#32;&#32;<emphasis role="comment">//virtual&#32;void&#32;Jump(float&#32;deltaTime);</emphasis>
+14 
+15 <emphasis role="keyword">protected</emphasis>:
+16 
+17 &#32;&#32;&#32;&#32;<emphasis role="keyword">virtual</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_boss_1aca38363ac8587bf7012d4c6dec8600a9">PostInit</link>()&#32;<emphasis role="keyword">override</emphasis>;
+18 
+19 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_class_boss_1acf6e40d0e800c3d6ea2b529c4351da9c">isJumping</link>&#32;=&#32;<emphasis role="keyword">false</emphasis>;
+20 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_class_boss_1a605d9ab656bcc24ef4b8591bf740f72e">pastMidpoint</link>&#32;=&#32;<emphasis role="keyword">false</emphasis>;
+21 
+22 &#32;&#32;&#32;&#32;gef::Vector4&#32;<link linkend="_class_boss_1a0945edb506e027ea61cbfd0750b4bd0b">playerPosition</link>;
+23 &#32;&#32;&#32;&#32;gef::Vector4&#32;<link linkend="_class_boss_1ab988b026b0a44d5b9695b1fae80f4bff">bossPosition</link>;
+24 &#32;&#32;&#32;&#32;gef::Vector4&#32;<link linkend="_class_boss_1a66b3a8266b0ce9a045cf6d6d41ca3fc4">midpoint</link>;
+25 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">float</emphasis>&#32;<link linkend="_class_boss_1a5f8bd3dedd5d923284440df4dce7c6d5">alpha</link>&#32;=&#32;0;
+26 };
+27 
+</programlisting></section>

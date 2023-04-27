@@ -1,0 +1,126 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__utils_8h_source" xml:lang="en-US">
+<title>Utils.h</title>
+<indexterm><primary>D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/Utils.h</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered">1 <emphasis role="preprocessor">#pragma&#32;once</emphasis>
+2 
+3 <emphasis role="preprocessor">#include&#32;&quot;maths/Vector2.h&quot;</emphasis>
+4 <emphasis role="preprocessor">#include&#32;&quot;maths/vector4.h&quot;</emphasis>
+5 <emphasis role="preprocessor">#include&#32;&quot;maths/matrix44.h&quot;</emphasis>
+6 <emphasis role="preprocessor">#include&#32;&lt;graphics/renderer_3d.h&gt;</emphasis>
+7 <emphasis role="preprocessor">#include&#32;&lt;<link linkend="_scene__app_8h">scene_app.h</link>&gt;</emphasis>
+8 <emphasis role="preprocessor">#include&#32;&quot;maths/math_utils.h&quot;</emphasis>
+9 
+10 <emphasis role="preprocessor">#define&#32;NO_ID&#32;0</emphasis>
+11 <emphasis role="preprocessor">#define&#32;PLAYER_ID&#32;1</emphasis>
+12 <emphasis role="preprocessor">#define&#32;ENEMY_ID&#32;2</emphasis>
+13 <emphasis role="preprocessor">#define&#32;ENVIRONMENT_ID&#32;3</emphasis>
+14 
+15 <emphasis role="preprocessor">#define&#32;PI&#32;3.14159265358979323846</emphasis>
+16 
+17 <emphasis role="preprocessor">#define&#32;GENERATED_BODY(ParentClass,&#32;CurrentClass)&#32;typedef&#32;::ParentClass&#32;Super;&#32;\</emphasis>
+18 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;typedef&#32;CurrentClass&#32;ThisClass;</emphasis>
+19 
+20 
+21 <emphasis role="preprocessor">#define&#32;bindFunc(funcName)&#32;[this]()&#32;{&#32;funcName();&#32;}</emphasis>
+22 <emphasis role="preprocessor">#define&#32;bindFunc_ONEParam(funcName,&#32;paramType,&#32;paramName)&#32;[this](paramType&#32;paramName)&#32;{&#32;funcName(paramName);&#32;}</emphasis>
+23 <emphasis role="preprocessor">#define&#32;bindFunc_TWOParams(funcName,&#32;paramType1,&#32;paramName1,&#32;paramType2,&#32;paramName2)&#32;[this](paramType1&#32;paramName1,&#32;paramType2&#32;paramName2)&#32;{&#32;funcName(paramName1,&#32;paramName2);&#32;}</emphasis>
+24 <emphasis role="preprocessor">#define&#32;bindFunc_THREEParam(funcName,&#32;paramType1,&#32;paramName1,&#32;paramType2,&#32;paramName2,&#32;paramType3,&#32;paramName3)&#32;[this](paramType1&#32;paramName1,&#32;paramType2&#32;paramName2,&#32;paramType3&#32;paramName3)&#32;{&#32;funcName(paramName1,&#32;paramName2,&#32;paramName3);&#32;}</emphasis>
+25 <emphasis role="preprocessor">#define&#32;bindFunc_FOURParams(funcName,&#32;paramType1,&#32;paramName1,&#32;paramType2,&#32;paramName2,&#32;paramType3,&#32;paramName3,&#32;paramType4,&#32;paramName4)&#32;[this](paramType1&#32;paramName1,&#32;paramType2&#32;paramName2,&#32;paramType3&#32;paramName3,&#32;paramType4&#32;paramName4)&#32;{&#32;funcName(paramName1,&#32;paramName2,&#32;paramName3,&#32;paramName4);&#32;}</emphasis>
+26 <emphasis role="preprocessor">#define&#32;bindFunc_FIVEParams(funcName,&#32;paramType1,&#32;paramName1,&#32;paramType2,&#32;paramName2,&#32;paramType3,&#32;paramName3,&#32;paramType4,&#32;paramName4,&#32;paramType5,&#32;paramName5)&#32;[this](paramType1&#32;paramName1,&#32;paramType2&#32;paramName2,&#32;paramType3&#32;paramName3,&#32;paramType4&#32;paramName4,&#32;paramName5&#32;paramName5)&#32;{&#32;funcName(paramName1,&#32;paramName2,&#32;paramName3,&#32;paramName4,&#32;paramName5);&#32;}</emphasis>
+27 
+31 <emphasis role="keyword">template</emphasis>&lt;<emphasis role="keyword">typename</emphasis>&#32;T&gt;
+32 <emphasis role="keyword">static</emphasis>&#32;T&#32;Clamp(T&#32;expression,&#32;T&#32;minVal,&#32;T&#32;maxVal)
+33 {
+34 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(expression&#32;&lt;&#32;minVal)
+35 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;expression&#32;=&#32;minVal;
+36 &#32;&#32;&#32;&#32;
+37 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;expression&#32;&gt;&#32;maxVal&#32;?&#32;maxVal&#32;:&#32;expression;
+38 }
+39 
+43 <emphasis role="keyword">static</emphasis>&#32;gef::Vector4&#32;ProjectScreenToWorldSpace(gef::Vector2&#32;v2)
+44 {
+45 &#32;&#32;&#32;&#32;gef::Renderer3D*&#32;renderer&#32;=&#32;SceneApp::instance-&gt;GetRenderer3D();
+46 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">float</emphasis>&#32;vpWidth&#32;=&#32;SceneApp::instance-&gt;GetViewportWidth();
+47 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">float</emphasis>&#32;vpHeight&#32;=&#32;SceneApp::instance-&gt;GetViewportHeight();
+48 
+49 &#32;&#32;&#32;&#32;gef::Matrix44&#32;matProjection&#32;=&#32;renderer-&gt;projection_matrix()&#32;*&#32;renderer-&gt;view_matrix();
+50 &#32;&#32;&#32;&#32;matProjection.Inverse(matProjection);
+51 
+52 &#32;&#32;&#32;&#32;gef::Vector4&#32;in;
+53 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">float</emphasis>&#32;winZ&#32;=&#32;1.f;
+54 
+55 &#32;&#32;&#32;&#32;in.set_x((2.f&#32;*&#32;(<emphasis role="keywordtype">float</emphasis>)(v2.x)&#32;/&#32;(vpWidth))&#32;-&#32;1);
+56 &#32;&#32;&#32;&#32;in.set_y(-1.f);
+57 &#32;&#32;&#32;&#32;in.set_z(1.f&#32;-&#32;(2.f&#32;*&#32;(<emphasis role="keywordtype">float</emphasis>)(v2.y)&#32;/&#32;(vpHeight)));
+58 &#32;&#32;&#32;&#32;in.set_w(1.f);
+59 
+60 &#32;&#32;&#32;&#32;gef::Matrix44&#32;calc;
+61 &#32;&#32;&#32;&#32;calc.SetIdentity();
+62 
+63 &#32;&#32;&#32;&#32;calc.SetTranslation(in);
+64 
+65 &#32;&#32;&#32;&#32;gef::Matrix44&#32;actualPos&#32;=&#32;calc&#32;*&#32;matProjection;
+66 
+67 &#32;&#32;&#32;&#32;gef::Vector4&#32;pos&#32;=&#32;actualPos.GetTranslation();
+68 &#32;&#32;&#32;&#32;pos.set_x(pos.x());
+69 &#32;&#32;&#32;&#32;pos.set_y(pos.y()&#32;-&#32;8.1f);
+70 
+71 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">float</emphasis>&#32;posY&#32;=&#32;pos.y();
+72 &#32;&#32;&#32;&#32;pos.set_z(posY);
+73 &#32;&#32;&#32;&#32;pos.set_y(0);
+74 
+75 &#32;&#32;&#32;&#32;gef::Vector4&#32;cameraPos&#32;=&#32;SceneApp::instance-&gt;GetCameraLookAt();
+76 
+77 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;@TODO:&#32;Figure&#32;out&#32;WHY?</emphasis>
+78 &#32;&#32;&#32;&#32;pos.set_x(pos.x()&#32;*&#32;1.35714286);
+79 &#32;&#32;&#32;&#32;pos.set_z(cameraPos.z()&#32;+&#32;pos.z()&#32;*&#32;1.75f);
+80 
+81 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;pos;
+82 }
+83 
+84 <emphasis role="keyword">static</emphasis>&#32;gef::Vector4&#32;ProjectWorldToScreenSpace(gef::Vector4&#32;v4)
+85 {
+86 &#32;&#32;&#32;&#32;gef::Renderer3D*&#32;renderer&#32;=&#32;SceneApp::instance-&gt;GetRenderer3D();
+87 &#32;&#32;&#32;&#32;v4.set_w(1.f);
+88 &#32;&#32;&#32;&#32;v4.Transform(renderer-&gt;view_matrix());
+89 &#32;&#32;&#32;&#32;v4.Transform(renderer-&gt;projection_matrix());
+90 
+91 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">float</emphasis>&#32;clipSpaceX&#32;=&#32;v4.x()&#32;/&#32;v4.w();
+92 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">float</emphasis>&#32;clipSpaceY&#32;=&#32;v4.y()&#32;/&#32;v4.w();
+93 
+94 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">float</emphasis>&#32;xScreen&#32;=&#32;(clipSpaceX&#32;+&#32;1.f)&#32;*&#32;SceneApp::instance-&gt;platform().width()&#32;/&#32;2;
+95 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">float</emphasis>&#32;yScreen&#32;=&#32;(1&#32;-&#32;clipSpaceY)&#32;*&#32;SceneApp::instance-&gt;platform().height()&#32;/&#32;2;
+96 
+97 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;gef::Vector4(xScreen,&#32;yScreen,&#32;0);
+98 }
+99 
+103 <emphasis role="keyword">static</emphasis>&#32;<emphasis role="keywordtype">float</emphasis>&#32;FindAngle(<emphasis role="keyword">const</emphasis>&#32;gef::Vector4&amp;&#32;a,&#32;<emphasis role="keyword">const</emphasis>&#32;gef::Vector4&amp;&#32;b)
+104 {
+105 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">double</emphasis>&#32;dot_product&#32;=&#32;a.x()&#32;*&#32;b.x()&#32;+&#32;a.y()&#32;*&#32;b.y()&#32;+&#32;a.z()&#32;*&#32;b.z();
+106 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">double</emphasis>&#32;mag_a&#32;=&#32;std::sqrt(a.x()&#32;*&#32;a.x()&#32;+&#32;a.y()&#32;*&#32;a.y()&#32;+&#32;a.z()&#32;*&#32;a.z());
+107 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">double</emphasis>&#32;mag_b&#32;=&#32;std::sqrt(b.x()&#32;*&#32;b.x()&#32;+&#32;b.y()&#32;*&#32;b.y()&#32;+&#32;b.z()&#32;*&#32;b.z());
+108 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">double</emphasis>&#32;cos_theta&#32;=&#32;dot_product&#32;/&#32;(mag_a&#32;*&#32;mag_b);
+109 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">double</emphasis>&#32;theta&#32;=&#32;std::acos(cos_theta)&#32;*&#32;180&#32;/&#32;<link linkend="__utils_8h_1a598a3330b3c21701223ee0ca14316eca">PI</link>;
+110 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;theta;
+111 }
+112 
+116 <emphasis role="keyword">static</emphasis>&#32;gef::Vector4&#32;Lerp(<emphasis role="keyword">const</emphasis>&#32;gef::Vector4&amp;&#32;a,&#32;<emphasis role="keyword">const</emphasis>&#32;gef::Vector4&amp;&#32;b,&#32;<emphasis role="keywordtype">float</emphasis>&#32;alpha)
+117 {
+118 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">float</emphasis>&#32;x&#32;=&#32;gef::Lerp(a.x(),&#32;b.x(),&#32;alpha);
+119 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">float</emphasis>&#32;y&#32;=&#32;gef::Lerp(a.y(),&#32;b.y(),&#32;alpha);
+120 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">float</emphasis>&#32;z&#32;=&#32;gef::Lerp(a.z(),&#32;b.z(),&#32;alpha);
+121 
+122 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;gef::Vector4(x,&#32;y,&#32;z);
+123 }
+124 
+128 <emphasis role="keyword">namespace&#32;</emphasis><link linkend="_namespace_apply_damage_on">ApplyDamageOn</link>
+129 {
+130 &#32;&#32;&#32;&#32;<emphasis role="keyword">enum</emphasis>&#32;<link linkend="_namespace_apply_damage_on_1aab4652342cac35cdff458c5aa2bad289">Type</link>
+131 &#32;&#32;&#32;&#32;{
+132 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_namespace_apply_damage_on_1aab4652342cac35cdff458c5aa2bad289a17c0a2d2e83ad970a7bb7395c9819d1f">EnemiesOnly</link>,
+133 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_namespace_apply_damage_on_1aab4652342cac35cdff458c5aa2bad289af658fe1d6a4dd178955748cb85f117ac">PlayerOnly</link>,
+134 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_namespace_apply_damage_on_1aab4652342cac35cdff458c5aa2bad289a1b46eaf8b75eb03bd8e0c31036b8d89b">EnemiesAndPlayer</link>
+135 &#32;&#32;&#32;&#32;};
+136 }
+</programlisting></section>

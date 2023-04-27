@@ -1,0 +1,206 @@
+.TH "SceneApp" 3 "Thu Apr 27 2023" "Hellwatch" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+SceneApp
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <scene_app\&.h>\fP
+.PP
+Inherits gef::Application\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBSceneApp\fP (gef::Platform &platform)"
+.br
+.ti -1c
+.RI "void \fBInit\fP ()"
+.br
+.ti -1c
+.RI "void \fBCleanUp\fP ()"
+.br
+.ti -1c
+.RI "bool \fBUpdate\fP (float frame_time)"
+.br
+.ti -1c
+.RI "void \fBRender\fP ()"
+.br
+.ti -1c
+.RI "b2Body * \fBCreateCollisionBody\fP (b2BodyDef bodyDef, b2FixtureDef fixtureDef, \fBWorldObject\fP *owningObject)"
+.br
+.RI "Creates a collision body for a specified object, object can be null if using for things like environment or invisible walls @NOTE: The owning object will be used to call OnCollision function  "
+.ti -1c
+.RI "__forceinline gef::Renderer3D * \fBGetRenderer3D\fP () const"
+.br
+.ti -1c
+.RI "__forceinline gef::SpriteRenderer * \fBGetSpriteRenderer\fP () const"
+.br
+.ti -1c
+.RI "__forceinline b2World * \fBGetBox2DWorld\fP () const"
+.br
+.ti -1c
+.RI "__forceinline float \fBGetViewportWidth\fP () const"
+.br
+.ti -1c
+.RI "__forceinline float \fBGetViewportHeight\fP () const"
+.br
+.ti -1c
+.RI "__forceinline \fBPlayerCharacter\fP * \fBGetPlayerCharacter\fP () const"
+.br
+.ti -1c
+.RI "__forceinline \fBPrimitiveBuilder\fP * \fBGetPrimitiveBuilder\fP () const"
+.br
+.ti -1c
+.RI "__forceinline gef::Vector4 \fBGetCameraEye\fP () const"
+.br
+.ti -1c
+.RI "__forceinline gef::Vector4 \fBGetCameraLookAt\fP () const"
+.br
+.ti -1c
+.RI "__forceinline float \fBGetCurrentGameTime\fP () const"
+.br
+.ti -1c
+.RI "__forceinline float \fBGetLastDeltaTime\fP () const"
+.br
+.ti -1c
+.RI "gef::Mesh * \fBRequestMeshByName\fP (std::string meshName)"
+.br
+.ti -1c
+.RI "gef::Texture * \fBRequestTextureByName\fP (std::string textureName)"
+.br
+.ti -1c
+.RI "gef::Font * \fBGetFont\fP ()"
+.br
+.ti -1c
+.RI "gef::AudioManager * \fBGetAudioManager\fP ()"
+.br
+.ti -1c
+.RI "const gef::Vector2 \fBGetLastTouchPosition\fP ()"
+.br
+.ti -1c
+.RI "void \fBSetGameState\fP (\fBGameState::Type\fP newState)"
+.br
+.ti -1c
+.RI "\fBGameState::Type\fP \fBGetGameState\fP () const"
+.br
+.ti -1c
+.RI "const uint32_t \fBGetPlayerMoney\fP ()"
+.br
+.ti -1c
+.RI "void \fBIncreasePlayerMoney\fP (uint32_t increaseAmount)"
+.br
+.ti -1c
+.RI "void \fBApplyCostToPlayerMoney\fP (uint32_t cost)"
+.br
+.ti -1c
+.RI "void \fBApplyCameraShake\fP (\fBFCameraShake\fP newShake)"
+.br
+.RI "Applies camera shake @NOTE: This overwrites the previous camera shake  "
+.ti -1c
+.RI "void \fBApplyRadialDamage\fP (float damageAmount, gef::Vector4 origin, float innerRadius, float outerRadius)"
+.br
+.ti -1c
+.RI "void \fBPlaySample\fP (std::string sampleName, float pitch=1, bool bIsLooping=false)"
+.br
+.ti -1c
+.RI "void \fBAddPointerLocationOffset\fP (gef::Vector2 offset)"
+.br
+.ti -1c
+.RI "void \fBSetPointerLocation\fP (gef::Vector2 newLocation)"
+.br
+.ti -1c
+.RI "template<typename MeshActorType  = MeshActor> MeshActorType * \fBSpawnMeshActor\fP (gef::Mesh *mesh=nullptr, gef::Vector4 translation=gef::Vector4::kZero, gef::Vector4 rotation=gef::Vector4::kZero, gef::Vector4 scale=gef::Vector4::kOne, \fBWorldObject\fP *owner=nullptr)"
+.br
+.RI "Spawns a \fBMeshActor\fP into the scene and gets it ready for rendering and updating  "
+.ti -1c
+.RI "template<typename SpriteActorType  = SpriteActor> SpriteActorType * \fBSpawnSpriteActor\fP (gef::Sprite *sprite=nullptr, gef::Vector4 position=gef::Vector4::kZero, float rotation=0\&.f, \fBWorldObject\fP *owner=nullptr)"
+.br
+.RI "Spawns a \fBSpriteActor\fP into the scene and gets it ready for rendering and updating  "
+.in -1c
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "SceneApp::SceneApp (gef::Platform & platform)"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "void SceneApp::AddPointerLocationOffset (gef::Vector2 offset)\fC [inline]\fP"
+
+.SS "void SceneApp::ApplyCameraShake (\fBFCameraShake\fP newShake)"
+
+.PP
+Applies camera shake @NOTE: This overwrites the previous camera shake  
+.SS "void SceneApp::ApplyCostToPlayerMoney (uint32_t cost)\fC [inline]\fP"
+
+.SS "void SceneApp::ApplyRadialDamage (float damageAmount, gef::Vector4 origin, float innerRadius, float outerRadius)"
+
+.SS "void SceneApp::CleanUp ()"
+
+.SS "b2Body * SceneApp::CreateCollisionBody (b2BodyDef bodyDef, b2FixtureDef fixtureDef, \fBWorldObject\fP * owningObject)"
+
+.PP
+Creates a collision body for a specified object, object can be null if using for things like environment or invisible walls @NOTE: The owning object will be used to call OnCollision function  
+.SS "gef::AudioManager * SceneApp::GetAudioManager ()\fC [inline]\fP"
+
+.SS "__forceinline b2World * SceneApp::GetBox2DWorld () const\fC [inline]\fP"
+
+.SS "__forceinline gef::Vector4 SceneApp::GetCameraEye () const\fC [inline]\fP"
+
+.SS "__forceinline gef::Vector4 SceneApp::GetCameraLookAt () const\fC [inline]\fP"
+
+.SS "__forceinline float SceneApp::GetCurrentGameTime () const\fC [inline]\fP"
+
+.SS "gef::Font * SceneApp::GetFont ()\fC [inline]\fP"
+
+.SS "\fBGameState::Type\fP SceneApp::GetGameState () const\fC [inline]\fP"
+
+.SS "__forceinline float SceneApp::GetLastDeltaTime () const\fC [inline]\fP"
+
+.SS "const gef::Vector2 SceneApp::GetLastTouchPosition ()"
+
+.SS "__forceinline \fBPlayerCharacter\fP * SceneApp::GetPlayerCharacter () const\fC [inline]\fP"
+
+.SS "const uint32_t SceneApp::GetPlayerMoney ()\fC [inline]\fP"
+
+.SS "__forceinline \fBPrimitiveBuilder\fP * SceneApp::GetPrimitiveBuilder () const\fC [inline]\fP"
+
+.SS "__forceinline gef::Renderer3D * SceneApp::GetRenderer3D () const\fC [inline]\fP"
+
+.SS "__forceinline gef::SpriteRenderer * SceneApp::GetSpriteRenderer () const\fC [inline]\fP"
+
+.SS "__forceinline float SceneApp::GetViewportHeight () const\fC [inline]\fP"
+
+.SS "__forceinline float SceneApp::GetViewportWidth () const\fC [inline]\fP"
+
+.SS "void SceneApp::IncreasePlayerMoney (uint32_t increaseAmount)\fC [inline]\fP"
+
+.SS "void SceneApp::Init ()"
+
+.SS "void SceneApp::PlaySample (std::string sampleName, float pitch = \fC1\fP, bool bIsLooping = \fCfalse\fP)"
+
+.SS "void SceneApp::Render ()"
+
+.SS "gef::Mesh * SceneApp::RequestMeshByName (std::string meshName)"
+
+.SS "gef::Texture * SceneApp::RequestTextureByName (std::string textureName)"
+
+.SS "void SceneApp::SetGameState (\fBGameState::Type\fP newState)"
+
+.SS "void SceneApp::SetPointerLocation (gef::Vector2 newLocation)\fC [inline]\fP"
+
+.SS "template<typename MeshActorType  = MeshActor> MeshActorType * SceneApp::SpawnMeshActor (gef::Mesh * mesh = \fCnullptr\fP, gef::Vector4 translation = \fCgef::Vector4::kZero\fP, gef::Vector4 rotation = \fCgef::Vector4::kZero\fP, gef::Vector4 scale = \fCgef::Vector4::kOne\fP, \fBWorldObject\fP * owner = \fCnullptr\fP)\fC [inline]\fP"
+
+.PP
+Spawns a \fBMeshActor\fP into the scene and gets it ready for rendering and updating  
+.SS "template<typename SpriteActorType  = SpriteActor> SpriteActorType * SceneApp::SpawnSpriteActor (gef::Sprite * sprite = \fCnullptr\fP, gef::Vector4 position = \fCgef::Vector4::kZero\fP, float rotation = \fC0\&.f\fP, \fBWorldObject\fP * owner = \fCnullptr\fP)\fC [inline]\fP"
+
+.PP
+Spawns a \fBSpriteActor\fP into the scene and gets it ready for rendering and updating  
+.SS "bool SceneApp::Update (float frame_time)"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Hellwatch from the source code\&.

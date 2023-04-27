@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_struct_f_particle_data" xml:lang="en-US">
+<title>FParticleData Struct Reference</title>
+<indexterm><primary>FParticleData</primary></indexterm>
+<para>
+<computeroutput>#include &lt;ParticleActor.h&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>std::vector&lt; gef::Texture * &gt; <link linkend="_struct_f_particle_data_1a059353bdabbbac1a3b74c7b322a5280e">textures</link></para>
+</listitem>
+            <listitem><para>float <link linkend="_struct_f_particle_data_1a5ec56fa1191a3971105010b03473502d">startTime</link> = 0</para>
+</listitem>
+            <listitem><para>float <link linkend="_struct_f_particle_data_1a93f26d0a1f582ee5e7c48853afe34fed">duration</link> = 1</para>
+</listitem>
+            <listitem><para>float <link linkend="_struct_f_particle_data_1a555a566a858a38fac2a460b135d98fe7">lingerTime</link> = 0.25</para>
+</listitem>
+            <listitem><para>gef::Vector4 <link linkend="_struct_f_particle_data_1a17c186ca0a48309c1a664ccdd563684d">scale</link> = gef::Vector4::kOne</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_struct_f_particle_data_1a93f26d0a1f582ee5e7c48853afe34fed"/><section>
+    <title>duration</title>
+<indexterm><primary>duration</primary><secondary>FParticleData</secondary></indexterm>
+<indexterm><primary>FParticleData</primary><secondary>duration</secondary></indexterm>
+<para><computeroutput>float FParticleData::duration = 1</computeroutput></para></section>
+<anchor xml:id="_struct_f_particle_data_1a555a566a858a38fac2a460b135d98fe7"/><section>
+    <title>lingerTime</title>
+<indexterm><primary>lingerTime</primary><secondary>FParticleData</secondary></indexterm>
+<indexterm><primary>FParticleData</primary><secondary>lingerTime</secondary></indexterm>
+<para><computeroutput>float FParticleData::lingerTime = 0.25</computeroutput></para></section>
+<anchor xml:id="_struct_f_particle_data_1a17c186ca0a48309c1a664ccdd563684d"/><section>
+    <title>scale</title>
+<indexterm><primary>scale</primary><secondary>FParticleData</secondary></indexterm>
+<indexterm><primary>FParticleData</primary><secondary>scale</secondary></indexterm>
+<para><computeroutput>gef::Vector4 FParticleData::scale = gef::Vector4::kOne</computeroutput></para></section>
+<anchor xml:id="_struct_f_particle_data_1a5ec56fa1191a3971105010b03473502d"/><section>
+    <title>startTime</title>
+<indexterm><primary>startTime</primary><secondary>FParticleData</secondary></indexterm>
+<indexterm><primary>FParticleData</primary><secondary>startTime</secondary></indexterm>
+<para><computeroutput>float FParticleData::startTime = 0</computeroutput></para></section>
+<anchor xml:id="_struct_f_particle_data_1a059353bdabbbac1a3b74c7b322a5280e"/><section>
+    <title>textures</title>
+<indexterm><primary>textures</primary><secondary>FParticleData</secondary></indexterm>
+<indexterm><primary>FParticleData</primary><secondary>textures</secondary></indexterm>
+<para><computeroutput>std::vector&lt;gef::Texture*&gt; FParticleData::textures</computeroutput></para></section>
+<para>
+The documentation for this struct was generated from the following file:</para>
+D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/<link linkend="__particle_actor_8h">ParticleActor.h</link></section>
+</section>

@@ -1,0 +1,226 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="_actor_component_8h" kind="file" language="C++">
+    <compoundname>ActorComponent.h</compoundname>
+    <includedby refid="_ability_8cpp" local="yes">D:/Uni/CMP208/Hellwatch/build/vs2017/Abilities/Ability.cpp</includedby>
+    <includedby refid="_abilities_component_8h" local="yes">D:/Uni/CMP208/Hellwatch/build/vs2017/ActorComponents/AbilitiesComponent.h</includedby>
+    <includedby refid="_actor_component_8cpp" local="yes">D:/Uni/CMP208/Hellwatch/build/vs2017/ActorComponents/ActorComponent.cpp</includedby>
+    <includedby refid="_character_movement_component_8h" local="yes">D:/Uni/CMP208/Hellwatch/build/vs2017/ActorComponents/CharacterMovementComponent.h</includedby>
+    <includedby refid="_mesh_actor_8cpp" local="yes">D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActor.cpp</includedby>
+    <includedby refid="_attribute_component_8h" local="yes">D:/Uni/CMP208/Hellwatch/build/vs2017/Attributes/AttributeComponent.h</includedby>
+    <invincdepgraph>
+      <node id="2">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/Abilities/Ability.cpp</label>
+        <link refid="_ability_8cpp"/>
+      </node>
+      <node id="5">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/Abilities/PlayerAbilities/Dash.cpp</label>
+        <link refid="_dash_8cpp"/>
+      </node>
+      <node id="4">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/Abilities/PlayerAbilities/Dash.h</label>
+        <link refid="_dash_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/Abilities/PlayerAbilities/IceBolt.cpp</label>
+        <link refid="_ice_bolt_8cpp"/>
+      </node>
+      <node id="8">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/Abilities/PlayerAbilities/Meteor.cpp</label>
+        <link refid="_meteor_8cpp"/>
+      </node>
+      <node id="9">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/Abilities/PlayerAbilities/PiercingStrike.cpp</label>
+        <link refid="_piercing_strike_8cpp"/>
+      </node>
+      <node id="10">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/ActorComponents/AbilitiesComponent.cpp</label>
+        <link refid="_abilities_component_8cpp"/>
+      </node>
+      <node id="3">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/ActorComponents/AbilitiesComponent.h</label>
+        <link refid="_abilities_component_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/ActorComponents/ActorComponent.cpp</label>
+        <link refid="_actor_component_8cpp"/>
+      </node>
+      <node id="1">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/ActorComponents/ActorComponent.h</label>
+        <link refid="_actor_component_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/ActorComponents/CharacterMovementComponent.cpp</label>
+        <link refid="_character_movement_component_8cpp"/>
+      </node>
+      <node id="13">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/ActorComponents/CharacterMovementComponent.h</label>
+        <link refid="_character_movement_component_8h"/>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="22">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActor.cpp</label>
+        <link refid="_mesh_actor_8cpp"/>
+      </node>
+      <node id="17">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/Boss.cpp</label>
+        <link refid="_boss_8cpp"/>
+      </node>
+      <node id="16">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/Boss.h</label>
+        <link refid="_boss_8h"/>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+      </node>
+      <node id="19">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/Enemy.cpp</label>
+        <link refid="_enemy_8cpp"/>
+      </node>
+      <node id="15">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/Enemy.h</label>
+        <link refid="_enemy_8h"/>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+      </node>
+      <node id="25">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/EnemyDummy.cpp</label>
+        <link refid="_enemy_dummy_8cpp"/>
+      </node>
+      <node id="24">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/EnemyDummy.h</label>
+        <link refid="_enemy_dummy_8h"/>
+        <childnode refid="25" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/PlayerCharacter.cpp</label>
+        <link refid="_player_character_8cpp"/>
+      </node>
+      <node id="11">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/RangedEnemy.cpp</label>
+        <link refid="_ranged_enemy_8cpp"/>
+      </node>
+      <node id="20">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/RangedEnemy.h</label>
+        <link refid="_ranged_enemy_8h"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+      </node>
+      <node id="26">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/Attributes/AttributeComponent.cpp</label>
+        <link refid="_attribute_component_8cpp"/>
+      </node>
+      <node id="23">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/Attributes/AttributeComponent.h</label>
+        <link refid="_attribute_component_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+      </node>
+      <node id="18">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/WaveManager.cpp</label>
+        <link refid="_wave_manager_8cpp"/>
+      </node>
+      <node id="27">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/UserInterface/ShopMenu.cpp</label>
+        <link refid="_shop_menu_8cpp"/>
+      </node>
+      <node id="21">
+        <label>D:/Uni/CMP208/Hellwatch/scene_app.cpp</label>
+        <link refid="scene__app_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_actor_component" prot="public">ActorComponent</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_world_object" kindref="compound">WorldObject</ref>;</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8" refid="class_actor_component" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_actor_component" kindref="compound">ActorComponent</ref></highlight></codeline>
+<codeline lineno="9"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_actor_component_1ab4ea0eaffa2c616a209e2887f80902f2" kindref="member">Init</ref>(<ref refid="class_world_object" kindref="compound">WorldObject</ref>*<sp/>inOwnerActor);</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_actor_component_1af730b3c7d2b4154e1fb0962db7750f6b" kindref="member">UpdateComponent</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>deltaTime);</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_actor_component_1a467d082f3fedd6cf2acacb117450f90e" kindref="member">PostInit</ref>();</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19" refid="class_actor_component_1a2766e186399b24f5d7e2d143ffa26e05" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_world_object" kindref="compound">WorldObject</ref>*<sp/><ref refid="class_actor_component_1a2766e186399b24f5d7e2d143ffa26e05" kindref="member">ownerActor</ref>;</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23" refid="class_actor_component_1a3705d464da5f840eca1d14bcce07372d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>__forceinline<sp/><ref refid="class_world_object" kindref="compound">WorldObject</ref>*<sp/><ref refid="class_actor_component_1a3705d464da5f840eca1d14bcce07372d" kindref="member">GetOwner</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_actor_component_1a2766e186399b24f5d7e2d143ffa26e05" kindref="member">ownerActor</ref>;<sp/>}</highlight></codeline>
+<codeline lineno="24"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/ActorComponents/ActorComponent.h"/>
+  </compounddef>
+</doxygen>

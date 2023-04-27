@@ -1,0 +1,128 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="struct_f_camera_shake" kind="struct" language="C++" prot="public">
+    <compoundname>FCameraShake</compoundname>
+    <includes refid="scene__app_8h" local="no">scene_app.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_f_camera_shake_1ae28540e423d42a897f77f196f27bcde7" prot="public" static="no" mutable="no">
+        <type>gef::Vector4</type>
+        <definition>gef::Vector4 FCameraShake::maxOffset</definition>
+        <argsstring></argsstring>
+        <name>maxOffset</name>
+        <qualifiedname>FCameraShake::maxOffset</qualifiedname>
+        <initializer>= gef::Vector4::kZero</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/scene_app.h" line="32" column="14" bodyfile="D:/Uni/CMP208/Hellwatch/scene_app.h" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_f_camera_shake_1a957c35cfc269421091fc884a21d41899" prot="public" static="no" mutable="no">
+        <type>gef::Vector4</type>
+        <definition>gef::Vector4 FCameraShake::minOffset</definition>
+        <argsstring></argsstring>
+        <name>minOffset</name>
+        <qualifiedname>FCameraShake::minOffset</qualifiedname>
+        <initializer>= gef::Vector4::kZero</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/scene_app.h" line="33" column="14" bodyfile="D:/Uni/CMP208/Hellwatch/scene_app.h" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_f_camera_shake_1a0067a7fbb68d30a2f8d68511a6403e46" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float FCameraShake::lerpAlpha</definition>
+        <argsstring></argsstring>
+        <name>lerpAlpha</name>
+        <qualifiedname>FCameraShake::lerpAlpha</qualifiedname>
+        <initializer>= 0.f</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/scene_app.h" line="35" column="7" bodyfile="D:/Uni/CMP208/Hellwatch/scene_app.h" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_f_camera_shake_1a28904f65e3bcb603c865ba72bcbea0e2" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float FCameraShake::duration</definition>
+        <argsstring></argsstring>
+        <name>duration</name>
+        <qualifiedname>FCameraShake::duration</qualifiedname>
+        <initializer>= 1.f</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/scene_app.h" line="36" column="7" bodyfile="D:/Uni/CMP208/Hellwatch/scene_app.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_f_camera_shake_1a089db07499dd81ac8736501fbe46aa86" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float FCameraShake::intensity</definition>
+        <argsstring></argsstring>
+        <name>intensity</name>
+        <qualifiedname>FCameraShake::intensity</qualifiedname>
+        <initializer>= 1.f</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/scene_app.h" line="37" column="7" bodyfile="D:/Uni/CMP208/Hellwatch/scene_app.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_f_camera_shake_1a11948ae09ec868a32530378efd25f34f" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float FCameraShake::cameraShakeStartTime</definition>
+        <argsstring></argsstring>
+        <name>cameraShakeStartTime</name>
+        <qualifiedname>FCameraShake::cameraShakeStartTime</qualifiedname>
+        <initializer>= 0.f</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/scene_app.h" line="38" column="7" bodyfile="D:/Uni/CMP208/Hellwatch/scene_app.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_f_camera_shake_1a11241077b74ae4a78aab9c55f25f8827" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool FCameraShake::bMovingForward</definition>
+        <argsstring></argsstring>
+        <name>bMovingForward</name>
+        <qualifiedname>FCameraShake::bMovingForward</qualifiedname>
+        <initializer>= true</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/scene_app.h" line="40" column="6" bodyfile="D:/Uni/CMP208/Hellwatch/scene_app.h" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/Uni/CMP208/Hellwatch/scene_app.h" line="30" column="1" bodyfile="D:/Uni/CMP208/Hellwatch/scene_app.h" bodystart="31" bodyend="41"/>
+    <listofallmembers>
+      <member refid="struct_f_camera_shake_1a11241077b74ae4a78aab9c55f25f8827" prot="public" virt="non-virtual"><scope>FCameraShake</scope><name>bMovingForward</name></member>
+      <member refid="struct_f_camera_shake_1a11948ae09ec868a32530378efd25f34f" prot="public" virt="non-virtual"><scope>FCameraShake</scope><name>cameraShakeStartTime</name></member>
+      <member refid="struct_f_camera_shake_1a28904f65e3bcb603c865ba72bcbea0e2" prot="public" virt="non-virtual"><scope>FCameraShake</scope><name>duration</name></member>
+      <member refid="struct_f_camera_shake_1a089db07499dd81ac8736501fbe46aa86" prot="public" virt="non-virtual"><scope>FCameraShake</scope><name>intensity</name></member>
+      <member refid="struct_f_camera_shake_1a0067a7fbb68d30a2f8d68511a6403e46" prot="public" virt="non-virtual"><scope>FCameraShake</scope><name>lerpAlpha</name></member>
+      <member refid="struct_f_camera_shake_1ae28540e423d42a897f77f196f27bcde7" prot="public" virt="non-virtual"><scope>FCameraShake</scope><name>maxOffset</name></member>
+      <member refid="struct_f_camera_shake_1a957c35cfc269421091fc884a21d41899" prot="public" virt="non-virtual"><scope>FCameraShake</scope><name>minOffset</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

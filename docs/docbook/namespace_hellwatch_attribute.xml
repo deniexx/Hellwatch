@@ -1,0 +1,60 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_namespace_hellwatch_attribute" xml:lang="en-US">
+<title>HellwatchAttribute Namespace Reference</title>
+<indexterm><primary>HellwatchAttribute</primary></indexterm>
+<para>
+
+<para>Attribute Type  </para>
+ 
+</para>
+<simplesect>
+    <title>Enumerations    </title>
+        <itemizedlist>
+            <listitem><para>enum <link linkend="_namespace_hellwatch_attribute_1ad0a500e65129d06e4589f9bca54c4a7d">Type</link> { <?linebreak?><link linkend="_namespace_hellwatch_attribute_1ad0a500e65129d06e4589f9bca54c4a7da6d26574d573c085ec34ba30576725713">Health</link> = 0
+, <link linkend="_namespace_hellwatch_attribute_1ad0a500e65129d06e4589f9bca54c4a7dad3c5decb2b14966e4ae3e8e07fc975a4">Mana</link>
+, <link linkend="_namespace_hellwatch_attribute_1ad0a500e65129d06e4589f9bca54c4a7da32b2fa4bc40129b2f09aa2a9a4192d50">Vitality</link>
+, <link linkend="_namespace_hellwatch_attribute_1ad0a500e65129d06e4589f9bca54c4a7da1863c83b1312f525ab940b88fd83a2f8">Wisdom</link>
+, <?linebreak?><link linkend="_namespace_hellwatch_attribute_1ad0a500e65129d06e4589f9bca54c4a7da7a4d8b401430813782ca3155c614b3af">Toughness</link>
+, <link linkend="_namespace_hellwatch_attribute_1ad0a500e65129d06e4589f9bca54c4a7daf89b5eb0bb9f25288755790fff1e0603">Energy</link>
+, <link linkend="_namespace_hellwatch_attribute_1ad0a500e65129d06e4589f9bca54c4a7da1a1cde64b50095f2d28168d2c6b80240">None</link>
+ }</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Attribute Type  </para>
+</section>
+<section>
+<title>Enumeration Type Documentation</title>
+<anchor xml:id="_namespace_hellwatch_attribute_1ad0a500e65129d06e4589f9bca54c4a7d"/><section>
+    <title>Type</title>
+<indexterm><primary>Type</primary><secondary>HellwatchAttribute</secondary></indexterm>
+<indexterm><primary>HellwatchAttribute</primary><secondary>Type</secondary></indexterm>
+<para><computeroutput>enum <link linkend="_namespace_hellwatch_attribute_1ad0a500e65129d06e4589f9bca54c4a7d">HellwatchAttribute::Type</link></computeroutput></para><informaltable frame="all">
+<title>Enumerator</title>
+    <tgroup cols="2" align="left" colsep="1" rowsep="1">
+      <colspec colname='c1'/>
+      <colspec colname='c2'/>
+<tbody>
+<row><entry><indexterm><primary>Health</primary><secondary>HellwatchAttribute</secondary></indexterm>
+<indexterm><primary>HellwatchAttribute</primary><secondary>Health</secondary></indexterm>
+<anchor xml:id="_namespace_hellwatch_attribute_1ad0a500e65129d06e4589f9bca54c4a7da6d26574d573c085ec34ba30576725713"/>Health</entry><entry></entry></row><row><entry><indexterm><primary>Mana</primary><secondary>HellwatchAttribute</secondary></indexterm>
+<indexterm><primary>HellwatchAttribute</primary><secondary>Mana</secondary></indexterm>
+<anchor xml:id="_namespace_hellwatch_attribute_1ad0a500e65129d06e4589f9bca54c4a7dad3c5decb2b14966e4ae3e8e07fc975a4"/>Mana</entry><entry></entry></row><row><entry><indexterm><primary>Vitality</primary><secondary>HellwatchAttribute</secondary></indexterm>
+<indexterm><primary>HellwatchAttribute</primary><secondary>Vitality</secondary></indexterm>
+<anchor xml:id="_namespace_hellwatch_attribute_1ad0a500e65129d06e4589f9bca54c4a7da32b2fa4bc40129b2f09aa2a9a4192d50"/>Vitality</entry><entry></entry></row><row><entry><indexterm><primary>Wisdom</primary><secondary>HellwatchAttribute</secondary></indexterm>
+<indexterm><primary>HellwatchAttribute</primary><secondary>Wisdom</secondary></indexterm>
+<anchor xml:id="_namespace_hellwatch_attribute_1ad0a500e65129d06e4589f9bca54c4a7da1863c83b1312f525ab940b88fd83a2f8"/>Wisdom</entry><entry></entry></row><row><entry><indexterm><primary>Toughness</primary><secondary>HellwatchAttribute</secondary></indexterm>
+<indexterm><primary>HellwatchAttribute</primary><secondary>Toughness</secondary></indexterm>
+<anchor xml:id="_namespace_hellwatch_attribute_1ad0a500e65129d06e4589f9bca54c4a7da7a4d8b401430813782ca3155c614b3af"/>Toughness</entry><entry></entry></row><row><entry><indexterm><primary>Energy</primary><secondary>HellwatchAttribute</secondary></indexterm>
+<indexterm><primary>HellwatchAttribute</primary><secondary>Energy</secondary></indexterm>
+<anchor xml:id="_namespace_hellwatch_attribute_1ad0a500e65129d06e4589f9bca54c4a7daf89b5eb0bb9f25288755790fff1e0603"/>Energy</entry><entry></entry></row><row><entry><indexterm><primary>None</primary><secondary>HellwatchAttribute</secondary></indexterm>
+<indexterm><primary>HellwatchAttribute</primary><secondary>None</secondary></indexterm>
+<anchor xml:id="_namespace_hellwatch_attribute_1ad0a500e65129d06e4589f9bca54c4a7da1a1cde64b50095f2d28168d2c6b80240"/>None</entry><entry></entry></row>    </tbody>
+    </tgroup>
+</informaltable>
+</section>
+</section>
+</section>

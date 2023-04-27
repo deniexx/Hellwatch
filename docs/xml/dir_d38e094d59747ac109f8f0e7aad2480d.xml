@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="dir_d38e094d59747ac109f8f0e7aad2480d" kind="dir">
+    <compoundname>D:/Uni/CMP208/Hellwatch/build/vs2017/Interfaces</compoundname>
+    <innerfile refid="_damagable_8h">Damagable.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/Interfaces/"/>
+  </compounddef>
+</doxygen>

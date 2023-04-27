@@ -1,0 +1,234 @@
+\hypertarget{class_menu}{}\doxysection{Menu Class Reference}
+\label{class_menu}\index{Menu@{Menu}}
+
+
+Base \mbox{\hyperlink{class_menu}{Menu}} class, that mainly handles actions that we bind to in child classes   
+
+
+
+
+{\ttfamily \#include $<$Menu.\+h$>$}
+
+
+
+Inheritance diagram for Menu\+:
+% FIG 0
+
+
+Collaboration diagram for Menu\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_menu_a831387f51358cfb88cd018e1777bc980}{$\sim$\+Menu}} ()
+\item 
+virtual void \mbox{\hyperlink{class_menu_a0c64b7333b29000c8b219d2ebc28c03b}{Init}} ()=0
+\begin{DoxyCompactList}\small\item\em Initializes the menu  \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_menu_af29d71473a414e31e914bc637840cb3e}{Update}} ()
+\begin{DoxyCompactList}\small\item\em Updates the controller of the menu and checks for highlights  \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_menu_acef1c8e0a83655c3b17c217567527f8b}{Draw\+Menu\+HUD}} (gef\+::\+Font $\ast$font\+\_\+, gef\+::\+Sprite\+Renderer $\ast$sprite\+\_\+renderer\+\_\+)
+\begin{DoxyCompactList}\small\item\em Draws the menu HUD  \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_player_controller}{Player\+Controller}} $\ast$ \mbox{\hyperlink{class_menu_a0187883a2d424dadf01b0218d1db7d12}{menu\+Controller}}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{struct_menu_button}{Menu\+Button}} $>$ \mbox{\hyperlink{class_menu_a6005d125bc4b0372bcd6d2719cb9a994}{menu\+Buttons}}
+\item 
+int \mbox{\hyperlink{class_menu_a1551f565b2ae79bf65449810f4ea81d5}{current\+Button\+Focused}} = 0
+\item 
+gef\+::\+Sprite $\ast$ \mbox{\hyperlink{class_menu_a2737fb42e257221f78c86b9221795255}{menu\+Sprite}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_menu_a98395444d03f38df02fa9c2aed1fb797}{On\+Up\+Button\+Pressed}} ()
+\begin{DoxyCompactList}\small\item\em When the player presses a button to navigate up the menu  \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_menu_a6b8e73974658482814f99b63ecc4d470}{On\+Down\+Button\+Pressed}} ()
+\begin{DoxyCompactList}\small\item\em When the player presses a button to navigate down the menu  \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_menu_a2370ebbed22dfd0c10491bd8ae45b771}{On\+Mouse\+Button\+Pressed}} (gef\+::\+Vector2 mouse\+Pos)
+\begin{DoxyCompactList}\small\item\em When the player presses the mouse button, checks if the mouse is over any buttons and if it is, it activates it  \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_menu_a8023104df1848b95c94e1c46fba209ca}{On\+Controller\+Up\+Button}} (gef\+::\+Vector2 dir)
+\begin{DoxyCompactList}\small\item\em When the player presses a button to navigate up the menu  \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_menu_a50e7901f94713c0719e0774474d981c2}{On\+Controller\+Down\+Button}} (gef\+::\+Vector2 dir)
+\begin{DoxyCompactList}\small\item\em When the player presses a button to navigate down the menu  \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_menu_a8bd9fce86817a1125bf7d2e371551689}{On\+Controller\+Submit\+Button}} (gef\+::\+Vector2 dir)
+\begin{DoxyCompactList}\small\item\em When the player presses a button to navigate down the menu  \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_menu_a2f2b184a3f4000ce78d9e948c95cced4}{Check\+For\+Highlight}} ()
+\begin{DoxyCompactList}\small\item\em Checks whether to highlight any buttons  \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_menu_a78e162d9e5571f0bb3e93c02cc0f76df}{Press\+Menu\+Button}} ()
+\begin{DoxyCompactList}\small\item\em Presses the currently selected menu button  \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Base \mbox{\hyperlink{class_menu}{Menu}} class, that mainly handles actions that we bind to in child classes  
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_menu_a831387f51358cfb88cd018e1777bc980}\label{class_menu_a831387f51358cfb88cd018e1777bc980}} 
+\index{Menu@{Menu}!````~Menu@{$\sim$Menu}}
+\index{````~Menu@{$\sim$Menu}!Menu@{Menu}}
+\doxysubsubsection{\texorpdfstring{$\sim$Menu()}{~Menu()}}
+{\footnotesize\ttfamily Menu\+::$\sim$\+Menu (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_menu_a2f2b184a3f4000ce78d9e948c95cced4}\label{class_menu_a2f2b184a3f4000ce78d9e948c95cced4}} 
+\index{Menu@{Menu}!CheckForHighlight@{CheckForHighlight}}
+\index{CheckForHighlight@{CheckForHighlight}!Menu@{Menu}}
+\doxysubsubsection{\texorpdfstring{CheckForHighlight()}{CheckForHighlight()}}
+{\footnotesize\ttfamily void Menu\+::\+Check\+For\+Highlight (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Checks whether to highlight any buttons  
+
+\mbox{\Hypertarget{class_menu_acef1c8e0a83655c3b17c217567527f8b}\label{class_menu_acef1c8e0a83655c3b17c217567527f8b}} 
+\index{Menu@{Menu}!DrawMenuHUD@{DrawMenuHUD}}
+\index{DrawMenuHUD@{DrawMenuHUD}!Menu@{Menu}}
+\doxysubsubsection{\texorpdfstring{DrawMenuHUD()}{DrawMenuHUD()}}
+{\footnotesize\ttfamily void Menu\+::\+Draw\+Menu\+HUD (\begin{DoxyParamCaption}\item[{gef\+::\+Font $\ast$}]{font\+\_\+,  }\item[{gef\+::\+Sprite\+Renderer $\ast$}]{sprite\+\_\+renderer\+\_\+ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Draws the menu HUD  
+
+
+
+Reimplemented in \mbox{\hyperlink{class_game_end_menu_a6470014c7f3d8981a39e961ae5c3e6df}{Game\+End\+Menu}}, and \mbox{\hyperlink{class_shop_menu_a17f8a9f65b1d66a40d3fed952bedde2b}{Shop\+Menu}}.
+
+\mbox{\Hypertarget{class_menu_a0c64b7333b29000c8b219d2ebc28c03b}\label{class_menu_a0c64b7333b29000c8b219d2ebc28c03b}} 
+\index{Menu@{Menu}!Init@{Init}}
+\index{Init@{Init}!Menu@{Menu}}
+\doxysubsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily virtual void Menu\+::\+Init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Initializes the menu  
+
+
+
+Implemented in \mbox{\hyperlink{class_game_end_menu_ac4d3cf8e606c29eb97a258895fc0217a}{Game\+End\+Menu}}, \mbox{\hyperlink{class_main_menu_a77aaa0eb810c74a907165b6a1acec31f}{Main\+Menu}}, \mbox{\hyperlink{class_shop_menu_ad00ead74fb0ef7f5a265c1725fa6ccbf}{Shop\+Menu}}, and \mbox{\hyperlink{class_pause_menu_a029c44778ea655c2762cbddc8941a6f8}{Pause\+Menu}}.
+
+\mbox{\Hypertarget{class_menu_a50e7901f94713c0719e0774474d981c2}\label{class_menu_a50e7901f94713c0719e0774474d981c2}} 
+\index{Menu@{Menu}!OnControllerDownButton@{OnControllerDownButton}}
+\index{OnControllerDownButton@{OnControllerDownButton}!Menu@{Menu}}
+\doxysubsubsection{\texorpdfstring{OnControllerDownButton()}{OnControllerDownButton()}}
+{\footnotesize\ttfamily void Menu\+::\+On\+Controller\+Down\+Button (\begin{DoxyParamCaption}\item[{gef\+::\+Vector2}]{dir }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+When the player presses a button to navigate down the menu  
+
+\mbox{\Hypertarget{class_menu_a8bd9fce86817a1125bf7d2e371551689}\label{class_menu_a8bd9fce86817a1125bf7d2e371551689}} 
+\index{Menu@{Menu}!OnControllerSubmitButton@{OnControllerSubmitButton}}
+\index{OnControllerSubmitButton@{OnControllerSubmitButton}!Menu@{Menu}}
+\doxysubsubsection{\texorpdfstring{OnControllerSubmitButton()}{OnControllerSubmitButton()}}
+{\footnotesize\ttfamily void Menu\+::\+On\+Controller\+Submit\+Button (\begin{DoxyParamCaption}\item[{gef\+::\+Vector2}]{dir }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+When the player presses a button to navigate down the menu  
+
+\mbox{\Hypertarget{class_menu_a8023104df1848b95c94e1c46fba209ca}\label{class_menu_a8023104df1848b95c94e1c46fba209ca}} 
+\index{Menu@{Menu}!OnControllerUpButton@{OnControllerUpButton}}
+\index{OnControllerUpButton@{OnControllerUpButton}!Menu@{Menu}}
+\doxysubsubsection{\texorpdfstring{OnControllerUpButton()}{OnControllerUpButton()}}
+{\footnotesize\ttfamily void Menu\+::\+On\+Controller\+Up\+Button (\begin{DoxyParamCaption}\item[{gef\+::\+Vector2}]{dir }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+When the player presses a button to navigate up the menu  
+
+\mbox{\Hypertarget{class_menu_a6b8e73974658482814f99b63ecc4d470}\label{class_menu_a6b8e73974658482814f99b63ecc4d470}} 
+\index{Menu@{Menu}!OnDownButtonPressed@{OnDownButtonPressed}}
+\index{OnDownButtonPressed@{OnDownButtonPressed}!Menu@{Menu}}
+\doxysubsubsection{\texorpdfstring{OnDownButtonPressed()}{OnDownButtonPressed()}}
+{\footnotesize\ttfamily void Menu\+::\+On\+Down\+Button\+Pressed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+When the player presses a button to navigate down the menu  
+
+\mbox{\Hypertarget{class_menu_a2370ebbed22dfd0c10491bd8ae45b771}\label{class_menu_a2370ebbed22dfd0c10491bd8ae45b771}} 
+\index{Menu@{Menu}!OnMouseButtonPressed@{OnMouseButtonPressed}}
+\index{OnMouseButtonPressed@{OnMouseButtonPressed}!Menu@{Menu}}
+\doxysubsubsection{\texorpdfstring{OnMouseButtonPressed()}{OnMouseButtonPressed()}}
+{\footnotesize\ttfamily void Menu\+::\+On\+Mouse\+Button\+Pressed (\begin{DoxyParamCaption}\item[{gef\+::\+Vector2}]{mouse\+Pos }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+When the player presses the mouse button, checks if the mouse is over any buttons and if it is, it activates it  
+
+
+
+Reimplemented in \mbox{\hyperlink{class_shop_menu_a9d9a71e0eb5eb51a917b46402e9fbc9a}{Shop\+Menu}}.
+
+\mbox{\Hypertarget{class_menu_a98395444d03f38df02fa9c2aed1fb797}\label{class_menu_a98395444d03f38df02fa9c2aed1fb797}} 
+\index{Menu@{Menu}!OnUpButtonPressed@{OnUpButtonPressed}}
+\index{OnUpButtonPressed@{OnUpButtonPressed}!Menu@{Menu}}
+\doxysubsubsection{\texorpdfstring{OnUpButtonPressed()}{OnUpButtonPressed()}}
+{\footnotesize\ttfamily void Menu\+::\+On\+Up\+Button\+Pressed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+When the player presses a button to navigate up the menu  
+
+\mbox{\Hypertarget{class_menu_a78e162d9e5571f0bb3e93c02cc0f76df}\label{class_menu_a78e162d9e5571f0bb3e93c02cc0f76df}} 
+\index{Menu@{Menu}!PressMenuButton@{PressMenuButton}}
+\index{PressMenuButton@{PressMenuButton}!Menu@{Menu}}
+\doxysubsubsection{\texorpdfstring{PressMenuButton()}{PressMenuButton()}}
+{\footnotesize\ttfamily void Menu\+::\+Press\+Menu\+Button (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Presses the currently selected menu button  
+
+\mbox{\Hypertarget{class_menu_af29d71473a414e31e914bc637840cb3e}\label{class_menu_af29d71473a414e31e914bc637840cb3e}} 
+\index{Menu@{Menu}!Update@{Update}}
+\index{Update@{Update}!Menu@{Menu}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void Menu\+::\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Updates the controller of the menu and checks for highlights  
+
+
+
+Reimplemented in \mbox{\hyperlink{class_shop_menu_a17c43cd733173e8a19eaaff593dbfec7}{Shop\+Menu}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_menu_a1551f565b2ae79bf65449810f4ea81d5}\label{class_menu_a1551f565b2ae79bf65449810f4ea81d5}} 
+\index{Menu@{Menu}!currentButtonFocused@{currentButtonFocused}}
+\index{currentButtonFocused@{currentButtonFocused}!Menu@{Menu}}
+\doxysubsubsection{\texorpdfstring{currentButtonFocused}{currentButtonFocused}}
+{\footnotesize\ttfamily int Menu\+::current\+Button\+Focused = 0}
+
+\mbox{\Hypertarget{class_menu_a6005d125bc4b0372bcd6d2719cb9a994}\label{class_menu_a6005d125bc4b0372bcd6d2719cb9a994}} 
+\index{Menu@{Menu}!menuButtons@{menuButtons}}
+\index{menuButtons@{menuButtons}!Menu@{Menu}}
+\doxysubsubsection{\texorpdfstring{menuButtons}{menuButtons}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{struct_menu_button}{Menu\+Button}}$>$ Menu\+::menu\+Buttons}
+
+\mbox{\Hypertarget{class_menu_a0187883a2d424dadf01b0218d1db7d12}\label{class_menu_a0187883a2d424dadf01b0218d1db7d12}} 
+\index{Menu@{Menu}!menuController@{menuController}}
+\index{menuController@{menuController}!Menu@{Menu}}
+\doxysubsubsection{\texorpdfstring{menuController}{menuController}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_player_controller}{Player\+Controller}}$\ast$ Menu\+::menu\+Controller}
+
+\mbox{\Hypertarget{class_menu_a2737fb42e257221f78c86b9221795255}\label{class_menu_a2737fb42e257221f78c86b9221795255}} 
+\index{Menu@{Menu}!menuSprite@{menuSprite}}
+\index{menuSprite@{menuSprite}!Menu@{Menu}}
+\doxysubsubsection{\texorpdfstring{menuSprite}{menuSprite}}
+{\footnotesize\ttfamily gef\+::\+Sprite$\ast$ Menu\+::menu\+Sprite}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Uni/\+CMP208/\+Hellwatch/build/vs2017/\+User\+Interface/\mbox{\hyperlink{_menu_8h}{Menu.\+h}}\item 
+D\+:/\+Uni/\+CMP208/\+Hellwatch/build/vs2017/\+User\+Interface/\mbox{\hyperlink{_menu_8cpp}{Menu.\+cpp}}\end{DoxyCompactItemize}

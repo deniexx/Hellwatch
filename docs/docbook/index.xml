@@ -1,0 +1,170 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<book xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_index" xml:lang="en-US">
+    <info>
+    <title>Hellwatch</title>
+    </info>
+<chapter>
+    <title>Namespace Documentation</title>
+<xi:include href="namespace_ability_activation_key.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+<xi:include href="namespace_apply_damage_on.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+<xi:include href="namespace_cooldown_start_policy.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+<xi:include href="namespace_enemy_class.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+<xi:include href="namespace_game_state.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+<xi:include href="namespacegef.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+<xi:include href="namespace_hellwatch_attribute.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+<xi:include href="namespace_hellwatch_controller_axis.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+<xi:include href="namespace_hellwatch_input_action.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+<xi:include href="namespace_hellwatch_particle.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+</chapter>
+<chapter>
+    <title>Class Documentation</title>
+    <xi:include href="class_abilities_component.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_ability.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="struct_activation_outcome.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_actor_component.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_attribute_component.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_boss.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_character_movement_component.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_damage_on_collision_actor.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_dash.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_enemy.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_enemy_dummy.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="struct_f_attribute.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="struct_f_camera_shake.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="struct_f_key_bind_controller.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="struct_f_key_bind_keyboard.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="struct_f_key_bind_mouse.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="struct_f_key_bind_set.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="struct_f_particle_data.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="struct_f_wave_definition.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_game_end_menu.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_ice_bolt.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_i_damagable.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_main_menu.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_menu.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="struct_menu_button.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_mesh_actor.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_meteor.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_meteor_actor.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_o_b_j_mesh_loader.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_particle_actor.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_particle_manager.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_pause_menu.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_piercing_strike.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_player_character.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_player_controller.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_primitive_builder.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_ranged_enemy.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_scene_app.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_shop_menu.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_sprite_actor.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_wave_manager.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_world_object.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+</chapter>
+<chapter>
+    <title>File Documentation</title>
+    <xi:include href="_ability_8cpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_ability_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_ability_8h_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_dash_8cpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_dash_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_dash_8h_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_ice_bolt_8cpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_ice_bolt_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_ice_bolt_8h_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_meteor_8cpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_meteor_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_meteor_8h_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_piercing_strike_8cpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_piercing_strike_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_piercing_strike_8h_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_abilities_component_8cpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_abilities_component_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_abilities_component_8h_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_actor_component_8cpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_actor_component_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_actor_component_8h_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_character_movement_component_8cpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_character_movement_component_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_character_movement_component_8h_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_mesh_actor_8cpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_mesh_actor_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_mesh_actor_8h_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_boss_8cpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_boss_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_boss_8h_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_damage_on_collision_actor_8cpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_damage_on_collision_actor_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_damage_on_collision_actor_8h_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_enemy_8cpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_enemy_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_enemy_8h_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_enemy_dummy_8cpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_enemy_dummy_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_enemy_dummy_8h_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_meteor_actor_8cpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_meteor_actor_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_meteor_actor_8h_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_particle_actor_8cpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_particle_actor_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_particle_actor_8h_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_player_character_8cpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_player_character_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_player_character_8h_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_ranged_enemy_8cpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_ranged_enemy_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_ranged_enemy_8h_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_sprite_actor_8cpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_sprite_actor_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_sprite_actor_8h_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_attribute_component_8cpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_attribute_component_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_attribute_component_8h_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_attribute_types_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_attribute_types_8h_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_particle_manager_8cpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_particle_manager_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_particle_manager_8h_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_player_controller_8cpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_player_controller_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_player_controller_8h_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_utils_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_utils_8h_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_wave_manager_8cpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_wave_manager_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_wave_manager_8h_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_world_object_8cpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_world_object_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_world_object_8h_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_damagable_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_damagable_8h_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_game_end_menu_8cpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_game_end_menu_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_game_end_menu_8h_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_main_menu_8cpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_main_menu_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_main_menu_8h_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_menu_8cpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_menu_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_menu_8h_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_pause_menu_8cpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_pause_menu_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_pause_menu_8h_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_shop_menu_8cpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_shop_menu_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_shop_menu_8h_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="main__d3d11_8cpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="main__vita_8cpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="obj__mesh__loader_8cpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="obj__mesh__loader_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="obj__mesh__loader_8h_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="primitive__builder_8cpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="primitive__builder_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="primitive__builder_8h_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_r_e_a_d_m_e_8md.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="scene__app_8cpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="scene__app_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="scene__app_8h_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+</chapter>
+<index/>
+</book>

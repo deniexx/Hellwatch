@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_struct_f_wave_definition" xml:lang="en-US">
+<title>FWaveDefinition Struct Reference</title>
+<indexterm><primary>FWaveDefinition</primary></indexterm>
+<para>
+
+<para>A definition for a wave, the max number of spawned enemies and the period of spawning them  </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;WaveManager.h&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>uint32_t <link linkend="_struct_f_wave_definition_1a8442421920c4b13c84d7beca39d3c0d9">maxSpawns</link></para>
+</listitem>
+            <listitem><para>float <link linkend="_struct_f_wave_definition_1a6551dc7f6e996c43aeb18b7058723bb7">spawnPeriod</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>A definition for a wave, the max number of spawned enemies and the period of spawning them  </para>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_struct_f_wave_definition_1a8442421920c4b13c84d7beca39d3c0d9"/><section>
+    <title>maxSpawns</title>
+<indexterm><primary>maxSpawns</primary><secondary>FWaveDefinition</secondary></indexterm>
+<indexterm><primary>FWaveDefinition</primary><secondary>maxSpawns</secondary></indexterm>
+<para><computeroutput>uint32_t FWaveDefinition::maxSpawns</computeroutput></para></section>
+<anchor xml:id="_struct_f_wave_definition_1a6551dc7f6e996c43aeb18b7058723bb7"/><section>
+    <title>spawnPeriod</title>
+<indexterm><primary>spawnPeriod</primary><secondary>FWaveDefinition</secondary></indexterm>
+<indexterm><primary>FWaveDefinition</primary><secondary>spawnPeriod</secondary></indexterm>
+<para><computeroutput>float FWaveDefinition::spawnPeriod</computeroutput></para></section>
+<para>
+The documentation for this struct was generated from the following file:</para>
+D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/<link linkend="__wave_manager_8h">WaveManager.h</link></section>
+</section>

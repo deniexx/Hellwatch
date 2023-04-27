@@ -1,0 +1,319 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="class_shop_menu" kind="class" language="C++" prot="public">
+    <compoundname>ShopMenu</compoundname>
+    <basecompoundref refid="class_menu" prot="public" virt="non-virtual">Menu</basecompoundref>
+    <includes refid="_shop_menu_8h" local="no">ShopMenu.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_shop_menu_1a871220fbad41d5514b8d244efc2469bc" prot="private" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t ShopMenu::upgradeCost</definition>
+        <argsstring></argsstring>
+        <name>upgradeCost</name>
+        <qualifiedname>ShopMenu::upgradeCost</qualifiedname>
+        <initializer>= 50</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/UserInterface/ShopMenu.h" line="27" column="10" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/UserInterface/ShopMenu.h" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_shop_menu_1a6dbcaf333f4276df1b592563f74936c6" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int ShopMenu::upgradesAmount</definition>
+        <argsstring></argsstring>
+        <name>upgradesAmount</name>
+        <qualifiedname>ShopMenu::upgradesAmount</qualifiedname>
+        <initializer>= 1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/UserInterface/ShopMenu.h" line="28" column="5" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/UserInterface/ShopMenu.h" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_shop_menu_1ad00ead74fb0ef7f5a265c1725fa6ccbf" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void ShopMenu::Init</definition>
+        <argsstring>()</argsstring>
+        <name>Init</name>
+        <qualifiedname>ShopMenu::Init</qualifiedname>
+        <reimplements refid="class_menu_1a0c64b7333b29000c8b219d2ebc28c03b">Init</reimplements>
+        <briefdescription>
+<para>Initializes the menu  </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/UserInterface/ShopMenu.h" line="17" column="14" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/UserInterface/ShopMenu.cpp" bodystart="11" bodyend="89"/>
+      </memberdef>
+      <memberdef kind="function" id="class_shop_menu_1a17c43cd733173e8a19eaaff593dbfec7" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void ShopMenu::Update</definition>
+        <argsstring>() override</argsstring>
+        <name>Update</name>
+        <qualifiedname>ShopMenu::Update</qualifiedname>
+        <reimplements refid="class_menu_1af29d71473a414e31e914bc637840cb3e">Update</reimplements>
+        <briefdescription>
+<para>Updates the controller of the menu and checks for highlights  </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/UserInterface/ShopMenu.h" line="18" column="14" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/UserInterface/ShopMenu.cpp" bodystart="91" bodyend="99"/>
+      </memberdef>
+      <memberdef kind="function" id="class_shop_menu_1a17f8a9f65b1d66a40d3fed952bedde2b" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void ShopMenu::DrawMenuHUD</definition>
+        <argsstring>(gef::Font *font_, gef::SpriteRenderer *sprite_renderer_) override</argsstring>
+        <name>DrawMenuHUD</name>
+        <qualifiedname>ShopMenu::DrawMenuHUD</qualifiedname>
+        <reimplements refid="class_menu_1acef1c8e0a83655c3b17c217567527f8b">DrawMenuHUD</reimplements>
+        <param>
+          <type>gef::Font *</type>
+          <declname>font_</declname>
+        </param>
+        <param>
+          <type>gef::SpriteRenderer *</type>
+          <declname>sprite_renderer_</declname>
+        </param>
+        <briefdescription>
+<para>Draws the menu HUD  </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/UserInterface/ShopMenu.h" line="19" column="14" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/UserInterface/ShopMenu.cpp" bodystart="101" bodyend="109"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_shop_menu_1a9d9a71e0eb5eb51a917b46402e9fbc9a" prot="protected" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void ShopMenu::OnMouseButtonPressed</definition>
+        <argsstring>(gef::Vector2 mousePos)</argsstring>
+        <name>OnMouseButtonPressed</name>
+        <qualifiedname>ShopMenu::OnMouseButtonPressed</qualifiedname>
+        <reimplements refid="class_menu_1a2370ebbed22dfd0c10491bd8ae45b771">OnMouseButtonPressed</reimplements>
+        <param>
+          <type>gef::Vector2</type>
+          <declname>mousePos</declname>
+        </param>
+        <briefdescription>
+<para>When the player presses the mouse button, checks if the mouse is over any buttons and if it is, it activates it  </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/UserInterface/ShopMenu.h" line="23" column="14" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/UserInterface/ShopMenu.cpp" bodystart="111" bodyend="124"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_shop_menu_1a4b03f91a778de0ba798b61ec87667f1b" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ShopMenu::IncreaseVitality</definition>
+        <argsstring>()</argsstring>
+        <name>IncreaseVitality</name>
+        <qualifiedname>ShopMenu::IncreaseVitality</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/UserInterface/ShopMenu.h" line="33" column="6" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/UserInterface/ShopMenu.cpp" bodystart="126" bodyend="129"/>
+      </memberdef>
+      <memberdef kind="function" id="class_shop_menu_1a4a33b049e4775fe1868ac008d841cc58" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ShopMenu::IncreaseWisdom</definition>
+        <argsstring>()</argsstring>
+        <name>IncreaseWisdom</name>
+        <qualifiedname>ShopMenu::IncreaseWisdom</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/UserInterface/ShopMenu.h" line="34" column="6" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/UserInterface/ShopMenu.cpp" bodystart="131" bodyend="134"/>
+      </memberdef>
+      <memberdef kind="function" id="class_shop_menu_1a120bb8c5f73a60254733124b87f6859d" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ShopMenu::IncreaseToughness</definition>
+        <argsstring>()</argsstring>
+        <name>IncreaseToughness</name>
+        <qualifiedname>ShopMenu::IncreaseToughness</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/UserInterface/ShopMenu.h" line="35" column="6" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/UserInterface/ShopMenu.cpp" bodystart="136" bodyend="139"/>
+      </memberdef>
+      <memberdef kind="function" id="class_shop_menu_1a7a8fd886b170db52ee4476982ce78f93" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ShopMenu::IncreaseEnergy</definition>
+        <argsstring>()</argsstring>
+        <name>IncreaseEnergy</name>
+        <qualifiedname>ShopMenu::IncreaseEnergy</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/UserInterface/ShopMenu.h" line="36" column="6" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/UserInterface/ShopMenu.cpp" bodystart="141" bodyend="144"/>
+      </memberdef>
+      <memberdef kind="function" id="class_shop_menu_1ad1894becbf0a9f3fc8d3045b8b604438" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ShopMenu::CloseShop</definition>
+        <argsstring>()</argsstring>
+        <name>CloseShop</name>
+        <qualifiedname>ShopMenu::CloseShop</qualifiedname>
+        <briefdescription>
+<para>Closes the shop  </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/UserInterface/ShopMenu.h" line="41" column="6" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/UserInterface/ShopMenu.cpp" bodystart="146" bodyend="149"/>
+      </memberdef>
+      <memberdef kind="function" id="class_shop_menu_1a10e3d5682a16284752905ed67bf6b689" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ShopMenu::IncreaseAttribute</definition>
+        <argsstring>(HellwatchAttribute::Type attribute)</argsstring>
+        <name>IncreaseAttribute</name>
+        <qualifiedname>ShopMenu::IncreaseAttribute</qualifiedname>
+        <param>
+          <type><ref refid="namespace_hellwatch_attribute_1ad0a500e65129d06e4589f9bca54c4a7d" kindref="member">HellwatchAttribute::Type</ref></type>
+          <declname>attribute</declname>
+        </param>
+        <briefdescription>
+<para>Increases an attribute by 1  </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>attribute</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/UserInterface/ShopMenu.h" line="47" column="6" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/UserInterface/ShopMenu.cpp" bodystart="151" bodyend="168"/>
+      </memberdef>
+      <memberdef kind="function" id="class_shop_menu_1a2dd4a19db5f49b409753a25f697e5d59" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ShopMenu::IncreaseUpgradeCost</definition>
+        <argsstring>()</argsstring>
+        <name>IncreaseUpgradeCost</name>
+        <qualifiedname>ShopMenu::IncreaseUpgradeCost</qualifiedname>
+        <briefdescription>
+<para>Increases the upgrade cost  </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/UserInterface/ShopMenu.h" line="52" column="6" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/UserInterface/ShopMenu.cpp" bodystart="170" bodyend="177"/>
+      </memberdef>
+      <memberdef kind="function" id="class_shop_menu_1a6bde1debb909bcff4f6afde29a78c5ab" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool ShopMenu::DoesPlayerHaveMoneyForUpgrade</definition>
+        <argsstring>()</argsstring>
+        <name>DoesPlayerHaveMoneyForUpgrade</name>
+        <qualifiedname>ShopMenu::DoesPlayerHaveMoneyForUpgrade</qualifiedname>
+        <briefdescription>
+<para>Checks if the player has enough money for the current upgrade  </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para></para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/UserInterface/ShopMenu.h" line="58" column="6" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/UserInterface/ShopMenu.cpp" bodystart="179" bodyend="182"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Shop menu to be used in Shop <ref refid="namespace_game_state" kindref="compound">GameState</ref>  </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>Menu</label>
+        <link refid="class_menu"/>
+      </node>
+      <node id="1">
+        <label>ShopMenu</label>
+        <link refid="class_shop_menu"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>Menu</label>
+        <link refid="class_menu"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>menuController</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>PlayerController</label>
+        <link refid="class_player_controller"/>
+      </node>
+      <node id="1">
+        <label>ShopMenu</label>
+        <link refid="class_shop_menu"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/UserInterface/ShopMenu.h" line="13" column="1" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/UserInterface/ShopMenu.h" bodystart="14" bodyend="62"/>
+    <listofallmembers>
+      <member refid="class_menu_1a2f2b184a3f4000ce78d9e948c95cced4" prot="protected" virt="non-virtual"><scope>ShopMenu</scope><name>CheckForHighlight</name></member>
+      <member refid="class_shop_menu_1ad1894becbf0a9f3fc8d3045b8b604438" prot="private" virt="non-virtual"><scope>ShopMenu</scope><name>CloseShop</name></member>
+      <member refid="class_menu_1a1551f565b2ae79bf65449810f4ea81d5" prot="public" virt="non-virtual"><scope>ShopMenu</scope><name>currentButtonFocused</name></member>
+      <member refid="class_shop_menu_1a6bde1debb909bcff4f6afde29a78c5ab" prot="private" virt="non-virtual"><scope>ShopMenu</scope><name>DoesPlayerHaveMoneyForUpgrade</name></member>
+      <member refid="class_shop_menu_1a17f8a9f65b1d66a40d3fed952bedde2b" prot="public" virt="virtual"><scope>ShopMenu</scope><name>DrawMenuHUD</name></member>
+      <member refid="class_shop_menu_1a10e3d5682a16284752905ed67bf6b689" prot="private" virt="non-virtual"><scope>ShopMenu</scope><name>IncreaseAttribute</name></member>
+      <member refid="class_shop_menu_1a7a8fd886b170db52ee4476982ce78f93" prot="private" virt="non-virtual"><scope>ShopMenu</scope><name>IncreaseEnergy</name></member>
+      <member refid="class_shop_menu_1a120bb8c5f73a60254733124b87f6859d" prot="private" virt="non-virtual"><scope>ShopMenu</scope><name>IncreaseToughness</name></member>
+      <member refid="class_shop_menu_1a2dd4a19db5f49b409753a25f697e5d59" prot="private" virt="non-virtual"><scope>ShopMenu</scope><name>IncreaseUpgradeCost</name></member>
+      <member refid="class_shop_menu_1a4b03f91a778de0ba798b61ec87667f1b" prot="private" virt="non-virtual"><scope>ShopMenu</scope><name>IncreaseVitality</name></member>
+      <member refid="class_shop_menu_1a4a33b049e4775fe1868ac008d841cc58" prot="private" virt="non-virtual"><scope>ShopMenu</scope><name>IncreaseWisdom</name></member>
+      <member refid="class_shop_menu_1ad00ead74fb0ef7f5a265c1725fa6ccbf" prot="public" virt="virtual"><scope>ShopMenu</scope><name>Init</name></member>
+      <member refid="class_menu_1a6005d125bc4b0372bcd6d2719cb9a994" prot="public" virt="non-virtual"><scope>ShopMenu</scope><name>menuButtons</name></member>
+      <member refid="class_menu_1a0187883a2d424dadf01b0218d1db7d12" prot="public" virt="non-virtual"><scope>ShopMenu</scope><name>menuController</name></member>
+      <member refid="class_menu_1a2737fb42e257221f78c86b9221795255" prot="public" virt="non-virtual"><scope>ShopMenu</scope><name>menuSprite</name></member>
+      <member refid="class_menu_1a50e7901f94713c0719e0774474d981c2" prot="protected" virt="non-virtual"><scope>ShopMenu</scope><name>OnControllerDownButton</name></member>
+      <member refid="class_menu_1a8bd9fce86817a1125bf7d2e371551689" prot="protected" virt="non-virtual"><scope>ShopMenu</scope><name>OnControllerSubmitButton</name></member>
+      <member refid="class_menu_1a8023104df1848b95c94e1c46fba209ca" prot="protected" virt="non-virtual"><scope>ShopMenu</scope><name>OnControllerUpButton</name></member>
+      <member refid="class_menu_1a6b8e73974658482814f99b63ecc4d470" prot="protected" virt="non-virtual"><scope>ShopMenu</scope><name>OnDownButtonPressed</name></member>
+      <member refid="class_shop_menu_1a9d9a71e0eb5eb51a917b46402e9fbc9a" prot="protected" virt="virtual"><scope>ShopMenu</scope><name>OnMouseButtonPressed</name></member>
+      <member refid="class_menu_1a98395444d03f38df02fa9c2aed1fb797" prot="protected" virt="non-virtual"><scope>ShopMenu</scope><name>OnUpButtonPressed</name></member>
+      <member refid="class_menu_1a78e162d9e5571f0bb3e93c02cc0f76df" prot="protected" virt="non-virtual"><scope>ShopMenu</scope><name>PressMenuButton</name></member>
+      <member refid="class_shop_menu_1a17c43cd733173e8a19eaaff593dbfec7" prot="public" virt="virtual"><scope>ShopMenu</scope><name>Update</name></member>
+      <member refid="class_shop_menu_1a871220fbad41d5514b8d244efc2469bc" prot="private" virt="non-virtual"><scope>ShopMenu</scope><name>upgradeCost</name></member>
+      <member refid="class_shop_menu_1a6dbcaf333f4276df1b592563f74936c6" prot="private" virt="non-virtual"><scope>ShopMenu</scope><name>upgradesAmount</name></member>
+      <member refid="class_menu_1a831387f51358cfb88cd018e1777bc980" prot="public" virt="non-virtual"><scope>ShopMenu</scope><name>~Menu</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

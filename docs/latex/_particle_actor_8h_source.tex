@@ -1,0 +1,51 @@
+\hypertarget{_particle_actor_8h_source}{}\doxysection{Particle\+Actor.\+h}
+\label{_particle_actor_8h_source}\index{D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/ParticleActor.h@{D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/ParticleActor.h}}
+\mbox{\hyperlink{_particle_actor_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{2 }
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include "{}../MeshActor.h"{}}}
+\DoxyCodeLine{6 }
+\DoxyCodeLine{7 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacegef}{gef}}}
+\DoxyCodeLine{8 \{}
+\DoxyCodeLine{9     \textcolor{keyword}{class }Texture;}
+\DoxyCodeLine{10 \}}
+\DoxyCodeLine{11 }
+\DoxyCodeLine{12 \textcolor{keyword}{struct }\mbox{\hyperlink{struct_f_particle_data}{FParticleData}}}
+\DoxyCodeLine{13 \{}
+\DoxyCodeLine{14     std::vector<gef::Texture*> \mbox{\hyperlink{struct_f_particle_data_a059353bdabbbac1a3b74c7b322a5280e}{textures}};}
+\DoxyCodeLine{15     \textcolor{keywordtype}{float} \mbox{\hyperlink{struct_f_particle_data_a5ec56fa1191a3971105010b03473502d}{startTime}} = 0;}
+\DoxyCodeLine{16     \textcolor{keywordtype}{float} \mbox{\hyperlink{struct_f_particle_data_a93f26d0a1f582ee5e7c48853afe34fed}{duration}} = 1;}
+\DoxyCodeLine{17 }
+\DoxyCodeLine{18     \textcolor{keywordtype}{float} \mbox{\hyperlink{struct_f_particle_data_a555a566a858a38fac2a460b135d98fe7}{lingerTime}} = 0.25;}
+\DoxyCodeLine{19     gef::Vector4 \mbox{\hyperlink{struct_f_particle_data_a17c186ca0a48309c1a664ccdd563684d}{scale}} = gef::Vector4::kOne;}
+\DoxyCodeLine{20 \};}
+\DoxyCodeLine{21 }
+\DoxyCodeLine{22 \textcolor{keyword}{class }\mbox{\hyperlink{class_particle_actor}{ParticleActor}} : \textcolor{keyword}{public} \mbox{\hyperlink{class_mesh_actor}{MeshActor}}}
+\DoxyCodeLine{23 \{}
+\DoxyCodeLine{24 \textcolor{keyword}{public}:}
+\DoxyCodeLine{25 }
+\DoxyCodeLine{29     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_particle_actor_aac7c62cbf5b02d9f925b1384ec53b65c}{SetParticleData}}(\textcolor{keyword}{const} \mbox{\hyperlink{struct_f_particle_data}{FParticleData}}\& newData) \{ particleData = newData; \}}
+\DoxyCodeLine{30 }
+\DoxyCodeLine{34     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_particle_actor_afc281ad9a6f6803c645b077106600234}{Play}}();}
+\DoxyCodeLine{35 }
+\DoxyCodeLine{39     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_particle_actor_a5ef5f56da7eadd86f647ab3f519061be}{Stop}}();}
+\DoxyCodeLine{40 }
+\DoxyCodeLine{41     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_particle_actor_a5ed58a9e57286e08cf8a650aaf22f43f}{Update}}(\textcolor{keywordtype}{float} deltaTime) \textcolor{keyword}{override};}
+\DoxyCodeLine{42 }
+\DoxyCodeLine{43 \textcolor{keyword}{private}:}
+\DoxyCodeLine{44 }
+\DoxyCodeLine{45     \textcolor{keywordtype}{bool} bIsPlaying = \textcolor{keyword}{false};}
+\DoxyCodeLine{46     \textcolor{keywordtype}{bool} bIsLingering = \textcolor{keyword}{false};}
+\DoxyCodeLine{47     \mbox{\hyperlink{struct_f_particle_data}{FParticleData}} particleData = \mbox{\hyperlink{struct_f_particle_data}{FParticleData}}();}
+\DoxyCodeLine{48 }
+\DoxyCodeLine{49     \textcolor{keywordtype}{float} lingerStartTime = 0.f;}
+\DoxyCodeLine{50     \textcolor{keywordtype}{float} lastTextureTime = 0.f;}
+\DoxyCodeLine{51     \textcolor{keywordtype}{float} timeBetweenTextures = 0.f;}
+\DoxyCodeLine{52     \textcolor{keywordtype}{int} currentTextureIndex = 0;}
+\DoxyCodeLine{53 \};}
+\DoxyCodeLine{54 }
+
+\end{DoxyCode}

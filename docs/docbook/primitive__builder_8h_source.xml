@@ -1,0 +1,67 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_primitive__builder_8h_source" xml:lang="en-US">
+<title>D:/Uni/CMP208/Hellwatch/primitive_builder.h</title>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered">1 <emphasis role="preprocessor">#ifndef&#32;_PRIMITIVE_BUILDER_H</emphasis>
+2 <emphasis role="preprocessor">#define&#32;_PRIMITIVE_BUILDER_H</emphasis>
+3 
+4 <emphasis role="preprocessor">#include&#32;&lt;maths/vector4.h&gt;</emphasis>
+5 <emphasis role="preprocessor">#include&#32;&lt;graphics/material.h&gt;</emphasis>
+6 <emphasis role="preprocessor">#include&#32;&lt;cstddef&gt;</emphasis>
+7 
+8 <emphasis role="keyword">namespace&#32;</emphasis><link linkend="_namespacegef">gef</link>
+9 {
+10 &#32;&#32;&#32;&#32;<emphasis role="keyword">class&#32;</emphasis>Mesh;
+11 &#32;&#32;&#32;&#32;<emphasis role="keyword">class&#32;</emphasis>Platform;
+12 }
+13 
+14 <emphasis role="keyword">class&#32;</emphasis><link linkend="_class_primitive_builder">PrimitiveBuilder</link>
+15 {
+16 <emphasis role="keyword">public</emphasis>:
+19 &#32;&#32;&#32;&#32;<link linkend="_class_primitive_builder">PrimitiveBuilder</link>(gef::Platform&amp;&#32;platform);
+20 
+22 &#32;&#32;&#32;&#32;<link linkend="_class_primitive_builder_1a70ac6a74c6a3fe209cabf315b0f7bf4d">~PrimitiveBuilder</link>();
+23 
+25 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_primitive_builder_1a1b4b6db65689d27a2bc3cad69803b079">Init</link>();
+26 
+28 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_primitive_builder_1aed9655474f22afaa00ff015c454bd736">CleanUp</link>();
+29 
+35 &#32;&#32;&#32;&#32;gef::Mesh*&#32;<link linkend="_class_primitive_builder_1af92fb7ac1b3d5c32243e28dbd71691da">CreateBoxMesh</link>(<emphasis role="keyword">const</emphasis>&#32;gef::Vector4&amp;&#32;half_size,&#32;gef::Vector4&#32;centre&#32;=&#32;gef::Vector4(0.0f,&#32;0.0f,&#32;0.0f),&#32;gef::Material**&#32;materials&#32;=&#32;NULL);
+36 
+37 
+43 &#32;&#32;&#32;&#32;gef::Mesh*&#32;<link linkend="_class_primitive_builder_1a5f05e266f6b78f97ac03abfda1a6d44e">CreateSphereMesh</link>(<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">float</emphasis>&#32;radius,&#32;<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">int</emphasis>&#32;phi,&#32;<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">int</emphasis>&#32;theta,&#32;gef::Vector4&#32;centre&#32;=&#32;gef::Vector4(0.0f,&#32;0.0f,&#32;0.0f),&#32;gef::Material*&#32;material&#32;=&#32;NULL);
+44 
+45 
+49 &#32;&#32;&#32;&#32;<emphasis role="keyword">inline</emphasis>&#32;<emphasis role="keyword">const</emphasis>&#32;gef::Mesh*&#32;<link linkend="_class_primitive_builder_1a0b7bbc2b5dae0e538e5a7da02e99743a">GetDefaultCubeMesh</link>()<emphasis role="keyword">&#32;const&#32;</emphasis>{
+50 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<link linkend="_class_primitive_builder_1aa3205470b24e5273efb50e359a547b23">default_cube_mesh_</link>;
+51 &#32;&#32;&#32;&#32;};
+52 
+56 &#32;&#32;&#32;&#32;<emphasis role="keyword">inline</emphasis>&#32;<emphasis role="keyword">const</emphasis>&#32;gef::Mesh*&#32;<link linkend="_class_primitive_builder_1a50a4fb54f668bbe3b43940c64529b195">GetDefaultSphereMesh</link>()<emphasis role="keyword">&#32;const&#32;</emphasis>{
+57 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<link linkend="_class_primitive_builder_1aa3179d29464e6f9f0b84d59bcea6f3d1">default_sphere_mesh_</link>;
+58 &#32;&#32;&#32;&#32;};
+59 
+60 
+63 &#32;&#32;&#32;&#32;<emphasis role="keyword">inline</emphasis>&#32;<emphasis role="keyword">const</emphasis>&#32;gef::Material&amp;&#32;<link linkend="_class_primitive_builder_1aa5daad54593016deff15e0f172df5815">red_material</link>()<emphasis role="keyword">&#32;const&#32;</emphasis>{
+64 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<link linkend="_class_primitive_builder_1a7757d609903f9cff6a9bd7f1a239fe27">red_material_</link>;
+65 &#32;&#32;&#32;&#32;}
+66 
+69 &#32;&#32;&#32;&#32;<emphasis role="keyword">inline</emphasis>&#32;<emphasis role="keyword">const</emphasis>&#32;gef::Material&amp;&#32;<link linkend="_class_primitive_builder_1a0b9b7e23d8d653d949da7da85b5b51b0">green_material</link>()<emphasis role="keyword">&#32;const&#32;</emphasis>{
+70 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<link linkend="_class_primitive_builder_1a0c4022f7c66fb130f59d9d2e1c9aee31">green_material_</link>;
+71 &#32;&#32;&#32;&#32;}
+72 
+75 &#32;&#32;&#32;&#32;<emphasis role="keyword">inline</emphasis>&#32;<emphasis role="keyword">const</emphasis>&#32;gef::Material&amp;&#32;<link linkend="_class_primitive_builder_1a1cc3cb55ef97d82a1ad402e937f2e449">blue_material</link>()<emphasis role="keyword">&#32;const&#32;</emphasis>{
+76 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<link linkend="_class_primitive_builder_1a72a6196f7dc9bba9f3887c9a5fe0e485">blue_material_</link>;
+77 &#32;&#32;&#32;&#32;}
+78 
+79 <emphasis role="keyword">protected</emphasis>:
+80 &#32;&#32;&#32;&#32;gef::Platform&amp;&#32;<link linkend="_class_primitive_builder_1a6bfbd619adebd14a9fe02b68521e279d">platform_</link>;
+81 
+82 &#32;&#32;&#32;&#32;gef::Mesh*&#32;<link linkend="_class_primitive_builder_1aa3205470b24e5273efb50e359a547b23">default_cube_mesh_</link>;
+83 &#32;&#32;&#32;&#32;gef::Mesh*&#32;<link linkend="_class_primitive_builder_1aa3179d29464e6f9f0b84d59bcea6f3d1">default_sphere_mesh_</link>;
+84 
+85 &#32;&#32;&#32;&#32;gef::Material&#32;<link linkend="_class_primitive_builder_1a7757d609903f9cff6a9bd7f1a239fe27">red_material_</link>;
+86 &#32;&#32;&#32;&#32;gef::Material&#32;<link linkend="_class_primitive_builder_1a72a6196f7dc9bba9f3887c9a5fe0e485">blue_material_</link>;
+87 &#32;&#32;&#32;&#32;gef::Material&#32;<link linkend="_class_primitive_builder_1a0c4022f7c66fb130f59d9d2e1c9aee31">green_material_</link>;
+88 };
+89 
+90 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">//&#32;_PRIMITIVE_BUILDER_H</emphasis>
+</programlisting></section>

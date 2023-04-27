@@ -1,0 +1,187 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="_actor_component_8cpp" kind="file" language="C++">
+    <compoundname>ActorComponent.cpp</compoundname>
+    <includes refid="_actor_component_8h" local="yes">ActorComponent.h</includes>
+    <includes refid="_world_object_8h" local="yes">GameFramework/WorldObject.h</includes>
+    <incdepgraph>
+      <node id="1">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/ActorComponents/ActorComponent.cpp</label>
+        <link refid="_actor_component_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>ActorComponent.h</label>
+        <link refid="_actor_component_8h"/>
+      </node>
+      <node id="6">
+        <label>Utils.h</label>
+        <link refid="_utils_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>GameFramework/WorldObject.h</label>
+        <link refid="_world_object_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="20">
+        <label>obj_mesh_loader.h</label>
+        <link refid="obj__mesh__loader_8h"/>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>primitive_builder.h</label>
+        <link refid="primitive__builder_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>scene_app.h</label>
+        <link refid="scene__app_8h"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+      </node>
+      <node id="18">
+        <label>box2d/box2d.h</label>
+      </node>
+      <node id="16">
+        <label>cstddef</label>
+      </node>
+      <node id="26">
+        <label>future</label>
+      </node>
+      <node id="21">
+        <label>gef.h</label>
+      </node>
+      <node id="25">
+        <label>graphics/font.h</label>
+      </node>
+      <node id="15">
+        <label>graphics/material.h</label>
+      </node>
+      <node id="10">
+        <label>graphics/renderer_3d.h</label>
+      </node>
+      <node id="17">
+        <label>graphics/scene.h</label>
+      </node>
+      <node id="22">
+        <label>map</label>
+      </node>
+      <node id="4">
+        <label>maths/Matrix44.h</label>
+      </node>
+      <node id="7">
+        <label>maths/Vector2.h</label>
+      </node>
+      <node id="28">
+        <label>maths/math_utils.h</label>
+      </node>
+      <node id="9">
+        <label>maths/matrix44.h</label>
+      </node>
+      <node id="5">
+        <label>maths/quaternion.h</label>
+      </node>
+      <node id="13">
+        <label>maths/vector2.h</label>
+      </node>
+      <node id="8">
+        <label>maths/vector4.h</label>
+      </node>
+      <node id="27">
+        <label>random</label>
+      </node>
+      <node id="23">
+        <label>string</label>
+      </node>
+      <node id="12">
+        <label>system/application.h</label>
+      </node>
+      <node id="19">
+        <label>system/platform.h</label>
+      </node>
+      <node id="24">
+        <label>vector</label>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_actor_component_8h" kindref="compound">ActorComponent.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_world_object_8h" kindref="compound">GameFramework/WorldObject.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_actor_component_1ab4ea0eaffa2c616a209e2887f80902f2" kindref="member">ActorComponent::Init</ref>(<ref refid="class_world_object" kindref="compound">WorldObject</ref>*<sp/>inOwnerActor)</highlight></codeline>
+<codeline lineno="6"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_actor_component_1a2766e186399b24f5d7e2d143ffa26e05" kindref="member">ownerActor</ref><sp/>=<sp/>inOwnerActor;</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_actor_component_1a467d082f3fedd6cf2acacb117450f90e" kindref="member">PostInit</ref>();</highlight></codeline>
+<codeline lineno="9"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_actor_component_1a467d082f3fedd6cf2acacb117450f90e" kindref="member">ActorComponent::PostInit</ref>()</highlight></codeline>
+<codeline lineno="12"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="13"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_actor_component_1af730b3c7d2b4154e1fb0962db7750f6b" kindref="member">ActorComponent::UpdateComponent</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>deltaTime)</highlight></codeline>
+<codeline lineno="16"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="17"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/ActorComponents/ActorComponent.cpp"/>
+  </compounddef>
+</doxygen>

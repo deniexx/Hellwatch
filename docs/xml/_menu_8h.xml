@@ -1,0 +1,284 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="_menu_8h" kind="file" language="C++">
+    <compoundname>Menu.h</compoundname>
+    <includes refid="_utils_8h" local="yes">GameFramework/Utils.h</includes>
+    <includes local="no">future</includes>
+    <includedby refid="_game_end_menu_8h" local="yes">D:/Uni/CMP208/Hellwatch/build/vs2017/UserInterface/GameEndMenu.h</includedby>
+    <includedby refid="_main_menu_8h" local="yes">D:/Uni/CMP208/Hellwatch/build/vs2017/UserInterface/MainMenu.h</includedby>
+    <includedby refid="_menu_8cpp" local="yes">D:/Uni/CMP208/Hellwatch/build/vs2017/UserInterface/Menu.cpp</includedby>
+    <includedby refid="_pause_menu_8h" local="yes">D:/Uni/CMP208/Hellwatch/build/vs2017/UserInterface/PauseMenu.h</includedby>
+    <includedby refid="_shop_menu_8h" local="yes">D:/Uni/CMP208/Hellwatch/build/vs2017/UserInterface/ShopMenu.h</includedby>
+    <incdepgraph>
+      <node id="2">
+        <label>GameFramework/Utils.h</label>
+        <link refid="_utils_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/UserInterface/Menu.h</label>
+        <link refid="_menu_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>obj_mesh_loader.h</label>
+        <link refid="obj__mesh__loader_8h"/>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>primitive_builder.h</label>
+        <link refid="primitive__builder_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>scene_app.h</label>
+        <link refid="scene__app_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>box2d/box2d.h</label>
+      </node>
+      <node id="12">
+        <label>cstddef</label>
+      </node>
+      <node id="22">
+        <label>future</label>
+      </node>
+      <node id="17">
+        <label>gef.h</label>
+      </node>
+      <node id="21">
+        <label>graphics/font.h</label>
+      </node>
+      <node id="11">
+        <label>graphics/material.h</label>
+      </node>
+      <node id="6">
+        <label>graphics/renderer_3d.h</label>
+      </node>
+      <node id="13">
+        <label>graphics/scene.h</label>
+      </node>
+      <node id="18">
+        <label>map</label>
+      </node>
+      <node id="3">
+        <label>maths/Vector2.h</label>
+      </node>
+      <node id="24">
+        <label>maths/math_utils.h</label>
+      </node>
+      <node id="5">
+        <label>maths/matrix44.h</label>
+      </node>
+      <node id="9">
+        <label>maths/vector2.h</label>
+      </node>
+      <node id="4">
+        <label>maths/vector4.h</label>
+      </node>
+      <node id="23">
+        <label>random</label>
+      </node>
+      <node id="19">
+        <label>string</label>
+      </node>
+      <node id="8">
+        <label>system/application.h</label>
+      </node>
+      <node id="15">
+        <label>system/platform.h</label>
+      </node>
+      <node id="20">
+        <label>vector</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="3">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/UserInterface/GameEndMenu.cpp</label>
+        <link refid="_game_end_menu_8cpp"/>
+      </node>
+      <node id="2">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/UserInterface/GameEndMenu.h</label>
+        <link refid="_game_end_menu_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/UserInterface/MainMenu.cpp</label>
+        <link refid="_main_menu_8cpp"/>
+      </node>
+      <node id="5">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/UserInterface/MainMenu.h</label>
+        <link refid="_main_menu_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/UserInterface/Menu.cpp</label>
+        <link refid="_menu_8cpp"/>
+      </node>
+      <node id="1">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/UserInterface/Menu.h</label>
+        <link refid="_menu_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/UserInterface/PauseMenu.cpp</label>
+        <link refid="_pause_menu_8cpp"/>
+      </node>
+      <node id="8">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/UserInterface/PauseMenu.h</label>
+        <link refid="_pause_menu_8h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/UserInterface/ShopMenu.cpp</label>
+        <link refid="_shop_menu_8cpp"/>
+      </node>
+      <node id="10">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/UserInterface/ShopMenu.h</label>
+        <link refid="_shop_menu_8h"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>D:/Uni/CMP208/Hellwatch/scene_app.cpp</label>
+        <link refid="scene__app_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="struct_menu_button" prot="public">MenuButton</innerclass>
+    <innerclass refid="class_menu" prot="public">Menu</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_utils_8h" kindref="compound">GameFramework/Utils.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;future&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9" refid="struct_menu_button" refkind="compound"><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_menu_button" kindref="compound">MenuButton</ref></highlight></codeline>
+<codeline lineno="10"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="11" refid="struct_menu_button_1a50a2575f7a437f6ae6bcef25f904301e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>gef::Vector4<sp/><ref refid="struct_menu_button_1a50a2575f7a437f6ae6bcef25f904301e" kindref="member">position</ref>;</highlight></codeline>
+<codeline lineno="12" refid="struct_menu_button_1a41cfc44472326f1da939089a1b3b791e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="struct_menu_button_1a41cfc44472326f1da939089a1b3b791e" kindref="member">color</ref><sp/>=<sp/>0xffffffff;</highlight></codeline>
+<codeline lineno="13" refid="struct_menu_button_1a3248c3e6aebedd07e092b36014bddc13" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="struct_menu_button_1a3248c3e6aebedd07e092b36014bddc13" kindref="member">scale</ref><sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="14" refid="struct_menu_button_1a616c2081a729821f35c44b4be80e771b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>gef::TextJustification<sp/><ref refid="struct_menu_button_1a616c2081a729821f35c44b4be80e771b" kindref="member">justification</ref>;</highlight></codeline>
+<codeline lineno="15" refid="struct_menu_button_1a23f34c6529bb20a890225fdb069c5afc" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/><ref refid="struct_menu_button_1a23f34c6529bb20a890225fdb069c5afc" kindref="member">buttonText</ref>;</highlight></codeline>
+<codeline lineno="16" refid="struct_menu_button_1a16cdea6d06499ccaf865be569f5c3adb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::function&lt;void()&gt;<sp/><ref refid="struct_menu_button_1a16cdea6d06499ccaf865be569f5c3adb" kindref="member">callbackFunction</ref>;</highlight></codeline>
+<codeline lineno="17"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22" refid="class_menu" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_menu" kindref="compound">Menu</ref></highlight></codeline>
+<codeline lineno="23"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="comment"><sp/><sp/><sp/><sp/>/*******************************************************</highlight></codeline>
+<codeline lineno="27"><highlight class="comment"><sp/><sp/><sp/><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MENU<sp/>INPUT<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="28"><highlight class="comment"></highlight><highlight class="comment"><sp/><sp/><sp/><sp/>/*******************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_menu_1a831387f51358cfb88cd018e1777bc980" kindref="member">~Menu</ref>();</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35" refid="class_menu_1a0c64b7333b29000c8b219d2ebc28c03b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_menu_1a0c64b7333b29000c8b219d2ebc28c03b" kindref="member">Init</ref>()<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_menu_1af29d71473a414e31e914bc637840cb3e" kindref="member">Update</ref>();</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_menu_1acef1c8e0a83655c3b17c217567527f8b" kindref="member">DrawMenuHUD</ref>(gef::Font*<sp/>font_,<sp/>gef::SpriteRenderer*<sp/>sprite_renderer_);</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47" refid="class_menu_1a0187883a2d424dadf01b0218d1db7d12" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_player_controller" kindref="compound">PlayerController</ref>*<sp/><ref refid="class_menu_1a0187883a2d424dadf01b0218d1db7d12" kindref="member">menuController</ref>;</highlight></codeline>
+<codeline lineno="48" refid="class_menu_1a6005d125bc4b0372bcd6d2719cb9a994" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;MenuButton&gt;<sp/><ref refid="class_menu_1a6005d125bc4b0372bcd6d2719cb9a994" kindref="member">menuButtons</ref>;</highlight></codeline>
+<codeline lineno="49" refid="class_menu_1a1551f565b2ae79bf65449810f4ea81d5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_menu_1a1551f565b2ae79bf65449810f4ea81d5" kindref="member">currentButtonFocused</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="50" refid="class_menu_1a2737fb42e257221f78c86b9221795255" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>gef::Sprite*<sp/><ref refid="class_menu_1a2737fb42e257221f78c86b9221795255" kindref="member">menuSprite</ref>;</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_menu_1a98395444d03f38df02fa9c2aed1fb797" kindref="member">OnUpButtonPressed</ref>();</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_menu_1a6b8e73974658482814f99b63ecc4d470" kindref="member">OnDownButtonPressed</ref>();</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_menu_1a2370ebbed22dfd0c10491bd8ae45b771" kindref="member">OnMouseButtonPressed</ref>(gef::Vector2<sp/>mousePos);</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_menu_1a8023104df1848b95c94e1c46fba209ca" kindref="member">OnControllerUpButton</ref>(gef::Vector2<sp/>dir);</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_menu_1a50e7901f94713c0719e0774474d981c2" kindref="member">OnControllerDownButton</ref>(gef::Vector2<sp/>dir);</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_menu_1a8bd9fce86817a1125bf7d2e371551689" kindref="member">OnControllerSubmitButton</ref>(gef::Vector2<sp/>dir);</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_menu_1a2f2b184a3f4000ce78d9e948c95cced4" kindref="member">CheckForHighlight</ref>();</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_menu_1a78e162d9e5571f0bb3e93c02cc0f76df" kindref="member">PressMenuButton</ref>();</highlight></codeline>
+<codeline lineno="93"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/UserInterface/Menu.h"/>
+  </compounddef>
+</doxygen>

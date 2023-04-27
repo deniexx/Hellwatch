@@ -1,0 +1,68 @@
+.TH "Dash" 3 "Thu Apr 27 2023" "Hellwatch" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Dash \- Applies a force to the player in the mouse direction and makes the player briefly invincible   
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <Dash\&.h>\fP
+.PP
+Inherits \fBAbility\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBDash\fP ()"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "virtual void \fBPostInit\fP () override"
+.br
+.RI "Called after ability has been initialized, do set up here  "
+.ti -1c
+.RI "virtual void \fBBegin\fP () override"
+.br
+.RI "Begins the ability, called if TryActivate was successful  "
+.ti -1c
+.RI "virtual void \fBEnd\fP () override"
+.br
+.RI "Called on end of ability  "
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+Applies a force to the player in the mouse direction and makes the player briefly invincible  
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "Dash::Dash ()"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "void Dash::Begin ()\fC [override]\fP, \fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+Begins the ability, called if TryActivate was successful  
+.PP
+Reimplemented from \fBAbility\fP\&.
+.SS "void Dash::End ()\fC [override]\fP, \fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+Called on end of ability  
+.PP
+Reimplemented from \fBAbility\fP\&.
+.SS "void Dash::PostInit ()\fC [override]\fP, \fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+Called after ability has been initialized, do set up here  
+.PP
+Reimplemented from \fBAbility\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Hellwatch from the source code\&.

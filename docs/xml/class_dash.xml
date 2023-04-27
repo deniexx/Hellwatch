@@ -1,0 +1,175 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="class_dash" kind="class" language="C++" prot="public">
+    <compoundname>Dash</compoundname>
+    <basecompoundref refid="class_ability" prot="public" virt="non-virtual">Ability</basecompoundref>
+    <includes refid="_dash_8h" local="no">Dash.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_dash_1abc38667dc53c7207c42b0808cb88967e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Dash::Dash</definition>
+        <argsstring>()</argsstring>
+        <name>Dash</name>
+        <qualifiedname>Dash::Dash</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/Abilities/PlayerAbilities/Dash.h" line="17" column="1" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/Abilities/PlayerAbilities/Dash.cpp" bodystart="4" bodyend="7"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_dash_1a3078ae06d66361da3e35af7b0efac786" prot="protected" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void Dash::PostInit</definition>
+        <argsstring>() override</argsstring>
+        <name>PostInit</name>
+        <qualifiedname>Dash::PostInit</qualifiedname>
+        <reimplements refid="class_ability_1a25388ebb622b414ef027eb33bf4a5cfb">PostInit</reimplements>
+        <briefdescription>
+<para>Called after ability has been initialized, do set up here  </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/Abilities/PlayerAbilities/Dash.h" line="20" column="14" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/Abilities/PlayerAbilities/Dash.cpp" bodystart="9" bodyend="16"/>
+      </memberdef>
+      <memberdef kind="function" id="class_dash_1ab37a52fcb0a2953ad7f5bcf698d9d65f" prot="protected" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void Dash::Begin</definition>
+        <argsstring>() override</argsstring>
+        <name>Begin</name>
+        <qualifiedname>Dash::Begin</qualifiedname>
+        <reimplements refid="class_ability_1ace910398ed2eb9f58c8e85dbb7a72de2">Begin</reimplements>
+        <briefdescription>
+<para>Begins the ability, called if TryActivate was successful  </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/Abilities/PlayerAbilities/Dash.h" line="22" column="14" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/Abilities/PlayerAbilities/Dash.cpp" bodystart="18" bodyend="40"/>
+      </memberdef>
+      <memberdef kind="function" id="class_dash_1a15631a12a91058a2f41e4a8f80127378" prot="protected" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void Dash::End</definition>
+        <argsstring>() override</argsstring>
+        <name>End</name>
+        <qualifiedname>Dash::End</qualifiedname>
+        <reimplements refid="class_ability_1a61a88edf359a3c6bd34868e58bf64f20">End</reimplements>
+        <briefdescription>
+<para>Called on end of ability  </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/Abilities/PlayerAbilities/Dash.h" line="24" column="14" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/Abilities/PlayerAbilities/Dash.cpp" bodystart="42" bodyend="44"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Applies a force to the player in the mouse direction and makes the player briefly invincible  </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>Ability</label>
+        <link refid="class_ability"/>
+      </node>
+      <node id="1">
+        <label>Dash</label>
+        <link refid="class_dash"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="3">
+        <label>AbilitiesComponent</label>
+        <link refid="class_abilities_component"/>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Ability</label>
+        <link refid="class_ability"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>owningComponent</edgelabel>
+        </childnode>
+      </node>
+      <node id="4">
+        <label>ActorComponent</label>
+        <link refid="class_actor_component"/>
+        <childnode refid="5" relation="usage">
+          <edgelabel>ownerActor</edgelabel>
+        </childnode>
+      </node>
+      <node id="1">
+        <label>Dash</label>
+        <link refid="class_dash"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>WorldObject</label>
+        <link refid="class_world_object"/>
+        <childnode refid="5" relation="usage">
+          <edgelabel>owningObject</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/Abilities/PlayerAbilities/Dash.h" line="11" column="1" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/Abilities/PlayerAbilities/Dash.h" bodystart="12" bodyend="25"/>
+    <listofallmembers>
+      <member refid="class_ability_1a1e03282d1a96232143322ef89fcbb314" prot="public" virt="non-virtual"><scope>Dash</scope><name>Ability</name></member>
+      <member refid="class_ability_1a3d60b8e01776b0f6f42aaa3fa8821aa7" prot="protected" virt="non-virtual"><scope>Dash</scope><name>abilityCostAmount</name></member>
+      <member refid="class_ability_1aa0aa42d055ea84389c3bd7bb7b61fd00" prot="protected" virt="non-virtual"><scope>Dash</scope><name>abilityCostType</name></member>
+      <member refid="class_ability_1acc6fba5d131273ccbc0cf147b6f38eb2" prot="protected" virt="non-virtual"><scope>Dash</scope><name>abilityName</name></member>
+      <member refid="class_ability_1a4310ef2c96c00e405697f9983da58645" prot="protected" virt="non-virtual"><scope>Dash</scope><name>activationKey</name></member>
+      <member refid="class_dash_1ab37a52fcb0a2953ad7f5bcf698d9d65f" prot="protected" virt="virtual"><scope>Dash</scope><name>Begin</name></member>
+      <member refid="class_ability_1a172dfdc4273690de2476fda0b82e5ea6" prot="protected" virt="virtual"><scope>Dash</scope><name>BeginTargeting</name></member>
+      <member refid="class_ability_1ae426458572df63716f8f8b63e83d04ca" prot="protected" virt="non-virtual"><scope>Dash</scope><name>bIsActive</name></member>
+      <member refid="class_ability_1afc72628992607694ae9e4a096557fead" prot="protected" virt="non-virtual"><scope>Dash</scope><name>bIsTargeted</name></member>
+      <member refid="class_ability_1ae2aac411168782dab7715c29817f23de" prot="protected" virt="non-virtual"><scope>Dash</scope><name>bIsTargeting</name></member>
+      <member refid="class_ability_1a4276e15e3a35b7887dd679eb5e332ff4" prot="protected" virt="virtual"><scope>Dash</scope><name>CanActivate</name></member>
+      <member refid="class_ability_1a1b338496a61edb978f7f83570b9f03a4" prot="protected" virt="virtual"><scope>Dash</scope><name>Commit</name></member>
+      <member refid="class_ability_1a52f7aee4243f1da13b544a038892e43b" prot="public" virt="non-virtual"><scope>Dash</scope><name>CommitAbility</name></member>
+      <member refid="class_ability_1a6e6e8dc7387275d8c4cef1036d0b2a08" prot="protected" virt="non-virtual"><scope>Dash</scope><name>cooldown</name></member>
+      <member refid="class_ability_1a74f19e3368e28b7b61bf54cabe2da629" prot="protected" virt="non-virtual"><scope>Dash</scope><name>cooldownStartPolicy</name></member>
+      <member refid="class_ability_1a0e5b9e690d512aa57f66a4f7ba3cb295" prot="protected" virt="non-virtual"><scope>Dash</scope><name>cooldownTimer</name></member>
+      <member refid="class_ability_1aa080c6e4857a11599f25e1feb65aae9d" prot="protected" virt="non-virtual"><scope>Dash</scope><name>damageAmount</name></member>
+      <member refid="class_dash_1abc38667dc53c7207c42b0808cb88967e" prot="public" virt="non-virtual"><scope>Dash</scope><name>Dash</name></member>
+      <member refid="class_dash_1a15631a12a91058a2f41e4a8f80127378" prot="protected" virt="virtual"><scope>Dash</scope><name>End</name></member>
+      <member refid="class_ability_1ad7290141bc73d865773ac54477db7fb6" prot="public" virt="non-virtual"><scope>Dash</scope><name>EndAbility</name></member>
+      <member refid="class_ability_1af82a917f3d8fc9260651c4cc59affb0e" prot="protected" virt="virtual"><scope>Dash</scope><name>EndTargeting</name></member>
+      <member refid="class_ability_1a4e28b2c8ffd652b050612ee758f76958" prot="public" virt="non-virtual"><scope>Dash</scope><name>GetAbilityName</name></member>
+      <member refid="class_ability_1a7af0334ceb8c57dd4b114124409492b5" prot="public" virt="non-virtual"><scope>Dash</scope><name>GetActivationKey</name></member>
+      <member refid="class_ability_1a57f2e9a30ca6d2588fd721af77353d52" prot="public" virt="non-virtual"><scope>Dash</scope><name>GetDamageAmount</name></member>
+      <member refid="class_ability_1a50b5f7d8d3197869b3bc32d3c9bd4fd2" prot="public" virt="non-virtual"><scope>Dash</scope><name>GetOwner</name></member>
+      <member refid="class_ability_1ab567fcf9b39984aa3bf45343ffcbc086" prot="public" virt="non-virtual"><scope>Dash</scope><name>GetOwnerAttributes</name></member>
+      <member refid="class_ability_1a063307977163faa4a3bcf7089cf70bb5" prot="public" virt="non-virtual"><scope>Dash</scope><name>GetRemainingCooldown</name></member>
+      <member refid="class_ability_1a291796c5cb356bcef9c6f6c0b2386ca2" prot="public" virt="non-virtual"><scope>Dash</scope><name>Init</name></member>
+      <member refid="class_ability_1a2a7a75401b5757d3b22ed26544bfdb19" prot="public" virt="non-virtual"><scope>Dash</scope><name>IsAbilityTargeted</name></member>
+      <member refid="class_ability_1a2432f7d4c4159f75e8552d08b7ca51ed" prot="public" virt="non-virtual"><scope>Dash</scope><name>IsAbilityTargeting</name></member>
+      <member refid="class_ability_1ac2b656dc59480f2973aaa3f0f59706bc" prot="public" virt="virtual"><scope>Dash</scope><name>IsActive</name></member>
+      <member refid="class_ability_1adbd4d2c476e68c473b2872fd788eb2c2" prot="public" virt="non-virtual"><scope>Dash</scope><name>IsInCooldown</name></member>
+      <member refid="class_ability_1aa75c59af7fa1fd68787a211e66fd0173" prot="protected" virt="non-virtual"><scope>Dash</scope><name>owningComponent</name></member>
+      <member refid="class_dash_1a3078ae06d66361da3e35af7b0efac786" prot="protected" virt="virtual"><scope>Dash</scope><name>PostInit</name></member>
+      <member refid="class_ability_1aa7f8c3e16910914b751aa1e1e5731f8f" prot="public" virt="non-virtual"><scope>Dash</scope><name>SetAbilityCooldown</name></member>
+      <member refid="class_ability_1a83e04cf64b10504ee3bc1cd10ad7219c" prot="public" virt="non-virtual"><scope>Dash</scope><name>SetAbilityCostAmount</name></member>
+      <member refid="class_ability_1a36391efa24d0da869f43e4ba592241c8" prot="public" virt="non-virtual"><scope>Dash</scope><name>SetAbilityCostType</name></member>
+      <member refid="class_ability_1a6737d4900eb79147ca81aaa20a85218a" prot="public" virt="non-virtual"><scope>Dash</scope><name>SetAbilityName</name></member>
+      <member refid="class_ability_1a13aa60092026728b42ade2811168c087" prot="public" virt="non-virtual"><scope>Dash</scope><name>SetActivationKey</name></member>
+      <member refid="class_ability_1a060e6f07d0c7510f7779418d69489fea" prot="public" virt="non-virtual"><scope>Dash</scope><name>SetCooldownStartPolicy</name></member>
+      <member refid="class_ability_1a51b48c192967cf32ea352f5e735136d6" prot="public" virt="non-virtual"><scope>Dash</scope><name>SetDamageAmount</name></member>
+      <member refid="class_ability_1a072cbfb1685db6fd4a0723d519bc9176" prot="public" virt="non-virtual"><scope>Dash</scope><name>SetIsActive</name></member>
+      <member refid="class_ability_1a95990ec850dd39919d25c4c481935db5" prot="public" virt="non-virtual"><scope>Dash</scope><name>SetIsTargeted</name></member>
+      <member refid="class_ability_1a5da322fcc571670d8b96385b67685a68" prot="public" virt="non-virtual"><scope>Dash</scope><name>SetIsTargeting</name></member>
+      <member refid="class_ability_1a7815198848a6acf69bf1d76caf595820" prot="public" virt="non-virtual"><scope>Dash</scope><name>TryActivate</name></member>
+      <member refid="class_ability_1aaa83dbb12f79ceecc4d7b1cb3930d3d3" prot="public" virt="virtual"><scope>Dash</scope><name>Update</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

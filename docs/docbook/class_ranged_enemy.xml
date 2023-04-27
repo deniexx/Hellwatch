@@ -1,0 +1,123 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_ranged_enemy" xml:lang="en-US">
+<title>RangedEnemy Class Reference</title>
+<indexterm><primary>RangedEnemy</primary></indexterm>
+<para>
+
+<para>Ranged enemy implementation, tries to keep distance and shoots from afar  </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;RangedEnemy.h&gt;</computeroutput>
+</para>
+Inheritance diagram for RangedEnemy:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_ranged_enemy__inherit__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Collaboration diagram for RangedEnemy:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_ranged_enemy__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_ranged_enemy_1ad3ef88fd54dfba53f6c8ccac3dc9a37a">RangedEnemy</link> ()</para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_class_ranged_enemy_1a1f40730c4f733c7e0cdcb7b7a27c89a3">Update</link> (float deltaTime) override</para>
+
+<para>Update function, called every frame  </para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_class_ranged_enemy_1a48a75ec89e0c9c10dd85e3bfe3aed866">Shoot</link> (float deltaTime)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Protected Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>virtual void <link linkend="_class_ranged_enemy_1a4a8ff52aaf8cffb2b4cfe94360113043">PostInit</link> () override</para>
+
+<para>Override this to Initialize variables or do any necessary work when the object is created  </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Additional Inherited Members    </title>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Ranged enemy implementation, tries to keep distance and shoots from afar  </para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_ranged_enemy_1ad3ef88fd54dfba53f6c8ccac3dc9a37a"/><section>
+    <title>RangedEnemy()</title>
+<indexterm><primary>RangedEnemy</primary><secondary>RangedEnemy</secondary></indexterm>
+<indexterm><primary>RangedEnemy</primary><secondary>RangedEnemy</secondary></indexterm>
+<para><computeroutput>RangedEnemy::RangedEnemy ( )</computeroutput></para></section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_ranged_enemy_1a4a8ff52aaf8cffb2b4cfe94360113043"/><section>
+    <title>PostInit()</title>
+<indexterm><primary>PostInit</primary><secondary>RangedEnemy</secondary></indexterm>
+<indexterm><primary>RangedEnemy</primary><secondary>PostInit</secondary></indexterm>
+<para><computeroutput>void RangedEnemy::PostInit ( )<computeroutput>[override]</computeroutput>, <computeroutput>[protected]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Override this to Initialize variables or do any necessary work when the object is created  </para>
+</para>
+<para>
+Reimplemented from <link linkend="_class_enemy_1a487c39395ee71759c8bf10707776755e">Enemy</link>.</para>
+</section>
+<anchor xml:id="_class_ranged_enemy_1a48a75ec89e0c9c10dd85e3bfe3aed866"/><section>
+    <title>Shoot()</title>
+<indexterm><primary>Shoot</primary><secondary>RangedEnemy</secondary></indexterm>
+<indexterm><primary>RangedEnemy</primary><secondary>Shoot</secondary></indexterm>
+<para><computeroutput>void RangedEnemy::Shoot (float deltaTime)<computeroutput>[virtual]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_ranged_enemy_1a1f40730c4f733c7e0cdcb7b7a27c89a3"/><section>
+    <title>Update()</title>
+<indexterm><primary>Update</primary><secondary>RangedEnemy</secondary></indexterm>
+<indexterm><primary>RangedEnemy</primary><secondary>Update</secondary></indexterm>
+<para><computeroutput>void RangedEnemy::Update (float deltaTime)<computeroutput>[override]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Update function, called every frame  </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>deltaTime</entry><entry>
+<para>Float variable for the frame time</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Reimplemented from <link linkend="_class_enemy_1a723b79407b55383b2c327f674e3ab3bc">Enemy</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following files:</para>
+D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/<link linkend="__ranged_enemy_8h">RangedEnemy.h</link>D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/<link linkend="__ranged_enemy_8cpp">RangedEnemy.cpp</link></section>
+</section>

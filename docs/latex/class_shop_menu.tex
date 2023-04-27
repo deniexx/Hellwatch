@@ -1,0 +1,102 @@
+\hypertarget{class_shop_menu}{}\doxysection{Shop\+Menu Class Reference}
+\label{class_shop_menu}\index{ShopMenu@{ShopMenu}}
+
+
+Shop menu to be used in Shop \mbox{\hyperlink{namespace_game_state}{Game\+State}}   
+
+
+
+
+{\ttfamily \#include $<$Shop\+Menu.\+h$>$}
+
+
+
+Inheritance diagram for Shop\+Menu\+:
+% FIG 0
+
+
+Collaboration diagram for Shop\+Menu\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_shop_menu_ad00ead74fb0ef7f5a265c1725fa6ccbf}{Init}} ()
+\begin{DoxyCompactList}\small\item\em Initializes the menu  \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_shop_menu_a17c43cd733173e8a19eaaff593dbfec7}{Update}} () override
+\begin{DoxyCompactList}\small\item\em Updates the controller of the menu and checks for highlights  \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_shop_menu_a17f8a9f65b1d66a40d3fed952bedde2b}{Draw\+Menu\+HUD}} (gef\+::\+Font $\ast$font\+\_\+, gef\+::\+Sprite\+Renderer $\ast$sprite\+\_\+renderer\+\_\+) override
+\begin{DoxyCompactList}\small\item\em Draws the menu HUD  \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_shop_menu_a9d9a71e0eb5eb51a917b46402e9fbc9a}{On\+Mouse\+Button\+Pressed}} (gef\+::\+Vector2 mouse\+Pos)
+\begin{DoxyCompactList}\small\item\em When the player presses the mouse button, checks if the mouse is over any buttons and if it is, it activates it  \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Shop menu to be used in Shop \mbox{\hyperlink{namespace_game_state}{Game\+State}}  
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_shop_menu_a17f8a9f65b1d66a40d3fed952bedde2b}\label{class_shop_menu_a17f8a9f65b1d66a40d3fed952bedde2b}} 
+\index{ShopMenu@{ShopMenu}!DrawMenuHUD@{DrawMenuHUD}}
+\index{DrawMenuHUD@{DrawMenuHUD}!ShopMenu@{ShopMenu}}
+\doxysubsubsection{\texorpdfstring{DrawMenuHUD()}{DrawMenuHUD()}}
+{\footnotesize\ttfamily void Shop\+Menu\+::\+Draw\+Menu\+HUD (\begin{DoxyParamCaption}\item[{gef\+::\+Font $\ast$}]{font\+\_\+,  }\item[{gef\+::\+Sprite\+Renderer $\ast$}]{sprite\+\_\+renderer\+\_\+ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Draws the menu HUD  
+
+
+
+Reimplemented from \mbox{\hyperlink{class_menu_acef1c8e0a83655c3b17c217567527f8b}{Menu}}.
+
+\mbox{\Hypertarget{class_shop_menu_ad00ead74fb0ef7f5a265c1725fa6ccbf}\label{class_shop_menu_ad00ead74fb0ef7f5a265c1725fa6ccbf}} 
+\index{ShopMenu@{ShopMenu}!Init@{Init}}
+\index{Init@{Init}!ShopMenu@{ShopMenu}}
+\doxysubsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily void Shop\+Menu\+::\+Init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Initializes the menu  
+
+
+
+Implements \mbox{\hyperlink{class_menu_a0c64b7333b29000c8b219d2ebc28c03b}{Menu}}.
+
+\mbox{\Hypertarget{class_shop_menu_a9d9a71e0eb5eb51a917b46402e9fbc9a}\label{class_shop_menu_a9d9a71e0eb5eb51a917b46402e9fbc9a}} 
+\index{ShopMenu@{ShopMenu}!OnMouseButtonPressed@{OnMouseButtonPressed}}
+\index{OnMouseButtonPressed@{OnMouseButtonPressed}!ShopMenu@{ShopMenu}}
+\doxysubsubsection{\texorpdfstring{OnMouseButtonPressed()}{OnMouseButtonPressed()}}
+{\footnotesize\ttfamily void Shop\+Menu\+::\+On\+Mouse\+Button\+Pressed (\begin{DoxyParamCaption}\item[{gef\+::\+Vector2}]{mouse\+Pos }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+When the player presses the mouse button, checks if the mouse is over any buttons and if it is, it activates it  
+
+
+
+Reimplemented from \mbox{\hyperlink{class_menu_a2370ebbed22dfd0c10491bd8ae45b771}{Menu}}.
+
+\mbox{\Hypertarget{class_shop_menu_a17c43cd733173e8a19eaaff593dbfec7}\label{class_shop_menu_a17c43cd733173e8a19eaaff593dbfec7}} 
+\index{ShopMenu@{ShopMenu}!Update@{Update}}
+\index{Update@{Update}!ShopMenu@{ShopMenu}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void Shop\+Menu\+::\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Updates the controller of the menu and checks for highlights  
+
+
+
+Reimplemented from \mbox{\hyperlink{class_menu_af29d71473a414e31e914bc637840cb3e}{Menu}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Uni/\+CMP208/\+Hellwatch/build/vs2017/\+User\+Interface/\mbox{\hyperlink{_shop_menu_8h}{Shop\+Menu.\+h}}\item 
+D\+:/\+Uni/\+CMP208/\+Hellwatch/build/vs2017/\+User\+Interface/\mbox{\hyperlink{_shop_menu_8cpp}{Shop\+Menu.\+cpp}}\end{DoxyCompactItemize}

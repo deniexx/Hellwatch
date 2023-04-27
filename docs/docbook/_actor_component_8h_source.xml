@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__actor_component_8h_source" xml:lang="en-US">
+<title>ActorComponent.h</title>
+<indexterm><primary>D:/Uni/CMP208/Hellwatch/build/vs2017/ActorComponents/ActorComponent.h</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered">1 <emphasis role="preprocessor">#pragma&#32;once</emphasis>
+2 
+3 <emphasis role="keyword">class&#32;</emphasis><link linkend="_class_world_object">WorldObject</link>;
+4 
+8 <emphasis role="keyword">class&#32;</emphasis><link linkend="_class_actor_component">ActorComponent</link>
+9 {
+10 <emphasis role="keyword">public</emphasis>:
+11 &#32;&#32;&#32;&#32;
+12 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_actor_component_1ab4ea0eaffa2c616a209e2887f80902f2">Init</link>(<link linkend="_class_world_object">WorldObject</link>*&#32;inOwnerActor);
+13 &#32;&#32;&#32;&#32;<emphasis role="keyword">virtual</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_actor_component_1af730b3c7d2b4154e1fb0962db7750f6b">UpdateComponent</link>(<emphasis role="keywordtype">float</emphasis>&#32;deltaTime);
+14 
+15 <emphasis role="keyword">protected</emphasis>:
+16 
+17 &#32;&#32;&#32;&#32;<emphasis role="keyword">virtual</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_actor_component_1a467d082f3fedd6cf2acacb117450f90e">PostInit</link>();
+18 
+19 &#32;&#32;&#32;&#32;<link linkend="_class_world_object">WorldObject</link>*&#32;<link linkend="_class_actor_component_1a2766e186399b24f5d7e2d143ffa26e05">ownerActor</link>;
+20 
+21 <emphasis role="keyword">public</emphasis>:
+22 
+23 &#32;&#32;&#32;&#32;__forceinline&#32;<link linkend="_class_world_object">WorldObject</link>*&#32;<link linkend="_class_actor_component_1a3705d464da5f840eca1d14bcce07372d">GetOwner</link>()<emphasis role="keyword">&#32;const&#32;</emphasis>{&#32;<emphasis role="keywordflow">return</emphasis>&#32;<link linkend="_class_actor_component_1a2766e186399b24f5d7e2d143ffa26e05">ownerActor</link>;&#32;}
+24 };
+25 
+</programlisting></section>

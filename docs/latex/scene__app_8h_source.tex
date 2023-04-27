@@ -1,0 +1,303 @@
+\hypertarget{scene__app_8h_source}{}\doxysection{D\+:/\+Uni/\+CMP208/\+Hellwatch/scene\+\_\+app.h}
+\mbox{\hyperlink{scene__app_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef \_SCENE\_APP\_H}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define \_SCENE\_APP\_H}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <system/application.h>}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include <maths/vector2.h>}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{primitive__builder_8h}{primitive\_builder.h}}"{}}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include "{}graphics/scene.h"{}}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include "{}box2d/box2d.h"{}}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#include "{}system/platform.h"{}}}
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{obj__mesh__loader_8h}{obj\_mesh\_loader.h}}"{}}}
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#include "{}graphics/font.h"{}}}
+\DoxyCodeLine{12 }
+\DoxyCodeLine{13 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{14 \textcolor{preprocessor}{\#include <future>}}
+\DoxyCodeLine{15 \textcolor{preprocessor}{\#include <random>}}
+\DoxyCodeLine{16 }
+\DoxyCodeLine{17 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespace_game_state}{GameState}}}
+\DoxyCodeLine{18 \{}
+\DoxyCodeLine{19     \textcolor{keyword}{enum} \mbox{\hyperlink{namespace_game_state_aa2df68fe63beaaf10d3154d8eb490fe6}{Type}}}
+\DoxyCodeLine{20     \{}
+\DoxyCodeLine{21         \mbox{\hyperlink{namespace_game_state_aa2df68fe63beaaf10d3154d8eb490fe6a1c09055471a61c18afc1fc201e6d7d2a}{Loading}},}
+\DoxyCodeLine{22         \mbox{\hyperlink{namespace_game_state_aa2df68fe63beaaf10d3154d8eb490fe6afff9d63720dd6c0c621817980d02d9ee}{MainMenu}},}
+\DoxyCodeLine{23         \mbox{\hyperlink{namespace_game_state_aa2df68fe63beaaf10d3154d8eb490fe6aa1babbc78fafb7b98d14a8fcc880bd55}{GameLoop}},}
+\DoxyCodeLine{24         \mbox{\hyperlink{namespace_game_state_aa2df68fe63beaaf10d3154d8eb490fe6a6e1adcd2eb4fb5660e3baadd566e4873}{PauseMenu}},}
+\DoxyCodeLine{25         \mbox{\hyperlink{namespace_game_state_aa2df68fe63beaaf10d3154d8eb490fe6a11dfd10e2813b09f256dd86e3902dfe2}{Shop}},}
+\DoxyCodeLine{26         \mbox{\hyperlink{namespace_game_state_aa2df68fe63beaaf10d3154d8eb490fe6a797c961d3f35a579149051adc329e58e}{GameEnd}}}
+\DoxyCodeLine{27     \};}
+\DoxyCodeLine{28 \}}
+\DoxyCodeLine{29 }
+\DoxyCodeLine{30 \textcolor{keyword}{struct }\mbox{\hyperlink{struct_f_camera_shake}{FCameraShake}}}
+\DoxyCodeLine{31 \{}
+\DoxyCodeLine{32     gef::Vector4 \mbox{\hyperlink{struct_f_camera_shake_ae28540e423d42a897f77f196f27bcde7}{maxOffset}} = gef::Vector4::kZero;}
+\DoxyCodeLine{33     gef::Vector4 \mbox{\hyperlink{struct_f_camera_shake_a957c35cfc269421091fc884a21d41899}{minOffset}} = gef::Vector4::kZero;}
+\DoxyCodeLine{34 }
+\DoxyCodeLine{35     \textcolor{keywordtype}{float} \mbox{\hyperlink{struct_f_camera_shake_a0067a7fbb68d30a2f8d68511a6403e46}{lerpAlpha}} = 0.f;}
+\DoxyCodeLine{36     \textcolor{keywordtype}{float} \mbox{\hyperlink{struct_f_camera_shake_a28904f65e3bcb603c865ba72bcbea0e2}{duration}} = 1.f;}
+\DoxyCodeLine{37     \textcolor{keywordtype}{float} \mbox{\hyperlink{struct_f_camera_shake_a089db07499dd81ac8736501fbe46aa86}{intensity}} = 1.f;}
+\DoxyCodeLine{38     \textcolor{keywordtype}{float} \mbox{\hyperlink{struct_f_camera_shake_a11948ae09ec868a32530378efd25f34f}{cameraShakeStartTime}} = 0.f;}
+\DoxyCodeLine{39 }
+\DoxyCodeLine{40     \textcolor{keywordtype}{bool} \mbox{\hyperlink{struct_f_camera_shake_a11241077b74ae4a78aab9c55f25f8827}{bMovingForward}} = \textcolor{keyword}{true};}
+\DoxyCodeLine{41 \};}
+\DoxyCodeLine{42 }
+\DoxyCodeLine{43 \textcolor{comment}{// FRAMEWORK FORWARD DECLARATIONS}}
+\DoxyCodeLine{44 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacegef}{gef}}}
+\DoxyCodeLine{45 \{}
+\DoxyCodeLine{46     \textcolor{keyword}{class }Platform;}
+\DoxyCodeLine{47     \textcolor{keyword}{class }SpriteRenderer;}
+\DoxyCodeLine{48     \textcolor{keyword}{class }Font;}
+\DoxyCodeLine{49     \textcolor{keyword}{class }InputManager;}
+\DoxyCodeLine{50     \textcolor{keyword}{class }Renderer3D;}
+\DoxyCodeLine{51     \textcolor{keyword}{class }Sprite;}
+\DoxyCodeLine{52     \textcolor{keyword}{class }AudioManager;}
+\DoxyCodeLine{53 \}}
+\DoxyCodeLine{54 }
+\DoxyCodeLine{55 \textcolor{comment}{/* Forward declarations */}}
+\DoxyCodeLine{56 \textcolor{keyword}{class }\mbox{\hyperlink{class_mesh_actor}{MeshActor}};}
+\DoxyCodeLine{57 \textcolor{keyword}{class }\mbox{\hyperlink{class_sprite_actor}{SpriteActor}};}
+\DoxyCodeLine{58 \textcolor{keyword}{class }\mbox{\hyperlink{class_world_object}{WorldObject}};}
+\DoxyCodeLine{59 \textcolor{keyword}{class }\mbox{\hyperlink{class_player_character}{PlayerCharacter}};}
+\DoxyCodeLine{60 \textcolor{keyword}{class }\mbox{\hyperlink{class_enemy_dummy}{EnemyDummy}};}
+\DoxyCodeLine{61 \textcolor{keyword}{class }\mbox{\hyperlink{class_enemy}{Enemy}};}
+\DoxyCodeLine{62 \textcolor{keyword}{class }\mbox{\hyperlink{class_ranged_enemy}{RangedEnemy}};}
+\DoxyCodeLine{63 \textcolor{keyword}{class }\mbox{\hyperlink{class_wave_manager}{WaveManager}};}
+\DoxyCodeLine{64 \textcolor{keyword}{class }\mbox{\hyperlink{class_main_menu}{MainMenu}};}
+\DoxyCodeLine{65 \textcolor{keyword}{class }\mbox{\hyperlink{class_shop_menu}{ShopMenu}};}
+\DoxyCodeLine{66 \textcolor{keyword}{class }\mbox{\hyperlink{class_pause_menu}{PauseMenu}};}
+\DoxyCodeLine{67 \textcolor{keyword}{class }\mbox{\hyperlink{class_game_end_menu}{GameEndMenu}};}
+\DoxyCodeLine{68 \textcolor{keyword}{class }\mbox{\hyperlink{class_player_controller}{PlayerController}};}
+\DoxyCodeLine{69 \textcolor{keyword}{class }\mbox{\hyperlink{class_particle_manager}{ParticleManager}};}
+\DoxyCodeLine{70 }
+\DoxyCodeLine{71 \textcolor{keyword}{typedef} std::map<std::string, gef::Texture*> \mbox{\hyperlink{scene__app_8h_a5b57d40276b77cc074d878efc78bb980}{TextureMap}};}
+\DoxyCodeLine{72 \textcolor{keyword}{typedef} std::map<std::string, int> \mbox{\hyperlink{scene__app_8h_a8d89ee6a10feffd9323a0031e0bbea29}{SoundMap}};}
+\DoxyCodeLine{73 }
+\DoxyCodeLine{74 \textcolor{keyword}{class }\mbox{\hyperlink{class_scene_app}{SceneApp}} : \textcolor{keyword}{public} gef::Application}
+\DoxyCodeLine{75 \{}
+\DoxyCodeLine{76 \textcolor{keyword}{public}:}
+\DoxyCodeLine{77 }
+\DoxyCodeLine{78     \textcolor{keyword}{static} \textcolor{keyword}{inline} \mbox{\hyperlink{class_scene_app}{SceneApp}}* SceneApp::instance;}
+\DoxyCodeLine{79 }
+\DoxyCodeLine{80     \mbox{\hyperlink{class_scene_app}{SceneApp}}(gef::Platform\& platform);}
+\DoxyCodeLine{81     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_scene_app_afbc3cd83343839fef53b5fcc2da630e6}{Init}}();}
+\DoxyCodeLine{82     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_scene_app_ab815a8823c2248fcebdc7a06867bdb9b}{CleanUp}}();}
+\DoxyCodeLine{83     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_scene_app_a48adec081291fea513f516bec9dcb898}{Update}}(\textcolor{keywordtype}{float} frame\_time);}
+\DoxyCodeLine{84     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_scene_app_afd9eebbabf3fe176d9fe30b309c2130c}{Render}}();}
+\DoxyCodeLine{85 }
+\DoxyCodeLine{90     b2Body* \mbox{\hyperlink{class_scene_app_adcf5fcd2dfcb07d468c0ff4455e45bdd}{CreateCollisionBody}}(b2BodyDef bodyDef, b2FixtureDef fixtureDef, \mbox{\hyperlink{class_world_object}{WorldObject}}* owningObject);}
+\DoxyCodeLine{91 }
+\DoxyCodeLine{92 \textcolor{keyword}{private}:}
+\DoxyCodeLine{93 }
+\DoxyCodeLine{94 \textcolor{comment}{    /************************************************************************/}}
+\DoxyCodeLine{95     \textcolor{comment}{/*                         CALLED ONCE                                  */}}
+\DoxyCodeLine{96 \textcolor{comment}{    /************************************************************************/}}
+\DoxyCodeLine{97     \textcolor{keywordtype}{void} InitFont();}
+\DoxyCodeLine{98     \textcolor{keywordtype}{void} CleanUpFont();}
+\DoxyCodeLine{99     \textcolor{keywordtype}{void} SetupLights();}
+\DoxyCodeLine{100     \textcolor{keywordtype}{void} InitGameLoop();}
+\DoxyCodeLine{101     \textcolor{keywordtype}{void} InitMainMenu();}
+\DoxyCodeLine{102     \textcolor{keywordtype}{void} InitShop();}
+\DoxyCodeLine{103     \textcolor{keywordtype}{void} InitPauseMenu();}
+\DoxyCodeLine{104     \textcolor{keywordtype}{void} InitGameEndMenu();}
+\DoxyCodeLine{105 }
+\DoxyCodeLine{106 \textcolor{comment}{    /************************************************************************/}}
+\DoxyCodeLine{107     \textcolor{comment}{/*                             UPDATES                                  */}}
+\DoxyCodeLine{108 \textcolor{comment}{    /************************************************************************/}}
+\DoxyCodeLine{109     \textcolor{keywordtype}{void} UpdateLoading(\textcolor{keywordtype}{float} frame\_time);}
+\DoxyCodeLine{110     \textcolor{keywordtype}{void} UpdateMainMenu(\textcolor{keywordtype}{float} frame\_time);}
+\DoxyCodeLine{111     \textcolor{keywordtype}{void} UpdateGameLoop(\textcolor{keywordtype}{float} frame\_time);}
+\DoxyCodeLine{112     \textcolor{keywordtype}{void} UpdatePauseMenu(\textcolor{keywordtype}{float} frame\_time);}
+\DoxyCodeLine{113     \textcolor{keywordtype}{void} UpdateShop();}
+\DoxyCodeLine{114     \textcolor{keywordtype}{void} UpdateGameEnd();}
+\DoxyCodeLine{115 }
+\DoxyCodeLine{116     \textcolor{keywordtype}{void} HandleCollision();}
+\DoxyCodeLine{117     \textcolor{keywordtype}{void} CheckMarkedForDeletion();}
+\DoxyCodeLine{118 }
+\DoxyCodeLine{119 }
+\DoxyCodeLine{120 \textcolor{comment}{    /************************************************************************/}}
+\DoxyCodeLine{121     \textcolor{comment}{/*                           RENDERING                                  */}}
+\DoxyCodeLine{122 \textcolor{comment}{    /************************************************************************/}}
+\DoxyCodeLine{123     \textcolor{keywordtype}{void} DrawHUD();}
+\DoxyCodeLine{124 }
+\DoxyCodeLine{125     \textcolor{keywordtype}{void} RenderLoading();}
+\DoxyCodeLine{126     \textcolor{keywordtype}{void} RenderMainMenu();}
+\DoxyCodeLine{127     \textcolor{keywordtype}{void} RenderGameLoop();}
+\DoxyCodeLine{128     \textcolor{keywordtype}{void} RenderPauseMenu();}
+\DoxyCodeLine{129     \textcolor{keywordtype}{void} RenderShop();}
+\DoxyCodeLine{130     \textcolor{keywordtype}{void} RenderGameEnd();}
+\DoxyCodeLine{131 }
+\DoxyCodeLine{132 \textcolor{comment}{    /*******************************************************}}
+\DoxyCodeLine{133 \textcolor{comment}{    *                   GAME STATE                         *}}
+\DoxyCodeLine{134 \textcolor{comment}{    *******************************************************/}}
+\DoxyCodeLine{135     \mbox{\hyperlink{namespace_game_state_aa2df68fe63beaaf10d3154d8eb490fe6}{GameState::Type}} gameState;}
+\DoxyCodeLine{136     \textcolor{keywordtype}{bool} bGameLoopInitted = \textcolor{keyword}{false};}
+\DoxyCodeLine{137     \textcolor{keywordtype}{bool} bCommingFromMainMenu = \textcolor{keyword}{false};}
+\DoxyCodeLine{138 }
+\DoxyCodeLine{139 \textcolor{comment}{    /*******************************************************}}
+\DoxyCodeLine{140 \textcolor{comment}{    *                  ASSET LOADING                       *}}
+\DoxyCodeLine{141 \textcolor{comment}{    *******************************************************/}}
+\DoxyCodeLine{142     gef::Scene* LoadSceneAssets(gef::Platform\& platform, \textcolor{keyword}{const} \textcolor{keywordtype}{char}* filename);}
+\DoxyCodeLine{143     gef::Mesh* GetMeshFromSceneAssets(gef::Scene* scene);}
+\DoxyCodeLine{144 }
+\DoxyCodeLine{145     \textcolor{keywordtype}{void} LoadAssets();}
+\DoxyCodeLine{146     \textcolor{keywordtype}{void} BuildToLoadData();}
+\DoxyCodeLine{147 }
+\DoxyCodeLine{148     \mbox{\hyperlink{class_primitive_builder}{PrimitiveBuilder}}* primitive\_builder\_;}
+\DoxyCodeLine{149     \mbox{\hyperlink{obj__mesh__loader_8h_ab6d74e55cf8354fe68dd64bd265a814e}{MeshMap}} meshes;}
+\DoxyCodeLine{150     \mbox{\hyperlink{scene__app_8h_a5b57d40276b77cc074d878efc78bb980}{TextureMap}} textures;}
+\DoxyCodeLine{151 }
+\DoxyCodeLine{152 \textcolor{comment}{    /*******************************************************}}
+\DoxyCodeLine{153 \textcolor{comment}{    *                    RENDERING                         *}}
+\DoxyCodeLine{154 \textcolor{comment}{    *******************************************************/}}
+\DoxyCodeLine{155     gef::SpriteRenderer* sprite\_renderer\_;}
+\DoxyCodeLine{156     gef::Font* font\_;}
+\DoxyCodeLine{157     gef::Renderer3D* renderer\_3d\_;}
+\DoxyCodeLine{158 }
+\DoxyCodeLine{159     \textcolor{comment}{/* This is used to asynchronously load assets */}}
+\DoxyCodeLine{160     std::future<GameState::Type> loadFuture;}
+\DoxyCodeLine{161 }
+\DoxyCodeLine{162     \textcolor{comment}{/* Menu classes and wave manager */}}
+\DoxyCodeLine{163     \mbox{\hyperlink{class_wave_manager}{WaveManager}}* waveManager;}
+\DoxyCodeLine{164     \mbox{\hyperlink{class_main_menu}{MainMenu}}* mainMenu;}
+\DoxyCodeLine{165     \mbox{\hyperlink{class_shop_menu}{ShopMenu}}* shopMenu;}
+\DoxyCodeLine{166     \mbox{\hyperlink{class_pause_menu}{PauseMenu}}* pauseMenu;}
+\DoxyCodeLine{167     \mbox{\hyperlink{class_game_end_menu}{GameEndMenu}}* gameEndMenu;}
+\DoxyCodeLine{168 }
+\DoxyCodeLine{169     \textcolor{comment}{/* We store this here for ease of access */}}
+\DoxyCodeLine{170     uint32\_t playerMoney = 0;}
+\DoxyCodeLine{171 }
+\DoxyCodeLine{172     \textcolor{comment}{/* Utility function to find sample name */}}
+\DoxyCodeLine{173     \textcolor{keywordtype}{int} FindSampleFromName(std::string sampleName);}
+\DoxyCodeLine{174 }
+\DoxyCodeLine{175 \textcolor{comment}{    /************************************************************************/}}
+\DoxyCodeLine{176     \textcolor{comment}{/*                              REQUIRED                                */}}
+\DoxyCodeLine{177 \textcolor{comment}{    /************************************************************************/}}
+\DoxyCodeLine{178     gef::Sprite* loadingSprite;}
+\DoxyCodeLine{179     \mbox{\hyperlink{class_player_character}{PlayerCharacter}}* playerCharacter;}
+\DoxyCodeLine{180     std::vector<MeshActor*> meshActors;}
+\DoxyCodeLine{181     std::vector<SpriteActor*> spriteActors;}
+\DoxyCodeLine{182     gef::Scene* scene\_assets\_;}
+\DoxyCodeLine{183     std::vector<std::string> meshesToLoad;}
+\DoxyCodeLine{184     std::map<std::string, std::string> texturesToLoad;}
+\DoxyCodeLine{185     std::map<std::string, std::string> soundsToLoad;}
+\DoxyCodeLine{186 }
+\DoxyCodeLine{187     gef::Sprite* pointerSprite;}
+\DoxyCodeLine{188     gef::Vector2 pointerLocation = gef::Vector2(0, 0);}
+\DoxyCodeLine{189 }
+\DoxyCodeLine{190     gef::Vector4 cameraEye = gef::Vector4(0.0f, 20.0f, 0.0f);}
+\DoxyCodeLine{191     gef::Vector4 cameraLookAt = gef::Vector4(0.0f, -\/1.0f, 0.001f);}
+\DoxyCodeLine{192     gef::Vector4 cameraUp = gef::Vector4(0.0f, 1.0f, 0.0f);}
+\DoxyCodeLine{193 }
+\DoxyCodeLine{194     \mbox{\hyperlink{struct_f_camera_shake}{FCameraShake}} cameraShake = \mbox{\hyperlink{struct_f_camera_shake}{FCameraShake}}();}
+\DoxyCodeLine{195 }
+\DoxyCodeLine{196     \textcolor{keywordtype}{float} fps\_;}
+\DoxyCodeLine{197     \textcolor{keywordtype}{float} currentGameTime;}
+\DoxyCodeLine{198     \textcolor{keywordtype}{float} lastDeltaTime;}
+\DoxyCodeLine{199 }
+\DoxyCodeLine{200 \textcolor{comment}{    /************************************************************************/}}
+\DoxyCodeLine{201     \textcolor{comment}{/*                               BOX2D                                  */}}
+\DoxyCodeLine{202 \textcolor{comment}{    /************************************************************************/}}
+\DoxyCodeLine{203     b2World* b2dWorld;}
+\DoxyCodeLine{204     b2Vec2 gravity;}
+\DoxyCodeLine{205 }
+\DoxyCodeLine{206 }
+\DoxyCodeLine{207 \textcolor{comment}{    /************************************************************************/}}
+\DoxyCodeLine{208     \textcolor{comment}{/*                               SOUND                                  */}}
+\DoxyCodeLine{209 \textcolor{comment}{    /************************************************************************/}}
+\DoxyCodeLine{210     gef::AudioManager* audioManager;}
+\DoxyCodeLine{211     \mbox{\hyperlink{scene__app_8h_a8d89ee6a10feffd9323a0031e0bbea29}{SoundMap}} sounds;}
+\DoxyCodeLine{212     \textcolor{keywordtype}{int} masterVolume = 30.f;}
+\DoxyCodeLine{213 }
+\DoxyCodeLine{214     \mbox{\hyperlink{class_player_controller}{PlayerController}}* soundController;}
+\DoxyCodeLine{215 }
+\DoxyCodeLine{216 \textcolor{comment}{    /************************************************************************/}}
+\DoxyCodeLine{217     \textcolor{comment}{/*                               RANDOM                                 */}}
+\DoxyCodeLine{218 \textcolor{comment}{    /************************************************************************/}}
+\DoxyCodeLine{219     std::default\_random\_engine rd;}
+\DoxyCodeLine{220     std::uniform\_real\_distribution<float> dist;}
+\DoxyCodeLine{221 }
+\DoxyCodeLine{222 \textcolor{comment}{    /************************************************************************/}}
+\DoxyCodeLine{223     \textcolor{comment}{/*                             PARTICLES                                */}}
+\DoxyCodeLine{224 \textcolor{comment}{    /************************************************************************/}}
+\DoxyCodeLine{225     \mbox{\hyperlink{class_particle_manager}{ParticleManager}}* particleManager;}
+\DoxyCodeLine{226 }
+\DoxyCodeLine{227 \textcolor{keyword}{public}:}
+\DoxyCodeLine{228 }
+\DoxyCodeLine{229 \textcolor{comment}{    /************************************************************************/}}
+\DoxyCodeLine{230     \textcolor{comment}{/*                              GETTERS                                 */}}
+\DoxyCodeLine{231 \textcolor{comment}{    /************************************************************************/}}
+\DoxyCodeLine{232     \_\_forceinline gef::Renderer3D* \mbox{\hyperlink{class_scene_app_ac0999a6034cf97a795506eb75dd3cc7f}{GetRenderer3D}}()\textcolor{keyword}{ const }\{ \textcolor{keywordflow}{return} renderer\_3d\_; \}}
+\DoxyCodeLine{233     \_\_forceinline gef::SpriteRenderer* \mbox{\hyperlink{class_scene_app_acfe997c4a66416d0cf25324d47403abb}{GetSpriteRenderer}}()\textcolor{keyword}{ const }\{ \textcolor{keywordflow}{return} sprite\_renderer\_; \}}
+\DoxyCodeLine{234     \_\_forceinline b2World* \mbox{\hyperlink{class_scene_app_ad1ff8bd221115d5e081490da02e2f398}{GetBox2DWorld}}()\textcolor{keyword}{ const }\{ \textcolor{keywordflow}{return} b2dWorld; \}}
+\DoxyCodeLine{235     \_\_forceinline \textcolor{keywordtype}{float} \mbox{\hyperlink{class_scene_app_a30039f31aff4d61fdce25d79425892fc}{GetViewportWidth}}()\textcolor{keyword}{ const }\{ \textcolor{keywordflow}{return} platform\_.width(); \}}
+\DoxyCodeLine{236     \_\_forceinline \textcolor{keywordtype}{float} \mbox{\hyperlink{class_scene_app_a0fc304ef89214b58b23adf26ec63f6ac}{GetViewportHeight}}()\textcolor{keyword}{ const }\{ \textcolor{keywordflow}{return} platform\_.height(); \}}
+\DoxyCodeLine{237     \_\_forceinline \mbox{\hyperlink{class_player_character}{PlayerCharacter}}* \mbox{\hyperlink{class_scene_app_a36cc2439051445972f7b29114f3b011b}{GetPlayerCharacter}}()\textcolor{keyword}{ const }\{ \textcolor{keywordflow}{return} playerCharacter; \}}
+\DoxyCodeLine{238     \_\_forceinline \mbox{\hyperlink{class_primitive_builder}{PrimitiveBuilder}}* \mbox{\hyperlink{class_scene_app_ad0422232eb1f735a48a20137eb6e953e}{GetPrimitiveBuilder}}()\textcolor{keyword}{ const }\{ \textcolor{keywordflow}{return} primitive\_builder\_; \}}
+\DoxyCodeLine{239     \_\_forceinline gef::Vector4 \mbox{\hyperlink{class_scene_app_aaec63e72c5b04a1f7a63f3ff81b8bdb7}{GetCameraEye}}()\textcolor{keyword}{ const }\{ \textcolor{keywordflow}{return} cameraEye; \}}
+\DoxyCodeLine{240     \_\_forceinline gef::Vector4 \mbox{\hyperlink{class_scene_app_ab94350ed26fa0140eaac7060d97db655}{GetCameraLookAt}}()\textcolor{keyword}{ const }\{ \textcolor{keywordflow}{return} cameraLookAt; \}}
+\DoxyCodeLine{241     \_\_forceinline \textcolor{keywordtype}{float} \mbox{\hyperlink{class_scene_app_ab0a3e09a2920c053f50d25ea03132ae7}{GetCurrentGameTime}}()\textcolor{keyword}{ const }\{ \textcolor{keywordflow}{return} currentGameTime; \}}
+\DoxyCodeLine{242     \_\_forceinline \textcolor{keywordtype}{float} \mbox{\hyperlink{class_scene_app_af624c2780cc0b7d913f63f7c4df74030}{GetLastDeltaTime}}()\textcolor{keyword}{ const }\{ \textcolor{keywordflow}{return} lastDeltaTime; \}}
+\DoxyCodeLine{243 }
+\DoxyCodeLine{244     gef::Mesh* \mbox{\hyperlink{class_scene_app_a6b6984ec718cb9ebad4be261df534cf1}{RequestMeshByName}}(std::string meshName);}
+\DoxyCodeLine{245     gef::Texture* \mbox{\hyperlink{class_scene_app_ac00c6ac20d92d7e8fd77d341a116e81d}{RequestTextureByName}}(std::string textureName);}
+\DoxyCodeLine{246     gef::Font* \mbox{\hyperlink{class_scene_app_a13fa1b28170df85ade3d18e329fbedc7}{GetFont}}() \{ \textcolor{keywordflow}{return} font\_; \}}
+\DoxyCodeLine{247     gef::AudioManager* \mbox{\hyperlink{class_scene_app_a1b8d7ed84a7691d140c0b10d6cc01f7b}{GetAudioManager}}() \{ \textcolor{keywordflow}{return} audioManager; \}}
+\DoxyCodeLine{248     \textcolor{keyword}{const} gef::Vector2 \mbox{\hyperlink{class_scene_app_a2cb299beb00f7fea8f1de7c0cc6ab19b}{GetLastTouchPosition}}();}
+\DoxyCodeLine{249 }
+\DoxyCodeLine{250     \textcolor{comment}{/* Game State */}}
+\DoxyCodeLine{251     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_scene_app_a3bc64bbc203e9cb597f2b47dc69f20e6}{SetGameState}}(\mbox{\hyperlink{namespace_game_state_aa2df68fe63beaaf10d3154d8eb490fe6}{GameState::Type}} newState);}
+\DoxyCodeLine{252     \mbox{\hyperlink{namespace_game_state_aa2df68fe63beaaf10d3154d8eb490fe6}{GameState::Type}} \mbox{\hyperlink{class_scene_app_a3218d41e2d667db80e8fed34b02b6221}{GetGameState}}()\textcolor{keyword}{ const }\{ \textcolor{keywordflow}{return} gameState; \}}
+\DoxyCodeLine{253 }
+\DoxyCodeLine{254     \textcolor{comment}{/* Player money */}}
+\DoxyCodeLine{255     \textcolor{keyword}{const} uint32\_t \mbox{\hyperlink{class_scene_app_ab4f8fc5ac0dc41a16f83089ff782b6f4}{GetPlayerMoney}}() \{ \textcolor{keywordflow}{return} playerMoney; \}}
+\DoxyCodeLine{256     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_scene_app_aec4d56f9129795aaef4ad8f2a454e302}{IncreasePlayerMoney}}(uint32\_t increaseAmount) \{ playerMoney += increaseAmount; \}}
+\DoxyCodeLine{257     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_scene_app_ac7ebc87268f7eea380099954c5358fd3}{ApplyCostToPlayerMoney}}(uint32\_t cost) \{ playerMoney -\/= cost; \}}
+\DoxyCodeLine{258 }
+\DoxyCodeLine{259     \textcolor{comment}{/* Camera Shake */}}
+\DoxyCodeLine{260 }
+\DoxyCodeLine{265     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_scene_app_a04b16337e0cd4af5f9b38f75ca623f34}{ApplyCameraShake}}(\mbox{\hyperlink{struct_f_camera_shake}{FCameraShake}} newShake);}
+\DoxyCodeLine{266 }
+\DoxyCodeLine{267     \textcolor{comment}{/* Damage */}}
+\DoxyCodeLine{268     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_scene_app_a85782170c9894dfebe3a8045063301c6}{ApplyRadialDamage}}(\textcolor{keywordtype}{float} damageAmount, gef::Vector4 origin, \textcolor{keywordtype}{float} innerRadius, \textcolor{keywordtype}{float} outerRadius);}
+\DoxyCodeLine{269 }
+\DoxyCodeLine{270     \textcolor{comment}{/* Sound */}}
+\DoxyCodeLine{271     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_scene_app_a942b3809824f430117b26e9a7ad5acf6}{PlaySample}}(std::string sampleName, \textcolor{keywordtype}{float} pitch = 1, \textcolor{keywordtype}{bool} bIsLooping = \textcolor{keyword}{false});}
+\DoxyCodeLine{272 }
+\DoxyCodeLine{273     \textcolor{comment}{/* Pointer functions */}}
+\DoxyCodeLine{274     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_scene_app_a829d6b657cc270002fcf262d57e2f249}{AddPointerLocationOffset}}(gef::Vector2 offset) \{ pointerLocation += offset; \}}
+\DoxyCodeLine{275 }
+\DoxyCodeLine{276     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_scene_app_ab40943893a61a141c9fb25eec163a1f1}{SetPointerLocation}}(gef::Vector2 newLocation) \{ pointerLocation = newLocation; \}}
+\DoxyCodeLine{277 }
+\DoxyCodeLine{281     \textcolor{keyword}{template} <\textcolor{keyword}{typename} MeshActorType = MeshActor>}
+\DoxyCodeLine{282     MeshActorType* \mbox{\hyperlink{class_scene_app_a800b10254ae600ce80c0e69d765e8061}{SpawnMeshActor}}(gef::Mesh* mesh = \textcolor{keyword}{nullptr}, gef::Vector4 translation = gef::Vector4::kZero, gef::Vector4 rotation = gef::Vector4::kZero, gef::Vector4 scale = gef::Vector4::kOne, \mbox{\hyperlink{class_world_object}{WorldObject}}* owner = \textcolor{keyword}{nullptr})}
+\DoxyCodeLine{283     \{}
+\DoxyCodeLine{284         MeshActorType* meshActor = \textcolor{keyword}{new} MeshActorType();}
+\DoxyCodeLine{285         meshActor-\/>SetMesh(mesh);}
+\DoxyCodeLine{286         meshActor-\/>SetRotation(rotation);}
+\DoxyCodeLine{287         meshActor-\/>SetScale(scale);}
+\DoxyCodeLine{288         meshActor-\/>Init(owner);}
+\DoxyCodeLine{289         meshActor-\/>SetTranslation(translation);}
+\DoxyCodeLine{290         meshActors.push\_back(meshActor);}
+\DoxyCodeLine{291 }
+\DoxyCodeLine{292         \textcolor{keywordflow}{return} meshActor;}
+\DoxyCodeLine{293     \}}
+\DoxyCodeLine{294 }
+\DoxyCodeLine{298     \textcolor{keyword}{template}<\textcolor{keyword}{typename} SpriteActorType = SpriteActor>}
+\DoxyCodeLine{299     SpriteActorType* \mbox{\hyperlink{class_scene_app_ab70d4d12950fa87533727b3fa6e42ee5}{SpawnSpriteActor}}(gef::Sprite* sprite = \textcolor{keyword}{nullptr}, gef::Vector4 position = gef::Vector4::kZero, \textcolor{keywordtype}{float} rotation = 0.f, \mbox{\hyperlink{class_world_object}{WorldObject}}* owner = \textcolor{keyword}{nullptr})}
+\DoxyCodeLine{300     \{}
+\DoxyCodeLine{301         SpriteActorType* spriteActor = \textcolor{keyword}{new} SpriteActorType();}
+\DoxyCodeLine{302         spriteActor-\/>SetSprite(sprite);}
+\DoxyCodeLine{303         spriteActor-\/>SetTranslation(position);}
+\DoxyCodeLine{304         spriteActor-\/>SetRotation(rotation);}
+\DoxyCodeLine{305         spriteActor-\/>Init(owner);}
+\DoxyCodeLine{306         spriteActors.push\_back(spriteActor);}
+\DoxyCodeLine{307 }
+\DoxyCodeLine{308         \textcolor{keywordflow}{return} spriteActor;}
+\DoxyCodeLine{309     \}}
+\DoxyCodeLine{310 \};}
+\DoxyCodeLine{311 }
+\DoxyCodeLine{312 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// \_SCENE\_APP\_H}}
+
+\end{DoxyCode}

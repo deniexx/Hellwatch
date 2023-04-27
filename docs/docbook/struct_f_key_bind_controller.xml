@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_struct_f_key_bind_controller" xml:lang="en-US">
+<title>FKeyBindController Struct Reference</title>
+<indexterm><primary>FKeyBindController</primary></indexterm>
+<para>
+<computeroutput>#include &lt;PlayerController.h&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>int <link linkend="_struct_f_key_bind_controller_1a30a23da42d558b13a620780e9252e1b4">keyCode</link></para>
+</listitem>
+            <listitem><para><link linkend="_namespace_hellwatch_input_action_1ad39fcc17ea621da731d011339205f522">HellwatchInputAction::Type</link> <link linkend="_struct_f_key_bind_controller_1a9439ad75707d54dacf3aff4d9532e80c">inputAction</link> = <link linkend="_namespace_hellwatch_input_action_1ad39fcc17ea621da731d011339205f522a1b668be2e7a287399767467c996dcdcb">HellwatchInputAction::None</link></para>
+</listitem>
+            <listitem><para><link linkend="_namespace_hellwatch_controller_axis_1a6014138ce0ea9634c8a9c36539a7a967">HellwatchControllerAxis::Type</link> <link linkend="_struct_f_key_bind_controller_1afd25023bd19b1e50223d80261426aa5a">axis</link> = <link linkend="_namespace_hellwatch_controller_axis_1a6014138ce0ea9634c8a9c36539a7a967af556634c68eda0587cb64022a5dec80d">HellwatchControllerAxis::None</link></para>
+</listitem>
+            <listitem><para>std::function&lt; void(gef::Vector2)&gt; <link linkend="_struct_f_key_bind_controller_1ad1881af9bbed2c677b1f11b8e5e3d5b6">functionBind</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_struct_f_key_bind_controller_1afd25023bd19b1e50223d80261426aa5a"/><section>
+    <title>axis</title>
+<indexterm><primary>axis</primary><secondary>FKeyBindController</secondary></indexterm>
+<indexterm><primary>FKeyBindController</primary><secondary>axis</secondary></indexterm>
+<para><computeroutput><link linkend="_namespace_hellwatch_controller_axis_1a6014138ce0ea9634c8a9c36539a7a967">HellwatchControllerAxis::Type</link> FKeyBindController::axis = <link linkend="_namespace_hellwatch_controller_axis_1a6014138ce0ea9634c8a9c36539a7a967af556634c68eda0587cb64022a5dec80d">HellwatchControllerAxis::None</link></computeroutput></para></section>
+<anchor xml:id="_struct_f_key_bind_controller_1ad1881af9bbed2c677b1f11b8e5e3d5b6"/><section>
+    <title>functionBind</title>
+<indexterm><primary>functionBind</primary><secondary>FKeyBindController</secondary></indexterm>
+<indexterm><primary>FKeyBindController</primary><secondary>functionBind</secondary></indexterm>
+<para><computeroutput>std::function&lt;void(gef::Vector2)&gt; FKeyBindController::functionBind</computeroutput></para></section>
+<anchor xml:id="_struct_f_key_bind_controller_1a9439ad75707d54dacf3aff4d9532e80c"/><section>
+    <title>inputAction</title>
+<indexterm><primary>inputAction</primary><secondary>FKeyBindController</secondary></indexterm>
+<indexterm><primary>FKeyBindController</primary><secondary>inputAction</secondary></indexterm>
+<para><computeroutput><link linkend="_namespace_hellwatch_input_action_1ad39fcc17ea621da731d011339205f522">HellwatchInputAction::Type</link> FKeyBindController::inputAction = <link linkend="_namespace_hellwatch_input_action_1ad39fcc17ea621da731d011339205f522a1b668be2e7a287399767467c996dcdcb">HellwatchInputAction::None</link></computeroutput></para></section>
+<anchor xml:id="_struct_f_key_bind_controller_1a30a23da42d558b13a620780e9252e1b4"/><section>
+    <title>keyCode</title>
+<indexterm><primary>keyCode</primary><secondary>FKeyBindController</secondary></indexterm>
+<indexterm><primary>FKeyBindController</primary><secondary>keyCode</secondary></indexterm>
+<para><computeroutput>int FKeyBindController::keyCode</computeroutput></para></section>
+<para>
+The documentation for this struct was generated from the following file:</para>
+D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/<link linkend="__player_controller_8h">PlayerController.h</link></section>
+</section>

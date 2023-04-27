@@ -1,0 +1,61 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="struct_f_key_bind_keyboard" kind="struct" language="C++" prot="public">
+    <compoundname>FKeyBindKeyboard</compoundname>
+    <includes refid="_player_controller_8h" local="no">PlayerController.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_f_key_bind_keyboard_1a5af1767e769e14b7f3e66f5c1926ed6a" prot="public" static="no" mutable="no">
+        <type><ref refid="namespace_hellwatch_input_action_1ad39fcc17ea621da731d011339205f522" kindref="member">HellwatchInputAction::Type</ref></type>
+        <definition>HellwatchInputAction::Type FKeyBindKeyboard::inputAction</definition>
+        <argsstring></argsstring>
+        <name>inputAction</name>
+        <qualifiedname>FKeyBindKeyboard::inputAction</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/PlayerController.h" line="42" column="28" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/PlayerController.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_f_key_bind_keyboard_1ac4a6383a3435b6ae4666585580d31fce" prot="public" static="no" mutable="no">
+        <type>gef::Keyboard::KeyCode</type>
+        <definition>gef::Keyboard::KeyCode FKeyBindKeyboard::keyCode</definition>
+        <argsstring></argsstring>
+        <name>keyCode</name>
+        <qualifiedname>FKeyBindKeyboard::keyCode</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/PlayerController.h" line="43" column="24" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/PlayerController.h" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_f_key_bind_keyboard_1a1743545acca699e351fae0996ad583bc" prot="public" static="no" mutable="no">
+        <type>std::function&lt; void()&gt;</type>
+        <definition>std::function&lt;void()&gt; FKeyBindKeyboard::functionBind</definition>
+        <argsstring></argsstring>
+        <name>functionBind</name>
+        <qualifiedname>FKeyBindKeyboard::functionBind</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/PlayerController.h" line="44" column="15" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/PlayerController.h" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/PlayerController.h" line="40" column="1" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/PlayerController.h" bodystart="41" bodyend="45"/>
+    <listofallmembers>
+      <member refid="struct_f_key_bind_keyboard_1a1743545acca699e351fae0996ad583bc" prot="public" virt="non-virtual"><scope>FKeyBindKeyboard</scope><name>functionBind</name></member>
+      <member refid="struct_f_key_bind_keyboard_1a5af1767e769e14b7f3e66f5c1926ed6a" prot="public" virt="non-virtual"><scope>FKeyBindKeyboard</scope><name>inputAction</name></member>
+      <member refid="struct_f_key_bind_keyboard_1ac4a6383a3435b6ae4666585580d31fce" prot="public" virt="non-virtual"><scope>FKeyBindKeyboard</scope><name>keyCode</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

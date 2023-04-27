@@ -1,0 +1,403 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_world_object" xml:lang="en-US">
+<title>WorldObject Class Reference</title>
+<indexterm><primary>WorldObject</primary></indexterm>
+<para>
+<computeroutput>#include &lt;WorldObject.h&gt;</computeroutput>
+</para>
+Inheritance diagram for WorldObject:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_world_object__inherit__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Collaboration diagram for WorldObject:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_world_object__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_world_object_1a632d2e78acdcbc0aef09951134340d4e">WorldObject</link> ()</para>
+
+<para>Default constructor  </para>
+</listitem>
+            <listitem><para><link linkend="_class_world_object_1a287e5b87a26133cd35f3015268d2a5a3">~WorldObject</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_world_object_1aa2d0bc51a9b2dac1930c37e2401e8934">Init</link> (<link linkend="_class_world_object">WorldObject</link> *owner=nullptr)</para>
+
+<para>This function initializes the world object, should only be called by the spawn object scene function.  </para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_class_world_object_1a8500a6a24c62699fa103a68349407a3f">PostInit</link> ()</para>
+
+<para>Override this to Initialize variables or do any necessary work when the object is created  </para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_class_world_object_1a828815709498f192bf138ecfe416c529">Update</link> (float deltaTime)</para>
+
+<para>Update function, called every frame  </para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_class_world_object_1a2a30bf431fa478eb5d24683e1906c261">Render</link> ()</para>
+
+<para>Renders the object  </para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_class_world_object_1a7c563531a541e9f5ff4193443cedd515">OnCollision</link> (b2Body *OtherBody)</para>
+
+<para>Function to respond to collision  </para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_class_world_object_1a830b64bbf6df3fc50284b0316c124133">SetTranslation</link> (const gef::Vector4 &amp;inTranslation)</para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_class_world_object_1a18ba8b67b53f7df01220643617ecd75c">SetRotation</link> (const gef::Vector4 &amp;inRotation)</para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_class_world_object_1ad73836d8146cc9e1d475eb74fb05481a">SetRotation</link> (const float inRotation)</para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_class_world_object_1ae00d341e9ac8909374dd556aaecbdb46">SetScale</link> (const gef::Vector4 &amp;inScale)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_world_object_1a8817deac42a357d2ed476791c7b76511">SetCollisionBody</link> (b2Body *inCollisionBody)</para>
+</listitem>
+            <listitem><para>__forceinline virtual const gef::Vector4 &amp; <link linkend="_class_world_object_1a9967baa65719f1418641598a244306a5">GetTranslation</link> () const</para>
+</listitem>
+            <listitem><para>__forceinline virtual const gef::Vector4 &amp; <link linkend="_class_world_object_1a271e4b4870fadf60e285576f94b31e79">GetRotation</link> () const</para>
+</listitem>
+            <listitem><para>__forceinline virtual const float <link linkend="_class_world_object_1aa959995cc385843f1e2b0139e4413ab5">GetRotationF</link> () const</para>
+</listitem>
+            <listitem><para>__forceinline virtual const gef::Vector4 &amp; <link linkend="_class_world_object_1a223b3653f965b7698ec28c9b4fc84e28">GetScale</link> () const</para>
+</listitem>
+            <listitem><para>__forceinline const gef::Matrix44 &amp; <link linkend="_class_world_object_1a1302aea00b9a5f348459f55e9dd50725">GetTransform</link> () const</para>
+</listitem>
+            <listitem><para>__forceinline <link linkend="_class_world_object">WorldObject</link> * <link linkend="_class_world_object_1a0fdf372cdda0fb026916b60e19e657a0">GetOwner</link> () const</para>
+</listitem>
+            <listitem><para>__forceinline b2Body * <link linkend="_class_world_object_1aa3b5f5e5e1ed26c94265854e2858bdee">GetCollisionBody</link> () const</para>
+</listitem>
+            <listitem><para>__forceinline void <link linkend="_class_world_object_1a4402fa17dfd062fc97750d581d4f774b">MarkForDelete</link> ()</para>
+</listitem>
+            <listitem><para>__forceinline void <link linkend="_class_world_object_1a650a599e9ffa751eaba296c4ef6ec2d2">DisableUpdate</link> ()</para>
+</listitem>
+            <listitem><para>__forceinline void <link linkend="_class_world_object_1a42e101b6adf4911396d95acc5b1741d8">EnableUpdate</link> ()</para>
+</listitem>
+            <listitem><para>__forceinline bool <link linkend="_class_world_object_1a78b0b88900685e80feffc6921fd9f370">ShouldUpdate</link> ()</para>
+</listitem>
+            <listitem><para>__forceinline const bool <link linkend="_class_world_object_1aaebbb0abbabef79ad542f01db4ef6101">GetIsMarkedForDelete</link> () const</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>int <link linkend="_class_world_object_1a9f76e2def47f4d6be6bafb330ac0394b">ID</link> = <link linkend="__utils_8h_1a642e16f35aa1e585c25e405ede76e115">NO_ID</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Protected Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_class_world_object_1a4c83c0d8e3817aac3ef2080ec0972802">BuildTransform</link> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Protected Attributes    </title>
+        <itemizedlist>
+            <listitem><para>b2Body * <link linkend="_class_world_object_1a025ba78ec5cc2607f7e62750a7c37749">collisionBody</link> = nullptr</para>
+</listitem>
+            <listitem><para>gef::Matrix44 <link linkend="_class_world_object_1a9e5ac0cc278f5766b6020950fdabbe75">transformMat</link></para>
+</listitem>
+            <listitem><para><link linkend="_class_world_object">WorldObject</link> * <link linkend="_class_world_object_1a8917ba1d61e12c12f7246c7b95cd4094">owningObject</link></para>
+</listitem>
+            <listitem><para>gef::Vector4 <link linkend="_class_world_object_1a78bd9162f55826c5c68706d688578cf8">translation</link></para>
+</listitem>
+            <listitem><para>gef::Vector4 <link linkend="_class_world_object_1a45f28fb0c7cf14a6c92ab72eaa4eb9a9">scale</link></para>
+</listitem>
+            <listitem><para>gef::Vector4 <link linkend="_class_world_object_1a519b69f0419703cfbe08580d4b2ab408">rotationVec</link></para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_world_object_1a60c2b1f707b5694f97dd950996d05e11">bMarkedForDelete</link> = false</para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_world_object_1ac10cc37682a3a3cce8405411fbd8f4c3">bDisableUpdate</link> = false</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_world_object_1a632d2e78acdcbc0aef09951134340d4e"/><section>
+    <title>WorldObject()</title>
+<indexterm><primary>WorldObject</primary><secondary>WorldObject</secondary></indexterm>
+<indexterm><primary>WorldObject</primary><secondary>WorldObject</secondary></indexterm>
+<para><computeroutput>WorldObject::WorldObject ( )</computeroutput></para><para>
+
+<para>Default constructor  </para>
+</para>
+</section>
+<anchor xml:id="_class_world_object_1a287e5b87a26133cd35f3015268d2a5a3"/><section>
+    <title>~WorldObject()</title>
+<indexterm><primary>~WorldObject</primary><secondary>WorldObject</secondary></indexterm>
+<indexterm><primary>WorldObject</primary><secondary>~WorldObject</secondary></indexterm>
+<para><computeroutput>WorldObject::~WorldObject ( )</computeroutput></para></section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_world_object_1a4c83c0d8e3817aac3ef2080ec0972802"/><section>
+    <title>BuildTransform()</title>
+<indexterm><primary>BuildTransform</primary><secondary>WorldObject</secondary></indexterm>
+<indexterm><primary>WorldObject</primary><secondary>BuildTransform</secondary></indexterm>
+<para><computeroutput>void WorldObject::BuildTransform ( )<computeroutput>[protected]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_world_object_1a650a599e9ffa751eaba296c4ef6ec2d2"/><section>
+    <title>DisableUpdate()</title>
+<indexterm><primary>DisableUpdate</primary><secondary>WorldObject</secondary></indexterm>
+<indexterm><primary>WorldObject</primary><secondary>DisableUpdate</secondary></indexterm>
+<para><computeroutput>__forceinline void WorldObject::DisableUpdate ( )<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_world_object_1a42e101b6adf4911396d95acc5b1741d8"/><section>
+    <title>EnableUpdate()</title>
+<indexterm><primary>EnableUpdate</primary><secondary>WorldObject</secondary></indexterm>
+<indexterm><primary>WorldObject</primary><secondary>EnableUpdate</secondary></indexterm>
+<para><computeroutput>__forceinline void WorldObject::EnableUpdate ( )<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_world_object_1aa3b5f5e5e1ed26c94265854e2858bdee"/><section>
+    <title>GetCollisionBody()</title>
+<indexterm><primary>GetCollisionBody</primary><secondary>WorldObject</secondary></indexterm>
+<indexterm><primary>WorldObject</primary><secondary>GetCollisionBody</secondary></indexterm>
+<para><computeroutput>__forceinline b2Body * WorldObject::GetCollisionBody ( ) const<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_world_object_1aaebbb0abbabef79ad542f01db4ef6101"/><section>
+    <title>GetIsMarkedForDelete()</title>
+<indexterm><primary>GetIsMarkedForDelete</primary><secondary>WorldObject</secondary></indexterm>
+<indexterm><primary>WorldObject</primary><secondary>GetIsMarkedForDelete</secondary></indexterm>
+<para><computeroutput>__forceinline const bool WorldObject::GetIsMarkedForDelete ( ) const<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_world_object_1a0fdf372cdda0fb026916b60e19e657a0"/><section>
+    <title>GetOwner()</title>
+<indexterm><primary>GetOwner</primary><secondary>WorldObject</secondary></indexterm>
+<indexterm><primary>WorldObject</primary><secondary>GetOwner</secondary></indexterm>
+<para><computeroutput>__forceinline <link linkend="_class_world_object">WorldObject</link> * WorldObject::GetOwner ( ) const<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_world_object_1a271e4b4870fadf60e285576f94b31e79"/><section>
+    <title>GetRotation()</title>
+<indexterm><primary>GetRotation</primary><secondary>WorldObject</secondary></indexterm>
+<indexterm><primary>WorldObject</primary><secondary>GetRotation</secondary></indexterm>
+<para><computeroutput>__forceinline virtual const gef::Vector4 &amp; WorldObject::GetRotation ( ) const<computeroutput>[inline]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_world_object_1aa959995cc385843f1e2b0139e4413ab5"/><section>
+    <title>GetRotationF()</title>
+<indexterm><primary>GetRotationF</primary><secondary>WorldObject</secondary></indexterm>
+<indexterm><primary>WorldObject</primary><secondary>GetRotationF</secondary></indexterm>
+<para><computeroutput>__forceinline virtual const float WorldObject::GetRotationF ( ) const<computeroutput>[inline]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+Reimplemented in <link linkend="_class_sprite_actor_1aaf810a489f9916ecd2d041cd61d39874">SpriteActor</link>.</para>
+</section>
+<anchor xml:id="_class_world_object_1a223b3653f965b7698ec28c9b4fc84e28"/><section>
+    <title>GetScale()</title>
+<indexterm><primary>GetScale</primary><secondary>WorldObject</secondary></indexterm>
+<indexterm><primary>WorldObject</primary><secondary>GetScale</secondary></indexterm>
+<para><computeroutput>__forceinline virtual const gef::Vector4 &amp; WorldObject::GetScale ( ) const<computeroutput>[inline]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+Reimplemented in <link linkend="_class_sprite_actor_1a473e053ec3e6e8a460020ba3833acc2e">SpriteActor</link>.</para>
+</section>
+<anchor xml:id="_class_world_object_1a1302aea00b9a5f348459f55e9dd50725"/><section>
+    <title>GetTransform()</title>
+<indexterm><primary>GetTransform</primary><secondary>WorldObject</secondary></indexterm>
+<indexterm><primary>WorldObject</primary><secondary>GetTransform</secondary></indexterm>
+<para><computeroutput>__forceinline const gef::Matrix44 &amp; WorldObject::GetTransform ( ) const<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_world_object_1a9967baa65719f1418641598a244306a5"/><section>
+    <title>GetTranslation()</title>
+<indexterm><primary>GetTranslation</primary><secondary>WorldObject</secondary></indexterm>
+<indexterm><primary>WorldObject</primary><secondary>GetTranslation</secondary></indexterm>
+<para><computeroutput>__forceinline virtual const gef::Vector4 &amp; WorldObject::GetTranslation ( ) const<computeroutput>[inline]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+Reimplemented in <link linkend="_class_sprite_actor_1a4d9d23b93afa89ec5aa8e04786252b19">SpriteActor</link>.</para>
+</section>
+<anchor xml:id="_class_world_object_1aa2d0bc51a9b2dac1930c37e2401e8934"/><section>
+    <title>Init()</title>
+<indexterm><primary>Init</primary><secondary>WorldObject</secondary></indexterm>
+<indexterm><primary>WorldObject</primary><secondary>Init</secondary></indexterm>
+<para><computeroutput>void WorldObject::Init (<link linkend="_class_world_object">WorldObject</link> * owner = <computeroutput>nullptr</computeroutput>
+)</computeroutput></para><para>
+
+<para>This function initializes the world object, should only be called by the spawn object scene function.  </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>scene</entry><entry>
+<para>The owninig scene of the object</para>
+</entry>
+                            </row>
+                            <row>
+<entry>owner</entry><entry>
+<para>The owning object of this object</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_class_world_object_1a4402fa17dfd062fc97750d581d4f774b"/><section>
+    <title>MarkForDelete()</title>
+<indexterm><primary>MarkForDelete</primary><secondary>WorldObject</secondary></indexterm>
+<indexterm><primary>WorldObject</primary><secondary>MarkForDelete</secondary></indexterm>
+<para><computeroutput>__forceinline void WorldObject::MarkForDelete ( )<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_world_object_1a7c563531a541e9f5ff4193443cedd515"/><section>
+    <title>OnCollision()</title>
+<indexterm><primary>OnCollision</primary><secondary>WorldObject</secondary></indexterm>
+<indexterm><primary>WorldObject</primary><secondary>OnCollision</secondary></indexterm>
+<para><computeroutput>void WorldObject::OnCollision (b2Body * OtherBody)<computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Function to respond to collision  </para>
+</para>
+<para>
+Reimplemented in <link linkend="_class_damage_on_collision_actor_1ad097fd69169453c518a8a7b151311edc">DamageOnCollisionActor</link>, and <link linkend="_class_enemy_1a8fe269579634b8cad6d494254c766387">Enemy</link>.</para>
+</section>
+<anchor xml:id="_class_world_object_1a8500a6a24c62699fa103a68349407a3f"/><section>
+    <title>PostInit()</title>
+<indexterm><primary>PostInit</primary><secondary>WorldObject</secondary></indexterm>
+<indexterm><primary>WorldObject</primary><secondary>PostInit</secondary></indexterm>
+<para><computeroutput>void WorldObject::PostInit ( )<computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Override this to Initialize variables or do any necessary work when the object is created  </para>
+</para>
+<para>
+Reimplemented in <link linkend="_class_boss_1aca38363ac8587bf7012d4c6dec8600a9">Boss</link>, <link linkend="_class_enemy_1a487c39395ee71759c8bf10707776755e">Enemy</link>, <link linkend="_class_enemy_dummy_1a64da679c5eaca270f5181638bce62bcd">EnemyDummy</link>, <link linkend="_class_player_character_1ad12c09c28194b1c5ed39aa4b5c21cbd6">PlayerCharacter</link>, and <link linkend="_class_ranged_enemy_1a4a8ff52aaf8cffb2b4cfe94360113043">RangedEnemy</link>.</para>
+</section>
+<anchor xml:id="_class_world_object_1a2a30bf431fa478eb5d24683e1906c261"/><section>
+    <title>Render()</title>
+<indexterm><primary>Render</primary><secondary>WorldObject</secondary></indexterm>
+<indexterm><primary>WorldObject</primary><secondary>Render</secondary></indexterm>
+<para><computeroutput>void WorldObject::Render ( )<computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Renders the object  </para>
+</para>
+<para>
+Reimplemented in <link linkend="_class_mesh_actor_1a9c8f4860ae03966a27c3ee22c2a2b5a1">MeshActor</link>, and <link linkend="_class_sprite_actor_1a0820aad46981ac11174f67ab97433473">SpriteActor</link>.</para>
+</section>
+<anchor xml:id="_class_world_object_1a8817deac42a357d2ed476791c7b76511"/><section>
+    <title>SetCollisionBody()</title>
+<indexterm><primary>SetCollisionBody</primary><secondary>WorldObject</secondary></indexterm>
+<indexterm><primary>WorldObject</primary><secondary>SetCollisionBody</secondary></indexterm>
+<para><computeroutput>void WorldObject::SetCollisionBody (b2Body * inCollisionBody)</computeroutput></para></section>
+<anchor xml:id="_class_world_object_1ad73836d8146cc9e1d475eb74fb05481a"/><section>
+    <title>SetRotation()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>SetRotation</primary><secondary>WorldObject</secondary></indexterm>
+<indexterm><primary>WorldObject</primary><secondary>SetRotation</secondary></indexterm>
+<para><computeroutput>void WorldObject::SetRotation (const float inRotation)<computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+Reimplemented in <link linkend="_class_sprite_actor_1ad7d2b2ba00da6fd85e8dfd84d9aaa776">SpriteActor</link>.</para>
+</section>
+<anchor xml:id="_class_world_object_1a18ba8b67b53f7df01220643617ecd75c"/><section>
+    <title>SetRotation()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>SetRotation</primary><secondary>WorldObject</secondary></indexterm>
+<indexterm><primary>WorldObject</primary><secondary>SetRotation</secondary></indexterm>
+<para><computeroutput>void WorldObject::SetRotation (const gef::Vector4 &amp; inRotation)<computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+Reimplemented in <link linkend="_class_mesh_actor_1a295a747ea81d8b09e084c488ab183fbb">MeshActor</link>.</para>
+</section>
+<anchor xml:id="_class_world_object_1ae00d341e9ac8909374dd556aaecbdb46"/><section>
+    <title>SetScale()</title>
+<indexterm><primary>SetScale</primary><secondary>WorldObject</secondary></indexterm>
+<indexterm><primary>WorldObject</primary><secondary>SetScale</secondary></indexterm>
+<para><computeroutput>void WorldObject::SetScale (const gef::Vector4 &amp; inScale)<computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+Reimplemented in <link linkend="_class_sprite_actor_1a432a23017cf5aa8fe8b521ee5884c996">SpriteActor</link>.</para>
+</section>
+<anchor xml:id="_class_world_object_1a830b64bbf6df3fc50284b0316c124133"/><section>
+    <title>SetTranslation()</title>
+<indexterm><primary>SetTranslation</primary><secondary>WorldObject</secondary></indexterm>
+<indexterm><primary>WorldObject</primary><secondary>SetTranslation</secondary></indexterm>
+<para><computeroutput>void WorldObject::SetTranslation (const gef::Vector4 &amp; inTranslation)<computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+Reimplemented in <link linkend="_class_sprite_actor_1a9bee8a49bee219bae0190046e3ec5d1c">SpriteActor</link>.</para>
+</section>
+<anchor xml:id="_class_world_object_1a78b0b88900685e80feffc6921fd9f370"/><section>
+    <title>ShouldUpdate()</title>
+<indexterm><primary>ShouldUpdate</primary><secondary>WorldObject</secondary></indexterm>
+<indexterm><primary>WorldObject</primary><secondary>ShouldUpdate</secondary></indexterm>
+<para><computeroutput>__forceinline bool WorldObject::ShouldUpdate ( )<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_world_object_1a828815709498f192bf138ecfe416c529"/><section>
+    <title>Update()</title>
+<indexterm><primary>Update</primary><secondary>WorldObject</secondary></indexterm>
+<indexterm><primary>WorldObject</primary><secondary>Update</secondary></indexterm>
+<para><computeroutput>void WorldObject::Update (float deltaTime)<computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Update function, called every frame  </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>deltaTime</entry><entry>
+<para>Float variable for the frame time</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Reimplemented in <link linkend="_class_mesh_actor_1a3743470557ddbbc88bc73e4dd283d6bf">MeshActor</link>, <link linkend="_class_boss_1aa0943d1fb2d9037e30a2fdc6952878cb">Boss</link>, <link linkend="_class_damage_on_collision_actor_1a468c69c421db3d272bf18c46cbb15c2a">DamageOnCollisionActor</link>, <link linkend="_class_enemy_1a723b79407b55383b2c327f674e3ab3bc">Enemy</link>, <link linkend="_class_meteor_actor_1ab6359799dcd7d0c88bbe0f9aae848819">MeteorActor</link>, <link linkend="_class_particle_actor_1a5ed58a9e57286e08cf8a650aaf22f43f">ParticleActor</link>, <link linkend="_class_player_character_1ad681ccd09dc1ed4c0242bfa0d981d584">PlayerCharacter</link>, and <link linkend="_class_ranged_enemy_1a1f40730c4f733c7e0cdcb7b7a27c89a3">RangedEnemy</link>.</para>
+</section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_class_world_object_1ac10cc37682a3a3cce8405411fbd8f4c3"/><section>
+    <title>bDisableUpdate</title>
+<indexterm><primary>bDisableUpdate</primary><secondary>WorldObject</secondary></indexterm>
+<indexterm><primary>WorldObject</primary><secondary>bDisableUpdate</secondary></indexterm>
+<para><computeroutput>bool WorldObject::bDisableUpdate = false<computeroutput>[protected]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_world_object_1a60c2b1f707b5694f97dd950996d05e11"/><section>
+    <title>bMarkedForDelete</title>
+<indexterm><primary>bMarkedForDelete</primary><secondary>WorldObject</secondary></indexterm>
+<indexterm><primary>WorldObject</primary><secondary>bMarkedForDelete</secondary></indexterm>
+<para><computeroutput>bool WorldObject::bMarkedForDelete = false<computeroutput>[protected]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_world_object_1a025ba78ec5cc2607f7e62750a7c37749"/><section>
+    <title>collisionBody</title>
+<indexterm><primary>collisionBody</primary><secondary>WorldObject</secondary></indexterm>
+<indexterm><primary>WorldObject</primary><secondary>collisionBody</secondary></indexterm>
+<para><computeroutput>b2Body* WorldObject::collisionBody = nullptr<computeroutput>[protected]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_world_object_1a9f76e2def47f4d6be6bafb330ac0394b"/><section>
+    <title>ID</title>
+<indexterm><primary>ID</primary><secondary>WorldObject</secondary></indexterm>
+<indexterm><primary>WorldObject</primary><secondary>ID</secondary></indexterm>
+<para><computeroutput>int WorldObject::ID = <link linkend="__utils_8h_1a642e16f35aa1e585c25e405ede76e115">NO_ID</link></computeroutput></para></section>
+<anchor xml:id="_class_world_object_1a8917ba1d61e12c12f7246c7b95cd4094"/><section>
+    <title>owningObject</title>
+<indexterm><primary>owningObject</primary><secondary>WorldObject</secondary></indexterm>
+<indexterm><primary>WorldObject</primary><secondary>owningObject</secondary></indexterm>
+<para><computeroutput><link linkend="_class_world_object">WorldObject</link>* WorldObject::owningObject<computeroutput>[protected]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_world_object_1a519b69f0419703cfbe08580d4b2ab408"/><section>
+    <title>rotationVec</title>
+<indexterm><primary>rotationVec</primary><secondary>WorldObject</secondary></indexterm>
+<indexterm><primary>WorldObject</primary><secondary>rotationVec</secondary></indexterm>
+<para><computeroutput>gef::Vector4 WorldObject::rotationVec<computeroutput>[protected]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_world_object_1a45f28fb0c7cf14a6c92ab72eaa4eb9a9"/><section>
+    <title>scale</title>
+<indexterm><primary>scale</primary><secondary>WorldObject</secondary></indexterm>
+<indexterm><primary>WorldObject</primary><secondary>scale</secondary></indexterm>
+<para><computeroutput>gef::Vector4 WorldObject::scale<computeroutput>[protected]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_world_object_1a9e5ac0cc278f5766b6020950fdabbe75"/><section>
+    <title>transformMat</title>
+<indexterm><primary>transformMat</primary><secondary>WorldObject</secondary></indexterm>
+<indexterm><primary>WorldObject</primary><secondary>transformMat</secondary></indexterm>
+<para><computeroutput>gef::Matrix44 WorldObject::transformMat<computeroutput>[protected]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_world_object_1a78bd9162f55826c5c68706d688578cf8"/><section>
+    <title>translation</title>
+<indexterm><primary>translation</primary><secondary>WorldObject</secondary></indexterm>
+<indexterm><primary>WorldObject</primary><secondary>translation</secondary></indexterm>
+<para><computeroutput>gef::Vector4 WorldObject::translation<computeroutput>[protected]</computeroutput></computeroutput></para></section>
+<para>
+The documentation for this class was generated from the following files:</para>
+D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/<link linkend="__world_object_8h">WorldObject.h</link>D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/<link linkend="__world_object_8cpp">WorldObject.cpp</link></section>
+</section>

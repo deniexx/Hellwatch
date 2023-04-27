@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_namespace_hellwatch_controller_axis" xml:lang="en-US">
+<title>HellwatchControllerAxis Namespace Reference</title>
+<indexterm><primary>HellwatchControllerAxis</primary></indexterm>
+<simplesect>
+    <title>Enumerations    </title>
+        <itemizedlist>
+            <listitem><para>enum <link linkend="_namespace_hellwatch_controller_axis_1a6014138ce0ea9634c8a9c36539a7a967">Type</link> { <link linkend="_namespace_hellwatch_controller_axis_1a6014138ce0ea9634c8a9c36539a7a967af556634c68eda0587cb64022a5dec80d">None</link> = 0
+, <link linkend="_namespace_hellwatch_controller_axis_1a6014138ce0ea9634c8a9c36539a7a967a2c35b461f3a44e7f7e139b6829990d77">LeftStickXY</link>
+, <link linkend="_namespace_hellwatch_controller_axis_1a6014138ce0ea9634c8a9c36539a7a967a052b1c55389f1a8945ac50fdf80d0220">RightStickXY</link>
+ }</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Enumeration Type Documentation</title>
+<anchor xml:id="_namespace_hellwatch_controller_axis_1a6014138ce0ea9634c8a9c36539a7a967"/><section>
+    <title>Type</title>
+<indexterm><primary>Type</primary><secondary>HellwatchControllerAxis</secondary></indexterm>
+<indexterm><primary>HellwatchControllerAxis</primary><secondary>Type</secondary></indexterm>
+<para><computeroutput>enum <link linkend="_namespace_hellwatch_controller_axis_1a6014138ce0ea9634c8a9c36539a7a967">HellwatchControllerAxis::Type</link></computeroutput></para><informaltable frame="all">
+<title>Enumerator</title>
+    <tgroup cols="2" align="left" colsep="1" rowsep="1">
+      <colspec colname='c1'/>
+      <colspec colname='c2'/>
+<tbody>
+<row><entry><indexterm><primary>None</primary><secondary>HellwatchControllerAxis</secondary></indexterm>
+<indexterm><primary>HellwatchControllerAxis</primary><secondary>None</secondary></indexterm>
+<anchor xml:id="_namespace_hellwatch_controller_axis_1a6014138ce0ea9634c8a9c36539a7a967af556634c68eda0587cb64022a5dec80d"/>None</entry><entry></entry></row><row><entry><indexterm><primary>LeftStickXY</primary><secondary>HellwatchControllerAxis</secondary></indexterm>
+<indexterm><primary>HellwatchControllerAxis</primary><secondary>LeftStickXY</secondary></indexterm>
+<anchor xml:id="_namespace_hellwatch_controller_axis_1a6014138ce0ea9634c8a9c36539a7a967a2c35b461f3a44e7f7e139b6829990d77"/>LeftStickXY</entry><entry></entry></row><row><entry><indexterm><primary>RightStickXY</primary><secondary>HellwatchControllerAxis</secondary></indexterm>
+<indexterm><primary>HellwatchControllerAxis</primary><secondary>RightStickXY</secondary></indexterm>
+<anchor xml:id="_namespace_hellwatch_controller_axis_1a6014138ce0ea9634c8a9c36539a7a967a052b1c55389f1a8945ac50fdf80d0220"/>RightStickXY</entry><entry></entry></row>    </tbody>
+    </tgroup>
+</informaltable>
+</section>
+</section>
+</section>

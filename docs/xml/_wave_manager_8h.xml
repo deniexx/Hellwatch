@@ -1,0 +1,249 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="_wave_manager_8h" kind="file" language="C++">
+    <compoundname>WaveManager.h</compoundname>
+    <includes refid="_utils_8h" local="yes">GameFramework/Utils.h</includes>
+    <includedby refid="_wave_manager_8cpp" local="yes">D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/WaveManager.cpp</includedby>
+    <includedby refid="scene__app_8cpp" local="yes">D:/Uni/CMP208/Hellwatch/scene_app.cpp</includedby>
+    <incdepgraph>
+      <node id="2">
+        <label>GameFramework/Utils.h</label>
+        <link refid="_utils_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/WaveManager.h</label>
+        <link refid="_wave_manager_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>obj_mesh_loader.h</label>
+        <link refid="obj__mesh__loader_8h"/>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>primitive_builder.h</label>
+        <link refid="primitive__builder_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>scene_app.h</label>
+        <link refid="scene__app_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>box2d/box2d.h</label>
+      </node>
+      <node id="12">
+        <label>cstddef</label>
+      </node>
+      <node id="22">
+        <label>future</label>
+      </node>
+      <node id="17">
+        <label>gef.h</label>
+      </node>
+      <node id="21">
+        <label>graphics/font.h</label>
+      </node>
+      <node id="11">
+        <label>graphics/material.h</label>
+      </node>
+      <node id="6">
+        <label>graphics/renderer_3d.h</label>
+      </node>
+      <node id="13">
+        <label>graphics/scene.h</label>
+      </node>
+      <node id="18">
+        <label>map</label>
+      </node>
+      <node id="3">
+        <label>maths/Vector2.h</label>
+      </node>
+      <node id="24">
+        <label>maths/math_utils.h</label>
+      </node>
+      <node id="5">
+        <label>maths/matrix44.h</label>
+      </node>
+      <node id="9">
+        <label>maths/vector2.h</label>
+      </node>
+      <node id="4">
+        <label>maths/vector4.h</label>
+      </node>
+      <node id="23">
+        <label>random</label>
+      </node>
+      <node id="19">
+        <label>string</label>
+      </node>
+      <node id="8">
+        <label>system/application.h</label>
+      </node>
+      <node id="15">
+        <label>system/platform.h</label>
+      </node>
+      <node id="20">
+        <label>vector</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/WaveManager.cpp</label>
+        <link refid="_wave_manager_8cpp"/>
+      </node>
+      <node id="1">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/WaveManager.h</label>
+        <link refid="_wave_manager_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>D:/Uni/CMP208/Hellwatch/scene_app.cpp</label>
+        <link refid="scene__app_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="struct_f_wave_definition" prot="public">FWaveDefinition</innerclass>
+    <innerclass refid="class_wave_manager" prot="public">WaveManager</innerclass>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="_wave_manager_8h_1a61d1084c2f3105aa6fe0935321c38056" prot="public" static="no">
+        <name>USE_WAVE_FORMULA</name>
+        <initializer>(currentWave + currentWave * 0.5) * 5</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/WaveManager.h" line="5" column="9" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/WaveManager.h" bodystart="5" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_wave_manager_8h_1a7611b1145603b267db98d53c153808b5" prot="public" static="no">
+        <name>SPAWN_PERIOD_AFTER_WAVE_DEFINITIONS</name>
+        <initializer>1.f</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/WaveManager.h" line="6" column="9" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/WaveManager.h" bodystart="6" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_utils_8h" kindref="compound">GameFramework/Utils.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5" refid="_wave_manager_8h_1a61d1084c2f3105aa6fe0935321c38056" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>USE_WAVE_FORMULA<sp/>(currentWave<sp/>+<sp/>currentWave<sp/>*<sp/>0.5)<sp/>*<sp/>5</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6" refid="_wave_manager_8h_1a7611b1145603b267db98d53c153808b5" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SPAWN_PERIOD_AFTER_WAVE_DEFINITIONS<sp/>1.f</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_enemy" kindref="compound">Enemy</ref>;</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_ranged_enemy" kindref="compound">RangedEnemy</ref>;</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_boss" kindref="compound">Boss</ref>;</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15" refid="struct_f_wave_definition" refkind="compound"><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_f_wave_definition" kindref="compound">FWaveDefinition</ref></highlight></codeline>
+<codeline lineno="16"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="17" refid="struct_f_wave_definition_1a8442421920c4b13c84d7beca39d3c0d9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="struct_f_wave_definition_1a8442421920c4b13c84d7beca39d3c0d9" kindref="member">maxSpawns</ref>;</highlight></codeline>
+<codeline lineno="18" refid="struct_f_wave_definition_1a6551dc7f6e996c43aeb18b7058723bb7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="struct_f_wave_definition_1a6551dc7f6e996c43aeb18b7058723bb7" kindref="member">spawnPeriod</ref>;</highlight></codeline>
+<codeline lineno="19"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24" refid="class_wave_manager" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_wave_manager" kindref="compound">WaveManager</ref></highlight></codeline>
+<codeline lineno="25"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_wave_manager_1a1c039c9a7a485f88b68a3f966ffe02c5" kindref="member">WaveManager</ref>();</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_wave_manager_1a918f759b1a32b82fea823b5292b8a001" kindref="member">Init</ref>();</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_wave_manager_1aa56d31703d3d02067e75debabbfae300" kindref="member">StartWave</ref>();</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_wave_manager_1a751017f23187640be76f5db4b6eba243" kindref="member">EndWave</ref>();</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_wave_manager_1ae5ee18f81c4ea516839af94da831a24d" kindref="member">Update</ref>();</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_wave_manager_1ac60f15dad7ac55306c45b17babdfcb17" kindref="member">CheckWaveState</ref>();</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_wave_manager_1acc8ea63b30bc4ccd02e7b12f1504595c" kindref="member">SpawnEnemy</ref>();</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61" refid="class_wave_manager_1a2608b3fb9c41ad9a227143f66e1dd385" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;Enemy*&gt;<sp/><ref refid="class_wave_manager_1a2608b3fb9c41ad9a227143f66e1dd385" kindref="member">GetAllSpawnedEnemies</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>spawnedEnemies;<sp/>}</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63" refid="class_wave_manager_1a9440cd9b8ec292c041b5f794b2bb3217" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_wave_manager_1a9440cd9b8ec292c041b5f794b2bb3217" kindref="member">currentWave</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>bInWave<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>bSpawnsComplete<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>bBossSpawned<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_boss" kindref="compound">Boss</ref>*<sp/>boss<sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>currentWaveSpawnedEnemiesAmount<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>lastSpawnTime<sp/>=<sp/>0.f;</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;FWaveDefinition&gt;<sp/>waveDefinitions;</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;Enemy*&gt;<sp/>spawnedEnemies;</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;gef::Vector4&gt;<sp/>spawnLocations;</highlight></codeline>
+<codeline lineno="80"><highlight class="normal">};</highlight></codeline>
+    </programlisting>
+    <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/WaveManager.h"/>
+  </compounddef>
+</doxygen>

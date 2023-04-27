@@ -1,0 +1,61 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__wave_manager_8h_source" xml:lang="en-US">
+<title>WaveManager.h</title>
+<indexterm><primary>D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/WaveManager.h</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered">1 <emphasis role="preprocessor">#pragma&#32;once</emphasis>
+2 
+3 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="__utils_8h">GameFramework/Utils.h</link>&quot;</emphasis>
+4 
+5 <emphasis role="preprocessor">#define&#32;USE_WAVE_FORMULA&#32;(currentWave&#32;+&#32;currentWave&#32;*&#32;0.5)&#32;*&#32;5</emphasis>
+6 <emphasis role="preprocessor">#define&#32;SPAWN_PERIOD_AFTER_WAVE_DEFINITIONS&#32;1.f</emphasis>
+7 
+8 <emphasis role="keyword">class&#32;</emphasis><link linkend="_class_enemy">Enemy</link>;
+9 <emphasis role="keyword">class&#32;</emphasis><link linkend="_class_ranged_enemy">RangedEnemy</link>;
+10 <emphasis role="keyword">class&#32;</emphasis><link linkend="_class_boss">Boss</link>;
+11 
+15 <emphasis role="keyword">struct&#32;</emphasis><link linkend="_struct_f_wave_definition">FWaveDefinition</link>
+16 {
+17 &#32;&#32;&#32;&#32;uint32_t&#32;<link linkend="_struct_f_wave_definition_1a8442421920c4b13c84d7beca39d3c0d9">maxSpawns</link>;
+18 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">float</emphasis>&#32;<link linkend="_struct_f_wave_definition_1a6551dc7f6e996c43aeb18b7058723bb7">spawnPeriod</link>;
+19 };
+20 
+24 <emphasis role="keyword">class&#32;</emphasis><link linkend="_class_wave_manager">WaveManager</link>
+25 {
+26 
+27 <emphasis role="keyword">public</emphasis>:
+28 
+29 &#32;&#32;&#32;&#32;<link linkend="_class_wave_manager_1a1c039c9a7a485f88b68a3f966ffe02c5">WaveManager</link>();
+30 
+34 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_wave_manager_1a918f759b1a32b82fea823b5292b8a001">Init</link>();
+35 
+39 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_wave_manager_1aa56d31703d3d02067e75debabbfae300">StartWave</link>();
+40 
+44 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_wave_manager_1a751017f23187640be76f5db4b6eba243">EndWave</link>();
+45 
+46 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_wave_manager_1ae5ee18f81c4ea516839af94da831a24d">Update</link>();
+47 
+51 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_wave_manager_1ac60f15dad7ac55306c45b17babdfcb17">CheckWaveState</link>();
+52 
+56 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_wave_manager_1acc8ea63b30bc4ccd02e7b12f1504595c">SpawnEnemy</link>();
+57 
+61 &#32;&#32;&#32;&#32;std::vector&lt;Enemy*&gt;&#32;<link linkend="_class_wave_manager_1a2608b3fb9c41ad9a227143f66e1dd385">GetAllSpawnedEnemies</link>()<emphasis role="keyword">&#32;const&#32;</emphasis>{&#32;<emphasis role="keywordflow">return</emphasis>&#32;spawnedEnemies;&#32;}
+62 
+63 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_class_wave_manager_1a9440cd9b8ec292c041b5f794b2bb3217">currentWave</link>&#32;=&#32;0;
+64 
+65 <emphasis role="keyword">private</emphasis>:
+66 
+67 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;bInWave&#32;=&#32;<emphasis role="keyword">false</emphasis>;
+68 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;bSpawnsComplete&#32;=&#32;<emphasis role="keyword">false</emphasis>;
+69 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;bBossSpawned&#32;=&#32;<emphasis role="keyword">false</emphasis>;
+70 
+71 &#32;&#32;&#32;&#32;<link linkend="_class_boss">Boss</link>*&#32;boss&#32;=&#32;<emphasis role="keyword">nullptr</emphasis>;
+72 
+73 &#32;&#32;&#32;&#32;uint32_t&#32;currentWaveSpawnedEnemiesAmount&#32;=&#32;0;
+74 &#32;&#32;&#32;&#32;
+75 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">float</emphasis>&#32;lastSpawnTime&#32;=&#32;0.f;
+76 
+77 &#32;&#32;&#32;&#32;std::vector&lt;FWaveDefinition&gt;&#32;waveDefinitions;
+78 &#32;&#32;&#32;&#32;std::vector&lt;Enemy*&gt;&#32;spawnedEnemies;
+79 &#32;&#32;&#32;&#32;std::vector&lt;gef::Vector4&gt;&#32;spawnLocations;
+80 };
+</programlisting></section>

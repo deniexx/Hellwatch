@@ -1,0 +1,469 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="_mesh_actor_8h" kind="file" language="C++">
+    <compoundname>MeshActor.h</compoundname>
+    <includes refid="_world_object_8h" local="yes">GameFramework/WorldObject.h</includes>
+    <includes local="yes">graphics/mesh.h</includes>
+    <includes refid="_damagable_8h" local="yes">Interfaces/Damagable.h</includes>
+    <includedby refid="_mesh_actor_8cpp" local="yes">D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActor.cpp</includedby>
+    <includedby refid="_damage_on_collision_actor_8h" local="yes">D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/DamageOnCollisionActor.h</includedby>
+    <includedby refid="_enemy_8h" local="yes">D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/Enemy.h</includedby>
+    <includedby refid="_enemy_dummy_8h" local="yes">D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/EnemyDummy.h</includedby>
+    <includedby refid="_meteor_actor_8h" local="yes">D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/MeteorActor.h</includedby>
+    <includedby refid="_particle_actor_8h" local="yes">D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/ParticleActor.h</includedby>
+    <includedby refid="_player_character_8h" local="yes">D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/PlayerCharacter.h</includedby>
+    <includedby refid="scene__app_8cpp" local="yes">D:/Uni/CMP208/Hellwatch/scene_app.cpp</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActor.h</label>
+        <link refid="_mesh_actor_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>Utils.h</label>
+        <link refid="_utils_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>GameFramework/WorldObject.h</label>
+        <link refid="_world_object_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="29">
+        <label>Interfaces/Damagable.h</label>
+        <link refid="_damagable_8h"/>
+      </node>
+      <node id="19">
+        <label>obj_mesh_loader.h</label>
+        <link refid="obj__mesh__loader_8h"/>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>primitive_builder.h</label>
+        <link refid="primitive__builder_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>scene_app.h</label>
+        <link refid="scene__app_8h"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>box2d/box2d.h</label>
+      </node>
+      <node id="15">
+        <label>cstddef</label>
+      </node>
+      <node id="25">
+        <label>future</label>
+      </node>
+      <node id="20">
+        <label>gef.h</label>
+      </node>
+      <node id="24">
+        <label>graphics/font.h</label>
+      </node>
+      <node id="14">
+        <label>graphics/material.h</label>
+      </node>
+      <node id="28">
+        <label>graphics/mesh.h</label>
+      </node>
+      <node id="9">
+        <label>graphics/renderer_3d.h</label>
+      </node>
+      <node id="16">
+        <label>graphics/scene.h</label>
+      </node>
+      <node id="21">
+        <label>map</label>
+      </node>
+      <node id="3">
+        <label>maths/Matrix44.h</label>
+      </node>
+      <node id="6">
+        <label>maths/Vector2.h</label>
+      </node>
+      <node id="27">
+        <label>maths/math_utils.h</label>
+      </node>
+      <node id="8">
+        <label>maths/matrix44.h</label>
+      </node>
+      <node id="4">
+        <label>maths/quaternion.h</label>
+      </node>
+      <node id="12">
+        <label>maths/vector2.h</label>
+      </node>
+      <node id="7">
+        <label>maths/vector4.h</label>
+      </node>
+      <node id="26">
+        <label>random</label>
+      </node>
+      <node id="22">
+        <label>string</label>
+      </node>
+      <node id="11">
+        <label>system/application.h</label>
+      </node>
+      <node id="18">
+        <label>system/platform.h</label>
+      </node>
+      <node id="23">
+        <label>vector</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="25">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/Abilities/PlayerAbilities/Dash.cpp</label>
+        <link refid="_dash_8cpp"/>
+      </node>
+      <node id="24">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/Abilities/PlayerAbilities/Dash.h</label>
+        <link refid="_dash_8h"/>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/Abilities/PlayerAbilities/IceBolt.cpp</label>
+        <link refid="_ice_bolt_8cpp"/>
+      </node>
+      <node id="18">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/Abilities/PlayerAbilities/Meteor.cpp</label>
+        <link refid="_meteor_8cpp"/>
+      </node>
+      <node id="5">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/Abilities/PlayerAbilities/PiercingStrike.cpp</label>
+        <link refid="_piercing_strike_8cpp"/>
+      </node>
+      <node id="2">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActor.cpp</label>
+        <link refid="_mesh_actor_8cpp"/>
+      </node>
+      <node id="1">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActor.h</label>
+        <link refid="_mesh_actor_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/Boss.cpp</label>
+        <link refid="_boss_8cpp"/>
+      </node>
+      <node id="8">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/Boss.h</label>
+        <link refid="_boss_8h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/DamageOnCollisionActor.cpp</label>
+        <link refid="_damage_on_collision_actor_8cpp"/>
+      </node>
+      <node id="3">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/DamageOnCollisionActor.h</label>
+        <link refid="_damage_on_collision_actor_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/Enemy.cpp</label>
+        <link refid="_enemy_8cpp"/>
+      </node>
+      <node id="7">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/Enemy.h</label>
+        <link refid="_enemy_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/EnemyDummy.cpp</label>
+        <link refid="_enemy_dummy_8cpp"/>
+      </node>
+      <node id="15">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/EnemyDummy.h</label>
+        <link refid="_enemy_dummy_8h"/>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="19">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/MeteorActor.cpp</label>
+        <link refid="_meteor_actor_8cpp"/>
+      </node>
+      <node id="17">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/MeteorActor.h</label>
+        <link refid="_meteor_actor_8h"/>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+      <node id="21">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/ParticleActor.cpp</label>
+        <link refid="_particle_actor_8cpp"/>
+      </node>
+      <node id="20">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/ParticleActor.h</label>
+        <link refid="_particle_actor_8h"/>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+      </node>
+      <node id="26">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/PlayerCharacter.cpp</label>
+        <link refid="_player_character_8cpp"/>
+      </node>
+      <node id="23">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/PlayerCharacter.h</label>
+        <link refid="_player_character_8h"/>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/RangedEnemy.cpp</label>
+        <link refid="_ranged_enemy_8cpp"/>
+      </node>
+      <node id="12">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/RangedEnemy.h</label>
+        <link refid="_ranged_enemy_8h"/>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="22">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/ParticleManager.cpp</label>
+        <link refid="_particle_manager_8cpp"/>
+      </node>
+      <node id="10">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/WaveManager.cpp</label>
+        <link refid="_wave_manager_8cpp"/>
+      </node>
+      <node id="27">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/UserInterface/ShopMenu.cpp</label>
+        <link refid="_shop_menu_8cpp"/>
+      </node>
+      <node id="14">
+        <label>D:/Uni/CMP208/Hellwatch/scene_app.cpp</label>
+        <link refid="scene__app_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_mesh_actor" prot="public">MeshActor</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_world_object_8h" kindref="compound">GameFramework/WorldObject.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;graphics/mesh.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_damagable_8h" kindref="compound">Interfaces/Damagable.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_actor_component" kindref="compound">ActorComponent</ref>;</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13" refid="class_mesh_actor" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_mesh_actor" kindref="compound">MeshActor</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="class_world_object" kindref="compound">WorldObject</ref>,<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="class_i_damagable" kindref="compound">IDamagable</ref></highlight></codeline>
+<codeline lineno="14"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_utils_8h_1afc0ee7bd35c161a2d80b8e8f04fd9213" kindref="member">GENERATED_BODY</ref>(<ref refid="class_world_object" kindref="compound">WorldObject</ref>,<sp/><ref refid="class_mesh_actor" kindref="compound">MeshActor</ref>)</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_mesh_actor_1af40424bf59441cfb3362f8ef3e1fbb68" kindref="member">MeshActor</ref>();</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_mesh_actor_1af40424bf59441cfb3362f8ef3e1fbb68" kindref="member">MeshActor</ref>(gef::Mesh*<sp/>inMesh);</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_mesh_actor_1a9c8f4860ae03966a27c3ee22c2a2b5a1" kindref="member">Render</ref>()<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_mesh_actor_1a3743470557ddbbc88bc73e4dd283d6bf" kindref="member">Update</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>deltaTime)<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34" refid="class_mesh_actor_1a31a231014625686e8d40e561a7028931" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_mesh_actor_1a31a231014625686e8d40e561a7028931" kindref="member">TakeDamage</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>damageAmount)<sp/>{};</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38" refid="class_mesh_actor_1a8eb71848a77c1c7ffb0f88d526a633e3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/><ref refid="class_mesh_actor_1a8eb71848a77c1c7ffb0f88d526a633e3" kindref="member">meshName</ref>;</highlight></codeline>
+<codeline lineno="39" refid="class_mesh_actor_1a8585ace5ca84b7903f216c77661a5787" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>gef::Material<sp/><ref refid="class_mesh_actor_1a8585ace5ca84b7903f216c77661a5787" kindref="member">material</ref>;</highlight></codeline>
+<codeline lineno="40" refid="class_mesh_actor_1a858b488e44d63ff8eda02e173fa4da7a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_mesh_actor_1a858b488e44d63ff8eda02e173fa4da7a" kindref="member">bOverrideMaterial</ref>;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;ActorComponent*&gt;<sp/>components;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/>gef::Mesh*<sp/>mesh;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight><highlight class="comment"><sp/><sp/><sp/><sp/>/************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SETTERS<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight><highlight class="comment"><sp/><sp/><sp/><sp/>/************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52" refid="class_mesh_actor_1a25950ae28c6abf2e9e3dc64cfa19c0c7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_mesh_actor_1a25950ae28c6abf2e9e3dc64cfa19c0c7" kindref="member">SetMesh</ref>(gef::Mesh*<sp/>inMesh)<sp/>{<sp/>mesh<sp/>=<sp/>inMesh;<sp/>}</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_mesh_actor_1a86f27025c3484267804fdaa5e6082fd4" kindref="member">SetMeshName</ref>(std::string<sp/>newName);</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55" refid="class_mesh_actor_1a0217e1969a68278f2548e1553e2ab92b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_mesh_actor_1a0217e1969a68278f2548e1553e2ab92b" kindref="member">SetMaterial</ref>(gef::Material<sp/>newMaterial)<sp/></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_mesh_actor_1a8585ace5ca84b7903f216c77661a5787" kindref="member">material</ref><sp/>=<sp/>newMaterial;<sp/></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_mesh_actor_1a858b488e44d63ff8eda02e173fa4da7a" kindref="member">bOverrideMaterial</ref><sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_mesh_actor_1a295a747ea81d8b09e084c488ab183fbb" kindref="member">SetRotation</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>gef::Vector4&amp;<sp/>inRotation)<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight><highlight class="comment"><sp/><sp/><sp/><sp/>/************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>GETTERS<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight><highlight class="comment"><sp/><sp/><sp/><sp/>/************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="66" refid="class_mesh_actor_1a906146d34e290e3bd7132a4dcbfad8a1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>__forceinline<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>gef::Mesh*<sp/><ref refid="class_mesh_actor_1a906146d34e290e3bd7132a4dcbfad8a1" kindref="member">GetMesh</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>mesh;<sp/>}</highlight></codeline>
+<codeline lineno="67" refid="class_mesh_actor_1a7eef4e0218a4363460a0375585037012" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>__forceinline<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::vector&lt;ActorComponent*&gt;&amp;<sp/><ref refid="class_mesh_actor_1a7eef4e0218a4363460a0375585037012" kindref="member">GetComponents</ref>()<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>components;<sp/>}</highlight></codeline>
+<codeline lineno="68" refid="class_mesh_actor_1a03ae156a0a281ff9eb128c7c7b44d983" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>__forceinline<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/><ref refid="class_mesh_actor_1a03ae156a0a281ff9eb128c7c7b44d983" kindref="member">GetMeshName</ref>()<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_mesh_actor_1a8eb71848a77c1c7ffb0f88d526a633e3" kindref="member">meshName</ref>;<sp/>}</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight><highlight class="comment"><sp/><sp/><sp/><sp/>/************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>TEMPLATES<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight><highlight class="comment"><sp/><sp/><sp/><sp/>/************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>ComponentType<sp/>=<sp/>ActorComponent&gt;</highlight></codeline>
+<codeline lineno="80" refid="class_mesh_actor_1af9b992a02356ead76d3c36a031bf6eea" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>ComponentType*<sp/><ref refid="class_mesh_actor_1af9b992a02356ead76d3c36a031bf6eea" kindref="member">CreateComponent</ref>()</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ComponentType*<sp/>component<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>ComponentType();</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>component-&gt;Init(</highlight><highlight class="keyword">this</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>components.push_back(component);</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>component;</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>ComponentType<sp/>=<sp/>ActorComponent&gt;</highlight></codeline>
+<codeline lineno="96" refid="class_mesh_actor_1a639c1c33b5f22210351fd94ec7d78c43" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>ComponentType*<sp/><ref refid="class_mesh_actor_1a639c1c33b5f22210351fd94ec7d78c43" kindref="member">GetComponent</ref>()</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>component<sp/>:<sp/>components)</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(ComponentType*<sp/>foundComponent<sp/>=<sp/></highlight><highlight class="keyword">reinterpret_cast&lt;</highlight><highlight class="normal">ComponentType</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(component))</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>foundComponent;</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>ComponentType<sp/>=<sp/>ActorComponent&gt;</highlight></codeline>
+<codeline lineno="111" refid="class_mesh_actor_1aa824a26a7c24d187f15aa3e9beba11f6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;ComponentType*&gt;&amp;<sp/><ref refid="class_mesh_actor_1aa824a26a7c24d187f15aa3e9beba11f6" kindref="member">GetComponents</ref>()</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::vector&lt;ComponentType*&gt;<sp/>componentsFound;</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>component<sp/>:<sp/>components)</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(ComponentType*<sp/>foundComponent<sp/>=<sp/></highlight><highlight class="keyword">reinterpret_cast&lt;</highlight><highlight class="normal">ComponentType</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(component))</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>componentsFound.push_back(foundComponent);</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>componentsFound;</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="124"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActor.h"/>
+  </compounddef>
+</doxygen>

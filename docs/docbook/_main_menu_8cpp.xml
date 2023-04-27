@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__main_menu_8cpp" xml:lang="en-US">
+<title>D:/Uni/CMP208/Hellwatch/build/vs2017/UserInterface/MainMenu.cpp File Reference</title>
+<indexterm><primary>D:/Uni/CMP208/Hellwatch/build/vs2017/UserInterface/MainMenu.cpp</primary></indexterm>
+<programlisting linenumbering="unnumbered">#include &quot;MainMenu.h&quot;<?linebreak?>#include &quot;GameFramework/PlayerController.h&quot;<?linebreak?>#include &quot;graphics/sprite.h&quot;<?linebreak?>#include &quot;assets/png_loader.h&quot;<?linebreak?>#include &lt;graphics/image_data.h&gt;<?linebreak?>#include &quot;graphics/texture.h&quot;<?linebreak?>#include &quot;input/sony_controller_input_manager.h&quot;<?linebreak?></programlisting>Include dependency graph for MainMenu.cpp:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_main_menu_8cpp__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>

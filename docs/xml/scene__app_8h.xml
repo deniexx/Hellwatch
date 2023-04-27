@@ -1,0 +1,920 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="scene__app_8h" kind="file" language="C++">
+    <compoundname>scene_app.h</compoundname>
+    <includes local="no">system/application.h</includes>
+    <includes local="no">maths/vector2.h</includes>
+    <includes refid="primitive__builder_8h" local="yes">primitive_builder.h</includes>
+    <includes local="yes">graphics/scene.h</includes>
+    <includes local="yes">box2d/box2d.h</includes>
+    <includes local="yes">system/platform.h</includes>
+    <includes refid="obj__mesh__loader_8h" local="yes">obj_mesh_loader.h</includes>
+    <includes local="yes">graphics/font.h</includes>
+    <includes local="no">vector</includes>
+    <includes local="no">future</includes>
+    <includes local="no">random</includes>
+    <includedby refid="_ice_bolt_8cpp" local="yes">D:/Uni/CMP208/Hellwatch/build/vs2017/Abilities/PlayerAbilities/IceBolt.cpp</includedby>
+    <includedby refid="_piercing_strike_8cpp" local="yes">D:/Uni/CMP208/Hellwatch/build/vs2017/Abilities/PlayerAbilities/PiercingStrike.cpp</includedby>
+    <includedby refid="_mesh_actor_8cpp" local="yes">D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActor.cpp</includedby>
+    <includedby refid="_enemy_8h" local="yes">D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/Enemy.h</includedby>
+    <includedby refid="_sprite_actor_8cpp" local="no">D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/SpriteActor.cpp</includedby>
+    <includedby refid="_particle_manager_8cpp" local="yes">D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/ParticleManager.cpp</includedby>
+    <includedby refid="_utils_8h" local="no">D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/Utils.h</includedby>
+    <includedby refid="_world_object_8cpp" local="yes">D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/WorldObject.cpp</includedby>
+    <includedby refid="main__d3d11_8cpp" local="yes">D:/Uni/CMP208/Hellwatch/main_d3d11.cpp</includedby>
+    <includedby refid="main__vita_8cpp" local="yes">D:/Uni/CMP208/Hellwatch/main_vita.cpp</includedby>
+    <includedby refid="scene__app_8cpp" local="yes">D:/Uni/CMP208/Hellwatch/scene_app.cpp</includedby>
+    <incdepgraph>
+      <node id="11">
+        <label>obj_mesh_loader.h</label>
+        <link refid="obj__mesh__loader_8h"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>primitive_builder.h</label>
+        <link refid="primitive__builder_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>D:/Uni/CMP208/Hellwatch/scene_app.h</label>
+        <link refid="scene__app_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>box2d/box2d.h</label>
+      </node>
+      <node id="7">
+        <label>cstddef</label>
+      </node>
+      <node id="17">
+        <label>future</label>
+      </node>
+      <node id="12">
+        <label>gef.h</label>
+      </node>
+      <node id="16">
+        <label>graphics/font.h</label>
+      </node>
+      <node id="6">
+        <label>graphics/material.h</label>
+      </node>
+      <node id="8">
+        <label>graphics/scene.h</label>
+      </node>
+      <node id="13">
+        <label>map</label>
+      </node>
+      <node id="3">
+        <label>maths/vector2.h</label>
+      </node>
+      <node id="5">
+        <label>maths/vector4.h</label>
+      </node>
+      <node id="18">
+        <label>random</label>
+      </node>
+      <node id="14">
+        <label>string</label>
+      </node>
+      <node id="2">
+        <label>system/application.h</label>
+      </node>
+      <node id="10">
+        <label>system/platform.h</label>
+      </node>
+      <node id="15">
+        <label>vector</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="30">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/Abilities/Ability.cpp</label>
+        <link refid="_ability_8cpp"/>
+      </node>
+      <node id="17">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/Abilities/PlayerAbilities/Dash.cpp</label>
+        <link refid="_dash_8cpp"/>
+      </node>
+      <node id="16">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/Abilities/PlayerAbilities/Dash.h</label>
+        <link refid="_dash_8h"/>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/Abilities/PlayerAbilities/IceBolt.cpp</label>
+        <link refid="_ice_bolt_8cpp"/>
+      </node>
+      <node id="19">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/Abilities/PlayerAbilities/IceBolt.h</label>
+        <link refid="_ice_bolt_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+      </node>
+      <node id="21">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/Abilities/PlayerAbilities/Meteor.cpp</label>
+        <link refid="_meteor_8cpp"/>
+      </node>
+      <node id="20">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/Abilities/PlayerAbilities/Meteor.h</label>
+        <link refid="_meteor_8h"/>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/Abilities/PlayerAbilities/PiercingStrike.cpp</label>
+        <link refid="_piercing_strike_8cpp"/>
+      </node>
+      <node id="22">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/Abilities/PlayerAbilities/PiercingStrike.h</label>
+        <link refid="_piercing_strike_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+      </node>
+      <node id="32">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/ActorComponents/AbilitiesComponent.cpp</label>
+        <link refid="_abilities_component_8cpp"/>
+      </node>
+      <node id="31">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/ActorComponents/AbilitiesComponent.h</label>
+        <link refid="_abilities_component_8h"/>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="43">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/ActorComponents/ActorComponent.cpp</label>
+        <link refid="_actor_component_8cpp"/>
+      </node>
+      <node id="24">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/ActorComponents/CharacterMovementComponent.cpp</label>
+        <link refid="_character_movement_component_8cpp"/>
+      </node>
+      <node id="23">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/ActorComponents/CharacterMovementComponent.h</label>
+        <link refid="_character_movement_component_8h"/>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActor.cpp</label>
+        <link refid="_mesh_actor_8cpp"/>
+      </node>
+      <node id="44">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActor.h</label>
+        <link refid="_mesh_actor_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="45" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="47" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/Boss.cpp</label>
+        <link refid="_boss_8cpp"/>
+      </node>
+      <node id="6">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/Boss.h</label>
+        <link refid="_boss_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="46">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/DamageOnCollisionActor.cpp</label>
+        <link refid="_damage_on_collision_actor_8cpp"/>
+      </node>
+      <node id="45">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/DamageOnCollisionActor.h</label>
+        <link refid="_damage_on_collision_actor_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="46" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/Enemy.cpp</label>
+        <link refid="_enemy_8cpp"/>
+      </node>
+      <node id="5">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/Enemy.h</label>
+        <link refid="_enemy_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="34">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/EnemyDummy.cpp</label>
+        <link refid="_enemy_dummy_8cpp"/>
+      </node>
+      <node id="33">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/EnemyDummy.h</label>
+        <link refid="_enemy_dummy_8h"/>
+        <childnode refid="34" relation="include">
+        </childnode>
+      </node>
+      <node id="26">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/MeteorActor.cpp</label>
+        <link refid="_meteor_actor_8cpp"/>
+      </node>
+      <node id="25">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/MeteorActor.h</label>
+        <link refid="_meteor_actor_8h"/>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+      </node>
+      <node id="48">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/ParticleActor.cpp</label>
+        <link refid="_particle_actor_8cpp"/>
+      </node>
+      <node id="47">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/ParticleActor.h</label>
+        <link refid="_particle_actor_8h"/>
+        <childnode refid="48" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="18">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/PlayerCharacter.cpp</label>
+        <link refid="_player_character_8cpp"/>
+      </node>
+      <node id="27">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/PlayerCharacter.h</label>
+        <link refid="_player_character_8h"/>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/RangedEnemy.cpp</label>
+        <link refid="_ranged_enemy_8cpp"/>
+      </node>
+      <node id="10">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/RangedEnemy.h</label>
+        <link refid="_ranged_enemy_8h"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/SpriteActor.cpp</label>
+        <link refid="_sprite_actor_8cpp"/>
+      </node>
+      <node id="49">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/SpriteActor.h</label>
+        <link refid="_sprite_actor_8h"/>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="35">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/Attributes/AttributeComponent.cpp</label>
+        <link refid="_attribute_component_8cpp"/>
+      </node>
+      <node id="29">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/Attributes/AttributeComponent.h</label>
+        <link refid="_attribute_component_8h"/>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/ParticleManager.cpp</label>
+        <link refid="_particle_manager_8cpp"/>
+      </node>
+      <node id="37">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/PlayerController.cpp</label>
+        <link refid="_player_controller_8cpp"/>
+      </node>
+      <node id="36">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/PlayerController.h</label>
+        <link refid="_player_controller_8h"/>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+        <childnode refid="38" relation="include">
+        </childnode>
+        <childnode refid="39" relation="include">
+        </childnode>
+        <childnode refid="40" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/Utils.h</label>
+        <link refid="_utils_8h"/>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+        <childnode refid="41" relation="include">
+        </childnode>
+        <childnode refid="42" relation="include">
+        </childnode>
+        <childnode refid="51" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/WaveManager.cpp</label>
+        <link refid="_wave_manager_8cpp"/>
+      </node>
+      <node id="41">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/WaveManager.h</label>
+        <link refid="_wave_manager_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="50">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/WorldObject.cpp</label>
+        <link refid="_world_object_8cpp"/>
+      </node>
+      <node id="42">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/WorldObject.h</label>
+        <link refid="_world_object_8h"/>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="43" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="44" relation="include">
+        </childnode>
+        <childnode refid="49" relation="include">
+        </childnode>
+        <childnode refid="50" relation="include">
+        </childnode>
+      </node>
+      <node id="53">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/UserInterface/GameEndMenu.cpp</label>
+        <link refid="_game_end_menu_8cpp"/>
+      </node>
+      <node id="52">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/UserInterface/GameEndMenu.h</label>
+        <link refid="_game_end_menu_8h"/>
+        <childnode refid="53" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="38">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/UserInterface/MainMenu.cpp</label>
+        <link refid="_main_menu_8cpp"/>
+      </node>
+      <node id="54">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/UserInterface/MainMenu.h</label>
+        <link refid="_main_menu_8h"/>
+        <childnode refid="38" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="39">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/UserInterface/Menu.cpp</label>
+        <link refid="_menu_8cpp"/>
+      </node>
+      <node id="51">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/UserInterface/Menu.h</label>
+        <link refid="_menu_8h"/>
+        <childnode refid="52" relation="include">
+        </childnode>
+        <childnode refid="54" relation="include">
+        </childnode>
+        <childnode refid="39" relation="include">
+        </childnode>
+        <childnode refid="55" relation="include">
+        </childnode>
+        <childnode refid="56" relation="include">
+        </childnode>
+      </node>
+      <node id="40">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/UserInterface/PauseMenu.cpp</label>
+        <link refid="_pause_menu_8cpp"/>
+      </node>
+      <node id="55">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/UserInterface/PauseMenu.h</label>
+        <link refid="_pause_menu_8h"/>
+        <childnode refid="40" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="28">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/UserInterface/ShopMenu.cpp</label>
+        <link refid="_shop_menu_8cpp"/>
+      </node>
+      <node id="56">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/UserInterface/ShopMenu.h</label>
+        <link refid="_shop_menu_8h"/>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="57">
+        <label>D:/Uni/CMP208/Hellwatch/main_d3d11.cpp</label>
+        <link refid="main__d3d11_8cpp"/>
+      </node>
+      <node id="58">
+        <label>D:/Uni/CMP208/Hellwatch/main_vita.cpp</label>
+        <link refid="main__vita_8cpp"/>
+      </node>
+      <node id="12">
+        <label>D:/Uni/CMP208/Hellwatch/scene_app.cpp</label>
+        <link refid="scene__app_8cpp"/>
+      </node>
+      <node id="1">
+        <label>D:/Uni/CMP208/Hellwatch/scene_app.h</label>
+        <link refid="scene__app_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="50" relation="include">
+        </childnode>
+        <childnode refid="57" relation="include">
+        </childnode>
+        <childnode refid="58" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="struct_f_camera_shake" prot="public">FCameraShake</innerclass>
+    <innerclass refid="class_scene_app" prot="public">SceneApp</innerclass>
+    <innernamespace refid="namespace_game_state">GameState</innernamespace>
+    <innernamespace refid="namespacegef">gef</innernamespace>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="scene__app_8h_1a5b57d40276b77cc074d878efc78bb980" prot="public" static="no">
+        <type>std::map&lt; std::string, gef::Texture * &gt;</type>
+        <definition>typedef std::map&lt;std::string, gef::Texture*&gt; TextureMap</definition>
+        <argsstring></argsstring>
+        <name>TextureMap</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/scene_app.h" line="71" column="18" bodyfile="D:/Uni/CMP208/Hellwatch/scene_app.h" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="scene__app_8h_1a8d89ee6a10feffd9323a0031e0bbea29" prot="public" static="no">
+        <type>std::map&lt; std::string, int &gt;</type>
+        <definition>typedef std::map&lt;std::string, int&gt; SoundMap</definition>
+        <argsstring></argsstring>
+        <name>SoundMap</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/scene_app.h" line="72" column="18" bodyfile="D:/Uni/CMP208/Hellwatch/scene_app.h" bodystart="72" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>_SCENE_APP_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_SCENE_APP_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;system/application.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;maths/vector2.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="primitive__builder_8h" kindref="compound">primitive_builder.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;graphics/scene.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;box2d/box2d.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;system/platform.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="obj__mesh__loader_8h" kindref="compound">obj_mesh_loader.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;graphics/font.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;vector&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;future&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;random&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17" refid="namespace_game_state" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespace_game_state" kindref="compound">GameState</ref></highlight></codeline>
+<codeline lineno="18"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="19" refid="namespace_game_state_1aa2df68fe63beaaf10d3154d8eb490fe6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="namespace_game_state_1aa2df68fe63beaaf10d3154d8eb490fe6" kindref="member">Type</ref></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="21" refid="namespace_game_state_1aa2df68fe63beaaf10d3154d8eb490fe6a1c09055471a61c18afc1fc201e6d7d2a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespace_game_state_1aa2df68fe63beaaf10d3154d8eb490fe6a1c09055471a61c18afc1fc201e6d7d2a" kindref="member">Loading</ref>,</highlight></codeline>
+<codeline lineno="22" refid="namespace_game_state_1aa2df68fe63beaaf10d3154d8eb490fe6afff9d63720dd6c0c621817980d02d9ee" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespace_game_state_1aa2df68fe63beaaf10d3154d8eb490fe6afff9d63720dd6c0c621817980d02d9ee" kindref="member">MainMenu</ref>,</highlight></codeline>
+<codeline lineno="23" refid="namespace_game_state_1aa2df68fe63beaaf10d3154d8eb490fe6aa1babbc78fafb7b98d14a8fcc880bd55" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespace_game_state_1aa2df68fe63beaaf10d3154d8eb490fe6aa1babbc78fafb7b98d14a8fcc880bd55" kindref="member">GameLoop</ref>,</highlight></codeline>
+<codeline lineno="24" refid="namespace_game_state_1aa2df68fe63beaaf10d3154d8eb490fe6a6e1adcd2eb4fb5660e3baadd566e4873" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespace_game_state_1aa2df68fe63beaaf10d3154d8eb490fe6a6e1adcd2eb4fb5660e3baadd566e4873" kindref="member">PauseMenu</ref>,</highlight></codeline>
+<codeline lineno="25" refid="namespace_game_state_1aa2df68fe63beaaf10d3154d8eb490fe6a11dfd10e2813b09f256dd86e3902dfe2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespace_game_state_1aa2df68fe63beaaf10d3154d8eb490fe6a11dfd10e2813b09f256dd86e3902dfe2" kindref="member">Shop</ref>,</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespace_game_state_1aa2df68fe63beaaf10d3154d8eb490fe6a797c961d3f35a579149051adc329e58e" kindref="member">GameEnd</ref></highlight></codeline>
+<codeline lineno="27" refid="namespace_game_state_1aa2df68fe63beaaf10d3154d8eb490fe6a797c961d3f35a579149051adc329e58e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="28"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30" refid="struct_f_camera_shake" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_f_camera_shake" kindref="compound">FCameraShake</ref></highlight></codeline>
+<codeline lineno="31"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="32" refid="struct_f_camera_shake_1ae28540e423d42a897f77f196f27bcde7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>gef::Vector4<sp/><ref refid="struct_f_camera_shake_1ae28540e423d42a897f77f196f27bcde7" kindref="member">maxOffset</ref><sp/>=<sp/>gef::Vector4::kZero;</highlight></codeline>
+<codeline lineno="33" refid="struct_f_camera_shake_1a957c35cfc269421091fc884a21d41899" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>gef::Vector4<sp/><ref refid="struct_f_camera_shake_1a957c35cfc269421091fc884a21d41899" kindref="member">minOffset</ref><sp/>=<sp/>gef::Vector4::kZero;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35" refid="struct_f_camera_shake_1a0067a7fbb68d30a2f8d68511a6403e46" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="struct_f_camera_shake_1a0067a7fbb68d30a2f8d68511a6403e46" kindref="member">lerpAlpha</ref><sp/>=<sp/>0.f;</highlight></codeline>
+<codeline lineno="36" refid="struct_f_camera_shake_1a28904f65e3bcb603c865ba72bcbea0e2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="struct_f_camera_shake_1a28904f65e3bcb603c865ba72bcbea0e2" kindref="member">duration</ref><sp/>=<sp/>1.f;</highlight></codeline>
+<codeline lineno="37" refid="struct_f_camera_shake_1a089db07499dd81ac8736501fbe46aa86" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="struct_f_camera_shake_1a089db07499dd81ac8736501fbe46aa86" kindref="member">intensity</ref><sp/>=<sp/>1.f;</highlight></codeline>
+<codeline lineno="38" refid="struct_f_camera_shake_1a11948ae09ec868a32530378efd25f34f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="struct_f_camera_shake_1a11948ae09ec868a32530378efd25f34f" kindref="member">cameraShakeStartTime</ref><sp/>=<sp/>0.f;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40" refid="struct_f_camera_shake_1a11241077b74ae4a78aab9c55f25f8827" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="struct_f_camera_shake_1a11241077b74ae4a78aab9c55f25f8827" kindref="member">bMovingForward</ref><sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="comment">//<sp/>FRAMEWORK<sp/>FORWARD<sp/>DECLARATIONS</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacegef" kindref="compound">gef</ref></highlight></codeline>
+<codeline lineno="45"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">Platform;</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">SpriteRenderer;</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">Font;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">InputManager;</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">Renderer3D;</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">Sprite;</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">AudioManager;</highlight></codeline>
+<codeline lineno="53"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Forward<sp/>declarations<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_mesh_actor" kindref="compound">MeshActor</ref>;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_sprite_actor" kindref="compound">SpriteActor</ref>;</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_world_object" kindref="compound">WorldObject</ref>;</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_player_character" kindref="compound">PlayerCharacter</ref>;</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_enemy_dummy" kindref="compound">EnemyDummy</ref>;</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_enemy" kindref="compound">Enemy</ref>;</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_ranged_enemy" kindref="compound">RangedEnemy</ref>;</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_wave_manager" kindref="compound">WaveManager</ref>;</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_main_menu" kindref="compound">MainMenu</ref>;</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_shop_menu" kindref="compound">ShopMenu</ref>;</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_pause_menu" kindref="compound">PauseMenu</ref>;</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_game_end_menu" kindref="compound">GameEndMenu</ref>;</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_player_controller" kindref="compound">PlayerController</ref>;</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_particle_manager" kindref="compound">ParticleManager</ref>;</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71" refid="scene__app_8h_1a5b57d40276b77cc074d878efc78bb980" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>std::map&lt;std::string,<sp/>gef::Texture*&gt;<sp/><ref refid="scene__app_8h_1a5b57d40276b77cc074d878efc78bb980" kindref="member">TextureMap</ref>;</highlight></codeline>
+<codeline lineno="72" refid="scene__app_8h_1a8d89ee6a10feffd9323a0031e0bbea29" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>std::map&lt;std::string,<sp/>int&gt;<sp/><ref refid="scene__app_8h_1a8d89ee6a10feffd9323a0031e0bbea29" kindref="member">SoundMap</ref>;</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74" refid="class_scene_app" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_scene_app" kindref="compound">SceneApp</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>gef::Application</highlight></codeline>
+<codeline lineno="75"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/><ref refid="class_scene_app" kindref="compound">SceneApp</ref>*<sp/>SceneApp::instance;</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_scene_app" kindref="compound">SceneApp</ref>(gef::Platform&amp;<sp/>platform);</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_scene_app_1afbc3cd83343839fef53b5fcc2da630e6" kindref="member">Init</ref>();</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_scene_app_1ab815a8823c2248fcebdc7a06867bdb9b" kindref="member">CleanUp</ref>();</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_scene_app_1a48adec081291fea513f516bec9dcb898" kindref="member">Update</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>frame_time);</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_scene_app_1afd9eebbabf3fe176d9fe30b309c2130c" kindref="member">Render</ref>();</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/>b2Body*<sp/><ref refid="class_scene_app_1adcf5fcd2dfcb07d468c0ff4455e45bdd" kindref="member">CreateCollisionBody</ref>(b2BodyDef<sp/>bodyDef,<sp/>b2FixtureDef<sp/>fixtureDef,<sp/><ref refid="class_world_object" kindref="compound">WorldObject</ref>*<sp/>owningObject);</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight><highlight class="comment"><sp/><sp/><sp/><sp/>/************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>CALLED<sp/>ONCE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight><highlight class="comment"><sp/><sp/><sp/><sp/>/************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>InitFont();</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>CleanUpFont();</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>SetupLights();</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>InitGameLoop();</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>InitMainMenu();</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>InitShop();</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>InitPauseMenu();</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>InitGameEndMenu();</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight><highlight class="comment"><sp/><sp/><sp/><sp/>/************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>UPDATES<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight><highlight class="comment"><sp/><sp/><sp/><sp/>/************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>UpdateLoading(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>frame_time);</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>UpdateMainMenu(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>frame_time);</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>UpdateGameLoop(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>frame_time);</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>UpdatePauseMenu(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>frame_time);</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>UpdateShop();</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>UpdateGameEnd();</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>HandleCollision();</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>CheckMarkedForDeletion();</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight><highlight class="comment"><sp/><sp/><sp/><sp/>/************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>RENDERING<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="122"><highlight class="normal"></highlight><highlight class="comment"><sp/><sp/><sp/><sp/>/************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>DrawHUD();</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"></highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>RenderLoading();</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>RenderMainMenu();</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>RenderGameLoop();</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>RenderPauseMenu();</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>RenderShop();</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>RenderGameEnd();</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"></highlight></codeline>
+<codeline lineno="132"><highlight class="normal"></highlight><highlight class="comment"><sp/><sp/><sp/><sp/>/*******************************************************</highlight></codeline>
+<codeline lineno="133"><highlight class="comment"><sp/><sp/><sp/><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>GAME<sp/>STATE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="134"><highlight class="comment"><sp/><sp/><sp/><sp/>*******************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespace_game_state_1aa2df68fe63beaaf10d3154d8eb490fe6" kindref="member">GameState::Type</ref><sp/>gameState;</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>bGameLoopInitted<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>bCommingFromMainMenu<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"></highlight></codeline>
+<codeline lineno="139"><highlight class="normal"></highlight><highlight class="comment"><sp/><sp/><sp/><sp/>/*******************************************************</highlight></codeline>
+<codeline lineno="140"><highlight class="comment"><sp/><sp/><sp/><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ASSET<sp/>LOADING<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="141"><highlight class="comment"><sp/><sp/><sp/><sp/>*******************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/>gef::Scene*<sp/>LoadSceneAssets(gef::Platform&amp;<sp/>platform,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>filename);</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/>gef::Mesh*<sp/>GetMeshFromSceneAssets(gef::Scene*<sp/>scene);</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"></highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>LoadAssets();</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>BuildToLoadData();</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"></highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_primitive_builder" kindref="compound">PrimitiveBuilder</ref>*<sp/>primitive_builder_;</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="obj__mesh__loader_8h_1ab6d74e55cf8354fe68dd64bd265a814e" kindref="member">MeshMap</ref><sp/>meshes;</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="scene__app_8h_1a5b57d40276b77cc074d878efc78bb980" kindref="member">TextureMap</ref><sp/>textures;</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"></highlight></codeline>
+<codeline lineno="152"><highlight class="normal"></highlight><highlight class="comment"><sp/><sp/><sp/><sp/>/*******************************************************</highlight></codeline>
+<codeline lineno="153"><highlight class="comment"><sp/><sp/><sp/><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>RENDERING<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="154"><highlight class="comment"><sp/><sp/><sp/><sp/>*******************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/>gef::SpriteRenderer*<sp/>sprite_renderer_;</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/>gef::Font*<sp/>font_;</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/>gef::Renderer3D*<sp/>renderer_3d_;</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"></highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>This<sp/>is<sp/>used<sp/>to<sp/>asynchronously<sp/>load<sp/>assets<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/>std::future&lt;GameState::Type&gt;<sp/>loadFuture;</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"></highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Menu<sp/>classes<sp/>and<sp/>wave<sp/>manager<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_wave_manager" kindref="compound">WaveManager</ref>*<sp/>waveManager;</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_main_menu" kindref="compound">MainMenu</ref>*<sp/>mainMenu;</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_shop_menu" kindref="compound">ShopMenu</ref>*<sp/>shopMenu;</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_pause_menu" kindref="compound">PauseMenu</ref>*<sp/>pauseMenu;</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_game_end_menu" kindref="compound">GameEndMenu</ref>*<sp/>gameEndMenu;</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"></highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>We<sp/>store<sp/>this<sp/>here<sp/>for<sp/>ease<sp/>of<sp/>access<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>playerMoney<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"></highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Utility<sp/>function<sp/>to<sp/>find<sp/>sample<sp/>name<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>FindSampleFromName(std::string<sp/>sampleName);</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"></highlight></codeline>
+<codeline lineno="175"><highlight class="normal"></highlight><highlight class="comment"><sp/><sp/><sp/><sp/>/************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>REQUIRED<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="177"><highlight class="normal"></highlight><highlight class="comment"><sp/><sp/><sp/><sp/>/************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/>gef::Sprite*<sp/>loadingSprite;</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_player_character" kindref="compound">PlayerCharacter</ref>*<sp/>playerCharacter;</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;MeshActor*&gt;<sp/>meshActors;</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;SpriteActor*&gt;<sp/>spriteActors;</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/>gef::Scene*<sp/>scene_assets_;</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;std::string&gt;<sp/>meshesToLoad;</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/>std::map&lt;std::string,<sp/>std::string&gt;<sp/>texturesToLoad;</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/>std::map&lt;std::string,<sp/>std::string&gt;<sp/>soundsToLoad;</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"></highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/>gef::Sprite*<sp/>pointerSprite;</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/>gef::Vector2<sp/>pointerLocation<sp/>=<sp/>gef::Vector2(0,<sp/>0);</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"></highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/>gef::Vector4<sp/>cameraEye<sp/>=<sp/>gef::Vector4(0.0f,<sp/>20.0f,<sp/>0.0f);</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/>gef::Vector4<sp/>cameraLookAt<sp/>=<sp/>gef::Vector4(0.0f,<sp/>-1.0f,<sp/>0.001f);</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/>gef::Vector4<sp/>cameraUp<sp/>=<sp/>gef::Vector4(0.0f,<sp/>1.0f,<sp/>0.0f);</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"></highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_f_camera_shake" kindref="compound">FCameraShake</ref><sp/>cameraShake<sp/>=<sp/><ref refid="struct_f_camera_shake" kindref="compound">FCameraShake</ref>();</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"></highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>fps_;</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>currentGameTime;</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>lastDeltaTime;</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"></highlight></codeline>
+<codeline lineno="200"><highlight class="normal"></highlight><highlight class="comment"><sp/><sp/><sp/><sp/>/************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>BOX2D<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="202"><highlight class="normal"></highlight><highlight class="comment"><sp/><sp/><sp/><sp/>/************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/>b2World*<sp/>b2dWorld;</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/>b2Vec2<sp/>gravity;</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"></highlight></codeline>
+<codeline lineno="206"><highlight class="normal"></highlight></codeline>
+<codeline lineno="207"><highlight class="normal"></highlight><highlight class="comment"><sp/><sp/><sp/><sp/>/************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SOUND<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="209"><highlight class="normal"></highlight><highlight class="comment"><sp/><sp/><sp/><sp/>/************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/><sp/>gef::AudioManager*<sp/>audioManager;</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="scene__app_8h_1a8d89ee6a10feffd9323a0031e0bbea29" kindref="member">SoundMap</ref><sp/>sounds;</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>masterVolume<sp/>=<sp/>30.f;</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"></highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_player_controller" kindref="compound">PlayerController</ref>*<sp/>soundController;</highlight></codeline>
+<codeline lineno="215"><highlight class="normal"></highlight></codeline>
+<codeline lineno="216"><highlight class="normal"></highlight><highlight class="comment"><sp/><sp/><sp/><sp/>/************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>RANDOM<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="218"><highlight class="normal"></highlight><highlight class="comment"><sp/><sp/><sp/><sp/>/************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="219"><highlight class="normal"><sp/><sp/><sp/><sp/>std::default_random_engine<sp/>rd;</highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/><sp/><sp/>std::uniform_real_distribution&lt;float&gt;<sp/>dist;</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"></highlight></codeline>
+<codeline lineno="222"><highlight class="normal"></highlight><highlight class="comment"><sp/><sp/><sp/><sp/>/************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="223"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>PARTICLES<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="224"><highlight class="normal"></highlight><highlight class="comment"><sp/><sp/><sp/><sp/>/************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="225"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_particle_manager" kindref="compound">ParticleManager</ref>*<sp/>particleManager;</highlight></codeline>
+<codeline lineno="226"><highlight class="normal"></highlight></codeline>
+<codeline lineno="227"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="228"><highlight class="normal"></highlight></codeline>
+<codeline lineno="229"><highlight class="normal"></highlight><highlight class="comment"><sp/><sp/><sp/><sp/>/************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="230"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>GETTERS<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="231"><highlight class="normal"></highlight><highlight class="comment"><sp/><sp/><sp/><sp/>/************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="232" refid="class_scene_app_1ac0999a6034cf97a795506eb75dd3cc7f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>__forceinline<sp/>gef::Renderer3D*<sp/><ref refid="class_scene_app_1ac0999a6034cf97a795506eb75dd3cc7f" kindref="member">GetRenderer3D</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>renderer_3d_;<sp/>}</highlight></codeline>
+<codeline lineno="233" refid="class_scene_app_1acfe997c4a66416d0cf25324d47403abb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>__forceinline<sp/>gef::SpriteRenderer*<sp/><ref refid="class_scene_app_1acfe997c4a66416d0cf25324d47403abb" kindref="member">GetSpriteRenderer</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>sprite_renderer_;<sp/>}</highlight></codeline>
+<codeline lineno="234" refid="class_scene_app_1ad1ff8bd221115d5e081490da02e2f398" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>__forceinline<sp/>b2World*<sp/><ref refid="class_scene_app_1ad1ff8bd221115d5e081490da02e2f398" kindref="member">GetBox2DWorld</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>b2dWorld;<sp/>}</highlight></codeline>
+<codeline lineno="235" refid="class_scene_app_1a30039f31aff4d61fdce25d79425892fc" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>__forceinline<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="class_scene_app_1a30039f31aff4d61fdce25d79425892fc" kindref="member">GetViewportWidth</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>platform_.width();<sp/>}</highlight></codeline>
+<codeline lineno="236" refid="class_scene_app_1a0fc304ef89214b58b23adf26ec63f6ac" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>__forceinline<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="class_scene_app_1a0fc304ef89214b58b23adf26ec63f6ac" kindref="member">GetViewportHeight</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>platform_.height();<sp/>}</highlight></codeline>
+<codeline lineno="237" refid="class_scene_app_1a36cc2439051445972f7b29114f3b011b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>__forceinline<sp/><ref refid="class_player_character" kindref="compound">PlayerCharacter</ref>*<sp/><ref refid="class_scene_app_1a36cc2439051445972f7b29114f3b011b" kindref="member">GetPlayerCharacter</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>playerCharacter;<sp/>}</highlight></codeline>
+<codeline lineno="238" refid="class_scene_app_1ad0422232eb1f735a48a20137eb6e953e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>__forceinline<sp/><ref refid="class_primitive_builder" kindref="compound">PrimitiveBuilder</ref>*<sp/><ref refid="class_scene_app_1ad0422232eb1f735a48a20137eb6e953e" kindref="member">GetPrimitiveBuilder</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>primitive_builder_;<sp/>}</highlight></codeline>
+<codeline lineno="239" refid="class_scene_app_1aaec63e72c5b04a1f7a63f3ff81b8bdb7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>__forceinline<sp/>gef::Vector4<sp/><ref refid="class_scene_app_1aaec63e72c5b04a1f7a63f3ff81b8bdb7" kindref="member">GetCameraEye</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>cameraEye;<sp/>}</highlight></codeline>
+<codeline lineno="240" refid="class_scene_app_1ab94350ed26fa0140eaac7060d97db655" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>__forceinline<sp/>gef::Vector4<sp/><ref refid="class_scene_app_1ab94350ed26fa0140eaac7060d97db655" kindref="member">GetCameraLookAt</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>cameraLookAt;<sp/>}</highlight></codeline>
+<codeline lineno="241" refid="class_scene_app_1ab0a3e09a2920c053f50d25ea03132ae7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>__forceinline<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="class_scene_app_1ab0a3e09a2920c053f50d25ea03132ae7" kindref="member">GetCurrentGameTime</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>currentGameTime;<sp/>}</highlight></codeline>
+<codeline lineno="242" refid="class_scene_app_1af624c2780cc0b7d913f63f7c4df74030" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>__forceinline<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="class_scene_app_1af624c2780cc0b7d913f63f7c4df74030" kindref="member">GetLastDeltaTime</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>lastDeltaTime;<sp/>}</highlight></codeline>
+<codeline lineno="243"><highlight class="normal"></highlight></codeline>
+<codeline lineno="244"><highlight class="normal"><sp/><sp/><sp/><sp/>gef::Mesh*<sp/><ref refid="class_scene_app_1a6b6984ec718cb9ebad4be261df534cf1" kindref="member">RequestMeshByName</ref>(std::string<sp/>meshName);</highlight></codeline>
+<codeline lineno="245"><highlight class="normal"><sp/><sp/><sp/><sp/>gef::Texture*<sp/><ref refid="class_scene_app_1ac00c6ac20d92d7e8fd77d341a116e81d" kindref="member">RequestTextureByName</ref>(std::string<sp/>textureName);</highlight></codeline>
+<codeline lineno="246" refid="class_scene_app_1a13fa1b28170df85ade3d18e329fbedc7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>gef::Font*<sp/><ref refid="class_scene_app_1a13fa1b28170df85ade3d18e329fbedc7" kindref="member">GetFont</ref>()<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>font_;<sp/>}</highlight></codeline>
+<codeline lineno="247" refid="class_scene_app_1a1b8d7ed84a7691d140c0b10d6cc01f7b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>gef::AudioManager*<sp/><ref refid="class_scene_app_1a1b8d7ed84a7691d140c0b10d6cc01f7b" kindref="member">GetAudioManager</ref>()<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>audioManager;<sp/>}</highlight></codeline>
+<codeline lineno="248"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>gef::Vector2<sp/><ref refid="class_scene_app_1a2cb299beb00f7fea8f1de7c0cc6ab19b" kindref="member">GetLastTouchPosition</ref>();</highlight></codeline>
+<codeline lineno="249"><highlight class="normal"></highlight></codeline>
+<codeline lineno="250"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Game<sp/>State<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="251"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_scene_app_1a3bc64bbc203e9cb597f2b47dc69f20e6" kindref="member">SetGameState</ref>(<ref refid="namespace_game_state_1aa2df68fe63beaaf10d3154d8eb490fe6" kindref="member">GameState::Type</ref><sp/>newState);</highlight></codeline>
+<codeline lineno="252" refid="class_scene_app_1a3218d41e2d667db80e8fed34b02b6221" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespace_game_state_1aa2df68fe63beaaf10d3154d8eb490fe6" kindref="member">GameState::Type</ref><sp/><ref refid="class_scene_app_1a3218d41e2d667db80e8fed34b02b6221" kindref="member">GetGameState</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>gameState;<sp/>}</highlight></codeline>
+<codeline lineno="253"><highlight class="normal"></highlight></codeline>
+<codeline lineno="254"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Player<sp/>money<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="255" refid="class_scene_app_1ab4f8fc5ac0dc41a16f83089ff782b6f4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint32_t<sp/><ref refid="class_scene_app_1ab4f8fc5ac0dc41a16f83089ff782b6f4" kindref="member">GetPlayerMoney</ref>()<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>playerMoney;<sp/>}</highlight></codeline>
+<codeline lineno="256" refid="class_scene_app_1aec4d56f9129795aaef4ad8f2a454e302" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_scene_app_1aec4d56f9129795aaef4ad8f2a454e302" kindref="member">IncreasePlayerMoney</ref>(uint32_t<sp/>increaseAmount)<sp/>{<sp/>playerMoney<sp/>+=<sp/>increaseAmount;<sp/>}</highlight></codeline>
+<codeline lineno="257" refid="class_scene_app_1ac7ebc87268f7eea380099954c5358fd3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_scene_app_1ac7ebc87268f7eea380099954c5358fd3" kindref="member">ApplyCostToPlayerMoney</ref>(uint32_t<sp/>cost)<sp/>{<sp/>playerMoney<sp/>-=<sp/>cost;<sp/>}</highlight></codeline>
+<codeline lineno="258"><highlight class="normal"></highlight></codeline>
+<codeline lineno="259"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Camera<sp/>Shake<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="260"><highlight class="normal"></highlight></codeline>
+<codeline lineno="265"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_scene_app_1a04b16337e0cd4af5f9b38f75ca623f34" kindref="member">ApplyCameraShake</ref>(<ref refid="struct_f_camera_shake" kindref="compound">FCameraShake</ref><sp/>newShake);</highlight></codeline>
+<codeline lineno="266"><highlight class="normal"></highlight></codeline>
+<codeline lineno="267"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Damage<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="268"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_scene_app_1a85782170c9894dfebe3a8045063301c6" kindref="member">ApplyRadialDamage</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>damageAmount,<sp/>gef::Vector4<sp/>origin,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>innerRadius,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>outerRadius);</highlight></codeline>
+<codeline lineno="269"><highlight class="normal"></highlight></codeline>
+<codeline lineno="270"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Sound<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="271"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_scene_app_1a942b3809824f430117b26e9a7ad5acf6" kindref="member">PlaySample</ref>(std::string<sp/>sampleName,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>pitch<sp/>=<sp/>1,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>bIsLooping<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="272"><highlight class="normal"></highlight></codeline>
+<codeline lineno="273"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Pointer<sp/>functions<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="274" refid="class_scene_app_1a829d6b657cc270002fcf262d57e2f249" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_scene_app_1a829d6b657cc270002fcf262d57e2f249" kindref="member">AddPointerLocationOffset</ref>(gef::Vector2<sp/>offset)<sp/>{<sp/>pointerLocation<sp/>+=<sp/>offset;<sp/>}</highlight></codeline>
+<codeline lineno="275"><highlight class="normal"></highlight></codeline>
+<codeline lineno="276" refid="class_scene_app_1ab40943893a61a141c9fb25eec163a1f1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_scene_app_1ab40943893a61a141c9fb25eec163a1f1" kindref="member">SetPointerLocation</ref>(gef::Vector2<sp/>newLocation)<sp/>{<sp/>pointerLocation<sp/>=<sp/>newLocation;<sp/>}</highlight></codeline>
+<codeline lineno="277"><highlight class="normal"></highlight></codeline>
+<codeline lineno="281"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>MeshActorType<sp/>=<sp/>MeshActor&gt;</highlight></codeline>
+<codeline lineno="282" refid="class_scene_app_1a800b10254ae600ce80c0e69d765e8061" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>MeshActorType*<sp/><ref refid="class_scene_app_1a800b10254ae600ce80c0e69d765e8061" kindref="member">SpawnMeshActor</ref>(gef::Mesh*<sp/>mesh<sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">,<sp/>gef::Vector4<sp/>translation<sp/>=<sp/>gef::Vector4::kZero,<sp/>gef::Vector4<sp/>rotation<sp/>=<sp/>gef::Vector4::kZero,<sp/>gef::Vector4<sp/>scale<sp/>=<sp/>gef::Vector4::kOne,<sp/><ref refid="class_world_object" kindref="compound">WorldObject</ref>*<sp/>owner<sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="283"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="284"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MeshActorType*<sp/>meshActor<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>MeshActorType();</highlight></codeline>
+<codeline lineno="285"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>meshActor-&gt;SetMesh(mesh);</highlight></codeline>
+<codeline lineno="286"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>meshActor-&gt;SetRotation(rotation);</highlight></codeline>
+<codeline lineno="287"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>meshActor-&gt;SetScale(scale);</highlight></codeline>
+<codeline lineno="288"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>meshActor-&gt;Init(owner);</highlight></codeline>
+<codeline lineno="289"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>meshActor-&gt;SetTranslation(translation);</highlight></codeline>
+<codeline lineno="290"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>meshActors.push_back(meshActor);</highlight></codeline>
+<codeline lineno="291"><highlight class="normal"></highlight></codeline>
+<codeline lineno="292"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>meshActor;</highlight></codeline>
+<codeline lineno="293"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="294"><highlight class="normal"></highlight></codeline>
+<codeline lineno="298"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>SpriteActorType<sp/>=<sp/>SpriteActor&gt;</highlight></codeline>
+<codeline lineno="299" refid="class_scene_app_1ab70d4d12950fa87533727b3fa6e42ee5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>SpriteActorType*<sp/><ref refid="class_scene_app_1ab70d4d12950fa87533727b3fa6e42ee5" kindref="member">SpawnSpriteActor</ref>(gef::Sprite*<sp/>sprite<sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">,<sp/>gef::Vector4<sp/>position<sp/>=<sp/>gef::Vector4::kZero,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>rotation<sp/>=<sp/>0.f,<sp/><ref refid="class_world_object" kindref="compound">WorldObject</ref>*<sp/>owner<sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="300"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="301"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SpriteActorType*<sp/>spriteActor<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>SpriteActorType();</highlight></codeline>
+<codeline lineno="302"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>spriteActor-&gt;SetSprite(sprite);</highlight></codeline>
+<codeline lineno="303"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>spriteActor-&gt;SetTranslation(position);</highlight></codeline>
+<codeline lineno="304"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>spriteActor-&gt;SetRotation(rotation);</highlight></codeline>
+<codeline lineno="305"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>spriteActor-&gt;Init(owner);</highlight></codeline>
+<codeline lineno="306"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>spriteActors.push_back(spriteActor);</highlight></codeline>
+<codeline lineno="307"><highlight class="normal"></highlight></codeline>
+<codeline lineno="308"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>spriteActor;</highlight></codeline>
+<codeline lineno="309"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="310"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="311"><highlight class="normal"></highlight></codeline>
+<codeline lineno="312"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>_SCENE_APP_H</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="D:/Uni/CMP208/Hellwatch/scene_app.h"/>
+  </compounddef>
+</doxygen>

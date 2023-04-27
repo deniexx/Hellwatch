@@ -1,0 +1,115 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="class_main_menu" kind="class" language="C++" prot="public">
+    <compoundname>MainMenu</compoundname>
+    <basecompoundref refid="class_menu" prot="public" virt="non-virtual">Menu</basecompoundref>
+    <includes refid="_main_menu_8h" local="no">MainMenu.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_main_menu_1a77aaa0eb810c74a907165b6a1acec31f" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void MainMenu::Init</definition>
+        <argsstring>()</argsstring>
+        <name>Init</name>
+        <qualifiedname>MainMenu::Init</qualifiedname>
+        <reimplements refid="class_menu_1a0c64b7333b29000c8b219d2ebc28c03b">Init</reimplements>
+        <briefdescription>
+<para>Initializes the menu  </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/UserInterface/MainMenu.h" line="12" column="14" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/UserInterface/MainMenu.cpp" bodystart="10" bodyend="91"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_main_menu_1aa01367344346478a014600f8bc7450d0" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MainMenu::OnStartButtonClicked</definition>
+        <argsstring>()</argsstring>
+        <name>OnStartButtonClicked</name>
+        <qualifiedname>MainMenu::OnStartButtonClicked</qualifiedname>
+        <briefdescription>
+<para>Starts the GameLoop once start button has been clicked  </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/UserInterface/MainMenu.h" line="19" column="6" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/UserInterface/MainMenu.cpp" bodystart="93" bodyend="96"/>
+      </memberdef>
+      <memberdef kind="function" id="class_main_menu_1a0fe1a23396381d58448997c5ceb9152f" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MainMenu::OnExitButtonClicked</definition>
+        <argsstring>()</argsstring>
+        <name>OnExitButtonClicked</name>
+        <qualifiedname>MainMenu::OnExitButtonClicked</qualifiedname>
+        <briefdescription>
+<para>Exits the game once the exit button has been clicked  </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/UserInterface/MainMenu.h" line="24" column="6" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/UserInterface/MainMenu.cpp" bodystart="98" bodyend="101"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Main <ref refid="class_menu" kindref="compound">Menu</ref> of the game  </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>MainMenu</label>
+        <link refid="class_main_menu"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Menu</label>
+        <link refid="class_menu"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>MainMenu</label>
+        <link refid="class_main_menu"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Menu</label>
+        <link refid="class_menu"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>menuController</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>PlayerController</label>
+        <link refid="class_player_controller"/>
+      </node>
+    </collaborationgraph>
+    <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/UserInterface/MainMenu.h" line="8" column="1" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/UserInterface/MainMenu.h" bodystart="9" bodyend="25"/>
+    <listofallmembers>
+      <member refid="class_menu_1a2f2b184a3f4000ce78d9e948c95cced4" prot="protected" virt="non-virtual"><scope>MainMenu</scope><name>CheckForHighlight</name></member>
+      <member refid="class_menu_1a1551f565b2ae79bf65449810f4ea81d5" prot="public" virt="non-virtual"><scope>MainMenu</scope><name>currentButtonFocused</name></member>
+      <member refid="class_menu_1acef1c8e0a83655c3b17c217567527f8b" prot="public" virt="virtual"><scope>MainMenu</scope><name>DrawMenuHUD</name></member>
+      <member refid="class_main_menu_1a77aaa0eb810c74a907165b6a1acec31f" prot="public" virt="virtual"><scope>MainMenu</scope><name>Init</name></member>
+      <member refid="class_menu_1a6005d125bc4b0372bcd6d2719cb9a994" prot="public" virt="non-virtual"><scope>MainMenu</scope><name>menuButtons</name></member>
+      <member refid="class_menu_1a0187883a2d424dadf01b0218d1db7d12" prot="public" virt="non-virtual"><scope>MainMenu</scope><name>menuController</name></member>
+      <member refid="class_menu_1a2737fb42e257221f78c86b9221795255" prot="public" virt="non-virtual"><scope>MainMenu</scope><name>menuSprite</name></member>
+      <member refid="class_menu_1a50e7901f94713c0719e0774474d981c2" prot="protected" virt="non-virtual"><scope>MainMenu</scope><name>OnControllerDownButton</name></member>
+      <member refid="class_menu_1a8bd9fce86817a1125bf7d2e371551689" prot="protected" virt="non-virtual"><scope>MainMenu</scope><name>OnControllerSubmitButton</name></member>
+      <member refid="class_menu_1a8023104df1848b95c94e1c46fba209ca" prot="protected" virt="non-virtual"><scope>MainMenu</scope><name>OnControllerUpButton</name></member>
+      <member refid="class_menu_1a6b8e73974658482814f99b63ecc4d470" prot="protected" virt="non-virtual"><scope>MainMenu</scope><name>OnDownButtonPressed</name></member>
+      <member refid="class_main_menu_1a0fe1a23396381d58448997c5ceb9152f" prot="private" virt="non-virtual"><scope>MainMenu</scope><name>OnExitButtonClicked</name></member>
+      <member refid="class_menu_1a2370ebbed22dfd0c10491bd8ae45b771" prot="protected" virt="virtual"><scope>MainMenu</scope><name>OnMouseButtonPressed</name></member>
+      <member refid="class_main_menu_1aa01367344346478a014600f8bc7450d0" prot="private" virt="non-virtual"><scope>MainMenu</scope><name>OnStartButtonClicked</name></member>
+      <member refid="class_menu_1a98395444d03f38df02fa9c2aed1fb797" prot="protected" virt="non-virtual"><scope>MainMenu</scope><name>OnUpButtonPressed</name></member>
+      <member refid="class_menu_1a78e162d9e5571f0bb3e93c02cc0f76df" prot="protected" virt="non-virtual"><scope>MainMenu</scope><name>PressMenuButton</name></member>
+      <member refid="class_menu_1af29d71473a414e31e914bc637840cb3e" prot="public" virt="virtual"><scope>MainMenu</scope><name>Update</name></member>
+      <member refid="class_menu_1a831387f51358cfb88cd018e1777bc980" prot="public" virt="non-virtual"><scope>MainMenu</scope><name>~Menu</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

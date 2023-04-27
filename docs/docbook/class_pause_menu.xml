@@ -1,0 +1,64 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_pause_menu" xml:lang="en-US">
+<title>PauseMenu Class Reference</title>
+<indexterm><primary>PauseMenu</primary></indexterm>
+<para>
+
+<para>Pause <link linkend="_class_menu">Menu</link> to be used in Pause <link linkend="_namespace_game_state">GameState</link>  </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;PauseMenu.h&gt;</computeroutput>
+</para>
+Inheritance diagram for PauseMenu:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_pause_menu__inherit__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Collaboration diagram for PauseMenu:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_pause_menu__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>virtual void <link linkend="_class_pause_menu_1a029c44778ea655c2762cbddc8941a6f8">Init</link> () override</para>
+
+<para>Initializes the menu  </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Additional Inherited Members    </title>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Pause <link linkend="_class_menu">Menu</link> to be used in Pause <link linkend="_namespace_game_state">GameState</link>  </para>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_pause_menu_1a029c44778ea655c2762cbddc8941a6f8"/><section>
+    <title>Init()</title>
+<indexterm><primary>Init</primary><secondary>PauseMenu</secondary></indexterm>
+<indexterm><primary>PauseMenu</primary><secondary>Init</secondary></indexterm>
+<para><computeroutput>void PauseMenu::Init ( )<computeroutput>[override]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Initializes the menu  </para>
+</para>
+<para>
+Implements <link linkend="_class_menu_1a0c64b7333b29000c8b219d2ebc28c03b">Menu</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following files:</para>
+D:/Uni/CMP208/Hellwatch/build/vs2017/UserInterface/<link linkend="__pause_menu_8h">PauseMenu.h</link>D:/Uni/CMP208/Hellwatch/build/vs2017/UserInterface/<link linkend="__pause_menu_8cpp">PauseMenu.cpp</link></section>
+</section>

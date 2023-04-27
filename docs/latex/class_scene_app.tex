@@ -1,0 +1,319 @@
+\hypertarget{class_scene_app}{}\doxysection{Scene\+App Class Reference}
+\label{class_scene_app}\index{SceneApp@{SceneApp}}
+
+
+{\ttfamily \#include $<$scene\+\_\+app.\+h$>$}
+
+
+
+Inheritance diagram for Scene\+App\+:
+% FIG 0
+
+
+Collaboration diagram for Scene\+App\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_scene_app_a5a29382297d3aa47f437d98a3dd4acdc}{Scene\+App}} (gef\+::\+Platform \&platform)
+\item 
+void \mbox{\hyperlink{class_scene_app_afbc3cd83343839fef53b5fcc2da630e6}{Init}} ()
+\item 
+void \mbox{\hyperlink{class_scene_app_ab815a8823c2248fcebdc7a06867bdb9b}{Clean\+Up}} ()
+\item 
+bool \mbox{\hyperlink{class_scene_app_a48adec081291fea513f516bec9dcb898}{Update}} (float frame\+\_\+time)
+\item 
+void \mbox{\hyperlink{class_scene_app_afd9eebbabf3fe176d9fe30b309c2130c}{Render}} ()
+\item 
+b2\+Body $\ast$ \mbox{\hyperlink{class_scene_app_adcf5fcd2dfcb07d468c0ff4455e45bdd}{Create\+Collision\+Body}} (b2\+Body\+Def body\+Def, b2\+Fixture\+Def fixture\+Def, \mbox{\hyperlink{class_world_object}{World\+Object}} $\ast$owning\+Object)
+\begin{DoxyCompactList}\small\item\em Creates a collision body for a specified object, object can be null if using for things like environment or invisible walls @\+NOTE\+: The owning object will be used to call On\+Collision function  \end{DoxyCompactList}\item 
+\+\_\+\+\_\+forceinline gef\+::\+Renderer3D $\ast$ \mbox{\hyperlink{class_scene_app_ac0999a6034cf97a795506eb75dd3cc7f}{Get\+Renderer3D}} () const
+\item 
+\+\_\+\+\_\+forceinline gef\+::\+Sprite\+Renderer $\ast$ \mbox{\hyperlink{class_scene_app_acfe997c4a66416d0cf25324d47403abb}{Get\+Sprite\+Renderer}} () const
+\item 
+\+\_\+\+\_\+forceinline b2\+World $\ast$ \mbox{\hyperlink{class_scene_app_ad1ff8bd221115d5e081490da02e2f398}{Get\+Box2\+DWorld}} () const
+\item 
+\+\_\+\+\_\+forceinline float \mbox{\hyperlink{class_scene_app_a30039f31aff4d61fdce25d79425892fc}{Get\+Viewport\+Width}} () const
+\item 
+\+\_\+\+\_\+forceinline float \mbox{\hyperlink{class_scene_app_a0fc304ef89214b58b23adf26ec63f6ac}{Get\+Viewport\+Height}} () const
+\item 
+\+\_\+\+\_\+forceinline \mbox{\hyperlink{class_player_character}{Player\+Character}} $\ast$ \mbox{\hyperlink{class_scene_app_a36cc2439051445972f7b29114f3b011b}{Get\+Player\+Character}} () const
+\item 
+\+\_\+\+\_\+forceinline \mbox{\hyperlink{class_primitive_builder}{Primitive\+Builder}} $\ast$ \mbox{\hyperlink{class_scene_app_ad0422232eb1f735a48a20137eb6e953e}{Get\+Primitive\+Builder}} () const
+\item 
+\+\_\+\+\_\+forceinline gef\+::\+Vector4 \mbox{\hyperlink{class_scene_app_aaec63e72c5b04a1f7a63f3ff81b8bdb7}{Get\+Camera\+Eye}} () const
+\item 
+\+\_\+\+\_\+forceinline gef\+::\+Vector4 \mbox{\hyperlink{class_scene_app_ab94350ed26fa0140eaac7060d97db655}{Get\+Camera\+Look\+At}} () const
+\item 
+\+\_\+\+\_\+forceinline float \mbox{\hyperlink{class_scene_app_ab0a3e09a2920c053f50d25ea03132ae7}{Get\+Current\+Game\+Time}} () const
+\item 
+\+\_\+\+\_\+forceinline float \mbox{\hyperlink{class_scene_app_af624c2780cc0b7d913f63f7c4df74030}{Get\+Last\+Delta\+Time}} () const
+\item 
+gef\+::\+Mesh $\ast$ \mbox{\hyperlink{class_scene_app_a6b6984ec718cb9ebad4be261df534cf1}{Request\+Mesh\+By\+Name}} (std\+::string mesh\+Name)
+\item 
+gef\+::\+Texture $\ast$ \mbox{\hyperlink{class_scene_app_ac00c6ac20d92d7e8fd77d341a116e81d}{Request\+Texture\+By\+Name}} (std\+::string texture\+Name)
+\item 
+gef\+::\+Font $\ast$ \mbox{\hyperlink{class_scene_app_a13fa1b28170df85ade3d18e329fbedc7}{Get\+Font}} ()
+\item 
+gef\+::\+Audio\+Manager $\ast$ \mbox{\hyperlink{class_scene_app_a1b8d7ed84a7691d140c0b10d6cc01f7b}{Get\+Audio\+Manager}} ()
+\item 
+const gef\+::\+Vector2 \mbox{\hyperlink{class_scene_app_a2cb299beb00f7fea8f1de7c0cc6ab19b}{Get\+Last\+Touch\+Position}} ()
+\item 
+void \mbox{\hyperlink{class_scene_app_a3bc64bbc203e9cb597f2b47dc69f20e6}{Set\+Game\+State}} (\mbox{\hyperlink{namespace_game_state_aa2df68fe63beaaf10d3154d8eb490fe6}{Game\+State\+::\+Type}} new\+State)
+\item 
+\mbox{\hyperlink{namespace_game_state_aa2df68fe63beaaf10d3154d8eb490fe6}{Game\+State\+::\+Type}} \mbox{\hyperlink{class_scene_app_a3218d41e2d667db80e8fed34b02b6221}{Get\+Game\+State}} () const
+\item 
+const uint32\+\_\+t \mbox{\hyperlink{class_scene_app_ab4f8fc5ac0dc41a16f83089ff782b6f4}{Get\+Player\+Money}} ()
+\item 
+void \mbox{\hyperlink{class_scene_app_aec4d56f9129795aaef4ad8f2a454e302}{Increase\+Player\+Money}} (uint32\+\_\+t increase\+Amount)
+\item 
+void \mbox{\hyperlink{class_scene_app_ac7ebc87268f7eea380099954c5358fd3}{Apply\+Cost\+To\+Player\+Money}} (uint32\+\_\+t cost)
+\item 
+void \mbox{\hyperlink{class_scene_app_a04b16337e0cd4af5f9b38f75ca623f34}{Apply\+Camera\+Shake}} (\mbox{\hyperlink{struct_f_camera_shake}{FCamera\+Shake}} new\+Shake)
+\begin{DoxyCompactList}\small\item\em Applies camera shake @\+NOTE\+: This overwrites the previous camera shake  \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_scene_app_a85782170c9894dfebe3a8045063301c6}{Apply\+Radial\+Damage}} (float damage\+Amount, gef\+::\+Vector4 origin, float inner\+Radius, float outer\+Radius)
+\item 
+void \mbox{\hyperlink{class_scene_app_a942b3809824f430117b26e9a7ad5acf6}{Play\+Sample}} (std\+::string sample\+Name, float pitch=1, bool b\+Is\+Looping=false)
+\item 
+void \mbox{\hyperlink{class_scene_app_a829d6b657cc270002fcf262d57e2f249}{Add\+Pointer\+Location\+Offset}} (gef\+::\+Vector2 offset)
+\item 
+void \mbox{\hyperlink{class_scene_app_ab40943893a61a141c9fb25eec163a1f1}{Set\+Pointer\+Location}} (gef\+::\+Vector2 new\+Location)
+\item 
+{\footnotesize template$<$typename Mesh\+Actor\+Type  = Mesh\+Actor$>$ }\\Mesh\+Actor\+Type $\ast$ \mbox{\hyperlink{class_scene_app_a800b10254ae600ce80c0e69d765e8061}{Spawn\+Mesh\+Actor}} (gef\+::\+Mesh $\ast$mesh=nullptr, gef\+::\+Vector4 translation=gef\+::\+Vector4\+::k\+Zero, gef\+::\+Vector4 rotation=gef\+::\+Vector4\+::k\+Zero, gef\+::\+Vector4 scale=gef\+::\+Vector4\+::k\+One, \mbox{\hyperlink{class_world_object}{World\+Object}} $\ast$owner=nullptr)
+\begin{DoxyCompactList}\small\item\em Spawns a \mbox{\hyperlink{class_mesh_actor}{Mesh\+Actor}} into the scene and gets it ready for rendering and updating  \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Sprite\+Actor\+Type  = Sprite\+Actor$>$ }\\Sprite\+Actor\+Type $\ast$ \mbox{\hyperlink{class_scene_app_ab70d4d12950fa87533727b3fa6e42ee5}{Spawn\+Sprite\+Actor}} (gef\+::\+Sprite $\ast$sprite=nullptr, gef\+::\+Vector4 position=gef\+::\+Vector4\+::k\+Zero, float rotation=0.f, \mbox{\hyperlink{class_world_object}{World\+Object}} $\ast$owner=nullptr)
+\begin{DoxyCompactList}\small\item\em Spawns a \mbox{\hyperlink{class_sprite_actor}{Sprite\+Actor}} into the scene and gets it ready for rendering and updating  \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_scene_app_a5a29382297d3aa47f437d98a3dd4acdc}\label{class_scene_app_a5a29382297d3aa47f437d98a3dd4acdc}} 
+\index{SceneApp@{SceneApp}!SceneApp@{SceneApp}}
+\index{SceneApp@{SceneApp}!SceneApp@{SceneApp}}
+\doxysubsubsection{\texorpdfstring{SceneApp()}{SceneApp()}}
+{\footnotesize\ttfamily Scene\+App\+::\+Scene\+App (\begin{DoxyParamCaption}\item[{gef\+::\+Platform \&}]{platform }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_scene_app_a829d6b657cc270002fcf262d57e2f249}\label{class_scene_app_a829d6b657cc270002fcf262d57e2f249}} 
+\index{SceneApp@{SceneApp}!AddPointerLocationOffset@{AddPointerLocationOffset}}
+\index{AddPointerLocationOffset@{AddPointerLocationOffset}!SceneApp@{SceneApp}}
+\doxysubsubsection{\texorpdfstring{AddPointerLocationOffset()}{AddPointerLocationOffset()}}
+{\footnotesize\ttfamily void Scene\+App\+::\+Add\+Pointer\+Location\+Offset (\begin{DoxyParamCaption}\item[{gef\+::\+Vector2}]{offset }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_scene_app_a04b16337e0cd4af5f9b38f75ca623f34}\label{class_scene_app_a04b16337e0cd4af5f9b38f75ca623f34}} 
+\index{SceneApp@{SceneApp}!ApplyCameraShake@{ApplyCameraShake}}
+\index{ApplyCameraShake@{ApplyCameraShake}!SceneApp@{SceneApp}}
+\doxysubsubsection{\texorpdfstring{ApplyCameraShake()}{ApplyCameraShake()}}
+{\footnotesize\ttfamily void Scene\+App\+::\+Apply\+Camera\+Shake (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_f_camera_shake}{FCamera\+Shake}}}]{new\+Shake }\end{DoxyParamCaption})}
+
+
+
+Applies camera shake @\+NOTE\+: This overwrites the previous camera shake  
+
+\mbox{\Hypertarget{class_scene_app_ac7ebc87268f7eea380099954c5358fd3}\label{class_scene_app_ac7ebc87268f7eea380099954c5358fd3}} 
+\index{SceneApp@{SceneApp}!ApplyCostToPlayerMoney@{ApplyCostToPlayerMoney}}
+\index{ApplyCostToPlayerMoney@{ApplyCostToPlayerMoney}!SceneApp@{SceneApp}}
+\doxysubsubsection{\texorpdfstring{ApplyCostToPlayerMoney()}{ApplyCostToPlayerMoney()}}
+{\footnotesize\ttfamily void Scene\+App\+::\+Apply\+Cost\+To\+Player\+Money (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{cost }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_scene_app_a85782170c9894dfebe3a8045063301c6}\label{class_scene_app_a85782170c9894dfebe3a8045063301c6}} 
+\index{SceneApp@{SceneApp}!ApplyRadialDamage@{ApplyRadialDamage}}
+\index{ApplyRadialDamage@{ApplyRadialDamage}!SceneApp@{SceneApp}}
+\doxysubsubsection{\texorpdfstring{ApplyRadialDamage()}{ApplyRadialDamage()}}
+{\footnotesize\ttfamily void Scene\+App\+::\+Apply\+Radial\+Damage (\begin{DoxyParamCaption}\item[{float}]{damage\+Amount,  }\item[{gef\+::\+Vector4}]{origin,  }\item[{float}]{inner\+Radius,  }\item[{float}]{outer\+Radius }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_scene_app_ab815a8823c2248fcebdc7a06867bdb9b}\label{class_scene_app_ab815a8823c2248fcebdc7a06867bdb9b}} 
+\index{SceneApp@{SceneApp}!CleanUp@{CleanUp}}
+\index{CleanUp@{CleanUp}!SceneApp@{SceneApp}}
+\doxysubsubsection{\texorpdfstring{CleanUp()}{CleanUp()}}
+{\footnotesize\ttfamily void Scene\+App\+::\+Clean\+Up (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_scene_app_adcf5fcd2dfcb07d468c0ff4455e45bdd}\label{class_scene_app_adcf5fcd2dfcb07d468c0ff4455e45bdd}} 
+\index{SceneApp@{SceneApp}!CreateCollisionBody@{CreateCollisionBody}}
+\index{CreateCollisionBody@{CreateCollisionBody}!SceneApp@{SceneApp}}
+\doxysubsubsection{\texorpdfstring{CreateCollisionBody()}{CreateCollisionBody()}}
+{\footnotesize\ttfamily b2\+Body $\ast$ Scene\+App\+::\+Create\+Collision\+Body (\begin{DoxyParamCaption}\item[{b2\+Body\+Def}]{body\+Def,  }\item[{b2\+Fixture\+Def}]{fixture\+Def,  }\item[{\mbox{\hyperlink{class_world_object}{World\+Object}} $\ast$}]{owning\+Object }\end{DoxyParamCaption})}
+
+
+
+Creates a collision body for a specified object, object can be null if using for things like environment or invisible walls @\+NOTE\+: The owning object will be used to call On\+Collision function  
+
+\mbox{\Hypertarget{class_scene_app_a1b8d7ed84a7691d140c0b10d6cc01f7b}\label{class_scene_app_a1b8d7ed84a7691d140c0b10d6cc01f7b}} 
+\index{SceneApp@{SceneApp}!GetAudioManager@{GetAudioManager}}
+\index{GetAudioManager@{GetAudioManager}!SceneApp@{SceneApp}}
+\doxysubsubsection{\texorpdfstring{GetAudioManager()}{GetAudioManager()}}
+{\footnotesize\ttfamily gef\+::\+Audio\+Manager $\ast$ Scene\+App\+::\+Get\+Audio\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_scene_app_ad1ff8bd221115d5e081490da02e2f398}\label{class_scene_app_ad1ff8bd221115d5e081490da02e2f398}} 
+\index{SceneApp@{SceneApp}!GetBox2DWorld@{GetBox2DWorld}}
+\index{GetBox2DWorld@{GetBox2DWorld}!SceneApp@{SceneApp}}
+\doxysubsubsection{\texorpdfstring{GetBox2DWorld()}{GetBox2DWorld()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+forceinline b2\+World $\ast$ Scene\+App\+::\+Get\+Box2\+DWorld (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_scene_app_aaec63e72c5b04a1f7a63f3ff81b8bdb7}\label{class_scene_app_aaec63e72c5b04a1f7a63f3ff81b8bdb7}} 
+\index{SceneApp@{SceneApp}!GetCameraEye@{GetCameraEye}}
+\index{GetCameraEye@{GetCameraEye}!SceneApp@{SceneApp}}
+\doxysubsubsection{\texorpdfstring{GetCameraEye()}{GetCameraEye()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+forceinline gef\+::\+Vector4 Scene\+App\+::\+Get\+Camera\+Eye (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_scene_app_ab94350ed26fa0140eaac7060d97db655}\label{class_scene_app_ab94350ed26fa0140eaac7060d97db655}} 
+\index{SceneApp@{SceneApp}!GetCameraLookAt@{GetCameraLookAt}}
+\index{GetCameraLookAt@{GetCameraLookAt}!SceneApp@{SceneApp}}
+\doxysubsubsection{\texorpdfstring{GetCameraLookAt()}{GetCameraLookAt()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+forceinline gef\+::\+Vector4 Scene\+App\+::\+Get\+Camera\+Look\+At (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_scene_app_ab0a3e09a2920c053f50d25ea03132ae7}\label{class_scene_app_ab0a3e09a2920c053f50d25ea03132ae7}} 
+\index{SceneApp@{SceneApp}!GetCurrentGameTime@{GetCurrentGameTime}}
+\index{GetCurrentGameTime@{GetCurrentGameTime}!SceneApp@{SceneApp}}
+\doxysubsubsection{\texorpdfstring{GetCurrentGameTime()}{GetCurrentGameTime()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+forceinline float Scene\+App\+::\+Get\+Current\+Game\+Time (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_scene_app_a13fa1b28170df85ade3d18e329fbedc7}\label{class_scene_app_a13fa1b28170df85ade3d18e329fbedc7}} 
+\index{SceneApp@{SceneApp}!GetFont@{GetFont}}
+\index{GetFont@{GetFont}!SceneApp@{SceneApp}}
+\doxysubsubsection{\texorpdfstring{GetFont()}{GetFont()}}
+{\footnotesize\ttfamily gef\+::\+Font $\ast$ Scene\+App\+::\+Get\+Font (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_scene_app_a3218d41e2d667db80e8fed34b02b6221}\label{class_scene_app_a3218d41e2d667db80e8fed34b02b6221}} 
+\index{SceneApp@{SceneApp}!GetGameState@{GetGameState}}
+\index{GetGameState@{GetGameState}!SceneApp@{SceneApp}}
+\doxysubsubsection{\texorpdfstring{GetGameState()}{GetGameState()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespace_game_state_aa2df68fe63beaaf10d3154d8eb490fe6}{Game\+State\+::\+Type}} Scene\+App\+::\+Get\+Game\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_scene_app_af624c2780cc0b7d913f63f7c4df74030}\label{class_scene_app_af624c2780cc0b7d913f63f7c4df74030}} 
+\index{SceneApp@{SceneApp}!GetLastDeltaTime@{GetLastDeltaTime}}
+\index{GetLastDeltaTime@{GetLastDeltaTime}!SceneApp@{SceneApp}}
+\doxysubsubsection{\texorpdfstring{GetLastDeltaTime()}{GetLastDeltaTime()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+forceinline float Scene\+App\+::\+Get\+Last\+Delta\+Time (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_scene_app_a2cb299beb00f7fea8f1de7c0cc6ab19b}\label{class_scene_app_a2cb299beb00f7fea8f1de7c0cc6ab19b}} 
+\index{SceneApp@{SceneApp}!GetLastTouchPosition@{GetLastTouchPosition}}
+\index{GetLastTouchPosition@{GetLastTouchPosition}!SceneApp@{SceneApp}}
+\doxysubsubsection{\texorpdfstring{GetLastTouchPosition()}{GetLastTouchPosition()}}
+{\footnotesize\ttfamily const gef\+::\+Vector2 Scene\+App\+::\+Get\+Last\+Touch\+Position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_scene_app_a36cc2439051445972f7b29114f3b011b}\label{class_scene_app_a36cc2439051445972f7b29114f3b011b}} 
+\index{SceneApp@{SceneApp}!GetPlayerCharacter@{GetPlayerCharacter}}
+\index{GetPlayerCharacter@{GetPlayerCharacter}!SceneApp@{SceneApp}}
+\doxysubsubsection{\texorpdfstring{GetPlayerCharacter()}{GetPlayerCharacter()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+forceinline \mbox{\hyperlink{class_player_character}{Player\+Character}} $\ast$ Scene\+App\+::\+Get\+Player\+Character (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_scene_app_ab4f8fc5ac0dc41a16f83089ff782b6f4}\label{class_scene_app_ab4f8fc5ac0dc41a16f83089ff782b6f4}} 
+\index{SceneApp@{SceneApp}!GetPlayerMoney@{GetPlayerMoney}}
+\index{GetPlayerMoney@{GetPlayerMoney}!SceneApp@{SceneApp}}
+\doxysubsubsection{\texorpdfstring{GetPlayerMoney()}{GetPlayerMoney()}}
+{\footnotesize\ttfamily const uint32\+\_\+t Scene\+App\+::\+Get\+Player\+Money (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_scene_app_ad0422232eb1f735a48a20137eb6e953e}\label{class_scene_app_ad0422232eb1f735a48a20137eb6e953e}} 
+\index{SceneApp@{SceneApp}!GetPrimitiveBuilder@{GetPrimitiveBuilder}}
+\index{GetPrimitiveBuilder@{GetPrimitiveBuilder}!SceneApp@{SceneApp}}
+\doxysubsubsection{\texorpdfstring{GetPrimitiveBuilder()}{GetPrimitiveBuilder()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+forceinline \mbox{\hyperlink{class_primitive_builder}{Primitive\+Builder}} $\ast$ Scene\+App\+::\+Get\+Primitive\+Builder (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_scene_app_ac0999a6034cf97a795506eb75dd3cc7f}\label{class_scene_app_ac0999a6034cf97a795506eb75dd3cc7f}} 
+\index{SceneApp@{SceneApp}!GetRenderer3D@{GetRenderer3D}}
+\index{GetRenderer3D@{GetRenderer3D}!SceneApp@{SceneApp}}
+\doxysubsubsection{\texorpdfstring{GetRenderer3D()}{GetRenderer3D()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+forceinline gef\+::\+Renderer3D $\ast$ Scene\+App\+::\+Get\+Renderer3D (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_scene_app_acfe997c4a66416d0cf25324d47403abb}\label{class_scene_app_acfe997c4a66416d0cf25324d47403abb}} 
+\index{SceneApp@{SceneApp}!GetSpriteRenderer@{GetSpriteRenderer}}
+\index{GetSpriteRenderer@{GetSpriteRenderer}!SceneApp@{SceneApp}}
+\doxysubsubsection{\texorpdfstring{GetSpriteRenderer()}{GetSpriteRenderer()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+forceinline gef\+::\+Sprite\+Renderer $\ast$ Scene\+App\+::\+Get\+Sprite\+Renderer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_scene_app_a0fc304ef89214b58b23adf26ec63f6ac}\label{class_scene_app_a0fc304ef89214b58b23adf26ec63f6ac}} 
+\index{SceneApp@{SceneApp}!GetViewportHeight@{GetViewportHeight}}
+\index{GetViewportHeight@{GetViewportHeight}!SceneApp@{SceneApp}}
+\doxysubsubsection{\texorpdfstring{GetViewportHeight()}{GetViewportHeight()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+forceinline float Scene\+App\+::\+Get\+Viewport\+Height (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_scene_app_a30039f31aff4d61fdce25d79425892fc}\label{class_scene_app_a30039f31aff4d61fdce25d79425892fc}} 
+\index{SceneApp@{SceneApp}!GetViewportWidth@{GetViewportWidth}}
+\index{GetViewportWidth@{GetViewportWidth}!SceneApp@{SceneApp}}
+\doxysubsubsection{\texorpdfstring{GetViewportWidth()}{GetViewportWidth()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+forceinline float Scene\+App\+::\+Get\+Viewport\+Width (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_scene_app_aec4d56f9129795aaef4ad8f2a454e302}\label{class_scene_app_aec4d56f9129795aaef4ad8f2a454e302}} 
+\index{SceneApp@{SceneApp}!IncreasePlayerMoney@{IncreasePlayerMoney}}
+\index{IncreasePlayerMoney@{IncreasePlayerMoney}!SceneApp@{SceneApp}}
+\doxysubsubsection{\texorpdfstring{IncreasePlayerMoney()}{IncreasePlayerMoney()}}
+{\footnotesize\ttfamily void Scene\+App\+::\+Increase\+Player\+Money (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{increase\+Amount }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_scene_app_afbc3cd83343839fef53b5fcc2da630e6}\label{class_scene_app_afbc3cd83343839fef53b5fcc2da630e6}} 
+\index{SceneApp@{SceneApp}!Init@{Init}}
+\index{Init@{Init}!SceneApp@{SceneApp}}
+\doxysubsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily void Scene\+App\+::\+Init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_scene_app_a942b3809824f430117b26e9a7ad5acf6}\label{class_scene_app_a942b3809824f430117b26e9a7ad5acf6}} 
+\index{SceneApp@{SceneApp}!PlaySample@{PlaySample}}
+\index{PlaySample@{PlaySample}!SceneApp@{SceneApp}}
+\doxysubsubsection{\texorpdfstring{PlaySample()}{PlaySample()}}
+{\footnotesize\ttfamily void Scene\+App\+::\+Play\+Sample (\begin{DoxyParamCaption}\item[{std\+::string}]{sample\+Name,  }\item[{float}]{pitch = {\ttfamily 1},  }\item[{bool}]{b\+Is\+Looping = {\ttfamily false} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_scene_app_afd9eebbabf3fe176d9fe30b309c2130c}\label{class_scene_app_afd9eebbabf3fe176d9fe30b309c2130c}} 
+\index{SceneApp@{SceneApp}!Render@{Render}}
+\index{Render@{Render}!SceneApp@{SceneApp}}
+\doxysubsubsection{\texorpdfstring{Render()}{Render()}}
+{\footnotesize\ttfamily void Scene\+App\+::\+Render (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_scene_app_a6b6984ec718cb9ebad4be261df534cf1}\label{class_scene_app_a6b6984ec718cb9ebad4be261df534cf1}} 
+\index{SceneApp@{SceneApp}!RequestMeshByName@{RequestMeshByName}}
+\index{RequestMeshByName@{RequestMeshByName}!SceneApp@{SceneApp}}
+\doxysubsubsection{\texorpdfstring{RequestMeshByName()}{RequestMeshByName()}}
+{\footnotesize\ttfamily gef\+::\+Mesh $\ast$ Scene\+App\+::\+Request\+Mesh\+By\+Name (\begin{DoxyParamCaption}\item[{std\+::string}]{mesh\+Name }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_scene_app_ac00c6ac20d92d7e8fd77d341a116e81d}\label{class_scene_app_ac00c6ac20d92d7e8fd77d341a116e81d}} 
+\index{SceneApp@{SceneApp}!RequestTextureByName@{RequestTextureByName}}
+\index{RequestTextureByName@{RequestTextureByName}!SceneApp@{SceneApp}}
+\doxysubsubsection{\texorpdfstring{RequestTextureByName()}{RequestTextureByName()}}
+{\footnotesize\ttfamily gef\+::\+Texture $\ast$ Scene\+App\+::\+Request\+Texture\+By\+Name (\begin{DoxyParamCaption}\item[{std\+::string}]{texture\+Name }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_scene_app_a3bc64bbc203e9cb597f2b47dc69f20e6}\label{class_scene_app_a3bc64bbc203e9cb597f2b47dc69f20e6}} 
+\index{SceneApp@{SceneApp}!SetGameState@{SetGameState}}
+\index{SetGameState@{SetGameState}!SceneApp@{SceneApp}}
+\doxysubsubsection{\texorpdfstring{SetGameState()}{SetGameState()}}
+{\footnotesize\ttfamily void Scene\+App\+::\+Set\+Game\+State (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespace_game_state_aa2df68fe63beaaf10d3154d8eb490fe6}{Game\+State\+::\+Type}}}]{new\+State }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_scene_app_ab40943893a61a141c9fb25eec163a1f1}\label{class_scene_app_ab40943893a61a141c9fb25eec163a1f1}} 
+\index{SceneApp@{SceneApp}!SetPointerLocation@{SetPointerLocation}}
+\index{SetPointerLocation@{SetPointerLocation}!SceneApp@{SceneApp}}
+\doxysubsubsection{\texorpdfstring{SetPointerLocation()}{SetPointerLocation()}}
+{\footnotesize\ttfamily void Scene\+App\+::\+Set\+Pointer\+Location (\begin{DoxyParamCaption}\item[{gef\+::\+Vector2}]{new\+Location }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_scene_app_a800b10254ae600ce80c0e69d765e8061}\label{class_scene_app_a800b10254ae600ce80c0e69d765e8061}} 
+\index{SceneApp@{SceneApp}!SpawnMeshActor@{SpawnMeshActor}}
+\index{SpawnMeshActor@{SpawnMeshActor}!SceneApp@{SceneApp}}
+\doxysubsubsection{\texorpdfstring{SpawnMeshActor()}{SpawnMeshActor()}}
+{\footnotesize\ttfamily template$<$typename Mesh\+Actor\+Type  = Mesh\+Actor$>$ \\
+Mesh\+Actor\+Type $\ast$ Scene\+App\+::\+Spawn\+Mesh\+Actor (\begin{DoxyParamCaption}\item[{gef\+::\+Mesh $\ast$}]{mesh = {\ttfamily nullptr},  }\item[{gef\+::\+Vector4}]{translation = {\ttfamily gef\+:\+:Vector4\+:\+:kZero},  }\item[{gef\+::\+Vector4}]{rotation = {\ttfamily gef\+:\+:Vector4\+:\+:kZero},  }\item[{gef\+::\+Vector4}]{scale = {\ttfamily gef\+:\+:Vector4\+:\+:kOne},  }\item[{\mbox{\hyperlink{class_world_object}{World\+Object}} $\ast$}]{owner = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Spawns a \mbox{\hyperlink{class_mesh_actor}{Mesh\+Actor}} into the scene and gets it ready for rendering and updating  
+
+\mbox{\Hypertarget{class_scene_app_ab70d4d12950fa87533727b3fa6e42ee5}\label{class_scene_app_ab70d4d12950fa87533727b3fa6e42ee5}} 
+\index{SceneApp@{SceneApp}!SpawnSpriteActor@{SpawnSpriteActor}}
+\index{SpawnSpriteActor@{SpawnSpriteActor}!SceneApp@{SceneApp}}
+\doxysubsubsection{\texorpdfstring{SpawnSpriteActor()}{SpawnSpriteActor()}}
+{\footnotesize\ttfamily template$<$typename Sprite\+Actor\+Type  = Sprite\+Actor$>$ \\
+Sprite\+Actor\+Type $\ast$ Scene\+App\+::\+Spawn\+Sprite\+Actor (\begin{DoxyParamCaption}\item[{gef\+::\+Sprite $\ast$}]{sprite = {\ttfamily nullptr},  }\item[{gef\+::\+Vector4}]{position = {\ttfamily gef\+:\+:Vector4\+:\+:kZero},  }\item[{float}]{rotation = {\ttfamily 0.f},  }\item[{\mbox{\hyperlink{class_world_object}{World\+Object}} $\ast$}]{owner = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Spawns a \mbox{\hyperlink{class_sprite_actor}{Sprite\+Actor}} into the scene and gets it ready for rendering and updating  
+
+\mbox{\Hypertarget{class_scene_app_a48adec081291fea513f516bec9dcb898}\label{class_scene_app_a48adec081291fea513f516bec9dcb898}} 
+\index{SceneApp@{SceneApp}!Update@{Update}}
+\index{Update@{Update}!SceneApp@{SceneApp}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily bool Scene\+App\+::\+Update (\begin{DoxyParamCaption}\item[{float}]{frame\+\_\+time }\end{DoxyParamCaption})}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Uni/\+CMP208/\+Hellwatch/\mbox{\hyperlink{scene__app_8h}{scene\+\_\+app.\+h}}\item 
+D\+:/\+Uni/\+CMP208/\+Hellwatch/\mbox{\hyperlink{scene__app_8cpp}{scene\+\_\+app.\+cpp}}\end{DoxyCompactItemize}

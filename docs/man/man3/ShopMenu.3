@@ -1,0 +1,71 @@
+.TH "ShopMenu" 3 "Thu Apr 27 2023" "Hellwatch" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ShopMenu \- Shop menu to be used in Shop \fBGameState\fP   
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <ShopMenu\&.h>\fP
+.PP
+Inherits \fBMenu\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "virtual void \fBInit\fP ()"
+.br
+.RI "Initializes the menu  "
+.ti -1c
+.RI "virtual void \fBUpdate\fP () override"
+.br
+.RI "Updates the controller of the menu and checks for highlights  "
+.ti -1c
+.RI "virtual void \fBDrawMenuHUD\fP (gef::Font *font_, gef::SpriteRenderer *sprite_renderer_) override"
+.br
+.RI "Draws the menu HUD  "
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "virtual void \fBOnMouseButtonPressed\fP (gef::Vector2 mousePos)"
+.br
+.RI "When the player presses the mouse button, checks if the mouse is over any buttons and if it is, it activates it  "
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+Shop menu to be used in Shop \fBGameState\fP  
+.SH "Member Function Documentation"
+.PP 
+.SS "void ShopMenu::DrawMenuHUD (gef::Font * font_, gef::SpriteRenderer * sprite_renderer_)\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+Draws the menu HUD  
+.PP
+Reimplemented from \fBMenu\fP\&.
+.SS "void ShopMenu::Init ()\fC [virtual]\fP"
+
+.PP
+Initializes the menu  
+.PP
+Implements \fBMenu\fP\&.
+.SS "void ShopMenu::OnMouseButtonPressed (gef::Vector2 mousePos)\fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+When the player presses the mouse button, checks if the mouse is over any buttons and if it is, it activates it  
+.PP
+Reimplemented from \fBMenu\fP\&.
+.SS "void ShopMenu::Update ()\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+Updates the controller of the menu and checks for highlights  
+.PP
+Reimplemented from \fBMenu\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Hellwatch from the source code\&.

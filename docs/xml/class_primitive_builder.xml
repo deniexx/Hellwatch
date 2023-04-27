@@ -1,0 +1,409 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="class_primitive_builder" kind="class" language="C++" prot="public">
+    <compoundname>PrimitiveBuilder</compoundname>
+    <includes refid="primitive__builder_8h" local="no">primitive_builder.h</includes>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="class_primitive_builder_1a6bfbd619adebd14a9fe02b68521e279d" prot="protected" static="no" mutable="no">
+        <type>gef::Platform &amp;</type>
+        <definition>gef::Platform&amp; PrimitiveBuilder::platform_</definition>
+        <argsstring></argsstring>
+        <name>platform_</name>
+        <qualifiedname>PrimitiveBuilder::platform_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/primitive_builder.h" line="80" column="15" bodyfile="D:/Uni/CMP208/Hellwatch/primitive_builder.h" bodystart="80" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_primitive_builder_1aa3205470b24e5273efb50e359a547b23" prot="protected" static="no" mutable="no">
+        <type>gef::Mesh *</type>
+        <definition>gef::Mesh* PrimitiveBuilder::default_cube_mesh_</definition>
+        <argsstring></argsstring>
+        <name>default_cube_mesh_</name>
+        <qualifiedname>PrimitiveBuilder::default_cube_mesh_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/primitive_builder.h" line="82" column="11" bodyfile="D:/Uni/CMP208/Hellwatch/primitive_builder.h" bodystart="82" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_primitive_builder_1aa3179d29464e6f9f0b84d59bcea6f3d1" prot="protected" static="no" mutable="no">
+        <type>gef::Mesh *</type>
+        <definition>gef::Mesh* PrimitiveBuilder::default_sphere_mesh_</definition>
+        <argsstring></argsstring>
+        <name>default_sphere_mesh_</name>
+        <qualifiedname>PrimitiveBuilder::default_sphere_mesh_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/primitive_builder.h" line="83" column="11" bodyfile="D:/Uni/CMP208/Hellwatch/primitive_builder.h" bodystart="83" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_primitive_builder_1a7757d609903f9cff6a9bd7f1a239fe27" prot="protected" static="no" mutable="no">
+        <type>gef::Material</type>
+        <definition>gef::Material PrimitiveBuilder::red_material_</definition>
+        <argsstring></argsstring>
+        <name>red_material_</name>
+        <qualifiedname>PrimitiveBuilder::red_material_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/primitive_builder.h" line="85" column="15" bodyfile="D:/Uni/CMP208/Hellwatch/primitive_builder.h" bodystart="85" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_primitive_builder_1a72a6196f7dc9bba9f3887c9a5fe0e485" prot="protected" static="no" mutable="no">
+        <type>gef::Material</type>
+        <definition>gef::Material PrimitiveBuilder::blue_material_</definition>
+        <argsstring></argsstring>
+        <name>blue_material_</name>
+        <qualifiedname>PrimitiveBuilder::blue_material_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/primitive_builder.h" line="86" column="15" bodyfile="D:/Uni/CMP208/Hellwatch/primitive_builder.h" bodystart="86" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_primitive_builder_1a0c4022f7c66fb130f59d9d2e1c9aee31" prot="protected" static="no" mutable="no">
+        <type>gef::Material</type>
+        <definition>gef::Material PrimitiveBuilder::green_material_</definition>
+        <argsstring></argsstring>
+        <name>green_material_</name>
+        <qualifiedname>PrimitiveBuilder::green_material_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/primitive_builder.h" line="87" column="15" bodyfile="D:/Uni/CMP208/Hellwatch/primitive_builder.h" bodystart="87" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_primitive_builder_1a6384d138d3c7193b9791959801d882d1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>PrimitiveBuilder::PrimitiveBuilder</definition>
+        <argsstring>(gef::Platform &amp;platform)</argsstring>
+        <name>PrimitiveBuilder</name>
+        <qualifiedname>PrimitiveBuilder::PrimitiveBuilder</qualifiedname>
+        <param>
+          <type>gef::Platform &amp;</type>
+          <declname>platform</declname>
+        </param>
+        <briefdescription>
+<para>Constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">platform</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The platform the primitive builder is being created on. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/primitive_builder.h" line="19" column="1" bodyfile="D:/Uni/CMP208/Hellwatch/primitive_builder.cpp" bodystart="13" bodyend="19"/>
+      </memberdef>
+      <memberdef kind="function" id="class_primitive_builder_1a70ac6a74c6a3fe209cabf315b0f7bf4d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>PrimitiveBuilder::~PrimitiveBuilder</definition>
+        <argsstring>()</argsstring>
+        <name>~PrimitiveBuilder</name>
+        <qualifiedname>PrimitiveBuilder::~PrimitiveBuilder</qualifiedname>
+        <briefdescription>
+<para>Default destructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/primitive_builder.h" line="22" column="1" bodyfile="D:/Uni/CMP208/Hellwatch/primitive_builder.cpp" bodystart="24" bodyend="27"/>
+      </memberdef>
+      <memberdef kind="function" id="class_primitive_builder_1a1b4b6db65689d27a2bc3cad69803b079" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PrimitiveBuilder::Init</definition>
+        <argsstring>()</argsstring>
+        <name>Init</name>
+        <qualifiedname>PrimitiveBuilder::Init</qualifiedname>
+        <briefdescription>
+<para>Initialises the primitive builder. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/primitive_builder.h" line="25" column="6" bodyfile="D:/Uni/CMP208/Hellwatch/primitive_builder.cpp" bodystart="32" bodyend="42"/>
+      </memberdef>
+      <memberdef kind="function" id="class_primitive_builder_1aed9655474f22afaa00ff015c454bd736" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PrimitiveBuilder::CleanUp</definition>
+        <argsstring>()</argsstring>
+        <name>CleanUp</name>
+        <qualifiedname>PrimitiveBuilder::CleanUp</qualifiedname>
+        <briefdescription>
+<para>Clean up resources created by the primitive builder. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/primitive_builder.h" line="28" column="6" bodyfile="D:/Uni/CMP208/Hellwatch/primitive_builder.cpp" bodystart="47" bodyend="54"/>
+      </memberdef>
+      <memberdef kind="function" id="class_primitive_builder_1af92fb7ac1b3d5c32243e28dbd71691da" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>gef::Mesh *</type>
+        <definition>gef::Mesh * PrimitiveBuilder::CreateBoxMesh</definition>
+        <argsstring>(const gef::Vector4 &amp;half_size, gef::Vector4 centre=gef::Vector4(0.0f, 0.0f, 0.0f), gef::Material **materials=NULL)</argsstring>
+        <name>CreateBoxMesh</name>
+        <qualifiedname>PrimitiveBuilder::CreateBoxMesh</qualifiedname>
+        <param>
+          <type>const gef::Vector4 &amp;</type>
+          <declname>half_size</declname>
+        </param>
+        <param>
+          <type>gef::Vector4</type>
+          <declname>centre</declname>
+          <defval>gef::Vector4(0.0f, 0.0f, 0.0f)</defval>
+        </param>
+        <param>
+          <type>gef::Material **</type>
+          <declname>materials</declname>
+          <defval>NULL</defval>
+        </param>
+        <briefdescription>
+<para>Creates a box shaped mesh. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The mesh created </para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">half_size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The half size of the box. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">centre</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The centre of the box. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">materials</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>an array of Material pointers. One for each face. 6 in total. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/primitive_builder.h" line="35" column="11" bodyfile="D:/Uni/CMP208/Hellwatch/primitive_builder.cpp" bodystart="59" bodyend="168"/>
+      </memberdef>
+      <memberdef kind="function" id="class_primitive_builder_1a5f05e266f6b78f97ac03abfda1a6d44e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>gef::Mesh *</type>
+        <definition>gef::Mesh * PrimitiveBuilder::CreateSphereMesh</definition>
+        <argsstring>(const float radius, const int phi, const int theta, gef::Vector4 centre=gef::Vector4(0.0f, 0.0f, 0.0f), gef::Material *material=NULL)</argsstring>
+        <name>CreateSphereMesh</name>
+        <qualifiedname>PrimitiveBuilder::CreateSphereMesh</qualifiedname>
+        <param>
+          <type>const float</type>
+          <declname>radius</declname>
+        </param>
+        <param>
+          <type>const int</type>
+          <declname>phi</declname>
+        </param>
+        <param>
+          <type>const int</type>
+          <declname>theta</declname>
+        </param>
+        <param>
+          <type>gef::Vector4</type>
+          <declname>centre</declname>
+          <defval>gef::Vector4(0.0f, 0.0f, 0.0f)</defval>
+        </param>
+        <param>
+          <type>gef::Material *</type>
+          <declname>material</declname>
+          <defval>NULL</defval>
+        </param>
+        <briefdescription>
+<para>Creates a sphere shaped mesh. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The mesh created </para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">radius</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The radius of the sphere. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">centre</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The centre of the centre. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">materials</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to material used to render all faces. NULL is valid. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/primitive_builder.h" line="43" column="11" bodyfile="D:/Uni/CMP208/Hellwatch/primitive_builder.cpp" bodystart="187" bodyend="319"/>
+      </memberdef>
+      <memberdef kind="function" id="class_primitive_builder_1a0b7bbc2b5dae0e538e5a7da02e99743a" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const gef::Mesh *</type>
+        <definition>const gef::Mesh * PrimitiveBuilder::GetDefaultCubeMesh</definition>
+        <argsstring>() const</argsstring>
+        <name>GetDefaultCubeMesh</name>
+        <qualifiedname>PrimitiveBuilder::GetDefaultCubeMesh</qualifiedname>
+        <briefdescription>
+<para>Get the default cube mesh. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The mesh for the default cube. </para>
+</simplesect>
+<simplesect kind="note"><para>The default cube has dimensions 1 x 1 x 1 with the centre at 0, 0, 0. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/primitive_builder.h" line="49" column="24" bodyfile="D:/Uni/CMP208/Hellwatch/primitive_builder.h" bodystart="49" bodyend="51"/>
+      </memberdef>
+      <memberdef kind="function" id="class_primitive_builder_1a50a4fb54f668bbe3b43940c64529b195" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const gef::Mesh *</type>
+        <definition>const gef::Mesh * PrimitiveBuilder::GetDefaultSphereMesh</definition>
+        <argsstring>() const</argsstring>
+        <name>GetDefaultSphereMesh</name>
+        <qualifiedname>PrimitiveBuilder::GetDefaultSphereMesh</qualifiedname>
+        <briefdescription>
+<para>Get the default sphere mesh. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The mesh for the default cube. </para>
+</simplesect>
+<simplesect kind="note"><para>The default sphere has radius 0.5 with the centre at 0, 0, 0. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/primitive_builder.h" line="56" column="24" bodyfile="D:/Uni/CMP208/Hellwatch/primitive_builder.h" bodystart="56" bodyend="58"/>
+      </memberdef>
+      <memberdef kind="function" id="class_primitive_builder_1aa5daad54593016deff15e0f172df5815" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const gef::Material &amp;</type>
+        <definition>const gef::Material &amp; PrimitiveBuilder::red_material</definition>
+        <argsstring>() const</argsstring>
+        <name>red_material</name>
+        <qualifiedname>PrimitiveBuilder::red_material</qualifiedname>
+        <briefdescription>
+<para>Get the red material. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The reference to the red material. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/primitive_builder.h" line="63" column="28" bodyfile="D:/Uni/CMP208/Hellwatch/primitive_builder.h" bodystart="63" bodyend="65"/>
+      </memberdef>
+      <memberdef kind="function" id="class_primitive_builder_1a0b9b7e23d8d653d949da7da85b5b51b0" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const gef::Material &amp;</type>
+        <definition>const gef::Material &amp; PrimitiveBuilder::green_material</definition>
+        <argsstring>() const</argsstring>
+        <name>green_material</name>
+        <qualifiedname>PrimitiveBuilder::green_material</qualifiedname>
+        <briefdescription>
+<para>Get the red material. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The reference to the green material. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/primitive_builder.h" line="69" column="28" bodyfile="D:/Uni/CMP208/Hellwatch/primitive_builder.h" bodystart="69" bodyend="71"/>
+      </memberdef>
+      <memberdef kind="function" id="class_primitive_builder_1a1cc3cb55ef97d82a1ad402e937f2e449" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const gef::Material &amp;</type>
+        <definition>const gef::Material &amp; PrimitiveBuilder::blue_material</definition>
+        <argsstring>() const</argsstring>
+        <name>blue_material</name>
+        <qualifiedname>PrimitiveBuilder::blue_material</qualifiedname>
+        <briefdescription>
+<para>Get the blue material. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The reference to the blue material. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/primitive_builder.h" line="75" column="28" bodyfile="D:/Uni/CMP208/Hellwatch/primitive_builder.h" bodystart="75" bodyend="77"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/Uni/CMP208/Hellwatch/primitive_builder.h" line="14" column="1" bodyfile="D:/Uni/CMP208/Hellwatch/primitive_builder.h" bodystart="15" bodyend="88"/>
+    <listofallmembers>
+      <member refid="class_primitive_builder_1a1cc3cb55ef97d82a1ad402e937f2e449" prot="public" virt="non-virtual"><scope>PrimitiveBuilder</scope><name>blue_material</name></member>
+      <member refid="class_primitive_builder_1a72a6196f7dc9bba9f3887c9a5fe0e485" prot="protected" virt="non-virtual"><scope>PrimitiveBuilder</scope><name>blue_material_</name></member>
+      <member refid="class_primitive_builder_1aed9655474f22afaa00ff015c454bd736" prot="public" virt="non-virtual"><scope>PrimitiveBuilder</scope><name>CleanUp</name></member>
+      <member refid="class_primitive_builder_1af92fb7ac1b3d5c32243e28dbd71691da" prot="public" virt="non-virtual"><scope>PrimitiveBuilder</scope><name>CreateBoxMesh</name></member>
+      <member refid="class_primitive_builder_1a5f05e266f6b78f97ac03abfda1a6d44e" prot="public" virt="non-virtual"><scope>PrimitiveBuilder</scope><name>CreateSphereMesh</name></member>
+      <member refid="class_primitive_builder_1aa3205470b24e5273efb50e359a547b23" prot="protected" virt="non-virtual"><scope>PrimitiveBuilder</scope><name>default_cube_mesh_</name></member>
+      <member refid="class_primitive_builder_1aa3179d29464e6f9f0b84d59bcea6f3d1" prot="protected" virt="non-virtual"><scope>PrimitiveBuilder</scope><name>default_sphere_mesh_</name></member>
+      <member refid="class_primitive_builder_1a0b7bbc2b5dae0e538e5a7da02e99743a" prot="public" virt="non-virtual"><scope>PrimitiveBuilder</scope><name>GetDefaultCubeMesh</name></member>
+      <member refid="class_primitive_builder_1a50a4fb54f668bbe3b43940c64529b195" prot="public" virt="non-virtual"><scope>PrimitiveBuilder</scope><name>GetDefaultSphereMesh</name></member>
+      <member refid="class_primitive_builder_1a0b9b7e23d8d653d949da7da85b5b51b0" prot="public" virt="non-virtual"><scope>PrimitiveBuilder</scope><name>green_material</name></member>
+      <member refid="class_primitive_builder_1a0c4022f7c66fb130f59d9d2e1c9aee31" prot="protected" virt="non-virtual"><scope>PrimitiveBuilder</scope><name>green_material_</name></member>
+      <member refid="class_primitive_builder_1a1b4b6db65689d27a2bc3cad69803b079" prot="public" virt="non-virtual"><scope>PrimitiveBuilder</scope><name>Init</name></member>
+      <member refid="class_primitive_builder_1a6bfbd619adebd14a9fe02b68521e279d" prot="protected" virt="non-virtual"><scope>PrimitiveBuilder</scope><name>platform_</name></member>
+      <member refid="class_primitive_builder_1a6384d138d3c7193b9791959801d882d1" prot="public" virt="non-virtual"><scope>PrimitiveBuilder</scope><name>PrimitiveBuilder</name></member>
+      <member refid="class_primitive_builder_1aa5daad54593016deff15e0f172df5815" prot="public" virt="non-virtual"><scope>PrimitiveBuilder</scope><name>red_material</name></member>
+      <member refid="class_primitive_builder_1a7757d609903f9cff6a9bd7f1a239fe27" prot="protected" virt="non-virtual"><scope>PrimitiveBuilder</scope><name>red_material_</name></member>
+      <member refid="class_primitive_builder_1a70ac6a74c6a3fe209cabf315b0f7bf4d" prot="public" virt="non-virtual"><scope>PrimitiveBuilder</scope><name>~PrimitiveBuilder</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

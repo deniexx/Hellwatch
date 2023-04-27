@@ -1,0 +1,104 @@
+.TH "MeteorActor" 3 "Thu Apr 27 2023" "Hellwatch" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+MeteorActor
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <MeteorActor\&.h>\fP
+.PP
+Inherits \fBMeshActor\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBSetDamageAmount\fP (float newAmount)"
+.br
+.RI "Sets the damage amount  "
+.ti -1c
+.RI "void \fBSetApplyDamageOn\fP (\fBApplyDamageOn::Type\fP newState)"
+.br
+.RI "Sets to what we should apply damage  "
+.ti -1c
+.RI "void \fBSetSpinning\fP (bool bNewState)"
+.br
+.RI "Specifies whether the actor should spin while moving @NOTE: This does not change the movement direction  "
+.ti -1c
+.RI "virtual void \fBUpdate\fP (float deltaTime) override"
+.br
+.RI "Update function, called every frame  "
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "gef::Vector4 \fBstartPosition\fP"
+.br
+.ti -1c
+.RI "gef::Vector4 \fBtargetPosition\fP"
+.br
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBApplyDamageOn::Type\fP \fBapplyDamageOn\fP = \fBApplyDamageOn::EnemiesOnly\fP"
+.br
+.ti -1c
+.RI "bool \fBbSpinning\fP = false"
+.br
+.ti -1c
+.RI "float \fBdamageAmount\fP = 0\&.f"
+.br
+.ti -1c
+.RI "float \fBlerpAlpha\fP = 0\&.f"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Member Function Documentation"
+.PP 
+.SS "void MeteorActor::SetApplyDamageOn (\fBApplyDamageOn::Type\fP newState)\fC [inline]\fP"
+
+.PP
+Sets to what we should apply damage  
+.SS "void MeteorActor::SetDamageAmount (float newAmount)\fC [inline]\fP"
+
+.PP
+Sets the damage amount  
+.SS "void MeteorActor::SetSpinning (bool bNewState)\fC [inline]\fP"
+
+.PP
+Specifies whether the actor should spin while moving @NOTE: This does not change the movement direction  
+.SS "void MeteorActor::Update (float deltaTime)\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+Update function, called every frame  
+.PP
+\fBParameters\fP
+.RS 4
+\fIdeltaTime\fP Float variable for the frame time
+.RE
+.PP
+
+.PP
+Reimplemented from \fBMeshActor\fP\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBApplyDamageOn::Type\fP MeteorActor::applyDamageOn = \fBApplyDamageOn::EnemiesOnly\fP\fC [protected]\fP"
+
+.SS "bool MeteorActor::bSpinning = false\fC [protected]\fP"
+
+.SS "float MeteorActor::damageAmount = 0\&.f\fC [protected]\fP"
+
+.SS "float MeteorActor::lerpAlpha = 0\&.f\fC [protected]\fP"
+
+.SS "gef::Vector4 MeteorActor::startPosition"
+
+.SS "gef::Vector4 MeteorActor::targetPosition"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Hellwatch from the source code\&.

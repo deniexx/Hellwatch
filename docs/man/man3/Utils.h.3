@@ -1,0 +1,110 @@
+.TH "D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/Utils.h" 3 "Thu Apr 27 2023" "Hellwatch" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/Utils.h
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'maths/Vector2\&.h'\fP
+.br
+\fC#include 'maths/vector4\&.h'\fP
+.br
+\fC#include 'maths/matrix44\&.h'\fP
+.br
+\fC#include <graphics/renderer_3d\&.h>\fP
+.br
+\fC#include <scene_app\&.h>\fP
+.br
+\fC#include 'maths/math_utils\&.h'\fP
+.br
+
+.SS "Namespaces"
+
+.in +1c
+.ti -1c
+.RI "namespace \fBApplyDamageOn\fP"
+.br
+.RI "Enum used to decided on what to apply damage  "
+.in -1c
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBNO_ID\fP   0"
+.br
+.ti -1c
+.RI "#define \fBPLAYER_ID\fP   1"
+.br
+.ti -1c
+.RI "#define \fBENEMY_ID\fP   2"
+.br
+.ti -1c
+.RI "#define \fBENVIRONMENT_ID\fP   3"
+.br
+.ti -1c
+.RI "#define \fBPI\fP   3\&.14159265358979323846"
+.br
+.ti -1c
+.RI "#define \fBGENERATED_BODY\fP(ParentClass,  CurrentClass)"
+.br
+.ti -1c
+.RI "#define \fBbindFunc\fP(funcName)   [this]() { funcName(); }"
+.br
+.ti -1c
+.RI "#define \fBbindFunc_ONEParam\fP(funcName,  paramType,  paramName)   [this](paramType paramName) { funcName(paramName); }"
+.br
+.ti -1c
+.RI "#define \fBbindFunc_TWOParams\fP(funcName,  paramType1,  paramName1,  paramType2,  paramName2)   [this](paramType1 paramName1, paramType2 paramName2) { funcName(paramName1, paramName2); }"
+.br
+.ti -1c
+.RI "#define \fBbindFunc_THREEParam\fP(funcName,  paramType1,  paramName1,  paramType2,  paramName2,  paramType3,  paramName3)   [this](paramType1 paramName1, paramType2 paramName2, paramType3 paramName3) { funcName(paramName1, paramName2, paramName3); }"
+.br
+.ti -1c
+.RI "#define \fBbindFunc_FOURParams\fP(funcName,  paramType1,  paramName1,  paramType2,  paramName2,  paramType3,  paramName3,  paramType4,  paramName4)   [this](paramType1 paramName1, paramType2 paramName2, paramType3 paramName3, paramType4 paramName4) { funcName(paramName1, paramName2, paramName3, paramName4); }"
+.br
+.ti -1c
+.RI "#define \fBbindFunc_FIVEParams\fP(funcName,  paramType1,  paramName1,  paramType2,  paramName2,  paramType3,  paramName3,  paramType4,  paramName4,  paramType5,  paramName5)   [this](paramType1 paramName1, paramType2 paramName2, paramType3 paramName3, paramType4 paramName4, paramName5 paramName5) { funcName(paramName1, paramName2, paramName3, paramName4, paramName5); }"
+.br
+.in -1c
+.SS "Enumerations"
+
+.in +1c
+.ti -1c
+.RI "enum \fBApplyDamageOn::Type\fP { \fBApplyDamageOn::EnemiesOnly\fP, \fBApplyDamageOn::PlayerOnly\fP, \fBApplyDamageOn::EnemiesAndPlayer\fP }"
+.br
+.in -1c
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define bindFunc(funcName)   [this]() { funcName(); }"
+
+.SS "#define bindFunc_FIVEParams(funcName, paramType1, paramName1, paramType2, paramName2, paramType3, paramName3, paramType4, paramName4, paramType5, paramName5)   [this](paramType1 paramName1, paramType2 paramName2, paramType3 paramName3, paramType4 paramName4, paramName5 paramName5) { funcName(paramName1, paramName2, paramName3, paramName4, paramName5); }"
+
+.SS "#define bindFunc_FOURParams(funcName, paramType1, paramName1, paramType2, paramName2, paramType3, paramName3, paramType4, paramName4)   [this](paramType1 paramName1, paramType2 paramName2, paramType3 paramName3, paramType4 paramName4) { funcName(paramName1, paramName2, paramName3, paramName4); }"
+
+.SS "#define bindFunc_ONEParam(funcName, paramType, paramName)   [this](paramType paramName) { funcName(paramName); }"
+
+.SS "#define bindFunc_THREEParam(funcName, paramType1, paramName1, paramType2, paramName2, paramType3, paramName3)   [this](paramType1 paramName1, paramType2 paramName2, paramType3 paramName3) { funcName(paramName1, paramName2, paramName3); }"
+
+.SS "#define bindFunc_TWOParams(funcName, paramType1, paramName1, paramType2, paramName2)   [this](paramType1 paramName1, paramType2 paramName2) { funcName(paramName1, paramName2); }"
+
+.SS "#define ENEMY_ID   2"
+
+.SS "#define ENVIRONMENT_ID   3"
+
+.SS "#define GENERATED_BODY(ParentClass, CurrentClass)"
+\fBValue:\fP
+.PP
+.nf
+                                 typedef ::ParentClass Super; \
+                                    typedef CurrentClass ThisClass;
+.fi
+.SS "#define NO_ID   0"
+
+.SS "#define PI   3\&.14159265358979323846"
+
+.SS "#define PLAYER_ID   1"
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Hellwatch from the source code\&.

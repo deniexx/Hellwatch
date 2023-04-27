@@ -1,0 +1,474 @@
+\hypertarget{class_ability}{}\doxysection{Ability Class Reference}
+\label{class_ability}\index{Ability@{Ability}}
+
+
+A base ability class, designed to be inherited and provided with functionality   
+
+
+
+
+{\ttfamily \#include $<$Ability.\+h$>$}
+
+
+
+Inheritance diagram for Ability\+:
+% FIG 0
+
+
+Collaboration diagram for Ability\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_ability_a1e03282d1a96232143322ef89fcbb314}{Ability}} ()
+\item 
+void \mbox{\hyperlink{class_ability_a291796c5cb356bcef9c6f6c0b2386ca2}{Init}} (\mbox{\hyperlink{class_abilities_component}{Abilities\+Component}} $\ast$in\+Owning\+Component)
+\begin{DoxyCompactList}\small\item\em Initializes the ability with the ability component  \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_ability_aaa83dbb12f79ceecc4d7b1cb3930d3d3}{Update}} (float delta\+Time)
+\item 
+\mbox{\hyperlink{struct_activation_outcome}{Activation\+Outcome}} \mbox{\hyperlink{class_ability_a7815198848a6acf69bf1d76caf595820}{Try\+Activate}} ()
+\begin{DoxyCompactList}\small\item\em Attempts to activate this ability, returns an \mbox{\hyperlink{struct_activation_outcome}{Activation\+Outcome}} struct  \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_ability_a52f7aee4243f1da13b544a038892e43b}{Commit\+Ability}} ()
+\begin{DoxyCompactList}\small\item\em Attempts to commit the ability if it is targeted, does nothing if the ability is NOT targeted  \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_ability_ad7290141bc73d865773ac54477db7fb6}{End\+Ability}} ()
+\begin{DoxyCompactList}\small\item\em Attempts to end the ability, returns a bool whether it was successful  \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_ability_a13aa60092026728b42ade2811168c087}{Set\+Activation\+Key}} (\mbox{\hyperlink{namespace_ability_activation_key_ab159d3c3f26196a9ff493b67ecf7e68c}{Ability\+Activation\+Key\+::\+Type}} key)
+\item 
+void \mbox{\hyperlink{class_ability_a83e04cf64b10504ee3bc1cd10ad7219c}{Set\+Ability\+Cost\+Amount}} (float new\+Cost)
+\item 
+void \mbox{\hyperlink{class_ability_a36391efa24d0da869f43e4ba592241c8}{Set\+Ability\+Cost\+Type}} (\mbox{\hyperlink{namespace_hellwatch_attribute_ad0a500e65129d06e4589f9bca54c4a7d}{Hellwatch\+Attribute\+::\+Type}} new\+Cost)
+\item 
+void \mbox{\hyperlink{class_ability_a6737d4900eb79147ca81aaa20a85218a}{Set\+Ability\+Name}} (std\+::string new\+Name)
+\item 
+void \mbox{\hyperlink{class_ability_a072cbfb1685db6fd4a0723d519bc9176}{Set\+Is\+Active}} (bool b\+New\+State)
+\item 
+void \mbox{\hyperlink{class_ability_a060e6f07d0c7510f7779418d69489fea}{Set\+Cooldown\+Start\+Policy}} (\mbox{\hyperlink{namespace_cooldown_start_policy_a99c3a8f4a331db7e6db8dfda1785b101}{Cooldown\+Start\+Policy\+::\+Type}} new\+Policy)
+\item 
+void \mbox{\hyperlink{class_ability_aa7f8c3e16910914b751aa1e1e5731f8f}{Set\+Ability\+Cooldown}} (float new\+Cooldown)
+\item 
+void \mbox{\hyperlink{class_ability_a51b48c192967cf32ea352f5e735136d6}{Set\+Damage\+Amount}} (float new\+Amount)
+\item 
+void \mbox{\hyperlink{class_ability_a95990ec850dd39919d25c4c481935db5}{Set\+Is\+Targeted}} (bool b\+New\+State)
+\item 
+void \mbox{\hyperlink{class_ability_a5da322fcc571670d8b96385b67685a68}{Set\+Is\+Targeting}} (bool b\+New\+State)
+\item 
+virtual bool \mbox{\hyperlink{class_ability_ac2b656dc59480f2973aaa3f0f59706bc}{Is\+Active}} ()
+\begin{DoxyCompactList}\small\item\em Checks if the ability is active  \end{DoxyCompactList}\item 
+\+\_\+\+\_\+forceinline \mbox{\hyperlink{namespace_ability_activation_key_ab159d3c3f26196a9ff493b67ecf7e68c}{Ability\+Activation\+Key\+::\+Type}} \mbox{\hyperlink{class_ability_a7af0334ceb8c57dd4b114124409492b5}{Get\+Activation\+Key}} () const
+\item 
+\+\_\+\+\_\+forceinline const std\+::string \& \mbox{\hyperlink{class_ability_a4e28b2c8ffd652b050612ee758f76958}{Get\+Ability\+Name}} () const
+\item 
+\+\_\+\+\_\+forceinline bool \mbox{\hyperlink{class_ability_adbd4d2c476e68c473b2872fd788eb2c2}{Is\+In\+Cooldown}} () const
+\item 
+\+\_\+\+\_\+forceinline bool \mbox{\hyperlink{class_ability_a2a7a75401b5757d3b22ed26544bfdb19}{Is\+Ability\+Targeted}} () const
+\item 
+\+\_\+\+\_\+forceinline bool \mbox{\hyperlink{class_ability_a2432f7d4c4159f75e8552d08b7ca51ed}{Is\+Ability\+Targeting}} () const
+\item 
+\+\_\+\+\_\+forceinline float \mbox{\hyperlink{class_ability_a063307977163faa4a3bcf7089cf70bb5}{Get\+Remaining\+Cooldown}} () const
+\item 
+float \mbox{\hyperlink{class_ability_a57f2e9a30ca6d2588fd721af77353d52}{Get\+Damage\+Amount}} ()
+\item 
+\mbox{\hyperlink{class_abilities_component}{Abilities\+Component}} $\ast$ \mbox{\hyperlink{class_ability_a50b5f7d8d3197869b3bc32d3c9bd4fd2}{Get\+Owner}} ()
+\item 
+\mbox{\hyperlink{class_attribute_component}{Attribute\+Component}} $\ast$ \mbox{\hyperlink{class_ability_ab567fcf9b39984aa3bf45343ffcbc086}{Get\+Owner\+Attributes}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_ability_a25388ebb622b414ef027eb33bf4a5cfb}{Post\+Init}} ()
+\begin{DoxyCompactList}\small\item\em Called after ability has been initialized, do set up here  \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_ability_ace910398ed2eb9f58c8e85dbb7a72de2}{Begin}} ()
+\begin{DoxyCompactList}\small\item\em Begins the ability, called if Try\+Activate was successful  \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_ability_a61a88edf359a3c6bd34868e58bf64f20}{End}} ()
+\begin{DoxyCompactList}\small\item\em Called on end of ability  \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_ability_a1b338496a61edb978f7f83570b9f03a4}{Commit}} ()
+\begin{DoxyCompactList}\small\item\em Called after committing an ability, targeting has been confirmed  \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_ability_a172dfdc4273690de2476fda0b82e5ea6}{Begin\+Targeting}} ()
+\begin{DoxyCompactList}\small\item\em Begins targeting, spawn an actor that follows the mouse to be able to identify the range of the ability  \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_ability_af82a917f3d8fc9260651c4cc59affb0e}{End\+Targeting}} ()
+\begin{DoxyCompactList}\small\item\em Ends targeting, remove the targeting actor  \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{class_ability_a4276e15e3a35b7887dd679eb5e332ff4}{Can\+Activate}} (\mbox{\hyperlink{struct_activation_outcome}{Activation\+Outcome}} \&Out\+Activation\+Outcome)
+\begin{DoxyCompactList}\small\item\em Can the ability be activated  \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespace_ability_activation_key_ab159d3c3f26196a9ff493b67ecf7e68c}{Ability\+Activation\+Key\+::\+Type}} \mbox{\hyperlink{class_ability_a4310ef2c96c00e405697f9983da58645}{activation\+Key}}
+\item 
+float \mbox{\hyperlink{class_ability_a0e5b9e690d512aa57f66a4f7ba3cb295}{cooldown\+Timer}}
+\item 
+float \mbox{\hyperlink{class_ability_a6e6e8dc7387275d8c4cef1036d0b2a08}{cooldown}}
+\item 
+float \mbox{\hyperlink{class_ability_aa080c6e4857a11599f25e1feb65aae9d}{damage\+Amount}}
+\item 
+float \mbox{\hyperlink{class_ability_a3d60b8e01776b0f6f42aaa3fa8821aa7}{ability\+Cost\+Amount}}
+\item 
+\mbox{\hyperlink{namespace_hellwatch_attribute_ad0a500e65129d06e4589f9bca54c4a7d}{Hellwatch\+Attribute\+::\+Type}} \mbox{\hyperlink{class_ability_aa0aa42d055ea84389c3bd7bb7b61fd00}{ability\+Cost\+Type}}
+\item 
+\mbox{\hyperlink{namespace_cooldown_start_policy_a99c3a8f4a331db7e6db8dfda1785b101}{Cooldown\+Start\+Policy\+::\+Type}} \mbox{\hyperlink{class_ability_a74f19e3368e28b7b61bf54cabe2da629}{cooldown\+Start\+Policy}}
+\item 
+bool \mbox{\hyperlink{class_ability_afc72628992607694ae9e4a096557fead}{b\+Is\+Targeted}}
+\item 
+bool \mbox{\hyperlink{class_ability_ae2aac411168782dab7715c29817f23de}{b\+Is\+Targeting}}
+\item 
+std\+::string \mbox{\hyperlink{class_ability_acc6fba5d131273ccbc0cf147b6f38eb2}{ability\+Name}}
+\item 
+bool \mbox{\hyperlink{class_ability_ae426458572df63716f8f8b63e83d04ca}{b\+Is\+Active}}
+\item 
+\mbox{\hyperlink{class_abilities_component}{Abilities\+Component}} $\ast$ \mbox{\hyperlink{class_ability_aa75c59af7fa1fd68787a211e66fd0173}{owning\+Component}} = nullptr
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A base ability class, designed to be inherited and provided with functionality  
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_ability_a1e03282d1a96232143322ef89fcbb314}\label{class_ability_a1e03282d1a96232143322ef89fcbb314}} 
+\index{Ability@{Ability}!Ability@{Ability}}
+\index{Ability@{Ability}!Ability@{Ability}}
+\doxysubsubsection{\texorpdfstring{Ability()}{Ability()}}
+{\footnotesize\ttfamily Ability\+::\+Ability (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_ability_ace910398ed2eb9f58c8e85dbb7a72de2}\label{class_ability_ace910398ed2eb9f58c8e85dbb7a72de2}} 
+\index{Ability@{Ability}!Begin@{Begin}}
+\index{Begin@{Begin}!Ability@{Ability}}
+\doxysubsubsection{\texorpdfstring{Begin()}{Begin()}}
+{\footnotesize\ttfamily void Ability\+::\+Begin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Begins the ability, called if Try\+Activate was successful  
+
+
+
+Reimplemented in \mbox{\hyperlink{class_dash_ab37a52fcb0a2953ad7f5bcf698d9d65f}{Dash}}, \mbox{\hyperlink{class_ice_bolt_a5dc506246bfe473255626de565ca8af4}{Ice\+Bolt}}, \mbox{\hyperlink{class_meteor_a0c35a52087ee487518c3d4e9f0e36cb2}{Meteor}}, and \mbox{\hyperlink{class_piercing_strike_afc8244751f335b1ae83a42b252409ae9}{Piercing\+Strike}}.
+
+\mbox{\Hypertarget{class_ability_a172dfdc4273690de2476fda0b82e5ea6}\label{class_ability_a172dfdc4273690de2476fda0b82e5ea6}} 
+\index{Ability@{Ability}!BeginTargeting@{BeginTargeting}}
+\index{BeginTargeting@{BeginTargeting}!Ability@{Ability}}
+\doxysubsubsection{\texorpdfstring{BeginTargeting()}{BeginTargeting()}}
+{\footnotesize\ttfamily void Ability\+::\+Begin\+Targeting (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Begins targeting, spawn an actor that follows the mouse to be able to identify the range of the ability  
+
+\mbox{\Hypertarget{class_ability_a4276e15e3a35b7887dd679eb5e332ff4}\label{class_ability_a4276e15e3a35b7887dd679eb5e332ff4}} 
+\index{Ability@{Ability}!CanActivate@{CanActivate}}
+\index{CanActivate@{CanActivate}!Ability@{Ability}}
+\doxysubsubsection{\texorpdfstring{CanActivate()}{CanActivate()}}
+{\footnotesize\ttfamily bool Ability\+::\+Can\+Activate (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_activation_outcome}{Activation\+Outcome}} \&}]{Out\+Activation\+Outcome }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Can the ability be activated  
+
+
+\begin{DoxyParams}{Parameters}
+{\em Out\+Activation\+Outcome} & This is an out parameter, holding information whether we can activate this ability, and if we can\textquotesingle{}t why\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A boolean, whether we can activate this ability or not
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_ability_a1b338496a61edb978f7f83570b9f03a4}\label{class_ability_a1b338496a61edb978f7f83570b9f03a4}} 
+\index{Ability@{Ability}!Commit@{Commit}}
+\index{Commit@{Commit}!Ability@{Ability}}
+\doxysubsubsection{\texorpdfstring{Commit()}{Commit()}}
+{\footnotesize\ttfamily void Ability\+::\+Commit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Called after committing an ability, targeting has been confirmed  
+
+\mbox{\Hypertarget{class_ability_a52f7aee4243f1da13b544a038892e43b}\label{class_ability_a52f7aee4243f1da13b544a038892e43b}} 
+\index{Ability@{Ability}!CommitAbility@{CommitAbility}}
+\index{CommitAbility@{CommitAbility}!Ability@{Ability}}
+\doxysubsubsection{\texorpdfstring{CommitAbility()}{CommitAbility()}}
+{\footnotesize\ttfamily void Ability\+::\+Commit\+Ability (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Attempts to commit the ability if it is targeted, does nothing if the ability is NOT targeted  
+
+\mbox{\Hypertarget{class_ability_a61a88edf359a3c6bd34868e58bf64f20}\label{class_ability_a61a88edf359a3c6bd34868e58bf64f20}} 
+\index{Ability@{Ability}!End@{End}}
+\index{End@{End}!Ability@{Ability}}
+\doxysubsubsection{\texorpdfstring{End()}{End()}}
+{\footnotesize\ttfamily void Ability\+::\+End (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Called on end of ability  
+
+
+
+Reimplemented in \mbox{\hyperlink{class_dash_a15631a12a91058a2f41e4a8f80127378}{Dash}}, \mbox{\hyperlink{class_ice_bolt_a2b7a3bb2d1627b36331a5c2fee6334a7}{Ice\+Bolt}}, \mbox{\hyperlink{class_meteor_ad31eefb5e13589692a68f77ed022371c}{Meteor}}, and \mbox{\hyperlink{class_piercing_strike_a31b5a023d19f73ec307cbc6e452e85ea}{Piercing\+Strike}}.
+
+\mbox{\Hypertarget{class_ability_ad7290141bc73d865773ac54477db7fb6}\label{class_ability_ad7290141bc73d865773ac54477db7fb6}} 
+\index{Ability@{Ability}!EndAbility@{EndAbility}}
+\index{EndAbility@{EndAbility}!Ability@{Ability}}
+\doxysubsubsection{\texorpdfstring{EndAbility()}{EndAbility()}}
+{\footnotesize\ttfamily bool Ability\+::\+End\+Ability (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Attempts to end the ability, returns a bool whether it was successful  
+
+\mbox{\Hypertarget{class_ability_af82a917f3d8fc9260651c4cc59affb0e}\label{class_ability_af82a917f3d8fc9260651c4cc59affb0e}} 
+\index{Ability@{Ability}!EndTargeting@{EndTargeting}}
+\index{EndTargeting@{EndTargeting}!Ability@{Ability}}
+\doxysubsubsection{\texorpdfstring{EndTargeting()}{EndTargeting()}}
+{\footnotesize\ttfamily void Ability\+::\+End\+Targeting (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Ends targeting, remove the targeting actor  
+
+\mbox{\Hypertarget{class_ability_a4e28b2c8ffd652b050612ee758f76958}\label{class_ability_a4e28b2c8ffd652b050612ee758f76958}} 
+\index{Ability@{Ability}!GetAbilityName@{GetAbilityName}}
+\index{GetAbilityName@{GetAbilityName}!Ability@{Ability}}
+\doxysubsubsection{\texorpdfstring{GetAbilityName()}{GetAbilityName()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+forceinline const std\+::string \& Ability\+::\+Get\+Ability\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_ability_a7af0334ceb8c57dd4b114124409492b5}\label{class_ability_a7af0334ceb8c57dd4b114124409492b5}} 
+\index{Ability@{Ability}!GetActivationKey@{GetActivationKey}}
+\index{GetActivationKey@{GetActivationKey}!Ability@{Ability}}
+\doxysubsubsection{\texorpdfstring{GetActivationKey()}{GetActivationKey()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+forceinline \mbox{\hyperlink{namespace_ability_activation_key_ab159d3c3f26196a9ff493b67ecf7e68c}{Ability\+Activation\+Key\+::\+Type}} Ability\+::\+Get\+Activation\+Key (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_ability_a57f2e9a30ca6d2588fd721af77353d52}\label{class_ability_a57f2e9a30ca6d2588fd721af77353d52}} 
+\index{Ability@{Ability}!GetDamageAmount@{GetDamageAmount}}
+\index{GetDamageAmount@{GetDamageAmount}!Ability@{Ability}}
+\doxysubsubsection{\texorpdfstring{GetDamageAmount()}{GetDamageAmount()}}
+{\footnotesize\ttfamily float Ability\+::\+Get\+Damage\+Amount (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_ability_a50b5f7d8d3197869b3bc32d3c9bd4fd2}\label{class_ability_a50b5f7d8d3197869b3bc32d3c9bd4fd2}} 
+\index{Ability@{Ability}!GetOwner@{GetOwner}}
+\index{GetOwner@{GetOwner}!Ability@{Ability}}
+\doxysubsubsection{\texorpdfstring{GetOwner()}{GetOwner()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_abilities_component}{Abilities\+Component}} $\ast$ Ability\+::\+Get\+Owner (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_ability_ab567fcf9b39984aa3bf45343ffcbc086}\label{class_ability_ab567fcf9b39984aa3bf45343ffcbc086}} 
+\index{Ability@{Ability}!GetOwnerAttributes@{GetOwnerAttributes}}
+\index{GetOwnerAttributes@{GetOwnerAttributes}!Ability@{Ability}}
+\doxysubsubsection{\texorpdfstring{GetOwnerAttributes()}{GetOwnerAttributes()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_attribute_component}{Attribute\+Component}} $\ast$ Ability\+::\+Get\+Owner\+Attributes (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_ability_a063307977163faa4a3bcf7089cf70bb5}\label{class_ability_a063307977163faa4a3bcf7089cf70bb5}} 
+\index{Ability@{Ability}!GetRemainingCooldown@{GetRemainingCooldown}}
+\index{GetRemainingCooldown@{GetRemainingCooldown}!Ability@{Ability}}
+\doxysubsubsection{\texorpdfstring{GetRemainingCooldown()}{GetRemainingCooldown()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+forceinline float Ability\+::\+Get\+Remaining\+Cooldown (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_ability_a291796c5cb356bcef9c6f6c0b2386ca2}\label{class_ability_a291796c5cb356bcef9c6f6c0b2386ca2}} 
+\index{Ability@{Ability}!Init@{Init}}
+\index{Init@{Init}!Ability@{Ability}}
+\doxysubsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily void Ability\+::\+Init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_abilities_component}{Abilities\+Component}} $\ast$}]{in\+Owning\+Component }\end{DoxyParamCaption})}
+
+
+
+Initializes the ability with the ability component  
+
+\mbox{\Hypertarget{class_ability_a2a7a75401b5757d3b22ed26544bfdb19}\label{class_ability_a2a7a75401b5757d3b22ed26544bfdb19}} 
+\index{Ability@{Ability}!IsAbilityTargeted@{IsAbilityTargeted}}
+\index{IsAbilityTargeted@{IsAbilityTargeted}!Ability@{Ability}}
+\doxysubsubsection{\texorpdfstring{IsAbilityTargeted()}{IsAbilityTargeted()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+forceinline bool Ability\+::\+Is\+Ability\+Targeted (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_ability_a2432f7d4c4159f75e8552d08b7ca51ed}\label{class_ability_a2432f7d4c4159f75e8552d08b7ca51ed}} 
+\index{Ability@{Ability}!IsAbilityTargeting@{IsAbilityTargeting}}
+\index{IsAbilityTargeting@{IsAbilityTargeting}!Ability@{Ability}}
+\doxysubsubsection{\texorpdfstring{IsAbilityTargeting()}{IsAbilityTargeting()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+forceinline bool Ability\+::\+Is\+Ability\+Targeting (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_ability_ac2b656dc59480f2973aaa3f0f59706bc}\label{class_ability_ac2b656dc59480f2973aaa3f0f59706bc}} 
+\index{Ability@{Ability}!IsActive@{IsActive}}
+\index{IsActive@{IsActive}!Ability@{Ability}}
+\doxysubsubsection{\texorpdfstring{IsActive()}{IsActive()}}
+{\footnotesize\ttfamily virtual bool Ability\+::\+Is\+Active (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Checks if the ability is active  
+
+\mbox{\Hypertarget{class_ability_adbd4d2c476e68c473b2872fd788eb2c2}\label{class_ability_adbd4d2c476e68c473b2872fd788eb2c2}} 
+\index{Ability@{Ability}!IsInCooldown@{IsInCooldown}}
+\index{IsInCooldown@{IsInCooldown}!Ability@{Ability}}
+\doxysubsubsection{\texorpdfstring{IsInCooldown()}{IsInCooldown()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+forceinline bool Ability\+::\+Is\+In\+Cooldown (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_ability_a25388ebb622b414ef027eb33bf4a5cfb}\label{class_ability_a25388ebb622b414ef027eb33bf4a5cfb}} 
+\index{Ability@{Ability}!PostInit@{PostInit}}
+\index{PostInit@{PostInit}!Ability@{Ability}}
+\doxysubsubsection{\texorpdfstring{PostInit()}{PostInit()}}
+{\footnotesize\ttfamily void Ability\+::\+Post\+Init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Called after ability has been initialized, do set up here  
+
+
+
+Reimplemented in \mbox{\hyperlink{class_dash_a3078ae06d66361da3e35af7b0efac786}{Dash}}, \mbox{\hyperlink{class_ice_bolt_aaf128a2d87802fa2e09fb8e7c150646b}{Ice\+Bolt}}, \mbox{\hyperlink{class_meteor_ab7f46bd407dcbb53214310a8f95c9307}{Meteor}}, and \mbox{\hyperlink{class_piercing_strike_a3309a9ad1070cbd3e47e51ba50e92c20}{Piercing\+Strike}}.
+
+\mbox{\Hypertarget{class_ability_aa7f8c3e16910914b751aa1e1e5731f8f}\label{class_ability_aa7f8c3e16910914b751aa1e1e5731f8f}} 
+\index{Ability@{Ability}!SetAbilityCooldown@{SetAbilityCooldown}}
+\index{SetAbilityCooldown@{SetAbilityCooldown}!Ability@{Ability}}
+\doxysubsubsection{\texorpdfstring{SetAbilityCooldown()}{SetAbilityCooldown()}}
+{\footnotesize\ttfamily void Ability\+::\+Set\+Ability\+Cooldown (\begin{DoxyParamCaption}\item[{float}]{new\+Cooldown }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_ability_a83e04cf64b10504ee3bc1cd10ad7219c}\label{class_ability_a83e04cf64b10504ee3bc1cd10ad7219c}} 
+\index{Ability@{Ability}!SetAbilityCostAmount@{SetAbilityCostAmount}}
+\index{SetAbilityCostAmount@{SetAbilityCostAmount}!Ability@{Ability}}
+\doxysubsubsection{\texorpdfstring{SetAbilityCostAmount()}{SetAbilityCostAmount()}}
+{\footnotesize\ttfamily void Ability\+::\+Set\+Ability\+Cost\+Amount (\begin{DoxyParamCaption}\item[{float}]{new\+Cost }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_ability_a36391efa24d0da869f43e4ba592241c8}\label{class_ability_a36391efa24d0da869f43e4ba592241c8}} 
+\index{Ability@{Ability}!SetAbilityCostType@{SetAbilityCostType}}
+\index{SetAbilityCostType@{SetAbilityCostType}!Ability@{Ability}}
+\doxysubsubsection{\texorpdfstring{SetAbilityCostType()}{SetAbilityCostType()}}
+{\footnotesize\ttfamily void Ability\+::\+Set\+Ability\+Cost\+Type (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespace_hellwatch_attribute_ad0a500e65129d06e4589f9bca54c4a7d}{Hellwatch\+Attribute\+::\+Type}}}]{new\+Cost }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_ability_a6737d4900eb79147ca81aaa20a85218a}\label{class_ability_a6737d4900eb79147ca81aaa20a85218a}} 
+\index{Ability@{Ability}!SetAbilityName@{SetAbilityName}}
+\index{SetAbilityName@{SetAbilityName}!Ability@{Ability}}
+\doxysubsubsection{\texorpdfstring{SetAbilityName()}{SetAbilityName()}}
+{\footnotesize\ttfamily void Ability\+::\+Set\+Ability\+Name (\begin{DoxyParamCaption}\item[{std\+::string}]{new\+Name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_ability_a13aa60092026728b42ade2811168c087}\label{class_ability_a13aa60092026728b42ade2811168c087}} 
+\index{Ability@{Ability}!SetActivationKey@{SetActivationKey}}
+\index{SetActivationKey@{SetActivationKey}!Ability@{Ability}}
+\doxysubsubsection{\texorpdfstring{SetActivationKey()}{SetActivationKey()}}
+{\footnotesize\ttfamily void Ability\+::\+Set\+Activation\+Key (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespace_ability_activation_key_ab159d3c3f26196a9ff493b67ecf7e68c}{Ability\+Activation\+Key\+::\+Type}}}]{key }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_ability_a060e6f07d0c7510f7779418d69489fea}\label{class_ability_a060e6f07d0c7510f7779418d69489fea}} 
+\index{Ability@{Ability}!SetCooldownStartPolicy@{SetCooldownStartPolicy}}
+\index{SetCooldownStartPolicy@{SetCooldownStartPolicy}!Ability@{Ability}}
+\doxysubsubsection{\texorpdfstring{SetCooldownStartPolicy()}{SetCooldownStartPolicy()}}
+{\footnotesize\ttfamily void Ability\+::\+Set\+Cooldown\+Start\+Policy (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespace_cooldown_start_policy_a99c3a8f4a331db7e6db8dfda1785b101}{Cooldown\+Start\+Policy\+::\+Type}}}]{new\+Policy }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_ability_a51b48c192967cf32ea352f5e735136d6}\label{class_ability_a51b48c192967cf32ea352f5e735136d6}} 
+\index{Ability@{Ability}!SetDamageAmount@{SetDamageAmount}}
+\index{SetDamageAmount@{SetDamageAmount}!Ability@{Ability}}
+\doxysubsubsection{\texorpdfstring{SetDamageAmount()}{SetDamageAmount()}}
+{\footnotesize\ttfamily void Ability\+::\+Set\+Damage\+Amount (\begin{DoxyParamCaption}\item[{float}]{new\+Amount }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_ability_a072cbfb1685db6fd4a0723d519bc9176}\label{class_ability_a072cbfb1685db6fd4a0723d519bc9176}} 
+\index{Ability@{Ability}!SetIsActive@{SetIsActive}}
+\index{SetIsActive@{SetIsActive}!Ability@{Ability}}
+\doxysubsubsection{\texorpdfstring{SetIsActive()}{SetIsActive()}}
+{\footnotesize\ttfamily void Ability\+::\+Set\+Is\+Active (\begin{DoxyParamCaption}\item[{bool}]{b\+New\+State }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_ability_a95990ec850dd39919d25c4c481935db5}\label{class_ability_a95990ec850dd39919d25c4c481935db5}} 
+\index{Ability@{Ability}!SetIsTargeted@{SetIsTargeted}}
+\index{SetIsTargeted@{SetIsTargeted}!Ability@{Ability}}
+\doxysubsubsection{\texorpdfstring{SetIsTargeted()}{SetIsTargeted()}}
+{\footnotesize\ttfamily void Ability\+::\+Set\+Is\+Targeted (\begin{DoxyParamCaption}\item[{bool}]{b\+New\+State }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_ability_a5da322fcc571670d8b96385b67685a68}\label{class_ability_a5da322fcc571670d8b96385b67685a68}} 
+\index{Ability@{Ability}!SetIsTargeting@{SetIsTargeting}}
+\index{SetIsTargeting@{SetIsTargeting}!Ability@{Ability}}
+\doxysubsubsection{\texorpdfstring{SetIsTargeting()}{SetIsTargeting()}}
+{\footnotesize\ttfamily void Ability\+::\+Set\+Is\+Targeting (\begin{DoxyParamCaption}\item[{bool}]{b\+New\+State }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_ability_a7815198848a6acf69bf1d76caf595820}\label{class_ability_a7815198848a6acf69bf1d76caf595820}} 
+\index{Ability@{Ability}!TryActivate@{TryActivate}}
+\index{TryActivate@{TryActivate}!Ability@{Ability}}
+\doxysubsubsection{\texorpdfstring{TryActivate()}{TryActivate()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_activation_outcome}{Activation\+Outcome}} Ability\+::\+Try\+Activate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Attempts to activate this ability, returns an \mbox{\hyperlink{struct_activation_outcome}{Activation\+Outcome}} struct  
+
+\mbox{\Hypertarget{class_ability_aaa83dbb12f79ceecc4d7b1cb3930d3d3}\label{class_ability_aaa83dbb12f79ceecc4d7b1cb3930d3d3}} 
+\index{Ability@{Ability}!Update@{Update}}
+\index{Update@{Update}!Ability@{Ability}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void Ability\+::\+Update (\begin{DoxyParamCaption}\item[{float}]{delta\+Time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_ability_a3d60b8e01776b0f6f42aaa3fa8821aa7}\label{class_ability_a3d60b8e01776b0f6f42aaa3fa8821aa7}} 
+\index{Ability@{Ability}!abilityCostAmount@{abilityCostAmount}}
+\index{abilityCostAmount@{abilityCostAmount}!Ability@{Ability}}
+\doxysubsubsection{\texorpdfstring{abilityCostAmount}{abilityCostAmount}}
+{\footnotesize\ttfamily float Ability\+::ability\+Cost\+Amount\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_ability_aa0aa42d055ea84389c3bd7bb7b61fd00}\label{class_ability_aa0aa42d055ea84389c3bd7bb7b61fd00}} 
+\index{Ability@{Ability}!abilityCostType@{abilityCostType}}
+\index{abilityCostType@{abilityCostType}!Ability@{Ability}}
+\doxysubsubsection{\texorpdfstring{abilityCostType}{abilityCostType}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespace_hellwatch_attribute_ad0a500e65129d06e4589f9bca54c4a7d}{Hellwatch\+Attribute\+::\+Type}} Ability\+::ability\+Cost\+Type\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_ability_acc6fba5d131273ccbc0cf147b6f38eb2}\label{class_ability_acc6fba5d131273ccbc0cf147b6f38eb2}} 
+\index{Ability@{Ability}!abilityName@{abilityName}}
+\index{abilityName@{abilityName}!Ability@{Ability}}
+\doxysubsubsection{\texorpdfstring{abilityName}{abilityName}}
+{\footnotesize\ttfamily std\+::string Ability\+::ability\+Name\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_ability_a4310ef2c96c00e405697f9983da58645}\label{class_ability_a4310ef2c96c00e405697f9983da58645}} 
+\index{Ability@{Ability}!activationKey@{activationKey}}
+\index{activationKey@{activationKey}!Ability@{Ability}}
+\doxysubsubsection{\texorpdfstring{activationKey}{activationKey}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespace_ability_activation_key_ab159d3c3f26196a9ff493b67ecf7e68c}{Ability\+Activation\+Key\+::\+Type}} Ability\+::activation\+Key\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_ability_ae426458572df63716f8f8b63e83d04ca}\label{class_ability_ae426458572df63716f8f8b63e83d04ca}} 
+\index{Ability@{Ability}!bIsActive@{bIsActive}}
+\index{bIsActive@{bIsActive}!Ability@{Ability}}
+\doxysubsubsection{\texorpdfstring{bIsActive}{bIsActive}}
+{\footnotesize\ttfamily bool Ability\+::b\+Is\+Active\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_ability_afc72628992607694ae9e4a096557fead}\label{class_ability_afc72628992607694ae9e4a096557fead}} 
+\index{Ability@{Ability}!bIsTargeted@{bIsTargeted}}
+\index{bIsTargeted@{bIsTargeted}!Ability@{Ability}}
+\doxysubsubsection{\texorpdfstring{bIsTargeted}{bIsTargeted}}
+{\footnotesize\ttfamily bool Ability\+::b\+Is\+Targeted\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_ability_ae2aac411168782dab7715c29817f23de}\label{class_ability_ae2aac411168782dab7715c29817f23de}} 
+\index{Ability@{Ability}!bIsTargeting@{bIsTargeting}}
+\index{bIsTargeting@{bIsTargeting}!Ability@{Ability}}
+\doxysubsubsection{\texorpdfstring{bIsTargeting}{bIsTargeting}}
+{\footnotesize\ttfamily bool Ability\+::b\+Is\+Targeting\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_ability_a6e6e8dc7387275d8c4cef1036d0b2a08}\label{class_ability_a6e6e8dc7387275d8c4cef1036d0b2a08}} 
+\index{Ability@{Ability}!cooldown@{cooldown}}
+\index{cooldown@{cooldown}!Ability@{Ability}}
+\doxysubsubsection{\texorpdfstring{cooldown}{cooldown}}
+{\footnotesize\ttfamily float Ability\+::cooldown\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_ability_a74f19e3368e28b7b61bf54cabe2da629}\label{class_ability_a74f19e3368e28b7b61bf54cabe2da629}} 
+\index{Ability@{Ability}!cooldownStartPolicy@{cooldownStartPolicy}}
+\index{cooldownStartPolicy@{cooldownStartPolicy}!Ability@{Ability}}
+\doxysubsubsection{\texorpdfstring{cooldownStartPolicy}{cooldownStartPolicy}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespace_cooldown_start_policy_a99c3a8f4a331db7e6db8dfda1785b101}{Cooldown\+Start\+Policy\+::\+Type}} Ability\+::cooldown\+Start\+Policy\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_ability_a0e5b9e690d512aa57f66a4f7ba3cb295}\label{class_ability_a0e5b9e690d512aa57f66a4f7ba3cb295}} 
+\index{Ability@{Ability}!cooldownTimer@{cooldownTimer}}
+\index{cooldownTimer@{cooldownTimer}!Ability@{Ability}}
+\doxysubsubsection{\texorpdfstring{cooldownTimer}{cooldownTimer}}
+{\footnotesize\ttfamily float Ability\+::cooldown\+Timer\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_ability_aa080c6e4857a11599f25e1feb65aae9d}\label{class_ability_aa080c6e4857a11599f25e1feb65aae9d}} 
+\index{Ability@{Ability}!damageAmount@{damageAmount}}
+\index{damageAmount@{damageAmount}!Ability@{Ability}}
+\doxysubsubsection{\texorpdfstring{damageAmount}{damageAmount}}
+{\footnotesize\ttfamily float Ability\+::damage\+Amount\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_ability_aa75c59af7fa1fd68787a211e66fd0173}\label{class_ability_aa75c59af7fa1fd68787a211e66fd0173}} 
+\index{Ability@{Ability}!owningComponent@{owningComponent}}
+\index{owningComponent@{owningComponent}!Ability@{Ability}}
+\doxysubsubsection{\texorpdfstring{owningComponent}{owningComponent}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_abilities_component}{Abilities\+Component}}$\ast$ Ability\+::owning\+Component = nullptr\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Uni/\+CMP208/\+Hellwatch/build/vs2017/\+Abilities/\mbox{\hyperlink{_ability_8h}{Ability.\+h}}\item 
+D\+:/\+Uni/\+CMP208/\+Hellwatch/build/vs2017/\+Abilities/\mbox{\hyperlink{_ability_8cpp}{Ability.\+cpp}}\end{DoxyCompactItemize}

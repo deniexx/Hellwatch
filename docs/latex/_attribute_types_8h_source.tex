@@ -1,0 +1,57 @@
+\hypertarget{_attribute_types_8h_source}{}\doxysection{Attribute\+Types.\+h}
+\label{_attribute_types_8h_source}\index{D:/Uni/CMP208/Hellwatch/build/vs2017/Attributes/AttributeTypes.h@{D:/Uni/CMP208/Hellwatch/build/vs2017/Attributes/AttributeTypes.h}}
+\mbox{\hyperlink{_attribute_types_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{2 }
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{4 }
+\DoxyCodeLine{8 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespace_hellwatch_attribute}{HellwatchAttribute}}}
+\DoxyCodeLine{9 \{}
+\DoxyCodeLine{10     \textcolor{keyword}{enum} \mbox{\hyperlink{namespace_hellwatch_attribute_ad0a500e65129d06e4589f9bca54c4a7d}{Type}}}
+\DoxyCodeLine{11     \{}
+\DoxyCodeLine{12         \mbox{\hyperlink{namespace_hellwatch_attribute_ad0a500e65129d06e4589f9bca54c4a7da6d26574d573c085ec34ba30576725713}{Health}} = 0,}
+\DoxyCodeLine{13         \mbox{\hyperlink{namespace_hellwatch_attribute_ad0a500e65129d06e4589f9bca54c4a7dad3c5decb2b14966e4ae3e8e07fc975a4}{Mana}},}
+\DoxyCodeLine{14 }
+\DoxyCodeLine{15         \mbox{\hyperlink{namespace_hellwatch_attribute_ad0a500e65129d06e4589f9bca54c4a7da32b2fa4bc40129b2f09aa2a9a4192d50}{Vitality}},}
+\DoxyCodeLine{16         \mbox{\hyperlink{namespace_hellwatch_attribute_ad0a500e65129d06e4589f9bca54c4a7da1863c83b1312f525ab940b88fd83a2f8}{Wisdom}},}
+\DoxyCodeLine{17         \mbox{\hyperlink{namespace_hellwatch_attribute_ad0a500e65129d06e4589f9bca54c4a7da7a4d8b401430813782ca3155c614b3af}{Toughness}},}
+\DoxyCodeLine{18         \mbox{\hyperlink{namespace_hellwatch_attribute_ad0a500e65129d06e4589f9bca54c4a7daf89b5eb0bb9f25288755790fff1e0603}{Energy}},}
+\DoxyCodeLine{19 }
+\DoxyCodeLine{20         \mbox{\hyperlink{namespace_hellwatch_attribute_ad0a500e65129d06e4589f9bca54c4a7da1a1cde64b50095f2d28168d2c6b80240}{None}}}
+\DoxyCodeLine{21     \};}
+\DoxyCodeLine{22 \}}
+\DoxyCodeLine{23 }
+\DoxyCodeLine{27 \textcolor{keyword}{struct }\mbox{\hyperlink{struct_f_attribute}{FAttribute}}}
+\DoxyCodeLine{28 \{}
+\DoxyCodeLine{29     \mbox{\hyperlink{namespace_hellwatch_attribute_ad0a500e65129d06e4589f9bca54c4a7d}{HellwatchAttribute::Type}} \mbox{\hyperlink{struct_f_attribute_adacbd546c31cd3eeb6cc209a7a407e84}{attributeType}};}
+\DoxyCodeLine{30     \textcolor{keywordtype}{float} \mbox{\hyperlink{struct_f_attribute_a9056ea5412f85f588763afc561fda841}{maxAmount}} = 100.f;}
+\DoxyCodeLine{31     \textcolor{keywordtype}{float} \mbox{\hyperlink{struct_f_attribute_af950f31a8ba7e36e9a06091afed1edfe}{currentAmount}} = 0.f;}
+\DoxyCodeLine{32 }
+\DoxyCodeLine{33     \textcolor{keywordtype}{bool} \mbox{\hyperlink{struct_f_attribute_ac7a54aa8f158329ab1a12146fe56e0f1}{bClampedToZero}} = \textcolor{keyword}{true};}
+\DoxyCodeLine{34 \};}
+\DoxyCodeLine{35 }
+\DoxyCodeLine{39 \textcolor{keyword}{static} std::string AttributeToString(\mbox{\hyperlink{namespace_hellwatch_attribute_ad0a500e65129d06e4589f9bca54c4a7d}{HellwatchAttribute::Type}} type)}
+\DoxyCodeLine{40 \{}
+\DoxyCodeLine{41     \textcolor{keywordflow}{switch} (type)}
+\DoxyCodeLine{42     \{}
+\DoxyCodeLine{43         \textcolor{keywordflow}{case} \mbox{\hyperlink{namespace_hellwatch_attribute_ad0a500e65129d06e4589f9bca54c4a7da6d26574d573c085ec34ba30576725713}{HellwatchAttribute::Health}}:}
+\DoxyCodeLine{44             \textcolor{keywordflow}{return} \textcolor{stringliteral}{"{}Health"{}};}
+\DoxyCodeLine{45         \textcolor{keywordflow}{case} \mbox{\hyperlink{namespace_hellwatch_attribute_ad0a500e65129d06e4589f9bca54c4a7dad3c5decb2b14966e4ae3e8e07fc975a4}{HellwatchAttribute::Mana}}:}
+\DoxyCodeLine{46             \textcolor{keywordflow}{return} \textcolor{stringliteral}{"{}Mana"{}};}
+\DoxyCodeLine{47         \textcolor{keywordflow}{case} \mbox{\hyperlink{namespace_hellwatch_attribute_ad0a500e65129d06e4589f9bca54c4a7da32b2fa4bc40129b2f09aa2a9a4192d50}{HellwatchAttribute::Vitality}}:}
+\DoxyCodeLine{48             \textcolor{keywordflow}{return} \textcolor{stringliteral}{"{}Vitality"{}};}
+\DoxyCodeLine{49         \textcolor{keywordflow}{case} \mbox{\hyperlink{namespace_hellwatch_attribute_ad0a500e65129d06e4589f9bca54c4a7da1863c83b1312f525ab940b88fd83a2f8}{HellwatchAttribute::Wisdom}}:}
+\DoxyCodeLine{50             \textcolor{keywordflow}{return} \textcolor{stringliteral}{"{}Wisdom"{}};}
+\DoxyCodeLine{51         \textcolor{keywordflow}{case} \mbox{\hyperlink{namespace_hellwatch_attribute_ad0a500e65129d06e4589f9bca54c4a7da7a4d8b401430813782ca3155c614b3af}{HellwatchAttribute::Toughness}}:}
+\DoxyCodeLine{52             \textcolor{keywordflow}{return} \textcolor{stringliteral}{"{}Toughness"{}};}
+\DoxyCodeLine{53         \textcolor{keywordflow}{case} \mbox{\hyperlink{namespace_hellwatch_attribute_ad0a500e65129d06e4589f9bca54c4a7daf89b5eb0bb9f25288755790fff1e0603}{HellwatchAttribute::Energy}}:}
+\DoxyCodeLine{54             \textcolor{keywordflow}{return} \textcolor{stringliteral}{"{}Energy"{}};}
+\DoxyCodeLine{55         \textcolor{keywordflow}{case} \mbox{\hyperlink{namespace_hellwatch_attribute_ad0a500e65129d06e4589f9bca54c4a7da1a1cde64b50095f2d28168d2c6b80240}{HellwatchAttribute::None}}:}
+\DoxyCodeLine{56             \textcolor{keywordflow}{return} \textcolor{stringliteral}{"{}None"{}};}
+\DoxyCodeLine{57         \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{58             \textcolor{keywordflow}{return} \textcolor{stringliteral}{"{}"{}};}
+\DoxyCodeLine{59     \}}
+\DoxyCodeLine{60 \}}
+
+\end{DoxyCode}

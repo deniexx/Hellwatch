@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="dir_e51422e516d0a4e62b73cc6733cd5d2a" kind="dir">
+    <compoundname>D:/Uni/CMP208/Hellwatch/build/vs2017/Abilities/PlayerAbilities</compoundname>
+    <innerfile refid="_dash_8cpp">Dash.cpp</innerfile>
+    <innerfile refid="_dash_8h">Dash.h</innerfile>
+    <innerfile refid="_ice_bolt_8cpp">IceBolt.cpp</innerfile>
+    <innerfile refid="_ice_bolt_8h">IceBolt.h</innerfile>
+    <innerfile refid="_meteor_8cpp">Meteor.cpp</innerfile>
+    <innerfile refid="_meteor_8h">Meteor.h</innerfile>
+    <innerfile refid="_piercing_strike_8cpp">PiercingStrike.cpp</innerfile>
+    <innerfile refid="_piercing_strike_8h">PiercingStrike.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/Abilities/PlayerAbilities/"/>
+  </compounddef>
+</doxygen>

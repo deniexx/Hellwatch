@@ -1,0 +1,496 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="_wave_manager_8cpp" kind="file" language="C++">
+    <compoundname>WaveManager.cpp</compoundname>
+    <includes refid="_wave_manager_8h" local="yes">WaveManager.h</includes>
+    <includes local="no">random</includes>
+    <includes refid="_enemy_8h" local="yes">Actors/MeshActors/Enemy.h</includes>
+    <includes refid="_ranged_enemy_8h" local="yes">Actors/MeshActors/RangedEnemy.h</includes>
+    <includes refid="_boss_8h" local="yes">Actors/MeshActors/Boss.h</includes>
+    <incdepgraph>
+      <node id="34">
+        <label>ActorComponents/ActorComponent.h</label>
+        <link refid="_actor_component_8h"/>
+      </node>
+      <node id="36">
+        <label>ActorComponents/CharacterMovementComponent.h</label>
+        <link refid="_character_movement_component_8h"/>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="27">
+        <label>Actors/MeshActor.h</label>
+        <link refid="_mesh_actor_8h"/>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+      </node>
+      <node id="47">
+        <label>Actors/MeshActors/Boss.h</label>
+        <link refid="_boss_8h"/>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="45">
+        <label>DamageOnCollisionActor.h</label>
+        <link refid="_damage_on_collision_actor_8h"/>
+        <childnode refid="27" relation="include">
+        </childnode>
+      </node>
+      <node id="26">
+        <label>Actors/MeshActors/Enemy.h</label>
+        <link refid="_enemy_8h"/>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="45" relation="include">
+        </childnode>
+      </node>
+      <node id="37">
+        <label>PlayerCharacter.h</label>
+        <link refid="_player_character_8h"/>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="38" relation="include">
+        </childnode>
+        <childnode refid="43" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="44" relation="include">
+        </childnode>
+      </node>
+      <node id="46">
+        <label>Actors/MeshActors/RangedEnemy.h</label>
+        <link refid="_ranged_enemy_8h"/>
+        <childnode refid="26" relation="include">
+        </childnode>
+      </node>
+      <node id="33">
+        <label>Attributes/AttributeComponent.h</label>
+        <link refid="_attribute_component_8h"/>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+      </node>
+      <node id="35">
+        <label>AttributeTypes.h</label>
+        <link refid="_attribute_types_8h"/>
+        <childnode refid="20" relation="include">
+        </childnode>
+      </node>
+      <node id="38">
+        <label>GameFramework/PlayerController.h</label>
+        <link refid="_player_controller_8h"/>
+        <childnode refid="39" relation="include">
+        </childnode>
+        <childnode refid="40" relation="include">
+        </childnode>
+        <childnode refid="41" relation="include">
+        </childnode>
+        <childnode refid="42" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>GameFramework/Utils.h</label>
+        <link refid="_utils_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/WaveManager.cpp</label>
+        <link refid="_wave_manager_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="46" relation="include">
+        </childnode>
+        <childnode refid="47" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>WaveManager.h</label>
+        <link refid="_wave_manager_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="28">
+        <label>GameFramework/WorldObject.h</label>
+        <link refid="_world_object_8h"/>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="32">
+        <label>Interfaces/Damagable.h</label>
+        <link refid="_damagable_8h"/>
+      </node>
+      <node id="17">
+        <label>obj_mesh_loader.h</label>
+        <link refid="obj__mesh__loader_8h"/>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>primitive_builder.h</label>
+        <link refid="primitive__builder_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>scene_app.h</label>
+        <link refid="scene__app_8h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>box2d/box2d.h</label>
+      </node>
+      <node id="13">
+        <label>cstddef</label>
+      </node>
+      <node id="39">
+        <label>cstdint</label>
+      </node>
+      <node id="40">
+        <label>functional</label>
+      </node>
+      <node id="23">
+        <label>future</label>
+      </node>
+      <node id="18">
+        <label>gef.h</label>
+      </node>
+      <node id="22">
+        <label>graphics/font.h</label>
+      </node>
+      <node id="12">
+        <label>graphics/material.h</label>
+      </node>
+      <node id="31">
+        <label>graphics/mesh.h</label>
+      </node>
+      <node id="7">
+        <label>graphics/renderer_3d.h</label>
+      </node>
+      <node id="14">
+        <label>graphics/scene.h</label>
+      </node>
+      <node id="43">
+        <label>graphics/skinned_mesh_instance.h</label>
+      </node>
+      <node id="44">
+        <label>graphics/sprite.h</label>
+      </node>
+      <node id="42">
+        <label>input/keyboard.h</label>
+      </node>
+      <node id="41">
+        <label>input/touch_input_manager.h</label>
+      </node>
+      <node id="19">
+        <label>map</label>
+      </node>
+      <node id="29">
+        <label>maths/Matrix44.h</label>
+      </node>
+      <node id="4">
+        <label>maths/Vector2.h</label>
+      </node>
+      <node id="25">
+        <label>maths/math_utils.h</label>
+      </node>
+      <node id="6">
+        <label>maths/matrix44.h</label>
+      </node>
+      <node id="30">
+        <label>maths/quaternion.h</label>
+      </node>
+      <node id="10">
+        <label>maths/vector2.h</label>
+      </node>
+      <node id="5">
+        <label>maths/vector4.h</label>
+      </node>
+      <node id="24">
+        <label>random</label>
+      </node>
+      <node id="20">
+        <label>string</label>
+      </node>
+      <node id="9">
+        <label>system/application.h</label>
+      </node>
+      <node id="16">
+        <label>system/platform.h</label>
+      </node>
+      <node id="21">
+        <label>vector</label>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_wave_manager_8h" kindref="compound">WaveManager.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;random&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_enemy_8h" kindref="compound">Actors/MeshActors/Enemy.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_ranged_enemy_8h" kindref="compound">Actors/MeshActors/RangedEnemy.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_boss_8h" kindref="compound">Actors/MeshActors/Boss.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><ref refid="class_wave_manager_1a1c039c9a7a485f88b68a3f966ffe02c5" kindref="member">WaveManager::WaveManager</ref>()</highlight></codeline>
+<codeline lineno="9"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="10"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_wave_manager_1a918f759b1a32b82fea823b5292b8a001" kindref="member">WaveManager::Init</ref>()</highlight></codeline>
+<codeline lineno="13"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/>lastSpawnTime<sp/>=<sp/>SceneApp::instance-&gt;GetCurrentGameTime();</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Wave<sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_f_wave_definition" kindref="compound">FWaveDefinition</ref><sp/>wave;</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/>wave.<ref refid="struct_f_wave_definition_1a8442421920c4b13c84d7beca39d3c0d9" kindref="member">maxSpawns</ref><sp/>=<sp/>5;</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/>wave.<ref refid="struct_f_wave_definition_1a6551dc7f6e996c43aeb18b7058723bb7" kindref="member">spawnPeriod</ref><sp/>=<sp/>2;</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/>waveDefinitions.push_back(wave);</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Wave<sp/>2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/>wave.<ref refid="struct_f_wave_definition_1a8442421920c4b13c84d7beca39d3c0d9" kindref="member">maxSpawns</ref><sp/>=<sp/>8;</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/>wave.<ref refid="struct_f_wave_definition_1a6551dc7f6e996c43aeb18b7058723bb7" kindref="member">spawnPeriod</ref><sp/>=<sp/>2;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/>waveDefinitions.push_back(wave);</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Wave<sp/>3</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>wave.<ref refid="struct_f_wave_definition_1a8442421920c4b13c84d7beca39d3c0d9" kindref="member">maxSpawns</ref><sp/>=<sp/>15;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/>wave.<ref refid="struct_f_wave_definition_1a6551dc7f6e996c43aeb18b7058723bb7" kindref="member">spawnPeriod</ref><sp/>=<sp/>1.8f;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/>waveDefinitions.push_back(wave);</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Wave<sp/>4</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/>wave.<ref refid="struct_f_wave_definition_1a8442421920c4b13c84d7beca39d3c0d9" kindref="member">maxSpawns</ref><sp/>=<sp/>15;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/>wave.<ref refid="struct_f_wave_definition_1a6551dc7f6e996c43aeb18b7058723bb7" kindref="member">spawnPeriod</ref><sp/>=<sp/>1.6f;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/>waveDefinitions.push_back(wave);</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Wave<sp/>5</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/>wave.<ref refid="struct_f_wave_definition_1a8442421920c4b13c84d7beca39d3c0d9" kindref="member">maxSpawns</ref><sp/>=<sp/>30;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/>wave.<ref refid="struct_f_wave_definition_1a6551dc7f6e996c43aeb18b7058723bb7" kindref="member">spawnPeriod</ref><sp/>=<sp/>1.6f;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/>waveDefinitions.push_back(wave);</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Wave<sp/>6</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/>wave.<ref refid="struct_f_wave_definition_1a8442421920c4b13c84d7beca39d3c0d9" kindref="member">maxSpawns</ref><sp/>=<sp/>26;</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/>wave.<ref refid="struct_f_wave_definition_1a6551dc7f6e996c43aeb18b7058723bb7" kindref="member">spawnPeriod</ref><sp/>=<sp/>1.4f;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/>waveDefinitions.push_back(wave);</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Wave<sp/>7</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/>wave.<ref refid="struct_f_wave_definition_1a8442421920c4b13c84d7beca39d3c0d9" kindref="member">maxSpawns</ref><sp/>=<sp/>35;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/>wave.<ref refid="struct_f_wave_definition_1a6551dc7f6e996c43aeb18b7058723bb7" kindref="member">spawnPeriod</ref><sp/>=<sp/>1.4f;</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/>waveDefinitions.push_back(wave);</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Wave<sp/>8</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/>wave.<ref refid="struct_f_wave_definition_1a8442421920c4b13c84d7beca39d3c0d9" kindref="member">maxSpawns</ref><sp/>=<sp/>50;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/>wave.<ref refid="struct_f_wave_definition_1a6551dc7f6e996c43aeb18b7058723bb7" kindref="member">spawnPeriod</ref><sp/>=<sp/>1.3f;</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/>waveDefinitions.push_back(wave);</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Wave<sp/>9</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/>wave.<ref refid="struct_f_wave_definition_1a8442421920c4b13c84d7beca39d3c0d9" kindref="member">maxSpawns</ref><sp/>=<sp/>50;</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/>wave.<ref refid="struct_f_wave_definition_1a6551dc7f6e996c43aeb18b7058723bb7" kindref="member">spawnPeriod</ref><sp/>=<sp/>1.2f;</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/>waveDefinitions.push_back(wave);</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Wave<sp/>10</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/>wave.<ref refid="struct_f_wave_definition_1a8442421920c4b13c84d7beca39d3c0d9" kindref="member">maxSpawns</ref><sp/>=<sp/>70;</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/>wave.<ref refid="struct_f_wave_definition_1a6551dc7f6e996c43aeb18b7058723bb7" kindref="member">spawnPeriod</ref><sp/>=<sp/>1.f;</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/>waveDefinitions.push_back(wave);</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/>spawnLocations<sp/>=<sp/>{</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>gef::Vector4(15.f,<sp/>0.f,<sp/>15.f),</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>gef::Vector4(22.f,<sp/>0.f,<sp/>22.f),</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>gef::Vector4(7.f,<sp/>0.f,<sp/>7.f),</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>gef::Vector4(-7.f,<sp/>0.f,<sp/>-7.f),</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>gef::Vector4(-15.f,<sp/>0.f,<sp/>-15.f),</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>gef::Vector4(-22.f,<sp/>0.f,<sp/>-22.f),</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>gef::Vector4(-15.f,<sp/>0.f,<sp/>15.f),</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>gef::Vector4(-22.f,<sp/>0.f,<sp/>22.f),</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>gef::Vector4(-7.f,<sp/>0.f,<sp/>7.f),</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>gef::Vector4(7.f,<sp/>0.f,<sp/>-7.f),</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>gef::Vector4(15.f,<sp/>0.f,<sp/>-15.f),</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>gef::Vector4(22.f,<sp/>0.f,<sp/>-22.f)</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="81"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_wave_manager_1aa56d31703d3d02067e75debabbfae300" kindref="member">WaveManager::StartWave</ref>()</highlight></codeline>
+<codeline lineno="84"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/>bInWave<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/>currentWaveSpawnedEnemiesAmount<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="87"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_wave_manager_1a751017f23187640be76f5db4b6eba243" kindref="member">WaveManager::EndWave</ref>()</highlight></codeline>
+<codeline lineno="90"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/>spawnedEnemies.clear();</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_wave_manager_1a9440cd9b8ec292c041b5f794b2bb3217" kindref="member">currentWave</ref><sp/>+=<sp/>1;</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/>bInWave<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="class_wave_manager_1a9440cd9b8ec292c041b5f794b2bb3217" kindref="member">currentWave</ref><sp/>==<sp/>waveDefinitions.size())</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SceneApp::instance-&gt;SetGameState(<ref refid="namespace_game_state_1aa2df68fe63beaaf10d3154d8eb490fe6a797c961d3f35a579149051adc329e58e" kindref="member">GameState::GameEnd</ref>);</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/>SceneApp::instance-&gt;SetGameState(<ref refid="namespace_game_state_1aa2df68fe63beaaf10d3154d8eb490fe6a11dfd10e2813b09f256dd86e3902dfe2" kindref="member">GameState::Shop</ref>);</highlight></codeline>
+<codeline lineno="102"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_wave_manager_1ae5ee18f81c4ea516839af94da831a24d" kindref="member">WaveManager::Update</ref>()</highlight></codeline>
+<codeline lineno="105"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>spawnPeriod<sp/>=<sp/><ref refid="class_wave_manager_1a9440cd9b8ec292c041b5f794b2bb3217" kindref="member">currentWave</ref><sp/>&lt;<sp/>waveDefinitions.size()<sp/>?<sp/>waveDefinitions[<ref refid="class_wave_manager_1a9440cd9b8ec292c041b5f794b2bb3217" kindref="member">currentWave</ref>].spawnPeriod<sp/>:<sp/><ref refid="_wave_manager_8h_1a7611b1145603b267db98d53c153808b5" kindref="member">SPAWN_PERIOD_AFTER_WAVE_DEFINITIONS</ref>;</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>maxSpawnAmount<sp/>=<sp/><ref refid="class_wave_manager_1a9440cd9b8ec292c041b5f794b2bb3217" kindref="member">currentWave</ref><sp/>&lt;<sp/>waveDefinitions.size()<sp/>?<sp/>waveDefinitions[<ref refid="class_wave_manager_1a9440cd9b8ec292c041b5f794b2bb3217" kindref="member">currentWave</ref>].maxSpawns<sp/>:<sp/><ref refid="_wave_manager_8h_1a61d1084c2f3105aa6fe0935321c38056" kindref="member">USE_WAVE_FORMULA</ref>;</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/>bSpawnsComplete<sp/>=<sp/>currentWaveSpawnedEnemiesAmount<sp/>&gt;=<sp/>maxSpawnAmount;</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>bCanSpawn<sp/>=<sp/>lastSpawnTime<sp/>+<sp/>spawnPeriod<sp/>&lt;<sp/>SceneApp::instance-&gt;GetCurrentGameTime()<sp/>&amp;&amp;<sp/>!bSpawnsComplete;</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(bCanSpawn)</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_wave_manager_1acc8ea63b30bc4ccd02e7b12f1504595c" kindref="member">SpawnEnemy</ref>();</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_wave_manager_1ac60f15dad7ac55306c45b17babdfcb17" kindref="member">CheckWaveState</ref>();</highlight></codeline>
+<codeline lineno="118"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_wave_manager_1ac60f15dad7ac55306c45b17babdfcb17" kindref="member">WaveManager::CheckWaveState</ref>()</highlight></codeline>
+<codeline lineno="121"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(bSpawnsComplete)</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::vector&lt;Enemy*&gt;<sp/>cleanEnemies;</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>spawnedEnemies.size();<sp/>++i)</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!spawnedEnemies[i]-&gt;GetIsMarkedForDelete())</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cleanEnemies.push_back(spawnedEnemies[i]);</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"></highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(cleanEnemies.empty())</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>bBossAlive<sp/>=<sp/>bBossSpawned<sp/>&amp;&amp;<sp/>!boss-&gt;<ref refid="class_world_object_1aaebbb0abbabef79ad542f01db4ef6101" kindref="member">GetIsMarkedForDelete</ref>();</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!bBossAlive)</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_wave_manager_1a751017f23187640be76f5db4b6eba243" kindref="member">EndWave</ref>();</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>boss<sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"></highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>spawnedEnemies<sp/>=<sp/>cleanEnemies;</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="145"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"></highlight></codeline>
+<codeline lineno="147"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_wave_manager_1acc8ea63b30bc4ccd02e7b12f1504595c" kindref="member">WaveManager::SpawnEnemy</ref>()</highlight></codeline>
+<codeline lineno="148"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/>++currentWaveSpawnedEnemiesAmount;</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/>lastSpawnTime<sp/>=<sp/>SceneApp::instance-&gt;GetCurrentGameTime();</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"></highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="class_wave_manager_1a9440cd9b8ec292c041b5f794b2bb3217" kindref="member">currentWave</ref><sp/>==<sp/>9<sp/>&amp;&amp;<sp/>!bBossSpawned)</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>boss<sp/>=<sp/>SceneApp::instance-&gt;SpawnMeshActor&lt;<ref refid="class_boss" kindref="compound">Boss</ref>&gt;();</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>bBossSpawned<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>bSpawnRanged<sp/>=<sp/>rand()<sp/>%<sp/>255<sp/>&gt;<sp/>140;</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>spawnLocationIndex<sp/>=<sp/>rand()<sp/>%<sp/>spawnLocations.size();</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>enemyClassRand<sp/>=<sp/>rand()<sp/>%<sp/>300;</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"></highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespace_enemy_class_1a21f4473edd2d0cb0970f6505d46f0866" kindref="member">EnemyClass::Type</ref><sp/>enemyClass;</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(enemyClassRand<sp/>&lt;<sp/>80)</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>enemyClass<sp/>=<sp/><ref refid="namespace_enemy_class_1a21f4473edd2d0cb0970f6505d46f0866ac49546fa32e67ada5d7619f084ef02cb" kindref="member">EnemyClass::LIGHT</ref>;</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(enemyClassRand<sp/>&lt;<sp/>220)</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>enemyClass<sp/>=<sp/><ref refid="namespace_enemy_class_1a21f4473edd2d0cb0970f6505d46f0866ab7b90fd5865f02a5159836adc5d221bf" kindref="member">EnemyClass::NORMAL</ref>;</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>enemyClass<sp/>=<sp/><ref refid="namespace_enemy_class_1a21f4473edd2d0cb0970f6505d46f0866a7a3e72f4e6ac314cad36a24f27c628a9" kindref="member">EnemyClass::HEAVY</ref>;</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"></highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/>gef::Mesh*<sp/>mesh<sp/>=<sp/>SceneApp::instance-&gt;GetPrimitiveBuilder()-&gt;CreateBoxMesh(gef::Vector4(0.5f,<sp/>0.5f,<sp/>0.5f));</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(bSpawnRanged)</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_ranged_enemy" kindref="compound">RangedEnemy</ref>*<sp/>enemy<sp/>=<sp/>SceneApp::instance-&gt;SpawnMeshActor&lt;<ref refid="class_ranged_enemy" kindref="compound">RangedEnemy</ref>&gt;(mesh,<sp/>spawnLocations[spawnLocationIndex]);</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_enemy" kindref="compound">Enemy</ref>*<sp/>n<sp/>=<sp/>(<ref refid="class_enemy" kindref="compound">Enemy</ref>*)(enemy);</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>n-&gt;<ref refid="class_enemy_1a165cd1993b88023d7f1a45f9f2809b23" kindref="member">SetClass</ref>(enemyClass);</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>n-&gt;ScaleWithWave(<ref refid="class_wave_manager_1a9440cd9b8ec292c041b5f794b2bb3217" kindref="member">currentWave</ref>);</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>spawnedEnemies.push_back(n);</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_enemy" kindref="compound">Enemy</ref>*<sp/>enemy<sp/>=<sp/>SceneApp::instance-&gt;SpawnMeshActor&lt;<ref refid="class_enemy" kindref="compound">Enemy</ref>&gt;(mesh,<sp/>spawnLocations[spawnLocationIndex]);</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>enemy-&gt;<ref refid="class_enemy_1a165cd1993b88023d7f1a45f9f2809b23" kindref="member">SetClass</ref>(enemyClass);</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>enemy-&gt;<ref refid="class_enemy_1a43ebf25f19b29fccb8cb71730b95749d" kindref="member">ScaleWithWave</ref>(<ref refid="class_wave_manager_1a9440cd9b8ec292c041b5f794b2bb3217" kindref="member">currentWave</ref>);</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>spawnedEnemies.push_back(enemy);</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="186"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/WaveManager.cpp"/>
+  </compounddef>
+</doxygen>

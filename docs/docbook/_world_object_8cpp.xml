@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__world_object_8cpp" xml:lang="en-US">
+<title>D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/WorldObject.cpp File Reference</title>
+<indexterm><primary>D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/WorldObject.cpp</primary></indexterm>
+<programlisting linenumbering="unnumbered">#include &quot;WorldObject.h&quot;<?linebreak?>#include &quot;graphics/scene.h&quot;<?linebreak?>#include &quot;box2d/b2_body.h&quot;<?linebreak?>#include &quot;box2d/b2_world.h&quot;<?linebreak?>#include &quot;scene_app.h&quot;<?linebreak?></programlisting>Include dependency graph for WorldObject.cpp:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_world_object_8cpp__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>

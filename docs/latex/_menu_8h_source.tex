@@ -1,0 +1,61 @@
+\hypertarget{_menu_8h_source}{}\doxysection{Menu.\+h}
+\label{_menu_8h_source}\index{D:/Uni/CMP208/Hellwatch/build/vs2017/UserInterface/Menu.h@{D:/Uni/CMP208/Hellwatch/build/vs2017/UserInterface/Menu.h}}
+\mbox{\hyperlink{_menu_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{2 }
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_utils_8h}{GameFramework/Utils.h}}"{}}}
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <future>}}
+\DoxyCodeLine{5 }
+\DoxyCodeLine{9 \textcolor{keyword}{struct }\mbox{\hyperlink{struct_menu_button}{MenuButton}}}
+\DoxyCodeLine{10 \{}
+\DoxyCodeLine{11     gef::Vector4 \mbox{\hyperlink{struct_menu_button_a50a2575f7a437f6ae6bcef25f904301e}{position}};}
+\DoxyCodeLine{12     uint32\_t \mbox{\hyperlink{struct_menu_button_a41cfc44472326f1da939089a1b3b791e}{color}} = 0xffffffff;}
+\DoxyCodeLine{13     \textcolor{keywordtype}{float} \mbox{\hyperlink{struct_menu_button_a3248c3e6aebedd07e092b36014bddc13}{scale}} = 1;}
+\DoxyCodeLine{14     gef::TextJustification \mbox{\hyperlink{struct_menu_button_a616c2081a729821f35c44b4be80e771b}{justification}};}
+\DoxyCodeLine{15     std::string \mbox{\hyperlink{struct_menu_button_a23f34c6529bb20a890225fdb069c5afc}{buttonText}};}
+\DoxyCodeLine{16     std::function<void()> \mbox{\hyperlink{struct_menu_button_a16cdea6d06499ccaf865be569f5c3adb}{callbackFunction}};}
+\DoxyCodeLine{17 \};}
+\DoxyCodeLine{18 }
+\DoxyCodeLine{22 \textcolor{keyword}{class }\mbox{\hyperlink{class_menu}{Menu}}}
+\DoxyCodeLine{23 \{}
+\DoxyCodeLine{24 }
+\DoxyCodeLine{25 \textcolor{keyword}{public}:}
+\DoxyCodeLine{26 \textcolor{comment}{    /*******************************************************}}
+\DoxyCodeLine{27 \textcolor{comment}{    *                   MENU INPUT                         *}}
+\DoxyCodeLine{28 \textcolor{comment}{}\textcolor{comment}{    /*******************************************************/}}
+\DoxyCodeLine{29 }
+\DoxyCodeLine{30     \mbox{\hyperlink{class_menu_a831387f51358cfb88cd018e1777bc980}{\string~Menu}}();}
+\DoxyCodeLine{31 }
+\DoxyCodeLine{35     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_menu_a0c64b7333b29000c8b219d2ebc28c03b}{Init}}() = 0;}
+\DoxyCodeLine{36 }
+\DoxyCodeLine{40     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_menu_af29d71473a414e31e914bc637840cb3e}{Update}}();}
+\DoxyCodeLine{41 }
+\DoxyCodeLine{45     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_menu_acef1c8e0a83655c3b17c217567527f8b}{DrawMenuHUD}}(gef::Font* font\_, gef::SpriteRenderer* sprite\_renderer\_);}
+\DoxyCodeLine{46 }
+\DoxyCodeLine{47     \mbox{\hyperlink{class_player_controller}{PlayerController}}* \mbox{\hyperlink{class_menu_a0187883a2d424dadf01b0218d1db7d12}{menuController}};}
+\DoxyCodeLine{48     std::vector<MenuButton> \mbox{\hyperlink{class_menu_a6005d125bc4b0372bcd6d2719cb9a994}{menuButtons}};}
+\DoxyCodeLine{49     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_menu_a1551f565b2ae79bf65449810f4ea81d5}{currentButtonFocused}} = 0;}
+\DoxyCodeLine{50     gef::Sprite* \mbox{\hyperlink{class_menu_a2737fb42e257221f78c86b9221795255}{menuSprite}};}
+\DoxyCodeLine{51 }
+\DoxyCodeLine{52 \textcolor{keyword}{protected}:}
+\DoxyCodeLine{53 }
+\DoxyCodeLine{57     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_menu_a98395444d03f38df02fa9c2aed1fb797}{OnUpButtonPressed}}();}
+\DoxyCodeLine{58 }
+\DoxyCodeLine{62     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_menu_a6b8e73974658482814f99b63ecc4d470}{OnDownButtonPressed}}();}
+\DoxyCodeLine{63 }
+\DoxyCodeLine{67     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_menu_a2370ebbed22dfd0c10491bd8ae45b771}{OnMouseButtonPressed}}(gef::Vector2 mousePos);}
+\DoxyCodeLine{68 }
+\DoxyCodeLine{72     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_menu_a8023104df1848b95c94e1c46fba209ca}{OnControllerUpButton}}(gef::Vector2 dir);}
+\DoxyCodeLine{73 }
+\DoxyCodeLine{77     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_menu_a50e7901f94713c0719e0774474d981c2}{OnControllerDownButton}}(gef::Vector2 dir);}
+\DoxyCodeLine{78 }
+\DoxyCodeLine{82     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_menu_a8bd9fce86817a1125bf7d2e371551689}{OnControllerSubmitButton}}(gef::Vector2 dir);}
+\DoxyCodeLine{83 }
+\DoxyCodeLine{87     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_menu_a2f2b184a3f4000ce78d9e948c95cced4}{CheckForHighlight}}();}
+\DoxyCodeLine{88 }
+\DoxyCodeLine{92     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_menu_a78e162d9e5571f0bb3e93c02cc0f76df}{PressMenuButton}}();}
+\DoxyCodeLine{93 \};}
+\DoxyCodeLine{94 }
+
+\end{DoxyCode}

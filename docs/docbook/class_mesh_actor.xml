@@ -1,0 +1,289 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_mesh_actor" xml:lang="en-US">
+<title>MeshActor Class Reference</title>
+<indexterm><primary>MeshActor</primary></indexterm>
+<para>
+
+<para>An object that has a mesh  </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;MeshActor.h&gt;</computeroutput>
+</para>
+Inheritance diagram for MeshActor:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_mesh_actor__inherit__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Collaboration diagram for MeshActor:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_mesh_actor__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_mesh_actor_1af40424bf59441cfb3362f8ef3e1fbb68">MeshActor</link> ()</para>
+
+<para>Defaults constructor  </para>
+</listitem>
+            <listitem><para><link linkend="_class_mesh_actor_1aed30e8021f75c3221ab6f02cb1fcfcba">MeshActor</link> (gef::Mesh *inMesh)</para>
+
+<para>Constructor which assigns the mesh  </para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_class_mesh_actor_1a9c8f4860ae03966a27c3ee22c2a2b5a1">Render</link> () override</para>
+
+<para>Renders the object  </para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_class_mesh_actor_1a3743470557ddbbc88bc73e4dd283d6bf">Update</link> (float deltaTime) override</para>
+
+<para>Update function, called every frame  </para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_class_mesh_actor_1a31a231014625686e8d40e561a7028931">TakeDamage</link> (float damageAmount)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_mesh_actor_1a25950ae28c6abf2e9e3dc64cfa19c0c7">SetMesh</link> (gef::Mesh *inMesh)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_mesh_actor_1a86f27025c3484267804fdaa5e6082fd4">SetMeshName</link> (std::string newName)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_mesh_actor_1a0217e1969a68278f2548e1553e2ab92b">SetMaterial</link> (gef::Material newMaterial)</para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_class_mesh_actor_1a295a747ea81d8b09e084c488ab183fbb">SetRotation</link> (const gef::Vector4 &amp;inRotation) override</para>
+</listitem>
+            <listitem><para>__forceinline const gef::Mesh * <link linkend="_class_mesh_actor_1a906146d34e290e3bd7132a4dcbfad8a1">GetMesh</link> () const</para>
+</listitem>
+            <listitem><para>__forceinline const std::vector&lt; <link linkend="_class_actor_component">ActorComponent</link> * &gt; &amp; <link linkend="_class_mesh_actor_1a7eef4e0218a4363460a0375585037012">GetComponents</link> ()</para>
+</listitem>
+            <listitem><para>__forceinline const std::string &amp; <link linkend="_class_mesh_actor_1a03ae156a0a281ff9eb128c7c7b44d983">GetMeshName</link> ()</para>
+</listitem>
+            <listitem><para>template&lt;typename ComponentType  = ActorComponent&gt; </para><para>ComponentType * <link linkend="_class_mesh_actor_1a639c1c33b5f22210351fd94ec7d78c43">GetComponent</link> ()</para>
+
+<para>Gets the first component of the specified type from the Actor  </para>
+</listitem>
+            <listitem><para>template&lt;typename ComponentType  = ActorComponent&gt; </para><para>std::vector&lt; ComponentType * &gt; &amp; <link linkend="_class_mesh_actor_1aa824a26a7c24d187f15aa3e9beba11f6">GetComponents</link> ()</para>
+
+<para>Gets all the components of the specified type from the Actor  </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Protected Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>template&lt;typename ComponentType  = ActorComponent&gt; </para><para>ComponentType * <link linkend="_class_mesh_actor_1af9b992a02356ead76d3c36a031bf6eea">CreateComponent</link> ()</para>
+
+<para>Creates and return the specified component, if no component is specified it will create the base class of <link linkend="_class_actor_component">ActorComponent</link>  </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Protected Attributes    </title>
+        <itemizedlist>
+            <listitem><para>std::string <link linkend="_class_mesh_actor_1a8eb71848a77c1c7ffb0f88d526a633e3">meshName</link></para>
+</listitem>
+            <listitem><para>gef::Material <link linkend="_class_mesh_actor_1a8585ace5ca84b7903f216c77661a5787">material</link></para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_mesh_actor_1a858b488e44d63ff8eda02e173fa4da7a">bOverrideMaterial</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Additional Inherited Members    </title>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>An object that has a mesh  </para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_mesh_actor_1af40424bf59441cfb3362f8ef3e1fbb68"/><section>
+    <title>MeshActor()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>MeshActor</primary><secondary>MeshActor</secondary></indexterm>
+<indexterm><primary>MeshActor</primary><secondary>MeshActor</secondary></indexterm>
+<para><computeroutput>MeshActor::MeshActor ( )</computeroutput></para><para>
+
+<para>Defaults constructor  </para>
+</para>
+</section>
+<anchor xml:id="_class_mesh_actor_1aed30e8021f75c3221ab6f02cb1fcfcba"/><section>
+    <title>MeshActor()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>MeshActor</primary><secondary>MeshActor</secondary></indexterm>
+<indexterm><primary>MeshActor</primary><secondary>MeshActor</secondary></indexterm>
+<para><computeroutput>MeshActor::MeshActor (gef::Mesh * inMesh)</computeroutput></para><para>
+
+<para>Constructor which assigns the mesh  </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>inMesh</entry><entry>
+<para>Mesh to be assigned</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_mesh_actor_1af9b992a02356ead76d3c36a031bf6eea"/><section>
+    <title>CreateComponent()</title>
+<indexterm><primary>CreateComponent</primary><secondary>MeshActor</secondary></indexterm>
+<indexterm><primary>MeshActor</primary><secondary>CreateComponent</secondary></indexterm>
+<computeroutput>template&lt;typename ComponentType  = ActorComponent&gt; </computeroutput><para><computeroutput>ComponentType * MeshActor::CreateComponent ( )<computeroutput>[inline]</computeroutput>, <computeroutput>[protected]</computeroutput></computeroutput></para><para>
+
+<para>Creates and return the specified component, if no component is specified it will create the base class of <link linkend="_class_actor_component">ActorComponent</link>  </para>
+</para>
+</section>
+<anchor xml:id="_class_mesh_actor_1a639c1c33b5f22210351fd94ec7d78c43"/><section>
+    <title>GetComponent()</title>
+<indexterm><primary>GetComponent</primary><secondary>MeshActor</secondary></indexterm>
+<indexterm><primary>MeshActor</primary><secondary>GetComponent</secondary></indexterm>
+<computeroutput>template&lt;typename ComponentType  = ActorComponent&gt; </computeroutput><para><computeroutput>ComponentType * MeshActor::GetComponent ( )<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Gets the first component of the specified type from the Actor  </para>
+</para>
+</section>
+<anchor xml:id="_class_mesh_actor_1a7eef4e0218a4363460a0375585037012"/><section>
+    <title>GetComponents()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>GetComponents</primary><secondary>MeshActor</secondary></indexterm>
+<indexterm><primary>MeshActor</primary><secondary>GetComponents</secondary></indexterm>
+<para><computeroutput>__forceinline const std::vector&lt; <link linkend="_class_actor_component">ActorComponent</link> * &gt; &amp; MeshActor::GetComponents ( )<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_mesh_actor_1aa824a26a7c24d187f15aa3e9beba11f6"/><section>
+    <title>GetComponents()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>GetComponents</primary><secondary>MeshActor</secondary></indexterm>
+<indexterm><primary>MeshActor</primary><secondary>GetComponents</secondary></indexterm>
+<computeroutput>template&lt;typename ComponentType  = ActorComponent&gt; </computeroutput><para><computeroutput>std::vector&lt; ComponentType * &gt; &amp; MeshActor::GetComponents ( )<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Gets all the components of the specified type from the Actor  </para>
+</para>
+</section>
+<anchor xml:id="_class_mesh_actor_1a906146d34e290e3bd7132a4dcbfad8a1"/><section>
+    <title>GetMesh()</title>
+<indexterm><primary>GetMesh</primary><secondary>MeshActor</secondary></indexterm>
+<indexterm><primary>MeshActor</primary><secondary>GetMesh</secondary></indexterm>
+<para><computeroutput>__forceinline const gef::Mesh * MeshActor::GetMesh ( ) const<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_mesh_actor_1a03ae156a0a281ff9eb128c7c7b44d983"/><section>
+    <title>GetMeshName()</title>
+<indexterm><primary>GetMeshName</primary><secondary>MeshActor</secondary></indexterm>
+<indexterm><primary>MeshActor</primary><secondary>GetMeshName</secondary></indexterm>
+<para><computeroutput>__forceinline const std::string &amp; MeshActor::GetMeshName ( )<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_mesh_actor_1a9c8f4860ae03966a27c3ee22c2a2b5a1"/><section>
+    <title>Render()</title>
+<indexterm><primary>Render</primary><secondary>MeshActor</secondary></indexterm>
+<indexterm><primary>MeshActor</primary><secondary>Render</secondary></indexterm>
+<para><computeroutput>void MeshActor::Render ( )<computeroutput>[override]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Renders the object  </para>
+</para>
+<para>
+Reimplemented from <link linkend="_class_world_object_1a2a30bf431fa478eb5d24683e1906c261">WorldObject</link>.</para>
+</section>
+<anchor xml:id="_class_mesh_actor_1a0217e1969a68278f2548e1553e2ab92b"/><section>
+    <title>SetMaterial()</title>
+<indexterm><primary>SetMaterial</primary><secondary>MeshActor</secondary></indexterm>
+<indexterm><primary>MeshActor</primary><secondary>SetMaterial</secondary></indexterm>
+<para><computeroutput>void MeshActor::SetMaterial (gef::Material newMaterial)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_mesh_actor_1a25950ae28c6abf2e9e3dc64cfa19c0c7"/><section>
+    <title>SetMesh()</title>
+<indexterm><primary>SetMesh</primary><secondary>MeshActor</secondary></indexterm>
+<indexterm><primary>MeshActor</primary><secondary>SetMesh</secondary></indexterm>
+<para><computeroutput>void MeshActor::SetMesh (gef::Mesh * inMesh)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_mesh_actor_1a86f27025c3484267804fdaa5e6082fd4"/><section>
+    <title>SetMeshName()</title>
+<indexterm><primary>SetMeshName</primary><secondary>MeshActor</secondary></indexterm>
+<indexterm><primary>MeshActor</primary><secondary>SetMeshName</secondary></indexterm>
+<para><computeroutput>void MeshActor::SetMeshName (std::string newName)</computeroutput></para></section>
+<anchor xml:id="_class_mesh_actor_1a295a747ea81d8b09e084c488ab183fbb"/><section>
+    <title>SetRotation()</title>
+<indexterm><primary>SetRotation</primary><secondary>MeshActor</secondary></indexterm>
+<indexterm><primary>MeshActor</primary><secondary>SetRotation</secondary></indexterm>
+<para><computeroutput>void MeshActor::SetRotation (const gef::Vector4 &amp; inRotation)<computeroutput>[override]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+Reimplemented from <link linkend="_class_world_object_1a18ba8b67b53f7df01220643617ecd75c">WorldObject</link>.</para>
+</section>
+<anchor xml:id="_class_mesh_actor_1a31a231014625686e8d40e561a7028931"/><section>
+    <title>TakeDamage()</title>
+<indexterm><primary>TakeDamage</primary><secondary>MeshActor</secondary></indexterm>
+<indexterm><primary>MeshActor</primary><secondary>TakeDamage</secondary></indexterm>
+<para><computeroutput>virtual void MeshActor::TakeDamage (float damageAmount)<computeroutput>[inline]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+Implements <link linkend="_class_i_damagable">IDamagable</link>.</para>
+<para>
+Reimplemented in <link linkend="_class_enemy_dummy_1a1e336fb794e413b2379f09c4fe648259">EnemyDummy</link>, <link linkend="_class_enemy_1ac49759f4d5262aea5e3b6e3f9f56896e">Enemy</link>, and <link linkend="_class_player_character_1ac89349d4afba371e044e4c5816ba68c8">PlayerCharacter</link>.</para>
+</section>
+<anchor xml:id="_class_mesh_actor_1a3743470557ddbbc88bc73e4dd283d6bf"/><section>
+    <title>Update()</title>
+<indexterm><primary>Update</primary><secondary>MeshActor</secondary></indexterm>
+<indexterm><primary>MeshActor</primary><secondary>Update</secondary></indexterm>
+<para><computeroutput>void MeshActor::Update (float deltaTime)<computeroutput>[override]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Update function, called every frame  </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>deltaTime</entry><entry>
+<para>Float variable for the frame time</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Reimplemented from <link linkend="_class_world_object_1a828815709498f192bf138ecfe416c529">WorldObject</link>.</para>
+<para>
+Reimplemented in <link linkend="_class_boss_1aa0943d1fb2d9037e30a2fdc6952878cb">Boss</link>, <link linkend="_class_damage_on_collision_actor_1a468c69c421db3d272bf18c46cbb15c2a">DamageOnCollisionActor</link>, <link linkend="_class_enemy_1a723b79407b55383b2c327f674e3ab3bc">Enemy</link>, <link linkend="_class_meteor_actor_1ab6359799dcd7d0c88bbe0f9aae848819">MeteorActor</link>, <link linkend="_class_particle_actor_1a5ed58a9e57286e08cf8a650aaf22f43f">ParticleActor</link>, <link linkend="_class_player_character_1ad681ccd09dc1ed4c0242bfa0d981d584">PlayerCharacter</link>, and <link linkend="_class_ranged_enemy_1a1f40730c4f733c7e0cdcb7b7a27c89a3">RangedEnemy</link>.</para>
+</section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_class_mesh_actor_1a858b488e44d63ff8eda02e173fa4da7a"/><section>
+    <title>bOverrideMaterial</title>
+<indexterm><primary>bOverrideMaterial</primary><secondary>MeshActor</secondary></indexterm>
+<indexterm><primary>MeshActor</primary><secondary>bOverrideMaterial</secondary></indexterm>
+<para><computeroutput>bool MeshActor::bOverrideMaterial<computeroutput>[protected]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_mesh_actor_1a8585ace5ca84b7903f216c77661a5787"/><section>
+    <title>material</title>
+<indexterm><primary>material</primary><secondary>MeshActor</secondary></indexterm>
+<indexterm><primary>MeshActor</primary><secondary>material</secondary></indexterm>
+<para><computeroutput>gef::Material MeshActor::material<computeroutput>[protected]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_mesh_actor_1a8eb71848a77c1c7ffb0f88d526a633e3"/><section>
+    <title>meshName</title>
+<indexterm><primary>meshName</primary><secondary>MeshActor</secondary></indexterm>
+<indexterm><primary>MeshActor</primary><secondary>meshName</secondary></indexterm>
+<para><computeroutput>std::string MeshActor::meshName<computeroutput>[protected]</computeroutput></computeroutput></para></section>
+<para>
+The documentation for this class was generated from the following files:</para>
+D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/<link linkend="__mesh_actor_8h">MeshActor.h</link>D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/<link linkend="__mesh_actor_8cpp">MeshActor.cpp</link></section>
+</section>

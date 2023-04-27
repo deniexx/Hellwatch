@@ -1,0 +1,156 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_boss" xml:lang="en-US">
+<title>Boss Class Reference</title>
+<indexterm><primary>Boss</primary></indexterm>
+<para>
+<computeroutput>#include &lt;Boss.h&gt;</computeroutput>
+</para>
+Inheritance diagram for Boss:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_boss__inherit__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Collaboration diagram for Boss:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_boss__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_boss_1af287739a9fe8cb9501795656d34f3018">Boss</link> ()</para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_class_boss_1aa0943d1fb2d9037e30a2fdc6952878cb">Update</link> (float deltaTime) override</para>
+
+<para>Update function, called every frame  </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Protected Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>virtual void <link linkend="_class_boss_1aca38363ac8587bf7012d4c6dec8600a9">PostInit</link> () override</para>
+
+<para>Override this to Initialize variables or do any necessary work when the object is created  </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Protected Attributes    </title>
+        <itemizedlist>
+            <listitem><para>bool <link linkend="_class_boss_1acf6e40d0e800c3d6ea2b529c4351da9c">isJumping</link> = false</para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_boss_1a605d9ab656bcc24ef4b8591bf740f72e">pastMidpoint</link> = false</para>
+</listitem>
+            <listitem><para>gef::Vector4 <link linkend="_class_boss_1a0945edb506e027ea61cbfd0750b4bd0b">playerPosition</link></para>
+</listitem>
+            <listitem><para>gef::Vector4 <link linkend="_class_boss_1ab988b026b0a44d5b9695b1fae80f4bff">bossPosition</link></para>
+</listitem>
+            <listitem><para>gef::Vector4 <link linkend="_class_boss_1a66b3a8266b0ce9a045cf6d6d41ca3fc4">midpoint</link></para>
+</listitem>
+            <listitem><para>float <link linkend="_class_boss_1a5f8bd3dedd5d923284440df4dce7c6d5">alpha</link> = 0</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Additional Inherited Members    </title>
+</simplesect>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_boss_1af287739a9fe8cb9501795656d34f3018"/><section>
+    <title>Boss()</title>
+<indexterm><primary>Boss</primary><secondary>Boss</secondary></indexterm>
+<indexterm><primary>Boss</primary><secondary>Boss</secondary></indexterm>
+<para><computeroutput>Boss::Boss ( )</computeroutput></para></section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_boss_1aca38363ac8587bf7012d4c6dec8600a9"/><section>
+    <title>PostInit()</title>
+<indexterm><primary>PostInit</primary><secondary>Boss</secondary></indexterm>
+<indexterm><primary>Boss</primary><secondary>PostInit</secondary></indexterm>
+<para><computeroutput>void Boss::PostInit ( )<computeroutput>[override]</computeroutput>, <computeroutput>[protected]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Override this to Initialize variables or do any necessary work when the object is created  </para>
+</para>
+<para>
+Reimplemented from <link linkend="_class_enemy_1a487c39395ee71759c8bf10707776755e">Enemy</link>.</para>
+</section>
+<anchor xml:id="_class_boss_1aa0943d1fb2d9037e30a2fdc6952878cb"/><section>
+    <title>Update()</title>
+<indexterm><primary>Update</primary><secondary>Boss</secondary></indexterm>
+<indexterm><primary>Boss</primary><secondary>Update</secondary></indexterm>
+<para><computeroutput>void Boss::Update (float deltaTime)<computeroutput>[override]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Update function, called every frame  </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>deltaTime</entry><entry>
+<para>Float variable for the frame time</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Reimplemented from <link linkend="_class_enemy_1a723b79407b55383b2c327f674e3ab3bc">Enemy</link>.</para>
+</section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_class_boss_1a5f8bd3dedd5d923284440df4dce7c6d5"/><section>
+    <title>alpha</title>
+<indexterm><primary>alpha</primary><secondary>Boss</secondary></indexterm>
+<indexterm><primary>Boss</primary><secondary>alpha</secondary></indexterm>
+<para><computeroutput>float Boss::alpha = 0<computeroutput>[protected]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_boss_1ab988b026b0a44d5b9695b1fae80f4bff"/><section>
+    <title>bossPosition</title>
+<indexterm><primary>bossPosition</primary><secondary>Boss</secondary></indexterm>
+<indexterm><primary>Boss</primary><secondary>bossPosition</secondary></indexterm>
+<para><computeroutput>gef::Vector4 Boss::bossPosition<computeroutput>[protected]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_boss_1acf6e40d0e800c3d6ea2b529c4351da9c"/><section>
+    <title>isJumping</title>
+<indexterm><primary>isJumping</primary><secondary>Boss</secondary></indexterm>
+<indexterm><primary>Boss</primary><secondary>isJumping</secondary></indexterm>
+<para><computeroutput>bool Boss::isJumping = false<computeroutput>[protected]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_boss_1a66b3a8266b0ce9a045cf6d6d41ca3fc4"/><section>
+    <title>midpoint</title>
+<indexterm><primary>midpoint</primary><secondary>Boss</secondary></indexterm>
+<indexterm><primary>Boss</primary><secondary>midpoint</secondary></indexterm>
+<para><computeroutput>gef::Vector4 Boss::midpoint<computeroutput>[protected]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_boss_1a605d9ab656bcc24ef4b8591bf740f72e"/><section>
+    <title>pastMidpoint</title>
+<indexterm><primary>pastMidpoint</primary><secondary>Boss</secondary></indexterm>
+<indexterm><primary>Boss</primary><secondary>pastMidpoint</secondary></indexterm>
+<para><computeroutput>bool Boss::pastMidpoint = false<computeroutput>[protected]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_boss_1a0945edb506e027ea61cbfd0750b4bd0b"/><section>
+    <title>playerPosition</title>
+<indexterm><primary>playerPosition</primary><secondary>Boss</secondary></indexterm>
+<indexterm><primary>Boss</primary><secondary>playerPosition</secondary></indexterm>
+<para><computeroutput>gef::Vector4 Boss::playerPosition<computeroutput>[protected]</computeroutput></computeroutput></para></section>
+<para>
+The documentation for this class was generated from the following files:</para>
+D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/<link linkend="__boss_8h">Boss.h</link>D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/<link linkend="__boss_8cpp">Boss.cpp</link></section>
+</section>

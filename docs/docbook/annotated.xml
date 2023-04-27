@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_annotated" xml:lang="en-US">
+<title>Class List</title>
+Here are the classes, structs, unions and interfaces with brief descriptions:<link linkend="_class_abilities_component">AbilitiesComponent</link>
+<para>A component allowing the object to use abilities @NOTE: Requires an attribute component to function properly  </para>
+<link linkend="_class_ability">Ability</link>
+<para>A base ability class, designed to be inherited and provided with functionality  </para>
+<link linkend="_struct_activation_outcome">ActivationOutcome</link>
+<para>Outcome of attempting to activate this ability  </para>
+<link linkend="_class_actor_component">ActorComponent</link>
+<para>Base class to be derived for actor components  </para>
+<link linkend="_class_attribute_component">AttributeComponent</link><link linkend="_class_boss">Boss</link><link linkend="_class_character_movement_component">CharacterMovementComponent</link>
+<para>A component that handles moving the character  </para>
+<link linkend="_class_damage_on_collision_actor">DamageOnCollisionActor</link>
+<para>Actor to spawn to perform damage on collision  </para>
+<link linkend="_class_dash">Dash</link>
+<para>Applies a force to the player in the mouse direction and makes the player briefly invincible  </para>
+<link linkend="_class_enemy">Enemy</link>
+<para>A base class for all enemies, implemented as a melee enemy  </para>
+<link linkend="_class_enemy_dummy">EnemyDummy</link>
+<para>A dummy enemy class used for testing damage  </para>
+<link linkend="_struct_f_attribute">FAttribute</link>
+<para>Attribute representation  </para>
+<link linkend="_struct_f_camera_shake">FCameraShake</link><link linkend="_struct_f_key_bind_controller">FKeyBindController</link><link linkend="_struct_f_key_bind_keyboard">FKeyBindKeyboard</link><link linkend="_struct_f_key_bind_mouse">FKeyBindMouse</link><link linkend="_struct_f_key_bind_set">FKeyBindSet</link><link linkend="_struct_f_particle_data">FParticleData</link><link linkend="_struct_f_wave_definition">FWaveDefinition</link>
+<para>A definition for a wave, the max number of spawned enemies and the period of spawning them  </para>
+<link linkend="_class_game_end_menu">GameEndMenu</link><link linkend="_class_ice_bolt">IceBolt</link>
+<para>Fires an ice projectile that hits the first target ONLY  </para>
+<link linkend="_class_i_damagable">IDamagable</link>
+<para>Interface to be added, when we want the specific class to be able to take damage  </para>
+<link linkend="_class_main_menu">MainMenu</link>
+<para>Main <link linkend="_class_menu">Menu</link> of the game  </para>
+<link linkend="_class_menu">Menu</link>
+<para>Base <link linkend="_class_menu">Menu</link> class, that mainly handles actions that we bind to in child classes  </para>
+<link linkend="_struct_menu_button">MenuButton</link>
+<para>A <link linkend="_class_menu">Menu</link> button definition, used for rendering and callbacks  </para>
+<link linkend="_class_mesh_actor">MeshActor</link>
+<para>An object that has a mesh  </para>
+<link linkend="_class_meteor">Meteor</link><link linkend="_class_meteor_actor">MeteorActor</link><link linkend="_class_o_b_j_mesh_loader">OBJMeshLoader</link><link linkend="_class_particle_actor">ParticleActor</link><link linkend="_class_particle_manager">ParticleManager</link><link linkend="_class_pause_menu">PauseMenu</link>
+<para>Pause <link linkend="_class_menu">Menu</link> to be used in Pause <link linkend="_namespace_game_state">GameState</link>  </para>
+<link linkend="_class_piercing_strike">PiercingStrike</link><link linkend="_class_player_character">PlayerCharacter</link>
+<para>The class that the player uses during the GameLoop <link linkend="_namespace_game_state">GameState</link>  </para>
+<link linkend="_class_player_controller">PlayerController</link>
+<para>Responsible for reading input and calling appropriate events  </para>
+<link linkend="_class_primitive_builder">PrimitiveBuilder</link><link linkend="_class_ranged_enemy">RangedEnemy</link>
+<para>Ranged enemy implementation, tries to keep distance and shoots from afar  </para>
+<link linkend="_class_scene_app">SceneApp</link><link linkend="_class_shop_menu">ShopMenu</link>
+<para>Shop menu to be used in Shop <link linkend="_namespace_game_state">GameState</link>  </para>
+<link linkend="_class_sprite_actor">SpriteActor</link>
+<para>An object that has a sprite  </para>
+<link linkend="_class_wave_manager">WaveManager</link>
+<para>Manages the spawning of enemies and tracking the progress of waves  </para>
+<link linkend="_class_world_object">WorldObject</link></section>

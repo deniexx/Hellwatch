@@ -1,0 +1,154 @@
+\hypertarget{class_character_movement_component}{}\doxysection{Character\+Movement\+Component Class Reference}
+\label{class_character_movement_component}\index{CharacterMovementComponent@{CharacterMovementComponent}}
+
+
+A component that handles moving the character   
+
+
+
+
+{\ttfamily \#include $<$Character\+Movement\+Component.\+h$>$}
+
+
+
+Inheritance diagram for Character\+Movement\+Component\+:
+% FIG 0
+
+
+Collaboration diagram for Character\+Movement\+Component\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_character_movement_component_a3b46719028da4715fcb1aa41000ef690}{Character\+Movement\+Component}} ()
+\item 
+virtual void \mbox{\hyperlink{class_character_movement_component_a44e667731d0323b2dfcdf80ee6e7f3ba}{Update\+Component}} (float delta\+Time) override
+\item 
+void \mbox{\hyperlink{class_character_movement_component_a63d4bb5a09a7addb1664b0f5183ec13c}{Apply\+Movement\+Force\+In\+Direction}} (b2\+Vec2 force)
+\begin{DoxyCompactList}\small\item\em Applies Movement force in a direction, that is scaled with the acceleration  \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_character_movement_component_a6cb4c791b22b66c29aa830e40d947d0c}{Set\+Collision\+Body}} (b2\+Body $\ast$new\+Body)
+\item 
+void \mbox{\hyperlink{class_character_movement_component_a5c8c5c00d78dc4d38e14c502e9567695}{Set\+Frozen}} (bool b\+New\+State)
+\item 
+void \mbox{\hyperlink{class_character_movement_component_ab3ab4283107113582bc6c7f670c86b3c}{Set\+Maximum\+Speed}} (float new\+Maximum\+Speed)
+\item 
+void \mbox{\hyperlink{class_character_movement_component_aa0c6001da09d289c9cdc6a2332293ab6}{Set\+Acceleration}} (float new\+Acceleration)
+\item 
+\+\_\+\+\_\+forceinline bool \mbox{\hyperlink{class_character_movement_component_a95de1dc66286d10e4099b26ee46bdd7b}{Is\+Frozen}} () const
+\item 
+\+\_\+\+\_\+forceinline float \mbox{\hyperlink{class_character_movement_component_a0a0b9e6ccb23a433d86991de1d9a2ad8}{Get\+Speed}} () const
+\item 
+\+\_\+\+\_\+forceinline float \mbox{\hyperlink{class_character_movement_component_a1c326e239d25123a6e6ab1893b7c3006}{Get\+Maximum\+Speed}} ()
+\item 
+\+\_\+\+\_\+forceinline float \mbox{\hyperlink{class_character_movement_component_a07ae2e8b49579f6737117051c3391ed1}{Get\+Acceleration}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_character_movement_component_a7c20d542f943ec133dd3f1df7fee988e}{Post\+Init}} () override
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+A component that handles moving the character  
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_character_movement_component_a3b46719028da4715fcb1aa41000ef690}\label{class_character_movement_component_a3b46719028da4715fcb1aa41000ef690}} 
+\index{CharacterMovementComponent@{CharacterMovementComponent}!CharacterMovementComponent@{CharacterMovementComponent}}
+\index{CharacterMovementComponent@{CharacterMovementComponent}!CharacterMovementComponent@{CharacterMovementComponent}}
+\doxysubsubsection{\texorpdfstring{CharacterMovementComponent()}{CharacterMovementComponent()}}
+{\footnotesize\ttfamily Character\+Movement\+Component\+::\+Character\+Movement\+Component (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_character_movement_component_a63d4bb5a09a7addb1664b0f5183ec13c}\label{class_character_movement_component_a63d4bb5a09a7addb1664b0f5183ec13c}} 
+\index{CharacterMovementComponent@{CharacterMovementComponent}!ApplyMovementForceInDirection@{ApplyMovementForceInDirection}}
+\index{ApplyMovementForceInDirection@{ApplyMovementForceInDirection}!CharacterMovementComponent@{CharacterMovementComponent}}
+\doxysubsubsection{\texorpdfstring{ApplyMovementForceInDirection()}{ApplyMovementForceInDirection()}}
+{\footnotesize\ttfamily void Character\+Movement\+Component\+::\+Apply\+Movement\+Force\+In\+Direction (\begin{DoxyParamCaption}\item[{b2\+Vec2}]{force }\end{DoxyParamCaption})}
+
+
+
+Applies Movement force in a direction, that is scaled with the acceleration  
+
+
+\begin{DoxyParams}{Parameters}
+{\em force} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_character_movement_component_a07ae2e8b49579f6737117051c3391ed1}\label{class_character_movement_component_a07ae2e8b49579f6737117051c3391ed1}} 
+\index{CharacterMovementComponent@{CharacterMovementComponent}!GetAcceleration@{GetAcceleration}}
+\index{GetAcceleration@{GetAcceleration}!CharacterMovementComponent@{CharacterMovementComponent}}
+\doxysubsubsection{\texorpdfstring{GetAcceleration()}{GetAcceleration()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+forceinline float Character\+Movement\+Component\+::\+Get\+Acceleration (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_character_movement_component_a1c326e239d25123a6e6ab1893b7c3006}\label{class_character_movement_component_a1c326e239d25123a6e6ab1893b7c3006}} 
+\index{CharacterMovementComponent@{CharacterMovementComponent}!GetMaximumSpeed@{GetMaximumSpeed}}
+\index{GetMaximumSpeed@{GetMaximumSpeed}!CharacterMovementComponent@{CharacterMovementComponent}}
+\doxysubsubsection{\texorpdfstring{GetMaximumSpeed()}{GetMaximumSpeed()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+forceinline float Character\+Movement\+Component\+::\+Get\+Maximum\+Speed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_character_movement_component_a0a0b9e6ccb23a433d86991de1d9a2ad8}\label{class_character_movement_component_a0a0b9e6ccb23a433d86991de1d9a2ad8}} 
+\index{CharacterMovementComponent@{CharacterMovementComponent}!GetSpeed@{GetSpeed}}
+\index{GetSpeed@{GetSpeed}!CharacterMovementComponent@{CharacterMovementComponent}}
+\doxysubsubsection{\texorpdfstring{GetSpeed()}{GetSpeed()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+forceinline float Character\+Movement\+Component\+::\+Get\+Speed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_character_movement_component_a95de1dc66286d10e4099b26ee46bdd7b}\label{class_character_movement_component_a95de1dc66286d10e4099b26ee46bdd7b}} 
+\index{CharacterMovementComponent@{CharacterMovementComponent}!IsFrozen@{IsFrozen}}
+\index{IsFrozen@{IsFrozen}!CharacterMovementComponent@{CharacterMovementComponent}}
+\doxysubsubsection{\texorpdfstring{IsFrozen()}{IsFrozen()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+forceinline bool Character\+Movement\+Component\+::\+Is\+Frozen (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_character_movement_component_a7c20d542f943ec133dd3f1df7fee988e}\label{class_character_movement_component_a7c20d542f943ec133dd3f1df7fee988e}} 
+\index{CharacterMovementComponent@{CharacterMovementComponent}!PostInit@{PostInit}}
+\index{PostInit@{PostInit}!CharacterMovementComponent@{CharacterMovementComponent}}
+\doxysubsubsection{\texorpdfstring{PostInit()}{PostInit()}}
+{\footnotesize\ttfamily void Character\+Movement\+Component\+::\+Post\+Init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_actor_component_a467d082f3fedd6cf2acacb117450f90e}{Actor\+Component}}.
+
+\mbox{\Hypertarget{class_character_movement_component_aa0c6001da09d289c9cdc6a2332293ab6}\label{class_character_movement_component_aa0c6001da09d289c9cdc6a2332293ab6}} 
+\index{CharacterMovementComponent@{CharacterMovementComponent}!SetAcceleration@{SetAcceleration}}
+\index{SetAcceleration@{SetAcceleration}!CharacterMovementComponent@{CharacterMovementComponent}}
+\doxysubsubsection{\texorpdfstring{SetAcceleration()}{SetAcceleration()}}
+{\footnotesize\ttfamily void Character\+Movement\+Component\+::\+Set\+Acceleration (\begin{DoxyParamCaption}\item[{float}]{new\+Acceleration }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_character_movement_component_a6cb4c791b22b66c29aa830e40d947d0c}\label{class_character_movement_component_a6cb4c791b22b66c29aa830e40d947d0c}} 
+\index{CharacterMovementComponent@{CharacterMovementComponent}!SetCollisionBody@{SetCollisionBody}}
+\index{SetCollisionBody@{SetCollisionBody}!CharacterMovementComponent@{CharacterMovementComponent}}
+\doxysubsubsection{\texorpdfstring{SetCollisionBody()}{SetCollisionBody()}}
+{\footnotesize\ttfamily void Character\+Movement\+Component\+::\+Set\+Collision\+Body (\begin{DoxyParamCaption}\item[{b2\+Body $\ast$}]{new\+Body }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_character_movement_component_a5c8c5c00d78dc4d38e14c502e9567695}\label{class_character_movement_component_a5c8c5c00d78dc4d38e14c502e9567695}} 
+\index{CharacterMovementComponent@{CharacterMovementComponent}!SetFrozen@{SetFrozen}}
+\index{SetFrozen@{SetFrozen}!CharacterMovementComponent@{CharacterMovementComponent}}
+\doxysubsubsection{\texorpdfstring{SetFrozen()}{SetFrozen()}}
+{\footnotesize\ttfamily void Character\+Movement\+Component\+::\+Set\+Frozen (\begin{DoxyParamCaption}\item[{bool}]{b\+New\+State }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_character_movement_component_ab3ab4283107113582bc6c7f670c86b3c}\label{class_character_movement_component_ab3ab4283107113582bc6c7f670c86b3c}} 
+\index{CharacterMovementComponent@{CharacterMovementComponent}!SetMaximumSpeed@{SetMaximumSpeed}}
+\index{SetMaximumSpeed@{SetMaximumSpeed}!CharacterMovementComponent@{CharacterMovementComponent}}
+\doxysubsubsection{\texorpdfstring{SetMaximumSpeed()}{SetMaximumSpeed()}}
+{\footnotesize\ttfamily void Character\+Movement\+Component\+::\+Set\+Maximum\+Speed (\begin{DoxyParamCaption}\item[{float}]{new\+Maximum\+Speed }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_character_movement_component_a44e667731d0323b2dfcdf80ee6e7f3ba}\label{class_character_movement_component_a44e667731d0323b2dfcdf80ee6e7f3ba}} 
+\index{CharacterMovementComponent@{CharacterMovementComponent}!UpdateComponent@{UpdateComponent}}
+\index{UpdateComponent@{UpdateComponent}!CharacterMovementComponent@{CharacterMovementComponent}}
+\doxysubsubsection{\texorpdfstring{UpdateComponent()}{UpdateComponent()}}
+{\footnotesize\ttfamily void Character\+Movement\+Component\+::\+Update\+Component (\begin{DoxyParamCaption}\item[{float}]{delta\+Time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_actor_component_af730b3c7d2b4154e1fb0962db7750f6b}{Actor\+Component}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Uni/\+CMP208/\+Hellwatch/build/vs2017/\+Actor\+Components/\mbox{\hyperlink{_character_movement_component_8h}{Character\+Movement\+Component.\+h}}\item 
+D\+:/\+Uni/\+CMP208/\+Hellwatch/build/vs2017/\+Actor\+Components/\mbox{\hyperlink{_character_movement_component_8cpp}{Character\+Movement\+Component.\+cpp}}\end{DoxyCompactItemize}

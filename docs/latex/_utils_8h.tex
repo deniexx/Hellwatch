@@ -1,0 +1,133 @@
+\hypertarget{_utils_8h}{}\doxysection{D\+:/\+Uni/\+CMP208/\+Hellwatch/build/vs2017/\+Game\+Framework/\+Utils.h File Reference}
+\label{_utils_8h}\index{D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/Utils.h@{D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/Utils.h}}
+{\ttfamily \#include \char`\"{}maths/\+Vector2.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}maths/vector4.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}maths/matrix44.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$graphics/renderer\+\_\+3d.\+h$>$}\newline
+{\ttfamily \#include $<$scene\+\_\+app.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}maths/math\+\_\+utils.\+h\char`\"{}}\newline
+Include dependency graph for Utils.\+h\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespace_apply_damage_on}{Apply\+Damage\+On}}
+\begin{DoxyCompactList}\small\item\em Enum used to decided on what to apply damage  \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{_utils_8h_a642e16f35aa1e585c25e405ede76e115}{NO\+\_\+\+ID}}~0
+\item 
+\#define \mbox{\hyperlink{_utils_8h_ae50e546c560a653d3409bd594d34dc0d}{PLAYER\+\_\+\+ID}}~1
+\item 
+\#define \mbox{\hyperlink{_utils_8h_a85fe7dfc8d35e0e6ee68ceb22ab3b57b}{ENEMY\+\_\+\+ID}}~2
+\item 
+\#define \mbox{\hyperlink{_utils_8h_af4955eee766517b72730e7c165711a6c}{ENVIRONMENT\+\_\+\+ID}}~3
+\item 
+\#define \mbox{\hyperlink{_utils_8h_a598a3330b3c21701223ee0ca14316eca}{PI}}~3.\+14159265358979323846
+\item 
+\#define \mbox{\hyperlink{_utils_8h_afc0ee7bd35c161a2d80b8e8f04fd9213}{GENERATED\+\_\+\+BODY}}(Parent\+Class,  Current\+Class)
+\item 
+\#define \mbox{\hyperlink{_utils_8h_addcf0f43bf2efc658ec99c4911957967}{bind\+Func}}(func\+Name)~\mbox{[}this\mbox{]}() \{ func\+Name(); \}
+\item 
+\#define \mbox{\hyperlink{_utils_8h_ad2c68575874b116204c5bd611d701513}{bind\+Func\+\_\+\+ONEParam}}(func\+Name,  param\+Type,  param\+Name)~\mbox{[}this\mbox{]}(param\+Type param\+Name) \{ func\+Name(param\+Name); \}
+\item 
+\#define \mbox{\hyperlink{_utils_8h_a8dc74a463255788898ad6d2a82f7fe89}{bind\+Func\+\_\+\+TWOParams}}(func\+Name,  param\+Type1,  param\+Name1,  param\+Type2,  param\+Name2)~\mbox{[}this\mbox{]}(param\+Type1 param\+Name1, param\+Type2 param\+Name2) \{ func\+Name(param\+Name1, param\+Name2); \}
+\item 
+\#define \mbox{\hyperlink{_utils_8h_a293f714dcb517d7dbe317dda57921a35}{bind\+Func\+\_\+\+THREEParam}}(func\+Name,  param\+Type1,  param\+Name1,  param\+Type2,  param\+Name2,  param\+Type3,  param\+Name3)~\mbox{[}this\mbox{]}(param\+Type1 param\+Name1, param\+Type2 param\+Name2, param\+Type3 param\+Name3) \{ func\+Name(param\+Name1, param\+Name2, param\+Name3); \}
+\item 
+\#define \mbox{\hyperlink{_utils_8h_a4604f826239490e2607d6c77ab3342a4}{bind\+Func\+\_\+\+FOURParams}}(func\+Name,  param\+Type1,  param\+Name1,  param\+Type2,  param\+Name2,  param\+Type3,  param\+Name3,  param\+Type4,  param\+Name4)~\mbox{[}this\mbox{]}(param\+Type1 param\+Name1, param\+Type2 param\+Name2, param\+Type3 param\+Name3, param\+Type4 param\+Name4) \{ func\+Name(param\+Name1, param\+Name2, param\+Name3, param\+Name4); \}
+\item 
+\#define \mbox{\hyperlink{_utils_8h_ab1f86d0a9b054701150547f6d57a6e9b}{bind\+Func\+\_\+\+FIVEParams}}(func\+Name,  param\+Type1,  param\+Name1,  param\+Type2,  param\+Name2,  param\+Type3,  param\+Name3,  param\+Type4,  param\+Name4,  param\+Type5,  param\+Name5)~\mbox{[}this\mbox{]}(param\+Type1 param\+Name1, param\+Type2 param\+Name2, param\+Type3 param\+Name3, param\+Type4 param\+Name4, param\+Name5 param\+Name5) \{ func\+Name(param\+Name1, param\+Name2, param\+Name3, param\+Name4, param\+Name5); \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{namespace_apply_damage_on_aab4652342cac35cdff458c5aa2bad289}{Apply\+Damage\+On\+::\+Type}} \{ \mbox{\hyperlink{namespace_apply_damage_on_aab4652342cac35cdff458c5aa2bad289a17c0a2d2e83ad970a7bb7395c9819d1f}{Apply\+Damage\+On\+::\+Enemies\+Only}}
+, \mbox{\hyperlink{namespace_apply_damage_on_aab4652342cac35cdff458c5aa2bad289af658fe1d6a4dd178955748cb85f117ac}{Apply\+Damage\+On\+::\+Player\+Only}}
+, \mbox{\hyperlink{namespace_apply_damage_on_aab4652342cac35cdff458c5aa2bad289a1b46eaf8b75eb03bd8e0c31036b8d89b}{Apply\+Damage\+On\+::\+Enemies\+And\+Player}}
+ \}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{_utils_8h_addcf0f43bf2efc658ec99c4911957967}\label{_utils_8h_addcf0f43bf2efc658ec99c4911957967}} 
+\index{Utils.h@{Utils.h}!bindFunc@{bindFunc}}
+\index{bindFunc@{bindFunc}!Utils.h@{Utils.h}}
+\doxysubsubsection{\texorpdfstring{bindFunc}{bindFunc}}
+{\footnotesize\ttfamily \#define bind\+Func(\begin{DoxyParamCaption}\item[{}]{func\+Name }\end{DoxyParamCaption})~\mbox{[}this\mbox{]}() \{ func\+Name(); \}}
+
+\mbox{\Hypertarget{_utils_8h_ab1f86d0a9b054701150547f6d57a6e9b}\label{_utils_8h_ab1f86d0a9b054701150547f6d57a6e9b}} 
+\index{Utils.h@{Utils.h}!bindFunc\_FIVEParams@{bindFunc\_FIVEParams}}
+\index{bindFunc\_FIVEParams@{bindFunc\_FIVEParams}!Utils.h@{Utils.h}}
+\doxysubsubsection{\texorpdfstring{bindFunc\_FIVEParams}{bindFunc\_FIVEParams}}
+{\footnotesize\ttfamily \#define bind\+Func\+\_\+\+FIVEParams(\begin{DoxyParamCaption}\item[{}]{func\+Name,  }\item[{}]{param\+Type1,  }\item[{}]{param\+Name1,  }\item[{}]{param\+Type2,  }\item[{}]{param\+Name2,  }\item[{}]{param\+Type3,  }\item[{}]{param\+Name3,  }\item[{}]{param\+Type4,  }\item[{}]{param\+Name4,  }\item[{}]{param\+Type5,  }\item[{}]{param\+Name5 }\end{DoxyParamCaption})~\mbox{[}this\mbox{]}(param\+Type1 param\+Name1, param\+Type2 param\+Name2, param\+Type3 param\+Name3, param\+Type4 param\+Name4, param\+Name5 param\+Name5) \{ func\+Name(param\+Name1, param\+Name2, param\+Name3, param\+Name4, param\+Name5); \}}
+
+\mbox{\Hypertarget{_utils_8h_a4604f826239490e2607d6c77ab3342a4}\label{_utils_8h_a4604f826239490e2607d6c77ab3342a4}} 
+\index{Utils.h@{Utils.h}!bindFunc\_FOURParams@{bindFunc\_FOURParams}}
+\index{bindFunc\_FOURParams@{bindFunc\_FOURParams}!Utils.h@{Utils.h}}
+\doxysubsubsection{\texorpdfstring{bindFunc\_FOURParams}{bindFunc\_FOURParams}}
+{\footnotesize\ttfamily \#define bind\+Func\+\_\+\+FOURParams(\begin{DoxyParamCaption}\item[{}]{func\+Name,  }\item[{}]{param\+Type1,  }\item[{}]{param\+Name1,  }\item[{}]{param\+Type2,  }\item[{}]{param\+Name2,  }\item[{}]{param\+Type3,  }\item[{}]{param\+Name3,  }\item[{}]{param\+Type4,  }\item[{}]{param\+Name4 }\end{DoxyParamCaption})~\mbox{[}this\mbox{]}(param\+Type1 param\+Name1, param\+Type2 param\+Name2, param\+Type3 param\+Name3, param\+Type4 param\+Name4) \{ func\+Name(param\+Name1, param\+Name2, param\+Name3, param\+Name4); \}}
+
+\mbox{\Hypertarget{_utils_8h_ad2c68575874b116204c5bd611d701513}\label{_utils_8h_ad2c68575874b116204c5bd611d701513}} 
+\index{Utils.h@{Utils.h}!bindFunc\_ONEParam@{bindFunc\_ONEParam}}
+\index{bindFunc\_ONEParam@{bindFunc\_ONEParam}!Utils.h@{Utils.h}}
+\doxysubsubsection{\texorpdfstring{bindFunc\_ONEParam}{bindFunc\_ONEParam}}
+{\footnotesize\ttfamily \#define bind\+Func\+\_\+\+ONEParam(\begin{DoxyParamCaption}\item[{}]{func\+Name,  }\item[{}]{param\+Type,  }\item[{}]{param\+Name }\end{DoxyParamCaption})~\mbox{[}this\mbox{]}(param\+Type param\+Name) \{ func\+Name(param\+Name); \}}
+
+\mbox{\Hypertarget{_utils_8h_a293f714dcb517d7dbe317dda57921a35}\label{_utils_8h_a293f714dcb517d7dbe317dda57921a35}} 
+\index{Utils.h@{Utils.h}!bindFunc\_THREEParam@{bindFunc\_THREEParam}}
+\index{bindFunc\_THREEParam@{bindFunc\_THREEParam}!Utils.h@{Utils.h}}
+\doxysubsubsection{\texorpdfstring{bindFunc\_THREEParam}{bindFunc\_THREEParam}}
+{\footnotesize\ttfamily \#define bind\+Func\+\_\+\+THREEParam(\begin{DoxyParamCaption}\item[{}]{func\+Name,  }\item[{}]{param\+Type1,  }\item[{}]{param\+Name1,  }\item[{}]{param\+Type2,  }\item[{}]{param\+Name2,  }\item[{}]{param\+Type3,  }\item[{}]{param\+Name3 }\end{DoxyParamCaption})~\mbox{[}this\mbox{]}(param\+Type1 param\+Name1, param\+Type2 param\+Name2, param\+Type3 param\+Name3) \{ func\+Name(param\+Name1, param\+Name2, param\+Name3); \}}
+
+\mbox{\Hypertarget{_utils_8h_a8dc74a463255788898ad6d2a82f7fe89}\label{_utils_8h_a8dc74a463255788898ad6d2a82f7fe89}} 
+\index{Utils.h@{Utils.h}!bindFunc\_TWOParams@{bindFunc\_TWOParams}}
+\index{bindFunc\_TWOParams@{bindFunc\_TWOParams}!Utils.h@{Utils.h}}
+\doxysubsubsection{\texorpdfstring{bindFunc\_TWOParams}{bindFunc\_TWOParams}}
+{\footnotesize\ttfamily \#define bind\+Func\+\_\+\+TWOParams(\begin{DoxyParamCaption}\item[{}]{func\+Name,  }\item[{}]{param\+Type1,  }\item[{}]{param\+Name1,  }\item[{}]{param\+Type2,  }\item[{}]{param\+Name2 }\end{DoxyParamCaption})~\mbox{[}this\mbox{]}(param\+Type1 param\+Name1, param\+Type2 param\+Name2) \{ func\+Name(param\+Name1, param\+Name2); \}}
+
+\mbox{\Hypertarget{_utils_8h_a85fe7dfc8d35e0e6ee68ceb22ab3b57b}\label{_utils_8h_a85fe7dfc8d35e0e6ee68ceb22ab3b57b}} 
+\index{Utils.h@{Utils.h}!ENEMY\_ID@{ENEMY\_ID}}
+\index{ENEMY\_ID@{ENEMY\_ID}!Utils.h@{Utils.h}}
+\doxysubsubsection{\texorpdfstring{ENEMY\_ID}{ENEMY\_ID}}
+{\footnotesize\ttfamily \#define ENEMY\+\_\+\+ID~2}
+
+\mbox{\Hypertarget{_utils_8h_af4955eee766517b72730e7c165711a6c}\label{_utils_8h_af4955eee766517b72730e7c165711a6c}} 
+\index{Utils.h@{Utils.h}!ENVIRONMENT\_ID@{ENVIRONMENT\_ID}}
+\index{ENVIRONMENT\_ID@{ENVIRONMENT\_ID}!Utils.h@{Utils.h}}
+\doxysubsubsection{\texorpdfstring{ENVIRONMENT\_ID}{ENVIRONMENT\_ID}}
+{\footnotesize\ttfamily \#define ENVIRONMENT\+\_\+\+ID~3}
+
+\mbox{\Hypertarget{_utils_8h_afc0ee7bd35c161a2d80b8e8f04fd9213}\label{_utils_8h_afc0ee7bd35c161a2d80b8e8f04fd9213}} 
+\index{Utils.h@{Utils.h}!GENERATED\_BODY@{GENERATED\_BODY}}
+\index{GENERATED\_BODY@{GENERATED\_BODY}!Utils.h@{Utils.h}}
+\doxysubsubsection{\texorpdfstring{GENERATED\_BODY}{GENERATED\_BODY}}
+{\footnotesize\ttfamily \#define GENERATED\+\_\+\+BODY(\begin{DoxyParamCaption}\item[{}]{Parent\+Class,  }\item[{}]{Current\+Class }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{                                    \textcolor{keyword}{typedef} ::ParentClass Super; \(\backslash\)}
+\DoxyCodeLine{                                    \textcolor{keyword}{typedef} CurrentClass ThisClass;}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{_utils_8h_a642e16f35aa1e585c25e405ede76e115}\label{_utils_8h_a642e16f35aa1e585c25e405ede76e115}} 
+\index{Utils.h@{Utils.h}!NO\_ID@{NO\_ID}}
+\index{NO\_ID@{NO\_ID}!Utils.h@{Utils.h}}
+\doxysubsubsection{\texorpdfstring{NO\_ID}{NO\_ID}}
+{\footnotesize\ttfamily \#define NO\+\_\+\+ID~0}
+
+\mbox{\Hypertarget{_utils_8h_a598a3330b3c21701223ee0ca14316eca}\label{_utils_8h_a598a3330b3c21701223ee0ca14316eca}} 
+\index{Utils.h@{Utils.h}!PI@{PI}}
+\index{PI@{PI}!Utils.h@{Utils.h}}
+\doxysubsubsection{\texorpdfstring{PI}{PI}}
+{\footnotesize\ttfamily \#define PI~3.\+14159265358979323846}
+
+\mbox{\Hypertarget{_utils_8h_ae50e546c560a653d3409bd594d34dc0d}\label{_utils_8h_ae50e546c560a653d3409bd594d34dc0d}} 
+\index{Utils.h@{Utils.h}!PLAYER\_ID@{PLAYER\_ID}}
+\index{PLAYER\_ID@{PLAYER\_ID}!Utils.h@{Utils.h}}
+\doxysubsubsection{\texorpdfstring{PLAYER\_ID}{PLAYER\_ID}}
+{\footnotesize\ttfamily \#define PLAYER\+\_\+\+ID~1}
+

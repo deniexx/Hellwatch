@@ -1,0 +1,400 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="class_attribute_component" kind="class" language="C++" prot="public">
+    <compoundname>AttributeComponent</compoundname>
+    <basecompoundref refid="class_actor_component" prot="public" virt="non-virtual">ActorComponent</basecompoundref>
+    <includes refid="_attribute_component_8h" local="no">AttributeComponent.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_attribute_component_1aa3171b0f558b7397e01977881435fcc2" prot="private" static="no" mutable="yes">
+        <type>std::vector&lt; <ref refid="struct_f_attribute" kindref="compound">FAttribute</ref> &gt;</type>
+        <definition>std::vector&lt;FAttribute&gt; AttributeComponent::attributes</definition>
+        <argsstring></argsstring>
+        <name>attributes</name>
+        <qualifiedname>AttributeComponent::attributes</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/Attributes/AttributeComponent.h" line="17" column="21" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/Attributes/AttributeComponent.h" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_attribute_component_1aeb57d0991e47cce857af4f489df0cac8" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>AttributeComponent::GENERATED_BODY</definition>
+        <argsstring>(ActorComponent, AttributeComponent)</argsstring>
+        <name>GENERATED_BODY</name>
+        <qualifiedname>AttributeComponent::GENERATED_BODY</qualifiedname>
+        <param>
+          <type><ref refid="class_actor_component" kindref="compound">ActorComponent</ref></type>
+        </param>
+        <param>
+          <type><ref refid="class_attribute_component" kindref="compound">AttributeComponent</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/Attributes/AttributeComponent.h" line="13" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_attribute_component_1a065f9da003275b56c2b600345238f331" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AttributeComponent::OnAttributeChanged</definition>
+        <argsstring>(HellwatchAttribute::Type type, float oldAmount, float newAmount)</argsstring>
+        <name>OnAttributeChanged</name>
+        <qualifiedname>AttributeComponent::OnAttributeChanged</qualifiedname>
+        <param>
+          <type><ref refid="namespace_hellwatch_attribute_1ad0a500e65129d06e4589f9bca54c4a7d" kindref="member">HellwatchAttribute::Type</ref></type>
+          <declname>type</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>oldAmount</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>newAmount</declname>
+        </param>
+        <briefdescription>
+<para>Updates health and mana based on attributes changed  </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/Attributes/AttributeComponent.h" line="86" column="6" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/Attributes/AttributeComponent.cpp" bodystart="133" bodyend="143"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_attribute_component_1a580cf7f29236d87d448840840ad53bc6" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const float</type>
+        <definition>const float AttributeComponent::GetCurrentAttributeValueByType</definition>
+        <argsstring>(HellwatchAttribute::Type type) const</argsstring>
+        <name>GetCurrentAttributeValueByType</name>
+        <qualifiedname>AttributeComponent::GetCurrentAttributeValueByType</qualifiedname>
+        <param>
+          <type><ref refid="namespace_hellwatch_attribute_1ad0a500e65129d06e4589f9bca54c4a7d" kindref="member">HellwatchAttribute::Type</ref></type>
+          <declname>type</declname>
+        </param>
+        <briefdescription>
+<para>Gets the current attribute value  </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/Attributes/AttributeComponent.h" line="24" column="13" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/Attributes/AttributeComponent.cpp" bodystart="15" bodyend="24"/>
+      </memberdef>
+      <memberdef kind="function" id="class_attribute_component_1ac3a3cdb64a8ddf33f584b07cb6fb3546" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const float</type>
+        <definition>const float AttributeComponent::GetMaxAttributeValueByType</definition>
+        <argsstring>(HellwatchAttribute::Type type) const</argsstring>
+        <name>GetMaxAttributeValueByType</name>
+        <qualifiedname>AttributeComponent::GetMaxAttributeValueByType</qualifiedname>
+        <param>
+          <type><ref refid="namespace_hellwatch_attribute_1ad0a500e65129d06e4589f9bca54c4a7d" kindref="member">HellwatchAttribute::Type</ref></type>
+          <declname>type</declname>
+        </param>
+        <briefdescription>
+<para>Gets the max attribute value  </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/Attributes/AttributeComponent.h" line="29" column="13" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/Attributes/AttributeComponent.cpp" bodystart="26" bodyend="35"/>
+      </memberdef>
+      <memberdef kind="function" id="class_attribute_component_1ac8bc3fd1392349fb859ddf83e3e8e027" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const bool</type>
+        <definition>const bool AttributeComponent::CheckHasEnoughOfAttributeByType</definition>
+        <argsstring>(HellwatchAttribute::Type type, float amountNeeded)</argsstring>
+        <name>CheckHasEnoughOfAttributeByType</name>
+        <qualifiedname>AttributeComponent::CheckHasEnoughOfAttributeByType</qualifiedname>
+        <param>
+          <type><ref refid="namespace_hellwatch_attribute_1ad0a500e65129d06e4589f9bca54c4a7d" kindref="member">HellwatchAttribute::Type</ref></type>
+          <declname>type</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>amountNeeded</declname>
+        </param>
+        <briefdescription>
+<para>Checks if we have enough of the specified attribute  </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/Attributes/AttributeComponent.h" line="34" column="12" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/Attributes/AttributeComponent.cpp" bodystart="37" bodyend="46"/>
+      </memberdef>
+      <memberdef kind="function" id="class_attribute_component_1ab359fd856c0eaee6fda4c81765c9b336" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AttributeComponent::SetAttributeCurrentValue</definition>
+        <argsstring>(HellwatchAttribute::Type type, float newValue)</argsstring>
+        <name>SetAttributeCurrentValue</name>
+        <qualifiedname>AttributeComponent::SetAttributeCurrentValue</qualifiedname>
+        <param>
+          <type><ref refid="namespace_hellwatch_attribute_1ad0a500e65129d06e4589f9bca54c4a7d" kindref="member">HellwatchAttribute::Type</ref></type>
+          <declname>type</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>newValue</declname>
+        </param>
+        <briefdescription>
+<para>Sets the attribute current to the new given value  </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/Attributes/AttributeComponent.h" line="39" column="6" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/Attributes/AttributeComponent.cpp" bodystart="48" bodyend="58"/>
+      </memberdef>
+      <memberdef kind="function" id="class_attribute_component_1a1ed8d3136ef683d442d1ff7523d219b0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AttributeComponent::SetAttributeMaxValue</definition>
+        <argsstring>(HellwatchAttribute::Type type, float newValue)</argsstring>
+        <name>SetAttributeMaxValue</name>
+        <qualifiedname>AttributeComponent::SetAttributeMaxValue</qualifiedname>
+        <param>
+          <type><ref refid="namespace_hellwatch_attribute_1ad0a500e65129d06e4589f9bca54c4a7d" kindref="member">HellwatchAttribute::Type</ref></type>
+          <declname>type</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>newValue</declname>
+        </param>
+        <briefdescription>
+<para>Sets the attribute max value to the new given value  </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/Attributes/AttributeComponent.h" line="44" column="6" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/Attributes/AttributeComponent.cpp" bodystart="60" bodyend="70"/>
+      </memberdef>
+      <memberdef kind="function" id="class_attribute_component_1ada89535490c847acf8574d39d35c837c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AttributeComponent::SetAttributeCurrentAndMaxValue</definition>
+        <argsstring>(HellwatchAttribute::Type, float newValue)</argsstring>
+        <name>SetAttributeCurrentAndMaxValue</name>
+        <qualifiedname>AttributeComponent::SetAttributeCurrentAndMaxValue</qualifiedname>
+        <param>
+          <type><ref refid="namespace_hellwatch_attribute_1ad0a500e65129d06e4589f9bca54c4a7d" kindref="member">HellwatchAttribute::Type</ref></type>
+          <defname>type</defname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>newValue</declname>
+        </param>
+        <briefdescription>
+<para>Sets the attribute current and max value to the new given value  </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/Attributes/AttributeComponent.h" line="49" column="6" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/Attributes/AttributeComponent.cpp" bodystart="72" bodyend="76"/>
+      </memberdef>
+      <memberdef kind="function" id="class_attribute_component_1a2a29edbf9c15e3296eb8ac4f5b59e8c9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AttributeComponent::ApplyAttributeChange</definition>
+        <argsstring>(HellwatchAttribute::Type type, float delta)</argsstring>
+        <name>ApplyAttributeChange</name>
+        <qualifiedname>AttributeComponent::ApplyAttributeChange</qualifiedname>
+        <param>
+          <type><ref refid="namespace_hellwatch_attribute_1ad0a500e65129d06e4589f9bca54c4a7d" kindref="member">HellwatchAttribute::Type</ref></type>
+          <declname>type</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>delta</declname>
+        </param>
+        <briefdescription>
+<para>Applies an attribute change to the specified attribute, can be positive or negative  </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/Attributes/AttributeComponent.h" line="54" column="6" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/Attributes/AttributeComponent.cpp" bodystart="78" bodyend="93"/>
+      </memberdef>
+      <memberdef kind="function" id="class_attribute_component_1a381ad0a8f330864674b1cf80bc27f858" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AttributeComponent::ApplyAttributeMaxValueChange</definition>
+        <argsstring>(HellwatchAttribute::Type type, float delta)</argsstring>
+        <name>ApplyAttributeMaxValueChange</name>
+        <qualifiedname>AttributeComponent::ApplyAttributeMaxValueChange</qualifiedname>
+        <param>
+          <type><ref refid="namespace_hellwatch_attribute_1ad0a500e65129d06e4589f9bca54c4a7d" kindref="member">HellwatchAttribute::Type</ref></type>
+          <declname>type</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>delta</declname>
+        </param>
+        <briefdescription>
+<para>Applies an attribute change to the specified attribute&apos;s max value, can be positive or negative  </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/Attributes/AttributeComponent.h" line="59" column="6" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/Attributes/AttributeComponent.cpp" bodystart="95" bodyend="105"/>
+      </memberdef>
+      <memberdef kind="function" id="class_attribute_component_1a3677b4bee550b858f87f5e62148d1e10" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AttributeComponent::InitAttributesBySpec</definition>
+        <argsstring>(std::vector&lt; FAttribute &gt; &amp;attributesToInit)</argsstring>
+        <name>InitAttributesBySpec</name>
+        <qualifiedname>AttributeComponent::InitAttributesBySpec</qualifiedname>
+        <param>
+          <type>std::vector&lt; <ref refid="struct_f_attribute" kindref="compound">FAttribute</ref> &gt; &amp;</type>
+          <declname>attributesToInit</declname>
+        </param>
+        <briefdescription>
+<para>Initializes attribute component by spec, spec meaning a container of multiple attributes  </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>attributesToInit</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/Attributes/AttributeComponent.h" line="65" column="6" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/Attributes/AttributeComponent.cpp" bodystart="107" bodyend="113"/>
+      </memberdef>
+      <memberdef kind="function" id="class_attribute_component_1a6f76a7c8bb5bf45d085ffb001cec45d5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AttributeComponent::AddAttribute</definition>
+        <argsstring>(FAttribute &amp;attributeToAdd)</argsstring>
+        <name>AddAttribute</name>
+        <qualifiedname>AttributeComponent::AddAttribute</qualifiedname>
+        <param>
+          <type><ref refid="struct_f_attribute" kindref="compound">FAttribute</ref> &amp;</type>
+          <declname>attributeToAdd</declname>
+        </param>
+        <briefdescription>
+<para>Adds an attribute @NOTE: We can not have 2 attributes of the same type, if that happens, the new attribute will be ignore and we will keep the old one  </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/Attributes/AttributeComponent.h" line="71" column="6" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/Attributes/AttributeComponent.cpp" bodystart="115" bodyend="122"/>
+      </memberdef>
+      <memberdef kind="function" id="class_attribute_component_1ac864c662a9b8d2155fa8142078ce3dff" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AttributeComponent::ApplyAttributeMultiplier</definition>
+        <argsstring>(HellwatchAttribute::Type type, float multipliyer)</argsstring>
+        <name>ApplyAttributeMultiplier</name>
+        <qualifiedname>AttributeComponent::ApplyAttributeMultiplier</qualifiedname>
+        <param>
+          <type><ref refid="namespace_hellwatch_attribute_1ad0a500e65129d06e4589f9bca54c4a7d" kindref="member">HellwatchAttribute::Type</ref></type>
+          <declname>type</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>multipliyer</declname>
+        </param>
+        <briefdescription>
+<para>Applies a multiplier to an attribute  </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/Attributes/AttributeComponent.h" line="76" column="6" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/Attributes/AttributeComponent.cpp" bodystart="124" bodyend="131"/>
+      </memberdef>
+      <memberdef kind="function" id="class_attribute_component_1ae67a6fc2951e19257274edb42eec023f" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void AttributeComponent::UpdateComponent</definition>
+        <argsstring>(float deltaTime)</argsstring>
+        <name>UpdateComponent</name>
+        <qualifiedname>AttributeComponent::UpdateComponent</qualifiedname>
+        <reimplements refid="class_actor_component_1af730b3c7d2b4154e1fb0962db7750f6b">UpdateComponent</reimplements>
+        <param>
+          <type>float</type>
+          <declname>deltaTime</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/Attributes/AttributeComponent.h" line="79" column="14" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/Attributes/AttributeComponent.cpp" bodystart="5" bodyend="12"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>ActorComponent</label>
+        <link refid="class_actor_component"/>
+      </node>
+      <node id="1">
+        <label>AttributeComponent</label>
+        <link refid="class_attribute_component"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>ActorComponent</label>
+        <link refid="class_actor_component"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>ownerActor</edgelabel>
+        </childnode>
+      </node>
+      <node id="1">
+        <label>AttributeComponent</label>
+        <link refid="class_attribute_component"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>WorldObject</label>
+        <link refid="class_world_object"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>owningObject</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/Attributes/AttributeComponent.h" line="11" column="1" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/Attributes/AttributeComponent.h" bodystart="12" bodyend="87"/>
+    <listofallmembers>
+      <member refid="class_attribute_component_1a6f76a7c8bb5bf45d085ffb001cec45d5" prot="public" virt="non-virtual"><scope>AttributeComponent</scope><name>AddAttribute</name></member>
+      <member refid="class_attribute_component_1a2a29edbf9c15e3296eb8ac4f5b59e8c9" prot="public" virt="non-virtual"><scope>AttributeComponent</scope><name>ApplyAttributeChange</name></member>
+      <member refid="class_attribute_component_1a381ad0a8f330864674b1cf80bc27f858" prot="public" virt="non-virtual"><scope>AttributeComponent</scope><name>ApplyAttributeMaxValueChange</name></member>
+      <member refid="class_attribute_component_1ac864c662a9b8d2155fa8142078ce3dff" prot="public" virt="non-virtual"><scope>AttributeComponent</scope><name>ApplyAttributeMultiplier</name></member>
+      <member refid="class_attribute_component_1aa3171b0f558b7397e01977881435fcc2" prot="private" virt="non-virtual"><scope>AttributeComponent</scope><name>attributes</name></member>
+      <member refid="class_attribute_component_1ac8bc3fd1392349fb859ddf83e3e8e027" prot="public" virt="non-virtual"><scope>AttributeComponent</scope><name>CheckHasEnoughOfAttributeByType</name></member>
+      <member refid="class_attribute_component_1aeb57d0991e47cce857af4f489df0cac8" prot="private" virt="non-virtual"><scope>AttributeComponent</scope><name>GENERATED_BODY</name></member>
+      <member refid="class_attribute_component_1a580cf7f29236d87d448840840ad53bc6" prot="public" virt="non-virtual"><scope>AttributeComponent</scope><name>GetCurrentAttributeValueByType</name></member>
+      <member refid="class_attribute_component_1ac3a3cdb64a8ddf33f584b07cb6fb3546" prot="public" virt="non-virtual"><scope>AttributeComponent</scope><name>GetMaxAttributeValueByType</name></member>
+      <member refid="class_actor_component_1a3705d464da5f840eca1d14bcce07372d" prot="public" virt="non-virtual"><scope>AttributeComponent</scope><name>GetOwner</name></member>
+      <member refid="class_actor_component_1ab4ea0eaffa2c616a209e2887f80902f2" prot="public" virt="non-virtual"><scope>AttributeComponent</scope><name>Init</name></member>
+      <member refid="class_attribute_component_1a3677b4bee550b858f87f5e62148d1e10" prot="public" virt="non-virtual"><scope>AttributeComponent</scope><name>InitAttributesBySpec</name></member>
+      <member refid="class_attribute_component_1a065f9da003275b56c2b600345238f331" prot="private" virt="non-virtual"><scope>AttributeComponent</scope><name>OnAttributeChanged</name></member>
+      <member refid="class_actor_component_1a2766e186399b24f5d7e2d143ffa26e05" prot="protected" virt="non-virtual"><scope>AttributeComponent</scope><name>ownerActor</name></member>
+      <member refid="class_actor_component_1a467d082f3fedd6cf2acacb117450f90e" prot="protected" virt="virtual"><scope>AttributeComponent</scope><name>PostInit</name></member>
+      <member refid="class_attribute_component_1ada89535490c847acf8574d39d35c837c" prot="public" virt="non-virtual"><scope>AttributeComponent</scope><name>SetAttributeCurrentAndMaxValue</name></member>
+      <member refid="class_attribute_component_1ab359fd856c0eaee6fda4c81765c9b336" prot="public" virt="non-virtual"><scope>AttributeComponent</scope><name>SetAttributeCurrentValue</name></member>
+      <member refid="class_attribute_component_1a1ed8d3136ef683d442d1ff7523d219b0" prot="public" virt="non-virtual"><scope>AttributeComponent</scope><name>SetAttributeMaxValue</name></member>
+      <member refid="class_attribute_component_1ae67a6fc2951e19257274edb42eec023f" prot="public" virt="virtual"><scope>AttributeComponent</scope><name>UpdateComponent</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

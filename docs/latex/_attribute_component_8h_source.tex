@@ -1,0 +1,56 @@
+\hypertarget{_attribute_component_8h_source}{}\doxysection{Attribute\+Component.\+h}
+\label{_attribute_component_8h_source}\index{D:/Uni/CMP208/Hellwatch/build/vs2017/Attributes/AttributeComponent.h@{D:/Uni/CMP208/Hellwatch/build/vs2017/Attributes/AttributeComponent.h}}
+\mbox{\hyperlink{_attribute_component_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{2 }
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_actor_component_8h}{ActorComponents/ActorComponent.h}}"{}}}
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_utils_8h}{GameFramework/Utils.h}}"{}}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_attribute_types_8h}{AttributeTypes.h}}"{}}}
+\DoxyCodeLine{6 }
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{8 }
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#define BASE\_REGEN\_RATIO 7}}
+\DoxyCodeLine{10 }
+\DoxyCodeLine{11 \textcolor{keyword}{class }\mbox{\hyperlink{class_attribute_component}{AttributeComponent}} : \textcolor{keyword}{public} \mbox{\hyperlink{class_actor_component}{ActorComponent}}}
+\DoxyCodeLine{12 \{}
+\DoxyCodeLine{13     \mbox{\hyperlink{_utils_8h_afc0ee7bd35c161a2d80b8e8f04fd9213}{GENERATED\_BODY}}(\mbox{\hyperlink{class_actor_component}{ActorComponent}}, \mbox{\hyperlink{class_attribute_component}{AttributeComponent}});}
+\DoxyCodeLine{14 }
+\DoxyCodeLine{15 \textcolor{keyword}{private}:}
+\DoxyCodeLine{16 }
+\DoxyCodeLine{17     \textcolor{keyword}{mutable} std::vector<FAttribute> attributes;}
+\DoxyCodeLine{18 }
+\DoxyCodeLine{19 \textcolor{keyword}{public}:}
+\DoxyCodeLine{20 }
+\DoxyCodeLine{24     \textcolor{keyword}{const} \textcolor{keywordtype}{float} \mbox{\hyperlink{class_attribute_component_a580cf7f29236d87d448840840ad53bc6}{GetCurrentAttributeValueByType}}(\mbox{\hyperlink{namespace_hellwatch_attribute_ad0a500e65129d06e4589f9bca54c4a7d}{HellwatchAttribute::Type}} type) \textcolor{keyword}{const};}
+\DoxyCodeLine{25 }
+\DoxyCodeLine{29     \textcolor{keyword}{const} \textcolor{keywordtype}{float} \mbox{\hyperlink{class_attribute_component_ac3a3cdb64a8ddf33f584b07cb6fb3546}{GetMaxAttributeValueByType}}(\mbox{\hyperlink{namespace_hellwatch_attribute_ad0a500e65129d06e4589f9bca54c4a7d}{HellwatchAttribute::Type}} type) \textcolor{keyword}{const};}
+\DoxyCodeLine{30 }
+\DoxyCodeLine{34     \textcolor{keyword}{const} \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_attribute_component_ac8bc3fd1392349fb859ddf83e3e8e027}{CheckHasEnoughOfAttributeByType}}(\mbox{\hyperlink{namespace_hellwatch_attribute_ad0a500e65129d06e4589f9bca54c4a7d}{HellwatchAttribute::Type}} type, \textcolor{keywordtype}{float} amountNeeded);}
+\DoxyCodeLine{35 }
+\DoxyCodeLine{39     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_attribute_component_ab359fd856c0eaee6fda4c81765c9b336}{SetAttributeCurrentValue}}(\mbox{\hyperlink{namespace_hellwatch_attribute_ad0a500e65129d06e4589f9bca54c4a7d}{HellwatchAttribute::Type}} type, \textcolor{keywordtype}{float} newValue);}
+\DoxyCodeLine{40 }
+\DoxyCodeLine{44     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_attribute_component_a1ed8d3136ef683d442d1ff7523d219b0}{SetAttributeMaxValue}}(\mbox{\hyperlink{namespace_hellwatch_attribute_ad0a500e65129d06e4589f9bca54c4a7d}{HellwatchAttribute::Type}} type, \textcolor{keywordtype}{float} newValue);}
+\DoxyCodeLine{45 }
+\DoxyCodeLine{49     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_attribute_component_ada89535490c847acf8574d39d35c837c}{SetAttributeCurrentAndMaxValue}}(\mbox{\hyperlink{namespace_hellwatch_attribute_ad0a500e65129d06e4589f9bca54c4a7d}{HellwatchAttribute::Type}}, \textcolor{keywordtype}{float} newValue);}
+\DoxyCodeLine{50 }
+\DoxyCodeLine{54     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_attribute_component_a2a29edbf9c15e3296eb8ac4f5b59e8c9}{ApplyAttributeChange}}(\mbox{\hyperlink{namespace_hellwatch_attribute_ad0a500e65129d06e4589f9bca54c4a7d}{HellwatchAttribute::Type}} type, \textcolor{keywordtype}{float} delta);}
+\DoxyCodeLine{55 }
+\DoxyCodeLine{59     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_attribute_component_a381ad0a8f330864674b1cf80bc27f858}{ApplyAttributeMaxValueChange}}(\mbox{\hyperlink{namespace_hellwatch_attribute_ad0a500e65129d06e4589f9bca54c4a7d}{HellwatchAttribute::Type}} type, \textcolor{keywordtype}{float} delta);}
+\DoxyCodeLine{60 }
+\DoxyCodeLine{65     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_attribute_component_a3677b4bee550b858f87f5e62148d1e10}{InitAttributesBySpec}}(std::vector<FAttribute>\& attributesToInit);}
+\DoxyCodeLine{66 }
+\DoxyCodeLine{71     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_attribute_component_a6f76a7c8bb5bf45d085ffb001cec45d5}{AddAttribute}}(\mbox{\hyperlink{struct_f_attribute}{FAttribute}}\& attributeToAdd);}
+\DoxyCodeLine{72 }
+\DoxyCodeLine{76     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_attribute_component_ac864c662a9b8d2155fa8142078ce3dff}{ApplyAttributeMultiplier}}(\mbox{\hyperlink{namespace_hellwatch_attribute_ad0a500e65129d06e4589f9bca54c4a7d}{HellwatchAttribute::Type}} type, \textcolor{keywordtype}{float} multipliyer);}
+\DoxyCodeLine{77 }
+\DoxyCodeLine{78 }
+\DoxyCodeLine{79     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_attribute_component_ae67a6fc2951e19257274edb42eec023f}{UpdateComponent}}(\textcolor{keywordtype}{float} deltaTime);}
+\DoxyCodeLine{80 }
+\DoxyCodeLine{81 \textcolor{keyword}{private}:}
+\DoxyCodeLine{82 }
+\DoxyCodeLine{86     \textcolor{keywordtype}{void} OnAttributeChanged(\mbox{\hyperlink{namespace_hellwatch_attribute_ad0a500e65129d06e4589f9bca54c4a7d}{HellwatchAttribute::Type}} type, \textcolor{keywordtype}{float} oldAmount, \textcolor{keywordtype}{float} newAmount);}
+\DoxyCodeLine{87 \};}
+\DoxyCodeLine{88 }
+
+\end{DoxyCode}

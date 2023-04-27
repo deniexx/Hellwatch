@@ -1,0 +1,353 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_primitive_builder" xml:lang="en-US">
+<title>PrimitiveBuilder Class Reference</title>
+<indexterm><primary>PrimitiveBuilder</primary></indexterm>
+<para>
+<computeroutput>#include &lt;primitive_builder.h&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_primitive_builder_1a6384d138d3c7193b9791959801d882d1">PrimitiveBuilder</link> (gef::Platform &amp;platform)</para>
+
+<para>Constructor. </para>
+</listitem>
+            <listitem><para><link linkend="_class_primitive_builder_1a70ac6a74c6a3fe209cabf315b0f7bf4d">~PrimitiveBuilder</link> ()</para>
+
+<para>Default destructor. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_primitive_builder_1a1b4b6db65689d27a2bc3cad69803b079">Init</link> ()</para>
+
+<para>Initialises the primitive builder. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_primitive_builder_1aed9655474f22afaa00ff015c454bd736">CleanUp</link> ()</para>
+
+<para>Clean up resources created by the primitive builder. </para>
+</listitem>
+            <listitem><para>gef::Mesh * <link linkend="_class_primitive_builder_1af92fb7ac1b3d5c32243e28dbd71691da">CreateBoxMesh</link> (const gef::Vector4 &amp;half_size, gef::Vector4 centre=gef::Vector4(0.0f, 0.0f, 0.0f), gef::Material **materials=NULL)</para>
+
+<para>Creates a box shaped mesh. </para>
+</listitem>
+            <listitem><para>gef::Mesh * <link linkend="_class_primitive_builder_1a5f05e266f6b78f97ac03abfda1a6d44e">CreateSphereMesh</link> (const float radius, const int phi, const int theta, gef::Vector4 centre=gef::Vector4(0.0f, 0.0f, 0.0f), gef::Material *material=NULL)</para>
+
+<para>Creates a sphere shaped mesh. </para>
+</listitem>
+            <listitem><para>const gef::Mesh * <link linkend="_class_primitive_builder_1a0b7bbc2b5dae0e538e5a7da02e99743a">GetDefaultCubeMesh</link> () const</para>
+
+<para>Get the default cube mesh. </para>
+</listitem>
+            <listitem><para>const gef::Mesh * <link linkend="_class_primitive_builder_1a50a4fb54f668bbe3b43940c64529b195">GetDefaultSphereMesh</link> () const</para>
+
+<para>Get the default sphere mesh. </para>
+</listitem>
+            <listitem><para>const gef::Material &amp; <link linkend="_class_primitive_builder_1aa5daad54593016deff15e0f172df5815">red_material</link> () const</para>
+
+<para>Get the red material. </para>
+</listitem>
+            <listitem><para>const gef::Material &amp; <link linkend="_class_primitive_builder_1a0b9b7e23d8d653d949da7da85b5b51b0">green_material</link> () const</para>
+
+<para>Get the red material. </para>
+</listitem>
+            <listitem><para>const gef::Material &amp; <link linkend="_class_primitive_builder_1a1cc3cb55ef97d82a1ad402e937f2e449">blue_material</link> () const</para>
+
+<para>Get the blue material. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Protected Attributes    </title>
+        <itemizedlist>
+            <listitem><para>gef::Platform &amp; <link linkend="_class_primitive_builder_1a6bfbd619adebd14a9fe02b68521e279d">platform_</link></para>
+</listitem>
+            <listitem><para>gef::Mesh * <link linkend="_class_primitive_builder_1aa3205470b24e5273efb50e359a547b23">default_cube_mesh_</link></para>
+</listitem>
+            <listitem><para>gef::Mesh * <link linkend="_class_primitive_builder_1aa3179d29464e6f9f0b84d59bcea6f3d1">default_sphere_mesh_</link></para>
+</listitem>
+            <listitem><para>gef::Material <link linkend="_class_primitive_builder_1a7757d609903f9cff6a9bd7f1a239fe27">red_material_</link></para>
+</listitem>
+            <listitem><para>gef::Material <link linkend="_class_primitive_builder_1a72a6196f7dc9bba9f3887c9a5fe0e485">blue_material_</link></para>
+</listitem>
+            <listitem><para>gef::Material <link linkend="_class_primitive_builder_1a0c4022f7c66fb130f59d9d2e1c9aee31">green_material_</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_primitive_builder_1a6384d138d3c7193b9791959801d882d1"/><section>
+    <title>PrimitiveBuilder()</title>
+<indexterm><primary>PrimitiveBuilder</primary><secondary>PrimitiveBuilder</secondary></indexterm>
+<indexterm><primary>PrimitiveBuilder</primary><secondary>PrimitiveBuilder</secondary></indexterm>
+<para><computeroutput>PrimitiveBuilder::PrimitiveBuilder (gef::Platform &amp; platform)</computeroutput></para><para>
+
+<para>Constructor. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>in</entry><entry>platform</entry><entry>
+<para>The platform the primitive builder is being created on. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_class_primitive_builder_1a70ac6a74c6a3fe209cabf315b0f7bf4d"/><section>
+    <title>~PrimitiveBuilder()</title>
+<indexterm><primary>~PrimitiveBuilder</primary><secondary>PrimitiveBuilder</secondary></indexterm>
+<indexterm><primary>PrimitiveBuilder</primary><secondary>~PrimitiveBuilder</secondary></indexterm>
+<para><computeroutput>PrimitiveBuilder::~PrimitiveBuilder ( )</computeroutput></para><para>
+
+<para>Default destructor. </para>
+</para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_primitive_builder_1a1cc3cb55ef97d82a1ad402e937f2e449"/><section>
+    <title>blue_material()</title>
+<indexterm><primary>blue_material</primary><secondary>PrimitiveBuilder</secondary></indexterm>
+<indexterm><primary>PrimitiveBuilder</primary><secondary>blue_material</secondary></indexterm>
+<para><computeroutput>const gef::Material &amp; PrimitiveBuilder::blue_material ( ) const<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Get the blue material. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>The reference to the blue material. </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_primitive_builder_1aed9655474f22afaa00ff015c454bd736"/><section>
+    <title>CleanUp()</title>
+<indexterm><primary>CleanUp</primary><secondary>PrimitiveBuilder</secondary></indexterm>
+<indexterm><primary>PrimitiveBuilder</primary><secondary>CleanUp</secondary></indexterm>
+<para><computeroutput>void PrimitiveBuilder::CleanUp ( )</computeroutput></para><para>
+
+<para>Clean up resources created by the primitive builder. </para>
+</para>
+</section>
+<anchor xml:id="_class_primitive_builder_1af92fb7ac1b3d5c32243e28dbd71691da"/><section>
+    <title>CreateBoxMesh()</title>
+<indexterm><primary>CreateBoxMesh</primary><secondary>PrimitiveBuilder</secondary></indexterm>
+<indexterm><primary>PrimitiveBuilder</primary><secondary>CreateBoxMesh</secondary></indexterm>
+<para><computeroutput>gef::Mesh * PrimitiveBuilder::CreateBoxMesh (const gef::Vector4 &amp; half_size, gef::Vector4 centre = <computeroutput>gef::Vector4(0.0f,&#160;0.0f,&#160;0.0f)</computeroutput>
+, gef::Material ** materials = <computeroutput>NULL</computeroutput>
+)</computeroutput></para><para>
+
+<para>Creates a box shaped mesh. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>The mesh created </para>
+</formalpara>
+
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>in</entry><entry>half_size</entry><entry>
+<para>The half size of the box. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>in</entry><entry>centre</entry><entry>
+<para>The centre of the box. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>in</entry><entry>materials</entry><entry>
+<para>an array of Material pointers. One for each face. 6 in total. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_class_primitive_builder_1a5f05e266f6b78f97ac03abfda1a6d44e"/><section>
+    <title>CreateSphereMesh()</title>
+<indexterm><primary>CreateSphereMesh</primary><secondary>PrimitiveBuilder</secondary></indexterm>
+<indexterm><primary>PrimitiveBuilder</primary><secondary>CreateSphereMesh</secondary></indexterm>
+<para><computeroutput>gef::Mesh * PrimitiveBuilder::CreateSphereMesh (const float radius, const int phi, const int theta, gef::Vector4 centre = <computeroutput>gef::Vector4(0.0f,&#160;0.0f,&#160;0.0f)</computeroutput>
+, gef::Material * material = <computeroutput>NULL</computeroutput>
+)</computeroutput></para><para>
+
+<para>Creates a sphere shaped mesh. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>The mesh created </para>
+</formalpara>
+
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>in</entry><entry>radius</entry><entry>
+<para>The radius of the sphere. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>in</entry><entry>centre</entry><entry>
+<para>The centre of the centre. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>in</entry><entry>materials</entry><entry>
+<para>Pointer to material used to render all faces. NULL is valid. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_class_primitive_builder_1a0b7bbc2b5dae0e538e5a7da02e99743a"/><section>
+    <title>GetDefaultCubeMesh()</title>
+<indexterm><primary>GetDefaultCubeMesh</primary><secondary>PrimitiveBuilder</secondary></indexterm>
+<indexterm><primary>PrimitiveBuilder</primary><secondary>GetDefaultCubeMesh</secondary></indexterm>
+<para><computeroutput>const gef::Mesh * PrimitiveBuilder::GetDefaultCubeMesh ( ) const<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Get the default cube mesh. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>The mesh for the default cube. </para>
+</formalpara>
+<note><title>Note</title>
+
+<para>The default cube has dimensions 1 x 1 x 1 with the centre at 0, 0, 0. </para>
+</note>
+</para>
+</section>
+<anchor xml:id="_class_primitive_builder_1a50a4fb54f668bbe3b43940c64529b195"/><section>
+    <title>GetDefaultSphereMesh()</title>
+<indexterm><primary>GetDefaultSphereMesh</primary><secondary>PrimitiveBuilder</secondary></indexterm>
+<indexterm><primary>PrimitiveBuilder</primary><secondary>GetDefaultSphereMesh</secondary></indexterm>
+<para><computeroutput>const gef::Mesh * PrimitiveBuilder::GetDefaultSphereMesh ( ) const<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Get the default sphere mesh. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>The mesh for the default cube. </para>
+</formalpara>
+<note><title>Note</title>
+
+<para>The default sphere has radius 0.5 with the centre at 0, 0, 0. </para>
+</note>
+</para>
+</section>
+<anchor xml:id="_class_primitive_builder_1a0b9b7e23d8d653d949da7da85b5b51b0"/><section>
+    <title>green_material()</title>
+<indexterm><primary>green_material</primary><secondary>PrimitiveBuilder</secondary></indexterm>
+<indexterm><primary>PrimitiveBuilder</primary><secondary>green_material</secondary></indexterm>
+<para><computeroutput>const gef::Material &amp; PrimitiveBuilder::green_material ( ) const<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Get the red material. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>The reference to the green material. </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_primitive_builder_1a1b4b6db65689d27a2bc3cad69803b079"/><section>
+    <title>Init()</title>
+<indexterm><primary>Init</primary><secondary>PrimitiveBuilder</secondary></indexterm>
+<indexterm><primary>PrimitiveBuilder</primary><secondary>Init</secondary></indexterm>
+<para><computeroutput>void PrimitiveBuilder::Init ( )</computeroutput></para><para>
+
+<para>Initialises the primitive builder. </para>
+</para>
+</section>
+<anchor xml:id="_class_primitive_builder_1aa5daad54593016deff15e0f172df5815"/><section>
+    <title>red_material()</title>
+<indexterm><primary>red_material</primary><secondary>PrimitiveBuilder</secondary></indexterm>
+<indexterm><primary>PrimitiveBuilder</primary><secondary>red_material</secondary></indexterm>
+<para><computeroutput>const gef::Material &amp; PrimitiveBuilder::red_material ( ) const<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Get the red material. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>The reference to the red material. </para>
+</formalpara>
+</para>
+</section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_class_primitive_builder_1a72a6196f7dc9bba9f3887c9a5fe0e485"/><section>
+    <title>blue_material_</title>
+<indexterm><primary>blue_material_</primary><secondary>PrimitiveBuilder</secondary></indexterm>
+<indexterm><primary>PrimitiveBuilder</primary><secondary>blue_material_</secondary></indexterm>
+<para><computeroutput>gef::Material PrimitiveBuilder::blue_material_<computeroutput>[protected]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_primitive_builder_1aa3205470b24e5273efb50e359a547b23"/><section>
+    <title>default_cube_mesh_</title>
+<indexterm><primary>default_cube_mesh_</primary><secondary>PrimitiveBuilder</secondary></indexterm>
+<indexterm><primary>PrimitiveBuilder</primary><secondary>default_cube_mesh_</secondary></indexterm>
+<para><computeroutput>gef::Mesh* PrimitiveBuilder::default_cube_mesh_<computeroutput>[protected]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_primitive_builder_1aa3179d29464e6f9f0b84d59bcea6f3d1"/><section>
+    <title>default_sphere_mesh_</title>
+<indexterm><primary>default_sphere_mesh_</primary><secondary>PrimitiveBuilder</secondary></indexterm>
+<indexterm><primary>PrimitiveBuilder</primary><secondary>default_sphere_mesh_</secondary></indexterm>
+<para><computeroutput>gef::Mesh* PrimitiveBuilder::default_sphere_mesh_<computeroutput>[protected]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_primitive_builder_1a0c4022f7c66fb130f59d9d2e1c9aee31"/><section>
+    <title>green_material_</title>
+<indexterm><primary>green_material_</primary><secondary>PrimitiveBuilder</secondary></indexterm>
+<indexterm><primary>PrimitiveBuilder</primary><secondary>green_material_</secondary></indexterm>
+<para><computeroutput>gef::Material PrimitiveBuilder::green_material_<computeroutput>[protected]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_primitive_builder_1a6bfbd619adebd14a9fe02b68521e279d"/><section>
+    <title>platform_</title>
+<indexterm><primary>platform_</primary><secondary>PrimitiveBuilder</secondary></indexterm>
+<indexterm><primary>PrimitiveBuilder</primary><secondary>platform_</secondary></indexterm>
+<para><computeroutput>gef::Platform&amp; PrimitiveBuilder::platform_<computeroutput>[protected]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_primitive_builder_1a7757d609903f9cff6a9bd7f1a239fe27"/><section>
+    <title>red_material_</title>
+<indexterm><primary>red_material_</primary><secondary>PrimitiveBuilder</secondary></indexterm>
+<indexterm><primary>PrimitiveBuilder</primary><secondary>red_material_</secondary></indexterm>
+<para><computeroutput>gef::Material PrimitiveBuilder::red_material_<computeroutput>[protected]</computeroutput></computeroutput></para></section>
+<para>
+The documentation for this class was generated from the following files:</para>
+D:/Uni/CMP208/Hellwatch/<link linkend="_primitive__builder_8h">primitive_builder.h</link>D:/Uni/CMP208/Hellwatch/<link linkend="_primitive__builder_8cpp">primitive_builder.cpp</link></section>
+</section>

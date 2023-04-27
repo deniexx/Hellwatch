@@ -1,0 +1,56 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_struct_f_attribute" xml:lang="en-US">
+<title>FAttribute Struct Reference</title>
+<indexterm><primary>FAttribute</primary></indexterm>
+<para>
+
+<para>Attribute representation  </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;AttributeTypes.h&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_namespace_hellwatch_attribute_1ad0a500e65129d06e4589f9bca54c4a7d">HellwatchAttribute::Type</link> <link linkend="_struct_f_attribute_1adacbd546c31cd3eeb6cc209a7a407e84">attributeType</link></para>
+</listitem>
+            <listitem><para>float <link linkend="_struct_f_attribute_1a9056ea5412f85f588763afc561fda841">maxAmount</link> = 100.f</para>
+</listitem>
+            <listitem><para>float <link linkend="_struct_f_attribute_1af950f31a8ba7e36e9a06091afed1edfe">currentAmount</link> = 0.f</para>
+</listitem>
+            <listitem><para>bool <link linkend="_struct_f_attribute_1ac7a54aa8f158329ab1a12146fe56e0f1">bClampedToZero</link> = true</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Attribute representation  </para>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_struct_f_attribute_1adacbd546c31cd3eeb6cc209a7a407e84"/><section>
+    <title>attributeType</title>
+<indexterm><primary>attributeType</primary><secondary>FAttribute</secondary></indexterm>
+<indexterm><primary>FAttribute</primary><secondary>attributeType</secondary></indexterm>
+<para><computeroutput><link linkend="_namespace_hellwatch_attribute_1ad0a500e65129d06e4589f9bca54c4a7d">HellwatchAttribute::Type</link> FAttribute::attributeType</computeroutput></para></section>
+<anchor xml:id="_struct_f_attribute_1ac7a54aa8f158329ab1a12146fe56e0f1"/><section>
+    <title>bClampedToZero</title>
+<indexterm><primary>bClampedToZero</primary><secondary>FAttribute</secondary></indexterm>
+<indexterm><primary>FAttribute</primary><secondary>bClampedToZero</secondary></indexterm>
+<para><computeroutput>bool FAttribute::bClampedToZero = true</computeroutput></para></section>
+<anchor xml:id="_struct_f_attribute_1af950f31a8ba7e36e9a06091afed1edfe"/><section>
+    <title>currentAmount</title>
+<indexterm><primary>currentAmount</primary><secondary>FAttribute</secondary></indexterm>
+<indexterm><primary>FAttribute</primary><secondary>currentAmount</secondary></indexterm>
+<para><computeroutput>float FAttribute::currentAmount = 0.f</computeroutput></para></section>
+<anchor xml:id="_struct_f_attribute_1a9056ea5412f85f588763afc561fda841"/><section>
+    <title>maxAmount</title>
+<indexterm><primary>maxAmount</primary><secondary>FAttribute</secondary></indexterm>
+<indexterm><primary>FAttribute</primary><secondary>maxAmount</secondary></indexterm>
+<para><computeroutput>float FAttribute::maxAmount = 100.f</computeroutput></para></section>
+<para>
+The documentation for this struct was generated from the following file:</para>
+D:/Uni/CMP208/Hellwatch/build/vs2017/Attributes/<link linkend="__attribute_types_8h">AttributeTypes.h</link></section>
+</section>

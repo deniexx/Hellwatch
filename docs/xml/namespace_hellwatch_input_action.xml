@@ -1,0 +1,54 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="namespace_hellwatch_input_action" kind="namespace" language="C++">
+    <compoundname>HellwatchInputAction</compoundname>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="namespace_hellwatch_input_action_1ad39fcc17ea621da731d011339205f522" prot="public" static="no" strong="no">
+        <type></type>
+        <name>Type</name>
+        <qualifiedname>HellwatchInputAction::Type</qualifiedname>
+        <enumvalue id="namespace_hellwatch_input_action_1ad39fcc17ea621da731d011339205f522a1b668be2e7a287399767467c996dcdcb" prot="public">
+          <name>None</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_hellwatch_input_action_1ad39fcc17ea621da731d011339205f522ac50db83d00684255156bb26fbadba101" prot="public">
+          <name>Pressed</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_hellwatch_input_action_1ad39fcc17ea621da731d011339205f522a2e7461d356b36a8be3798d12aa43a81d" prot="public">
+          <name>Held</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_hellwatch_input_action_1ad39fcc17ea621da731d011339205f522a6baa22c2058b4910e772c39c0e4104bf" prot="public">
+          <name>Released</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/PlayerController.h" line="18" column="1" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/PlayerController.h" bodystart="19" bodyend="24"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/PlayerController.h" line="16" column="1"/>
+  </compounddef>
+</doxygen>

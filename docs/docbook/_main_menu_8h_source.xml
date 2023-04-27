@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__main_menu_8h_source" xml:lang="en-US">
+<title>MainMenu.h</title>
+<indexterm><primary>D:/Uni/CMP208/Hellwatch/build/vs2017/UserInterface/MainMenu.h</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered">1 <emphasis role="preprocessor">#pragma&#32;once</emphasis>
+2 
+3 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="__menu_8h">Menu.h</link>&quot;</emphasis>
+4 
+8 <emphasis role="keyword">class&#32;</emphasis><link linkend="_class_main_menu">MainMenu</link>&#32;:&#32;<emphasis role="keyword">public</emphasis>&#32;<link linkend="_class_menu">Menu</link>
+9 {
+10 <emphasis role="keyword">public</emphasis>:
+11 
+12 &#32;&#32;&#32;&#32;<emphasis role="keyword">virtual</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_main_menu_1a77aaa0eb810c74a907165b6a1acec31f">Init</link>();
+13 
+14 <emphasis role="keyword">private</emphasis>:
+15 
+19 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;OnStartButtonClicked();
+20 
+24 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;OnExitButtonClicked();
+25 };
+26 
+</programlisting></section>

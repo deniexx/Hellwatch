@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__ice_bolt_8h_source" xml:lang="en-US">
+<title>IceBolt.h</title>
+<indexterm><primary>D:/Uni/CMP208/Hellwatch/build/vs2017/Abilities/PlayerAbilities/IceBolt.h</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered">1 <emphasis role="preprocessor">#pragma&#32;once</emphasis>
+2 
+3 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="__ability_8h">Abilities/Ability.h</link>&quot;</emphasis>
+4 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="__utils_8h">GameFramework/Utils.h</link>&quot;</emphasis>
+5 
+9 <emphasis role="keyword">class&#32;</emphasis><link linkend="_class_ice_bolt">IceBolt</link>&#32;:&#32;<emphasis role="keyword">public</emphasis>&#32;<link linkend="_class_ability">Ability</link>
+10 {
+11 <emphasis role="keyword">public</emphasis>:
+12 
+13 &#32;&#32;&#32;&#32;<link linkend="__utils_8h_1afc0ee7bd35c161a2d80b8e8f04fd9213">GENERATED_BODY</link>(<link linkend="_class_ability">Ability</link>,&#32;<link linkend="_class_ice_bolt">IceBolt</link>)
+14 
+15 <emphasis role="keyword">public</emphasis>:
+16 &#32;&#32;&#32;&#32;<link linkend="_class_ice_bolt_1afda105a085a8c933adfb02baee41224b">IceBolt</link>();
+17 
+18 
+19 <emphasis role="keyword">protected</emphasis>:
+20 
+21 &#32;&#32;&#32;&#32;<emphasis role="keyword">virtual</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_ice_bolt_1aaf128a2d87802fa2e09fb8e7c150646b">PostInit</link>()&#32;<emphasis role="keyword">override</emphasis>;
+22 
+23 &#32;&#32;&#32;&#32;<emphasis role="keyword">virtual</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_ice_bolt_1a5dc506246bfe473255626de565ca8af4">Begin</link>()&#32;<emphasis role="keyword">override</emphasis>;
+24 
+25 &#32;&#32;&#32;&#32;<emphasis role="keyword">virtual</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_ice_bolt_1a2b7a3bb2d1627b36331a5c2fee6334a7">End</link>()&#32;<emphasis role="keyword">override</emphasis>;
+26 };
+27 
+</programlisting></section>

@@ -1,0 +1,178 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="class_o_b_j_mesh_loader" kind="class" language="C++" prot="public">
+    <compoundname>OBJMeshLoader</compoundname>
+    <includes refid="obj__mesh__loader_8h" local="no">obj_mesh_loader.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_o_b_j_mesh_loader_1a2b5ad3c422c7d204d737ba4be254cce3" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string OBJMeshLoader::last_error_</definition>
+        <argsstring></argsstring>
+        <name>last_error_</name>
+        <qualifiedname>OBJMeshLoader::last_error_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/obj_mesh_loader.h" line="31" column="13" bodyfile="D:/Uni/CMP208/Hellwatch/obj_mesh_loader.h" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_o_b_j_mesh_loader_1a8c7c99695bfcb18f362f68da3c8fe393" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool OBJMeshLoader::Load</definition>
+        <argsstring>(const char *filename, gef::Platform &amp;platform, MeshMap &amp;mesh_map)</argsstring>
+        <name>Load</name>
+        <qualifiedname>OBJMeshLoader::Load</qualifiedname>
+        <param>
+          <type>const char *</type>
+          <declname>filename</declname>
+        </param>
+        <param>
+          <type>gef::Platform &amp;</type>
+          <declname>platform</declname>
+        </param>
+        <param>
+          <type><ref refid="obj__mesh__loader_8h_1ab6d74e55cf8354fe68dd64bd265a814e" kindref="member">MeshMap</ref> &amp;</type>
+          <declname>mesh_map</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/obj_mesh_loader.h" line="24" column="7" bodyfile="D:/Uni/CMP208/Hellwatch/obj_mesh_loader.cpp" bodystart="20" bodyend="213"/>
+      </memberdef>
+      <memberdef kind="function" id="class_o_b_j_mesh_loader_1ad7a08d9198699f8f8d38312b317c733e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>const std::string &amp;</type>
+        <definition>const std::string &amp; OBJMeshLoader::GetLastError</definition>
+        <argsstring>()</argsstring>
+        <name>GetLastError</name>
+        <qualifiedname>OBJMeshLoader::GetLastError</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/obj_mesh_loader.h" line="25" column="20" bodyfile="D:/Uni/CMP208/Hellwatch/obj_mesh_loader.h" bodystart="25" bodyend="25"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_o_b_j_mesh_loader_1a153b1c2fbd6a2915ef99df389b0a6afb" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const std::string</type>
+        <definition>const std::string OBJMeshLoader::GetFolderName</definition>
+        <argsstring>(const char *filename)</argsstring>
+        <name>GetFolderName</name>
+        <qualifiedname>OBJMeshLoader::GetFolderName</qualifiedname>
+        <param>
+          <type>const char *</type>
+          <declname>filename</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/obj_mesh_loader.h" line="27" column="19" bodyfile="D:/Uni/CMP208/Hellwatch/obj_mesh_loader.cpp" bodystart="215" bodyend="237"/>
+      </memberdef>
+      <memberdef kind="function" id="class_o_b_j_mesh_loader_1a1450b078f7202b7f959665288de1593b" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>gef::Mesh *</type>
+        <definition>gef::Mesh * OBJMeshLoader::CreateMesh</definition>
+        <argsstring>(gef::Platform &amp;platform, std::vector&lt; Int32 &gt; &amp;face_indices, std::vector&lt; gef::Vector4 &gt; &amp;positions, std::vector&lt; gef::Vector4 &gt; &amp;normals, std::vector&lt; gef::Vector2 &gt; &amp;uvs, std::vector&lt; gef::Material * &gt; &amp;material_list, std::vector&lt; Int32 &gt; &amp;primitive_indices, std::vector&lt; Int32 &gt; &amp;texture_indices)</argsstring>
+        <name>CreateMesh</name>
+        <qualifiedname>OBJMeshLoader::CreateMesh</qualifiedname>
+        <param>
+          <type>gef::Platform &amp;</type>
+          <declname>platform</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; Int32 &gt; &amp;</type>
+          <declname>face_indices</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; gef::Vector4 &gt; &amp;</type>
+          <declname>positions</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; gef::Vector4 &gt; &amp;</type>
+          <declname>normals</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; gef::Vector2 &gt; &amp;</type>
+          <declname>uvs</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; gef::Material * &gt; &amp;</type>
+          <declname>material_list</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; Int32 &gt; &amp;</type>
+          <declname>primitive_indices</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; Int32 &gt; &amp;</type>
+          <declname>texture_indices</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/obj_mesh_loader.h" line="28" column="11" bodyfile="D:/Uni/CMP208/Hellwatch/obj_mesh_loader.cpp" bodystart="239" bodyend="341"/>
+      </memberdef>
+      <memberdef kind="function" id="class_o_b_j_mesh_loader_1af505e17d2acdd72896d6440906cd3cdb" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool OBJMeshLoader::LoadMaterials</definition>
+        <argsstring>(gef::Platform &amp;platform, const char *filename, const std::string &amp;folder_name, std::map&lt; std::string, Int32 &gt; &amp;materials, std::vector&lt; gef::Material * &gt; &amp;material_list)</argsstring>
+        <name>LoadMaterials</name>
+        <qualifiedname>OBJMeshLoader::LoadMaterials</qualifiedname>
+        <param>
+          <type>gef::Platform &amp;</type>
+          <declname>platform</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>filename</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>folder_name</declname>
+        </param>
+        <param>
+          <type>std::map&lt; std::string, Int32 &gt; &amp;</type>
+          <declname>materials</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; gef::Material * &gt; &amp;</type>
+          <declname>material_list</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/obj_mesh_loader.h" line="29" column="6" bodyfile="D:/Uni/CMP208/Hellwatch/obj_mesh_loader.cpp" bodystart="353" bodyend="475"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/Uni/CMP208/Hellwatch/obj_mesh_loader.h" line="21" column="1" bodyfile="D:/Uni/CMP208/Hellwatch/obj_mesh_loader.h" bodystart="22" bodyend="32"/>
+    <listofallmembers>
+      <member refid="class_o_b_j_mesh_loader_1a1450b078f7202b7f959665288de1593b" prot="private" virt="non-virtual"><scope>OBJMeshLoader</scope><name>CreateMesh</name></member>
+      <member refid="class_o_b_j_mesh_loader_1a153b1c2fbd6a2915ef99df389b0a6afb" prot="private" virt="non-virtual"><scope>OBJMeshLoader</scope><name>GetFolderName</name></member>
+      <member refid="class_o_b_j_mesh_loader_1ad7a08d9198699f8f8d38312b317c733e" prot="public" virt="non-virtual"><scope>OBJMeshLoader</scope><name>GetLastError</name></member>
+      <member refid="class_o_b_j_mesh_loader_1a2b5ad3c422c7d204d737ba4be254cce3" prot="private" virt="non-virtual"><scope>OBJMeshLoader</scope><name>last_error_</name></member>
+      <member refid="class_o_b_j_mesh_loader_1a8c7c99695bfcb18f362f68da3c8fe393" prot="public" virt="non-virtual"><scope>OBJMeshLoader</scope><name>Load</name></member>
+      <member refid="class_o_b_j_mesh_loader_1af505e17d2acdd72896d6440906cd3cdb" prot="private" virt="non-virtual"><scope>OBJMeshLoader</scope><name>LoadMaterials</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

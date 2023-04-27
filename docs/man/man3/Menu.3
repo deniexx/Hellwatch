@@ -1,0 +1,159 @@
+.TH "Menu" 3 "Thu Apr 27 2023" "Hellwatch" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Menu \- Base \fBMenu\fP class, that mainly handles actions that we bind to in child classes   
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <Menu\&.h>\fP
+.PP
+Inherited by \fBGameEndMenu\fP, \fBMainMenu\fP, \fBPauseMenu\fP, and \fBShopMenu\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fB~Menu\fP ()"
+.br
+.ti -1c
+.RI "virtual void \fBInit\fP ()=0"
+.br
+.RI "Initializes the menu  "
+.ti -1c
+.RI "virtual void \fBUpdate\fP ()"
+.br
+.RI "Updates the controller of the menu and checks for highlights  "
+.ti -1c
+.RI "virtual void \fBDrawMenuHUD\fP (gef::Font *font_, gef::SpriteRenderer *sprite_renderer_)"
+.br
+.RI "Draws the menu HUD  "
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBPlayerController\fP * \fBmenuController\fP"
+.br
+.ti -1c
+.RI "std::vector< \fBMenuButton\fP > \fBmenuButtons\fP"
+.br
+.ti -1c
+.RI "int \fBcurrentButtonFocused\fP = 0"
+.br
+.ti -1c
+.RI "gef::Sprite * \fBmenuSprite\fP"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBOnUpButtonPressed\fP ()"
+.br
+.RI "When the player presses a button to navigate up the menu  "
+.ti -1c
+.RI "void \fBOnDownButtonPressed\fP ()"
+.br
+.RI "When the player presses a button to navigate down the menu  "
+.ti -1c
+.RI "virtual void \fBOnMouseButtonPressed\fP (gef::Vector2 mousePos)"
+.br
+.RI "When the player presses the mouse button, checks if the mouse is over any buttons and if it is, it activates it  "
+.ti -1c
+.RI "void \fBOnControllerUpButton\fP (gef::Vector2 dir)"
+.br
+.RI "When the player presses a button to navigate up the menu  "
+.ti -1c
+.RI "void \fBOnControllerDownButton\fP (gef::Vector2 dir)"
+.br
+.RI "When the player presses a button to navigate down the menu  "
+.ti -1c
+.RI "void \fBOnControllerSubmitButton\fP (gef::Vector2 dir)"
+.br
+.RI "When the player presses a button to navigate down the menu  "
+.ti -1c
+.RI "void \fBCheckForHighlight\fP ()"
+.br
+.RI "Checks whether to highlight any buttons  "
+.ti -1c
+.RI "void \fBPressMenuButton\fP ()"
+.br
+.RI "Presses the currently selected menu button  "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Base \fBMenu\fP class, that mainly handles actions that we bind to in child classes  
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "Menu::~Menu ()"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "void Menu::CheckForHighlight ()\fC [protected]\fP"
+
+.PP
+Checks whether to highlight any buttons  
+.SS "void Menu::DrawMenuHUD (gef::Font * font_, gef::SpriteRenderer * sprite_renderer_)\fC [virtual]\fP"
+
+.PP
+Draws the menu HUD  
+.PP
+Reimplemented in \fBGameEndMenu\fP, and \fBShopMenu\fP\&.
+.SS "virtual void Menu::Init ()\fC [pure virtual]\fP"
+
+.PP
+Initializes the menu  
+.PP
+Implemented in \fBGameEndMenu\fP, \fBMainMenu\fP, \fBShopMenu\fP, and \fBPauseMenu\fP\&.
+.SS "void Menu::OnControllerDownButton (gef::Vector2 dir)\fC [protected]\fP"
+
+.PP
+When the player presses a button to navigate down the menu  
+.SS "void Menu::OnControllerSubmitButton (gef::Vector2 dir)\fC [protected]\fP"
+
+.PP
+When the player presses a button to navigate down the menu  
+.SS "void Menu::OnControllerUpButton (gef::Vector2 dir)\fC [protected]\fP"
+
+.PP
+When the player presses a button to navigate up the menu  
+.SS "void Menu::OnDownButtonPressed ()\fC [protected]\fP"
+
+.PP
+When the player presses a button to navigate down the menu  
+.SS "void Menu::OnMouseButtonPressed (gef::Vector2 mousePos)\fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+When the player presses the mouse button, checks if the mouse is over any buttons and if it is, it activates it  
+.PP
+Reimplemented in \fBShopMenu\fP\&.
+.SS "void Menu::OnUpButtonPressed ()\fC [protected]\fP"
+
+.PP
+When the player presses a button to navigate up the menu  
+.SS "void Menu::PressMenuButton ()\fC [protected]\fP"
+
+.PP
+Presses the currently selected menu button  
+.SS "void Menu::Update ()\fC [virtual]\fP"
+
+.PP
+Updates the controller of the menu and checks for highlights  
+.PP
+Reimplemented in \fBShopMenu\fP\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "int Menu::currentButtonFocused = 0"
+
+.SS "std::vector<\fBMenuButton\fP> Menu::menuButtons"
+
+.SS "\fBPlayerController\fP* Menu::menuController"
+
+.SS "gef::Sprite* Menu::menuSprite"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Hellwatch from the source code\&.

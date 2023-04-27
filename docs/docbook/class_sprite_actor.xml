@@ -1,0 +1,228 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_sprite_actor" xml:lang="en-US">
+<title>SpriteActor Class Reference</title>
+<indexterm><primary>SpriteActor</primary></indexterm>
+<para>
+
+<para>An object that has a sprite  </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;SpriteActor.h&gt;</computeroutput>
+</para>
+Inheritance diagram for SpriteActor:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_sprite_actor__inherit__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Collaboration diagram for SpriteActor:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_sprite_actor__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_sprite_actor_1a7cec018143780ec6eb5c6986909702b7">SpriteActor</link> ()</para>
+
+<para>Default constructor  </para>
+</listitem>
+            <listitem><para><link linkend="_class_sprite_actor_1a621cb54068cc048f59c012c6c53a9b45">SpriteActor</link> (float width, float height, gef::Texture *texture=nullptr, UInt32 colour=0xFFFFFFFF)</para>
+
+<para>Constructor that sets up the sprite  </para>
+</listitem>
+            <listitem><para><link linkend="_class_sprite_actor_1a087bb8b789d29d3e7c71db58e4c2a5e0">~SpriteActor</link> ()</para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_class_sprite_actor_1a9bee8a49bee219bae0190046e3ec5d1c">SetTranslation</link> (const gef::Vector4 &amp;inTranslation) override</para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_class_sprite_actor_1ad7d2b2ba00da6fd85e8dfd84d9aaa776">SetRotation</link> (const float rotation) override</para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_class_sprite_actor_1a432a23017cf5aa8fe8b521ee5884c996">SetScale</link> (const gef::Vector4 &amp;inScale)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_sprite_actor_1a2c4fffd3038c47dcda6592a398f6386c">SetTexture</link> (gef::Texture *texture)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_sprite_actor_1a0369b43c4507873169b90af54f002da3">SetSprite</link> (gef::Sprite *inSprite)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_sprite_actor_1a34892b4383f3a0dec1c43345b19a8e8e">SetWidth</link> (float newWidth)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_sprite_actor_1adf4a1510ceb0dbf66a582614b1dfaddc">SetHeight</link> (float newHeight)</para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_class_sprite_actor_1a0820aad46981ac11174f67ab97433473">Render</link> () override</para>
+
+<para>Renders the object  </para>
+</listitem>
+            <listitem><para>__forceinline gef::Sprite * <link linkend="_class_sprite_actor_1a530cf84805cb957b99f95fd9a8c0c1e3">GetSprite</link> () const</para>
+</listitem>
+            <listitem><para>__forceinline virtual const float <link linkend="_class_sprite_actor_1aaf810a489f9916ecd2d041cd61d39874">GetRotationF</link> () const override</para>
+</listitem>
+            <listitem><para>__forceinline virtual const gef::Vector4 &amp; <link linkend="_class_sprite_actor_1a4d9d23b93afa89ec5aa8e04786252b19">GetTranslation</link> () const</para>
+</listitem>
+            <listitem><para>__forceinline virtual const gef::Vector4 &amp; <link linkend="_class_sprite_actor_1a473e053ec3e6e8a460020ba3833acc2e">GetScale</link> () const</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Additional Inherited Members    </title>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>An object that has a sprite  </para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_sprite_actor_1a7cec018143780ec6eb5c6986909702b7"/><section>
+    <title>SpriteActor()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>SpriteActor</primary><secondary>SpriteActor</secondary></indexterm>
+<indexterm><primary>SpriteActor</primary><secondary>SpriteActor</secondary></indexterm>
+<para><computeroutput>SpriteActor::SpriteActor ( )</computeroutput></para><para>
+
+<para>Default constructor  </para>
+</para>
+</section>
+<anchor xml:id="_class_sprite_actor_1a621cb54068cc048f59c012c6c53a9b45"/><section>
+    <title>SpriteActor()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>SpriteActor</primary><secondary>SpriteActor</secondary></indexterm>
+<indexterm><primary>SpriteActor</primary><secondary>SpriteActor</secondary></indexterm>
+<para><computeroutput>SpriteActor::SpriteActor (float width, float height, gef::Texture * texture = <computeroutput>nullptr</computeroutput>
+, UInt32 colour = <computeroutput>0xFFFFFFFF</computeroutput>
+)</computeroutput></para><para>
+
+<para>Constructor that sets up the sprite  </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>width</entry><entry>
+<para>Width of the sprite</para>
+</entry>
+                            </row>
+                            <row>
+<entry>height</entry><entry>
+<para>Height of the sprite</para>
+</entry>
+                            </row>
+                            <row>
+<entry>texture</entry><entry>
+<para>Texture of the sprite</para>
+</entry>
+                            </row>
+                            <row>
+<entry>colour</entry><entry>
+<para>Colour of the sprite</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_class_sprite_actor_1a087bb8b789d29d3e7c71db58e4c2a5e0"/><section>
+    <title>~SpriteActor()</title>
+<indexterm><primary>~SpriteActor</primary><secondary>SpriteActor</secondary></indexterm>
+<indexterm><primary>SpriteActor</primary><secondary>~SpriteActor</secondary></indexterm>
+<para><computeroutput>SpriteActor::~SpriteActor ( )</computeroutput></para></section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_sprite_actor_1aaf810a489f9916ecd2d041cd61d39874"/><section>
+    <title>GetRotationF()</title>
+<indexterm><primary>GetRotationF</primary><secondary>SpriteActor</secondary></indexterm>
+<indexterm><primary>SpriteActor</primary><secondary>GetRotationF</secondary></indexterm>
+<para><computeroutput>__forceinline virtual const float SpriteActor::GetRotationF ( ) const<computeroutput>[inline]</computeroutput>, <computeroutput>[override]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+Reimplemented from <link linkend="_class_world_object_1aa959995cc385843f1e2b0139e4413ab5">WorldObject</link>.</para>
+</section>
+<anchor xml:id="_class_sprite_actor_1a473e053ec3e6e8a460020ba3833acc2e"/><section>
+    <title>GetScale()</title>
+<indexterm><primary>GetScale</primary><secondary>SpriteActor</secondary></indexterm>
+<indexterm><primary>SpriteActor</primary><secondary>GetScale</secondary></indexterm>
+<para><computeroutput>__forceinline virtual const gef::Vector4 &amp; SpriteActor::GetScale ( ) const<computeroutput>[inline]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+Reimplemented from <link linkend="_class_world_object_1a223b3653f965b7698ec28c9b4fc84e28">WorldObject</link>.</para>
+</section>
+<anchor xml:id="_class_sprite_actor_1a530cf84805cb957b99f95fd9a8c0c1e3"/><section>
+    <title>GetSprite()</title>
+<indexterm><primary>GetSprite</primary><secondary>SpriteActor</secondary></indexterm>
+<indexterm><primary>SpriteActor</primary><secondary>GetSprite</secondary></indexterm>
+<para><computeroutput>__forceinline gef::Sprite * SpriteActor::GetSprite ( ) const<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_sprite_actor_1a4d9d23b93afa89ec5aa8e04786252b19"/><section>
+    <title>GetTranslation()</title>
+<indexterm><primary>GetTranslation</primary><secondary>SpriteActor</secondary></indexterm>
+<indexterm><primary>SpriteActor</primary><secondary>GetTranslation</secondary></indexterm>
+<para><computeroutput>__forceinline virtual const gef::Vector4 &amp; SpriteActor::GetTranslation ( ) const<computeroutput>[inline]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+Reimplemented from <link linkend="_class_world_object_1a9967baa65719f1418641598a244306a5">WorldObject</link>.</para>
+</section>
+<anchor xml:id="_class_sprite_actor_1a0820aad46981ac11174f67ab97433473"/><section>
+    <title>Render()</title>
+<indexterm><primary>Render</primary><secondary>SpriteActor</secondary></indexterm>
+<indexterm><primary>SpriteActor</primary><secondary>Render</secondary></indexterm>
+<para><computeroutput>void SpriteActor::Render ( )<computeroutput>[override]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Renders the object  </para>
+</para>
+<para>
+Reimplemented from <link linkend="_class_world_object_1a2a30bf431fa478eb5d24683e1906c261">WorldObject</link>.</para>
+</section>
+<anchor xml:id="_class_sprite_actor_1adf4a1510ceb0dbf66a582614b1dfaddc"/><section>
+    <title>SetHeight()</title>
+<indexterm><primary>SetHeight</primary><secondary>SpriteActor</secondary></indexterm>
+<indexterm><primary>SpriteActor</primary><secondary>SetHeight</secondary></indexterm>
+<para><computeroutput>void SpriteActor::SetHeight (float newHeight)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_sprite_actor_1ad7d2b2ba00da6fd85e8dfd84d9aaa776"/><section>
+    <title>SetRotation()</title>
+<indexterm><primary>SetRotation</primary><secondary>SpriteActor</secondary></indexterm>
+<indexterm><primary>SpriteActor</primary><secondary>SetRotation</secondary></indexterm>
+<para><computeroutput>void SpriteActor::SetRotation (const float rotation)<computeroutput>[override]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+Reimplemented from <link linkend="_class_world_object_1ad73836d8146cc9e1d475eb74fb05481a">WorldObject</link>.</para>
+</section>
+<anchor xml:id="_class_sprite_actor_1a432a23017cf5aa8fe8b521ee5884c996"/><section>
+    <title>SetScale()</title>
+<indexterm><primary>SetScale</primary><secondary>SpriteActor</secondary></indexterm>
+<indexterm><primary>SpriteActor</primary><secondary>SetScale</secondary></indexterm>
+<para><computeroutput>void SpriteActor::SetScale (const gef::Vector4 &amp; inScale)<computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+Reimplemented from <link linkend="_class_world_object_1ae00d341e9ac8909374dd556aaecbdb46">WorldObject</link>.</para>
+</section>
+<anchor xml:id="_class_sprite_actor_1a0369b43c4507873169b90af54f002da3"/><section>
+    <title>SetSprite()</title>
+<indexterm><primary>SetSprite</primary><secondary>SpriteActor</secondary></indexterm>
+<indexterm><primary>SpriteActor</primary><secondary>SetSprite</secondary></indexterm>
+<para><computeroutput>void SpriteActor::SetSprite (gef::Sprite * inSprite)</computeroutput></para></section>
+<anchor xml:id="_class_sprite_actor_1a2c4fffd3038c47dcda6592a398f6386c"/><section>
+    <title>SetTexture()</title>
+<indexterm><primary>SetTexture</primary><secondary>SpriteActor</secondary></indexterm>
+<indexterm><primary>SpriteActor</primary><secondary>SetTexture</secondary></indexterm>
+<para><computeroutput>void SpriteActor::SetTexture (gef::Texture * texture)</computeroutput></para></section>
+<anchor xml:id="_class_sprite_actor_1a9bee8a49bee219bae0190046e3ec5d1c"/><section>
+    <title>SetTranslation()</title>
+<indexterm><primary>SetTranslation</primary><secondary>SpriteActor</secondary></indexterm>
+<indexterm><primary>SpriteActor</primary><secondary>SetTranslation</secondary></indexterm>
+<para><computeroutput>void SpriteActor::SetTranslation (const gef::Vector4 &amp; inTranslation)<computeroutput>[override]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+Reimplemented from <link linkend="_class_world_object_1a830b64bbf6df3fc50284b0316c124133">WorldObject</link>.</para>
+</section>
+<anchor xml:id="_class_sprite_actor_1a34892b4383f3a0dec1c43345b19a8e8e"/><section>
+    <title>SetWidth()</title>
+<indexterm><primary>SetWidth</primary><secondary>SpriteActor</secondary></indexterm>
+<indexterm><primary>SpriteActor</primary><secondary>SetWidth</secondary></indexterm>
+<para><computeroutput>void SpriteActor::SetWidth (float newWidth)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<para>
+The documentation for this class was generated from the following files:</para>
+D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/<link linkend="__sprite_actor_8h">SpriteActor.h</link>D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/<link linkend="__sprite_actor_8cpp">SpriteActor.cpp</link></section>
+</section>

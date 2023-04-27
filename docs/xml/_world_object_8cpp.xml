@@ -1,0 +1,270 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="_world_object_8cpp" kind="file" language="C++">
+    <compoundname>WorldObject.cpp</compoundname>
+    <includes refid="_world_object_8h" local="yes">WorldObject.h</includes>
+    <includes local="yes">graphics/scene.h</includes>
+    <includes local="yes">box2d/b2_body.h</includes>
+    <includes local="yes">box2d/b2_world.h</includes>
+    <includes refid="scene__app_8h" local="yes">scene_app.h</includes>
+    <incdepgraph>
+      <node id="5">
+        <label>Utils.h</label>
+        <link refid="_utils_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/WorldObject.cpp</label>
+        <link refid="_world_object_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>WorldObject.h</label>
+        <link refid="_world_object_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="19">
+        <label>obj_mesh_loader.h</label>
+        <link refid="obj__mesh__loader_8h"/>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>primitive_builder.h</label>
+        <link refid="primitive__builder_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>scene_app.h</label>
+        <link refid="scene__app_8h"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+      </node>
+      <node id="28">
+        <label>box2d/b2_body.h</label>
+      </node>
+      <node id="29">
+        <label>box2d/b2_world.h</label>
+      </node>
+      <node id="17">
+        <label>box2d/box2d.h</label>
+      </node>
+      <node id="15">
+        <label>cstddef</label>
+      </node>
+      <node id="25">
+        <label>future</label>
+      </node>
+      <node id="20">
+        <label>gef.h</label>
+      </node>
+      <node id="24">
+        <label>graphics/font.h</label>
+      </node>
+      <node id="14">
+        <label>graphics/material.h</label>
+      </node>
+      <node id="9">
+        <label>graphics/renderer_3d.h</label>
+      </node>
+      <node id="16">
+        <label>graphics/scene.h</label>
+      </node>
+      <node id="21">
+        <label>map</label>
+      </node>
+      <node id="3">
+        <label>maths/Matrix44.h</label>
+      </node>
+      <node id="6">
+        <label>maths/Vector2.h</label>
+      </node>
+      <node id="27">
+        <label>maths/math_utils.h</label>
+      </node>
+      <node id="8">
+        <label>maths/matrix44.h</label>
+      </node>
+      <node id="4">
+        <label>maths/quaternion.h</label>
+      </node>
+      <node id="12">
+        <label>maths/vector2.h</label>
+      </node>
+      <node id="7">
+        <label>maths/vector4.h</label>
+      </node>
+      <node id="26">
+        <label>random</label>
+      </node>
+      <node id="22">
+        <label>string</label>
+      </node>
+      <node id="11">
+        <label>system/application.h</label>
+      </node>
+      <node id="18">
+        <label>system/platform.h</label>
+      </node>
+      <node id="23">
+        <label>vector</label>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_world_object_8h" kindref="compound">WorldObject.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;graphics/scene.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;box2d/b2_body.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;box2d/b2_world.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="scene__app_8h" kindref="compound">scene_app.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><ref refid="class_world_object_1a632d2e78acdcbc0aef09951134340d4e" kindref="member">WorldObject::WorldObject</ref>()</highlight></codeline>
+<codeline lineno="9"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_world_object_1a9e5ac0cc278f5766b6020950fdabbe75" kindref="member">transformMat</ref>.SetIdentity();</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_world_object_1a830b64bbf6df3fc50284b0316c124133" kindref="member">SetTranslation</ref>(gef::Vector4::kZero);</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_world_object_1a18ba8b67b53f7df01220643617ecd75c" kindref="member">SetRotation</ref>(gef::Vector4::kZero);</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_world_object_1ae00d341e9ac8909374dd556aaecbdb46" kindref="member">SetScale</ref>(gef::Vector4::kOne);</highlight></codeline>
+<codeline lineno="14"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><ref refid="class_world_object_1a287e5b87a26133cd35f3015268d2a5a3" kindref="member">WorldObject::~WorldObject</ref>()</highlight></codeline>
+<codeline lineno="17"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="class_world_object_1aa3b5f5e5e1ed26c94265854e2858bdee" kindref="member">GetCollisionBody</ref>())</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SceneApp::instance-&gt;GetBox2DWorld()-&gt;DestroyBody(<ref refid="class_world_object_1aa3b5f5e5e1ed26c94265854e2858bdee" kindref="member">GetCollisionBody</ref>());</highlight></codeline>
+<codeline lineno="20"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_world_object_1aa2d0bc51a9b2dac1930c37e2401e8934" kindref="member">WorldObject::Init</ref>(<ref refid="class_world_object" kindref="compound">WorldObject</ref>*<sp/>owner)</highlight></codeline>
+<codeline lineno="23"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_world_object_1a8917ba1d61e12c12f7246c7b95cd4094" kindref="member">owningObject</ref><sp/>=<sp/>owner;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_world_object_1a8500a6a24c62699fa103a68349407a3f" kindref="member">PostInit</ref>();</highlight></codeline>
+<codeline lineno="27"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_world_object_1a8500a6a24c62699fa103a68349407a3f" kindref="member">WorldObject::PostInit</ref>()</highlight></codeline>
+<codeline lineno="30"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="31"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_world_object_1a828815709498f192bf138ecfe416c529" kindref="member">WorldObject::Update</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>deltaTime)</highlight></codeline>
+<codeline lineno="34"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="35"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_world_object_1a2a30bf431fa478eb5d24683e1906c261" kindref="member">WorldObject::Render</ref>()</highlight></codeline>
+<codeline lineno="38"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="39"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_world_object_1a830b64bbf6df3fc50284b0316c124133" kindref="member">WorldObject::SetTranslation</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>gef::Vector4&amp;<sp/>inTranslation)</highlight></codeline>
+<codeline lineno="43"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="class_world_object_1a025ba78ec5cc2607f7e62750a7c37749" kindref="member">collisionBody</ref>)</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_world_object_1a025ba78ec5cc2607f7e62750a7c37749" kindref="member">collisionBody</ref>-&gt;SetTransform(b2Vec2(inTranslation.x(),<sp/>inTranslation.z()),<sp/>0.f);</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_world_object_1a78bd9162f55826c5c68706d688578cf8" kindref="member">translation</ref><sp/>=<sp/>inTranslation;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_world_object_1a18ba8b67b53f7df01220643617ecd75c" kindref="member">WorldObject::SetRotation</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>gef::Vector4&amp;<sp/>inRotation)</highlight></codeline>
+<codeline lineno="52"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_world_object_1a519b69f0419703cfbe08580d4b2ab408" kindref="member">rotationVec</ref><sp/>=<sp/>inRotation;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_world_object_1a18ba8b67b53f7df01220643617ecd75c" kindref="member">WorldObject::SetRotation</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>inRotation)</highlight></codeline>
+<codeline lineno="57"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>To<sp/>be<sp/>overriden<sp/>for<sp/>sprites</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_world_object_1ae00d341e9ac8909374dd556aaecbdb46" kindref="member">WorldObject::SetScale</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>gef::Vector4&amp;<sp/>inScale)</highlight></codeline>
+<codeline lineno="62"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_world_object_1a45f28fb0c7cf14a6c92ab72eaa4eb9a9" kindref="member">scale</ref><sp/>=<sp/>inScale;</highlight></codeline>
+<codeline lineno="64"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_world_object_1a8817deac42a357d2ed476791c7b76511" kindref="member">WorldObject::SetCollisionBody</ref>(b2Body*<sp/>inCollisionBody)</highlight></codeline>
+<codeline lineno="67"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_world_object_1a025ba78ec5cc2607f7e62750a7c37749" kindref="member">collisionBody</ref><sp/>=<sp/>inCollisionBody;</highlight></codeline>
+<codeline lineno="69"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_world_object_1a4c83c0d8e3817aac3ef2080ec0972802" kindref="member">WorldObject::BuildTransform</ref>()</highlight></codeline>
+<codeline lineno="72"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/>gef::Matrix44<sp/>scale_mat,<sp/>rotateX_mat,<sp/>rotateY_mat,<sp/>rotateZ_mat,<sp/>translate_mat;</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/>scale_mat.SetIdentity();</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/>scale_mat.Scale(<ref refid="class_world_object_1a45f28fb0c7cf14a6c92ab72eaa4eb9a9" kindref="member">scale</ref>);</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/>rotateX_mat.RotationX(<ref refid="class_world_object_1a519b69f0419703cfbe08580d4b2ab408" kindref="member">rotationVec</ref>.x());</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/>rotateY_mat.RotationY(<ref refid="class_world_object_1a519b69f0419703cfbe08580d4b2ab408" kindref="member">rotationVec</ref>.y());</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/>rotateZ_mat.RotationZ(<ref refid="class_world_object_1a519b69f0419703cfbe08580d4b2ab408" kindref="member">rotationVec</ref>.z());</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/>translate_mat.SetIdentity();</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/>translate_mat.SetTranslation(<ref refid="class_world_object_1a78bd9162f55826c5c68706d688578cf8" kindref="member">translation</ref>);</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_world_object_1a9e5ac0cc278f5766b6020950fdabbe75" kindref="member">transformMat</ref><sp/>=<sp/>scale_mat<sp/>*<sp/>rotateX_mat<sp/>*<sp/>rotateY_mat<sp/>*<sp/>rotateZ_mat<sp/>*<sp/>translate_mat;</highlight></codeline>
+<codeline lineno="85"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_world_object_1a7c563531a541e9f5ff4193443cedd515" kindref="member">WorldObject::OnCollision</ref>(b2Body*<sp/>OtherBody)</highlight></codeline>
+<codeline lineno="88"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="89"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/WorldObject.cpp"/>
+  </compounddef>
+</doxygen>

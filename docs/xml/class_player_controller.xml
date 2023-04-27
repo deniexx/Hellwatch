@@ -1,0 +1,431 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="class_player_controller" kind="class" language="C++" prot="public">
+    <compoundname>PlayerController</compoundname>
+    <includes refid="_player_controller_8h" local="no">PlayerController.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_player_controller_1a94f1f959a2a8ec997462f0ef91da27d9" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; <ref refid="struct_f_key_bind_keyboard" kindref="compound">FKeyBindKeyboard</ref> &gt;</type>
+        <definition>std::vector&lt;FKeyBindKeyboard&gt; PlayerController::keyboardKeyBinds</definition>
+        <argsstring></argsstring>
+        <name>keyboardKeyBinds</name>
+        <qualifiedname>PlayerController::keyboardKeyBinds</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/PlayerController.h" line="132" column="13" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/PlayerController.h" bodystart="132" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_player_controller_1a785b99c28d0a619a9d7391a710a7f099" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; <ref refid="struct_f_key_bind_controller" kindref="compound">FKeyBindController</ref> &gt;</type>
+        <definition>std::vector&lt;FKeyBindController&gt; PlayerController::controllerKeyBinds</definition>
+        <argsstring></argsstring>
+        <name>controllerKeyBinds</name>
+        <qualifiedname>PlayerController::controllerKeyBinds</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/PlayerController.h" line="133" column="13" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/PlayerController.h" bodystart="133" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_player_controller_1af2cbb66c6c8cc39c10b0f1bc515aaede" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; <ref refid="struct_f_key_bind_mouse" kindref="compound">FKeyBindMouse</ref> &gt;</type>
+        <definition>std::vector&lt;FKeyBindMouse&gt; PlayerController::mouseKeyBinds</definition>
+        <argsstring></argsstring>
+        <name>mouseKeyBinds</name>
+        <qualifiedname>PlayerController::mouseKeyBinds</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/PlayerController.h" line="134" column="13" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/PlayerController.h" bodystart="134" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_player_controller_1a1d0f9e31b7e6f94dff8ef548589670e5" prot="private" static="no" mutable="no">
+        <type>Int32</type>
+        <definition>Int32 PlayerController::activeTouchID</definition>
+        <argsstring></argsstring>
+        <name>activeTouchID</name>
+        <qualifiedname>PlayerController::activeTouchID</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/PlayerController.h" line="139" column="7" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/PlayerController.h" bodystart="139" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_player_controller_1af885ef527da02e6b61f21ec10cfdb0da" prot="private" static="no" mutable="no">
+        <type>gef::Vector2</type>
+        <definition>gef::Vector2 PlayerController::touchPosition</definition>
+        <argsstring></argsstring>
+        <name>touchPosition</name>
+        <qualifiedname>PlayerController::touchPosition</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/PlayerController.h" line="140" column="14" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/PlayerController.h" bodystart="140" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_player_controller_1a289560f2ea4b60a1170a2577d3f587a9" prot="private" static="no" mutable="no">
+        <type>gef::Vector2</type>
+        <definition>gef::Vector2 PlayerController::lastMousePosition</definition>
+        <argsstring></argsstring>
+        <name>lastMousePosition</name>
+        <qualifiedname>PlayerController::lastMousePosition</qualifiedname>
+        <initializer>= gef::Vector2(0, 0)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/PlayerController.h" line="142" column="14" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/PlayerController.h" bodystart="142" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_player_controller_1a25e55daeec802eed65640779d3c99192" prot="private" static="no" mutable="no">
+        <type>gef::InputManager *</type>
+        <definition>gef::InputManager* PlayerController::inputManager</definition>
+        <argsstring></argsstring>
+        <name>inputManager</name>
+        <qualifiedname>PlayerController::inputManager</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/PlayerController.h" line="147" column="19" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/PlayerController.h" bodystart="147" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_player_controller_1a6be0ad925daf5880250ef87881eedbf6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>PlayerController::PlayerController</definition>
+        <argsstring>(gef::Platform &amp;platform)</argsstring>
+        <name>PlayerController</name>
+        <qualifiedname>PlayerController::PlayerController</qualifiedname>
+        <param>
+          <type>gef::Platform &amp;</type>
+          <declname>platform</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/PlayerController.h" line="74" column="1" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/PlayerController.cpp" bodystart="9" bodyend="14"/>
+      </memberdef>
+      <memberdef kind="function" id="class_player_controller_1a3cf1cb2523e6b8a78cdbaf9df577b3be" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>gef::Vector2</type>
+        <definition>gef::Vector2 PlayerController::GetMousePosition</definition>
+        <argsstring>()</argsstring>
+        <name>GetMousePosition</name>
+        <qualifiedname>PlayerController::GetMousePosition</qualifiedname>
+        <briefdescription>
+<para>Gets the mouse Position  </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The mouse position on the screen</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/PlayerController.h" line="82" column="14" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/PlayerController.cpp" bodystart="16" bodyend="24"/>
+      </memberdef>
+      <memberdef kind="function" id="class_player_controller_1a3ecff75f943f340bce2240d58eaf7f4f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool PlayerController::BindKeyboardEvent</definition>
+        <argsstring>(const FKeyBindKeyboard keyboardEvent, bool bUnique=false, bool bReplaceIfUnique=false)</argsstring>
+        <name>BindKeyboardEvent</name>
+        <qualifiedname>PlayerController::BindKeyboardEvent</qualifiedname>
+        <param>
+          <type>const <ref refid="struct_f_key_bind_keyboard" kindref="compound">FKeyBindKeyboard</ref></type>
+          <declname>keyboardEvent</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>bUnique</declname>
+          <defval>false</defval>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>bReplaceIfUnique</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+<para>Binds a keyboard event to this player controller  </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>keyboardEvent</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The event to be bound</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>bUnique</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Should the event be unique, i.e. no other events bound to the same key</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>bReplaceIfUnique</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Should we replace if the event is not unique</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True, if the event was successfully bound</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/PlayerController.h" line="91" column="6" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/PlayerController.cpp" bodystart="26" bodyend="70"/>
+      </memberdef>
+      <memberdef kind="function" id="class_player_controller_1a3b4ce10a473a2000d1b204c7830bff97" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool PlayerController::BindControllerEvent</definition>
+        <argsstring>(const FKeyBindController controllerEvent, bool bUnique=false, bool bReplaceIfUnique=false)</argsstring>
+        <name>BindControllerEvent</name>
+        <qualifiedname>PlayerController::BindControllerEvent</qualifiedname>
+        <param>
+          <type>const <ref refid="struct_f_key_bind_controller" kindref="compound">FKeyBindController</ref></type>
+          <declname>controllerEvent</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>bUnique</declname>
+          <defval>false</defval>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>bReplaceIfUnique</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+<para>Binds a controller event to this player controller  </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>controllerEvent</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The event to be bound</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>bUnique</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Should the event be unique, i.e. no other events bound to the same key</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>bReplaceIfUnique</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Should we replace if the event is not unique</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True, if the event was successfully bound</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/PlayerController.h" line="100" column="6" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/PlayerController.cpp" bodystart="72" bodyend="116"/>
+      </memberdef>
+      <memberdef kind="function" id="class_player_controller_1a654bf416ea31cbe022ccc50c7e1832e8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool PlayerController::BindMouseEvent</definition>
+        <argsstring>(const FKeyBindMouse mouseEvent)</argsstring>
+        <name>BindMouseEvent</name>
+        <qualifiedname>PlayerController::BindMouseEvent</qualifiedname>
+        <param>
+          <type>const <ref refid="struct_f_key_bind_mouse" kindref="compound">FKeyBindMouse</ref></type>
+          <declname>mouseEvent</declname>
+        </param>
+        <briefdescription>
+<para>Binds a mouse event to this player controller  </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>mouseEvent</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The event to be bound</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True, if the event was successfully bound</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/PlayerController.h" line="107" column="6" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/PlayerController.cpp" bodystart="118" bodyend="125"/>
+      </memberdef>
+      <memberdef kind="function" id="class_player_controller_1a92f0d14a05056e6296fc726fc7073410" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PlayerController::BindKeyBindSet</definition>
+        <argsstring>(FKeyBindSet keyBindSet)</argsstring>
+        <name>BindKeyBindSet</name>
+        <qualifiedname>PlayerController::BindKeyBindSet</qualifiedname>
+        <param>
+          <type><ref refid="struct_f_key_bind_set" kindref="compound">FKeyBindSet</ref></type>
+          <declname>keyBindSet</declname>
+        </param>
+        <briefdescription>
+<para>Binds a full key bind set and removes ALL previous key binds  </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>keyBindSet</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The key bind set to be bound</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/PlayerController.h" line="113" column="6" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/PlayerController.cpp" bodystart="127" bodyend="141"/>
+      </memberdef>
+      <memberdef kind="function" id="class_player_controller_1a2e0c380d64a88c8cfe60ce8452921227" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PlayerController::Update</definition>
+        <argsstring>()</argsstring>
+        <name>Update</name>
+        <qualifiedname>PlayerController::Update</qualifiedname>
+        <briefdescription>
+<para>Updates the player controller and processes input  </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/PlayerController.h" line="118" column="6" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/PlayerController.cpp" bodystart="143" bodyend="165"/>
+      </memberdef>
+      <memberdef kind="function" id="class_player_controller_1ac23282a33a9bfc6972828f0ce385a52b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="struct_f_key_bind_set" kindref="compound">FKeyBindSet</ref> &amp;</type>
+        <definition>const FKeyBindSet &amp; PlayerController::GetKeybindSet</definition>
+        <argsstring>() const</argsstring>
+        <name>GetKeybindSet</name>
+        <qualifiedname>PlayerController::GetKeybindSet</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/PlayerController.h" line="151" column="19" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/PlayerController.cpp" bodystart="308" bodyend="317"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_player_controller_1a3c5d859b003e7c71124f04bc02c868fa" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PlayerController::EvaluateKeyboardKeybinds</definition>
+        <argsstring>(gef::Keyboard *keyboard)</argsstring>
+        <name>EvaluateKeyboardKeybinds</name>
+        <qualifiedname>PlayerController::EvaluateKeyboardKeybinds</qualifiedname>
+        <param>
+          <type>gef::Keyboard *</type>
+          <declname>keyboard</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/PlayerController.h" line="125" column="6" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/PlayerController.cpp" bodystart="167" bodyend="193"/>
+      </memberdef>
+      <memberdef kind="function" id="class_player_controller_1a7a5f17eb6df7586d9f4a80f5ed392746" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PlayerController::EvaluateControllerKeybinds</definition>
+        <argsstring>(const gef::SonyController *controller)</argsstring>
+        <name>EvaluateControllerKeybinds</name>
+        <qualifiedname>PlayerController::EvaluateControllerKeybinds</qualifiedname>
+        <param>
+          <type>const gef::SonyController *</type>
+          <declname>controller</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/PlayerController.h" line="126" column="6" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/PlayerController.cpp" bodystart="195" bodyend="240"/>
+      </memberdef>
+      <memberdef kind="function" id="class_player_controller_1a0738544860b989a5597d7866a4420912" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PlayerController::EvaluateMouseKeybinds</definition>
+        <argsstring>(const gef::TouchInputManager *touchInput)</argsstring>
+        <name>EvaluateMouseKeybinds</name>
+        <qualifiedname>PlayerController::EvaluateMouseKeybinds</qualifiedname>
+        <param>
+          <type>const gef::TouchInputManager *</type>
+          <declname>touchInput</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/PlayerController.h" line="127" column="6" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/PlayerController.cpp" bodystart="242" bodyend="306"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Responsible for reading input and calling appropriate events  </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/PlayerController.h" line="71" column="1" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/PlayerController.h" bodystart="72" bodyend="152"/>
+    <listofallmembers>
+      <member refid="class_player_controller_1a1d0f9e31b7e6f94dff8ef548589670e5" prot="private" virt="non-virtual"><scope>PlayerController</scope><name>activeTouchID</name></member>
+      <member refid="class_player_controller_1a3b4ce10a473a2000d1b204c7830bff97" prot="public" virt="non-virtual"><scope>PlayerController</scope><name>BindControllerEvent</name></member>
+      <member refid="class_player_controller_1a92f0d14a05056e6296fc726fc7073410" prot="public" virt="non-virtual"><scope>PlayerController</scope><name>BindKeyBindSet</name></member>
+      <member refid="class_player_controller_1a3ecff75f943f340bce2240d58eaf7f4f" prot="public" virt="non-virtual"><scope>PlayerController</scope><name>BindKeyboardEvent</name></member>
+      <member refid="class_player_controller_1a654bf416ea31cbe022ccc50c7e1832e8" prot="public" virt="non-virtual"><scope>PlayerController</scope><name>BindMouseEvent</name></member>
+      <member refid="class_player_controller_1a785b99c28d0a619a9d7391a710a7f099" prot="private" virt="non-virtual"><scope>PlayerController</scope><name>controllerKeyBinds</name></member>
+      <member refid="class_player_controller_1a7a5f17eb6df7586d9f4a80f5ed392746" prot="private" virt="non-virtual"><scope>PlayerController</scope><name>EvaluateControllerKeybinds</name></member>
+      <member refid="class_player_controller_1a3c5d859b003e7c71124f04bc02c868fa" prot="private" virt="non-virtual"><scope>PlayerController</scope><name>EvaluateKeyboardKeybinds</name></member>
+      <member refid="class_player_controller_1a0738544860b989a5597d7866a4420912" prot="private" virt="non-virtual"><scope>PlayerController</scope><name>EvaluateMouseKeybinds</name></member>
+      <member refid="class_player_controller_1ac23282a33a9bfc6972828f0ce385a52b" prot="public" virt="non-virtual"><scope>PlayerController</scope><name>GetKeybindSet</name></member>
+      <member refid="class_player_controller_1a3cf1cb2523e6b8a78cdbaf9df577b3be" prot="public" virt="non-virtual"><scope>PlayerController</scope><name>GetMousePosition</name></member>
+      <member refid="class_player_controller_1a25e55daeec802eed65640779d3c99192" prot="private" virt="non-virtual"><scope>PlayerController</scope><name>inputManager</name></member>
+      <member refid="class_player_controller_1a94f1f959a2a8ec997462f0ef91da27d9" prot="private" virt="non-virtual"><scope>PlayerController</scope><name>keyboardKeyBinds</name></member>
+      <member refid="class_player_controller_1a289560f2ea4b60a1170a2577d3f587a9" prot="private" virt="non-virtual"><scope>PlayerController</scope><name>lastMousePosition</name></member>
+      <member refid="class_player_controller_1af2cbb66c6c8cc39c10b0f1bc515aaede" prot="private" virt="non-virtual"><scope>PlayerController</scope><name>mouseKeyBinds</name></member>
+      <member refid="class_player_controller_1a6be0ad925daf5880250ef87881eedbf6" prot="public" virt="non-virtual"><scope>PlayerController</scope><name>PlayerController</name></member>
+      <member refid="class_player_controller_1af885ef527da02e6b61f21ec10cfdb0da" prot="private" virt="non-virtual"><scope>PlayerController</scope><name>touchPosition</name></member>
+      <member refid="class_player_controller_1a2e0c380d64a88c8cfe60ce8452921227" prot="public" virt="non-virtual"><scope>PlayerController</scope><name>Update</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

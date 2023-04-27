@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_struct_f_key_bind_keyboard" xml:lang="en-US">
+<title>FKeyBindKeyboard Struct Reference</title>
+<indexterm><primary>FKeyBindKeyboard</primary></indexterm>
+<para>
+<computeroutput>#include &lt;PlayerController.h&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_namespace_hellwatch_input_action_1ad39fcc17ea621da731d011339205f522">HellwatchInputAction::Type</link> <link linkend="_struct_f_key_bind_keyboard_1a5af1767e769e14b7f3e66f5c1926ed6a">inputAction</link></para>
+</listitem>
+            <listitem><para>gef::Keyboard::KeyCode <link linkend="_struct_f_key_bind_keyboard_1ac4a6383a3435b6ae4666585580d31fce">keyCode</link></para>
+</listitem>
+            <listitem><para>std::function&lt; void()&gt; <link linkend="_struct_f_key_bind_keyboard_1a1743545acca699e351fae0996ad583bc">functionBind</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_struct_f_key_bind_keyboard_1a1743545acca699e351fae0996ad583bc"/><section>
+    <title>functionBind</title>
+<indexterm><primary>functionBind</primary><secondary>FKeyBindKeyboard</secondary></indexterm>
+<indexterm><primary>FKeyBindKeyboard</primary><secondary>functionBind</secondary></indexterm>
+<para><computeroutput>std::function&lt;void()&gt; FKeyBindKeyboard::functionBind</computeroutput></para></section>
+<anchor xml:id="_struct_f_key_bind_keyboard_1a5af1767e769e14b7f3e66f5c1926ed6a"/><section>
+    <title>inputAction</title>
+<indexterm><primary>inputAction</primary><secondary>FKeyBindKeyboard</secondary></indexterm>
+<indexterm><primary>FKeyBindKeyboard</primary><secondary>inputAction</secondary></indexterm>
+<para><computeroutput><link linkend="_namespace_hellwatch_input_action_1ad39fcc17ea621da731d011339205f522">HellwatchInputAction::Type</link> FKeyBindKeyboard::inputAction</computeroutput></para></section>
+<anchor xml:id="_struct_f_key_bind_keyboard_1ac4a6383a3435b6ae4666585580d31fce"/><section>
+    <title>keyCode</title>
+<indexterm><primary>keyCode</primary><secondary>FKeyBindKeyboard</secondary></indexterm>
+<indexterm><primary>FKeyBindKeyboard</primary><secondary>keyCode</secondary></indexterm>
+<para><computeroutput>gef::Keyboard::KeyCode FKeyBindKeyboard::keyCode</computeroutput></para></section>
+<para>
+The documentation for this struct was generated from the following file:</para>
+D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/<link linkend="__player_controller_8h">PlayerController.h</link></section>
+</section>

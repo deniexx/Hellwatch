@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__ranged_enemy_8cpp" xml:lang="en-US">
+<title>D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/RangedEnemy.cpp File Reference</title>
+<indexterm><primary>D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/RangedEnemy.cpp</primary></indexterm>
+<programlisting linenumbering="unnumbered">#include &quot;RangedEnemy.h&quot;<?linebreak?>#include &quot;ActorComponents/AbilitiesComponent.h&quot;<?linebreak?>#include &quot;Abilities/Ability.h&quot;<?linebreak?></programlisting>Include dependency graph for RangedEnemy.cpp:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_ranged_enemy_8cpp__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>

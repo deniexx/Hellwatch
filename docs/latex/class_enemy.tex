@@ -1,0 +1,234 @@
+\hypertarget{class_enemy}{}\doxysection{Enemy Class Reference}
+\label{class_enemy}\index{Enemy@{Enemy}}
+
+
+A base class for all enemies, implemented as a melee enemy   
+
+
+
+
+{\ttfamily \#include $<$Enemy.\+h$>$}
+
+
+
+Inheritance diagram for Enemy\+:
+% FIG 0
+
+
+Collaboration diagram for Enemy\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_enemy_a94f30d348b6d2840fd71675472ba38dd}{Enemy}} ()
+\item 
+virtual void \mbox{\hyperlink{class_enemy_a165cd1993b88023d7f1a45f9f2809b23}{Set\+Class}} (\mbox{\hyperlink{namespace_enemy_class_a21f4473edd2d0cb0970f6505d46f0866}{Enemy\+Class\+::\+Type}} type)
+\begin{DoxyCompactList}\small\item\em Sets the enemy class and updates its parameters to fit the class  \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_enemy_ac49759f4d5262aea5e3b6e3f9f56896e}{Take\+Damage}} (float \mbox{\hyperlink{class_enemy_a1dbbafd85db9d46820a78f603af4d53a}{damage\+Amount}}) override
+\item 
+float \mbox{\hyperlink{class_enemy_a724bfc292724ec7f61218051bfa0faf5}{Get\+Health}} ()
+\begin{DoxyCompactList}\small\item\em Gets the current enemy health  \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_enemy_a723b79407b55383b2c327f674e3ab3bc}{Update}} (float delta\+Time) override
+\begin{DoxyCompactList}\small\item\em Update function, called every frame  \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_enemy_a8fe269579634b8cad6d494254c766387}{On\+Collision}} (b2\+Body $\ast$other\+Body) override
+\begin{DoxyCompactList}\small\item\em Function to respond to collision  \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_enemy_a43ebf25f19b29fccb8cb71730b95749d}{Scale\+With\+Wave}} (int wave)
+\begin{DoxyCompactList}\small\item\em Scales the enemy health, damage and money it awards with the wave  \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+float \mbox{\hyperlink{class_enemy_a1dbbafd85db9d46820a78f603af4d53a}{damage\+Amount}}
+\item 
+float \mbox{\hyperlink{class_enemy_a608edebc42e92ab5f253692c088a56d0}{attack\+Time}}
+\item 
+float \mbox{\hyperlink{class_enemy_a573af3a6b672a882ae23263bfbcdf440}{attack\+Cooldown}} = 2
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_enemy_a487c39395ee71759c8bf10707776755e}{Post\+Init}} () override
+\begin{DoxyCompactList}\small\item\em Override this to Initialize variables or do any necessary work when the object is created  \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_enemy_a4c732fc920f5da435fc97f9c55ae8531}{Increase\+Player\+Money}} ()
+\begin{DoxyCompactList}\small\item\em Increases the money the player has  \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_enemy_ac1779a7f33b1320de88c6a73415bae8c}{player\+Money\+To\+Add}} = 30
+\item 
+\mbox{\hyperlink{class_attribute_component}{Attribute\+Component}} $\ast$ \mbox{\hyperlink{class_enemy_a985101af4d36bd5232edb964b061e423}{attributes}}
+\item 
+\mbox{\hyperlink{class_character_movement_component}{Character\+Movement\+Component}} $\ast$ \mbox{\hyperlink{class_enemy_a8d88db976bfb85797d1a161ae799f8e7}{enemy\+Movement}}
+\item 
+std\+::string \mbox{\hyperlink{class_enemy_a4bc75b6c8f42a2fc5a1a7b932342a074}{hurt\+Sound}} = \char`\"{}Melee\+Hurt\char`\"{}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A base class for all enemies, implemented as a melee enemy  
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_enemy_a94f30d348b6d2840fd71675472ba38dd}\label{class_enemy_a94f30d348b6d2840fd71675472ba38dd}} 
+\index{Enemy@{Enemy}!Enemy@{Enemy}}
+\index{Enemy@{Enemy}!Enemy@{Enemy}}
+\doxysubsubsection{\texorpdfstring{Enemy()}{Enemy()}}
+{\footnotesize\ttfamily Enemy\+::\+Enemy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_enemy_a724bfc292724ec7f61218051bfa0faf5}\label{class_enemy_a724bfc292724ec7f61218051bfa0faf5}} 
+\index{Enemy@{Enemy}!GetHealth@{GetHealth}}
+\index{GetHealth@{GetHealth}!Enemy@{Enemy}}
+\doxysubsubsection{\texorpdfstring{GetHealth()}{GetHealth()}}
+{\footnotesize\ttfamily float Enemy\+::\+Get\+Health (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the current enemy health  
+
+\mbox{\Hypertarget{class_enemy_a4c732fc920f5da435fc97f9c55ae8531}\label{class_enemy_a4c732fc920f5da435fc97f9c55ae8531}} 
+\index{Enemy@{Enemy}!IncreasePlayerMoney@{IncreasePlayerMoney}}
+\index{IncreasePlayerMoney@{IncreasePlayerMoney}!Enemy@{Enemy}}
+\doxysubsubsection{\texorpdfstring{IncreasePlayerMoney()}{IncreasePlayerMoney()}}
+{\footnotesize\ttfamily void Enemy\+::\+Increase\+Player\+Money (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Increases the money the player has  
+
+\mbox{\Hypertarget{class_enemy_a8fe269579634b8cad6d494254c766387}\label{class_enemy_a8fe269579634b8cad6d494254c766387}} 
+\index{Enemy@{Enemy}!OnCollision@{OnCollision}}
+\index{OnCollision@{OnCollision}!Enemy@{Enemy}}
+\doxysubsubsection{\texorpdfstring{OnCollision()}{OnCollision()}}
+{\footnotesize\ttfamily void Enemy\+::\+On\+Collision (\begin{DoxyParamCaption}\item[{b2\+Body $\ast$}]{Other\+Body }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Function to respond to collision  
+
+
+
+Reimplemented from \mbox{\hyperlink{class_world_object_a7c563531a541e9f5ff4193443cedd515}{World\+Object}}.
+
+\mbox{\Hypertarget{class_enemy_a487c39395ee71759c8bf10707776755e}\label{class_enemy_a487c39395ee71759c8bf10707776755e}} 
+\index{Enemy@{Enemy}!PostInit@{PostInit}}
+\index{PostInit@{PostInit}!Enemy@{Enemy}}
+\doxysubsubsection{\texorpdfstring{PostInit()}{PostInit()}}
+{\footnotesize\ttfamily void Enemy\+::\+Post\+Init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Override this to Initialize variables or do any necessary work when the object is created  
+
+
+
+Reimplemented from \mbox{\hyperlink{class_world_object_a8500a6a24c62699fa103a68349407a3f}{World\+Object}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{class_boss_aca38363ac8587bf7012d4c6dec8600a9}{Boss}}, and \mbox{\hyperlink{class_ranged_enemy_a4a8ff52aaf8cffb2b4cfe94360113043}{Ranged\+Enemy}}.
+
+\mbox{\Hypertarget{class_enemy_a43ebf25f19b29fccb8cb71730b95749d}\label{class_enemy_a43ebf25f19b29fccb8cb71730b95749d}} 
+\index{Enemy@{Enemy}!ScaleWithWave@{ScaleWithWave}}
+\index{ScaleWithWave@{ScaleWithWave}!Enemy@{Enemy}}
+\doxysubsubsection{\texorpdfstring{ScaleWithWave()}{ScaleWithWave()}}
+{\footnotesize\ttfamily void Enemy\+::\+Scale\+With\+Wave (\begin{DoxyParamCaption}\item[{int}]{wave }\end{DoxyParamCaption})}
+
+
+
+Scales the enemy health, damage and money it awards with the wave  
+
+\mbox{\Hypertarget{class_enemy_a165cd1993b88023d7f1a45f9f2809b23}\label{class_enemy_a165cd1993b88023d7f1a45f9f2809b23}} 
+\index{Enemy@{Enemy}!SetClass@{SetClass}}
+\index{SetClass@{SetClass}!Enemy@{Enemy}}
+\doxysubsubsection{\texorpdfstring{SetClass()}{SetClass()}}
+{\footnotesize\ttfamily void Enemy\+::\+Set\+Class (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespace_enemy_class_a21f4473edd2d0cb0970f6505d46f0866}{Enemy\+Class\+::\+Type}}}]{type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Sets the enemy class and updates its parameters to fit the class  
+
+\mbox{\Hypertarget{class_enemy_ac49759f4d5262aea5e3b6e3f9f56896e}\label{class_enemy_ac49759f4d5262aea5e3b6e3f9f56896e}} 
+\index{Enemy@{Enemy}!TakeDamage@{TakeDamage}}
+\index{TakeDamage@{TakeDamage}!Enemy@{Enemy}}
+\doxysubsubsection{\texorpdfstring{TakeDamage()}{TakeDamage()}}
+{\footnotesize\ttfamily void Enemy\+::\+Take\+Damage (\begin{DoxyParamCaption}\item[{float}]{damage\+Amount }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_mesh_actor_a31a231014625686e8d40e561a7028931}{Mesh\+Actor}}.
+
+\mbox{\Hypertarget{class_enemy_a723b79407b55383b2c327f674e3ab3bc}\label{class_enemy_a723b79407b55383b2c327f674e3ab3bc}} 
+\index{Enemy@{Enemy}!Update@{Update}}
+\index{Update@{Update}!Enemy@{Enemy}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void Enemy\+::\+Update (\begin{DoxyParamCaption}\item[{float}]{delta\+Time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Update function, called every frame  
+
+
+\begin{DoxyParams}{Parameters}
+{\em delta\+Time} & Float variable for the frame time\\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{class_mesh_actor_a3743470557ddbbc88bc73e4dd283d6bf}{Mesh\+Actor}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{class_boss_aa0943d1fb2d9037e30a2fdc6952878cb}{Boss}}, and \mbox{\hyperlink{class_ranged_enemy_a1f40730c4f733c7e0cdcb7b7a27c89a3}{Ranged\+Enemy}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_enemy_a573af3a6b672a882ae23263bfbcdf440}\label{class_enemy_a573af3a6b672a882ae23263bfbcdf440}} 
+\index{Enemy@{Enemy}!attackCooldown@{attackCooldown}}
+\index{attackCooldown@{attackCooldown}!Enemy@{Enemy}}
+\doxysubsubsection{\texorpdfstring{attackCooldown}{attackCooldown}}
+{\footnotesize\ttfamily float Enemy\+::attack\+Cooldown = 2}
+
+\mbox{\Hypertarget{class_enemy_a608edebc42e92ab5f253692c088a56d0}\label{class_enemy_a608edebc42e92ab5f253692c088a56d0}} 
+\index{Enemy@{Enemy}!attackTime@{attackTime}}
+\index{attackTime@{attackTime}!Enemy@{Enemy}}
+\doxysubsubsection{\texorpdfstring{attackTime}{attackTime}}
+{\footnotesize\ttfamily float Enemy\+::attack\+Time}
+
+\mbox{\Hypertarget{class_enemy_a985101af4d36bd5232edb964b061e423}\label{class_enemy_a985101af4d36bd5232edb964b061e423}} 
+\index{Enemy@{Enemy}!attributes@{attributes}}
+\index{attributes@{attributes}!Enemy@{Enemy}}
+\doxysubsubsection{\texorpdfstring{attributes}{attributes}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_attribute_component}{Attribute\+Component}}$\ast$ Enemy\+::attributes\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_enemy_a1dbbafd85db9d46820a78f603af4d53a}\label{class_enemy_a1dbbafd85db9d46820a78f603af4d53a}} 
+\index{Enemy@{Enemy}!damageAmount@{damageAmount}}
+\index{damageAmount@{damageAmount}!Enemy@{Enemy}}
+\doxysubsubsection{\texorpdfstring{damageAmount}{damageAmount}}
+{\footnotesize\ttfamily float Enemy\+::damage\+Amount}
+
+\mbox{\Hypertarget{class_enemy_a8d88db976bfb85797d1a161ae799f8e7}\label{class_enemy_a8d88db976bfb85797d1a161ae799f8e7}} 
+\index{Enemy@{Enemy}!enemyMovement@{enemyMovement}}
+\index{enemyMovement@{enemyMovement}!Enemy@{Enemy}}
+\doxysubsubsection{\texorpdfstring{enemyMovement}{enemyMovement}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_character_movement_component}{Character\+Movement\+Component}}$\ast$ Enemy\+::enemy\+Movement\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_enemy_a4bc75b6c8f42a2fc5a1a7b932342a074}\label{class_enemy_a4bc75b6c8f42a2fc5a1a7b932342a074}} 
+\index{Enemy@{Enemy}!hurtSound@{hurtSound}}
+\index{hurtSound@{hurtSound}!Enemy@{Enemy}}
+\doxysubsubsection{\texorpdfstring{hurtSound}{hurtSound}}
+{\footnotesize\ttfamily std\+::string Enemy\+::hurt\+Sound = \char`\"{}Melee\+Hurt\char`\"{}\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_enemy_ac1779a7f33b1320de88c6a73415bae8c}\label{class_enemy_ac1779a7f33b1320de88c6a73415bae8c}} 
+\index{Enemy@{Enemy}!playerMoneyToAdd@{playerMoneyToAdd}}
+\index{playerMoneyToAdd@{playerMoneyToAdd}!Enemy@{Enemy}}
+\doxysubsubsection{\texorpdfstring{playerMoneyToAdd}{playerMoneyToAdd}}
+{\footnotesize\ttfamily int Enemy\+::player\+Money\+To\+Add = 30\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Uni/\+CMP208/\+Hellwatch/build/vs2017/\+Actors/\+Mesh\+Actors/\mbox{\hyperlink{_enemy_8h}{Enemy.\+h}}\item 
+D\+:/\+Uni/\+CMP208/\+Hellwatch/build/vs2017/\+Actors/\+Mesh\+Actors/\mbox{\hyperlink{_enemy_8cpp}{Enemy.\+cpp}}\end{DoxyCompactItemize}

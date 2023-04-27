@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_namespace_game_state" xml:lang="en-US">
+<title>GameState Namespace Reference</title>
+<indexterm><primary>GameState</primary></indexterm>
+<simplesect>
+    <title>Enumerations    </title>
+        <itemizedlist>
+            <listitem><para>enum <link linkend="_namespace_game_state_1aa2df68fe63beaaf10d3154d8eb490fe6">Type</link> { <?linebreak?><link linkend="_namespace_game_state_1aa2df68fe63beaaf10d3154d8eb490fe6a1c09055471a61c18afc1fc201e6d7d2a">Loading</link>
+, <link linkend="_namespace_game_state_1aa2df68fe63beaaf10d3154d8eb490fe6afff9d63720dd6c0c621817980d02d9ee">MainMenu</link>
+, <link linkend="_namespace_game_state_1aa2df68fe63beaaf10d3154d8eb490fe6aa1babbc78fafb7b98d14a8fcc880bd55">GameLoop</link>
+, <link linkend="_namespace_game_state_1aa2df68fe63beaaf10d3154d8eb490fe6a6e1adcd2eb4fb5660e3baadd566e4873">PauseMenu</link>
+, <?linebreak?><link linkend="_namespace_game_state_1aa2df68fe63beaaf10d3154d8eb490fe6a11dfd10e2813b09f256dd86e3902dfe2">Shop</link>
+, <link linkend="_namespace_game_state_1aa2df68fe63beaaf10d3154d8eb490fe6a797c961d3f35a579149051adc329e58e">GameEnd</link>
+ }</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Enumeration Type Documentation</title>
+<anchor xml:id="_namespace_game_state_1aa2df68fe63beaaf10d3154d8eb490fe6"/><section>
+    <title>Type</title>
+<indexterm><primary>Type</primary><secondary>GameState</secondary></indexterm>
+<indexterm><primary>GameState</primary><secondary>Type</secondary></indexterm>
+<para><computeroutput>enum <link linkend="_namespace_game_state_1aa2df68fe63beaaf10d3154d8eb490fe6">GameState::Type</link></computeroutput></para><informaltable frame="all">
+<title>Enumerator</title>
+    <tgroup cols="2" align="left" colsep="1" rowsep="1">
+      <colspec colname='c1'/>
+      <colspec colname='c2'/>
+<tbody>
+<row><entry><indexterm><primary>Loading</primary><secondary>GameState</secondary></indexterm>
+<indexterm><primary>GameState</primary><secondary>Loading</secondary></indexterm>
+<anchor xml:id="_namespace_game_state_1aa2df68fe63beaaf10d3154d8eb490fe6a1c09055471a61c18afc1fc201e6d7d2a"/>Loading</entry><entry></entry></row><row><entry><indexterm><primary>MainMenu</primary><secondary>GameState</secondary></indexterm>
+<indexterm><primary>GameState</primary><secondary>MainMenu</secondary></indexterm>
+<anchor xml:id="_namespace_game_state_1aa2df68fe63beaaf10d3154d8eb490fe6afff9d63720dd6c0c621817980d02d9ee"/>MainMenu</entry><entry></entry></row><row><entry><indexterm><primary>GameLoop</primary><secondary>GameState</secondary></indexterm>
+<indexterm><primary>GameState</primary><secondary>GameLoop</secondary></indexterm>
+<anchor xml:id="_namespace_game_state_1aa2df68fe63beaaf10d3154d8eb490fe6aa1babbc78fafb7b98d14a8fcc880bd55"/>GameLoop</entry><entry></entry></row><row><entry><indexterm><primary>PauseMenu</primary><secondary>GameState</secondary></indexterm>
+<indexterm><primary>GameState</primary><secondary>PauseMenu</secondary></indexterm>
+<anchor xml:id="_namespace_game_state_1aa2df68fe63beaaf10d3154d8eb490fe6a6e1adcd2eb4fb5660e3baadd566e4873"/>PauseMenu</entry><entry></entry></row><row><entry><indexterm><primary>Shop</primary><secondary>GameState</secondary></indexterm>
+<indexterm><primary>GameState</primary><secondary>Shop</secondary></indexterm>
+<anchor xml:id="_namespace_game_state_1aa2df68fe63beaaf10d3154d8eb490fe6a11dfd10e2813b09f256dd86e3902dfe2"/>Shop</entry><entry></entry></row><row><entry><indexterm><primary>GameEnd</primary><secondary>GameState</secondary></indexterm>
+<indexterm><primary>GameState</primary><secondary>GameEnd</secondary></indexterm>
+<anchor xml:id="_namespace_game_state_1aa2df68fe63beaaf10d3154d8eb490fe6a797c961d3f35a579149051adc329e58e"/>GameEnd</entry><entry></entry></row>    </tbody>
+    </tgroup>
+</informaltable>
+</section>
+</section>
+</section>

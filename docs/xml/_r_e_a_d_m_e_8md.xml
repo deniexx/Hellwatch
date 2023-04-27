@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="_r_e_a_d_m_e_8md" kind="file" language="Markdown">
+    <compoundname>README.md</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline><highlight class="normal">#<sp/>Hellwatch</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Instructions</highlight></codeline>
+<codeline><highlight class="normal">In<sp/>Hellwatch,<sp/>you<sp/>must<sp/>ward<sp/>off<sp/>the<sp/>demons.<sp/>Use<sp/>spells<sp/>to<sp/>fight<sp/>off<sp/>waves<sp/>of<sp/>enemies<sp/>and<sp/>upgrade<sp/>your<sp/>attributes.<sp/>Survive<sp/>until<sp/>wave<sp/>10<sp/>to<sp/>fight<sp/>the<sp/>boss.</highlight></codeline>
+<codeline><highlight class="normal">###<sp/>Controls</highlight></codeline>
+<codeline><highlight class="normal">####<sp/>Keyboard</highlight></codeline>
+<codeline><highlight class="normal"><sp/>-<sp/>WASD<sp/>for<sp/>movement</highlight></codeline>
+<codeline><highlight class="normal"><sp/>-<sp/>1,<sp/>2,<sp/>3,<sp/>4<sp/>for<sp/>spells</highlight></codeline>
+<codeline><highlight class="normal"><sp/>-<sp/>Mouse<sp/>to<sp/>aim</highlight></codeline>
+<codeline><highlight class="normal"><sp/>-<sp/>Left<sp/>click<sp/>or<sp/>enter<sp/>key<sp/>to<sp/>confirm<sp/>buttons</highlight></codeline>
+<codeline><highlight class="normal"><sp/>-<sp/>W,<sp/>S,<sp/>and<sp/>up,<sp/>down<sp/>arrows<sp/>to<sp/>navigate<sp/>menus</highlight></codeline>
+<codeline><highlight class="normal"><sp/>-<sp/>+/-<sp/>keys<sp/>to<sp/>change<sp/>volume</highlight></codeline>
+<codeline><highlight class="normal"><sp/>-<sp/>Esc<sp/>key<sp/>to<sp/>pause</highlight></codeline>
+<codeline><highlight class="normal"><sp/>####<sp/>Controller</highlight></codeline>
+<codeline><highlight class="normal"><sp/>-<sp/>Left<sp/>Analog<sp/>stick<sp/>for<sp/>movement</highlight></codeline>
+<codeline><highlight class="normal"><sp/>-<sp/>Right<sp/>Analog<sp/>stick<sp/>for<sp/>aiming</highlight></codeline>
+<codeline><highlight class="normal"><sp/>-<sp/>Face<sp/>buttons<sp/>to<sp/>cast<sp/>spells</highlight></codeline>
+<codeline><highlight class="normal"><sp/>-<sp/>Up<sp/>and<sp/>Down<sp/>on<sp/>D-pad<sp/>to<sp/>navigate<sp/>menus</highlight></codeline>
+<codeline><highlight class="normal"><sp/>-<sp/>X<sp/>button<sp/>to<sp/>confirm<sp/>buttons</highlight></codeline>
+<codeline><highlight class="normal"><sp/>-<sp/>Select<sp/>to<sp/>pause</highlight></codeline>
+<codeline><highlight class="normal"><sp/>-<sp/>Options<sp/>button<sp/>inverses<sp/>y-movement</highlight></codeline>
+<codeline><highlight class="normal">###<sp/>Attributes</highlight></codeline>
+<codeline><highlight class="normal"><sp/>-<sp/>Wisdom<sp/>increases<sp/>your<sp/>damage<sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/>-<sp/>Vitality<sp/>increases<sp/>your<sp/>health<sp/>and<sp/>health<sp/>regen</highlight></codeline>
+<codeline><highlight class="normal"><sp/>-<sp/>Toughness<sp/>reduces<sp/>the<sp/>damage<sp/>taken</highlight></codeline>
+<codeline><highlight class="normal"><sp/>-<sp/>Energy<sp/>increases<sp/>your<sp/>max<sp/>mana<sp/>and<sp/>magic<sp/>regeneration</highlight></codeline>
+<codeline><highlight class="normal"><sp/>###<sp/>Abilities</highlight></codeline>
+<codeline><highlight class="normal"><sp/>-<sp/>Ice<sp/>Bolt<sp/>-<sp/>Shoot<sp/>an<sp/>ice<sp/>projectile<sp/>towards<sp/>your<sp/>mouse<sp/>that<sp/>deals<sp/>damage<sp/>to<sp/>the<sp/>first<sp/>enemy<sp/>it<sp/>hits</highlight></codeline>
+<codeline><highlight class="normal"><sp/>-<sp/>Dash<sp/>-<sp/>Dash<sp/>towards<sp/>the<sp/>mouse<sp/>and<sp/>become<sp/>briefly<sp/>invincible</highlight></codeline>
+<codeline><highlight class="normal"><sp/>-<sp/>Piercing<sp/>Strike<sp/>-<sp/>Shoot<sp/>a<sp/>projectile<sp/>towards<sp/>the<sp/>mouse<sp/>that<sp/>deals<sp/>damage<sp/>to<sp/>all<sp/>enemies<sp/>in<sp/>its<sp/>path</highlight></codeline>
+<codeline><highlight class="normal"><sp/>-<sp/>Meteor<sp/>-<sp/>Create<sp/>a<sp/>large<sp/>meteor<sp/>that<sp/>slowly<sp/>descends<sp/>and<sp/>causes<sp/>massive<sp/>damage<sp/>upon<sp/>impact<sp/>to<sp/>all<sp/>enemies<sp/>in<sp/>the<sp/>area</highlight></codeline>
+    </programlisting>
+    <location file="D:/Uni/CMP208/Hellwatch/README.md"/>
+  </compounddef>
+</doxygen>

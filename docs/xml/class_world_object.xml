@@ -1,0 +1,704 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="class_world_object" kind="class" language="C++" prot="public">
+    <compoundname>WorldObject</compoundname>
+    <derivedcompoundref refid="class_mesh_actor" prot="public" virt="non-virtual">MeshActor</derivedcompoundref>
+    <derivedcompoundref refid="class_sprite_actor" prot="public" virt="non-virtual">SpriteActor</derivedcompoundref>
+    <includes refid="_world_object_8h" local="no">WorldObject.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_world_object_1a9f76e2def47f4d6be6bafb330ac0394b" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int WorldObject::ID</definition>
+        <argsstring></argsstring>
+        <name>ID</name>
+        <qualifiedname>WorldObject::ID</qualifiedname>
+        <initializer>= <ref refid="_utils_8h_1a642e16f35aa1e585c25e405ede76e115" kindref="member">NO_ID</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/WorldObject.h" line="55" column="5" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/WorldObject.h" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="class_world_object_1a025ba78ec5cc2607f7e62750a7c37749" prot="protected" static="no" mutable="no">
+        <type>b2Body *</type>
+        <definition>b2Body* WorldObject::collisionBody</definition>
+        <argsstring></argsstring>
+        <name>collisionBody</name>
+        <qualifiedname>WorldObject::collisionBody</qualifiedname>
+        <initializer>= nullptr</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/WorldObject.h" line="59" column="8" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/WorldObject.h" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_world_object_1a9e5ac0cc278f5766b6020950fdabbe75" prot="protected" static="no" mutable="no">
+        <type>gef::Matrix44</type>
+        <definition>gef::Matrix44 WorldObject::transformMat</definition>
+        <argsstring></argsstring>
+        <name>transformMat</name>
+        <qualifiedname>WorldObject::transformMat</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/WorldObject.h" line="60" column="15" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/WorldObject.h" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_world_object_1a8917ba1d61e12c12f7246c7b95cd4094" prot="protected" static="no" mutable="no">
+        <type><ref refid="class_world_object" kindref="compound">WorldObject</ref> *</type>
+        <definition>WorldObject* WorldObject::owningObject</definition>
+        <argsstring></argsstring>
+        <name>owningObject</name>
+        <qualifiedname>WorldObject::owningObject</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/WorldObject.h" line="61" column="13" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/WorldObject.h" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_world_object_1a78bd9162f55826c5c68706d688578cf8" prot="protected" static="no" mutable="no">
+        <type>gef::Vector4</type>
+        <definition>gef::Vector4 WorldObject::translation</definition>
+        <argsstring></argsstring>
+        <name>translation</name>
+        <qualifiedname>WorldObject::translation</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/WorldObject.h" line="63" column="14" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/WorldObject.h" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_world_object_1a45f28fb0c7cf14a6c92ab72eaa4eb9a9" prot="protected" static="no" mutable="no">
+        <type>gef::Vector4</type>
+        <definition>gef::Vector4 WorldObject::scale</definition>
+        <argsstring></argsstring>
+        <name>scale</name>
+        <qualifiedname>WorldObject::scale</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/WorldObject.h" line="64" column="14" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/WorldObject.h" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_world_object_1a519b69f0419703cfbe08580d4b2ab408" prot="protected" static="no" mutable="no">
+        <type>gef::Vector4</type>
+        <definition>gef::Vector4 WorldObject::rotationVec</definition>
+        <argsstring></argsstring>
+        <name>rotationVec</name>
+        <qualifiedname>WorldObject::rotationVec</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/WorldObject.h" line="65" column="14" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/WorldObject.h" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_world_object_1a60c2b1f707b5694f97dd950996d05e11" prot="protected" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool WorldObject::bMarkedForDelete</definition>
+        <argsstring></argsstring>
+        <name>bMarkedForDelete</name>
+        <qualifiedname>WorldObject::bMarkedForDelete</qualifiedname>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/WorldObject.h" line="67" column="6" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/WorldObject.h" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_world_object_1ac10cc37682a3a3cce8405411fbd8f4c3" prot="protected" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool WorldObject::bDisableUpdate</definition>
+        <argsstring></argsstring>
+        <name>bDisableUpdate</name>
+        <qualifiedname>WorldObject::bDisableUpdate</qualifiedname>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/WorldObject.h" line="68" column="6" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/WorldObject.h" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_world_object_1a632d2e78acdcbc0aef09951134340d4e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>WorldObject::WorldObject</definition>
+        <argsstring>()</argsstring>
+        <name>WorldObject</name>
+        <qualifiedname>WorldObject::WorldObject</qualifiedname>
+        <briefdescription>
+<para>Default constructor  </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/WorldObject.h" line="23" column="1" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/WorldObject.cpp" bodystart="8" bodyend="14"/>
+      </memberdef>
+      <memberdef kind="function" id="class_world_object_1a287e5b87a26133cd35f3015268d2a5a3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>WorldObject::~WorldObject</definition>
+        <argsstring>()</argsstring>
+        <name>~WorldObject</name>
+        <qualifiedname>WorldObject::~WorldObject</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/WorldObject.h" line="25" column="1" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/WorldObject.cpp" bodystart="16" bodyend="20"/>
+      </memberdef>
+      <memberdef kind="function" id="class_world_object_1aa2d0bc51a9b2dac1930c37e2401e8934" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void WorldObject::Init</definition>
+        <argsstring>(WorldObject *owner=nullptr)</argsstring>
+        <name>Init</name>
+        <qualifiedname>WorldObject::Init</qualifiedname>
+        <param>
+          <type><ref refid="class_world_object" kindref="compound">WorldObject</ref> *</type>
+          <declname>owner</declname>
+          <defval>nullptr</defval>
+        </param>
+        <briefdescription>
+<para>This function initializes the world object, should only be called by the spawn object scene function.  </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>scene</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The owninig scene of the object</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>owner</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The owning object of this object</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/WorldObject.h" line="32" column="6" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/WorldObject.cpp" bodystart="22" bodyend="27"/>
+      </memberdef>
+      <memberdef kind="function" id="class_world_object_1a8500a6a24c62699fa103a68349407a3f" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void WorldObject::PostInit</definition>
+        <argsstring>()</argsstring>
+        <name>PostInit</name>
+        <qualifiedname>WorldObject::PostInit</qualifiedname>
+        <reimplementedby refid="class_boss_1aca38363ac8587bf7012d4c6dec8600a9">PostInit</reimplementedby>
+        <reimplementedby refid="class_enemy_1a487c39395ee71759c8bf10707776755e">PostInit</reimplementedby>
+        <reimplementedby refid="class_enemy_dummy_1a64da679c5eaca270f5181638bce62bcd">PostInit</reimplementedby>
+        <reimplementedby refid="class_player_character_1ad12c09c28194b1c5ed39aa4b5c21cbd6">PostInit</reimplementedby>
+        <reimplementedby refid="class_ranged_enemy_1a4a8ff52aaf8cffb2b4cfe94360113043">PostInit</reimplementedby>
+        <briefdescription>
+<para>Override this to Initialize variables or do any necessary work when the object is created  </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/WorldObject.h" line="37" column="14" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/WorldObject.cpp" bodystart="29" bodyend="31"/>
+      </memberdef>
+      <memberdef kind="function" id="class_world_object_1a828815709498f192bf138ecfe416c529" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void WorldObject::Update</definition>
+        <argsstring>(float deltaTime)</argsstring>
+        <name>Update</name>
+        <qualifiedname>WorldObject::Update</qualifiedname>
+        <reimplementedby refid="class_mesh_actor_1a3743470557ddbbc88bc73e4dd283d6bf">Update</reimplementedby>
+        <reimplementedby refid="class_boss_1aa0943d1fb2d9037e30a2fdc6952878cb">Update</reimplementedby>
+        <reimplementedby refid="class_damage_on_collision_actor_1a468c69c421db3d272bf18c46cbb15c2a">Update</reimplementedby>
+        <reimplementedby refid="class_enemy_1a723b79407b55383b2c327f674e3ab3bc">Update</reimplementedby>
+        <reimplementedby refid="class_meteor_actor_1ab6359799dcd7d0c88bbe0f9aae848819">Update</reimplementedby>
+        <reimplementedby refid="class_particle_actor_1a5ed58a9e57286e08cf8a650aaf22f43f">Update</reimplementedby>
+        <reimplementedby refid="class_player_character_1ad681ccd09dc1ed4c0242bfa0d981d584">Update</reimplementedby>
+        <reimplementedby refid="class_ranged_enemy_1a1f40730c4f733c7e0cdcb7b7a27c89a3">Update</reimplementedby>
+        <param>
+          <type>float</type>
+          <declname>deltaTime</declname>
+        </param>
+        <briefdescription>
+<para>Update function, called every frame  </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>deltaTime</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Float variable for the frame time</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/WorldObject.h" line="43" column="14" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/WorldObject.cpp" bodystart="33" bodyend="35"/>
+      </memberdef>
+      <memberdef kind="function" id="class_world_object_1a2a30bf431fa478eb5d24683e1906c261" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void WorldObject::Render</definition>
+        <argsstring>()</argsstring>
+        <name>Render</name>
+        <qualifiedname>WorldObject::Render</qualifiedname>
+        <reimplementedby refid="class_mesh_actor_1a9c8f4860ae03966a27c3ee22c2a2b5a1">Render</reimplementedby>
+        <reimplementedby refid="class_sprite_actor_1a0820aad46981ac11174f67ab97433473">Render</reimplementedby>
+        <briefdescription>
+<para>Renders the object  </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/WorldObject.h" line="48" column="14" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/WorldObject.cpp" bodystart="37" bodyend="39"/>
+      </memberdef>
+      <memberdef kind="function" id="class_world_object_1a7c563531a541e9f5ff4193443cedd515" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void WorldObject::OnCollision</definition>
+        <argsstring>(b2Body *OtherBody)</argsstring>
+        <name>OnCollision</name>
+        <qualifiedname>WorldObject::OnCollision</qualifiedname>
+        <reimplementedby refid="class_damage_on_collision_actor_1ad097fd69169453c518a8a7b151311edc">OnCollision</reimplementedby>
+        <reimplementedby refid="class_enemy_1a8fe269579634b8cad6d494254c766387">OnCollision</reimplementedby>
+        <param>
+          <type>b2Body *</type>
+          <declname>OtherBody</declname>
+        </param>
+        <briefdescription>
+<para>Function to respond to collision  </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/WorldObject.h" line="53" column="14" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/WorldObject.cpp" bodystart="87" bodyend="89"/>
+      </memberdef>
+      <memberdef kind="function" id="class_world_object_1a830b64bbf6df3fc50284b0316c124133" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void WorldObject::SetTranslation</definition>
+        <argsstring>(const gef::Vector4 &amp;inTranslation)</argsstring>
+        <name>SetTranslation</name>
+        <qualifiedname>WorldObject::SetTranslation</qualifiedname>
+        <reimplementedby refid="class_sprite_actor_1a9bee8a49bee219bae0190046e3ec5d1c">SetTranslation</reimplementedby>
+        <param>
+          <type>const gef::Vector4 &amp;</type>
+          <declname>inTranslation</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/WorldObject.h" line="77" column="14" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/WorldObject.cpp" bodystart="42" bodyend="49"/>
+      </memberdef>
+      <memberdef kind="function" id="class_world_object_1a18ba8b67b53f7df01220643617ecd75c" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void WorldObject::SetRotation</definition>
+        <argsstring>(const gef::Vector4 &amp;inRotation)</argsstring>
+        <name>SetRotation</name>
+        <qualifiedname>WorldObject::SetRotation</qualifiedname>
+        <reimplementedby refid="class_mesh_actor_1a295a747ea81d8b09e084c488ab183fbb">SetRotation</reimplementedby>
+        <param>
+          <type>const gef::Vector4 &amp;</type>
+          <declname>inRotation</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/WorldObject.h" line="78" column="14" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/WorldObject.cpp" bodystart="51" bodyend="54"/>
+      </memberdef>
+      <memberdef kind="function" id="class_world_object_1ad73836d8146cc9e1d475eb74fb05481a" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void WorldObject::SetRotation</definition>
+        <argsstring>(const float inRotation)</argsstring>
+        <name>SetRotation</name>
+        <qualifiedname>WorldObject::SetRotation</qualifiedname>
+        <reimplementedby refid="class_sprite_actor_1ad7d2b2ba00da6fd85e8dfd84d9aaa776">SetRotation</reimplementedby>
+        <param>
+          <type>const float</type>
+          <declname>inRotation</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/WorldObject.h" line="79" column="14" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/WorldObject.cpp" bodystart="56" bodyend="59"/>
+      </memberdef>
+      <memberdef kind="function" id="class_world_object_1ae00d341e9ac8909374dd556aaecbdb46" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void WorldObject::SetScale</definition>
+        <argsstring>(const gef::Vector4 &amp;inScale)</argsstring>
+        <name>SetScale</name>
+        <qualifiedname>WorldObject::SetScale</qualifiedname>
+        <reimplementedby refid="class_sprite_actor_1a432a23017cf5aa8fe8b521ee5884c996">SetScale</reimplementedby>
+        <param>
+          <type>const gef::Vector4 &amp;</type>
+          <declname>inScale</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/WorldObject.h" line="80" column="14" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/WorldObject.cpp" bodystart="61" bodyend="64"/>
+      </memberdef>
+      <memberdef kind="function" id="class_world_object_1a8817deac42a357d2ed476791c7b76511" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void WorldObject::SetCollisionBody</definition>
+        <argsstring>(b2Body *inCollisionBody)</argsstring>
+        <name>SetCollisionBody</name>
+        <qualifiedname>WorldObject::SetCollisionBody</qualifiedname>
+        <param>
+          <type>b2Body *</type>
+          <declname>inCollisionBody</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/WorldObject.h" line="81" column="6" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/WorldObject.cpp" bodystart="66" bodyend="69"/>
+      </memberdef>
+      <memberdef kind="function" id="class_world_object_1a9967baa65719f1418641598a244306a5" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>__forceinline virtual const gef::Vector4 &amp;</type>
+        <definition>__forceinline virtual const gef::Vector4 &amp; WorldObject::GetTranslation</definition>
+        <argsstring>() const</argsstring>
+        <name>GetTranslation</name>
+        <qualifiedname>WorldObject::GetTranslation</qualifiedname>
+        <reimplementedby refid="class_sprite_actor_1a4d9d23b93afa89ec5aa8e04786252b19">GetTranslation</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/WorldObject.h" line="86" column="42" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/WorldObject.h" bodystart="86" bodyend="86"/>
+      </memberdef>
+      <memberdef kind="function" id="class_world_object_1a271e4b4870fadf60e285576f94b31e79" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>__forceinline virtual const gef::Vector4 &amp;</type>
+        <definition>__forceinline virtual const gef::Vector4 &amp; WorldObject::GetRotation</definition>
+        <argsstring>() const</argsstring>
+        <name>GetRotation</name>
+        <qualifiedname>WorldObject::GetRotation</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/WorldObject.h" line="87" column="42" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/WorldObject.h" bodystart="87" bodyend="87"/>
+      </memberdef>
+      <memberdef kind="function" id="class_world_object_1aa959995cc385843f1e2b0139e4413ab5" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>__forceinline virtual const float</type>
+        <definition>__forceinline virtual const float WorldObject::GetRotationF</definition>
+        <argsstring>() const</argsstring>
+        <name>GetRotationF</name>
+        <qualifiedname>WorldObject::GetRotationF</qualifiedname>
+        <reimplementedby refid="class_sprite_actor_1aaf810a489f9916ecd2d041cd61d39874">GetRotationF</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/WorldObject.h" line="88" column="35" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/WorldObject.h" bodystart="88" bodyend="88"/>
+      </memberdef>
+      <memberdef kind="function" id="class_world_object_1a223b3653f965b7698ec28c9b4fc84e28" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>__forceinline virtual const gef::Vector4 &amp;</type>
+        <definition>__forceinline virtual const gef::Vector4 &amp; WorldObject::GetScale</definition>
+        <argsstring>() const</argsstring>
+        <name>GetScale</name>
+        <qualifiedname>WorldObject::GetScale</qualifiedname>
+        <reimplementedby refid="class_sprite_actor_1a473e053ec3e6e8a460020ba3833acc2e">GetScale</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/WorldObject.h" line="89" column="42" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/WorldObject.h" bodystart="89" bodyend="89"/>
+      </memberdef>
+      <memberdef kind="function" id="class_world_object_1a1302aea00b9a5f348459f55e9dd50725" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>__forceinline const gef::Matrix44 &amp;</type>
+        <definition>__forceinline const gef::Matrix44 &amp; WorldObject::GetTransform</definition>
+        <argsstring>() const</argsstring>
+        <name>GetTransform</name>
+        <qualifiedname>WorldObject::GetTransform</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/WorldObject.h" line="90" column="35" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/WorldObject.h" bodystart="90" bodyend="90"/>
+      </memberdef>
+      <memberdef kind="function" id="class_world_object_1a0fdf372cdda0fb026916b60e19e657a0" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>__forceinline <ref refid="class_world_object" kindref="compound">WorldObject</ref> *</type>
+        <definition>__forceinline WorldObject * WorldObject::GetOwner</definition>
+        <argsstring>() const</argsstring>
+        <name>GetOwner</name>
+        <qualifiedname>WorldObject::GetOwner</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/WorldObject.h" line="91" column="27" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/WorldObject.h" bodystart="91" bodyend="91"/>
+      </memberdef>
+      <memberdef kind="function" id="class_world_object_1aa3b5f5e5e1ed26c94265854e2858bdee" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>__forceinline b2Body *</type>
+        <definition>__forceinline b2Body * WorldObject::GetCollisionBody</definition>
+        <argsstring>() const</argsstring>
+        <name>GetCollisionBody</name>
+        <qualifiedname>WorldObject::GetCollisionBody</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/WorldObject.h" line="92" column="22" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/WorldObject.h" bodystart="92" bodyend="92"/>
+      </memberdef>
+      <memberdef kind="function" id="class_world_object_1a4402fa17dfd062fc97750d581d4f774b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>__forceinline void</type>
+        <definition>__forceinline void WorldObject::MarkForDelete</definition>
+        <argsstring>()</argsstring>
+        <name>MarkForDelete</name>
+        <qualifiedname>WorldObject::MarkForDelete</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/WorldObject.h" line="95" column="20" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/WorldObject.h" bodystart="95" bodyend="95"/>
+      </memberdef>
+      <memberdef kind="function" id="class_world_object_1a650a599e9ffa751eaba296c4ef6ec2d2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>__forceinline void</type>
+        <definition>__forceinline void WorldObject::DisableUpdate</definition>
+        <argsstring>()</argsstring>
+        <name>DisableUpdate</name>
+        <qualifiedname>WorldObject::DisableUpdate</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/WorldObject.h" line="96" column="20" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/WorldObject.h" bodystart="96" bodyend="96"/>
+      </memberdef>
+      <memberdef kind="function" id="class_world_object_1a42e101b6adf4911396d95acc5b1741d8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>__forceinline void</type>
+        <definition>__forceinline void WorldObject::EnableUpdate</definition>
+        <argsstring>()</argsstring>
+        <name>EnableUpdate</name>
+        <qualifiedname>WorldObject::EnableUpdate</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/WorldObject.h" line="97" column="20" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/WorldObject.h" bodystart="97" bodyend="97"/>
+      </memberdef>
+      <memberdef kind="function" id="class_world_object_1a78b0b88900685e80feffc6921fd9f370" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>__forceinline bool</type>
+        <definition>__forceinline bool WorldObject::ShouldUpdate</definition>
+        <argsstring>()</argsstring>
+        <name>ShouldUpdate</name>
+        <qualifiedname>WorldObject::ShouldUpdate</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/WorldObject.h" line="99" column="20" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/WorldObject.h" bodystart="99" bodyend="99"/>
+      </memberdef>
+      <memberdef kind="function" id="class_world_object_1aaebbb0abbabef79ad542f01db4ef6101" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>__forceinline const bool</type>
+        <definition>__forceinline const bool WorldObject::GetIsMarkedForDelete</definition>
+        <argsstring>() const</argsstring>
+        <name>GetIsMarkedForDelete</name>
+        <qualifiedname>WorldObject::GetIsMarkedForDelete</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/WorldObject.h" line="100" column="26" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/WorldObject.h" bodystart="100" bodyend="100"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_world_object_1a4c83c0d8e3817aac3ef2080ec0972802" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void WorldObject::BuildTransform</definition>
+        <argsstring>()</argsstring>
+        <name>BuildTransform</name>
+        <qualifiedname>WorldObject::BuildTransform</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/WorldObject.h" line="70" column="6" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/WorldObject.cpp" bodystart="71" bodyend="85"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="5">
+        <label>Boss</label>
+        <link refid="class_boss"/>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>DamageOnCollisionActor</label>
+        <link refid="class_damage_on_collision_actor"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>Enemy</label>
+        <link refid="class_enemy"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>EnemyDummy</label>
+        <link refid="class_enemy_dummy"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>MeshActor</label>
+        <link refid="class_mesh_actor"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>MeteorActor</label>
+        <link refid="class_meteor_actor"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>ParticleActor</label>
+        <link refid="class_particle_actor"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>PlayerCharacter</label>
+        <link refid="class_player_character"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>RangedEnemy</label>
+        <link refid="class_ranged_enemy"/>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>SpriteActor</label>
+        <link refid="class_sprite_actor"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>WorldObject</label>
+        <link refid="class_world_object"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>WorldObject</label>
+        <link refid="class_world_object"/>
+        <childnode refid="1" relation="usage">
+          <edgelabel>owningObject</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/WorldObject.h" line="15" column="1" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/WorldObject.h" bodystart="16" bodyend="101"/>
+    <listofallmembers>
+      <member refid="class_world_object_1ac10cc37682a3a3cce8405411fbd8f4c3" prot="protected" virt="non-virtual"><scope>WorldObject</scope><name>bDisableUpdate</name></member>
+      <member refid="class_world_object_1a60c2b1f707b5694f97dd950996d05e11" prot="protected" virt="non-virtual"><scope>WorldObject</scope><name>bMarkedForDelete</name></member>
+      <member refid="class_world_object_1a4c83c0d8e3817aac3ef2080ec0972802" prot="protected" virt="non-virtual"><scope>WorldObject</scope><name>BuildTransform</name></member>
+      <member refid="class_world_object_1a025ba78ec5cc2607f7e62750a7c37749" prot="protected" virt="non-virtual"><scope>WorldObject</scope><name>collisionBody</name></member>
+      <member refid="class_world_object_1a650a599e9ffa751eaba296c4ef6ec2d2" prot="public" virt="non-virtual"><scope>WorldObject</scope><name>DisableUpdate</name></member>
+      <member refid="class_world_object_1a42e101b6adf4911396d95acc5b1741d8" prot="public" virt="non-virtual"><scope>WorldObject</scope><name>EnableUpdate</name></member>
+      <member refid="class_world_object_1aa3b5f5e5e1ed26c94265854e2858bdee" prot="public" virt="non-virtual"><scope>WorldObject</scope><name>GetCollisionBody</name></member>
+      <member refid="class_world_object_1aaebbb0abbabef79ad542f01db4ef6101" prot="public" virt="non-virtual"><scope>WorldObject</scope><name>GetIsMarkedForDelete</name></member>
+      <member refid="class_world_object_1a0fdf372cdda0fb026916b60e19e657a0" prot="public" virt="non-virtual"><scope>WorldObject</scope><name>GetOwner</name></member>
+      <member refid="class_world_object_1a271e4b4870fadf60e285576f94b31e79" prot="public" virt="virtual"><scope>WorldObject</scope><name>GetRotation</name></member>
+      <member refid="class_world_object_1aa959995cc385843f1e2b0139e4413ab5" prot="public" virt="virtual"><scope>WorldObject</scope><name>GetRotationF</name></member>
+      <member refid="class_world_object_1a223b3653f965b7698ec28c9b4fc84e28" prot="public" virt="virtual"><scope>WorldObject</scope><name>GetScale</name></member>
+      <member refid="class_world_object_1a1302aea00b9a5f348459f55e9dd50725" prot="public" virt="non-virtual"><scope>WorldObject</scope><name>GetTransform</name></member>
+      <member refid="class_world_object_1a9967baa65719f1418641598a244306a5" prot="public" virt="virtual"><scope>WorldObject</scope><name>GetTranslation</name></member>
+      <member refid="class_world_object_1a9f76e2def47f4d6be6bafb330ac0394b" prot="public" virt="non-virtual"><scope>WorldObject</scope><name>ID</name></member>
+      <member refid="class_world_object_1aa2d0bc51a9b2dac1930c37e2401e8934" prot="public" virt="non-virtual"><scope>WorldObject</scope><name>Init</name></member>
+      <member refid="class_world_object_1a4402fa17dfd062fc97750d581d4f774b" prot="public" virt="non-virtual"><scope>WorldObject</scope><name>MarkForDelete</name></member>
+      <member refid="class_world_object_1a7c563531a541e9f5ff4193443cedd515" prot="public" virt="virtual"><scope>WorldObject</scope><name>OnCollision</name></member>
+      <member refid="class_world_object_1a8917ba1d61e12c12f7246c7b95cd4094" prot="protected" virt="non-virtual"><scope>WorldObject</scope><name>owningObject</name></member>
+      <member refid="class_world_object_1a8500a6a24c62699fa103a68349407a3f" prot="public" virt="virtual"><scope>WorldObject</scope><name>PostInit</name></member>
+      <member refid="class_world_object_1a2a30bf431fa478eb5d24683e1906c261" prot="public" virt="virtual"><scope>WorldObject</scope><name>Render</name></member>
+      <member refid="class_world_object_1a519b69f0419703cfbe08580d4b2ab408" prot="protected" virt="non-virtual"><scope>WorldObject</scope><name>rotationVec</name></member>
+      <member refid="class_world_object_1a45f28fb0c7cf14a6c92ab72eaa4eb9a9" prot="protected" virt="non-virtual"><scope>WorldObject</scope><name>scale</name></member>
+      <member refid="class_world_object_1a8817deac42a357d2ed476791c7b76511" prot="public" virt="non-virtual"><scope>WorldObject</scope><name>SetCollisionBody</name></member>
+      <member refid="class_world_object_1a18ba8b67b53f7df01220643617ecd75c" prot="public" virt="virtual"><scope>WorldObject</scope><name>SetRotation</name></member>
+      <member refid="class_world_object_1ad73836d8146cc9e1d475eb74fb05481a" prot="public" virt="virtual"><scope>WorldObject</scope><name>SetRotation</name></member>
+      <member refid="class_world_object_1ae00d341e9ac8909374dd556aaecbdb46" prot="public" virt="virtual"><scope>WorldObject</scope><name>SetScale</name></member>
+      <member refid="class_world_object_1a830b64bbf6df3fc50284b0316c124133" prot="public" virt="virtual"><scope>WorldObject</scope><name>SetTranslation</name></member>
+      <member refid="class_world_object_1a78b0b88900685e80feffc6921fd9f370" prot="public" virt="non-virtual"><scope>WorldObject</scope><name>ShouldUpdate</name></member>
+      <member refid="class_world_object_1a9e5ac0cc278f5766b6020950fdabbe75" prot="protected" virt="non-virtual"><scope>WorldObject</scope><name>transformMat</name></member>
+      <member refid="class_world_object_1a78bd9162f55826c5c68706d688578cf8" prot="protected" virt="non-virtual"><scope>WorldObject</scope><name>translation</name></member>
+      <member refid="class_world_object_1a828815709498f192bf138ecfe416c529" prot="public" virt="virtual"><scope>WorldObject</scope><name>Update</name></member>
+      <member refid="class_world_object_1a632d2e78acdcbc0aef09951134340d4e" prot="public" virt="non-virtual"><scope>WorldObject</scope><name>WorldObject</name></member>
+      <member refid="class_world_object_1a287e5b87a26133cd35f3015268d2a5a3" prot="public" virt="non-virtual"><scope>WorldObject</scope><name>~WorldObject</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

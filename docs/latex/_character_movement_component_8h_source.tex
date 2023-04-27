@@ -1,0 +1,53 @@
+\hypertarget{_character_movement_component_8h_source}{}\doxysection{Character\+Movement\+Component.\+h}
+\label{_character_movement_component_8h_source}\index{D:/Uni/CMP208/Hellwatch/build/vs2017/ActorComponents/CharacterMovementComponent.h@{D:/Uni/CMP208/Hellwatch/build/vs2017/ActorComponents/CharacterMovementComponent.h}}
+\mbox{\hyperlink{_character_movement_component_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{2 }
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_actor_component_8h}{ActorComponents/ActorComponent.h}}"{}}}
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_utils_8h}{GameFramework/Utils.h}}"{}}}
+\DoxyCodeLine{5 }
+\DoxyCodeLine{9 \textcolor{keyword}{class }\mbox{\hyperlink{class_character_movement_component}{CharacterMovementComponent}} : \textcolor{keyword}{public} \mbox{\hyperlink{class_actor_component}{ActorComponent}}}
+\DoxyCodeLine{10 \{}
+\DoxyCodeLine{11     \mbox{\hyperlink{_utils_8h_afc0ee7bd35c161a2d80b8e8f04fd9213}{GENERATED\_BODY}}(\mbox{\hyperlink{class_actor_component}{ActorComponent}}, \mbox{\hyperlink{class_character_movement_component}{CharacterMovementComponent}})}
+\DoxyCodeLine{12 }
+\DoxyCodeLine{13 \textcolor{keyword}{public}:}
+\DoxyCodeLine{14 }
+\DoxyCodeLine{15     \mbox{\hyperlink{class_character_movement_component_a3b46719028da4715fcb1aa41000ef690}{CharacterMovementComponent}}();}
+\DoxyCodeLine{16 }
+\DoxyCodeLine{17     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_character_movement_component_a44e667731d0323b2dfcdf80ee6e7f3ba}{UpdateComponent}}(\textcolor{keywordtype}{float} deltaTime) \textcolor{keyword}{override};}
+\DoxyCodeLine{18 }
+\DoxyCodeLine{23     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_character_movement_component_a63d4bb5a09a7addb1664b0f5183ec13c}{ApplyMovementForceInDirection}}(b2Vec2 force);}
+\DoxyCodeLine{24 }
+\DoxyCodeLine{25 \textcolor{keyword}{protected}:}
+\DoxyCodeLine{26     }
+\DoxyCodeLine{27     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_character_movement_component_a7c20d542f943ec133dd3f1df7fee988e}{PostInit}}() \textcolor{keyword}{override};}
+\DoxyCodeLine{28 }
+\DoxyCodeLine{29 \textcolor{keyword}{private}:}
+\DoxyCodeLine{30 }
+\DoxyCodeLine{31     b2Body* ownerCollision;}
+\DoxyCodeLine{32     \textcolor{keywordtype}{float} maximumSpeed;}
+\DoxyCodeLine{33     \textcolor{keywordtype}{float} acceleration;}
+\DoxyCodeLine{34     \textcolor{keywordtype}{bool} bFrozen;}
+\DoxyCodeLine{35 }
+\DoxyCodeLine{36 \textcolor{keyword}{public}:}
+\DoxyCodeLine{37     }
+\DoxyCodeLine{38 \textcolor{comment}{    /************************************************************************/}}
+\DoxyCodeLine{39     \textcolor{comment}{/*                              SETTERS                                 */}}
+\DoxyCodeLine{40 \textcolor{comment}{    /************************************************************************/}}
+\DoxyCodeLine{41     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_character_movement_component_a6cb4c791b22b66c29aa830e40d947d0c}{SetCollisionBody}}(b2Body* newBody) \{ ownerCollision = newBody; \}}
+\DoxyCodeLine{42     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_character_movement_component_a5c8c5c00d78dc4d38e14c502e9567695}{SetFrozen}}(\textcolor{keywordtype}{bool} bNewState) \{ bFrozen = bNewState; \}}
+\DoxyCodeLine{43     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_character_movement_component_ab3ab4283107113582bc6c7f670c86b3c}{SetMaximumSpeed}}(\textcolor{keywordtype}{float} newMaximumSpeed) \{ maximumSpeed = newMaximumSpeed; \}}
+\DoxyCodeLine{44     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_character_movement_component_aa0c6001da09d289c9cdc6a2332293ab6}{SetAcceleration}}(\textcolor{keywordtype}{float} newAcceleration) \{ acceleration = newAcceleration; \}}
+\DoxyCodeLine{45 }
+\DoxyCodeLine{46 \textcolor{comment}{    /************************************************************************/}}
+\DoxyCodeLine{47     \textcolor{comment}{/*                              GETTERS                                 */}}
+\DoxyCodeLine{48 \textcolor{comment}{    /************************************************************************/}}
+\DoxyCodeLine{49     \_\_forceinline \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_character_movement_component_a95de1dc66286d10e4099b26ee46bdd7b}{IsFrozen}}()\textcolor{keyword}{ const }\{ \textcolor{keywordflow}{return} bFrozen; \}}
+\DoxyCodeLine{50     \_\_forceinline \textcolor{keywordtype}{float} \mbox{\hyperlink{class_character_movement_component_a0a0b9e6ccb23a433d86991de1d9a2ad8}{GetSpeed}}()\textcolor{keyword}{ const }\{ \textcolor{keywordflow}{return} ownerCollision ? ownerCollision-\/>GetLinearVelocity().Length() : 0.f; \}}
+\DoxyCodeLine{51     \_\_forceinline \textcolor{keywordtype}{float} \mbox{\hyperlink{class_character_movement_component_a1c326e239d25123a6e6ab1893b7c3006}{GetMaximumSpeed}}() \{ \textcolor{keywordflow}{return} maximumSpeed; \}}
+\DoxyCodeLine{52     \_\_forceinline \textcolor{keywordtype}{float} \mbox{\hyperlink{class_character_movement_component_a07ae2e8b49579f6737117051c3391ed1}{GetAcceleration}}() \{ \textcolor{keywordflow}{return} acceleration; \}}
+\DoxyCodeLine{53 \};}
+\DoxyCodeLine{54 }
+
+\end{DoxyCode}

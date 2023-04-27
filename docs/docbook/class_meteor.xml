@@ -1,0 +1,99 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_meteor" xml:lang="en-US">
+<title>Meteor Class Reference</title>
+<indexterm><primary>Meteor</primary></indexterm>
+<para>
+<computeroutput>#include &lt;Meteor.h&gt;</computeroutput>
+</para>
+Inheritance diagram for Meteor:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_meteor__inherit__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Collaboration diagram for Meteor:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_meteor__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_meteor_1a09f3937f77f2636139d641626685a6d3">Meteor</link> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Protected Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>virtual void <link linkend="_class_meteor_1ab7f46bd407dcbb53214310a8f95c9307">PostInit</link> () override</para>
+
+<para>Called after ability has been initialized, do set up here  </para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_class_meteor_1a0c35a52087ee487518c3d4e9f0e36cb2">Begin</link> () override</para>
+
+<para>Begins the ability, called if TryActivate was successful  </para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_class_meteor_1ad31eefb5e13589692a68f77ed022371c">End</link> () override</para>
+
+<para>Called on end of ability  </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Additional Inherited Members    </title>
+</simplesect>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_meteor_1a09f3937f77f2636139d641626685a6d3"/><section>
+    <title>Meteor()</title>
+<indexterm><primary>Meteor</primary><secondary>Meteor</secondary></indexterm>
+<indexterm><primary>Meteor</primary><secondary>Meteor</secondary></indexterm>
+<para><computeroutput>Meteor::Meteor ( )</computeroutput></para></section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_meteor_1a0c35a52087ee487518c3d4e9f0e36cb2"/><section>
+    <title>Begin()</title>
+<indexterm><primary>Begin</primary><secondary>Meteor</secondary></indexterm>
+<indexterm><primary>Meteor</primary><secondary>Begin</secondary></indexterm>
+<para><computeroutput>void Meteor::Begin ( )<computeroutput>[override]</computeroutput>, <computeroutput>[protected]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Begins the ability, called if TryActivate was successful  </para>
+</para>
+<para>
+Reimplemented from <link linkend="_class_ability_1ace910398ed2eb9f58c8e85dbb7a72de2">Ability</link>.</para>
+</section>
+<anchor xml:id="_class_meteor_1ad31eefb5e13589692a68f77ed022371c"/><section>
+    <title>End()</title>
+<indexterm><primary>End</primary><secondary>Meteor</secondary></indexterm>
+<indexterm><primary>Meteor</primary><secondary>End</secondary></indexterm>
+<para><computeroutput>void Meteor::End ( )<computeroutput>[override]</computeroutput>, <computeroutput>[protected]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Called on end of ability  </para>
+</para>
+<para>
+Reimplemented from <link linkend="_class_ability_1a61a88edf359a3c6bd34868e58bf64f20">Ability</link>.</para>
+</section>
+<anchor xml:id="_class_meteor_1ab7f46bd407dcbb53214310a8f95c9307"/><section>
+    <title>PostInit()</title>
+<indexterm><primary>PostInit</primary><secondary>Meteor</secondary></indexterm>
+<indexterm><primary>Meteor</primary><secondary>PostInit</secondary></indexterm>
+<para><computeroutput>void Meteor::PostInit ( )<computeroutput>[override]</computeroutput>, <computeroutput>[protected]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Called after ability has been initialized, do set up here  </para>
+</para>
+<para>
+Reimplemented from <link linkend="_class_ability_1a25388ebb622b414ef027eb33bf4a5cfb">Ability</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following files:</para>
+D:/Uni/CMP208/Hellwatch/build/vs2017/Abilities/PlayerAbilities/<link linkend="__meteor_8h">Meteor.h</link>D:/Uni/CMP208/Hellwatch/build/vs2017/Abilities/PlayerAbilities/<link linkend="__meteor_8cpp">Meteor.cpp</link></section>
+</section>

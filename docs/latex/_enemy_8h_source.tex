@@ -1,0 +1,61 @@
+\hypertarget{_enemy_8h_source}{}\doxysection{Enemy.\+h}
+\label{_enemy_8h_source}\index{D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/Enemy.h@{D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/Enemy.h}}
+\mbox{\hyperlink{_enemy_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{2 }
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_mesh_actor_8h}{Actors/MeshActor.h}}"{}}}
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_attribute_component_8h}{Attributes/AttributeComponent.h}}"{}}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_character_movement_component_8h}{ActorComponents/CharacterMovementComponent.h}}"{}}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_player_character_8h}{PlayerCharacter.h}}"{}}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{scene__app_8h}{scene\_app.h}}"{}}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_damage_on_collision_actor_8h}{DamageOnCollisionActor.h}}"{}}}
+\DoxyCodeLine{9 }
+\DoxyCodeLine{13 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespace_enemy_class}{EnemyClass}}}
+\DoxyCodeLine{14 \{}
+\DoxyCodeLine{15     \textcolor{keyword}{enum} \mbox{\hyperlink{namespace_enemy_class_a21f4473edd2d0cb0970f6505d46f0866}{Type}}}
+\DoxyCodeLine{16     \{}
+\DoxyCodeLine{17         \mbox{\hyperlink{namespace_enemy_class_a21f4473edd2d0cb0970f6505d46f0866a7a3e72f4e6ac314cad36a24f27c628a9}{HEAVY}},}
+\DoxyCodeLine{18         \mbox{\hyperlink{namespace_enemy_class_a21f4473edd2d0cb0970f6505d46f0866ab7b90fd5865f02a5159836adc5d221bf}{NORMAL}},}
+\DoxyCodeLine{19         \mbox{\hyperlink{namespace_enemy_class_a21f4473edd2d0cb0970f6505d46f0866ac49546fa32e67ada5d7619f084ef02cb}{LIGHT}}}
+\DoxyCodeLine{20     \};}
+\DoxyCodeLine{21 \}}
+\DoxyCodeLine{22 }
+\DoxyCodeLine{26 \textcolor{keyword}{class }\mbox{\hyperlink{class_enemy}{Enemy}} : \textcolor{keyword}{public} \mbox{\hyperlink{class_mesh_actor}{MeshActor}}}
+\DoxyCodeLine{27 \{}
+\DoxyCodeLine{28     \mbox{\hyperlink{_utils_8h_afc0ee7bd35c161a2d80b8e8f04fd9213}{GENERATED\_BODY}}(\mbox{\hyperlink{class_mesh_actor}{MeshActor}}, \mbox{\hyperlink{class_enemy}{Enemy}})}
+\DoxyCodeLine{29 }
+\DoxyCodeLine{30 \textcolor{keyword}{public}:}
+\DoxyCodeLine{31 }
+\DoxyCodeLine{32     \mbox{\hyperlink{class_enemy_a94f30d348b6d2840fd71675472ba38dd}{Enemy}}();}
+\DoxyCodeLine{33 }
+\DoxyCodeLine{37     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_enemy_a165cd1993b88023d7f1a45f9f2809b23}{SetClass}}(\mbox{\hyperlink{namespace_enemy_class_a21f4473edd2d0cb0970f6505d46f0866}{EnemyClass::Type}} type);}
+\DoxyCodeLine{38 }
+\DoxyCodeLine{39     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_enemy_ac49759f4d5262aea5e3b6e3f9f56896e}{TakeDamage}}(\textcolor{keywordtype}{float} \mbox{\hyperlink{class_enemy_a1dbbafd85db9d46820a78f603af4d53a}{damageAmount}}) \textcolor{keyword}{override};}
+\DoxyCodeLine{40 }
+\DoxyCodeLine{44     \textcolor{keywordtype}{float} \mbox{\hyperlink{class_enemy_a724bfc292724ec7f61218051bfa0faf5}{GetHealth}}() \{ \textcolor{keywordflow}{return} \mbox{\hyperlink{class_enemy_a985101af4d36bd5232edb964b061e423}{attributes}} ? \mbox{\hyperlink{class_enemy_a985101af4d36bd5232edb964b061e423}{attributes}}-\/>\mbox{\hyperlink{class_attribute_component_a580cf7f29236d87d448840840ad53bc6}{GetCurrentAttributeValueByType}}(\mbox{\hyperlink{namespace_hellwatch_attribute_ad0a500e65129d06e4589f9bca54c4a7da6d26574d573c085ec34ba30576725713}{HellwatchAttribute::Health}}) : 0.f; \}}
+\DoxyCodeLine{45 }
+\DoxyCodeLine{46     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_enemy_a723b79407b55383b2c327f674e3ab3bc}{Update}}(\textcolor{keywordtype}{float} deltaTime) \textcolor{keyword}{override};}
+\DoxyCodeLine{47 }
+\DoxyCodeLine{48     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_enemy_a8fe269579634b8cad6d494254c766387}{OnCollision}}(b2Body* otherBody) \textcolor{keyword}{override};}
+\DoxyCodeLine{49     }
+\DoxyCodeLine{53     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_enemy_a43ebf25f19b29fccb8cb71730b95749d}{ScaleWithWave}}(\textcolor{keywordtype}{int} wave);}
+\DoxyCodeLine{54 }
+\DoxyCodeLine{55     \textcolor{keywordtype}{float} \mbox{\hyperlink{class_enemy_a1dbbafd85db9d46820a78f603af4d53a}{damageAmount}};}
+\DoxyCodeLine{56     \textcolor{keywordtype}{float} \mbox{\hyperlink{class_enemy_a608edebc42e92ab5f253692c088a56d0}{attackTime}};}
+\DoxyCodeLine{57     \textcolor{keywordtype}{float} \mbox{\hyperlink{class_enemy_a573af3a6b672a882ae23263bfbcdf440}{attackCooldown}} = 2;}
+\DoxyCodeLine{58 }
+\DoxyCodeLine{59 \textcolor{keyword}{protected}:}
+\DoxyCodeLine{60 }
+\DoxyCodeLine{61     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_enemy_a487c39395ee71759c8bf10707776755e}{PostInit}}() \textcolor{keyword}{override};}
+\DoxyCodeLine{62 }
+\DoxyCodeLine{63     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_enemy_ac1779a7f33b1320de88c6a73415bae8c}{playerMoneyToAdd}} = 30;}
+\DoxyCodeLine{64     \mbox{\hyperlink{class_attribute_component}{AttributeComponent}}* \mbox{\hyperlink{class_enemy_a985101af4d36bd5232edb964b061e423}{attributes}};}
+\DoxyCodeLine{65     \mbox{\hyperlink{class_character_movement_component}{CharacterMovementComponent}}* \mbox{\hyperlink{class_enemy_a8d88db976bfb85797d1a161ae799f8e7}{enemyMovement}};}
+\DoxyCodeLine{66 }
+\DoxyCodeLine{67     std::string \mbox{\hyperlink{class_enemy_a4bc75b6c8f42a2fc5a1a7b932342a074}{hurtSound}} = \textcolor{stringliteral}{"{}MeleeHurt"{}};}
+\DoxyCodeLine{68 }
+\DoxyCodeLine{72     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_enemy_a4c732fc920f5da435fc97f9c55ae8531}{IncreasePlayerMoney}}();}
+\DoxyCodeLine{73 \};}
+
+\end{DoxyCode}

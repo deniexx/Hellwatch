@@ -1,0 +1,235 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="_meteor_actor_8h" kind="file" language="C++">
+    <compoundname>MeteorActor.h</compoundname>
+    <includes refid="_mesh_actor_8h" local="yes">Actors/MeshActor.h</includes>
+    <includes refid="_utils_8h" local="yes">GameFramework/Utils.h</includes>
+    <includedby refid="_meteor_8cpp" local="yes">D:/Uni/CMP208/Hellwatch/build/vs2017/Abilities/PlayerAbilities/Meteor.cpp</includedby>
+    <includedby refid="_meteor_actor_8cpp" local="yes">D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/MeteorActor.cpp</includedby>
+    <incdepgraph>
+      <node id="2">
+        <label>Actors/MeshActor.h</label>
+        <link refid="_mesh_actor_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/MeteorActor.h</label>
+        <link refid="_meteor_actor_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>Utils.h</label>
+        <link refid="_utils_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>GameFramework/WorldObject.h</label>
+        <link refid="_world_object_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="30">
+        <label>Interfaces/Damagable.h</label>
+        <link refid="_damagable_8h"/>
+      </node>
+      <node id="20">
+        <label>obj_mesh_loader.h</label>
+        <link refid="obj__mesh__loader_8h"/>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>primitive_builder.h</label>
+        <link refid="primitive__builder_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>scene_app.h</label>
+        <link refid="scene__app_8h"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+      </node>
+      <node id="18">
+        <label>box2d/box2d.h</label>
+      </node>
+      <node id="16">
+        <label>cstddef</label>
+      </node>
+      <node id="26">
+        <label>future</label>
+      </node>
+      <node id="21">
+        <label>gef.h</label>
+      </node>
+      <node id="25">
+        <label>graphics/font.h</label>
+      </node>
+      <node id="15">
+        <label>graphics/material.h</label>
+      </node>
+      <node id="29">
+        <label>graphics/mesh.h</label>
+      </node>
+      <node id="10">
+        <label>graphics/renderer_3d.h</label>
+      </node>
+      <node id="17">
+        <label>graphics/scene.h</label>
+      </node>
+      <node id="22">
+        <label>map</label>
+      </node>
+      <node id="4">
+        <label>maths/Matrix44.h</label>
+      </node>
+      <node id="7">
+        <label>maths/Vector2.h</label>
+      </node>
+      <node id="28">
+        <label>maths/math_utils.h</label>
+      </node>
+      <node id="9">
+        <label>maths/matrix44.h</label>
+      </node>
+      <node id="5">
+        <label>maths/quaternion.h</label>
+      </node>
+      <node id="13">
+        <label>maths/vector2.h</label>
+      </node>
+      <node id="8">
+        <label>maths/vector4.h</label>
+      </node>
+      <node id="27">
+        <label>random</label>
+      </node>
+      <node id="23">
+        <label>string</label>
+      </node>
+      <node id="12">
+        <label>system/application.h</label>
+      </node>
+      <node id="19">
+        <label>system/platform.h</label>
+      </node>
+      <node id="24">
+        <label>vector</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/Abilities/PlayerAbilities/Meteor.cpp</label>
+        <link refid="_meteor_8cpp"/>
+      </node>
+      <node id="3">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/MeteorActor.cpp</label>
+        <link refid="_meteor_actor_8cpp"/>
+      </node>
+      <node id="1">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/MeteorActor.h</label>
+        <link refid="_meteor_actor_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_meteor_actor" prot="public">MeteorActor</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_mesh_actor_8h" kindref="compound">Actors/MeshActor.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_utils_8h" kindref="compound">GameFramework/Utils.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6" refid="class_meteor_actor" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_meteor_actor" kindref="compound">MeteorActor</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="class_mesh_actor" kindref="compound">MeshActor</ref></highlight></codeline>
+<codeline lineno="7"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_utils_8h_1afc0ee7bd35c161a2d80b8e8f04fd9213" kindref="member">GENERATED_BODY</ref>(<ref refid="class_mesh_actor" kindref="compound">MeshActor</ref>,<sp/><ref refid="class_meteor_actor" kindref="compound">MeteorActor</ref>)</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15" refid="class_meteor_actor_1af958d034e0ee905ef1ad42c3cb7e2e7d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_meteor_actor_1af958d034e0ee905ef1ad42c3cb7e2e7d" kindref="member">SetDamageAmount</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>newAmount)<sp/>{<sp/><ref refid="class_meteor_actor_1a89d596eab0b2175b66e85d02a5f1c055" kindref="member">damageAmount</ref><sp/>=<sp/>newAmount;<sp/>}</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20" refid="class_meteor_actor_1a8426bedb425c8dcdc1311ee2b70f2c38" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_meteor_actor_1a8426bedb425c8dcdc1311ee2b70f2c38" kindref="member">SetApplyDamageOn</ref>(<ref refid="namespace_apply_damage_on_1aab4652342cac35cdff458c5aa2bad289" kindref="member">ApplyDamageOn::Type</ref><sp/>newState)<sp/>{<sp/><ref refid="class_meteor_actor_1ab4bb033ead5bfecb16eae10dcedd5bcb" kindref="member">applyDamageOn</ref><sp/>=<sp/>newState;<sp/>}</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26" refid="class_meteor_actor_1a804452922893086186d9c7cba86ba772" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_meteor_actor_1a804452922893086186d9c7cba86ba772" kindref="member">SetSpinning</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>bNewState)<sp/>{<sp/><ref refid="class_meteor_actor_1ac7ad468c3a6c2077dbbfdfb6a99c5b31" kindref="member">bSpinning</ref><sp/>=<sp/>bNewState;<sp/>}</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_meteor_actor_1ab6359799dcd7d0c88bbe0f9aae848819" kindref="member">Update</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>deltaTime)<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30" refid="class_meteor_actor_1adaff72a4a16bc8aebd4a20c996aecc8e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>gef::Vector4<sp/><ref refid="class_meteor_actor_1adaff72a4a16bc8aebd4a20c996aecc8e" kindref="member">startPosition</ref>;</highlight></codeline>
+<codeline lineno="31" refid="class_meteor_actor_1a03a7f34ddeac63d24f0db59568398e80" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>gef::Vector4<sp/><ref refid="class_meteor_actor_1a03a7f34ddeac63d24f0db59568398e80" kindref="member">targetPosition</ref>;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35" refid="class_meteor_actor_1ab4bb033ead5bfecb16eae10dcedd5bcb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespace_apply_damage_on_1aab4652342cac35cdff458c5aa2bad289" kindref="member">ApplyDamageOn::Type</ref><sp/><ref refid="class_meteor_actor_1ab4bb033ead5bfecb16eae10dcedd5bcb" kindref="member">applyDamageOn</ref><sp/>=<sp/><ref refid="namespace_apply_damage_on_1aab4652342cac35cdff458c5aa2bad289a17c0a2d2e83ad970a7bb7395c9819d1f" kindref="member">ApplyDamageOn::EnemiesOnly</ref>;</highlight></codeline>
+<codeline lineno="36" refid="class_meteor_actor_1ac7ad468c3a6c2077dbbfdfb6a99c5b31" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_meteor_actor_1ac7ad468c3a6c2077dbbfdfb6a99c5b31" kindref="member">bSpinning</ref><sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="37" refid="class_meteor_actor_1a89d596eab0b2175b66e85d02a5f1c055" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="class_meteor_actor_1a89d596eab0b2175b66e85d02a5f1c055" kindref="member">damageAmount</ref><sp/>=<sp/>0.f;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39" refid="class_meteor_actor_1a946ed0ef11c565381b8686d74283c262" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="class_meteor_actor_1a946ed0ef11c565381b8686d74283c262" kindref="member">lerpAlpha</ref><sp/>=<sp/>0.f;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/MeteorActor.h"/>
+  </compounddef>
+</doxygen>

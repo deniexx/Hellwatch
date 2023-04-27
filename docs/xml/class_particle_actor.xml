@@ -1,0 +1,313 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="class_particle_actor" kind="class" language="C++" prot="public">
+    <compoundname>ParticleActor</compoundname>
+    <basecompoundref refid="class_mesh_actor" prot="public" virt="non-virtual">MeshActor</basecompoundref>
+    <includes refid="_particle_actor_8h" local="no">ParticleActor.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_particle_actor_1a484fa416668d2c8b8a6021924674f54f" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool ParticleActor::bIsPlaying</definition>
+        <argsstring></argsstring>
+        <name>bIsPlaying</name>
+        <qualifiedname>ParticleActor::bIsPlaying</qualifiedname>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/ParticleActor.h" line="45" column="6" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/ParticleActor.h" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_particle_actor_1a5688c3b1562ba7ddb449817e2d73c594" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool ParticleActor::bIsLingering</definition>
+        <argsstring></argsstring>
+        <name>bIsLingering</name>
+        <qualifiedname>ParticleActor::bIsLingering</qualifiedname>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/ParticleActor.h" line="46" column="6" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/ParticleActor.h" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_particle_actor_1ab5cf657267147e7ad3259a426e021791" prot="private" static="no" mutable="no">
+        <type><ref refid="struct_f_particle_data" kindref="compound">FParticleData</ref></type>
+        <definition>FParticleData ParticleActor::particleData</definition>
+        <argsstring></argsstring>
+        <name>particleData</name>
+        <qualifiedname>ParticleActor::particleData</qualifiedname>
+        <initializer>= <ref refid="struct_f_particle_data" kindref="compound">FParticleData</ref>()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/ParticleActor.h" line="47" column="15" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/ParticleActor.h" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_particle_actor_1a7883f464b0034d806113dfadee6f3870" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float ParticleActor::lingerStartTime</definition>
+        <argsstring></argsstring>
+        <name>lingerStartTime</name>
+        <qualifiedname>ParticleActor::lingerStartTime</qualifiedname>
+        <initializer>= 0.f</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/ParticleActor.h" line="49" column="7" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/ParticleActor.h" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_particle_actor_1aa1f1f241991ff7326e9ac230fbf63edd" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float ParticleActor::lastTextureTime</definition>
+        <argsstring></argsstring>
+        <name>lastTextureTime</name>
+        <qualifiedname>ParticleActor::lastTextureTime</qualifiedname>
+        <initializer>= 0.f</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/ParticleActor.h" line="50" column="7" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/ParticleActor.h" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_particle_actor_1a97b85161bb5d2893b333082465d9b683" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float ParticleActor::timeBetweenTextures</definition>
+        <argsstring></argsstring>
+        <name>timeBetweenTextures</name>
+        <qualifiedname>ParticleActor::timeBetweenTextures</qualifiedname>
+        <initializer>= 0.f</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/ParticleActor.h" line="51" column="7" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/ParticleActor.h" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_particle_actor_1a892673c41341c86fdafcaaf2efc54fda" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int ParticleActor::currentTextureIndex</definition>
+        <argsstring></argsstring>
+        <name>currentTextureIndex</name>
+        <qualifiedname>ParticleActor::currentTextureIndex</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/ParticleActor.h" line="52" column="5" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/ParticleActor.h" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_particle_actor_1aac7c62cbf5b02d9f925b1384ec53b65c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ParticleActor::SetParticleData</definition>
+        <argsstring>(const FParticleData &amp;newData)</argsstring>
+        <name>SetParticleData</name>
+        <qualifiedname>ParticleActor::SetParticleData</qualifiedname>
+        <param>
+          <type>const <ref refid="struct_f_particle_data" kindref="compound">FParticleData</ref> &amp;</type>
+          <declname>newData</declname>
+        </param>
+        <briefdescription>
+<para>Sets new particle data  </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/ParticleActor.h" line="29" column="6" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/ParticleActor.h" bodystart="29" bodyend="29"/>
+      </memberdef>
+      <memberdef kind="function" id="class_particle_actor_1afc281ad9a6f6803c645b077106600234" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ParticleActor::Play</definition>
+        <argsstring>()</argsstring>
+        <name>Play</name>
+        <qualifiedname>ParticleActor::Play</qualifiedname>
+        <briefdescription>
+<para>Plays the particles  </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/ParticleActor.h" line="34" column="6" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/ParticleActor.cpp" bodystart="4" bodyend="13"/>
+      </memberdef>
+      <memberdef kind="function" id="class_particle_actor_1a5ef5f56da7eadd86f647ab3f519061be" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ParticleActor::Stop</definition>
+        <argsstring>()</argsstring>
+        <name>Stop</name>
+        <qualifiedname>ParticleActor::Stop</qualifiedname>
+        <briefdescription>
+<para>Stops the particles  </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/ParticleActor.h" line="39" column="6" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/ParticleActor.cpp" bodystart="15" bodyend="18"/>
+      </memberdef>
+      <memberdef kind="function" id="class_particle_actor_1a5ed58a9e57286e08cf8a650aaf22f43f" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void ParticleActor::Update</definition>
+        <argsstring>(float deltaTime) override</argsstring>
+        <name>Update</name>
+        <qualifiedname>ParticleActor::Update</qualifiedname>
+        <reimplements refid="class_mesh_actor_1a3743470557ddbbc88bc73e4dd283d6bf">Update</reimplements>
+        <param>
+          <type>float</type>
+          <declname>deltaTime</declname>
+        </param>
+        <briefdescription>
+<para>Update function, called every frame  </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>deltaTime</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Float variable for the frame time</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/ParticleActor.h" line="41" column="14" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/ParticleActor.cpp" bodystart="20" bodyend="45"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="4">
+        <label>IDamagable</label>
+        <link refid="class_i_damagable"/>
+      </node>
+      <node id="2">
+        <label>MeshActor</label>
+        <link refid="class_mesh_actor"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>ParticleActor</label>
+        <link refid="class_particle_actor"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>WorldObject</label>
+        <link refid="class_world_object"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="4">
+        <label>IDamagable</label>
+        <link refid="class_i_damagable"/>
+      </node>
+      <node id="2">
+        <label>MeshActor</label>
+        <link refid="class_mesh_actor"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>ParticleActor</label>
+        <link refid="class_particle_actor"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>WorldObject</label>
+        <link refid="class_world_object"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>owningObject</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/ParticleActor.h" line="22" column="1" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/ParticleActor.h" bodystart="23" bodyend="53"/>
+    <listofallmembers>
+      <member refid="class_world_object_1ac10cc37682a3a3cce8405411fbd8f4c3" prot="protected" virt="non-virtual"><scope>ParticleActor</scope><name>bDisableUpdate</name></member>
+      <member refid="class_particle_actor_1a5688c3b1562ba7ddb449817e2d73c594" prot="private" virt="non-virtual"><scope>ParticleActor</scope><name>bIsLingering</name></member>
+      <member refid="class_particle_actor_1a484fa416668d2c8b8a6021924674f54f" prot="private" virt="non-virtual"><scope>ParticleActor</scope><name>bIsPlaying</name></member>
+      <member refid="class_world_object_1a60c2b1f707b5694f97dd950996d05e11" prot="protected" virt="non-virtual"><scope>ParticleActor</scope><name>bMarkedForDelete</name></member>
+      <member refid="class_mesh_actor_1a858b488e44d63ff8eda02e173fa4da7a" prot="protected" virt="non-virtual"><scope>ParticleActor</scope><name>bOverrideMaterial</name></member>
+      <member refid="class_world_object_1a4c83c0d8e3817aac3ef2080ec0972802" prot="protected" virt="non-virtual"><scope>ParticleActor</scope><name>BuildTransform</name></member>
+      <member refid="class_world_object_1a025ba78ec5cc2607f7e62750a7c37749" prot="protected" virt="non-virtual"><scope>ParticleActor</scope><name>collisionBody</name></member>
+      <member refid="class_mesh_actor_1af9b992a02356ead76d3c36a031bf6eea" prot="protected" virt="non-virtual"><scope>ParticleActor</scope><name>CreateComponent</name></member>
+      <member refid="class_particle_actor_1a892673c41341c86fdafcaaf2efc54fda" prot="private" virt="non-virtual"><scope>ParticleActor</scope><name>currentTextureIndex</name></member>
+      <member refid="class_world_object_1a650a599e9ffa751eaba296c4ef6ec2d2" prot="public" virt="non-virtual"><scope>ParticleActor</scope><name>DisableUpdate</name></member>
+      <member refid="class_world_object_1a42e101b6adf4911396d95acc5b1741d8" prot="public" virt="non-virtual"><scope>ParticleActor</scope><name>EnableUpdate</name></member>
+      <member refid="class_world_object_1aa3b5f5e5e1ed26c94265854e2858bdee" prot="public" virt="non-virtual"><scope>ParticleActor</scope><name>GetCollisionBody</name></member>
+      <member refid="class_mesh_actor_1a639c1c33b5f22210351fd94ec7d78c43" prot="public" virt="non-virtual"><scope>ParticleActor</scope><name>GetComponent</name></member>
+      <member refid="class_mesh_actor_1a7eef4e0218a4363460a0375585037012" prot="public" virt="non-virtual"><scope>ParticleActor</scope><name>GetComponents</name></member>
+      <member refid="class_mesh_actor_1aa824a26a7c24d187f15aa3e9beba11f6" prot="public" virt="non-virtual"><scope>ParticleActor</scope><name>GetComponents</name></member>
+      <member refid="class_world_object_1aaebbb0abbabef79ad542f01db4ef6101" prot="public" virt="non-virtual"><scope>ParticleActor</scope><name>GetIsMarkedForDelete</name></member>
+      <member refid="class_mesh_actor_1a906146d34e290e3bd7132a4dcbfad8a1" prot="public" virt="non-virtual"><scope>ParticleActor</scope><name>GetMesh</name></member>
+      <member refid="class_mesh_actor_1a03ae156a0a281ff9eb128c7c7b44d983" prot="public" virt="non-virtual"><scope>ParticleActor</scope><name>GetMeshName</name></member>
+      <member refid="class_world_object_1a0fdf372cdda0fb026916b60e19e657a0" prot="public" virt="non-virtual"><scope>ParticleActor</scope><name>GetOwner</name></member>
+      <member refid="class_world_object_1a271e4b4870fadf60e285576f94b31e79" prot="public" virt="virtual"><scope>ParticleActor</scope><name>GetRotation</name></member>
+      <member refid="class_world_object_1aa959995cc385843f1e2b0139e4413ab5" prot="public" virt="virtual"><scope>ParticleActor</scope><name>GetRotationF</name></member>
+      <member refid="class_world_object_1a223b3653f965b7698ec28c9b4fc84e28" prot="public" virt="virtual"><scope>ParticleActor</scope><name>GetScale</name></member>
+      <member refid="class_world_object_1a1302aea00b9a5f348459f55e9dd50725" prot="public" virt="non-virtual"><scope>ParticleActor</scope><name>GetTransform</name></member>
+      <member refid="class_world_object_1a9967baa65719f1418641598a244306a5" prot="public" virt="virtual"><scope>ParticleActor</scope><name>GetTranslation</name></member>
+      <member refid="class_world_object_1a9f76e2def47f4d6be6bafb330ac0394b" prot="public" virt="non-virtual"><scope>ParticleActor</scope><name>ID</name></member>
+      <member refid="class_world_object_1aa2d0bc51a9b2dac1930c37e2401e8934" prot="public" virt="non-virtual"><scope>ParticleActor</scope><name>Init</name></member>
+      <member refid="class_particle_actor_1aa1f1f241991ff7326e9ac230fbf63edd" prot="private" virt="non-virtual"><scope>ParticleActor</scope><name>lastTextureTime</name></member>
+      <member refid="class_particle_actor_1a7883f464b0034d806113dfadee6f3870" prot="private" virt="non-virtual"><scope>ParticleActor</scope><name>lingerStartTime</name></member>
+      <member refid="class_world_object_1a4402fa17dfd062fc97750d581d4f774b" prot="public" virt="non-virtual"><scope>ParticleActor</scope><name>MarkForDelete</name></member>
+      <member refid="class_mesh_actor_1a8585ace5ca84b7903f216c77661a5787" prot="protected" virt="non-virtual"><scope>ParticleActor</scope><name>material</name></member>
+      <member refid="class_mesh_actor_1af40424bf59441cfb3362f8ef3e1fbb68" prot="public" virt="non-virtual"><scope>ParticleActor</scope><name>MeshActor</name></member>
+      <member refid="class_mesh_actor_1aed30e8021f75c3221ab6f02cb1fcfcba" prot="public" virt="non-virtual"><scope>ParticleActor</scope><name>MeshActor</name></member>
+      <member refid="class_mesh_actor_1a8eb71848a77c1c7ffb0f88d526a633e3" prot="protected" virt="non-virtual"><scope>ParticleActor</scope><name>meshName</name></member>
+      <member refid="class_world_object_1a7c563531a541e9f5ff4193443cedd515" prot="public" virt="virtual"><scope>ParticleActor</scope><name>OnCollision</name></member>
+      <member refid="class_world_object_1a8917ba1d61e12c12f7246c7b95cd4094" prot="protected" virt="non-virtual"><scope>ParticleActor</scope><name>owningObject</name></member>
+      <member refid="class_particle_actor_1ab5cf657267147e7ad3259a426e021791" prot="private" virt="non-virtual"><scope>ParticleActor</scope><name>particleData</name></member>
+      <member refid="class_particle_actor_1afc281ad9a6f6803c645b077106600234" prot="public" virt="non-virtual"><scope>ParticleActor</scope><name>Play</name></member>
+      <member refid="class_world_object_1a8500a6a24c62699fa103a68349407a3f" prot="public" virt="virtual"><scope>ParticleActor</scope><name>PostInit</name></member>
+      <member refid="class_mesh_actor_1a9c8f4860ae03966a27c3ee22c2a2b5a1" prot="public" virt="virtual"><scope>ParticleActor</scope><name>Render</name></member>
+      <member refid="class_world_object_1a519b69f0419703cfbe08580d4b2ab408" prot="protected" virt="non-virtual"><scope>ParticleActor</scope><name>rotationVec</name></member>
+      <member refid="class_world_object_1a45f28fb0c7cf14a6c92ab72eaa4eb9a9" prot="protected" virt="non-virtual"><scope>ParticleActor</scope><name>scale</name></member>
+      <member refid="class_world_object_1a8817deac42a357d2ed476791c7b76511" prot="public" virt="non-virtual"><scope>ParticleActor</scope><name>SetCollisionBody</name></member>
+      <member refid="class_mesh_actor_1a0217e1969a68278f2548e1553e2ab92b" prot="public" virt="non-virtual"><scope>ParticleActor</scope><name>SetMaterial</name></member>
+      <member refid="class_mesh_actor_1a25950ae28c6abf2e9e3dc64cfa19c0c7" prot="public" virt="non-virtual"><scope>ParticleActor</scope><name>SetMesh</name></member>
+      <member refid="class_mesh_actor_1a86f27025c3484267804fdaa5e6082fd4" prot="public" virt="non-virtual"><scope>ParticleActor</scope><name>SetMeshName</name></member>
+      <member refid="class_particle_actor_1aac7c62cbf5b02d9f925b1384ec53b65c" prot="public" virt="non-virtual"><scope>ParticleActor</scope><name>SetParticleData</name></member>
+      <member refid="class_mesh_actor_1a295a747ea81d8b09e084c488ab183fbb" prot="public" virt="virtual"><scope>ParticleActor</scope><name>SetRotation</name></member>
+      <member refid="class_world_object_1ad73836d8146cc9e1d475eb74fb05481a" prot="public" virt="virtual" ambiguityscope="WorldObject::"><scope>ParticleActor</scope><name>SetRotation</name></member>
+      <member refid="class_world_object_1ae00d341e9ac8909374dd556aaecbdb46" prot="public" virt="virtual"><scope>ParticleActor</scope><name>SetScale</name></member>
+      <member refid="class_world_object_1a830b64bbf6df3fc50284b0316c124133" prot="public" virt="virtual"><scope>ParticleActor</scope><name>SetTranslation</name></member>
+      <member refid="class_world_object_1a78b0b88900685e80feffc6921fd9f370" prot="public" virt="non-virtual"><scope>ParticleActor</scope><name>ShouldUpdate</name></member>
+      <member refid="class_particle_actor_1a5ef5f56da7eadd86f647ab3f519061be" prot="public" virt="non-virtual"><scope>ParticleActor</scope><name>Stop</name></member>
+      <member refid="class_mesh_actor_1a31a231014625686e8d40e561a7028931" prot="public" virt="virtual"><scope>ParticleActor</scope><name>TakeDamage</name></member>
+      <member refid="class_particle_actor_1a97b85161bb5d2893b333082465d9b683" prot="private" virt="non-virtual"><scope>ParticleActor</scope><name>timeBetweenTextures</name></member>
+      <member refid="class_world_object_1a9e5ac0cc278f5766b6020950fdabbe75" prot="protected" virt="non-virtual"><scope>ParticleActor</scope><name>transformMat</name></member>
+      <member refid="class_world_object_1a78bd9162f55826c5c68706d688578cf8" prot="protected" virt="non-virtual"><scope>ParticleActor</scope><name>translation</name></member>
+      <member refid="class_particle_actor_1a5ed58a9e57286e08cf8a650aaf22f43f" prot="public" virt="virtual"><scope>ParticleActor</scope><name>Update</name></member>
+      <member refid="class_world_object_1a632d2e78acdcbc0aef09951134340d4e" prot="public" virt="non-virtual"><scope>ParticleActor</scope><name>WorldObject</name></member>
+      <member refid="class_world_object_1a287e5b87a26133cd35f3015268d2a5a3" prot="public" virt="non-virtual"><scope>ParticleActor</scope><name>~WorldObject</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

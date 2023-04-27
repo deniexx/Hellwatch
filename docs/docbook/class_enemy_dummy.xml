@@ -1,0 +1,85 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_enemy_dummy" xml:lang="en-US">
+<title>EnemyDummy Class Reference</title>
+<indexterm><primary>EnemyDummy</primary></indexterm>
+<para>
+
+<para>A dummy enemy class used for testing damage  </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;EnemyDummy.h&gt;</computeroutput>
+</para>
+Inheritance diagram for EnemyDummy:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_enemy_dummy__inherit__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Collaboration diagram for EnemyDummy:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_enemy_dummy__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>virtual void <link linkend="_class_enemy_dummy_1a1e336fb794e413b2379f09c4fe648259">TakeDamage</link> (float damageAmount)</para>
+</listitem>
+            <listitem><para>float <link linkend="_class_enemy_dummy_1aacc92c582fd4013912b3d06b6d1c9e11">GetHealth</link> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Protected Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>virtual void <link linkend="_class_enemy_dummy_1a64da679c5eaca270f5181638bce62bcd">PostInit</link> () override</para>
+
+<para>Override this to Initialize variables or do any necessary work when the object is created  </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Additional Inherited Members    </title>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>A dummy enemy class used for testing damage  </para>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_enemy_dummy_1aacc92c582fd4013912b3d06b6d1c9e11"/><section>
+    <title>GetHealth()</title>
+<indexterm><primary>GetHealth</primary><secondary>EnemyDummy</secondary></indexterm>
+<indexterm><primary>EnemyDummy</primary><secondary>GetHealth</secondary></indexterm>
+<para><computeroutput>float EnemyDummy::GetHealth ( )<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_enemy_dummy_1a64da679c5eaca270f5181638bce62bcd"/><section>
+    <title>PostInit()</title>
+<indexterm><primary>PostInit</primary><secondary>EnemyDummy</secondary></indexterm>
+<indexterm><primary>EnemyDummy</primary><secondary>PostInit</secondary></indexterm>
+<para><computeroutput>void EnemyDummy::PostInit ( )<computeroutput>[override]</computeroutput>, <computeroutput>[protected]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Override this to Initialize variables or do any necessary work when the object is created  </para>
+</para>
+<para>
+Reimplemented from <link linkend="_class_world_object_1a8500a6a24c62699fa103a68349407a3f">WorldObject</link>.</para>
+</section>
+<anchor xml:id="_class_enemy_dummy_1a1e336fb794e413b2379f09c4fe648259"/><section>
+    <title>TakeDamage()</title>
+<indexterm><primary>TakeDamage</primary><secondary>EnemyDummy</secondary></indexterm>
+<indexterm><primary>EnemyDummy</primary><secondary>TakeDamage</secondary></indexterm>
+<para><computeroutput>void EnemyDummy::TakeDamage (float damageAmount)<computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+Reimplemented from <link linkend="_class_mesh_actor_1a31a231014625686e8d40e561a7028931">MeshActor</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following files:</para>
+D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/<link linkend="__enemy_dummy_8h">EnemyDummy.h</link>D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/<link linkend="__enemy_dummy_8cpp">EnemyDummy.cpp</link></section>
+</section>

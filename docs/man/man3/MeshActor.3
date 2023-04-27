@@ -1,0 +1,178 @@
+.TH "MeshActor" 3 "Thu Apr 27 2023" "Hellwatch" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+MeshActor \- An object that has a mesh   
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <MeshActor\&.h>\fP
+.PP
+Inherits \fBWorldObject\fP, and \fBIDamagable\fP\&.
+.PP
+Inherited by \fBDamageOnCollisionActor\fP, \fBEnemy\fP, \fBEnemyDummy\fP, \fBMeteorActor\fP, \fBParticleActor\fP, and \fBPlayerCharacter\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBMeshActor\fP ()"
+.br
+.RI "Defaults constructor  "
+.ti -1c
+.RI "\fBMeshActor\fP (gef::Mesh *inMesh)"
+.br
+.RI "Constructor which assigns the mesh  "
+.ti -1c
+.RI "virtual void \fBRender\fP () override"
+.br
+.RI "Renders the object  "
+.ti -1c
+.RI "virtual void \fBUpdate\fP (float deltaTime) override"
+.br
+.RI "Update function, called every frame  "
+.ti -1c
+.RI "virtual void \fBTakeDamage\fP (float damageAmount)"
+.br
+.ti -1c
+.RI "void \fBSetMesh\fP (gef::Mesh *inMesh)"
+.br
+.ti -1c
+.RI "void \fBSetMeshName\fP (std::string newName)"
+.br
+.ti -1c
+.RI "void \fBSetMaterial\fP (gef::Material newMaterial)"
+.br
+.ti -1c
+.RI "virtual void \fBSetRotation\fP (const gef::Vector4 &inRotation) override"
+.br
+.ti -1c
+.RI "__forceinline const gef::Mesh * \fBGetMesh\fP () const"
+.br
+.ti -1c
+.RI "__forceinline const std::vector< \fBActorComponent\fP * > & \fBGetComponents\fP ()"
+.br
+.ti -1c
+.RI "__forceinline const std::string & \fBGetMeshName\fP ()"
+.br
+.ti -1c
+.RI "template<typename ComponentType  = ActorComponent> ComponentType * \fBGetComponent\fP ()"
+.br
+.RI "Gets the first component of the specified type from the Actor  "
+.ti -1c
+.RI "template<typename ComponentType  = ActorComponent> std::vector< ComponentType * > & \fBGetComponents\fP ()"
+.br
+.RI "Gets all the components of the specified type from the Actor  "
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "template<typename ComponentType  = ActorComponent> ComponentType * \fBCreateComponent\fP ()"
+.br
+.RI "Creates and return the specified component, if no component is specified it will create the base class of \fBActorComponent\fP  "
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "std::string \fBmeshName\fP"
+.br
+.ti -1c
+.RI "gef::Material \fBmaterial\fP"
+.br
+.ti -1c
+.RI "bool \fBbOverrideMaterial\fP"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+An object that has a mesh  
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "MeshActor::MeshActor ()"
+
+.PP
+Defaults constructor  
+.SS "MeshActor::MeshActor (gef::Mesh * inMesh)"
+
+.PP
+Constructor which assigns the mesh  
+.PP
+\fBParameters\fP
+.RS 4
+\fIinMesh\fP Mesh to be assigned
+.RE
+.PP
+
+.SH "Member Function Documentation"
+.PP 
+.SS "template<typename ComponentType  = ActorComponent> ComponentType * MeshActor::CreateComponent ()\fC [inline]\fP, \fC [protected]\fP"
+
+.PP
+Creates and return the specified component, if no component is specified it will create the base class of \fBActorComponent\fP  
+.SS "template<typename ComponentType  = ActorComponent> ComponentType * MeshActor::GetComponent ()\fC [inline]\fP"
+
+.PP
+Gets the first component of the specified type from the Actor  
+.SS "__forceinline const std::vector< \fBActorComponent\fP * > & MeshActor::GetComponents ()\fC [inline]\fP"
+
+.SS "template<typename ComponentType  = ActorComponent> std::vector< ComponentType * > & MeshActor::GetComponents ()\fC [inline]\fP"
+
+.PP
+Gets all the components of the specified type from the Actor  
+.SS "__forceinline const gef::Mesh * MeshActor::GetMesh () const\fC [inline]\fP"
+
+.SS "__forceinline const std::string & MeshActor::GetMeshName ()\fC [inline]\fP"
+
+.SS "void MeshActor::Render ()\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+Renders the object  
+.PP
+Reimplemented from \fBWorldObject\fP\&.
+.SS "void MeshActor::SetMaterial (gef::Material newMaterial)\fC [inline]\fP"
+
+.SS "void MeshActor::SetMesh (gef::Mesh * inMesh)\fC [inline]\fP"
+
+.SS "void MeshActor::SetMeshName (std::string newName)"
+
+.SS "void MeshActor::SetRotation (const gef::Vector4 & inRotation)\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+Reimplemented from \fBWorldObject\fP\&.
+.SS "virtual void MeshActor::TakeDamage (float damageAmount)\fC [inline]\fP, \fC [virtual]\fP"
+
+.PP
+Implements \fBIDamagable\fP\&.
+.PP
+Reimplemented in \fBEnemyDummy\fP, \fBEnemy\fP, and \fBPlayerCharacter\fP\&.
+.SS "void MeshActor::Update (float deltaTime)\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+Update function, called every frame  
+.PP
+\fBParameters\fP
+.RS 4
+\fIdeltaTime\fP Float variable for the frame time
+.RE
+.PP
+
+.PP
+Reimplemented from \fBWorldObject\fP\&.
+.PP
+Reimplemented in \fBBoss\fP, \fBDamageOnCollisionActor\fP, \fBEnemy\fP, \fBMeteorActor\fP, \fBParticleActor\fP, \fBPlayerCharacter\fP, and \fBRangedEnemy\fP\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "bool MeshActor::bOverrideMaterial\fC [protected]\fP"
+
+.SS "gef::Material MeshActor::material\fC [protected]\fP"
+
+.SS "std::string MeshActor::meshName\fC [protected]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Hellwatch from the source code\&.

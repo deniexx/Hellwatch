@@ -1,0 +1,230 @@
+.TH "PrimitiveBuilder" 3 "Thu Apr 27 2023" "Hellwatch" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+PrimitiveBuilder
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <primitive_builder\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBPrimitiveBuilder\fP (gef::Platform &platform)"
+.br
+.RI "Constructor\&. "
+.ti -1c
+.RI "\fB~PrimitiveBuilder\fP ()"
+.br
+.RI "Default destructor\&. "
+.ti -1c
+.RI "void \fBInit\fP ()"
+.br
+.RI "Initialises the primitive builder\&. "
+.ti -1c
+.RI "void \fBCleanUp\fP ()"
+.br
+.RI "Clean up resources created by the primitive builder\&. "
+.ti -1c
+.RI "gef::Mesh * \fBCreateBoxMesh\fP (const gef::Vector4 &half_size, gef::Vector4 centre=gef::Vector4(0\&.0f, 0\&.0f, 0\&.0f), gef::Material **materials=NULL)"
+.br
+.RI "Creates a box shaped mesh\&. "
+.ti -1c
+.RI "gef::Mesh * \fBCreateSphereMesh\fP (const float radius, const int phi, const int theta, gef::Vector4 centre=gef::Vector4(0\&.0f, 0\&.0f, 0\&.0f), gef::Material *material=NULL)"
+.br
+.RI "Creates a sphere shaped mesh\&. "
+.ti -1c
+.RI "const gef::Mesh * \fBGetDefaultCubeMesh\fP () const"
+.br
+.RI "Get the default cube mesh\&. "
+.ti -1c
+.RI "const gef::Mesh * \fBGetDefaultSphereMesh\fP () const"
+.br
+.RI "Get the default sphere mesh\&. "
+.ti -1c
+.RI "const gef::Material & \fBred_material\fP () const"
+.br
+.RI "Get the red material\&. "
+.ti -1c
+.RI "const gef::Material & \fBgreen_material\fP () const"
+.br
+.RI "Get the red material\&. "
+.ti -1c
+.RI "const gef::Material & \fBblue_material\fP () const"
+.br
+.RI "Get the blue material\&. "
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "gef::Platform & \fBplatform_\fP"
+.br
+.ti -1c
+.RI "gef::Mesh * \fBdefault_cube_mesh_\fP"
+.br
+.ti -1c
+.RI "gef::Mesh * \fBdefault_sphere_mesh_\fP"
+.br
+.ti -1c
+.RI "gef::Material \fBred_material_\fP"
+.br
+.ti -1c
+.RI "gef::Material \fBblue_material_\fP"
+.br
+.ti -1c
+.RI "gef::Material \fBgreen_material_\fP"
+.br
+.in -1c
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "PrimitiveBuilder::PrimitiveBuilder (gef::Platform & platform)"
+
+.PP
+Constructor\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIplatform\fP The platform the primitive builder is being created on\&. 
+.RE
+.PP
+
+.SS "PrimitiveBuilder::~PrimitiveBuilder ()"
+
+.PP
+Default destructor\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "const gef::Material & PrimitiveBuilder::blue_material () const\fC [inline]\fP"
+
+.PP
+Get the blue material\&. 
+.PP
+\fBReturns\fP
+.RS 4
+The reference to the blue material\&. 
+.RE
+.PP
+
+.SS "void PrimitiveBuilder::CleanUp ()"
+
+.PP
+Clean up resources created by the primitive builder\&. 
+.SS "gef::Mesh * PrimitiveBuilder::CreateBoxMesh (const gef::Vector4 & half_size, gef::Vector4 centre = \fCgef::Vector4(0\&.0f, 0\&.0f, 0\&.0f)\fP, gef::Material ** materials = \fCNULL\fP)"
+
+.PP
+Creates a box shaped mesh\&. 
+.PP
+\fBReturns\fP
+.RS 4
+The mesh created 
+.RE
+.PP
+\fBParameters\fP
+.RS 4
+\fIhalf_size\fP The half size of the box\&. 
+.br
+\fIcentre\fP The centre of the box\&. 
+.br
+\fImaterials\fP an array of Material pointers\&. One for each face\&. 6 in total\&. 
+.RE
+.PP
+
+.SS "gef::Mesh * PrimitiveBuilder::CreateSphereMesh (const float radius, const int phi, const int theta, gef::Vector4 centre = \fCgef::Vector4(0\&.0f, 0\&.0f, 0\&.0f)\fP, gef::Material * material = \fCNULL\fP)"
+
+.PP
+Creates a sphere shaped mesh\&. 
+.PP
+\fBReturns\fP
+.RS 4
+The mesh created 
+.RE
+.PP
+\fBParameters\fP
+.RS 4
+\fIradius\fP The radius of the sphere\&. 
+.br
+\fIcentre\fP The centre of the centre\&. 
+.br
+\fImaterials\fP Pointer to material used to render all faces\&. NULL is valid\&. 
+.RE
+.PP
+
+.SS "const gef::Mesh * PrimitiveBuilder::GetDefaultCubeMesh () const\fC [inline]\fP"
+
+.PP
+Get the default cube mesh\&. 
+.PP
+\fBReturns\fP
+.RS 4
+The mesh for the default cube\&. 
+.RE
+.PP
+\fBNote\fP
+.RS 4
+The default cube has dimensions 1 x 1 x 1 with the centre at 0, 0, 0\&. 
+.RE
+.PP
+
+.SS "const gef::Mesh * PrimitiveBuilder::GetDefaultSphereMesh () const\fC [inline]\fP"
+
+.PP
+Get the default sphere mesh\&. 
+.PP
+\fBReturns\fP
+.RS 4
+The mesh for the default cube\&. 
+.RE
+.PP
+\fBNote\fP
+.RS 4
+The default sphere has radius 0\&.5 with the centre at 0, 0, 0\&. 
+.RE
+.PP
+
+.SS "const gef::Material & PrimitiveBuilder::green_material () const\fC [inline]\fP"
+
+.PP
+Get the red material\&. 
+.PP
+\fBReturns\fP
+.RS 4
+The reference to the green material\&. 
+.RE
+.PP
+
+.SS "void PrimitiveBuilder::Init ()"
+
+.PP
+Initialises the primitive builder\&. 
+.SS "const gef::Material & PrimitiveBuilder::red_material () const\fC [inline]\fP"
+
+.PP
+Get the red material\&. 
+.PP
+\fBReturns\fP
+.RS 4
+The reference to the red material\&. 
+.RE
+.PP
+
+.SH "Member Data Documentation"
+.PP 
+.SS "gef::Material PrimitiveBuilder::blue_material_\fC [protected]\fP"
+
+.SS "gef::Mesh* PrimitiveBuilder::default_cube_mesh_\fC [protected]\fP"
+
+.SS "gef::Mesh* PrimitiveBuilder::default_sphere_mesh_\fC [protected]\fP"
+
+.SS "gef::Material PrimitiveBuilder::green_material_\fC [protected]\fP"
+
+.SS "gef::Platform& PrimitiveBuilder::platform_\fC [protected]\fP"
+
+.SS "gef::Material PrimitiveBuilder::red_material_\fC [protected]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Hellwatch from the source code\&.

@@ -1,0 +1,61 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="struct_f_key_bind_set" kind="struct" language="C++" prot="public">
+    <compoundname>FKeyBindSet</compoundname>
+    <includes refid="_player_controller_8h" local="no">PlayerController.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_f_key_bind_set_1a003faf9e27ce7e6933a32fac6900021f" prot="public" static="no" mutable="no">
+        <type>std::vector&lt; <ref refid="struct_f_key_bind_keyboard" kindref="compound">FKeyBindKeyboard</ref> &gt;</type>
+        <definition>std::vector&lt;FKeyBindKeyboard&gt; FKeyBindSet::keyboardKeyBinds</definition>
+        <argsstring></argsstring>
+        <name>keyboardKeyBinds</name>
+        <qualifiedname>FKeyBindSet::keyboardKeyBinds</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/PlayerController.h" line="63" column="13" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/PlayerController.h" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_f_key_bind_set_1a135b83e0bfa3706469986a0036fe97fc" prot="public" static="no" mutable="no">
+        <type>std::vector&lt; <ref refid="struct_f_key_bind_controller" kindref="compound">FKeyBindController</ref> &gt;</type>
+        <definition>std::vector&lt;FKeyBindController&gt; FKeyBindSet::controllerKeyBinds</definition>
+        <argsstring></argsstring>
+        <name>controllerKeyBinds</name>
+        <qualifiedname>FKeyBindSet::controllerKeyBinds</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/PlayerController.h" line="64" column="13" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/PlayerController.h" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_f_key_bind_set_1a23f3845994019b3bdc4f0c1455f8eb04" prot="public" static="no" mutable="no">
+        <type>std::vector&lt; <ref refid="struct_f_key_bind_mouse" kindref="compound">FKeyBindMouse</ref> &gt;</type>
+        <definition>std::vector&lt;FKeyBindMouse&gt; FKeyBindSet::mouseKeyBinds</definition>
+        <argsstring></argsstring>
+        <name>mouseKeyBinds</name>
+        <qualifiedname>FKeyBindSet::mouseKeyBinds</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/PlayerController.h" line="65" column="13" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/PlayerController.h" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/PlayerController.h" line="61" column="1" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/PlayerController.h" bodystart="62" bodyend="66"/>
+    <listofallmembers>
+      <member refid="struct_f_key_bind_set_1a135b83e0bfa3706469986a0036fe97fc" prot="public" virt="non-virtual"><scope>FKeyBindSet</scope><name>controllerKeyBinds</name></member>
+      <member refid="struct_f_key_bind_set_1a003faf9e27ce7e6933a32fac6900021f" prot="public" virt="non-virtual"><scope>FKeyBindSet</scope><name>keyboardKeyBinds</name></member>
+      <member refid="struct_f_key_bind_set_1a23f3845994019b3bdc4f0c1455f8eb04" prot="public" virt="non-virtual"><scope>FKeyBindSet</scope><name>mouseKeyBinds</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

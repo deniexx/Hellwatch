@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_dir_1e58e055197c872d2c7873964b7dea3e" xml:lang="en-US">
+<title>D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework Directory Reference</title>
+<indexterm><primary>D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework Directory Reference</primary></indexterm>
+Directory dependency graph for GameFramework:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="dir_1e58e055197c872d2c7873964b7dea3e_dep.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Files    </title>
+        <itemizedlist>
+            <listitem><para>file <link linkend="__particle_manager_8cpp">ParticleManager.cpp</link></para>
+</listitem>
+            <listitem><para>file <link linkend="__particle_manager_8h">ParticleManager.h</link></para>
+</listitem>
+            <listitem><para>file <link linkend="__player_controller_8cpp">PlayerController.cpp</link></para>
+</listitem>
+            <listitem><para>file <link linkend="__player_controller_8h">PlayerController.h</link></para>
+</listitem>
+            <listitem><para>file <link linkend="__utils_8h">Utils.h</link></para>
+</listitem>
+            <listitem><para>file <link linkend="__wave_manager_8cpp">WaveManager.cpp</link></para>
+</listitem>
+            <listitem><para>file <link linkend="__wave_manager_8h">WaveManager.h</link></para>
+</listitem>
+            <listitem><para>file <link linkend="__world_object_8cpp">WorldObject.cpp</link></para>
+</listitem>
+            <listitem><para>file <link linkend="__world_object_8h">WorldObject.h</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

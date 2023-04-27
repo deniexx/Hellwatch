@@ -1,0 +1,157 @@
+\hypertarget{class_player_controller}{}\doxysection{Player\+Controller Class Reference}
+\label{class_player_controller}\index{PlayerController@{PlayerController}}
+
+
+Responsible for reading input and calling appropriate events   
+
+
+
+
+{\ttfamily \#include $<$Player\+Controller.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_player_controller_a6be0ad925daf5880250ef87881eedbf6}{Player\+Controller}} (gef\+::\+Platform \&platform)
+\item 
+gef\+::\+Vector2 \mbox{\hyperlink{class_player_controller_a3cf1cb2523e6b8a78cdbaf9df577b3be}{Get\+Mouse\+Position}} ()
+\begin{DoxyCompactList}\small\item\em Gets the mouse Position  \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_player_controller_a3ecff75f943f340bce2240d58eaf7f4f}{Bind\+Keyboard\+Event}} (const \mbox{\hyperlink{struct_f_key_bind_keyboard}{FKey\+Bind\+Keyboard}} keyboard\+Event, bool b\+Unique=false, bool b\+Replace\+If\+Unique=false)
+\begin{DoxyCompactList}\small\item\em Binds a keyboard event to this player controller  \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_player_controller_a3b4ce10a473a2000d1b204c7830bff97}{Bind\+Controller\+Event}} (const \mbox{\hyperlink{struct_f_key_bind_controller}{FKey\+Bind\+Controller}} controller\+Event, bool b\+Unique=false, bool b\+Replace\+If\+Unique=false)
+\begin{DoxyCompactList}\small\item\em Binds a controller event to this player controller  \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_player_controller_a654bf416ea31cbe022ccc50c7e1832e8}{Bind\+Mouse\+Event}} (const \mbox{\hyperlink{struct_f_key_bind_mouse}{FKey\+Bind\+Mouse}} mouse\+Event)
+\begin{DoxyCompactList}\small\item\em Binds a mouse event to this player controller  \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_player_controller_a92f0d14a05056e6296fc726fc7073410}{Bind\+Key\+Bind\+Set}} (\mbox{\hyperlink{struct_f_key_bind_set}{FKey\+Bind\+Set}} key\+Bind\+Set)
+\begin{DoxyCompactList}\small\item\em Binds a full key bind set and removes ALL previous key binds  \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_player_controller_a2e0c380d64a88c8cfe60ce8452921227}{Update}} ()
+\begin{DoxyCompactList}\small\item\em Updates the player controller and processes input  \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{struct_f_key_bind_set}{FKey\+Bind\+Set}} \& \mbox{\hyperlink{class_player_controller_ac23282a33a9bfc6972828f0ce385a52b}{Get\+Keybind\+Set}} () const
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Responsible for reading input and calling appropriate events  
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_player_controller_a6be0ad925daf5880250ef87881eedbf6}\label{class_player_controller_a6be0ad925daf5880250ef87881eedbf6}} 
+\index{PlayerController@{PlayerController}!PlayerController@{PlayerController}}
+\index{PlayerController@{PlayerController}!PlayerController@{PlayerController}}
+\doxysubsubsection{\texorpdfstring{PlayerController()}{PlayerController()}}
+{\footnotesize\ttfamily Player\+Controller\+::\+Player\+Controller (\begin{DoxyParamCaption}\item[{gef\+::\+Platform \&}]{platform }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_player_controller_a3b4ce10a473a2000d1b204c7830bff97}\label{class_player_controller_a3b4ce10a473a2000d1b204c7830bff97}} 
+\index{PlayerController@{PlayerController}!BindControllerEvent@{BindControllerEvent}}
+\index{BindControllerEvent@{BindControllerEvent}!PlayerController@{PlayerController}}
+\doxysubsubsection{\texorpdfstring{BindControllerEvent()}{BindControllerEvent()}}
+{\footnotesize\ttfamily bool Player\+Controller\+::\+Bind\+Controller\+Event (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_f_key_bind_controller}{FKey\+Bind\+Controller}}}]{controller\+Event,  }\item[{bool}]{b\+Unique = {\ttfamily false},  }\item[{bool}]{b\+Replace\+If\+Unique = {\ttfamily false} }\end{DoxyParamCaption})}
+
+
+
+Binds a controller event to this player controller  
+
+
+\begin{DoxyParams}{Parameters}
+{\em controller\+Event} & The event to be bound\\
+\hline
+{\em b\+Unique} & Should the event be unique, i.\+e. no other events bound to the same key\\
+\hline
+{\em b\+Replace\+If\+Unique} & Should we replace if the event is not unique\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True, if the event was successfully bound
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_player_controller_a92f0d14a05056e6296fc726fc7073410}\label{class_player_controller_a92f0d14a05056e6296fc726fc7073410}} 
+\index{PlayerController@{PlayerController}!BindKeyBindSet@{BindKeyBindSet}}
+\index{BindKeyBindSet@{BindKeyBindSet}!PlayerController@{PlayerController}}
+\doxysubsubsection{\texorpdfstring{BindKeyBindSet()}{BindKeyBindSet()}}
+{\footnotesize\ttfamily void Player\+Controller\+::\+Bind\+Key\+Bind\+Set (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_f_key_bind_set}{FKey\+Bind\+Set}}}]{key\+Bind\+Set }\end{DoxyParamCaption})}
+
+
+
+Binds a full key bind set and removes ALL previous key binds  
+
+
+\begin{DoxyParams}{Parameters}
+{\em key\+Bind\+Set} & The key bind set to be bound\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_player_controller_a3ecff75f943f340bce2240d58eaf7f4f}\label{class_player_controller_a3ecff75f943f340bce2240d58eaf7f4f}} 
+\index{PlayerController@{PlayerController}!BindKeyboardEvent@{BindKeyboardEvent}}
+\index{BindKeyboardEvent@{BindKeyboardEvent}!PlayerController@{PlayerController}}
+\doxysubsubsection{\texorpdfstring{BindKeyboardEvent()}{BindKeyboardEvent()}}
+{\footnotesize\ttfamily bool Player\+Controller\+::\+Bind\+Keyboard\+Event (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_f_key_bind_keyboard}{FKey\+Bind\+Keyboard}}}]{keyboard\+Event,  }\item[{bool}]{b\+Unique = {\ttfamily false},  }\item[{bool}]{b\+Replace\+If\+Unique = {\ttfamily false} }\end{DoxyParamCaption})}
+
+
+
+Binds a keyboard event to this player controller  
+
+
+\begin{DoxyParams}{Parameters}
+{\em keyboard\+Event} & The event to be bound\\
+\hline
+{\em b\+Unique} & Should the event be unique, i.\+e. no other events bound to the same key\\
+\hline
+{\em b\+Replace\+If\+Unique} & Should we replace if the event is not unique\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True, if the event was successfully bound
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_player_controller_a654bf416ea31cbe022ccc50c7e1832e8}\label{class_player_controller_a654bf416ea31cbe022ccc50c7e1832e8}} 
+\index{PlayerController@{PlayerController}!BindMouseEvent@{BindMouseEvent}}
+\index{BindMouseEvent@{BindMouseEvent}!PlayerController@{PlayerController}}
+\doxysubsubsection{\texorpdfstring{BindMouseEvent()}{BindMouseEvent()}}
+{\footnotesize\ttfamily bool Player\+Controller\+::\+Bind\+Mouse\+Event (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_f_key_bind_mouse}{FKey\+Bind\+Mouse}}}]{mouse\+Event }\end{DoxyParamCaption})}
+
+
+
+Binds a mouse event to this player controller  
+
+
+\begin{DoxyParams}{Parameters}
+{\em mouse\+Event} & The event to be bound\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True, if the event was successfully bound
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_player_controller_ac23282a33a9bfc6972828f0ce385a52b}\label{class_player_controller_ac23282a33a9bfc6972828f0ce385a52b}} 
+\index{PlayerController@{PlayerController}!GetKeybindSet@{GetKeybindSet}}
+\index{GetKeybindSet@{GetKeybindSet}!PlayerController@{PlayerController}}
+\doxysubsubsection{\texorpdfstring{GetKeybindSet()}{GetKeybindSet()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{struct_f_key_bind_set}{FKey\+Bind\+Set}} \& Player\+Controller\+::\+Get\+Keybind\+Set (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{class_player_controller_a3cf1cb2523e6b8a78cdbaf9df577b3be}\label{class_player_controller_a3cf1cb2523e6b8a78cdbaf9df577b3be}} 
+\index{PlayerController@{PlayerController}!GetMousePosition@{GetMousePosition}}
+\index{GetMousePosition@{GetMousePosition}!PlayerController@{PlayerController}}
+\doxysubsubsection{\texorpdfstring{GetMousePosition()}{GetMousePosition()}}
+{\footnotesize\ttfamily gef\+::\+Vector2 Player\+Controller\+::\+Get\+Mouse\+Position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Gets the mouse Position  
+
+\begin{DoxyReturn}{Returns}
+The mouse position on the screen
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_player_controller_a2e0c380d64a88c8cfe60ce8452921227}\label{class_player_controller_a2e0c380d64a88c8cfe60ce8452921227}} 
+\index{PlayerController@{PlayerController}!Update@{Update}}
+\index{Update@{Update}!PlayerController@{PlayerController}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void Player\+Controller\+::\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Updates the player controller and processes input  
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Uni/\+CMP208/\+Hellwatch/build/vs2017/\+Game\+Framework/\mbox{\hyperlink{_player_controller_8h}{Player\+Controller.\+h}}\item 
+D\+:/\+Uni/\+CMP208/\+Hellwatch/build/vs2017/\+Game\+Framework/\mbox{\hyperlink{_player_controller_8cpp}{Player\+Controller.\+cpp}}\end{DoxyCompactItemize}

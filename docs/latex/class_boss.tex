@@ -1,0 +1,132 @@
+\hypertarget{class_boss}{}\doxysection{Boss Class Reference}
+\label{class_boss}\index{Boss@{Boss}}
+
+
+{\ttfamily \#include $<$Boss.\+h$>$}
+
+
+
+Inheritance diagram for Boss\+:
+% FIG 0
+
+
+Collaboration diagram for Boss\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_boss_af287739a9fe8cb9501795656d34f3018}{Boss}} ()
+\item 
+virtual void \mbox{\hyperlink{class_boss_aa0943d1fb2d9037e30a2fdc6952878cb}{Update}} (float delta\+Time) override
+\begin{DoxyCompactList}\small\item\em Update function, called every frame  \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_boss_aca38363ac8587bf7012d4c6dec8600a9}{Post\+Init}} () override
+\begin{DoxyCompactList}\small\item\em Override this to Initialize variables or do any necessary work when the object is created  \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_boss_acf6e40d0e800c3d6ea2b529c4351da9c}{is\+Jumping}} = false
+\item 
+bool \mbox{\hyperlink{class_boss_a605d9ab656bcc24ef4b8591bf740f72e}{past\+Midpoint}} = false
+\item 
+gef\+::\+Vector4 \mbox{\hyperlink{class_boss_a0945edb506e027ea61cbfd0750b4bd0b}{player\+Position}}
+\item 
+gef\+::\+Vector4 \mbox{\hyperlink{class_boss_ab988b026b0a44d5b9695b1fae80f4bff}{boss\+Position}}
+\item 
+gef\+::\+Vector4 \mbox{\hyperlink{class_boss_a66b3a8266b0ce9a045cf6d6d41ca3fc4}{midpoint}}
+\item 
+float \mbox{\hyperlink{class_boss_a5f8bd3dedd5d923284440df4dce7c6d5}{alpha}} = 0
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_boss_af287739a9fe8cb9501795656d34f3018}\label{class_boss_af287739a9fe8cb9501795656d34f3018}} 
+\index{Boss@{Boss}!Boss@{Boss}}
+\index{Boss@{Boss}!Boss@{Boss}}
+\doxysubsubsection{\texorpdfstring{Boss()}{Boss()}}
+{\footnotesize\ttfamily Boss\+::\+Boss (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_boss_aca38363ac8587bf7012d4c6dec8600a9}\label{class_boss_aca38363ac8587bf7012d4c6dec8600a9}} 
+\index{Boss@{Boss}!PostInit@{PostInit}}
+\index{PostInit@{PostInit}!Boss@{Boss}}
+\doxysubsubsection{\texorpdfstring{PostInit()}{PostInit()}}
+{\footnotesize\ttfamily void Boss\+::\+Post\+Init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Override this to Initialize variables or do any necessary work when the object is created  
+
+
+
+Reimplemented from \mbox{\hyperlink{class_enemy_a487c39395ee71759c8bf10707776755e}{Enemy}}.
+
+\mbox{\Hypertarget{class_boss_aa0943d1fb2d9037e30a2fdc6952878cb}\label{class_boss_aa0943d1fb2d9037e30a2fdc6952878cb}} 
+\index{Boss@{Boss}!Update@{Update}}
+\index{Update@{Update}!Boss@{Boss}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void Boss\+::\+Update (\begin{DoxyParamCaption}\item[{float}]{delta\+Time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Update function, called every frame  
+
+
+\begin{DoxyParams}{Parameters}
+{\em delta\+Time} & Float variable for the frame time\\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{class_enemy_a723b79407b55383b2c327f674e3ab3bc}{Enemy}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_boss_a5f8bd3dedd5d923284440df4dce7c6d5}\label{class_boss_a5f8bd3dedd5d923284440df4dce7c6d5}} 
+\index{Boss@{Boss}!alpha@{alpha}}
+\index{alpha@{alpha}!Boss@{Boss}}
+\doxysubsubsection{\texorpdfstring{alpha}{alpha}}
+{\footnotesize\ttfamily float Boss\+::alpha = 0\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_boss_ab988b026b0a44d5b9695b1fae80f4bff}\label{class_boss_ab988b026b0a44d5b9695b1fae80f4bff}} 
+\index{Boss@{Boss}!bossPosition@{bossPosition}}
+\index{bossPosition@{bossPosition}!Boss@{Boss}}
+\doxysubsubsection{\texorpdfstring{bossPosition}{bossPosition}}
+{\footnotesize\ttfamily gef\+::\+Vector4 Boss\+::boss\+Position\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_boss_acf6e40d0e800c3d6ea2b529c4351da9c}\label{class_boss_acf6e40d0e800c3d6ea2b529c4351da9c}} 
+\index{Boss@{Boss}!isJumping@{isJumping}}
+\index{isJumping@{isJumping}!Boss@{Boss}}
+\doxysubsubsection{\texorpdfstring{isJumping}{isJumping}}
+{\footnotesize\ttfamily bool Boss\+::is\+Jumping = false\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_boss_a66b3a8266b0ce9a045cf6d6d41ca3fc4}\label{class_boss_a66b3a8266b0ce9a045cf6d6d41ca3fc4}} 
+\index{Boss@{Boss}!midpoint@{midpoint}}
+\index{midpoint@{midpoint}!Boss@{Boss}}
+\doxysubsubsection{\texorpdfstring{midpoint}{midpoint}}
+{\footnotesize\ttfamily gef\+::\+Vector4 Boss\+::midpoint\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_boss_a605d9ab656bcc24ef4b8591bf740f72e}\label{class_boss_a605d9ab656bcc24ef4b8591bf740f72e}} 
+\index{Boss@{Boss}!pastMidpoint@{pastMidpoint}}
+\index{pastMidpoint@{pastMidpoint}!Boss@{Boss}}
+\doxysubsubsection{\texorpdfstring{pastMidpoint}{pastMidpoint}}
+{\footnotesize\ttfamily bool Boss\+::past\+Midpoint = false\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_boss_a0945edb506e027ea61cbfd0750b4bd0b}\label{class_boss_a0945edb506e027ea61cbfd0750b4bd0b}} 
+\index{Boss@{Boss}!playerPosition@{playerPosition}}
+\index{playerPosition@{playerPosition}!Boss@{Boss}}
+\doxysubsubsection{\texorpdfstring{playerPosition}{playerPosition}}
+{\footnotesize\ttfamily gef\+::\+Vector4 Boss\+::player\+Position\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Uni/\+CMP208/\+Hellwatch/build/vs2017/\+Actors/\+Mesh\+Actors/\mbox{\hyperlink{_boss_8h}{Boss.\+h}}\item 
+D\+:/\+Uni/\+CMP208/\+Hellwatch/build/vs2017/\+Actors/\+Mesh\+Actors/\mbox{\hyperlink{_boss_8cpp}{Boss.\+cpp}}\end{DoxyCompactItemize}

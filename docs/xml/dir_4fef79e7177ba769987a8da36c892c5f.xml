@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="dir_4fef79e7177ba769987a8da36c892c5f" kind="dir">
+    <compoundname>D:/Uni/CMP208/Hellwatch/build</compoundname>
+    <innerdir refid="dir_8bceb31512fbf37cf44d454a95859b1c">D:/Uni/CMP208/Hellwatch/build/vs2017</innerdir>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/Uni/CMP208/Hellwatch/build/"/>
+  </compounddef>
+</doxygen>

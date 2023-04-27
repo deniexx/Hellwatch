@@ -1,0 +1,395 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="_ability_8cpp" kind="file" language="C++">
+    <compoundname>Ability.cpp</compoundname>
+    <includes refid="_ability_8h" local="yes">Ability.h</includes>
+    <includes refid="_actor_component_8h" local="yes">ActorComponents/ActorComponent.h</includes>
+    <includes refid="_abilities_component_8h" local="yes">ActorComponents/AbilitiesComponent.h</includes>
+    <includes refid="_attribute_component_8h" local="yes">Attributes/AttributeComponent.h</includes>
+    <includes refid="_world_object_8h" local="yes">GameFramework/WorldObject.h</includes>
+    <incdepgraph>
+      <node id="1">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/Abilities/Ability.cpp</label>
+        <link refid="_ability_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Ability.h</label>
+        <link refid="_ability_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>ActorComponents/AbilitiesComponent.h</label>
+        <link refid="_abilities_component_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>ActorComponents/ActorComponent.h</label>
+        <link refid="_actor_component_8h"/>
+      </node>
+      <node id="8">
+        <label>Attributes/AttributeComponent.h</label>
+        <link refid="_attribute_component_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>Attributes/AttributeTypes.h</label>
+        <link refid="_attribute_types_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>GameFramework/Utils.h</label>
+        <link refid="_utils_8h"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+      </node>
+      <node id="31">
+        <label>GameFramework/WorldObject.h</label>
+        <link refid="_world_object_8h"/>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="23">
+        <label>obj_mesh_loader.h</label>
+        <link refid="obj__mesh__loader_8h"/>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>primitive_builder.h</label>
+        <link refid="primitive__builder_8h"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>scene_app.h</label>
+        <link refid="scene__app_8h"/>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+      </node>
+      <node id="21">
+        <label>box2d/box2d.h</label>
+      </node>
+      <node id="4">
+        <label>cmath</label>
+      </node>
+      <node id="19">
+        <label>cstddef</label>
+      </node>
+      <node id="28">
+        <label>future</label>
+      </node>
+      <node id="24">
+        <label>gef.h</label>
+      </node>
+      <node id="27">
+        <label>graphics/font.h</label>
+      </node>
+      <node id="18">
+        <label>graphics/material.h</label>
+      </node>
+      <node id="13">
+        <label>graphics/renderer_3d.h</label>
+      </node>
+      <node id="20">
+        <label>graphics/scene.h</label>
+      </node>
+      <node id="25">
+        <label>map</label>
+      </node>
+      <node id="32">
+        <label>maths/Matrix44.h</label>
+      </node>
+      <node id="10">
+        <label>maths/Vector2.h</label>
+      </node>
+      <node id="30">
+        <label>maths/math_utils.h</label>
+      </node>
+      <node id="12">
+        <label>maths/matrix44.h</label>
+      </node>
+      <node id="33">
+        <label>maths/quaternion.h</label>
+      </node>
+      <node id="16">
+        <label>maths/vector2.h</label>
+      </node>
+      <node id="11">
+        <label>maths/vector4.h</label>
+      </node>
+      <node id="29">
+        <label>random</label>
+      </node>
+      <node id="3">
+        <label>string</label>
+      </node>
+      <node id="15">
+        <label>system/application.h</label>
+      </node>
+      <node id="22">
+        <label>system/platform.h</label>
+      </node>
+      <node id="26">
+        <label>vector</label>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_ability_8h" kindref="compound">Ability.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_actor_component_8h" kindref="compound">ActorComponents/ActorComponent.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_abilities_component_8h" kindref="compound">ActorComponents/AbilitiesComponent.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_attribute_component_8h" kindref="compound">Attributes/AttributeComponent.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_world_object_8h" kindref="compound">GameFramework/WorldObject.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><ref refid="class_ability_1a1e03282d1a96232143322ef89fcbb314" kindref="member">Ability::Ability</ref>()</highlight></codeline>
+<codeline lineno="9"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_ability_1a0e5b9e690d512aa57f66a4f7ba3cb295" kindref="member">cooldownTimer</ref><sp/>=<sp/>0.f;</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_ability_1a6e6e8dc7387275d8c4cef1036d0b2a08" kindref="member">cooldown</ref><sp/>=<sp/>0.f;</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_ability_1aa0aa42d055ea84389c3bd7bb7b61fd00" kindref="member">abilityCostType</ref><sp/>=<sp/><ref refid="namespace_hellwatch_attribute_1ad0a500e65129d06e4589f9bca54c4a7da1a1cde64b50095f2d28168d2c6b80240" kindref="member">HellwatchAttribute::None</ref>;</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_ability_1a3d60b8e01776b0f6f42aaa3fa8821aa7" kindref="member">abilityCostAmount</ref><sp/>=<sp/>0.f;</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_ability_1ae426458572df63716f8f8b63e83d04ca" kindref="member">bIsActive</ref><sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_ability_1acc6fba5d131273ccbc0cf147b6f38eb2" kindref="member">abilityName</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_ability_1afc72628992607694ae9e4a096557fead" kindref="member">bIsTargeted</ref><sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_ability_1ae2aac411168782dab7715c29817f23de" kindref="member">bIsTargeting</ref><sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_ability_1a74f19e3368e28b7b61bf54cabe2da629" kindref="member">cooldownStartPolicy</ref><sp/>=<sp/><ref refid="namespace_cooldown_start_policy_1a99c3a8f4a331db7e6db8dfda1785b101abdb334784b8226969ec44140a0951d92" kindref="member">CooldownStartPolicy::OnAbilityStart</ref>;</highlight></codeline>
+<codeline lineno="19"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_ability_1a291796c5cb356bcef9c6f6c0b2386ca2" kindref="member">Ability::Init</ref>(<ref refid="class_abilities_component" kindref="compound">AbilitiesComponent</ref>*<sp/>inOwningComponent)</highlight></codeline>
+<codeline lineno="22"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_ability_1aa75c59af7fa1fd68787a211e66fd0173" kindref="member">owningComponent</ref><sp/>=<sp/>inOwningComponent;</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_ability_1a25388ebb622b414ef027eb33bf4a5cfb" kindref="member">PostInit</ref>();</highlight></codeline>
+<codeline lineno="25"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_ability_1aaa83dbb12f79ceecc4d7b1cb3930d3d3" kindref="member">Ability::Update</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>deltaTime)</highlight></codeline>
+<codeline lineno="28"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="class_ability_1a6e6e8dc7387275d8c4cef1036d0b2a08" kindref="member">cooldown</ref><sp/>&gt;<sp/>0<sp/>&amp;&amp;<sp/><ref refid="class_ability_1a0e5b9e690d512aa57f66a4f7ba3cb295" kindref="member">cooldownTimer</ref><sp/>&gt;<sp/>0)</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_ability_1a0e5b9e690d512aa57f66a4f7ba3cb295" kindref="member">cooldownTimer</ref><sp/>-=<sp/>deltaTime;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><ref refid="struct_activation_outcome" kindref="compound">ActivationOutcome</ref><sp/><ref refid="class_ability_1a7815198848a6acf69bf1d76caf595820" kindref="member">Ability::TryActivate</ref>()</highlight></codeline>
+<codeline lineno="34"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_activation_outcome" kindref="compound">ActivationOutcome</ref><sp/>outcome;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="class_ability_1a2432f7d4c4159f75e8552d08b7ca51ed" kindref="member">IsAbilityTargeting</ref>())</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_ability_1a52f7aee4243f1da13b544a038892e43b" kindref="member">CommitAbility</ref>();</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!<ref refid="class_ability_1a4276e15e3a35b7887dd679eb5e332ff4" kindref="member">CanActivate</ref>(outcome))</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>outcome;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_ability_1ace910398ed2eb9f58c8e85dbb7a72de2" kindref="member">Begin</ref>();</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>outcome;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_ability_1a52f7aee4243f1da13b544a038892e43b" kindref="member">Ability::CommitAbility</ref>()</highlight></codeline>
+<codeline lineno="52"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="class_ability_1ae2aac411168782dab7715c29817f23de" kindref="member">bIsTargeting</ref>)</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_ability_1af82a917f3d8fc9260651c4cc59affb0e" kindref="member">EndTargeting</ref>();</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_ability_1a1b338496a61edb978f7f83570b9f03a4" kindref="member">Commit</ref>();</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="58"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_ability_1ad7290141bc73d865773ac54477db7fb6" kindref="member">Ability::EndAbility</ref>()</highlight></codeline>
+<codeline lineno="61"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_ability_1af82a917f3d8fc9260651c4cc59affb0e" kindref="member">EndTargeting</ref>();</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_ability_1a61a88edf359a3c6bd34868e58bf64f20" kindref="member">End</ref>();</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!<ref refid="class_ability_1ac2b656dc59480f2973aaa3f0f59706bc" kindref="member">IsActive</ref>())</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="69"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_ability_1a25388ebb622b414ef027eb33bf4a5cfb" kindref="member">Ability::PostInit</ref>()</highlight></codeline>
+<codeline lineno="72"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="73"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_ability_1ace910398ed2eb9f58c8e85dbb7a72de2" kindref="member">Ability::Begin</ref>()</highlight></codeline>
+<codeline lineno="76"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="class_ability_1a74f19e3368e28b7b61bf54cabe2da629" kindref="member">cooldownStartPolicy</ref><sp/>==<sp/><ref refid="namespace_cooldown_start_policy_1a99c3a8f4a331db7e6db8dfda1785b101abdb334784b8226969ec44140a0951d92" kindref="member">CooldownStartPolicy::OnAbilityStart</ref>)</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_ability_1a0e5b9e690d512aa57f66a4f7ba3cb295" kindref="member">cooldownTimer</ref><sp/>=<sp/><ref refid="class_ability_1a6e6e8dc7387275d8c4cef1036d0b2a08" kindref="member">cooldown</ref>;</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="class_ability_1a2a7a75401b5757d3b22ed26544bfdb19" kindref="member">IsAbilityTargeted</ref>())</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_ability_1a5da322fcc571670d8b96385b67685a68" kindref="member">SetIsTargeting</ref>(</highlight><highlight class="keyword">true</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_ability_1a172dfdc4273690de2476fda0b82e5ea6" kindref="member">BeginTargeting</ref>();</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="86"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_ability_1a61a88edf359a3c6bd34868e58bf64f20" kindref="member">Ability::End</ref>()</highlight></codeline>
+<codeline lineno="89"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="class_ability_1a74f19e3368e28b7b61bf54cabe2da629" kindref="member">cooldownStartPolicy</ref><sp/>==<sp/><ref refid="namespace_cooldown_start_policy_1a99c3a8f4a331db7e6db8dfda1785b101af1b51dae9cd99c300bce560116641d60" kindref="member">CooldownStartPolicy::OnAbilityEnd</ref>)</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_ability_1a0e5b9e690d512aa57f66a4f7ba3cb295" kindref="member">cooldownTimer</ref><sp/>=<sp/><ref refid="class_ability_1a6e6e8dc7387275d8c4cef1036d0b2a08" kindref="member">cooldown</ref>;</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_ability_1af82a917f3d8fc9260651c4cc59affb0e" kindref="member">EndTargeting</ref>();</highlight></codeline>
+<codeline lineno="94"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_ability_1a1b338496a61edb978f7f83570b9f03a4" kindref="member">Ability::Commit</ref>()</highlight></codeline>
+<codeline lineno="97"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="98"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_ability_1a172dfdc4273690de2476fda0b82e5ea6" kindref="member">Ability::BeginTargeting</ref>()</highlight></codeline>
+<codeline lineno="101"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="102"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_ability_1af82a917f3d8fc9260651c4cc59affb0e" kindref="member">Ability::EndTargeting</ref>()</highlight></codeline>
+<codeline lineno="105"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="106"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_ability_1a4276e15e3a35b7887dd679eb5e332ff4" kindref="member">Ability::CanActivate</ref>(<ref refid="struct_activation_outcome" kindref="compound">ActivationOutcome</ref>&amp;<sp/>OutActivationOutcome)</highlight></codeline>
+<codeline lineno="109"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/>OutActivationOutcome.<ref refid="struct_activation_outcome_1a3867a87cde6f19f7d86e822b056ab7ad" kindref="member">abilityName</ref><sp/>=<sp/><ref refid="class_ability_1acc6fba5d131273ccbc0cf147b6f38eb2" kindref="member">abilityName</ref>;</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/>OutActivationOutcome.<ref refid="struct_activation_outcome_1a85ab4e1d039f0aa58b36d9cc42a7d630" kindref="member">keyOfAbility</ref><sp/>=<sp/><ref refid="class_ability_1a4310ef2c96c00e405697f9983da58645" kindref="member">activationKey</ref>;</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!<ref refid="class_ability_1a50b5f7d8d3197869b3bc32d3c9bd4fd2" kindref="member">GetOwner</ref>())</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>OutActivationOutcome.<ref refid="struct_activation_outcome_1a6bd503ece6732fc90dacbb08f0bffb40" kindref="member">bWasSuccessful</ref><sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>OutActivationOutcome.<ref refid="struct_activation_outcome_1a06932003ad89461fc36b0936072bfd97" kindref="member">failReason</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;No<sp/>Ability<sp/>System<sp/>Owner<sp/>found<sp/>for<sp/>this<sp/>Ability!&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="class_ability_1ac2b656dc59480f2973aaa3f0f59706bc" kindref="member">IsActive</ref>())</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>OutActivationOutcome.<ref refid="struct_activation_outcome_1a6bd503ece6732fc90dacbb08f0bffb40" kindref="member">bWasSuccessful</ref><sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>OutActivationOutcome.<ref refid="struct_activation_outcome_1a06932003ad89461fc36b0936072bfd97" kindref="member">failReason</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;Ability<sp/>is<sp/>already<sp/>active!&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"></highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="class_ability_1a0e5b9e690d512aa57f66a4f7ba3cb295" kindref="member">cooldownTimer</ref><sp/>&gt;<sp/>0.f)</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>OutActivationOutcome.<ref refid="struct_activation_outcome_1a6bd503ece6732fc90dacbb08f0bffb40" kindref="member">bWasSuccessful</ref><sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>OutActivationOutcome.<ref refid="struct_activation_outcome_1a06932003ad89461fc36b0936072bfd97" kindref="member">failReason</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;Ability<sp/>is<sp/>in<sp/>cooldown&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"></highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_attribute_component" kindref="compound">AttributeComponent</ref>*<sp/>attributes<sp/>=<sp/><ref refid="class_ability_1a50b5f7d8d3197869b3bc32d3c9bd4fd2" kindref="member">GetOwner</ref>()-&gt;<ref refid="class_abilities_component_1aa2e9909a907d358e34fc58a387f0e493" kindref="member">GetAttributeComponent</ref>();</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"></highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!attributes-&gt;<ref refid="class_attribute_component_1ac8bc3fd1392349fb859ddf83e3e8e027" kindref="member">CheckHasEnoughOfAttributeByType</ref>(<ref refid="class_ability_1aa0aa42d055ea84389c3bd7bb7b61fd00" kindref="member">abilityCostType</ref>,<sp/><ref refid="class_ability_1a3d60b8e01776b0f6f42aaa3fa8821aa7" kindref="member">abilityCostAmount</ref>))</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>amountMissing<sp/>=<sp/><ref refid="class_ability_1a3d60b8e01776b0f6f42aaa3fa8821aa7" kindref="member">abilityCostAmount</ref><sp/>-<sp/>attributes-&gt;<ref refid="class_attribute_component_1a580cf7f29236d87d448840840ad53bc6" kindref="member">GetCurrentAttributeValueByType</ref>(<ref refid="class_ability_1aa0aa42d055ea84389c3bd7bb7b61fd00" kindref="member">abilityCostType</ref>);</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"></highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>OutActivationOutcome.<ref refid="struct_activation_outcome_1a6bd503ece6732fc90dacbb08f0bffb40" kindref="member">bWasSuccessful</ref><sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>OutActivationOutcome.<ref refid="struct_activation_outcome_1a06932003ad89461fc36b0936072bfd97" kindref="member">failReason</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;Not<sp/>enough<sp/>&quot;</highlight><highlight class="normal"><sp/>+<sp/>AttributeToString(<ref refid="class_ability_1aa0aa42d055ea84389c3bd7bb7b61fd00" kindref="member">abilityCostType</ref>)<sp/>+<sp/></highlight><highlight class="stringliteral">&quot;<sp/>owned!<sp/>Missing<sp/>&quot;</highlight><highlight class="normal"><sp/>+<sp/>std::to_string((</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)amountMissing);</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"></highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/>OutActivationOutcome.<ref refid="struct_activation_outcome_1a6bd503ece6732fc90dacbb08f0bffb40" kindref="member">bWasSuccessful</ref><sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="147"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"></highlight></codeline>
+<codeline lineno="149"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_ability_1aa7f8c3e16910914b751aa1e1e5731f8f" kindref="member">Ability::SetAbilityCooldown</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>newCooldown)</highlight></codeline>
+<codeline lineno="150"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_ability_1a6e6e8dc7387275d8c4cef1036d0b2a08" kindref="member">cooldown</ref><sp/>=<sp/>newCooldown;</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_ability_1a0e5b9e690d512aa57f66a4f7ba3cb295" kindref="member">cooldownTimer</ref><sp/>=<sp/>0.f;</highlight></codeline>
+<codeline lineno="153"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"></highlight></codeline>
+<codeline lineno="155"><highlight class="normal"></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="class_ability_1a57f2e9a30ca6d2588fd721af77353d52" kindref="member">Ability::GetDamageAmount</ref>()</highlight></codeline>
+<codeline lineno="156"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_attribute_component" kindref="compound">AttributeComponent</ref>*<sp/>attributes<sp/>=<sp/><ref refid="class_ability_1ab567fcf9b39984aa3bf45343ffcbc086" kindref="member">GetOwnerAttributes</ref>();</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"></highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(attributes)</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>multiplier<sp/>=<sp/>(attributes-&gt;<ref refid="class_attribute_component_1a580cf7f29236d87d448840840ad53bc6" kindref="member">GetCurrentAttributeValueByType</ref>(<ref refid="namespace_hellwatch_attribute_1ad0a500e65129d06e4589f9bca54c4a7da1863c83b1312f525ab940b88fd83a2f8" kindref="member">HellwatchAttribute::Wisdom</ref>)<sp/>*<sp/>0.1f)<sp/>+<sp/>1;</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_ability_1aa080c6e4857a11599f25e1feb65aae9d" kindref="member">damageAmount</ref><sp/>*=<sp/>multiplier;</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"></highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_ability_1aa080c6e4857a11599f25e1feb65aae9d" kindref="member">damageAmount</ref>;</highlight></codeline>
+<codeline lineno="166"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"></highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><ref refid="class_attribute_component" kindref="compound">AttributeComponent</ref>*<sp/><ref refid="class_ability_1ab567fcf9b39984aa3bf45343ffcbc086" kindref="member">Ability::GetOwnerAttributes</ref>()</highlight></codeline>
+<codeline lineno="169"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_ability_1a50b5f7d8d3197869b3bc32d3c9bd4fd2" kindref="member">GetOwner</ref>()<sp/>?<sp/><ref refid="class_ability_1a50b5f7d8d3197869b3bc32d3c9bd4fd2" kindref="member">GetOwner</ref>()-&gt;<ref refid="class_abilities_component_1aa2e9909a907d358e34fc58a387f0e493" kindref="member">GetAttributeComponent</ref>()<sp/>:<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="171"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/Abilities/Ability.cpp"/>
+  </compounddef>
+</doxygen>

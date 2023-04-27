@@ -1,0 +1,65 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__ability_8h" xml:lang="en-US">
+<title>D:/Uni/CMP208/Hellwatch/build/vs2017/Abilities/Ability.h File Reference</title>
+<indexterm><primary>D:/Uni/CMP208/Hellwatch/build/vs2017/Abilities/Ability.h</primary></indexterm>
+<programlisting linenumbering="unnumbered">#include &lt;string&gt;<?linebreak?>#include &lt;cmath&gt;<?linebreak?>#include &quot;Attributes/AttributeTypes.h&quot;<?linebreak?></programlisting>Include dependency graph for Ability.h:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_ability_8h__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+This graph shows which files directly or indirectly include this file:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_ability_8h__dep__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>struct <link linkend="_struct_activation_outcome">ActivationOutcome</link></para>
+
+<para>Outcome of attempting to activate this ability  </para>
+</listitem>
+            <listitem><para>class <link linkend="_class_ability">Ability</link></para>
+
+<para>A base ability class, designed to be inherited and provided with functionality  </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Namespaces    </title>
+        <itemizedlist>
+            <listitem><para>namespace <link linkend="_namespace_ability_activation_key">AbilityActivationKey</link></para>
+
+<para>The key that will be used to activate this ability 1, 2, 3, 4  </para>
+</listitem>
+            <listitem><para>namespace <link linkend="_namespace_cooldown_start_policy">CooldownStartPolicy</link></para>
+
+<para>When should cooldown start, on start of ability or end of ability  </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Enumerations    </title>
+        <itemizedlist>
+            <listitem><para>enum <link linkend="_namespace_ability_activation_key_1ab159d3c3f26196a9ff493b67ecf7e68c">AbilityActivationKey::Type</link> : int { <?linebreak?><link linkend="_namespace_ability_activation_key_1ab159d3c3f26196a9ff493b67ecf7e68cab6784d3bc8d889420937a8c25e9b1c87">AbilityActivationKey::AbilityKey1</link> = 0
+, <link linkend="_namespace_ability_activation_key_1ab159d3c3f26196a9ff493b67ecf7e68ca320fc572e7627361aa1df0f37543c0ac">AbilityActivationKey::AbilityKey2</link>
+, <link linkend="_namespace_ability_activation_key_1ab159d3c3f26196a9ff493b67ecf7e68cad9c1b1c777eb7838b8da19f60dbc56d2">AbilityActivationKey::AbilityKey3</link>
+, <link linkend="_namespace_ability_activation_key_1ab159d3c3f26196a9ff493b67ecf7e68ca9c88a5d3644987a1299d2142a134c9d9">AbilityActivationKey::AbilityKey4</link>
+, <?linebreak?><link linkend="_namespace_ability_activation_key_1ab159d3c3f26196a9ff493b67ecf7e68ca7681c632dadbc0ca58c3a03c7a9d53c2">AbilityActivationKey::None</link>
+ }</para>
+</listitem>
+            <listitem><para>enum <link linkend="_namespace_cooldown_start_policy_1a99c3a8f4a331db7e6db8dfda1785b101">CooldownStartPolicy::Type</link> { <link linkend="_namespace_cooldown_start_policy_1a99c3a8f4a331db7e6db8dfda1785b101abdb334784b8226969ec44140a0951d92">CooldownStartPolicy::OnAbilityStart</link>
+, <link linkend="_namespace_cooldown_start_policy_1a99c3a8f4a331db7e6db8dfda1785b101af1b51dae9cd99c300bce560116641d60">CooldownStartPolicy::OnAbilityEnd</link>
+ }</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

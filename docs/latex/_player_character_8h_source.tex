@@ -1,0 +1,87 @@
+\hypertarget{_player_character_8h_source}{}\doxysection{Player\+Character.\+h}
+\label{_player_character_8h_source}\index{D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/PlayerCharacter.h@{D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/PlayerCharacter.h}}
+\mbox{\hyperlink{_player_character_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{2 }
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_mesh_actor_8h}{Actors/MeshActor.h}}"{}}}
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_player_controller_8h}{GameFramework/PlayerController.h}}"{}}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include "{}graphics/skinned\_mesh\_instance.h"{}}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_utils_8h}{GameFramework/Utils.h}}"{}}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include "{}graphics/sprite.h"{}}}
+\DoxyCodeLine{8 }
+\DoxyCodeLine{9 \textcolor{keyword}{class }\mbox{\hyperlink{class_character_movement_component}{CharacterMovementComponent}};}
+\DoxyCodeLine{10 \textcolor{keyword}{class }\mbox{\hyperlink{class_abilities_component}{AbilitiesComponent}};}
+\DoxyCodeLine{11 \textcolor{keyword}{class }\mbox{\hyperlink{class_attribute_component}{AttributeComponent}};}
+\DoxyCodeLine{12 }
+\DoxyCodeLine{16 \textcolor{keyword}{class }\mbox{\hyperlink{class_player_character}{PlayerCharacter}} : \textcolor{keyword}{public} \mbox{\hyperlink{class_mesh_actor}{MeshActor}}}
+\DoxyCodeLine{17 \{}
+\DoxyCodeLine{18     \mbox{\hyperlink{_utils_8h_afc0ee7bd35c161a2d80b8e8f04fd9213}{GENERATED\_BODY}}(\mbox{\hyperlink{class_mesh_actor}{MeshActor}}, \mbox{\hyperlink{class_player_character}{PlayerCharacter}})}
+\DoxyCodeLine{19 }
+\DoxyCodeLine{20 \textcolor{keyword}{public}:}
+\DoxyCodeLine{21 }
+\DoxyCodeLine{22     \mbox{\hyperlink{class_player_character_af3ac12a41f58d860fb716138578bd95f}{PlayerCharacter}}();}
+\DoxyCodeLine{23 }
+\DoxyCodeLine{24     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_player_character_ad12c09c28194b1c5ed39aa4b5c21cbd6}{PostInit}}() \textcolor{keyword}{override};}
+\DoxyCodeLine{25     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_player_character_ad681ccd09dc1ed4c0242bfa0d981d584}{Update}}(\textcolor{keywordtype}{float} deltaTime) \textcolor{keyword}{override};}
+\DoxyCodeLine{26     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_player_character_ac89349d4afba371e044e4c5816ba68c8}{TakeDamage}}(\textcolor{keywordtype}{float} damageAmount) \textcolor{keyword}{override};}
+\DoxyCodeLine{27 }
+\DoxyCodeLine{31     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_player_character_a0415b6e06c971db05a79ae18176f6e99}{ApplyInvincibilityForDuration}}(\textcolor{keywordtype}{float} invincibilityDuration);}
+\DoxyCodeLine{32 }
+\DoxyCodeLine{33     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_player_character_abf3fd7463bf99305b85490644ff3d276}{DrawPlayerHUD}}();}
+\DoxyCodeLine{34 }
+\DoxyCodeLine{35 \textcolor{keyword}{protected}:}
+\DoxyCodeLine{36 }
+\DoxyCodeLine{37     \mbox{\hyperlink{class_player_controller}{PlayerController}}* \mbox{\hyperlink{class_player_character_a32fa60c60ab920a4bf3682d8d64efb2f}{controller}};}
+\DoxyCodeLine{38 }
+\DoxyCodeLine{39 \textcolor{comment}{    /************************************************************************/}}
+\DoxyCodeLine{40     \textcolor{comment}{/*                             KEY BINDS                                */}}
+\DoxyCodeLine{41 \textcolor{comment}{    /************************************************************************/}}
+\DoxyCodeLine{42     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_player_character_a71db2dd63c1e1ee33c1636d07c663bd2}{MoveLeft}}();}
+\DoxyCodeLine{43     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_player_character_a27a3a3bd797b494f4262a0d9cc23a7da}{MoveRight}}();}
+\DoxyCodeLine{44 }
+\DoxyCodeLine{45     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_player_character_a3e2db13c832d8ad72f91f35626318029}{MoveForward}}();}
+\DoxyCodeLine{46     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_player_character_a66f35da8ae003995f4f9984edf1aa503}{MoveBack}}();}
+\DoxyCodeLine{47 }
+\DoxyCodeLine{48     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_player_character_ae3414c7f6a3ecb97de258a3c48e5042c}{ActivateAbility1}}();}
+\DoxyCodeLine{49     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_player_character_abf9975cee8626a88bfda0083d5ec32ab}{ActivateAbility2}}();}
+\DoxyCodeLine{50     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_player_character_af678379492ff14630742460e81d191b7}{ActivateAbility3}}();}
+\DoxyCodeLine{51     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_player_character_a5a51435bd69ade9c5e2ea48319f6299d}{ActivateAbility4}}();}
+\DoxyCodeLine{52 }
+\DoxyCodeLine{53     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_player_character_a294eaf7133b810dc22a0caf95a98dcb1}{OnControllerLeftStick}}(gef::Vector2 delta);}
+\DoxyCodeLine{54     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_player_character_ae91b2ed2e883c4e311568689ba946fba}{OnControllerActivateAbility1}}(gef::Vector2 delta);}
+\DoxyCodeLine{55     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_player_character_aad1ce1a4a76bff1adc2adde12d89a25d}{OnControllerActivateAbility2}}(gef::Vector2 delta);}
+\DoxyCodeLine{56     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_player_character_aa44656f4422f9b2dd5b9f662eb3f7add}{OnControllerActivateAbility3}}(gef::Vector2 delta);}
+\DoxyCodeLine{57     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_player_character_a48ccee58814a3244be3ba5f8ba0b056c}{OnControllerActivateAbility4}}(gef::Vector2 delta);}
+\DoxyCodeLine{58     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_player_character_a0da3ea447b3274eef8d2aab1ca9a22d2}{OnControllerInvertUpDownMovement}}(gef::Vector2 delta);}
+\DoxyCodeLine{59 }
+\DoxyCodeLine{60 \textcolor{keyword}{private}:}
+\DoxyCodeLine{61 }
+\DoxyCodeLine{62     \mbox{\hyperlink{class_character_movement_component}{CharacterMovementComponent}}* characterMovement;}
+\DoxyCodeLine{63     \mbox{\hyperlink{class_abilities_component}{AbilitiesComponent}}* abilitiesComponent;}
+\DoxyCodeLine{64     \mbox{\hyperlink{class_attribute_component}{AttributeComponent}}* attributes;}
+\DoxyCodeLine{65 }
+\DoxyCodeLine{66     \textcolor{comment}{/* Used to track when should player invincibility end */}}
+\DoxyCodeLine{67     \textcolor{keywordtype}{float} invincibilityEndTime = 0.f;}
+\DoxyCodeLine{68 }
+\DoxyCodeLine{69     \textcolor{keywordtype}{void} BindKeys();}
+\DoxyCodeLine{70     \textcolor{keywordtype}{void} InitializeComponents();}
+\DoxyCodeLine{71     \textcolor{keywordtype}{void} InitializeAbilitySystem();}
+\DoxyCodeLine{72 }
+\DoxyCodeLine{73     \textcolor{keywordtype}{bool} bInvertMovement = \textcolor{keyword}{false};}
+\DoxyCodeLine{74 }
+\DoxyCodeLine{75     std::vector<gef::Sprite> abilitySprites;}
+\DoxyCodeLine{76     std::vector<gef::Sprite> backgroundSprites;}
+\DoxyCodeLine{77     gef::Sprite background;}
+\DoxyCodeLine{78 }
+\DoxyCodeLine{79 \textcolor{keyword}{public}:}
+\DoxyCodeLine{80 }
+\DoxyCodeLine{81     \mbox{\hyperlink{class_player_controller}{PlayerController}}* \mbox{\hyperlink{class_player_character_af75d11f2b93d26046988f3316888fdbc}{GetController}}()\textcolor{keyword}{ const }\{ \textcolor{keywordflow}{return} \mbox{\hyperlink{class_player_character_a32fa60c60ab920a4bf3682d8d64efb2f}{controller}}; \}}
+\DoxyCodeLine{82     \mbox{\hyperlink{class_character_movement_component}{CharacterMovementComponent}}* \mbox{\hyperlink{class_player_character_ac890f6a156f0b6f48aa9c62a6a307932}{GetCharacterMovement}}()\textcolor{keyword}{ const }\{ \textcolor{keywordflow}{return} characterMovement; \}}
+\DoxyCodeLine{83     \mbox{\hyperlink{class_attribute_component}{AttributeComponent}}* \mbox{\hyperlink{class_player_character_a35f60a491cce521c070536f0c9eec6f6}{GetCharacterAttributes}}()\textcolor{keyword}{ const }\{ \textcolor{keywordflow}{return} attributes; \}}
+\DoxyCodeLine{84     \mbox{\hyperlink{class_abilities_component}{AbilitiesComponent}}* \mbox{\hyperlink{class_player_character_a1b142fd480a0b6326069058a0109668a}{GetCharacterAbilities}}()\textcolor{keyword}{ const }\{ \textcolor{keywordflow}{return} abilitiesComponent; \}}
+\DoxyCodeLine{85 }
+\DoxyCodeLine{86 \};}
+\DoxyCodeLine{87 }
+
+\end{DoxyCode}

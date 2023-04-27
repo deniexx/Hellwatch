@@ -1,0 +1,80 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="struct_f_attribute" kind="struct" language="C++" prot="public">
+    <compoundname>FAttribute</compoundname>
+    <includes refid="_attribute_types_8h" local="no">AttributeTypes.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_f_attribute_1adacbd546c31cd3eeb6cc209a7a407e84" prot="public" static="no" mutable="no">
+        <type><ref refid="namespace_hellwatch_attribute_1ad0a500e65129d06e4589f9bca54c4a7d" kindref="member">HellwatchAttribute::Type</ref></type>
+        <definition>HellwatchAttribute::Type FAttribute::attributeType</definition>
+        <argsstring></argsstring>
+        <name>attributeType</name>
+        <qualifiedname>FAttribute::attributeType</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/Attributes/AttributeTypes.h" line="29" column="26" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/Attributes/AttributeTypes.h" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_f_attribute_1a9056ea5412f85f588763afc561fda841" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float FAttribute::maxAmount</definition>
+        <argsstring></argsstring>
+        <name>maxAmount</name>
+        <qualifiedname>FAttribute::maxAmount</qualifiedname>
+        <initializer>= 100.f</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/Attributes/AttributeTypes.h" line="30" column="7" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/Attributes/AttributeTypes.h" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_f_attribute_1af950f31a8ba7e36e9a06091afed1edfe" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float FAttribute::currentAmount</definition>
+        <argsstring></argsstring>
+        <name>currentAmount</name>
+        <qualifiedname>FAttribute::currentAmount</qualifiedname>
+        <initializer>= 0.f</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/Attributes/AttributeTypes.h" line="31" column="7" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/Attributes/AttributeTypes.h" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_f_attribute_1ac7a54aa8f158329ab1a12146fe56e0f1" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool FAttribute::bClampedToZero</definition>
+        <argsstring></argsstring>
+        <name>bClampedToZero</name>
+        <qualifiedname>FAttribute::bClampedToZero</qualifiedname>
+        <initializer>= true</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/Attributes/AttributeTypes.h" line="33" column="6" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/Attributes/AttributeTypes.h" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Attribute representation  </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/Attributes/AttributeTypes.h" line="27" column="1" bodyfile="D:/Uni/CMP208/Hellwatch/build/vs2017/Attributes/AttributeTypes.h" bodystart="28" bodyend="34"/>
+    <listofallmembers>
+      <member refid="struct_f_attribute_1adacbd546c31cd3eeb6cc209a7a407e84" prot="public" virt="non-virtual"><scope>FAttribute</scope><name>attributeType</name></member>
+      <member refid="struct_f_attribute_1ac7a54aa8f158329ab1a12146fe56e0f1" prot="public" virt="non-virtual"><scope>FAttribute</scope><name>bClampedToZero</name></member>
+      <member refid="struct_f_attribute_1af950f31a8ba7e36e9a06091afed1edfe" prot="public" virt="non-virtual"><scope>FAttribute</scope><name>currentAmount</name></member>
+      <member refid="struct_f_attribute_1a9056ea5412f85f588763afc561fda841" prot="public" virt="non-virtual"><scope>FAttribute</scope><name>maxAmount</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

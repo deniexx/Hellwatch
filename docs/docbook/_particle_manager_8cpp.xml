@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__particle_manager_8cpp" xml:lang="en-US">
+<title>D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/ParticleManager.cpp File Reference</title>
+<indexterm><primary>D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/ParticleManager.cpp</primary></indexterm>
+<programlisting linenumbering="unnumbered">#include &quot;ParticleManager.h&quot;<?linebreak?>#include &quot;graphics/texture.h&quot;<?linebreak?>#include &quot;Actors/MeshActors/ParticleActor.h&quot;<?linebreak?>#include &quot;scene_app.h&quot;<?linebreak?>#include &quot;assets/png_loader.h&quot;<?linebreak?>#include &quot;graphics/image_data.h&quot;<?linebreak?></programlisting>Include dependency graph for ParticleManager.cpp:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_particle_manager_8cpp__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>

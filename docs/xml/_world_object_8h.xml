@@ -1,0 +1,469 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="_world_object_8h" kind="file" language="C++">
+    <compoundname>WorldObject.h</compoundname>
+    <includes local="no">maths/Matrix44.h</includes>
+    <includes local="no">maths/quaternion.h</includes>
+    <includes refid="_utils_8h" local="yes">Utils.h</includes>
+    <includedby refid="_ability_8cpp" local="yes">D:/Uni/CMP208/Hellwatch/build/vs2017/Abilities/Ability.cpp</includedby>
+    <includedby refid="_actor_component_8cpp" local="yes">D:/Uni/CMP208/Hellwatch/build/vs2017/ActorComponents/ActorComponent.cpp</includedby>
+    <includedby refid="_character_movement_component_8cpp" local="yes">D:/Uni/CMP208/Hellwatch/build/vs2017/ActorComponents/CharacterMovementComponent.cpp</includedby>
+    <includedby refid="_mesh_actor_8h" local="yes">D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActor.h</includedby>
+    <includedby refid="_sprite_actor_8h" local="yes">D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/SpriteActor.h</includedby>
+    <includedby refid="_world_object_8cpp" local="yes">D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/WorldObject.cpp</includedby>
+    <incdepgraph>
+      <node id="4">
+        <label>Utils.h</label>
+        <link refid="_utils_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/WorldObject.h</label>
+        <link refid="_world_object_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="18">
+        <label>obj_mesh_loader.h</label>
+        <link refid="obj__mesh__loader_8h"/>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>primitive_builder.h</label>
+        <link refid="primitive__builder_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>scene_app.h</label>
+        <link refid="scene__app_8h"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>box2d/box2d.h</label>
+      </node>
+      <node id="14">
+        <label>cstddef</label>
+      </node>
+      <node id="24">
+        <label>future</label>
+      </node>
+      <node id="19">
+        <label>gef.h</label>
+      </node>
+      <node id="23">
+        <label>graphics/font.h</label>
+      </node>
+      <node id="13">
+        <label>graphics/material.h</label>
+      </node>
+      <node id="8">
+        <label>graphics/renderer_3d.h</label>
+      </node>
+      <node id="15">
+        <label>graphics/scene.h</label>
+      </node>
+      <node id="20">
+        <label>map</label>
+      </node>
+      <node id="2">
+        <label>maths/Matrix44.h</label>
+      </node>
+      <node id="5">
+        <label>maths/Vector2.h</label>
+      </node>
+      <node id="26">
+        <label>maths/math_utils.h</label>
+      </node>
+      <node id="7">
+        <label>maths/matrix44.h</label>
+      </node>
+      <node id="3">
+        <label>maths/quaternion.h</label>
+      </node>
+      <node id="11">
+        <label>maths/vector2.h</label>
+      </node>
+      <node id="6">
+        <label>maths/vector4.h</label>
+      </node>
+      <node id="25">
+        <label>random</label>
+      </node>
+      <node id="21">
+        <label>string</label>
+      </node>
+      <node id="10">
+        <label>system/application.h</label>
+      </node>
+      <node id="17">
+        <label>system/platform.h</label>
+      </node>
+      <node id="22">
+        <label>vector</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/Abilities/Ability.cpp</label>
+        <link refid="_ability_8cpp"/>
+      </node>
+      <node id="29">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/Abilities/PlayerAbilities/Dash.cpp</label>
+        <link refid="_dash_8cpp"/>
+      </node>
+      <node id="28">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/Abilities/PlayerAbilities/Dash.h</label>
+        <link refid="_dash_8h"/>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/Abilities/PlayerAbilities/IceBolt.cpp</label>
+        <link refid="_ice_bolt_8cpp"/>
+      </node>
+      <node id="22">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/Abilities/PlayerAbilities/Meteor.cpp</label>
+        <link refid="_meteor_8cpp"/>
+      </node>
+      <node id="9">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/Abilities/PlayerAbilities/PiercingStrike.cpp</label>
+        <link refid="_piercing_strike_8cpp"/>
+      </node>
+      <node id="3">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/ActorComponents/ActorComponent.cpp</label>
+        <link refid="_actor_component_8cpp"/>
+      </node>
+      <node id="4">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/ActorComponents/CharacterMovementComponent.cpp</label>
+        <link refid="_character_movement_component_8cpp"/>
+      </node>
+      <node id="6">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActor.cpp</label>
+        <link refid="_mesh_actor_8cpp"/>
+      </node>
+      <node id="5">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActor.h</label>
+        <link refid="_mesh_actor_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/Boss.cpp</label>
+        <link refid="_boss_8cpp"/>
+      </node>
+      <node id="12">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/Boss.h</label>
+        <link refid="_boss_8h"/>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/DamageOnCollisionActor.cpp</label>
+        <link refid="_damage_on_collision_actor_8cpp"/>
+      </node>
+      <node id="7">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/DamageOnCollisionActor.h</label>
+        <link refid="_damage_on_collision_actor_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/Enemy.cpp</label>
+        <link refid="_enemy_8cpp"/>
+      </node>
+      <node id="11">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/Enemy.h</label>
+        <link refid="_enemy_8h"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+      </node>
+      <node id="20">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/EnemyDummy.cpp</label>
+        <link refid="_enemy_dummy_8cpp"/>
+      </node>
+      <node id="19">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/EnemyDummy.h</label>
+        <link refid="_enemy_dummy_8h"/>
+        <childnode refid="20" relation="include">
+        </childnode>
+      </node>
+      <node id="23">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/MeteorActor.cpp</label>
+        <link refid="_meteor_actor_8cpp"/>
+      </node>
+      <node id="21">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/MeteorActor.h</label>
+        <link refid="_meteor_actor_8h"/>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+      </node>
+      <node id="25">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/ParticleActor.cpp</label>
+        <link refid="_particle_actor_8cpp"/>
+      </node>
+      <node id="24">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/ParticleActor.h</label>
+        <link refid="_particle_actor_8h"/>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+      </node>
+      <node id="30">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/PlayerCharacter.cpp</label>
+        <link refid="_player_character_8cpp"/>
+      </node>
+      <node id="27">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/PlayerCharacter.h</label>
+        <link refid="_player_character_8h"/>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/RangedEnemy.cpp</label>
+        <link refid="_ranged_enemy_8cpp"/>
+      </node>
+      <node id="16">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/RangedEnemy.h</label>
+        <link refid="_ranged_enemy_8h"/>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+      </node>
+      <node id="33">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/SpriteActor.cpp</label>
+        <link refid="_sprite_actor_8cpp"/>
+      </node>
+      <node id="32">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/SpriteActor.h</label>
+        <link refid="_sprite_actor_8h"/>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+      </node>
+      <node id="26">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/ParticleManager.cpp</label>
+        <link refid="_particle_manager_8cpp"/>
+      </node>
+      <node id="14">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/WaveManager.cpp</label>
+        <link refid="_wave_manager_8cpp"/>
+      </node>
+      <node id="34">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/WorldObject.cpp</label>
+        <link refid="_world_object_8cpp"/>
+      </node>
+      <node id="1">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/WorldObject.h</label>
+        <link refid="_world_object_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+      </node>
+      <node id="31">
+        <label>D:/Uni/CMP208/Hellwatch/build/vs2017/UserInterface/ShopMenu.cpp</label>
+        <link refid="_shop_menu_8cpp"/>
+      </node>
+      <node id="18">
+        <label>D:/Uni/CMP208/Hellwatch/scene_app.cpp</label>
+        <link refid="scene__app_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_world_object" prot="public">WorldObject</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;maths/Matrix44.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;maths/quaternion.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_utils_8h" kindref="compound">Utils.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="comment">/************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="comment">/*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>FORWARD<sp/>DECLARATIONS<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="comment">/************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">b2Body;</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="comment">/************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="comment">/*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Base<sp/>Object<sp/>Class<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="comment">/************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15" refid="class_world_object" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_world_object" kindref="compound">WorldObject</ref></highlight></codeline>
+<codeline lineno="16"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_world_object_1a632d2e78acdcbc0aef09951134340d4e" kindref="member">WorldObject</ref>();</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_world_object_1a287e5b87a26133cd35f3015268d2a5a3" kindref="member">~WorldObject</ref>();</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_world_object_1aa2d0bc51a9b2dac1930c37e2401e8934" kindref="member">Init</ref>(<ref refid="class_world_object" kindref="compound">WorldObject</ref>*<sp/>owner<sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_world_object_1a8500a6a24c62699fa103a68349407a3f" kindref="member">PostInit</ref>();</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_world_object_1a828815709498f192bf138ecfe416c529" kindref="member">Update</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>deltaTime);</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_world_object_1a2a30bf431fa478eb5d24683e1906c261" kindref="member">Render</ref>();</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_world_object_1a7c563531a541e9f5ff4193443cedd515" kindref="member">OnCollision</ref>(b2Body*<sp/>OtherBody);</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55" refid="class_world_object_1a9f76e2def47f4d6be6bafb330ac0394b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_world_object_1a9f76e2def47f4d6be6bafb330ac0394b" kindref="member">ID</ref><sp/>=<sp/><ref refid="_utils_8h_1a642e16f35aa1e585c25e405ede76e115" kindref="member">NO_ID</ref>;</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59" refid="class_world_object_1a025ba78ec5cc2607f7e62750a7c37749" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>b2Body*<sp/><ref refid="class_world_object_1a025ba78ec5cc2607f7e62750a7c37749" kindref="member">collisionBody</ref><sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="60" refid="class_world_object_1a9e5ac0cc278f5766b6020950fdabbe75" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>gef::Matrix44<sp/><ref refid="class_world_object_1a9e5ac0cc278f5766b6020950fdabbe75" kindref="member">transformMat</ref>;</highlight></codeline>
+<codeline lineno="61" refid="class_world_object_1a8917ba1d61e12c12f7246c7b95cd4094" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_world_object" kindref="compound">WorldObject</ref>*<sp/><ref refid="class_world_object_1a8917ba1d61e12c12f7246c7b95cd4094" kindref="member">owningObject</ref>;</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63" refid="class_world_object_1a78bd9162f55826c5c68706d688578cf8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>gef::Vector4<sp/><ref refid="class_world_object_1a78bd9162f55826c5c68706d688578cf8" kindref="member">translation</ref>;</highlight></codeline>
+<codeline lineno="64" refid="class_world_object_1a45f28fb0c7cf14a6c92ab72eaa4eb9a9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>gef::Vector4<sp/><ref refid="class_world_object_1a45f28fb0c7cf14a6c92ab72eaa4eb9a9" kindref="member">scale</ref>;</highlight></codeline>
+<codeline lineno="65" refid="class_world_object_1a519b69f0419703cfbe08580d4b2ab408" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>gef::Vector4<sp/><ref refid="class_world_object_1a519b69f0419703cfbe08580d4b2ab408" kindref="member">rotationVec</ref>;</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67" refid="class_world_object_1a60c2b1f707b5694f97dd950996d05e11" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_world_object_1a60c2b1f707b5694f97dd950996d05e11" kindref="member">bMarkedForDelete</ref><sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="68" refid="class_world_object_1ac10cc37682a3a3cce8405411fbd8f4c3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_world_object_1ac10cc37682a3a3cce8405411fbd8f4c3" kindref="member">bDisableUpdate</ref><sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_world_object_1a4c83c0d8e3817aac3ef2080ec0972802" kindref="member">BuildTransform</ref>();</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight><highlight class="comment"><sp/><sp/><sp/><sp/>/************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SETTERS<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight><highlight class="comment"><sp/><sp/><sp/><sp/>/************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_world_object_1a830b64bbf6df3fc50284b0316c124133" kindref="member">SetTranslation</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>gef::Vector4&amp;<sp/>inTranslation);</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_world_object_1a18ba8b67b53f7df01220643617ecd75c" kindref="member">SetRotation</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>gef::Vector4&amp;<sp/>inRotation);</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_world_object_1a18ba8b67b53f7df01220643617ecd75c" kindref="member">SetRotation</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>inRotation);</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_world_object_1ae00d341e9ac8909374dd556aaecbdb46" kindref="member">SetScale</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>gef::Vector4&amp;<sp/>inScale);</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_world_object_1a8817deac42a357d2ed476791c7b76511" kindref="member">SetCollisionBody</ref>(b2Body*<sp/>inCollisionBody);</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight><highlight class="comment"><sp/><sp/><sp/><sp/>/************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>GETTERS<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight><highlight class="comment"><sp/><sp/><sp/><sp/>/************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="86" refid="class_world_object_1a9967baa65719f1418641598a244306a5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>__forceinline<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/>gef::Vector4&amp;<sp/><ref refid="class_world_object_1a9967baa65719f1418641598a244306a5" kindref="member">GetTranslation</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_world_object_1a9e5ac0cc278f5766b6020950fdabbe75" kindref="member">transformMat</ref>.GetTranslation();<sp/>}</highlight></codeline>
+<codeline lineno="87" refid="class_world_object_1a271e4b4870fadf60e285576f94b31e79" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>__forceinline<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/>gef::Vector4&amp;<sp/><ref refid="class_world_object_1a271e4b4870fadf60e285576f94b31e79" kindref="member">GetRotation</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_world_object_1a519b69f0419703cfbe08580d4b2ab408" kindref="member">rotationVec</ref>;<sp/>};</highlight></codeline>
+<codeline lineno="88" refid="class_world_object_1aa959995cc385843f1e2b0139e4413ab5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>__forceinline<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="class_world_object_1aa959995cc385843f1e2b0139e4413ab5" kindref="member">GetRotationF</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0.f;<sp/>}</highlight></codeline>
+<codeline lineno="89" refid="class_world_object_1a223b3653f965b7698ec28c9b4fc84e28" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>__forceinline<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/>gef::Vector4&amp;<sp/><ref refid="class_world_object_1a223b3653f965b7698ec28c9b4fc84e28" kindref="member">GetScale</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_world_object_1a9e5ac0cc278f5766b6020950fdabbe75" kindref="member">transformMat</ref>.GetScale();<sp/>}</highlight></codeline>
+<codeline lineno="90" refid="class_world_object_1a1302aea00b9a5f348459f55e9dd50725" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>__forceinline<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>gef::Matrix44&amp;<sp/><ref refid="class_world_object_1a1302aea00b9a5f348459f55e9dd50725" kindref="member">GetTransform</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_world_object_1a9e5ac0cc278f5766b6020950fdabbe75" kindref="member">transformMat</ref>;<sp/>}</highlight></codeline>
+<codeline lineno="91" refid="class_world_object_1a0fdf372cdda0fb026916b60e19e657a0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>__forceinline<sp/><ref refid="class_world_object" kindref="compound">WorldObject</ref>*<sp/><ref refid="class_world_object_1a0fdf372cdda0fb026916b60e19e657a0" kindref="member">GetOwner</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_world_object_1a8917ba1d61e12c12f7246c7b95cd4094" kindref="member">owningObject</ref>;<sp/>}</highlight></codeline>
+<codeline lineno="92" refid="class_world_object_1aa3b5f5e5e1ed26c94265854e2858bdee" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>__forceinline<sp/>b2Body*<sp/><ref refid="class_world_object_1aa3b5f5e5e1ed26c94265854e2858bdee" kindref="member">GetCollisionBody</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_world_object_1a025ba78ec5cc2607f7e62750a7c37749" kindref="member">collisionBody</ref>;<sp/>}</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95" refid="class_world_object_1a4402fa17dfd062fc97750d581d4f774b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>__forceinline<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_world_object_1a4402fa17dfd062fc97750d581d4f774b" kindref="member">MarkForDelete</ref>()<sp/>{<sp/><ref refid="class_world_object_1a60c2b1f707b5694f97dd950996d05e11" kindref="member">bMarkedForDelete</ref><sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;<sp/>}</highlight></codeline>
+<codeline lineno="96" refid="class_world_object_1a650a599e9ffa751eaba296c4ef6ec2d2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>__forceinline<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_world_object_1a650a599e9ffa751eaba296c4ef6ec2d2" kindref="member">DisableUpdate</ref>()<sp/>{<sp/><ref refid="class_world_object_1ac10cc37682a3a3cce8405411fbd8f4c3" kindref="member">bDisableUpdate</ref><sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;<sp/>}</highlight></codeline>
+<codeline lineno="97" refid="class_world_object_1a42e101b6adf4911396d95acc5b1741d8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>__forceinline<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_world_object_1a42e101b6adf4911396d95acc5b1741d8" kindref="member">EnableUpdate</ref>()<sp/>{<sp/><ref refid="class_world_object_1ac10cc37682a3a3cce8405411fbd8f4c3" kindref="member">bDisableUpdate</ref><sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;<sp/>}</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="99" refid="class_world_object_1a78b0b88900685e80feffc6921fd9f370" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>__forceinline<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_world_object_1a78b0b88900685e80feffc6921fd9f370" kindref="member">ShouldUpdate</ref>()<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>!<ref refid="class_world_object_1ac10cc37682a3a3cce8405411fbd8f4c3" kindref="member">bDisableUpdate</ref>;<sp/>}</highlight></codeline>
+<codeline lineno="100" refid="class_world_object_1aaebbb0abbabef79ad542f01db4ef6101" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>__forceinline<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_world_object_1aaebbb0abbabef79ad542f01db4ef6101" kindref="member">GetIsMarkedForDelete</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_world_object_1a60c2b1f707b5694f97dd950996d05e11" kindref="member">bMarkedForDelete</ref>;<sp/>}</highlight></codeline>
+<codeline lineno="101"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/WorldObject.h"/>
+  </compounddef>
+</doxygen>

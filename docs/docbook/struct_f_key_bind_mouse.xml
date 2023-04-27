@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_struct_f_key_bind_mouse" xml:lang="en-US">
+<title>FKeyBindMouse Struct Reference</title>
+<indexterm><primary>FKeyBindMouse</primary></indexterm>
+<para>
+<computeroutput>#include &lt;PlayerController.h&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>gef::TouchType <link linkend="_struct_f_key_bind_mouse_1a5bc7033239652acd4610ec1ca89ddf89">clickAction</link></para>
+</listitem>
+            <listitem><para>std::function&lt; void(gef::Vector2)&gt; <link linkend="_struct_f_key_bind_mouse_1a5845f86fa206d3ba7e4ab997960a3588">functionBind</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_struct_f_key_bind_mouse_1a5bc7033239652acd4610ec1ca89ddf89"/><section>
+    <title>clickAction</title>
+<indexterm><primary>clickAction</primary><secondary>FKeyBindMouse</secondary></indexterm>
+<indexterm><primary>FKeyBindMouse</primary><secondary>clickAction</secondary></indexterm>
+<para><computeroutput>gef::TouchType FKeyBindMouse::clickAction</computeroutput></para></section>
+<anchor xml:id="_struct_f_key_bind_mouse_1a5845f86fa206d3ba7e4ab997960a3588"/><section>
+    <title>functionBind</title>
+<indexterm><primary>functionBind</primary><secondary>FKeyBindMouse</secondary></indexterm>
+<indexterm><primary>FKeyBindMouse</primary><secondary>functionBind</secondary></indexterm>
+<para><computeroutput>std::function&lt;void(gef::Vector2)&gt; FKeyBindMouse::functionBind</computeroutput></para></section>
+<para>
+The documentation for this struct was generated from the following file:</para>
+D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/<link linkend="__player_controller_8h">PlayerController.h</link></section>
+</section>

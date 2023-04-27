@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__particle_actor_8h_source" xml:lang="en-US">
+<title>ParticleActor.h</title>
+<indexterm><primary>D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/ParticleActor.h</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered">1 <emphasis role="preprocessor">#pragma&#32;once</emphasis>
+2 
+3 <emphasis role="preprocessor">#include&#32;&lt;string&gt;</emphasis>
+4 <emphasis role="preprocessor">#include&#32;&lt;vector&gt;</emphasis>
+5 <emphasis role="preprocessor">#include&#32;&quot;../MeshActor.h&quot;</emphasis>
+6 
+7 <emphasis role="keyword">namespace&#32;</emphasis><link linkend="_namespacegef">gef</link>
+8 {
+9 &#32;&#32;&#32;&#32;<emphasis role="keyword">class&#32;</emphasis>Texture;
+10 }
+11 
+12 <emphasis role="keyword">struct&#32;</emphasis><link linkend="_struct_f_particle_data">FParticleData</link>
+13 {
+14 &#32;&#32;&#32;&#32;std::vector&lt;gef::Texture*&gt;&#32;<link linkend="_struct_f_particle_data_1a059353bdabbbac1a3b74c7b322a5280e">textures</link>;
+15 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">float</emphasis>&#32;<link linkend="_struct_f_particle_data_1a5ec56fa1191a3971105010b03473502d">startTime</link>&#32;=&#32;0;
+16 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">float</emphasis>&#32;<link linkend="_struct_f_particle_data_1a93f26d0a1f582ee5e7c48853afe34fed">duration</link>&#32;=&#32;1;
+17 
+18 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">float</emphasis>&#32;<link linkend="_struct_f_particle_data_1a555a566a858a38fac2a460b135d98fe7">lingerTime</link>&#32;=&#32;0.25;
+19 &#32;&#32;&#32;&#32;gef::Vector4&#32;<link linkend="_struct_f_particle_data_1a17c186ca0a48309c1a664ccdd563684d">scale</link>&#32;=&#32;gef::Vector4::kOne;
+20 };
+21 
+22 <emphasis role="keyword">class&#32;</emphasis><link linkend="_class_particle_actor">ParticleActor</link>&#32;:&#32;<emphasis role="keyword">public</emphasis>&#32;<link linkend="_class_mesh_actor">MeshActor</link>
+23 {
+24 <emphasis role="keyword">public</emphasis>:
+25 
+29 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_particle_actor_1aac7c62cbf5b02d9f925b1384ec53b65c">SetParticleData</link>(<emphasis role="keyword">const</emphasis>&#32;<link linkend="_struct_f_particle_data">FParticleData</link>&amp;&#32;newData)&#32;{&#32;particleData&#32;=&#32;newData;&#32;}
+30 
+34 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_particle_actor_1afc281ad9a6f6803c645b077106600234">Play</link>();
+35 
+39 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_particle_actor_1a5ef5f56da7eadd86f647ab3f519061be">Stop</link>();
+40 
+41 &#32;&#32;&#32;&#32;<emphasis role="keyword">virtual</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_particle_actor_1a5ed58a9e57286e08cf8a650aaf22f43f">Update</link>(<emphasis role="keywordtype">float</emphasis>&#32;deltaTime)&#32;<emphasis role="keyword">override</emphasis>;
+42 
+43 <emphasis role="keyword">private</emphasis>:
+44 
+45 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;bIsPlaying&#32;=&#32;<emphasis role="keyword">false</emphasis>;
+46 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;bIsLingering&#32;=&#32;<emphasis role="keyword">false</emphasis>;
+47 &#32;&#32;&#32;&#32;<link linkend="_struct_f_particle_data">FParticleData</link>&#32;particleData&#32;=&#32;<link linkend="_struct_f_particle_data">FParticleData</link>();
+48 
+49 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">float</emphasis>&#32;lingerStartTime&#32;=&#32;0.f;
+50 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">float</emphasis>&#32;lastTextureTime&#32;=&#32;0.f;
+51 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">float</emphasis>&#32;timeBetweenTextures&#32;=&#32;0.f;
+52 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;currentTextureIndex&#32;=&#32;0;
+53 };
+54 
+</programlisting></section>

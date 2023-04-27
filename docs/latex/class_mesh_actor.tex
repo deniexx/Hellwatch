@@ -1,0 +1,256 @@
+\hypertarget{class_mesh_actor}{}\doxysection{Mesh\+Actor Class Reference}
+\label{class_mesh_actor}\index{MeshActor@{MeshActor}}
+
+
+An object that has a mesh   
+
+
+
+
+{\ttfamily \#include $<$Mesh\+Actor.\+h$>$}
+
+
+
+Inheritance diagram for Mesh\+Actor\+:
+% FIG 0
+
+
+Collaboration diagram for Mesh\+Actor\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_mesh_actor_af40424bf59441cfb3362f8ef3e1fbb68}{Mesh\+Actor}} ()
+\begin{DoxyCompactList}\small\item\em Defaults constructor  \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_mesh_actor_aed30e8021f75c3221ab6f02cb1fcfcba}{Mesh\+Actor}} (gef\+::\+Mesh $\ast$in\+Mesh)
+\begin{DoxyCompactList}\small\item\em Constructor which assigns the mesh  \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_mesh_actor_a9c8f4860ae03966a27c3ee22c2a2b5a1}{Render}} () override
+\begin{DoxyCompactList}\small\item\em Renders the object  \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_mesh_actor_a3743470557ddbbc88bc73e4dd283d6bf}{Update}} (float delta\+Time) override
+\begin{DoxyCompactList}\small\item\em Update function, called every frame  \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_mesh_actor_a31a231014625686e8d40e561a7028931}{Take\+Damage}} (float damage\+Amount)
+\item 
+void \mbox{\hyperlink{class_mesh_actor_a25950ae28c6abf2e9e3dc64cfa19c0c7}{Set\+Mesh}} (gef\+::\+Mesh $\ast$in\+Mesh)
+\item 
+void \mbox{\hyperlink{class_mesh_actor_a86f27025c3484267804fdaa5e6082fd4}{Set\+Mesh\+Name}} (std\+::string new\+Name)
+\item 
+void \mbox{\hyperlink{class_mesh_actor_a0217e1969a68278f2548e1553e2ab92b}{Set\+Material}} (gef\+::\+Material new\+Material)
+\item 
+virtual void \mbox{\hyperlink{class_mesh_actor_a295a747ea81d8b09e084c488ab183fbb}{Set\+Rotation}} (const gef\+::\+Vector4 \&in\+Rotation) override
+\item 
+\+\_\+\+\_\+forceinline const gef\+::\+Mesh $\ast$ \mbox{\hyperlink{class_mesh_actor_a906146d34e290e3bd7132a4dcbfad8a1}{Get\+Mesh}} () const
+\item 
+\+\_\+\+\_\+forceinline const std\+::vector$<$ \mbox{\hyperlink{class_actor_component}{Actor\+Component}} $\ast$ $>$ \& \mbox{\hyperlink{class_mesh_actor_a7eef4e0218a4363460a0375585037012}{Get\+Components}} ()
+\item 
+\+\_\+\+\_\+forceinline const std\+::string \& \mbox{\hyperlink{class_mesh_actor_a03ae156a0a281ff9eb128c7c7b44d983}{Get\+Mesh\+Name}} ()
+\item 
+{\footnotesize template$<$typename Component\+Type  = Actor\+Component$>$ }\\Component\+Type $\ast$ \mbox{\hyperlink{class_mesh_actor_a639c1c33b5f22210351fd94ec7d78c43}{Get\+Component}} ()
+\begin{DoxyCompactList}\small\item\em Gets the first component of the specified type from the Actor  \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Component\+Type  = Actor\+Component$>$ }\\std\+::vector$<$ Component\+Type $\ast$ $>$ \& \mbox{\hyperlink{class_mesh_actor_aa824a26a7c24d187f15aa3e9beba11f6}{Get\+Components}} ()
+\begin{DoxyCompactList}\small\item\em Gets all the components of the specified type from the Actor  \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename Component\+Type  = Actor\+Component$>$ }\\Component\+Type $\ast$ \mbox{\hyperlink{class_mesh_actor_af9b992a02356ead76d3c36a031bf6eea}{Create\+Component}} ()
+\begin{DoxyCompactList}\small\item\em Creates and return the specified component, if no component is specified it will create the base class of \mbox{\hyperlink{class_actor_component}{Actor\+Component}}  \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{class_mesh_actor_a8eb71848a77c1c7ffb0f88d526a633e3}{mesh\+Name}}
+\item 
+gef\+::\+Material \mbox{\hyperlink{class_mesh_actor_a8585ace5ca84b7903f216c77661a5787}{material}}
+\item 
+bool \mbox{\hyperlink{class_mesh_actor_a858b488e44d63ff8eda02e173fa4da7a}{b\+Override\+Material}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+An object that has a mesh  
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_mesh_actor_af40424bf59441cfb3362f8ef3e1fbb68}\label{class_mesh_actor_af40424bf59441cfb3362f8ef3e1fbb68}} 
+\index{MeshActor@{MeshActor}!MeshActor@{MeshActor}}
+\index{MeshActor@{MeshActor}!MeshActor@{MeshActor}}
+\doxysubsubsection{\texorpdfstring{MeshActor()}{MeshActor()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Mesh\+Actor\+::\+Mesh\+Actor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Defaults constructor  
+
+\mbox{\Hypertarget{class_mesh_actor_aed30e8021f75c3221ab6f02cb1fcfcba}\label{class_mesh_actor_aed30e8021f75c3221ab6f02cb1fcfcba}} 
+\index{MeshActor@{MeshActor}!MeshActor@{MeshActor}}
+\index{MeshActor@{MeshActor}!MeshActor@{MeshActor}}
+\doxysubsubsection{\texorpdfstring{MeshActor()}{MeshActor()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Mesh\+Actor\+::\+Mesh\+Actor (\begin{DoxyParamCaption}\item[{gef\+::\+Mesh $\ast$}]{in\+Mesh }\end{DoxyParamCaption})}
+
+
+
+Constructor which assigns the mesh  
+
+
+\begin{DoxyParams}{Parameters}
+{\em in\+Mesh} & Mesh to be assigned\\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_mesh_actor_af9b992a02356ead76d3c36a031bf6eea}\label{class_mesh_actor_af9b992a02356ead76d3c36a031bf6eea}} 
+\index{MeshActor@{MeshActor}!CreateComponent@{CreateComponent}}
+\index{CreateComponent@{CreateComponent}!MeshActor@{MeshActor}}
+\doxysubsubsection{\texorpdfstring{CreateComponent()}{CreateComponent()}}
+{\footnotesize\ttfamily template$<$typename Component\+Type  = Actor\+Component$>$ \\
+Component\+Type $\ast$ Mesh\+Actor\+::\+Create\+Component (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Creates and return the specified component, if no component is specified it will create the base class of \mbox{\hyperlink{class_actor_component}{Actor\+Component}}  
+
+\mbox{\Hypertarget{class_mesh_actor_a639c1c33b5f22210351fd94ec7d78c43}\label{class_mesh_actor_a639c1c33b5f22210351fd94ec7d78c43}} 
+\index{MeshActor@{MeshActor}!GetComponent@{GetComponent}}
+\index{GetComponent@{GetComponent}!MeshActor@{MeshActor}}
+\doxysubsubsection{\texorpdfstring{GetComponent()}{GetComponent()}}
+{\footnotesize\ttfamily template$<$typename Component\+Type  = Actor\+Component$>$ \\
+Component\+Type $\ast$ Mesh\+Actor\+::\+Get\+Component (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the first component of the specified type from the Actor  
+
+\mbox{\Hypertarget{class_mesh_actor_a7eef4e0218a4363460a0375585037012}\label{class_mesh_actor_a7eef4e0218a4363460a0375585037012}} 
+\index{MeshActor@{MeshActor}!GetComponents@{GetComponents}}
+\index{GetComponents@{GetComponents}!MeshActor@{MeshActor}}
+\doxysubsubsection{\texorpdfstring{GetComponents()}{GetComponents()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \+\_\+\+\_\+forceinline const std\+::vector$<$ \mbox{\hyperlink{class_actor_component}{Actor\+Component}} $\ast$ $>$ \& Mesh\+Actor\+::\+Get\+Components (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_mesh_actor_aa824a26a7c24d187f15aa3e9beba11f6}\label{class_mesh_actor_aa824a26a7c24d187f15aa3e9beba11f6}} 
+\index{MeshActor@{MeshActor}!GetComponents@{GetComponents}}
+\index{GetComponents@{GetComponents}!MeshActor@{MeshActor}}
+\doxysubsubsection{\texorpdfstring{GetComponents()}{GetComponents()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename Component\+Type  = Actor\+Component$>$ \\
+std\+::vector$<$ Component\+Type $\ast$ $>$ \& Mesh\+Actor\+::\+Get\+Components (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets all the components of the specified type from the Actor  
+
+\mbox{\Hypertarget{class_mesh_actor_a906146d34e290e3bd7132a4dcbfad8a1}\label{class_mesh_actor_a906146d34e290e3bd7132a4dcbfad8a1}} 
+\index{MeshActor@{MeshActor}!GetMesh@{GetMesh}}
+\index{GetMesh@{GetMesh}!MeshActor@{MeshActor}}
+\doxysubsubsection{\texorpdfstring{GetMesh()}{GetMesh()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+forceinline const gef\+::\+Mesh $\ast$ Mesh\+Actor\+::\+Get\+Mesh (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_mesh_actor_a03ae156a0a281ff9eb128c7c7b44d983}\label{class_mesh_actor_a03ae156a0a281ff9eb128c7c7b44d983}} 
+\index{MeshActor@{MeshActor}!GetMeshName@{GetMeshName}}
+\index{GetMeshName@{GetMeshName}!MeshActor@{MeshActor}}
+\doxysubsubsection{\texorpdfstring{GetMeshName()}{GetMeshName()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+forceinline const std\+::string \& Mesh\+Actor\+::\+Get\+Mesh\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_mesh_actor_a9c8f4860ae03966a27c3ee22c2a2b5a1}\label{class_mesh_actor_a9c8f4860ae03966a27c3ee22c2a2b5a1}} 
+\index{MeshActor@{MeshActor}!Render@{Render}}
+\index{Render@{Render}!MeshActor@{MeshActor}}
+\doxysubsubsection{\texorpdfstring{Render()}{Render()}}
+{\footnotesize\ttfamily void Mesh\+Actor\+::\+Render (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Renders the object  
+
+
+
+Reimplemented from \mbox{\hyperlink{class_world_object_a2a30bf431fa478eb5d24683e1906c261}{World\+Object}}.
+
+\mbox{\Hypertarget{class_mesh_actor_a0217e1969a68278f2548e1553e2ab92b}\label{class_mesh_actor_a0217e1969a68278f2548e1553e2ab92b}} 
+\index{MeshActor@{MeshActor}!SetMaterial@{SetMaterial}}
+\index{SetMaterial@{SetMaterial}!MeshActor@{MeshActor}}
+\doxysubsubsection{\texorpdfstring{SetMaterial()}{SetMaterial()}}
+{\footnotesize\ttfamily void Mesh\+Actor\+::\+Set\+Material (\begin{DoxyParamCaption}\item[{gef\+::\+Material}]{new\+Material }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_mesh_actor_a25950ae28c6abf2e9e3dc64cfa19c0c7}\label{class_mesh_actor_a25950ae28c6abf2e9e3dc64cfa19c0c7}} 
+\index{MeshActor@{MeshActor}!SetMesh@{SetMesh}}
+\index{SetMesh@{SetMesh}!MeshActor@{MeshActor}}
+\doxysubsubsection{\texorpdfstring{SetMesh()}{SetMesh()}}
+{\footnotesize\ttfamily void Mesh\+Actor\+::\+Set\+Mesh (\begin{DoxyParamCaption}\item[{gef\+::\+Mesh $\ast$}]{in\+Mesh }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_mesh_actor_a86f27025c3484267804fdaa5e6082fd4}\label{class_mesh_actor_a86f27025c3484267804fdaa5e6082fd4}} 
+\index{MeshActor@{MeshActor}!SetMeshName@{SetMeshName}}
+\index{SetMeshName@{SetMeshName}!MeshActor@{MeshActor}}
+\doxysubsubsection{\texorpdfstring{SetMeshName()}{SetMeshName()}}
+{\footnotesize\ttfamily void Mesh\+Actor\+::\+Set\+Mesh\+Name (\begin{DoxyParamCaption}\item[{std\+::string}]{new\+Name }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_mesh_actor_a295a747ea81d8b09e084c488ab183fbb}\label{class_mesh_actor_a295a747ea81d8b09e084c488ab183fbb}} 
+\index{MeshActor@{MeshActor}!SetRotation@{SetRotation}}
+\index{SetRotation@{SetRotation}!MeshActor@{MeshActor}}
+\doxysubsubsection{\texorpdfstring{SetRotation()}{SetRotation()}}
+{\footnotesize\ttfamily void Mesh\+Actor\+::\+Set\+Rotation (\begin{DoxyParamCaption}\item[{const gef\+::\+Vector4 \&}]{in\+Rotation }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_world_object_a18ba8b67b53f7df01220643617ecd75c}{World\+Object}}.
+
+\mbox{\Hypertarget{class_mesh_actor_a31a231014625686e8d40e561a7028931}\label{class_mesh_actor_a31a231014625686e8d40e561a7028931}} 
+\index{MeshActor@{MeshActor}!TakeDamage@{TakeDamage}}
+\index{TakeDamage@{TakeDamage}!MeshActor@{MeshActor}}
+\doxysubsubsection{\texorpdfstring{TakeDamage()}{TakeDamage()}}
+{\footnotesize\ttfamily virtual void Mesh\+Actor\+::\+Take\+Damage (\begin{DoxyParamCaption}\item[{float}]{damage\+Amount }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_i_damagable}{IDamagable}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{class_enemy_dummy_a1e336fb794e413b2379f09c4fe648259}{Enemy\+Dummy}}, \mbox{\hyperlink{class_enemy_ac49759f4d5262aea5e3b6e3f9f56896e}{Enemy}}, and \mbox{\hyperlink{class_player_character_ac89349d4afba371e044e4c5816ba68c8}{Player\+Character}}.
+
+\mbox{\Hypertarget{class_mesh_actor_a3743470557ddbbc88bc73e4dd283d6bf}\label{class_mesh_actor_a3743470557ddbbc88bc73e4dd283d6bf}} 
+\index{MeshActor@{MeshActor}!Update@{Update}}
+\index{Update@{Update}!MeshActor@{MeshActor}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void Mesh\+Actor\+::\+Update (\begin{DoxyParamCaption}\item[{float}]{delta\+Time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Update function, called every frame  
+
+
+\begin{DoxyParams}{Parameters}
+{\em delta\+Time} & Float variable for the frame time\\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{class_world_object_a828815709498f192bf138ecfe416c529}{World\+Object}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{class_boss_aa0943d1fb2d9037e30a2fdc6952878cb}{Boss}}, \mbox{\hyperlink{class_damage_on_collision_actor_a468c69c421db3d272bf18c46cbb15c2a}{Damage\+On\+Collision\+Actor}}, \mbox{\hyperlink{class_enemy_a723b79407b55383b2c327f674e3ab3bc}{Enemy}}, \mbox{\hyperlink{class_meteor_actor_ab6359799dcd7d0c88bbe0f9aae848819}{Meteor\+Actor}}, \mbox{\hyperlink{class_particle_actor_a5ed58a9e57286e08cf8a650aaf22f43f}{Particle\+Actor}}, \mbox{\hyperlink{class_player_character_ad681ccd09dc1ed4c0242bfa0d981d584}{Player\+Character}}, and \mbox{\hyperlink{class_ranged_enemy_a1f40730c4f733c7e0cdcb7b7a27c89a3}{Ranged\+Enemy}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_mesh_actor_a858b488e44d63ff8eda02e173fa4da7a}\label{class_mesh_actor_a858b488e44d63ff8eda02e173fa4da7a}} 
+\index{MeshActor@{MeshActor}!bOverrideMaterial@{bOverrideMaterial}}
+\index{bOverrideMaterial@{bOverrideMaterial}!MeshActor@{MeshActor}}
+\doxysubsubsection{\texorpdfstring{bOverrideMaterial}{bOverrideMaterial}}
+{\footnotesize\ttfamily bool Mesh\+Actor\+::b\+Override\+Material\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_mesh_actor_a8585ace5ca84b7903f216c77661a5787}\label{class_mesh_actor_a8585ace5ca84b7903f216c77661a5787}} 
+\index{MeshActor@{MeshActor}!material@{material}}
+\index{material@{material}!MeshActor@{MeshActor}}
+\doxysubsubsection{\texorpdfstring{material}{material}}
+{\footnotesize\ttfamily gef\+::\+Material Mesh\+Actor\+::material\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_mesh_actor_a8eb71848a77c1c7ffb0f88d526a633e3}\label{class_mesh_actor_a8eb71848a77c1c7ffb0f88d526a633e3}} 
+\index{MeshActor@{MeshActor}!meshName@{meshName}}
+\index{meshName@{meshName}!MeshActor@{MeshActor}}
+\doxysubsubsection{\texorpdfstring{meshName}{meshName}}
+{\footnotesize\ttfamily std\+::string Mesh\+Actor\+::mesh\+Name\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Uni/\+CMP208/\+Hellwatch/build/vs2017/\+Actors/\mbox{\hyperlink{_mesh_actor_8h}{Mesh\+Actor.\+h}}\item 
+D\+:/\+Uni/\+CMP208/\+Hellwatch/build/vs2017/\+Actors/\mbox{\hyperlink{_mesh_actor_8cpp}{Mesh\+Actor.\+cpp}}\end{DoxyCompactItemize}

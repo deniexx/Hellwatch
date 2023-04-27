@@ -1,0 +1,14 @@
+digraph "MeteorActor"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  Node1 [label="MeteorActor",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip=" "];
+  Node2 -> Node1 [dir="back",color="steelblue1",style="solid"];
+  Node2 [label="MeshActor",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$class_mesh_actor.html",tooltip="An object that has a mesh"];
+  Node3 -> Node2 [dir="back",color="steelblue1",style="solid"];
+  Node3 [label="WorldObject",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$class_world_object.html",tooltip=" "];
+  Node4 -> Node2 [dir="back",color="steelblue1",style="solid"];
+  Node4 [label="IDamagable",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$class_i_damagable.html",tooltip="Interface to be added, when we want the specific class to be able to take damage"];
+}

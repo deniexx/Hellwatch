@@ -1,0 +1,131 @@
+\hypertarget{class_wave_manager}{}\doxysection{Wave\+Manager Class Reference}
+\label{class_wave_manager}\index{WaveManager@{WaveManager}}
+
+
+Manages the spawning of enemies and tracking the progress of waves   
+
+
+
+
+{\ttfamily \#include $<$Wave\+Manager.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_wave_manager_a1c039c9a7a485f88b68a3f966ffe02c5}{Wave\+Manager}} ()
+\item 
+void \mbox{\hyperlink{class_wave_manager_a918f759b1a32b82fea823b5292b8a001}{Init}} ()
+\begin{DoxyCompactList}\small\item\em Must be called, initializes the wave definitions  \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_wave_manager_aa56d31703d3d02067e75debabbfae300}{Start\+Wave}} ()
+\begin{DoxyCompactList}\small\item\em Starts the next wave  \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_wave_manager_a751017f23187640be76f5db4b6eba243}{End\+Wave}} ()
+\begin{DoxyCompactList}\small\item\em Ends the current wave  \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_wave_manager_ae5ee18f81c4ea516839af94da831a24d}{Update}} ()
+\item 
+void \mbox{\hyperlink{class_wave_manager_ac60f15dad7ac55306c45b17babdfcb17}{Check\+Wave\+State}} ()
+\begin{DoxyCompactList}\small\item\em Checks whether all enemies have been spawned, and if any are alive  \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_wave_manager_acc8ea63b30bc4ccd02e7b12f1504595c}{Spawn\+Enemy}} ()
+\begin{DoxyCompactList}\small\item\em Spawns a random enemy and sets its class to a random one  \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{class_enemy}{Enemy}} $\ast$ $>$ \mbox{\hyperlink{class_wave_manager_a2608b3fb9c41ad9a227143f66e1dd385}{Get\+All\+Spawned\+Enemies}} () const
+\begin{DoxyCompactList}\small\item\em Gets all the currently spawned enemies  \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_wave_manager_a9440cd9b8ec292c041b5f794b2bb3217}{current\+Wave}} = 0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Manages the spawning of enemies and tracking the progress of waves  
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_wave_manager_a1c039c9a7a485f88b68a3f966ffe02c5}\label{class_wave_manager_a1c039c9a7a485f88b68a3f966ffe02c5}} 
+\index{WaveManager@{WaveManager}!WaveManager@{WaveManager}}
+\index{WaveManager@{WaveManager}!WaveManager@{WaveManager}}
+\doxysubsubsection{\texorpdfstring{WaveManager()}{WaveManager()}}
+{\footnotesize\ttfamily Wave\+Manager\+::\+Wave\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_wave_manager_ac60f15dad7ac55306c45b17babdfcb17}\label{class_wave_manager_ac60f15dad7ac55306c45b17babdfcb17}} 
+\index{WaveManager@{WaveManager}!CheckWaveState@{CheckWaveState}}
+\index{CheckWaveState@{CheckWaveState}!WaveManager@{WaveManager}}
+\doxysubsubsection{\texorpdfstring{CheckWaveState()}{CheckWaveState()}}
+{\footnotesize\ttfamily void Wave\+Manager\+::\+Check\+Wave\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Checks whether all enemies have been spawned, and if any are alive  
+
+\mbox{\Hypertarget{class_wave_manager_a751017f23187640be76f5db4b6eba243}\label{class_wave_manager_a751017f23187640be76f5db4b6eba243}} 
+\index{WaveManager@{WaveManager}!EndWave@{EndWave}}
+\index{EndWave@{EndWave}!WaveManager@{WaveManager}}
+\doxysubsubsection{\texorpdfstring{EndWave()}{EndWave()}}
+{\footnotesize\ttfamily void Wave\+Manager\+::\+End\+Wave (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Ends the current wave  
+
+\mbox{\Hypertarget{class_wave_manager_a2608b3fb9c41ad9a227143f66e1dd385}\label{class_wave_manager_a2608b3fb9c41ad9a227143f66e1dd385}} 
+\index{WaveManager@{WaveManager}!GetAllSpawnedEnemies@{GetAllSpawnedEnemies}}
+\index{GetAllSpawnedEnemies@{GetAllSpawnedEnemies}!WaveManager@{WaveManager}}
+\doxysubsubsection{\texorpdfstring{GetAllSpawnedEnemies()}{GetAllSpawnedEnemies()}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{class_enemy}{Enemy}} $\ast$ $>$ Wave\+Manager\+::\+Get\+All\+Spawned\+Enemies (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets all the currently spawned enemies  
+
+\mbox{\Hypertarget{class_wave_manager_a918f759b1a32b82fea823b5292b8a001}\label{class_wave_manager_a918f759b1a32b82fea823b5292b8a001}} 
+\index{WaveManager@{WaveManager}!Init@{Init}}
+\index{Init@{Init}!WaveManager@{WaveManager}}
+\doxysubsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily void Wave\+Manager\+::\+Init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Must be called, initializes the wave definitions  
+
+\mbox{\Hypertarget{class_wave_manager_acc8ea63b30bc4ccd02e7b12f1504595c}\label{class_wave_manager_acc8ea63b30bc4ccd02e7b12f1504595c}} 
+\index{WaveManager@{WaveManager}!SpawnEnemy@{SpawnEnemy}}
+\index{SpawnEnemy@{SpawnEnemy}!WaveManager@{WaveManager}}
+\doxysubsubsection{\texorpdfstring{SpawnEnemy()}{SpawnEnemy()}}
+{\footnotesize\ttfamily void Wave\+Manager\+::\+Spawn\+Enemy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Spawns a random enemy and sets its class to a random one  
+
+\mbox{\Hypertarget{class_wave_manager_aa56d31703d3d02067e75debabbfae300}\label{class_wave_manager_aa56d31703d3d02067e75debabbfae300}} 
+\index{WaveManager@{WaveManager}!StartWave@{StartWave}}
+\index{StartWave@{StartWave}!WaveManager@{WaveManager}}
+\doxysubsubsection{\texorpdfstring{StartWave()}{StartWave()}}
+{\footnotesize\ttfamily void Wave\+Manager\+::\+Start\+Wave (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Starts the next wave  
+
+\mbox{\Hypertarget{class_wave_manager_ae5ee18f81c4ea516839af94da831a24d}\label{class_wave_manager_ae5ee18f81c4ea516839af94da831a24d}} 
+\index{WaveManager@{WaveManager}!Update@{Update}}
+\index{Update@{Update}!WaveManager@{WaveManager}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void Wave\+Manager\+::\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_wave_manager_a9440cd9b8ec292c041b5f794b2bb3217}\label{class_wave_manager_a9440cd9b8ec292c041b5f794b2bb3217}} 
+\index{WaveManager@{WaveManager}!currentWave@{currentWave}}
+\index{currentWave@{currentWave}!WaveManager@{WaveManager}}
+\doxysubsubsection{\texorpdfstring{currentWave}{currentWave}}
+{\footnotesize\ttfamily int Wave\+Manager\+::current\+Wave = 0}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Uni/\+CMP208/\+Hellwatch/build/vs2017/\+Game\+Framework/\mbox{\hyperlink{_wave_manager_8h}{Wave\+Manager.\+h}}\item 
+D\+:/\+Uni/\+CMP208/\+Hellwatch/build/vs2017/\+Game\+Framework/\mbox{\hyperlink{_wave_manager_8cpp}{Wave\+Manager.\+cpp}}\end{DoxyCompactItemize}

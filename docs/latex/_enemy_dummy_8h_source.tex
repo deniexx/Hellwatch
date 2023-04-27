@@ -1,0 +1,30 @@
+\hypertarget{_enemy_dummy_8h_source}{}\doxysection{Enemy\+Dummy.\+h}
+\label{_enemy_dummy_8h_source}\index{D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/EnemyDummy.h@{D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/EnemyDummy.h}}
+\mbox{\hyperlink{_enemy_dummy_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{2 }
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_mesh_actor_8h}{Actors/MeshActor.h}}"{}}}
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_attribute_component_8h}{Attributes/AttributeComponent.h}}"{}}}
+\DoxyCodeLine{5 }
+\DoxyCodeLine{9 \textcolor{keyword}{class }\mbox{\hyperlink{class_enemy_dummy}{EnemyDummy}} : \textcolor{keyword}{public} \mbox{\hyperlink{class_mesh_actor}{MeshActor}}}
+\DoxyCodeLine{10 \{}
+\DoxyCodeLine{11 \textcolor{keyword}{public}:}
+\DoxyCodeLine{12 }
+\DoxyCodeLine{13     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_enemy_dummy_a1e336fb794e413b2379f09c4fe648259}{TakeDamage}}(\textcolor{keywordtype}{float} damageAmount);}
+\DoxyCodeLine{14 }
+\DoxyCodeLine{15 \textcolor{keyword}{protected}:}
+\DoxyCodeLine{16 }
+\DoxyCodeLine{17     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_enemy_dummy_a64da679c5eaca270f5181638bce62bcd}{PostInit}}() \textcolor{keyword}{override};}
+\DoxyCodeLine{18 }
+\DoxyCodeLine{19 \textcolor{keyword}{private}:}
+\DoxyCodeLine{20 }
+\DoxyCodeLine{21     \mbox{\hyperlink{class_attribute_component}{AttributeComponent}}* attributes;}
+\DoxyCodeLine{22 }
+\DoxyCodeLine{23 \textcolor{keyword}{public}:}
+\DoxyCodeLine{24 }
+\DoxyCodeLine{25     \textcolor{keywordtype}{float} \mbox{\hyperlink{class_enemy_dummy_aacc92c582fd4013912b3d06b6d1c9e11}{GetHealth}}() \{ \textcolor{keywordflow}{return} attributes ? attributes-\/>\mbox{\hyperlink{class_attribute_component_a580cf7f29236d87d448840840ad53bc6}{GetCurrentAttributeValueByType}}(\mbox{\hyperlink{namespace_hellwatch_attribute_ad0a500e65129d06e4589f9bca54c4a7da6d26574d573c085ec34ba30576725713}{HellwatchAttribute::Health}}) : 0.f; \}}
+\DoxyCodeLine{26 \};}
+\DoxyCodeLine{27 }
+
+\end{DoxyCode}

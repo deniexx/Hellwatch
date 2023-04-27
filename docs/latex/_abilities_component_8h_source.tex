@@ -1,0 +1,62 @@
+\hypertarget{_abilities_component_8h_source}{}\doxysection{Abilities\+Component.\+h}
+\label{_abilities_component_8h_source}\index{D:/Uni/CMP208/Hellwatch/build/vs2017/ActorComponents/AbilitiesComponent.h@{D:/Uni/CMP208/Hellwatch/build/vs2017/ActorComponents/AbilitiesComponent.h}}
+\mbox{\hyperlink{_abilities_component_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{2 }
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_actor_component_8h}{ActorComponent.h}}"{}}}
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_ability_8h}{Abilities/Ability.h}}"{}}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_attribute_component_8h}{Attributes/AttributeComponent.h}}"{}}}
+\DoxyCodeLine{6 }
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{9 }
+\DoxyCodeLine{14 \textcolor{keyword}{class }\mbox{\hyperlink{class_abilities_component}{AbilitiesComponent}} : \textcolor{keyword}{public} \mbox{\hyperlink{class_actor_component}{ActorComponent}}}
+\DoxyCodeLine{15 \{}
+\DoxyCodeLine{16 }
+\DoxyCodeLine{17 \textcolor{keyword}{public}:}
+\DoxyCodeLine{18 }
+\DoxyCodeLine{23     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_abilities_component_a2002c80ff8a5e6de25e5269310c6dfa5}{AddAbility}}(\mbox{\hyperlink{class_ability}{Ability}}* abilityToAdd);}
+\DoxyCodeLine{24 }
+\DoxyCodeLine{28     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_abilities_component_a06d5228f074b929c061cf34af9460be4}{EquipAbility}}(std::string abilityName, \mbox{\hyperlink{namespace_ability_activation_key_ab159d3c3f26196a9ff493b67ecf7e68c}{AbilityActivationKey::Type}} keyToEquipAt);}
+\DoxyCodeLine{29 }
+\DoxyCodeLine{33     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_abilities_component_a092acad2af7f3c106d117a3c51a04971}{ActivateAbilityByKey}}(\mbox{\hyperlink{namespace_ability_activation_key_ab159d3c3f26196a9ff493b67ecf7e68c}{AbilityActivationKey::Type}} key);}
+\DoxyCodeLine{34 }
+\DoxyCodeLine{39     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_abilities_component_aae3dce0a0f06941f91f8c14dc1a3878e}{ActivateAbilityByName}}(std::string name);}
+\DoxyCodeLine{40 }
+\DoxyCodeLine{44     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_abilities_component_a3d01f13b661e8d6bfe3c0a8f2d6af7ea}{EndAbilityByKey}}(\mbox{\hyperlink{namespace_ability_activation_key_ab159d3c3f26196a9ff493b67ecf7e68c}{AbilityActivationKey::Type}} key);}
+\DoxyCodeLine{45 }
+\DoxyCodeLine{51     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_abilities_component_a310f5751a58f69fba41f473b492e5582}{EndAbilityByName}}(std::string name);}
+\DoxyCodeLine{52 }
+\DoxyCodeLine{56     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_abilities_component_ab57de1cda84055ee7564f0709e03777f}{RegisterAttributes}}(\mbox{\hyperlink{class_attribute_component}{AttributeComponent}}* newAttributes);}
+\DoxyCodeLine{57 }
+\DoxyCodeLine{61     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_abilities_component_a10a7a5652a4d850b5845766224a43c54}{IsAbilityInCooldown}}(\textcolor{keywordtype}{int} key);}
+\DoxyCodeLine{62 }
+\DoxyCodeLine{66     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_abilities_component_a46f90af4015a7e4fa9679f5743547d94}{GetAbilityCooldown}}(\textcolor{keywordtype}{int} key);}
+\DoxyCodeLine{67 }
+\DoxyCodeLine{68     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_abilities_component_a96732cdae01d866200dc66a89200695f}{UpdateComponent}}(\textcolor{keywordtype}{float} deltaTime) \textcolor{keyword}{override};}
+\DoxyCodeLine{69 }
+\DoxyCodeLine{70 \textcolor{keyword}{protected}:}
+\DoxyCodeLine{71 }
+\DoxyCodeLine{72     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_abilities_component_aa1a55ce45b753097f0e2d7d4db4a419b}{PostInit}}() \textcolor{keyword}{override};}
+\DoxyCodeLine{73 }
+\DoxyCodeLine{74 \textcolor{keyword}{private}:}
+\DoxyCodeLine{75 }
+\DoxyCodeLine{76     std::vector<Ability*> availableAbilities;}
+\DoxyCodeLine{77     \mbox{\hyperlink{class_ability}{Ability}}* equippedAbilities[4];}
+\DoxyCodeLine{78     \mbox{\hyperlink{class_attribute_component}{AttributeComponent}}* attributes = \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{79 }
+\DoxyCodeLine{80     \textcolor{keywordtype}{bool} HasAbility(\mbox{\hyperlink{class_ability}{Ability}}* abilityToCheck);}
+\DoxyCodeLine{81     \textcolor{keywordtype}{bool} HasAbility(\textcolor{keyword}{const} std::string\& abilityToCheck);}
+\DoxyCodeLine{82     \textcolor{keywordtype}{bool} IsAbilityEquipped(\mbox{\hyperlink{class_ability}{Ability}}* abilityToCheck);}
+\DoxyCodeLine{83     \mbox{\hyperlink{class_ability}{Ability}}* FindAbility(\textcolor{keyword}{const} std::string\& abilityName);}
+\DoxyCodeLine{84     \textcolor{keywordtype}{void} EquipAbilityInternal(\mbox{\hyperlink{class_ability}{Ability}}* abilityToEquip, \mbox{\hyperlink{namespace_ability_activation_key_ab159d3c3f26196a9ff493b67ecf7e68c}{AbilityActivationKey::Type}} keyToEquipAt);}
+\DoxyCodeLine{85 }
+\DoxyCodeLine{86 \textcolor{keyword}{public}:}
+\DoxyCodeLine{87 }
+\DoxyCodeLine{88     \mbox{\hyperlink{class_attribute_component}{AttributeComponent}}* \mbox{\hyperlink{class_abilities_component_aa2e9909a907d358e34fc58a387f0e493}{GetAttributeComponent}}()\textcolor{keyword}{ const }\{ \textcolor{keywordflow}{return} attributes; \}}
+\DoxyCodeLine{89 }
+\DoxyCodeLine{90 \};}
+\DoxyCodeLine{91 }
+
+\end{DoxyCode}

@@ -1,0 +1,176 @@
+\hypertarget{class_attribute_component}{}\doxysection{Attribute\+Component Class Reference}
+\label{class_attribute_component}\index{AttributeComponent@{AttributeComponent}}
+
+
+{\ttfamily \#include $<$Attribute\+Component.\+h$>$}
+
+
+
+Inheritance diagram for Attribute\+Component\+:
+% FIG 0
+
+
+Collaboration diagram for Attribute\+Component\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+const float \mbox{\hyperlink{class_attribute_component_a580cf7f29236d87d448840840ad53bc6}{Get\+Current\+Attribute\+Value\+By\+Type}} (\mbox{\hyperlink{namespace_hellwatch_attribute_ad0a500e65129d06e4589f9bca54c4a7d}{Hellwatch\+Attribute\+::\+Type}} type) const
+\begin{DoxyCompactList}\small\item\em Gets the current attribute value  \end{DoxyCompactList}\item 
+const float \mbox{\hyperlink{class_attribute_component_ac3a3cdb64a8ddf33f584b07cb6fb3546}{Get\+Max\+Attribute\+Value\+By\+Type}} (\mbox{\hyperlink{namespace_hellwatch_attribute_ad0a500e65129d06e4589f9bca54c4a7d}{Hellwatch\+Attribute\+::\+Type}} type) const
+\begin{DoxyCompactList}\small\item\em Gets the max attribute value  \end{DoxyCompactList}\item 
+const bool \mbox{\hyperlink{class_attribute_component_ac8bc3fd1392349fb859ddf83e3e8e027}{Check\+Has\+Enough\+Of\+Attribute\+By\+Type}} (\mbox{\hyperlink{namespace_hellwatch_attribute_ad0a500e65129d06e4589f9bca54c4a7d}{Hellwatch\+Attribute\+::\+Type}} type, float amount\+Needed)
+\begin{DoxyCompactList}\small\item\em Checks if we have enough of the specified attribute  \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_attribute_component_ab359fd856c0eaee6fda4c81765c9b336}{Set\+Attribute\+Current\+Value}} (\mbox{\hyperlink{namespace_hellwatch_attribute_ad0a500e65129d06e4589f9bca54c4a7d}{Hellwatch\+Attribute\+::\+Type}} type, float new\+Value)
+\begin{DoxyCompactList}\small\item\em Sets the attribute current to the new given value  \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_attribute_component_a1ed8d3136ef683d442d1ff7523d219b0}{Set\+Attribute\+Max\+Value}} (\mbox{\hyperlink{namespace_hellwatch_attribute_ad0a500e65129d06e4589f9bca54c4a7d}{Hellwatch\+Attribute\+::\+Type}} type, float new\+Value)
+\begin{DoxyCompactList}\small\item\em Sets the attribute max value to the new given value  \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_attribute_component_ada89535490c847acf8574d39d35c837c}{Set\+Attribute\+Current\+And\+Max\+Value}} (\mbox{\hyperlink{namespace_hellwatch_attribute_ad0a500e65129d06e4589f9bca54c4a7d}{Hellwatch\+Attribute\+::\+Type}}, float new\+Value)
+\begin{DoxyCompactList}\small\item\em Sets the attribute current and max value to the new given value  \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_attribute_component_a2a29edbf9c15e3296eb8ac4f5b59e8c9}{Apply\+Attribute\+Change}} (\mbox{\hyperlink{namespace_hellwatch_attribute_ad0a500e65129d06e4589f9bca54c4a7d}{Hellwatch\+Attribute\+::\+Type}} type, float delta)
+\begin{DoxyCompactList}\small\item\em Applies an attribute change to the specified attribute, can be positive or negative  \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_attribute_component_a381ad0a8f330864674b1cf80bc27f858}{Apply\+Attribute\+Max\+Value\+Change}} (\mbox{\hyperlink{namespace_hellwatch_attribute_ad0a500e65129d06e4589f9bca54c4a7d}{Hellwatch\+Attribute\+::\+Type}} type, float delta)
+\begin{DoxyCompactList}\small\item\em Applies an attribute change to the specified attribute\textquotesingle{}s max value, can be positive or negative  \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_attribute_component_a3677b4bee550b858f87f5e62148d1e10}{Init\+Attributes\+By\+Spec}} (std\+::vector$<$ \mbox{\hyperlink{struct_f_attribute}{FAttribute}} $>$ \&attributes\+To\+Init)
+\begin{DoxyCompactList}\small\item\em Initializes attribute component by spec, spec meaning a container of multiple attributes  \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_attribute_component_a6f76a7c8bb5bf45d085ffb001cec45d5}{Add\+Attribute}} (\mbox{\hyperlink{struct_f_attribute}{FAttribute}} \&attribute\+To\+Add)
+\begin{DoxyCompactList}\small\item\em Adds an attribute @\+NOTE\+: We can not have 2 attributes of the same type, if that happens, the new attribute will be ignore and we will keep the old one  \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_attribute_component_ac864c662a9b8d2155fa8142078ce3dff}{Apply\+Attribute\+Multiplier}} (\mbox{\hyperlink{namespace_hellwatch_attribute_ad0a500e65129d06e4589f9bca54c4a7d}{Hellwatch\+Attribute\+::\+Type}} type, float multipliyer)
+\begin{DoxyCompactList}\small\item\em Applies a multiplier to an attribute  \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_attribute_component_ae67a6fc2951e19257274edb42eec023f}{Update\+Component}} (float delta\+Time)
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_attribute_component_a6f76a7c8bb5bf45d085ffb001cec45d5}\label{class_attribute_component_a6f76a7c8bb5bf45d085ffb001cec45d5}} 
+\index{AttributeComponent@{AttributeComponent}!AddAttribute@{AddAttribute}}
+\index{AddAttribute@{AddAttribute}!AttributeComponent@{AttributeComponent}}
+\doxysubsubsection{\texorpdfstring{AddAttribute()}{AddAttribute()}}
+{\footnotesize\ttfamily void Attribute\+Component\+::\+Add\+Attribute (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_f_attribute}{FAttribute}} \&}]{attribute\+To\+Add }\end{DoxyParamCaption})}
+
+
+
+Adds an attribute @\+NOTE\+: We can not have 2 attributes of the same type, if that happens, the new attribute will be ignore and we will keep the old one  
+
+\mbox{\Hypertarget{class_attribute_component_a2a29edbf9c15e3296eb8ac4f5b59e8c9}\label{class_attribute_component_a2a29edbf9c15e3296eb8ac4f5b59e8c9}} 
+\index{AttributeComponent@{AttributeComponent}!ApplyAttributeChange@{ApplyAttributeChange}}
+\index{ApplyAttributeChange@{ApplyAttributeChange}!AttributeComponent@{AttributeComponent}}
+\doxysubsubsection{\texorpdfstring{ApplyAttributeChange()}{ApplyAttributeChange()}}
+{\footnotesize\ttfamily void Attribute\+Component\+::\+Apply\+Attribute\+Change (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespace_hellwatch_attribute_ad0a500e65129d06e4589f9bca54c4a7d}{Hellwatch\+Attribute\+::\+Type}}}]{type,  }\item[{float}]{delta }\end{DoxyParamCaption})}
+
+
+
+Applies an attribute change to the specified attribute, can be positive or negative  
+
+\mbox{\Hypertarget{class_attribute_component_a381ad0a8f330864674b1cf80bc27f858}\label{class_attribute_component_a381ad0a8f330864674b1cf80bc27f858}} 
+\index{AttributeComponent@{AttributeComponent}!ApplyAttributeMaxValueChange@{ApplyAttributeMaxValueChange}}
+\index{ApplyAttributeMaxValueChange@{ApplyAttributeMaxValueChange}!AttributeComponent@{AttributeComponent}}
+\doxysubsubsection{\texorpdfstring{ApplyAttributeMaxValueChange()}{ApplyAttributeMaxValueChange()}}
+{\footnotesize\ttfamily void Attribute\+Component\+::\+Apply\+Attribute\+Max\+Value\+Change (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespace_hellwatch_attribute_ad0a500e65129d06e4589f9bca54c4a7d}{Hellwatch\+Attribute\+::\+Type}}}]{type,  }\item[{float}]{delta }\end{DoxyParamCaption})}
+
+
+
+Applies an attribute change to the specified attribute\textquotesingle{}s max value, can be positive or negative  
+
+\mbox{\Hypertarget{class_attribute_component_ac864c662a9b8d2155fa8142078ce3dff}\label{class_attribute_component_ac864c662a9b8d2155fa8142078ce3dff}} 
+\index{AttributeComponent@{AttributeComponent}!ApplyAttributeMultiplier@{ApplyAttributeMultiplier}}
+\index{ApplyAttributeMultiplier@{ApplyAttributeMultiplier}!AttributeComponent@{AttributeComponent}}
+\doxysubsubsection{\texorpdfstring{ApplyAttributeMultiplier()}{ApplyAttributeMultiplier()}}
+{\footnotesize\ttfamily void Attribute\+Component\+::\+Apply\+Attribute\+Multiplier (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespace_hellwatch_attribute_ad0a500e65129d06e4589f9bca54c4a7d}{Hellwatch\+Attribute\+::\+Type}}}]{type,  }\item[{float}]{multipliyer }\end{DoxyParamCaption})}
+
+
+
+Applies a multiplier to an attribute  
+
+\mbox{\Hypertarget{class_attribute_component_ac8bc3fd1392349fb859ddf83e3e8e027}\label{class_attribute_component_ac8bc3fd1392349fb859ddf83e3e8e027}} 
+\index{AttributeComponent@{AttributeComponent}!CheckHasEnoughOfAttributeByType@{CheckHasEnoughOfAttributeByType}}
+\index{CheckHasEnoughOfAttributeByType@{CheckHasEnoughOfAttributeByType}!AttributeComponent@{AttributeComponent}}
+\doxysubsubsection{\texorpdfstring{CheckHasEnoughOfAttributeByType()}{CheckHasEnoughOfAttributeByType()}}
+{\footnotesize\ttfamily const bool Attribute\+Component\+::\+Check\+Has\+Enough\+Of\+Attribute\+By\+Type (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespace_hellwatch_attribute_ad0a500e65129d06e4589f9bca54c4a7d}{Hellwatch\+Attribute\+::\+Type}}}]{type,  }\item[{float}]{amount\+Needed }\end{DoxyParamCaption})}
+
+
+
+Checks if we have enough of the specified attribute  
+
+\mbox{\Hypertarget{class_attribute_component_a580cf7f29236d87d448840840ad53bc6}\label{class_attribute_component_a580cf7f29236d87d448840840ad53bc6}} 
+\index{AttributeComponent@{AttributeComponent}!GetCurrentAttributeValueByType@{GetCurrentAttributeValueByType}}
+\index{GetCurrentAttributeValueByType@{GetCurrentAttributeValueByType}!AttributeComponent@{AttributeComponent}}
+\doxysubsubsection{\texorpdfstring{GetCurrentAttributeValueByType()}{GetCurrentAttributeValueByType()}}
+{\footnotesize\ttfamily const float Attribute\+Component\+::\+Get\+Current\+Attribute\+Value\+By\+Type (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespace_hellwatch_attribute_ad0a500e65129d06e4589f9bca54c4a7d}{Hellwatch\+Attribute\+::\+Type}}}]{type }\end{DoxyParamCaption}) const}
+
+
+
+Gets the current attribute value  
+
+\mbox{\Hypertarget{class_attribute_component_ac3a3cdb64a8ddf33f584b07cb6fb3546}\label{class_attribute_component_ac3a3cdb64a8ddf33f584b07cb6fb3546}} 
+\index{AttributeComponent@{AttributeComponent}!GetMaxAttributeValueByType@{GetMaxAttributeValueByType}}
+\index{GetMaxAttributeValueByType@{GetMaxAttributeValueByType}!AttributeComponent@{AttributeComponent}}
+\doxysubsubsection{\texorpdfstring{GetMaxAttributeValueByType()}{GetMaxAttributeValueByType()}}
+{\footnotesize\ttfamily const float Attribute\+Component\+::\+Get\+Max\+Attribute\+Value\+By\+Type (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespace_hellwatch_attribute_ad0a500e65129d06e4589f9bca54c4a7d}{Hellwatch\+Attribute\+::\+Type}}}]{type }\end{DoxyParamCaption}) const}
+
+
+
+Gets the max attribute value  
+
+\mbox{\Hypertarget{class_attribute_component_a3677b4bee550b858f87f5e62148d1e10}\label{class_attribute_component_a3677b4bee550b858f87f5e62148d1e10}} 
+\index{AttributeComponent@{AttributeComponent}!InitAttributesBySpec@{InitAttributesBySpec}}
+\index{InitAttributesBySpec@{InitAttributesBySpec}!AttributeComponent@{AttributeComponent}}
+\doxysubsubsection{\texorpdfstring{InitAttributesBySpec()}{InitAttributesBySpec()}}
+{\footnotesize\ttfamily void Attribute\+Component\+::\+Init\+Attributes\+By\+Spec (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{struct_f_attribute}{FAttribute}} $>$ \&}]{attributes\+To\+Init }\end{DoxyParamCaption})}
+
+
+
+Initializes attribute component by spec, spec meaning a container of multiple attributes  
+
+
+\begin{DoxyParams}{Parameters}
+{\em attributes\+To\+Init} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_attribute_component_ada89535490c847acf8574d39d35c837c}\label{class_attribute_component_ada89535490c847acf8574d39d35c837c}} 
+\index{AttributeComponent@{AttributeComponent}!SetAttributeCurrentAndMaxValue@{SetAttributeCurrentAndMaxValue}}
+\index{SetAttributeCurrentAndMaxValue@{SetAttributeCurrentAndMaxValue}!AttributeComponent@{AttributeComponent}}
+\doxysubsubsection{\texorpdfstring{SetAttributeCurrentAndMaxValue()}{SetAttributeCurrentAndMaxValue()}}
+{\footnotesize\ttfamily void Attribute\+Component\+::\+Set\+Attribute\+Current\+And\+Max\+Value (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespace_hellwatch_attribute_ad0a500e65129d06e4589f9bca54c4a7d}{Hellwatch\+Attribute\+::\+Type}}}]{type,  }\item[{float}]{new\+Value }\end{DoxyParamCaption})}
+
+
+
+Sets the attribute current and max value to the new given value  
+
+\mbox{\Hypertarget{class_attribute_component_ab359fd856c0eaee6fda4c81765c9b336}\label{class_attribute_component_ab359fd856c0eaee6fda4c81765c9b336}} 
+\index{AttributeComponent@{AttributeComponent}!SetAttributeCurrentValue@{SetAttributeCurrentValue}}
+\index{SetAttributeCurrentValue@{SetAttributeCurrentValue}!AttributeComponent@{AttributeComponent}}
+\doxysubsubsection{\texorpdfstring{SetAttributeCurrentValue()}{SetAttributeCurrentValue()}}
+{\footnotesize\ttfamily void Attribute\+Component\+::\+Set\+Attribute\+Current\+Value (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespace_hellwatch_attribute_ad0a500e65129d06e4589f9bca54c4a7d}{Hellwatch\+Attribute\+::\+Type}}}]{type,  }\item[{float}]{new\+Value }\end{DoxyParamCaption})}
+
+
+
+Sets the attribute current to the new given value  
+
+\mbox{\Hypertarget{class_attribute_component_a1ed8d3136ef683d442d1ff7523d219b0}\label{class_attribute_component_a1ed8d3136ef683d442d1ff7523d219b0}} 
+\index{AttributeComponent@{AttributeComponent}!SetAttributeMaxValue@{SetAttributeMaxValue}}
+\index{SetAttributeMaxValue@{SetAttributeMaxValue}!AttributeComponent@{AttributeComponent}}
+\doxysubsubsection{\texorpdfstring{SetAttributeMaxValue()}{SetAttributeMaxValue()}}
+{\footnotesize\ttfamily void Attribute\+Component\+::\+Set\+Attribute\+Max\+Value (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespace_hellwatch_attribute_ad0a500e65129d06e4589f9bca54c4a7d}{Hellwatch\+Attribute\+::\+Type}}}]{type,  }\item[{float}]{new\+Value }\end{DoxyParamCaption})}
+
+
+
+Sets the attribute max value to the new given value  
+
+\mbox{\Hypertarget{class_attribute_component_ae67a6fc2951e19257274edb42eec023f}\label{class_attribute_component_ae67a6fc2951e19257274edb42eec023f}} 
+\index{AttributeComponent@{AttributeComponent}!UpdateComponent@{UpdateComponent}}
+\index{UpdateComponent@{UpdateComponent}!AttributeComponent@{AttributeComponent}}
+\doxysubsubsection{\texorpdfstring{UpdateComponent()}{UpdateComponent()}}
+{\footnotesize\ttfamily void Attribute\+Component\+::\+Update\+Component (\begin{DoxyParamCaption}\item[{float}]{delta\+Time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_actor_component_af730b3c7d2b4154e1fb0962db7750f6b}{Actor\+Component}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Uni/\+CMP208/\+Hellwatch/build/vs2017/\+Attributes/\mbox{\hyperlink{_attribute_component_8h}{Attribute\+Component.\+h}}\item 
+D\+:/\+Uni/\+CMP208/\+Hellwatch/build/vs2017/\+Attributes/\mbox{\hyperlink{_attribute_component_8cpp}{Attribute\+Component.\+cpp}}\end{DoxyCompactItemize}

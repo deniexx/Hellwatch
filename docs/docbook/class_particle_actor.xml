@@ -1,0 +1,115 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_particle_actor" xml:lang="en-US">
+<title>ParticleActor Class Reference</title>
+<indexterm><primary>ParticleActor</primary></indexterm>
+<para>
+<computeroutput>#include &lt;ParticleActor.h&gt;</computeroutput>
+</para>
+Inheritance diagram for ParticleActor:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_particle_actor__inherit__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Collaboration diagram for ParticleActor:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_particle_actor__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_class_particle_actor_1aac7c62cbf5b02d9f925b1384ec53b65c">SetParticleData</link> (const <link linkend="_struct_f_particle_data">FParticleData</link> &amp;newData)</para>
+
+<para>Sets new particle data  </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_particle_actor_1afc281ad9a6f6803c645b077106600234">Play</link> ()</para>
+
+<para>Plays the particles  </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_particle_actor_1a5ef5f56da7eadd86f647ab3f519061be">Stop</link> ()</para>
+
+<para>Stops the particles  </para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_class_particle_actor_1a5ed58a9e57286e08cf8a650aaf22f43f">Update</link> (float deltaTime) override</para>
+
+<para>Update function, called every frame  </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Additional Inherited Members    </title>
+</simplesect>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_particle_actor_1afc281ad9a6f6803c645b077106600234"/><section>
+    <title>Play()</title>
+<indexterm><primary>Play</primary><secondary>ParticleActor</secondary></indexterm>
+<indexterm><primary>ParticleActor</primary><secondary>Play</secondary></indexterm>
+<para><computeroutput>void ParticleActor::Play ( )</computeroutput></para><para>
+
+<para>Plays the particles  </para>
+</para>
+</section>
+<anchor xml:id="_class_particle_actor_1aac7c62cbf5b02d9f925b1384ec53b65c"/><section>
+    <title>SetParticleData()</title>
+<indexterm><primary>SetParticleData</primary><secondary>ParticleActor</secondary></indexterm>
+<indexterm><primary>ParticleActor</primary><secondary>SetParticleData</secondary></indexterm>
+<para><computeroutput>void ParticleActor::SetParticleData (const <link linkend="_struct_f_particle_data">FParticleData</link> &amp; newData)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Sets new particle data  </para>
+</para>
+</section>
+<anchor xml:id="_class_particle_actor_1a5ef5f56da7eadd86f647ab3f519061be"/><section>
+    <title>Stop()</title>
+<indexterm><primary>Stop</primary><secondary>ParticleActor</secondary></indexterm>
+<indexterm><primary>ParticleActor</primary><secondary>Stop</secondary></indexterm>
+<para><computeroutput>void ParticleActor::Stop ( )</computeroutput></para><para>
+
+<para>Stops the particles  </para>
+</para>
+</section>
+<anchor xml:id="_class_particle_actor_1a5ed58a9e57286e08cf8a650aaf22f43f"/><section>
+    <title>Update()</title>
+<indexterm><primary>Update</primary><secondary>ParticleActor</secondary></indexterm>
+<indexterm><primary>ParticleActor</primary><secondary>Update</secondary></indexterm>
+<para><computeroutput>void ParticleActor::Update (float deltaTime)<computeroutput>[override]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Update function, called every frame  </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>deltaTime</entry><entry>
+<para>Float variable for the frame time</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Reimplemented from <link linkend="_class_mesh_actor_1a3743470557ddbbc88bc73e4dd283d6bf">MeshActor</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following files:</para>
+D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/<link linkend="__particle_actor_8h">ParticleActor.h</link>D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/<link linkend="__particle_actor_8cpp">ParticleActor.cpp</link></section>
+</section>

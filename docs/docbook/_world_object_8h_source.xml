@@ -1,0 +1,86 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__world_object_8h_source" xml:lang="en-US">
+<title>WorldObject.h</title>
+<indexterm><primary>D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/WorldObject.h</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered">1 <emphasis role="preprocessor">#pragma&#32;once</emphasis>
+2 
+3 <emphasis role="preprocessor">#include&#32;&lt;maths/Matrix44.h&gt;</emphasis>
+4 <emphasis role="preprocessor">#include&#32;&lt;maths/quaternion.h&gt;</emphasis>
+5 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="__utils_8h">Utils.h</link>&quot;</emphasis>
+6 
+7 <emphasis role="comment">/************************************************************************/</emphasis>
+8 <emphasis role="comment">/*&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;FORWARD&#32;DECLARATIONS&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;*/</emphasis>
+9 <emphasis role="comment">/************************************************************************/</emphasis>
+10 <emphasis role="keyword">class&#32;</emphasis>b2Body;
+11 
+12 <emphasis role="comment">/************************************************************************/</emphasis>
+13 <emphasis role="comment">/*&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Base&#32;Object&#32;Class&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;*/</emphasis>
+14 <emphasis role="comment">/************************************************************************/</emphasis>
+15 <emphasis role="keyword">class&#32;</emphasis><link linkend="_class_world_object">WorldObject</link>
+16 {
+17 
+18 <emphasis role="keyword">public</emphasis>:
+19 
+23 &#32;&#32;&#32;&#32;<link linkend="_class_world_object_1a632d2e78acdcbc0aef09951134340d4e">WorldObject</link>();
+24 
+25 &#32;&#32;&#32;&#32;<link linkend="_class_world_object_1a287e5b87a26133cd35f3015268d2a5a3">~WorldObject</link>();
+26 
+32 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_world_object_1aa2d0bc51a9b2dac1930c37e2401e8934">Init</link>(<link linkend="_class_world_object">WorldObject</link>*&#32;owner&#32;=&#32;<emphasis role="keyword">nullptr</emphasis>);
+33 
+37 &#32;&#32;&#32;&#32;<emphasis role="keyword">virtual</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_world_object_1a8500a6a24c62699fa103a68349407a3f">PostInit</link>();
+38 
+43 &#32;&#32;&#32;&#32;<emphasis role="keyword">virtual</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_world_object_1a828815709498f192bf138ecfe416c529">Update</link>(<emphasis role="keywordtype">float</emphasis>&#32;deltaTime);
+44 
+48 &#32;&#32;&#32;&#32;<emphasis role="keyword">virtual</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_world_object_1a2a30bf431fa478eb5d24683e1906c261">Render</link>();
+49 
+53 &#32;&#32;&#32;&#32;<emphasis role="keyword">virtual</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_world_object_1a7c563531a541e9f5ff4193443cedd515">OnCollision</link>(b2Body*&#32;OtherBody);
+54 
+55 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_class_world_object_1a9f76e2def47f4d6be6bafb330ac0394b">ID</link>&#32;=&#32;<link linkend="__utils_8h_1a642e16f35aa1e585c25e405ede76e115">NO_ID</link>;
+56 
+57 <emphasis role="keyword">protected</emphasis>:
+58 
+59 &#32;&#32;&#32;&#32;b2Body*&#32;<link linkend="_class_world_object_1a025ba78ec5cc2607f7e62750a7c37749">collisionBody</link>&#32;=&#32;<emphasis role="keyword">nullptr</emphasis>;
+60 &#32;&#32;&#32;&#32;gef::Matrix44&#32;<link linkend="_class_world_object_1a9e5ac0cc278f5766b6020950fdabbe75">transformMat</link>;
+61 &#32;&#32;&#32;&#32;<link linkend="_class_world_object">WorldObject</link>*&#32;<link linkend="_class_world_object_1a8917ba1d61e12c12f7246c7b95cd4094">owningObject</link>;
+62 
+63 &#32;&#32;&#32;&#32;gef::Vector4&#32;<link linkend="_class_world_object_1a78bd9162f55826c5c68706d688578cf8">translation</link>;
+64 &#32;&#32;&#32;&#32;gef::Vector4&#32;<link linkend="_class_world_object_1a45f28fb0c7cf14a6c92ab72eaa4eb9a9">scale</link>;
+65 &#32;&#32;&#32;&#32;gef::Vector4&#32;<link linkend="_class_world_object_1a519b69f0419703cfbe08580d4b2ab408">rotationVec</link>;
+66 
+67 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_class_world_object_1a60c2b1f707b5694f97dd950996d05e11">bMarkedForDelete</link>&#32;=&#32;<emphasis role="keyword">false</emphasis>;
+68 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_class_world_object_1ac10cc37682a3a3cce8405411fbd8f4c3">bDisableUpdate</link>&#32;=&#32;<emphasis role="keyword">false</emphasis>;
+69 
+70 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_world_object_1a4c83c0d8e3817aac3ef2080ec0972802">BuildTransform</link>();
+71 &#32;&#32;&#32;&#32;
+72 <emphasis role="keyword">public</emphasis>:
+73 
+74 <emphasis role="comment">&#32;&#32;&#32;&#32;/************************************************************************/</emphasis>
+75 &#32;&#32;&#32;&#32;<emphasis role="comment">/*&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;SETTERS&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;*/</emphasis>
+76 <emphasis role="comment">&#32;&#32;&#32;&#32;/************************************************************************/</emphasis>
+77 &#32;&#32;&#32;&#32;<emphasis role="keyword">virtual</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_world_object_1a830b64bbf6df3fc50284b0316c124133">SetTranslation</link>(<emphasis role="keyword">const</emphasis>&#32;gef::Vector4&amp;&#32;inTranslation);
+78 &#32;&#32;&#32;&#32;<emphasis role="keyword">virtual</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_world_object_1a18ba8b67b53f7df01220643617ecd75c">SetRotation</link>(<emphasis role="keyword">const</emphasis>&#32;gef::Vector4&amp;&#32;inRotation);
+79 &#32;&#32;&#32;&#32;<emphasis role="keyword">virtual</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_world_object_1a18ba8b67b53f7df01220643617ecd75c">SetRotation</link>(<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">float</emphasis>&#32;inRotation);
+80 &#32;&#32;&#32;&#32;<emphasis role="keyword">virtual</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_world_object_1ae00d341e9ac8909374dd556aaecbdb46">SetScale</link>(<emphasis role="keyword">const</emphasis>&#32;gef::Vector4&amp;&#32;inScale);
+81 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_world_object_1a8817deac42a357d2ed476791c7b76511">SetCollisionBody</link>(b2Body*&#32;inCollisionBody);
+82 
+83 <emphasis role="comment">&#32;&#32;&#32;&#32;/************************************************************************/</emphasis>
+84 &#32;&#32;&#32;&#32;<emphasis role="comment">/*&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;GETTERS&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;*/</emphasis>
+85 <emphasis role="comment">&#32;&#32;&#32;&#32;/************************************************************************/</emphasis>
+86 &#32;&#32;&#32;&#32;__forceinline&#32;<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keyword">virtual</emphasis>&#32;gef::Vector4&amp;&#32;<link linkend="_class_world_object_1a9967baa65719f1418641598a244306a5">GetTranslation</link>()<emphasis role="keyword">&#32;const&#32;</emphasis>{&#32;<emphasis role="keywordflow">return</emphasis>&#32;<link linkend="_class_world_object_1a9e5ac0cc278f5766b6020950fdabbe75">transformMat</link>.GetTranslation();&#32;}
+87 &#32;&#32;&#32;&#32;__forceinline&#32;<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keyword">virtual</emphasis>&#32;gef::Vector4&amp;&#32;<link linkend="_class_world_object_1a271e4b4870fadf60e285576f94b31e79">GetRotation</link>()<emphasis role="keyword">&#32;const&#32;</emphasis>{&#32;<emphasis role="keywordflow">return</emphasis>&#32;<link linkend="_class_world_object_1a519b69f0419703cfbe08580d4b2ab408">rotationVec</link>;&#32;};
+88 &#32;&#32;&#32;&#32;__forceinline&#32;<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keyword">virtual</emphasis>&#32;<emphasis role="keywordtype">float</emphasis>&#32;<link linkend="_class_world_object_1aa959995cc385843f1e2b0139e4413ab5">GetRotationF</link>()<emphasis role="keyword">&#32;const&#32;</emphasis>{&#32;<emphasis role="keywordflow">return</emphasis>&#32;0.f;&#32;}
+89 &#32;&#32;&#32;&#32;__forceinline&#32;<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keyword">virtual</emphasis>&#32;gef::Vector4&amp;&#32;<link linkend="_class_world_object_1a223b3653f965b7698ec28c9b4fc84e28">GetScale</link>()<emphasis role="keyword">&#32;const&#32;</emphasis>{&#32;<emphasis role="keywordflow">return</emphasis>&#32;<link linkend="_class_world_object_1a9e5ac0cc278f5766b6020950fdabbe75">transformMat</link>.GetScale();&#32;}
+90 &#32;&#32;&#32;&#32;__forceinline&#32;<emphasis role="keyword">const</emphasis>&#32;gef::Matrix44&amp;&#32;<link linkend="_class_world_object_1a1302aea00b9a5f348459f55e9dd50725">GetTransform</link>()<emphasis role="keyword">&#32;const&#32;</emphasis>{&#32;<emphasis role="keywordflow">return</emphasis>&#32;<link linkend="_class_world_object_1a9e5ac0cc278f5766b6020950fdabbe75">transformMat</link>;&#32;}
+91 &#32;&#32;&#32;&#32;__forceinline&#32;<link linkend="_class_world_object">WorldObject</link>*&#32;<link linkend="_class_world_object_1a0fdf372cdda0fb026916b60e19e657a0">GetOwner</link>()<emphasis role="keyword">&#32;const&#32;</emphasis>{&#32;<emphasis role="keywordflow">return</emphasis>&#32;<link linkend="_class_world_object_1a8917ba1d61e12c12f7246c7b95cd4094">owningObject</link>;&#32;}
+92 &#32;&#32;&#32;&#32;__forceinline&#32;b2Body*&#32;<link linkend="_class_world_object_1aa3b5f5e5e1ed26c94265854e2858bdee">GetCollisionBody</link>()<emphasis role="keyword">&#32;const&#32;</emphasis>{&#32;<emphasis role="keywordflow">return</emphasis>&#32;<link linkend="_class_world_object_1a025ba78ec5cc2607f7e62750a7c37749">collisionBody</link>;&#32;}
+93 
+94 
+95 &#32;&#32;&#32;&#32;__forceinline&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_world_object_1a4402fa17dfd062fc97750d581d4f774b">MarkForDelete</link>()&#32;{&#32;<link linkend="_class_world_object_1a60c2b1f707b5694f97dd950996d05e11">bMarkedForDelete</link>&#32;=&#32;<emphasis role="keyword">true</emphasis>;&#32;}
+96 &#32;&#32;&#32;&#32;__forceinline&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_world_object_1a650a599e9ffa751eaba296c4ef6ec2d2">DisableUpdate</link>()&#32;{&#32;<link linkend="_class_world_object_1ac10cc37682a3a3cce8405411fbd8f4c3">bDisableUpdate</link>&#32;=&#32;<emphasis role="keyword">true</emphasis>;&#32;}
+97 &#32;&#32;&#32;&#32;__forceinline&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_world_object_1a42e101b6adf4911396d95acc5b1741d8">EnableUpdate</link>()&#32;{&#32;<link linkend="_class_world_object_1ac10cc37682a3a3cce8405411fbd8f4c3">bDisableUpdate</link>&#32;=&#32;<emphasis role="keyword">false</emphasis>;&#32;}
+98 
+99 &#32;&#32;&#32;&#32;__forceinline&#32;<emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_class_world_object_1a78b0b88900685e80feffc6921fd9f370">ShouldUpdate</link>()&#32;{&#32;<emphasis role="keywordflow">return</emphasis>&#32;!<link linkend="_class_world_object_1ac10cc37682a3a3cce8405411fbd8f4c3">bDisableUpdate</link>;&#32;}
+100 &#32;&#32;&#32;&#32;__forceinline&#32;<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_class_world_object_1aaebbb0abbabef79ad542f01db4ef6101">GetIsMarkedForDelete</link>()<emphasis role="keyword">&#32;const&#32;</emphasis>{&#32;<emphasis role="keywordflow">return</emphasis>&#32;<link linkend="_class_world_object_1a60c2b1f707b5694f97dd950996d05e11">bMarkedForDelete</link>;&#32;}
+101 };
+102 
+</programlisting></section>

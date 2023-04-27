@@ -1,0 +1,129 @@
+.TH "AbilitiesComponent" 3 "Thu Apr 27 2023" "Hellwatch" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+AbilitiesComponent \- A component allowing the object to use abilities @NOTE: Requires an attribute component to function properly   
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <AbilitiesComponent\&.h>\fP
+.PP
+Inherits \fBActorComponent\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBAddAbility\fP (\fBAbility\fP *abilityToAdd)"
+.br
+.RI "Adds an ability to our system @NOTE: It does not equip it, just adds it to the available abilities vector  "
+.ti -1c
+.RI "void \fBEquipAbility\fP (std::string abilityName, \fBAbilityActivationKey::Type\fP keyToEquipAt)"
+.br
+.RI "Equips an ability, at a specific key  "
+.ti -1c
+.RI "void \fBActivateAbilityByKey\fP (\fBAbilityActivationKey::Type\fP key)"
+.br
+.RI "Attempts to activate ability by key  "
+.ti -1c
+.RI "void \fBActivateAbilityByName\fP (std::string name)"
+.br
+.RI "Attempts to activate ability by its name @NOTE: Preferred to use ActivateAbilityByKey version  "
+.ti -1c
+.RI "void \fBEndAbilityByKey\fP (\fBAbilityActivationKey::Type\fP key)"
+.br
+.RI "Ends an ability by key, we can use this if we prematurely end ability, etc\&.\&.\&.  "
+.ti -1c
+.RI "void \fBEndAbilityByName\fP (std::string name)"
+.br
+.RI "Ends an ability by name, we can use this if we prematurely end ability, etc\&.\&.\&. Preferred to use EndAbilityByKey version  "
+.ti -1c
+.RI "void \fBRegisterAttributes\fP (\fBAttributeComponent\fP *newAttributes)"
+.br
+.RI "Registers an attribute component to this ability system  "
+.ti -1c
+.RI "bool \fBIsAbilityInCooldown\fP (int key)"
+.br
+.RI "Checks whether an ability is in cooldown  "
+.ti -1c
+.RI "int \fBGetAbilityCooldown\fP (int key)"
+.br
+.RI "Gets the ability cooldown  "
+.ti -1c
+.RI "virtual void \fBUpdateComponent\fP (float deltaTime) override"
+.br
+.ti -1c
+.RI "\fBAttributeComponent\fP * \fBGetAttributeComponent\fP () const"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "virtual void \fBPostInit\fP () override"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+A component allowing the object to use abilities @NOTE: Requires an attribute component to function properly  
+.SH "Member Function Documentation"
+.PP 
+.SS "void AbilitiesComponent::ActivateAbilityByKey (\fBAbilityActivationKey::Type\fP key)"
+
+.PP
+Attempts to activate ability by key  
+.SS "void AbilitiesComponent::ActivateAbilityByName (std::string name)"
+
+.PP
+Attempts to activate ability by its name @NOTE: Preferred to use ActivateAbilityByKey version  
+.SS "void AbilitiesComponent::AddAbility (\fBAbility\fP * abilityToAdd)"
+
+.PP
+Adds an ability to our system @NOTE: It does not equip it, just adds it to the available abilities vector  
+.SS "void AbilitiesComponent::EndAbilityByKey (\fBAbilityActivationKey::Type\fP key)"
+
+.PP
+Ends an ability by key, we can use this if we prematurely end ability, etc\&.\&.\&.  
+.SS "void AbilitiesComponent::EndAbilityByName (std::string name)"
+
+.PP
+Ends an ability by name, we can use this if we prematurely end ability, etc\&.\&.\&. Preferred to use EndAbilityByKey version  
+.PP
+\fBParameters\fP
+.RS 4
+\fIname\fP 
+.RE
+.PP
+
+.SS "void AbilitiesComponent::EquipAbility (std::string abilityName, \fBAbilityActivationKey::Type\fP keyToEquipAt)"
+
+.PP
+Equips an ability, at a specific key  
+.SS "int AbilitiesComponent::GetAbilityCooldown (int key)"
+
+.PP
+Gets the ability cooldown  
+.SS "\fBAttributeComponent\fP * AbilitiesComponent::GetAttributeComponent () const\fC [inline]\fP"
+
+.SS "bool AbilitiesComponent::IsAbilityInCooldown (int key)"
+
+.PP
+Checks whether an ability is in cooldown  
+.SS "void AbilitiesComponent::PostInit ()\fC [override]\fP, \fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+Reimplemented from \fBActorComponent\fP\&.
+.SS "void AbilitiesComponent::RegisterAttributes (\fBAttributeComponent\fP * newAttributes)"
+
+.PP
+Registers an attribute component to this ability system  
+.SS "void AbilitiesComponent::UpdateComponent (float deltaTime)\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+Reimplemented from \fBActorComponent\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Hellwatch from the source code\&.

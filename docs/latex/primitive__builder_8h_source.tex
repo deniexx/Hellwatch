@@ -1,0 +1,68 @@
+\hypertarget{primitive__builder_8h_source}{}\doxysection{D\+:/\+Uni/\+CMP208/\+Hellwatch/primitive\+\_\+builder.h}
+\mbox{\hyperlink{primitive__builder_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef \_PRIMITIVE\_BUILDER\_H}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define \_PRIMITIVE\_BUILDER\_H}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <maths/vector4.h>}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include <graphics/material.h>}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include <cstddef>}}
+\DoxyCodeLine{7 }
+\DoxyCodeLine{8 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacegef}{gef}}}
+\DoxyCodeLine{9 \{}
+\DoxyCodeLine{10     \textcolor{keyword}{class }Mesh;}
+\DoxyCodeLine{11     \textcolor{keyword}{class }Platform;}
+\DoxyCodeLine{12 \}}
+\DoxyCodeLine{13 }
+\DoxyCodeLine{14 \textcolor{keyword}{class }\mbox{\hyperlink{class_primitive_builder}{PrimitiveBuilder}}}
+\DoxyCodeLine{15 \{}
+\DoxyCodeLine{16 \textcolor{keyword}{public}:}
+\DoxyCodeLine{19     \mbox{\hyperlink{class_primitive_builder}{PrimitiveBuilder}}(gef::Platform\& platform);}
+\DoxyCodeLine{20 }
+\DoxyCodeLine{22     \mbox{\hyperlink{class_primitive_builder_a70ac6a74c6a3fe209cabf315b0f7bf4d}{\string~PrimitiveBuilder}}();}
+\DoxyCodeLine{23 }
+\DoxyCodeLine{25     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_primitive_builder_a1b4b6db65689d27a2bc3cad69803b079}{Init}}();}
+\DoxyCodeLine{26 }
+\DoxyCodeLine{28     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_primitive_builder_aed9655474f22afaa00ff015c454bd736}{CleanUp}}();}
+\DoxyCodeLine{29 }
+\DoxyCodeLine{35     gef::Mesh* \mbox{\hyperlink{class_primitive_builder_af92fb7ac1b3d5c32243e28dbd71691da}{CreateBoxMesh}}(\textcolor{keyword}{const} gef::Vector4\& half\_size, gef::Vector4 centre = gef::Vector4(0.0f, 0.0f, 0.0f), gef::Material** materials = NULL);}
+\DoxyCodeLine{36 }
+\DoxyCodeLine{37 }
+\DoxyCodeLine{43     gef::Mesh* \mbox{\hyperlink{class_primitive_builder_a5f05e266f6b78f97ac03abfda1a6d44e}{CreateSphereMesh}}(\textcolor{keyword}{const} \textcolor{keywordtype}{float} radius, \textcolor{keyword}{const} \textcolor{keywordtype}{int} phi, \textcolor{keyword}{const} \textcolor{keywordtype}{int} theta, gef::Vector4 centre = gef::Vector4(0.0f, 0.0f, 0.0f), gef::Material* material = NULL);}
+\DoxyCodeLine{44 }
+\DoxyCodeLine{45 }
+\DoxyCodeLine{49     \textcolor{keyword}{inline} \textcolor{keyword}{const} gef::Mesh* \mbox{\hyperlink{class_primitive_builder_a0b7bbc2b5dae0e538e5a7da02e99743a}{GetDefaultCubeMesh}}()\textcolor{keyword}{ const }\{}
+\DoxyCodeLine{50         \textcolor{keywordflow}{return} \mbox{\hyperlink{class_primitive_builder_aa3205470b24e5273efb50e359a547b23}{default\_cube\_mesh\_}};}
+\DoxyCodeLine{51     \};}
+\DoxyCodeLine{52 }
+\DoxyCodeLine{56     \textcolor{keyword}{inline} \textcolor{keyword}{const} gef::Mesh* \mbox{\hyperlink{class_primitive_builder_a50a4fb54f668bbe3b43940c64529b195}{GetDefaultSphereMesh}}()\textcolor{keyword}{ const }\{}
+\DoxyCodeLine{57         \textcolor{keywordflow}{return} \mbox{\hyperlink{class_primitive_builder_aa3179d29464e6f9f0b84d59bcea6f3d1}{default\_sphere\_mesh\_}};}
+\DoxyCodeLine{58     \};}
+\DoxyCodeLine{59 }
+\DoxyCodeLine{60 }
+\DoxyCodeLine{63     \textcolor{keyword}{inline} \textcolor{keyword}{const} gef::Material\& \mbox{\hyperlink{class_primitive_builder_aa5daad54593016deff15e0f172df5815}{red\_material}}()\textcolor{keyword}{ const }\{}
+\DoxyCodeLine{64         \textcolor{keywordflow}{return} \mbox{\hyperlink{class_primitive_builder_a7757d609903f9cff6a9bd7f1a239fe27}{red\_material\_}};}
+\DoxyCodeLine{65     \}}
+\DoxyCodeLine{66 }
+\DoxyCodeLine{69     \textcolor{keyword}{inline} \textcolor{keyword}{const} gef::Material\& \mbox{\hyperlink{class_primitive_builder_a0b9b7e23d8d653d949da7da85b5b51b0}{green\_material}}()\textcolor{keyword}{ const }\{}
+\DoxyCodeLine{70         \textcolor{keywordflow}{return} \mbox{\hyperlink{class_primitive_builder_a0c4022f7c66fb130f59d9d2e1c9aee31}{green\_material\_}};}
+\DoxyCodeLine{71     \}}
+\DoxyCodeLine{72 }
+\DoxyCodeLine{75     \textcolor{keyword}{inline} \textcolor{keyword}{const} gef::Material\& \mbox{\hyperlink{class_primitive_builder_a1cc3cb55ef97d82a1ad402e937f2e449}{blue\_material}}()\textcolor{keyword}{ const }\{}
+\DoxyCodeLine{76         \textcolor{keywordflow}{return} \mbox{\hyperlink{class_primitive_builder_a72a6196f7dc9bba9f3887c9a5fe0e485}{blue\_material\_}};}
+\DoxyCodeLine{77     \}}
+\DoxyCodeLine{78 }
+\DoxyCodeLine{79 \textcolor{keyword}{protected}:}
+\DoxyCodeLine{80     gef::Platform\& \mbox{\hyperlink{class_primitive_builder_a6bfbd619adebd14a9fe02b68521e279d}{platform\_}};}
+\DoxyCodeLine{81 }
+\DoxyCodeLine{82     gef::Mesh* \mbox{\hyperlink{class_primitive_builder_aa3205470b24e5273efb50e359a547b23}{default\_cube\_mesh\_}};}
+\DoxyCodeLine{83     gef::Mesh* \mbox{\hyperlink{class_primitive_builder_aa3179d29464e6f9f0b84d59bcea6f3d1}{default\_sphere\_mesh\_}};}
+\DoxyCodeLine{84 }
+\DoxyCodeLine{85     gef::Material \mbox{\hyperlink{class_primitive_builder_a7757d609903f9cff6a9bd7f1a239fe27}{red\_material\_}};}
+\DoxyCodeLine{86     gef::Material \mbox{\hyperlink{class_primitive_builder_a72a6196f7dc9bba9f3887c9a5fe0e485}{blue\_material\_}};}
+\DoxyCodeLine{87     gef::Material \mbox{\hyperlink{class_primitive_builder_a0c4022f7c66fb130f59d9d2e1c9aee31}{green\_material\_}};}
+\DoxyCodeLine{88 \};}
+\DoxyCodeLine{89 }
+\DoxyCodeLine{90 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// \_PRIMITIVE\_BUILDER\_H}}
+
+\end{DoxyCode}

@@ -1,0 +1,125 @@
+.TH "AttributeComponent" 3 "Thu Apr 27 2023" "Hellwatch" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+AttributeComponent
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <AttributeComponent\&.h>\fP
+.PP
+Inherits \fBActorComponent\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "const float \fBGetCurrentAttributeValueByType\fP (\fBHellwatchAttribute::Type\fP type) const"
+.br
+.RI "Gets the current attribute value  "
+.ti -1c
+.RI "const float \fBGetMaxAttributeValueByType\fP (\fBHellwatchAttribute::Type\fP type) const"
+.br
+.RI "Gets the max attribute value  "
+.ti -1c
+.RI "const bool \fBCheckHasEnoughOfAttributeByType\fP (\fBHellwatchAttribute::Type\fP type, float amountNeeded)"
+.br
+.RI "Checks if we have enough of the specified attribute  "
+.ti -1c
+.RI "void \fBSetAttributeCurrentValue\fP (\fBHellwatchAttribute::Type\fP type, float newValue)"
+.br
+.RI "Sets the attribute current to the new given value  "
+.ti -1c
+.RI "void \fBSetAttributeMaxValue\fP (\fBHellwatchAttribute::Type\fP type, float newValue)"
+.br
+.RI "Sets the attribute max value to the new given value  "
+.ti -1c
+.RI "void \fBSetAttributeCurrentAndMaxValue\fP (\fBHellwatchAttribute::Type\fP, float newValue)"
+.br
+.RI "Sets the attribute current and max value to the new given value  "
+.ti -1c
+.RI "void \fBApplyAttributeChange\fP (\fBHellwatchAttribute::Type\fP type, float delta)"
+.br
+.RI "Applies an attribute change to the specified attribute, can be positive or negative  "
+.ti -1c
+.RI "void \fBApplyAttributeMaxValueChange\fP (\fBHellwatchAttribute::Type\fP type, float delta)"
+.br
+.RI "Applies an attribute change to the specified attribute's max value, can be positive or negative  "
+.ti -1c
+.RI "void \fBInitAttributesBySpec\fP (std::vector< \fBFAttribute\fP > &attributesToInit)"
+.br
+.RI "Initializes attribute component by spec, spec meaning a container of multiple attributes  "
+.ti -1c
+.RI "void \fBAddAttribute\fP (\fBFAttribute\fP &attributeToAdd)"
+.br
+.RI "Adds an attribute @NOTE: We can not have 2 attributes of the same type, if that happens, the new attribute will be ignore and we will keep the old one  "
+.ti -1c
+.RI "void \fBApplyAttributeMultiplier\fP (\fBHellwatchAttribute::Type\fP type, float multipliyer)"
+.br
+.RI "Applies a multiplier to an attribute  "
+.ti -1c
+.RI "virtual void \fBUpdateComponent\fP (float deltaTime)"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Member Function Documentation"
+.PP 
+.SS "void AttributeComponent::AddAttribute (\fBFAttribute\fP & attributeToAdd)"
+
+.PP
+Adds an attribute @NOTE: We can not have 2 attributes of the same type, if that happens, the new attribute will be ignore and we will keep the old one  
+.SS "void AttributeComponent::ApplyAttributeChange (\fBHellwatchAttribute::Type\fP type, float delta)"
+
+.PP
+Applies an attribute change to the specified attribute, can be positive or negative  
+.SS "void AttributeComponent::ApplyAttributeMaxValueChange (\fBHellwatchAttribute::Type\fP type, float delta)"
+
+.PP
+Applies an attribute change to the specified attribute's max value, can be positive or negative  
+.SS "void AttributeComponent::ApplyAttributeMultiplier (\fBHellwatchAttribute::Type\fP type, float multipliyer)"
+
+.PP
+Applies a multiplier to an attribute  
+.SS "const bool AttributeComponent::CheckHasEnoughOfAttributeByType (\fBHellwatchAttribute::Type\fP type, float amountNeeded)"
+
+.PP
+Checks if we have enough of the specified attribute  
+.SS "const float AttributeComponent::GetCurrentAttributeValueByType (\fBHellwatchAttribute::Type\fP type) const"
+
+.PP
+Gets the current attribute value  
+.SS "const float AttributeComponent::GetMaxAttributeValueByType (\fBHellwatchAttribute::Type\fP type) const"
+
+.PP
+Gets the max attribute value  
+.SS "void AttributeComponent::InitAttributesBySpec (std::vector< \fBFAttribute\fP > & attributesToInit)"
+
+.PP
+Initializes attribute component by spec, spec meaning a container of multiple attributes  
+.PP
+\fBParameters\fP
+.RS 4
+\fIattributesToInit\fP 
+.RE
+.PP
+
+.SS "void AttributeComponent::SetAttributeCurrentAndMaxValue (\fBHellwatchAttribute::Type\fP type, float newValue)"
+
+.PP
+Sets the attribute current and max value to the new given value  
+.SS "void AttributeComponent::SetAttributeCurrentValue (\fBHellwatchAttribute::Type\fP type, float newValue)"
+
+.PP
+Sets the attribute current to the new given value  
+.SS "void AttributeComponent::SetAttributeMaxValue (\fBHellwatchAttribute::Type\fP type, float newValue)"
+
+.PP
+Sets the attribute max value to the new given value  
+.SS "void AttributeComponent::UpdateComponent (float deltaTime)\fC [virtual]\fP"
+
+.PP
+Reimplemented from \fBActorComponent\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Hellwatch from the source code\&.

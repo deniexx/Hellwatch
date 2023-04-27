@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__piercing_strike_8h_source" xml:lang="en-US">
+<title>PiercingStrike.h</title>
+<indexterm><primary>D:/Uni/CMP208/Hellwatch/build/vs2017/Abilities/PlayerAbilities/PiercingStrike.h</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered">1 <emphasis role="preprocessor">#pragma&#32;once</emphasis>
+2 
+3 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="__ability_8h">Abilities/Ability.h</link>&quot;</emphasis>
+4 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="__utils_8h">GameFramework/Utils.h</link>&quot;</emphasis>
+5 
+6 
+7 <emphasis role="keyword">class&#32;</emphasis><link linkend="_class_piercing_strike">PiercingStrike</link>&#32;:&#32;<emphasis role="keyword">public</emphasis>&#32;<link linkend="_class_ability">Ability</link>
+8 {
+9 &#32;&#32;&#32;&#32;<link linkend="__utils_8h_1afc0ee7bd35c161a2d80b8e8f04fd9213">GENERATED_BODY</link>(<link linkend="_class_ability">Ability</link>,&#32;<link linkend="_class_piercing_strike">PiercingStrike</link>)
+10 
+11 <emphasis role="keyword">protected</emphasis>:
+12 
+13 &#32;&#32;&#32;&#32;<emphasis role="keyword">virtual</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_piercing_strike_1a3309a9ad1070cbd3e47e51ba50e92c20">PostInit</link>()&#32;<emphasis role="keyword">override</emphasis>;
+14 
+15 &#32;&#32;&#32;&#32;<emphasis role="keyword">virtual</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_piercing_strike_1afc8244751f335b1ae83a42b252409ae9">Begin</link>()&#32;<emphasis role="keyword">override</emphasis>;
+16 
+17 &#32;&#32;&#32;&#32;<emphasis role="keyword">virtual</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_piercing_strike_1a31b5a023d19f73ec307cbc6e452e85ea">End</link>()&#32;<emphasis role="keyword">override</emphasis>;
+18 };
+19 
+</programlisting></section>

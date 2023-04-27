@@ -1,0 +1,49 @@
+digraph "D:/Uni/CMP208/Hellwatch/main_d3d11.cpp"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  Node1 [label="D:/Uni/CMP208/Hellwatch\l/main_d3d11.cpp",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [color="steelblue1",style="solid"];
+  Node2 [label="platform/d3d11/system\l/platform_d3d11.h",height=0.2,width=0.4,color="grey60", fillcolor="#E0E0E0", style="filled",tooltip=" "];
+  Node1 -> Node3 [color="steelblue1",style="solid"];
+  Node3 [label="scene_app.h",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$scene__app_8h.html",tooltip=" "];
+  Node3 -> Node4 [color="steelblue1",style="solid"];
+  Node4 [label="system/application.h",height=0.2,width=0.4,color="grey60", fillcolor="#E0E0E0", style="filled",tooltip=" "];
+  Node3 -> Node5 [color="steelblue1",style="solid"];
+  Node5 [label="maths/vector2.h",height=0.2,width=0.4,color="grey60", fillcolor="#E0E0E0", style="filled",tooltip=" "];
+  Node3 -> Node6 [color="steelblue1",style="solid"];
+  Node6 [label="primitive_builder.h",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$primitive__builder_8h.html",tooltip=" "];
+  Node6 -> Node7 [color="steelblue1",style="solid"];
+  Node7 [label="maths/vector4.h",height=0.2,width=0.4,color="grey60", fillcolor="#E0E0E0", style="filled",tooltip=" "];
+  Node6 -> Node8 [color="steelblue1",style="solid"];
+  Node8 [label="graphics/material.h",height=0.2,width=0.4,color="grey60", fillcolor="#E0E0E0", style="filled",tooltip=" "];
+  Node6 -> Node9 [color="steelblue1",style="solid"];
+  Node9 [label="cstddef",height=0.2,width=0.4,color="grey60", fillcolor="#E0E0E0", style="filled",tooltip=" "];
+  Node3 -> Node10 [color="steelblue1",style="solid"];
+  Node10 [label="graphics/scene.h",height=0.2,width=0.4,color="grey60", fillcolor="#E0E0E0", style="filled",tooltip=" "];
+  Node3 -> Node11 [color="steelblue1",style="solid"];
+  Node11 [label="box2d/box2d.h",height=0.2,width=0.4,color="grey60", fillcolor="#E0E0E0", style="filled",tooltip=" "];
+  Node3 -> Node12 [color="steelblue1",style="solid"];
+  Node12 [label="system/platform.h",height=0.2,width=0.4,color="grey60", fillcolor="#E0E0E0", style="filled",tooltip=" "];
+  Node3 -> Node13 [color="steelblue1",style="solid"];
+  Node13 [label="obj_mesh_loader.h",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$obj__mesh__loader_8h.html",tooltip=" "];
+  Node13 -> Node14 [color="steelblue1",style="solid"];
+  Node14 [label="gef.h",height=0.2,width=0.4,color="grey60", fillcolor="#E0E0E0", style="filled",tooltip=" "];
+  Node13 -> Node15 [color="steelblue1",style="solid"];
+  Node15 [label="map",height=0.2,width=0.4,color="grey60", fillcolor="#E0E0E0", style="filled",tooltip=" "];
+  Node13 -> Node16 [color="steelblue1",style="solid"];
+  Node16 [label="string",height=0.2,width=0.4,color="grey60", fillcolor="#E0E0E0", style="filled",tooltip=" "];
+  Node13 -> Node17 [color="steelblue1",style="solid"];
+  Node17 [label="vector",height=0.2,width=0.4,color="grey60", fillcolor="#E0E0E0", style="filled",tooltip=" "];
+  Node13 -> Node7 [color="steelblue1",style="solid"];
+  Node13 -> Node5 [color="steelblue1",style="solid"];
+  Node3 -> Node18 [color="steelblue1",style="solid"];
+  Node18 [label="graphics/font.h",height=0.2,width=0.4,color="grey60", fillcolor="#E0E0E0", style="filled",tooltip=" "];
+  Node3 -> Node17 [color="steelblue1",style="solid"];
+  Node3 -> Node19 [color="steelblue1",style="solid"];
+  Node19 [label="future",height=0.2,width=0.4,color="grey60", fillcolor="#E0E0E0", style="filled",tooltip=" "];
+  Node3 -> Node20 [color="steelblue1",style="solid"];
+  Node20 [label="random",height=0.2,width=0.4,color="grey60", fillcolor="#E0E0E0", style="filled",tooltip=" "];
+}

@@ -1,0 +1,286 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_player_character" xml:lang="en-US">
+<title>PlayerCharacter Class Reference</title>
+<indexterm><primary>PlayerCharacter</primary></indexterm>
+<para>
+
+<para>The class that the player uses during the GameLoop <link linkend="_namespace_game_state">GameState</link>  </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;PlayerCharacter.h&gt;</computeroutput>
+</para>
+Inheritance diagram for PlayerCharacter:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_player_character__inherit__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Collaboration diagram for PlayerCharacter:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_player_character__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_player_character_1af3ac12a41f58d860fb716138578bd95f">PlayerCharacter</link> ()</para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_class_player_character_1ad12c09c28194b1c5ed39aa4b5c21cbd6">PostInit</link> () override</para>
+
+<para>Override this to Initialize variables or do any necessary work when the object is created  </para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_class_player_character_1ad681ccd09dc1ed4c0242bfa0d981d584">Update</link> (float deltaTime) override</para>
+
+<para>Update function, called every frame  </para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_class_player_character_1ac89349d4afba371e044e4c5816ba68c8">TakeDamage</link> (float damageAmount) override</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_player_character_1a0415b6e06c971db05a79ae18176f6e99">ApplyInvincibilityForDuration</link> (float invincibilityDuration)</para>
+
+<para>Applies invincibility for specified duration  </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_player_character_1abf3fd7463bf99305b85490644ff3d276">DrawPlayerHUD</link> ()</para>
+</listitem>
+            <listitem><para><link linkend="_class_player_controller">PlayerController</link> * <link linkend="_class_player_character_1af75d11f2b93d26046988f3316888fdbc">GetController</link> () const</para>
+</listitem>
+            <listitem><para><link linkend="_class_character_movement_component">CharacterMovementComponent</link> * <link linkend="_class_player_character_1ac890f6a156f0b6f48aa9c62a6a307932">GetCharacterMovement</link> () const</para>
+</listitem>
+            <listitem><para><link linkend="_class_attribute_component">AttributeComponent</link> * <link linkend="_class_player_character_1a35f60a491cce521c070536f0c9eec6f6">GetCharacterAttributes</link> () const</para>
+</listitem>
+            <listitem><para><link linkend="_class_abilities_component">AbilitiesComponent</link> * <link linkend="_class_player_character_1a1b142fd480a0b6326069058a0109668a">GetCharacterAbilities</link> () const</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Protected Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_class_player_character_1a71db2dd63c1e1ee33c1636d07c663bd2">MoveLeft</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_player_character_1a27a3a3bd797b494f4262a0d9cc23a7da">MoveRight</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_player_character_1a3e2db13c832d8ad72f91f35626318029">MoveForward</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_player_character_1a66f35da8ae003995f4f9984edf1aa503">MoveBack</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_player_character_1ae3414c7f6a3ecb97de258a3c48e5042c">ActivateAbility1</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_player_character_1abf9975cee8626a88bfda0083d5ec32ab">ActivateAbility2</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_player_character_1af678379492ff14630742460e81d191b7">ActivateAbility3</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_player_character_1a5a51435bd69ade9c5e2ea48319f6299d">ActivateAbility4</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_player_character_1a294eaf7133b810dc22a0caf95a98dcb1">OnControllerLeftStick</link> (gef::Vector2 delta)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_player_character_1ae91b2ed2e883c4e311568689ba946fba">OnControllerActivateAbility1</link> (gef::Vector2 delta)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_player_character_1aad1ce1a4a76bff1adc2adde12d89a25d">OnControllerActivateAbility2</link> (gef::Vector2 delta)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_player_character_1aa44656f4422f9b2dd5b9f662eb3f7add">OnControllerActivateAbility3</link> (gef::Vector2 delta)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_player_character_1a48ccee58814a3244be3ba5f8ba0b056c">OnControllerActivateAbility4</link> (gef::Vector2 delta)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_player_character_1a0da3ea447b3274eef8d2aab1ca9a22d2">OnControllerInvertUpDownMovement</link> (gef::Vector2 delta)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Protected Attributes    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_player_controller">PlayerController</link> * <link linkend="_class_player_character_1a32fa60c60ab920a4bf3682d8d64efb2f">controller</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Additional Inherited Members    </title>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>The class that the player uses during the GameLoop <link linkend="_namespace_game_state">GameState</link>  </para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_player_character_1af3ac12a41f58d860fb716138578bd95f"/><section>
+    <title>PlayerCharacter()</title>
+<indexterm><primary>PlayerCharacter</primary><secondary>PlayerCharacter</secondary></indexterm>
+<indexterm><primary>PlayerCharacter</primary><secondary>PlayerCharacter</secondary></indexterm>
+<para><computeroutput>PlayerCharacter::PlayerCharacter ( )</computeroutput></para></section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_player_character_1ae3414c7f6a3ecb97de258a3c48e5042c"/><section>
+    <title>ActivateAbility1()</title>
+<indexterm><primary>ActivateAbility1</primary><secondary>PlayerCharacter</secondary></indexterm>
+<indexterm><primary>PlayerCharacter</primary><secondary>ActivateAbility1</secondary></indexterm>
+<para><computeroutput>void PlayerCharacter::ActivateAbility1 ( )<computeroutput>[protected]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_player_character_1abf9975cee8626a88bfda0083d5ec32ab"/><section>
+    <title>ActivateAbility2()</title>
+<indexterm><primary>ActivateAbility2</primary><secondary>PlayerCharacter</secondary></indexterm>
+<indexterm><primary>PlayerCharacter</primary><secondary>ActivateAbility2</secondary></indexterm>
+<para><computeroutput>void PlayerCharacter::ActivateAbility2 ( )<computeroutput>[protected]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_player_character_1af678379492ff14630742460e81d191b7"/><section>
+    <title>ActivateAbility3()</title>
+<indexterm><primary>ActivateAbility3</primary><secondary>PlayerCharacter</secondary></indexterm>
+<indexterm><primary>PlayerCharacter</primary><secondary>ActivateAbility3</secondary></indexterm>
+<para><computeroutput>void PlayerCharacter::ActivateAbility3 ( )<computeroutput>[protected]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_player_character_1a5a51435bd69ade9c5e2ea48319f6299d"/><section>
+    <title>ActivateAbility4()</title>
+<indexterm><primary>ActivateAbility4</primary><secondary>PlayerCharacter</secondary></indexterm>
+<indexterm><primary>PlayerCharacter</primary><secondary>ActivateAbility4</secondary></indexterm>
+<para><computeroutput>void PlayerCharacter::ActivateAbility4 ( )<computeroutput>[protected]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_player_character_1a0415b6e06c971db05a79ae18176f6e99"/><section>
+    <title>ApplyInvincibilityForDuration()</title>
+<indexterm><primary>ApplyInvincibilityForDuration</primary><secondary>PlayerCharacter</secondary></indexterm>
+<indexterm><primary>PlayerCharacter</primary><secondary>ApplyInvincibilityForDuration</secondary></indexterm>
+<para><computeroutput>void PlayerCharacter::ApplyInvincibilityForDuration (float invincibilityDuration)</computeroutput></para><para>
+
+<para>Applies invincibility for specified duration  </para>
+</para>
+</section>
+<anchor xml:id="_class_player_character_1abf3fd7463bf99305b85490644ff3d276"/><section>
+    <title>DrawPlayerHUD()</title>
+<indexterm><primary>DrawPlayerHUD</primary><secondary>PlayerCharacter</secondary></indexterm>
+<indexterm><primary>PlayerCharacter</primary><secondary>DrawPlayerHUD</secondary></indexterm>
+<para><computeroutput>void PlayerCharacter::DrawPlayerHUD ( )</computeroutput></para></section>
+<anchor xml:id="_class_player_character_1a1b142fd480a0b6326069058a0109668a"/><section>
+    <title>GetCharacterAbilities()</title>
+<indexterm><primary>GetCharacterAbilities</primary><secondary>PlayerCharacter</secondary></indexterm>
+<indexterm><primary>PlayerCharacter</primary><secondary>GetCharacterAbilities</secondary></indexterm>
+<para><computeroutput><link linkend="_class_abilities_component">AbilitiesComponent</link> * PlayerCharacter::GetCharacterAbilities ( ) const<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_player_character_1a35f60a491cce521c070536f0c9eec6f6"/><section>
+    <title>GetCharacterAttributes()</title>
+<indexterm><primary>GetCharacterAttributes</primary><secondary>PlayerCharacter</secondary></indexterm>
+<indexterm><primary>PlayerCharacter</primary><secondary>GetCharacterAttributes</secondary></indexterm>
+<para><computeroutput><link linkend="_class_attribute_component">AttributeComponent</link> * PlayerCharacter::GetCharacterAttributes ( ) const<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_player_character_1ac890f6a156f0b6f48aa9c62a6a307932"/><section>
+    <title>GetCharacterMovement()</title>
+<indexterm><primary>GetCharacterMovement</primary><secondary>PlayerCharacter</secondary></indexterm>
+<indexterm><primary>PlayerCharacter</primary><secondary>GetCharacterMovement</secondary></indexterm>
+<para><computeroutput><link linkend="_class_character_movement_component">CharacterMovementComponent</link> * PlayerCharacter::GetCharacterMovement ( ) const<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_player_character_1af75d11f2b93d26046988f3316888fdbc"/><section>
+    <title>GetController()</title>
+<indexterm><primary>GetController</primary><secondary>PlayerCharacter</secondary></indexterm>
+<indexterm><primary>PlayerCharacter</primary><secondary>GetController</secondary></indexterm>
+<para><computeroutput><link linkend="_class_player_controller">PlayerController</link> * PlayerCharacter::GetController ( ) const<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_player_character_1a66f35da8ae003995f4f9984edf1aa503"/><section>
+    <title>MoveBack()</title>
+<indexterm><primary>MoveBack</primary><secondary>PlayerCharacter</secondary></indexterm>
+<indexterm><primary>PlayerCharacter</primary><secondary>MoveBack</secondary></indexterm>
+<para><computeroutput>void PlayerCharacter::MoveBack ( )<computeroutput>[protected]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_player_character_1a3e2db13c832d8ad72f91f35626318029"/><section>
+    <title>MoveForward()</title>
+<indexterm><primary>MoveForward</primary><secondary>PlayerCharacter</secondary></indexterm>
+<indexterm><primary>PlayerCharacter</primary><secondary>MoveForward</secondary></indexterm>
+<para><computeroutput>void PlayerCharacter::MoveForward ( )<computeroutput>[protected]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_player_character_1a71db2dd63c1e1ee33c1636d07c663bd2"/><section>
+    <title>MoveLeft()</title>
+<indexterm><primary>MoveLeft</primary><secondary>PlayerCharacter</secondary></indexterm>
+<indexterm><primary>PlayerCharacter</primary><secondary>MoveLeft</secondary></indexterm>
+<para><computeroutput>void PlayerCharacter::MoveLeft ( )<computeroutput>[protected]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_player_character_1a27a3a3bd797b494f4262a0d9cc23a7da"/><section>
+    <title>MoveRight()</title>
+<indexterm><primary>MoveRight</primary><secondary>PlayerCharacter</secondary></indexterm>
+<indexterm><primary>PlayerCharacter</primary><secondary>MoveRight</secondary></indexterm>
+<para><computeroutput>void PlayerCharacter::MoveRight ( )<computeroutput>[protected]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_player_character_1ae91b2ed2e883c4e311568689ba946fba"/><section>
+    <title>OnControllerActivateAbility1()</title>
+<indexterm><primary>OnControllerActivateAbility1</primary><secondary>PlayerCharacter</secondary></indexterm>
+<indexterm><primary>PlayerCharacter</primary><secondary>OnControllerActivateAbility1</secondary></indexterm>
+<para><computeroutput>void PlayerCharacter::OnControllerActivateAbility1 (gef::Vector2 delta)<computeroutput>[protected]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_player_character_1aad1ce1a4a76bff1adc2adde12d89a25d"/><section>
+    <title>OnControllerActivateAbility2()</title>
+<indexterm><primary>OnControllerActivateAbility2</primary><secondary>PlayerCharacter</secondary></indexterm>
+<indexterm><primary>PlayerCharacter</primary><secondary>OnControllerActivateAbility2</secondary></indexterm>
+<para><computeroutput>void PlayerCharacter::OnControllerActivateAbility2 (gef::Vector2 delta)<computeroutput>[protected]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_player_character_1aa44656f4422f9b2dd5b9f662eb3f7add"/><section>
+    <title>OnControllerActivateAbility3()</title>
+<indexterm><primary>OnControllerActivateAbility3</primary><secondary>PlayerCharacter</secondary></indexterm>
+<indexterm><primary>PlayerCharacter</primary><secondary>OnControllerActivateAbility3</secondary></indexterm>
+<para><computeroutput>void PlayerCharacter::OnControllerActivateAbility3 (gef::Vector2 delta)<computeroutput>[protected]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_player_character_1a48ccee58814a3244be3ba5f8ba0b056c"/><section>
+    <title>OnControllerActivateAbility4()</title>
+<indexterm><primary>OnControllerActivateAbility4</primary><secondary>PlayerCharacter</secondary></indexterm>
+<indexterm><primary>PlayerCharacter</primary><secondary>OnControllerActivateAbility4</secondary></indexterm>
+<para><computeroutput>void PlayerCharacter::OnControllerActivateAbility4 (gef::Vector2 delta)<computeroutput>[protected]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_player_character_1a0da3ea447b3274eef8d2aab1ca9a22d2"/><section>
+    <title>OnControllerInvertUpDownMovement()</title>
+<indexterm><primary>OnControllerInvertUpDownMovement</primary><secondary>PlayerCharacter</secondary></indexterm>
+<indexterm><primary>PlayerCharacter</primary><secondary>OnControllerInvertUpDownMovement</secondary></indexterm>
+<para><computeroutput>void PlayerCharacter::OnControllerInvertUpDownMovement (gef::Vector2 delta)<computeroutput>[protected]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_player_character_1a294eaf7133b810dc22a0caf95a98dcb1"/><section>
+    <title>OnControllerLeftStick()</title>
+<indexterm><primary>OnControllerLeftStick</primary><secondary>PlayerCharacter</secondary></indexterm>
+<indexterm><primary>PlayerCharacter</primary><secondary>OnControllerLeftStick</secondary></indexterm>
+<para><computeroutput>void PlayerCharacter::OnControllerLeftStick (gef::Vector2 delta)<computeroutput>[protected]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_player_character_1ad12c09c28194b1c5ed39aa4b5c21cbd6"/><section>
+    <title>PostInit()</title>
+<indexterm><primary>PostInit</primary><secondary>PlayerCharacter</secondary></indexterm>
+<indexterm><primary>PlayerCharacter</primary><secondary>PostInit</secondary></indexterm>
+<para><computeroutput>void PlayerCharacter::PostInit ( )<computeroutput>[override]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Override this to Initialize variables or do any necessary work when the object is created  </para>
+</para>
+<para>
+Reimplemented from <link linkend="_class_world_object_1a8500a6a24c62699fa103a68349407a3f">WorldObject</link>.</para>
+</section>
+<anchor xml:id="_class_player_character_1ac89349d4afba371e044e4c5816ba68c8"/><section>
+    <title>TakeDamage()</title>
+<indexterm><primary>TakeDamage</primary><secondary>PlayerCharacter</secondary></indexterm>
+<indexterm><primary>PlayerCharacter</primary><secondary>TakeDamage</secondary></indexterm>
+<para><computeroutput>void PlayerCharacter::TakeDamage (float damageAmount)<computeroutput>[override]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+Reimplemented from <link linkend="_class_mesh_actor_1a31a231014625686e8d40e561a7028931">MeshActor</link>.</para>
+</section>
+<anchor xml:id="_class_player_character_1ad681ccd09dc1ed4c0242bfa0d981d584"/><section>
+    <title>Update()</title>
+<indexterm><primary>Update</primary><secondary>PlayerCharacter</secondary></indexterm>
+<indexterm><primary>PlayerCharacter</primary><secondary>Update</secondary></indexterm>
+<para><computeroutput>void PlayerCharacter::Update (float deltaTime)<computeroutput>[override]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Update function, called every frame  </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>deltaTime</entry><entry>
+<para>Float variable for the frame time</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Reimplemented from <link linkend="_class_mesh_actor_1a3743470557ddbbc88bc73e4dd283d6bf">MeshActor</link>.</para>
+</section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_class_player_character_1a32fa60c60ab920a4bf3682d8d64efb2f"/><section>
+    <title>controller</title>
+<indexterm><primary>controller</primary><secondary>PlayerCharacter</secondary></indexterm>
+<indexterm><primary>PlayerCharacter</primary><secondary>controller</secondary></indexterm>
+<para><computeroutput><link linkend="_class_player_controller">PlayerController</link>* PlayerCharacter::controller<computeroutput>[protected]</computeroutput></computeroutput></para></section>
+<para>
+The documentation for this class was generated from the following files:</para>
+D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/<link linkend="__player_character_8h">PlayerCharacter.h</link>D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/<link linkend="__player_character_8cpp">PlayerCharacter.cpp</link></section>
+</section>

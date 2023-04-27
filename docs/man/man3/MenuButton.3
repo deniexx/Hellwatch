@@ -1,0 +1,54 @@
+.TH "MenuButton" 3 "Thu Apr 27 2023" "Hellwatch" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+MenuButton \- A \fBMenu\fP button definition, used for rendering and callbacks   
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <Menu\&.h>\fP
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "gef::Vector4 \fBposition\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBcolor\fP = 0xffffffff"
+.br
+.ti -1c
+.RI "float \fBscale\fP = 1"
+.br
+.ti -1c
+.RI "gef::TextJustification \fBjustification\fP"
+.br
+.ti -1c
+.RI "std::string \fBbuttonText\fP"
+.br
+.ti -1c
+.RI "std::function< void()> \fBcallbackFunction\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+A \fBMenu\fP button definition, used for rendering and callbacks  
+.SH "Member Data Documentation"
+.PP 
+.SS "std::string MenuButton::buttonText"
+
+.SS "std::function<void()> MenuButton::callbackFunction"
+
+.SS "uint32_t MenuButton::color = 0xffffffff"
+
+.SS "gef::TextJustification MenuButton::justification"
+
+.SS "gef::Vector4 MenuButton::position"
+
+.SS "float MenuButton::scale = 1"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Hellwatch from the source code\&.

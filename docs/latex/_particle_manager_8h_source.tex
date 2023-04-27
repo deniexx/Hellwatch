@@ -1,0 +1,50 @@
+\hypertarget{_particle_manager_8h_source}{}\doxysection{Particle\+Manager.\+h}
+\label{_particle_manager_8h_source}\index{D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/ParticleManager.h@{D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/ParticleManager.h}}
+\mbox{\hyperlink{_particle_manager_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{2 }
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#include <map>}}
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{6 }
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include "{}maths/vector4.h"{}}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include "{}graphics/texture.h"{}}}
+\DoxyCodeLine{9 }
+\DoxyCodeLine{10 \textcolor{keyword}{class }ParticleSprite;}
+\DoxyCodeLine{11 }
+\DoxyCodeLine{12 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespace_hellwatch_particle}{HellwatchParticle}}}
+\DoxyCodeLine{13 \{}
+\DoxyCodeLine{14     \textcolor{keyword}{enum} \mbox{\hyperlink{namespace_hellwatch_particle_a93a028826056ca781710ef2830834f51}{Type}}}
+\DoxyCodeLine{15     \{}
+\DoxyCodeLine{16         \mbox{\hyperlink{namespace_hellwatch_particle_a93a028826056ca781710ef2830834f51a6436e49d303ed9b9a1fa51de335afc1d}{Explosion}},}
+\DoxyCodeLine{17         \mbox{\hyperlink{namespace_hellwatch_particle_a93a028826056ca781710ef2830834f51a31724befc90ab0517472666b48eedb0b}{Death}},}
+\DoxyCodeLine{18         \mbox{\hyperlink{namespace_hellwatch_particle_a93a028826056ca781710ef2830834f51acfc9f6dd38f3e82bbc2fb485f2beea26}{Dash}},}
+\DoxyCodeLine{19     \};}
+\DoxyCodeLine{20 \}}
+\DoxyCodeLine{21 }
+\DoxyCodeLine{22 \textcolor{keyword}{class }\mbox{\hyperlink{class_particle_manager}{ParticleManager}}}
+\DoxyCodeLine{23 \{}
+\DoxyCodeLine{24 \textcolor{keyword}{public}:}
+\DoxyCodeLine{25 }
+\DoxyCodeLine{26     \textcolor{keyword}{static} \textcolor{keyword}{inline} \mbox{\hyperlink{class_particle_manager}{ParticleManager}}* ParticleManager::instance = \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{27 }
+\DoxyCodeLine{28     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_particle_manager_a192bc9932f68795cf756541ad35cdadb}{Init}}();}
+\DoxyCodeLine{29 }
+\DoxyCodeLine{33     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_particle_manager_a03998e9980dd017daa61ce69a0ec194f}{PrepareParticles}}();}
+\DoxyCodeLine{34 }
+\DoxyCodeLine{38     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_particle_manager_a74b7e3175e7bf9df045540cedf8c5f05}{PlayParticlesAtLocation}}(\mbox{\hyperlink{namespace_hellwatch_particle_a93a028826056ca781710ef2830834f51}{HellwatchParticle::Type}} type, gef::Vector4 location);}
+\DoxyCodeLine{39 }
+\DoxyCodeLine{43     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_particle_manager_a74b7e3175e7bf9df045540cedf8c5f05}{PlayParticlesAtLocation}}(\mbox{\hyperlink{namespace_hellwatch_particle_a93a028826056ca781710ef2830834f51}{HellwatchParticle::Type}} type, gef::Vector4 location, \textcolor{keywordtype}{float} duration);}
+\DoxyCodeLine{44 }
+\DoxyCodeLine{48     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_particle_manager_a74b7e3175e7bf9df045540cedf8c5f05}{PlayParticlesAtLocation}}(\mbox{\hyperlink{namespace_hellwatch_particle_a93a028826056ca781710ef2830834f51}{HellwatchParticle::Type}} type, gef::Vector4 location, \textcolor{keywordtype}{float} duration, \textcolor{keywordtype}{float} lingerTime);}
+\DoxyCodeLine{49 }
+\DoxyCodeLine{50 \textcolor{keyword}{private}:}
+\DoxyCodeLine{51 }
+\DoxyCodeLine{52     std::map<HellwatchParticle::Type, std::vector<gef::Texture*>> particlesMap;}
+\DoxyCodeLine{53 }
+\DoxyCodeLine{54     \textcolor{keywordtype}{void} LoadTexturesForParticles(\mbox{\hyperlink{namespace_hellwatch_particle_a93a028826056ca781710ef2830834f51}{HellwatchParticle::Type}} type, std::vector<std::string> paths);}
+\DoxyCodeLine{55 \};}
+\DoxyCodeLine{56 }
+
+\end{DoxyCode}

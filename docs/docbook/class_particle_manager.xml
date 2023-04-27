@@ -1,0 +1,77 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_particle_manager" xml:lang="en-US">
+<title>ParticleManager Class Reference</title>
+<indexterm><primary>ParticleManager</primary></indexterm>
+<para>
+<computeroutput>#include &lt;ParticleManager.h&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_class_particle_manager_1a192bc9932f68795cf756541ad35cdadb">Init</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_particle_manager_1a03998e9980dd017daa61ce69a0ec194f">PrepareParticles</link> ()</para>
+
+<para>Prepares the particles  </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_particle_manager_1a74b7e3175e7bf9df045540cedf8c5f05">PlayParticlesAtLocation</link> (<link linkend="_namespace_hellwatch_particle_1a93a028826056ca781710ef2830834f51">HellwatchParticle::Type</link> type, gef::Vector4 location)</para>
+
+<para>Plays particles at location  </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_particle_manager_1a658b27d3101859ab17000c8a7493fff6">PlayParticlesAtLocation</link> (<link linkend="_namespace_hellwatch_particle_1a93a028826056ca781710ef2830834f51">HellwatchParticle::Type</link> type, gef::Vector4 location, float duration)</para>
+
+<para>Plays particles at location  </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_particle_manager_1a1be5203232c7be5ff6eb46f110f28cb0">PlayParticlesAtLocation</link> (<link linkend="_namespace_hellwatch_particle_1a93a028826056ca781710ef2830834f51">HellwatchParticle::Type</link> type, gef::Vector4 location, float duration, float lingerTime)</para>
+
+<para>Plays particles at location  </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_particle_manager_1a192bc9932f68795cf756541ad35cdadb"/><section>
+    <title>Init()</title>
+<indexterm><primary>Init</primary><secondary>ParticleManager</secondary></indexterm>
+<indexterm><primary>ParticleManager</primary><secondary>Init</secondary></indexterm>
+<para><computeroutput>void ParticleManager::Init ( )</computeroutput></para></section>
+<anchor xml:id="_class_particle_manager_1a74b7e3175e7bf9df045540cedf8c5f05"/><section>
+    <title>PlayParticlesAtLocation()<computeroutput>[1/3]</computeroutput></title>
+<indexterm><primary>PlayParticlesAtLocation</primary><secondary>ParticleManager</secondary></indexterm>
+<indexterm><primary>ParticleManager</primary><secondary>PlayParticlesAtLocation</secondary></indexterm>
+<para><computeroutput>void ParticleManager::PlayParticlesAtLocation (<link linkend="_namespace_hellwatch_particle_1a93a028826056ca781710ef2830834f51">HellwatchParticle::Type</link> type, gef::Vector4 location)</computeroutput></para><para>
+
+<para>Plays particles at location  </para>
+</para>
+</section>
+<anchor xml:id="_class_particle_manager_1a658b27d3101859ab17000c8a7493fff6"/><section>
+    <title>PlayParticlesAtLocation()<computeroutput>[2/3]</computeroutput></title>
+<indexterm><primary>PlayParticlesAtLocation</primary><secondary>ParticleManager</secondary></indexterm>
+<indexterm><primary>ParticleManager</primary><secondary>PlayParticlesAtLocation</secondary></indexterm>
+<para><computeroutput>void ParticleManager::PlayParticlesAtLocation (<link linkend="_namespace_hellwatch_particle_1a93a028826056ca781710ef2830834f51">HellwatchParticle::Type</link> type, gef::Vector4 location, float duration)</computeroutput></para><para>
+
+<para>Plays particles at location  </para>
+</para>
+</section>
+<anchor xml:id="_class_particle_manager_1a1be5203232c7be5ff6eb46f110f28cb0"/><section>
+    <title>PlayParticlesAtLocation()<computeroutput>[3/3]</computeroutput></title>
+<indexterm><primary>PlayParticlesAtLocation</primary><secondary>ParticleManager</secondary></indexterm>
+<indexterm><primary>ParticleManager</primary><secondary>PlayParticlesAtLocation</secondary></indexterm>
+<para><computeroutput>void ParticleManager::PlayParticlesAtLocation (<link linkend="_namespace_hellwatch_particle_1a93a028826056ca781710ef2830834f51">HellwatchParticle::Type</link> type, gef::Vector4 location, float duration, float lingerTime)</computeroutput></para><para>
+
+<para>Plays particles at location  </para>
+</para>
+</section>
+<anchor xml:id="_class_particle_manager_1a03998e9980dd017daa61ce69a0ec194f"/><section>
+    <title>PrepareParticles()</title>
+<indexterm><primary>PrepareParticles</primary><secondary>ParticleManager</secondary></indexterm>
+<indexterm><primary>ParticleManager</primary><secondary>PrepareParticles</secondary></indexterm>
+<para><computeroutput>void ParticleManager::PrepareParticles ( )</computeroutput></para><para>
+
+<para>Prepares the particles  </para>
+</para>
+</section>
+<para>
+The documentation for this class was generated from the following files:</para>
+D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/<link linkend="__particle_manager_8h">ParticleManager.h</link>D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/<link linkend="__particle_manager_8cpp">ParticleManager.cpp</link></section>
+</section>

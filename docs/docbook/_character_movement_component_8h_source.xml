@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__character_movement_component_8h_source" xml:lang="en-US">
+<title>CharacterMovementComponent.h</title>
+<indexterm><primary>D:/Uni/CMP208/Hellwatch/build/vs2017/ActorComponents/CharacterMovementComponent.h</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered">1 <emphasis role="preprocessor">#pragma&#32;once</emphasis>
+2 
+3 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="__actor_component_8h">ActorComponents/ActorComponent.h</link>&quot;</emphasis>
+4 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="__utils_8h">GameFramework/Utils.h</link>&quot;</emphasis>
+5 
+9 <emphasis role="keyword">class&#32;</emphasis><link linkend="_class_character_movement_component">CharacterMovementComponent</link>&#32;:&#32;<emphasis role="keyword">public</emphasis>&#32;<link linkend="_class_actor_component">ActorComponent</link>
+10 {
+11 &#32;&#32;&#32;&#32;<link linkend="__utils_8h_1afc0ee7bd35c161a2d80b8e8f04fd9213">GENERATED_BODY</link>(<link linkend="_class_actor_component">ActorComponent</link>,&#32;<link linkend="_class_character_movement_component">CharacterMovementComponent</link>)
+12 
+13 <emphasis role="keyword">public</emphasis>:
+14 
+15 &#32;&#32;&#32;&#32;<link linkend="_class_character_movement_component_1a3b46719028da4715fcb1aa41000ef690">CharacterMovementComponent</link>();
+16 
+17 &#32;&#32;&#32;&#32;<emphasis role="keyword">virtual</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_character_movement_component_1a44e667731d0323b2dfcdf80ee6e7f3ba">UpdateComponent</link>(<emphasis role="keywordtype">float</emphasis>&#32;deltaTime)&#32;<emphasis role="keyword">override</emphasis>;
+18 
+23 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_character_movement_component_1a63d4bb5a09a7addb1664b0f5183ec13c">ApplyMovementForceInDirection</link>(b2Vec2&#32;force);
+24 
+25 <emphasis role="keyword">protected</emphasis>:
+26 &#32;&#32;&#32;&#32;
+27 &#32;&#32;&#32;&#32;<emphasis role="keyword">virtual</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_character_movement_component_1a7c20d542f943ec133dd3f1df7fee988e">PostInit</link>()&#32;<emphasis role="keyword">override</emphasis>;
+28 
+29 <emphasis role="keyword">private</emphasis>:
+30 
+31 &#32;&#32;&#32;&#32;b2Body*&#32;ownerCollision;
+32 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">float</emphasis>&#32;maximumSpeed;
+33 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">float</emphasis>&#32;acceleration;
+34 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;bFrozen;
+35 
+36 <emphasis role="keyword">public</emphasis>:
+37 &#32;&#32;&#32;&#32;
+38 <emphasis role="comment">&#32;&#32;&#32;&#32;/************************************************************************/</emphasis>
+39 &#32;&#32;&#32;&#32;<emphasis role="comment">/*&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;SETTERS&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;*/</emphasis>
+40 <emphasis role="comment">&#32;&#32;&#32;&#32;/************************************************************************/</emphasis>
+41 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_character_movement_component_1a6cb4c791b22b66c29aa830e40d947d0c">SetCollisionBody</link>(b2Body*&#32;newBody)&#32;{&#32;ownerCollision&#32;=&#32;newBody;&#32;}
+42 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_character_movement_component_1a5c8c5c00d78dc4d38e14c502e9567695">SetFrozen</link>(<emphasis role="keywordtype">bool</emphasis>&#32;bNewState)&#32;{&#32;bFrozen&#32;=&#32;bNewState;&#32;}
+43 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_character_movement_component_1ab3ab4283107113582bc6c7f670c86b3c">SetMaximumSpeed</link>(<emphasis role="keywordtype">float</emphasis>&#32;newMaximumSpeed)&#32;{&#32;maximumSpeed&#32;=&#32;newMaximumSpeed;&#32;}
+44 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_character_movement_component_1aa0c6001da09d289c9cdc6a2332293ab6">SetAcceleration</link>(<emphasis role="keywordtype">float</emphasis>&#32;newAcceleration)&#32;{&#32;acceleration&#32;=&#32;newAcceleration;&#32;}
+45 
+46 <emphasis role="comment">&#32;&#32;&#32;&#32;/************************************************************************/</emphasis>
+47 &#32;&#32;&#32;&#32;<emphasis role="comment">/*&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;GETTERS&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;*/</emphasis>
+48 <emphasis role="comment">&#32;&#32;&#32;&#32;/************************************************************************/</emphasis>
+49 &#32;&#32;&#32;&#32;__forceinline&#32;<emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_class_character_movement_component_1a95de1dc66286d10e4099b26ee46bdd7b">IsFrozen</link>()<emphasis role="keyword">&#32;const&#32;</emphasis>{&#32;<emphasis role="keywordflow">return</emphasis>&#32;bFrozen;&#32;}
+50 &#32;&#32;&#32;&#32;__forceinline&#32;<emphasis role="keywordtype">float</emphasis>&#32;<link linkend="_class_character_movement_component_1a0a0b9e6ccb23a433d86991de1d9a2ad8">GetSpeed</link>()<emphasis role="keyword">&#32;const&#32;</emphasis>{&#32;<emphasis role="keywordflow">return</emphasis>&#32;ownerCollision&#32;?&#32;ownerCollision-&gt;GetLinearVelocity().Length()&#32;:&#32;0.f;&#32;}
+51 &#32;&#32;&#32;&#32;__forceinline&#32;<emphasis role="keywordtype">float</emphasis>&#32;<link linkend="_class_character_movement_component_1a1c326e239d25123a6e6ab1893b7c3006">GetMaximumSpeed</link>()&#32;{&#32;<emphasis role="keywordflow">return</emphasis>&#32;maximumSpeed;&#32;}
+52 &#32;&#32;&#32;&#32;__forceinline&#32;<emphasis role="keywordtype">float</emphasis>&#32;<link linkend="_class_character_movement_component_1a07ae2e8b49579f6737117051c3391ed1">GetAcceleration</link>()&#32;{&#32;<emphasis role="keywordflow">return</emphasis>&#32;acceleration;&#32;}
+53 };
+54 
+</programlisting></section>

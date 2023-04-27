@@ -1,0 +1,125 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__player_controller_8h_source" xml:lang="en-US">
+<title>PlayerController.h</title>
+<indexterm><primary>D:/Uni/CMP208/Hellwatch/build/vs2017/GameFramework/PlayerController.h</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered">1 <emphasis role="preprocessor">#pragma&#32;once</emphasis>
+2 
+3 <emphasis role="preprocessor">#include&#32;&lt;cstdint&gt;</emphasis>
+4 <emphasis role="preprocessor">#include&#32;&lt;functional&gt;</emphasis>
+5 <emphasis role="preprocessor">#include&#32;&lt;input/touch_input_manager.h&gt;</emphasis>
+6 <emphasis role="preprocessor">#include&#32;&lt;input/keyboard.h&gt;</emphasis>
+7 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="__utils_8h">Utils.h</link>&quot;</emphasis>
+8 
+9 <emphasis role="keyword">namespace&#32;</emphasis><link linkend="_namespacegef">gef</link>
+10 {
+11 &#32;&#32;&#32;&#32;<emphasis role="keyword">class&#32;</emphasis>InputManager;
+12 &#32;&#32;&#32;&#32;<emphasis role="keyword">class&#32;</emphasis>Platform;
+13 &#32;&#32;&#32;&#32;<emphasis role="keyword">class&#32;</emphasis>SonyController;
+14 }
+15 
+16 <emphasis role="keyword">namespace&#32;</emphasis><link linkend="_namespace_hellwatch_input_action">HellwatchInputAction</link>
+17 {
+18 &#32;&#32;&#32;&#32;<emphasis role="keyword">enum</emphasis>&#32;<link linkend="_namespace_hellwatch_input_action_1ad39fcc17ea621da731d011339205f522">Type</link>
+19 &#32;&#32;&#32;&#32;{
+20 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_namespace_hellwatch_input_action_1ad39fcc17ea621da731d011339205f522a1b668be2e7a287399767467c996dcdcb">None</link>&#32;=&#32;0,
+21 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_namespace_hellwatch_input_action_1ad39fcc17ea621da731d011339205f522ac50db83d00684255156bb26fbadba101">Pressed</link>,
+22 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_namespace_hellwatch_input_action_1ad39fcc17ea621da731d011339205f522a2e7461d356b36a8be3798d12aa43a81d">Held</link>,
+23 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_namespace_hellwatch_input_action_1ad39fcc17ea621da731d011339205f522a6baa22c2058b4910e772c39c0e4104bf">Released</link>
+24 &#32;&#32;&#32;&#32;};
+25 }
+26 
+27 <emphasis role="keyword">namespace&#32;</emphasis><link linkend="_namespace_hellwatch_controller_axis">HellwatchControllerAxis</link>
+28 {
+29 &#32;&#32;&#32;&#32;<emphasis role="keyword">enum</emphasis>&#32;<link linkend="_namespace_hellwatch_controller_axis_1a6014138ce0ea9634c8a9c36539a7a967">Type</link>
+30 &#32;&#32;&#32;&#32;{
+31 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_namespace_hellwatch_controller_axis_1a6014138ce0ea9634c8a9c36539a7a967af556634c68eda0587cb64022a5dec80d">None</link>&#32;=&#32;0,
+32 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_namespace_hellwatch_controller_axis_1a6014138ce0ea9634c8a9c36539a7a967a2c35b461f3a44e7f7e139b6829990d77">LeftStickXY</link>,
+33 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_namespace_hellwatch_controller_axis_1a6014138ce0ea9634c8a9c36539a7a967a052b1c55389f1a8945ac50fdf80d0220">RightStickXY</link>
+34 &#32;&#32;&#32;&#32;};
+35 }
+36 
+37 <emphasis role="comment">/*&#32;--------------------------------------&#32;*/</emphasis>
+38 <emphasis role="comment">/*&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Key&#32;bind&#32;structs&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;*/</emphasis>
+39 <emphasis role="comment">/*&#32;--------------------------------------&#32;*/</emphasis>
+40 <emphasis role="keyword">struct&#32;</emphasis><link linkend="_struct_f_key_bind_keyboard">FKeyBindKeyboard</link>
+41 {
+42 &#32;&#32;&#32;&#32;<link linkend="_namespace_hellwatch_input_action_1ad39fcc17ea621da731d011339205f522">HellwatchInputAction::Type</link>&#32;<link linkend="_struct_f_key_bind_keyboard_1a5af1767e769e14b7f3e66f5c1926ed6a">inputAction</link>;
+43 &#32;&#32;&#32;&#32;gef::Keyboard::KeyCode&#32;<link linkend="_struct_f_key_bind_keyboard_1ac4a6383a3435b6ae4666585580d31fce">keyCode</link>;
+44 &#32;&#32;&#32;&#32;std::function&lt;void()&gt;&#32;<link linkend="_struct_f_key_bind_keyboard_1a1743545acca699e351fae0996ad583bc">functionBind</link>;
+45 };
+46 
+47 <emphasis role="keyword">struct&#32;</emphasis><link linkend="_struct_f_key_bind_controller">FKeyBindController</link>
+48 {
+49 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_struct_f_key_bind_controller_1a30a23da42d558b13a620780e9252e1b4">keyCode</link>;
+50 &#32;&#32;&#32;&#32;<link linkend="_namespace_hellwatch_input_action_1ad39fcc17ea621da731d011339205f522">HellwatchInputAction::Type</link>&#32;<link linkend="_struct_f_key_bind_controller_1a9439ad75707d54dacf3aff4d9532e80c">inputAction</link>&#32;=&#32;<link linkend="_namespace_hellwatch_input_action_1ad39fcc17ea621da731d011339205f522a1b668be2e7a287399767467c996dcdcb">HellwatchInputAction::None</link>;
+51 &#32;&#32;&#32;&#32;<link linkend="_namespace_hellwatch_controller_axis_1a6014138ce0ea9634c8a9c36539a7a967">HellwatchControllerAxis::Type</link>&#32;<link linkend="_struct_f_key_bind_controller_1afd25023bd19b1e50223d80261426aa5a">axis</link>&#32;=&#32;<link linkend="_namespace_hellwatch_controller_axis_1a6014138ce0ea9634c8a9c36539a7a967af556634c68eda0587cb64022a5dec80d">HellwatchControllerAxis::None</link>;
+52 &#32;&#32;&#32;&#32;std::function&lt;void(gef::Vector2)&gt;&#32;<link linkend="_struct_f_key_bind_controller_1ad1881af9bbed2c677b1f11b8e5e3d5b6">functionBind</link>;
+53 };
+54 
+55 <emphasis role="keyword">struct&#32;</emphasis><link linkend="_struct_f_key_bind_mouse">FKeyBindMouse</link>
+56 {
+57 &#32;&#32;&#32;&#32;gef::TouchType&#32;<link linkend="_struct_f_key_bind_mouse_1a5bc7033239652acd4610ec1ca89ddf89">clickAction</link>;
+58 &#32;&#32;&#32;&#32;std::function&lt;void(gef::Vector2)&gt;&#32;<link linkend="_struct_f_key_bind_mouse_1a5845f86fa206d3ba7e4ab997960a3588">functionBind</link>;
+59 };
+60 
+61 <emphasis role="keyword">struct&#32;</emphasis><link linkend="_struct_f_key_bind_set">FKeyBindSet</link>
+62 {
+63 &#32;&#32;&#32;&#32;std::vector&lt;FKeyBindKeyboard&gt;&#32;<link linkend="_struct_f_key_bind_set_1a003faf9e27ce7e6933a32fac6900021f">keyboardKeyBinds</link>;
+64 &#32;&#32;&#32;&#32;std::vector&lt;FKeyBindController&gt;&#32;<link linkend="_struct_f_key_bind_set_1a135b83e0bfa3706469986a0036fe97fc">controllerKeyBinds</link>;
+65 &#32;&#32;&#32;&#32;std::vector&lt;FKeyBindMouse&gt;&#32;<link linkend="_struct_f_key_bind_set_1a23f3845994019b3bdc4f0c1455f8eb04">mouseKeyBinds</link>;
+66 };
+67 
+71 <emphasis role="keyword">class&#32;</emphasis><link linkend="_class_player_controller">PlayerController</link>
+72 {
+73 <emphasis role="keyword">public</emphasis>:
+74 &#32;&#32;&#32;&#32;<link linkend="_class_player_controller">PlayerController</link>(gef::Platform&amp;&#32;platform);
+75 
+76 <emphasis role="keyword">public</emphasis>:
+77 
+82 &#32;&#32;&#32;&#32;gef::Vector2&#32;<link linkend="_class_player_controller_1a3cf1cb2523e6b8a78cdbaf9df577b3be">GetMousePosition</link>();
+83 &#32;&#32;&#32;&#32;
+91 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_class_player_controller_1a3ecff75f943f340bce2240d58eaf7f4f">BindKeyboardEvent</link>(<emphasis role="keyword">const</emphasis>&#32;<link linkend="_struct_f_key_bind_keyboard">FKeyBindKeyboard</link>&#32;keyboardEvent,&#32;<emphasis role="keywordtype">bool</emphasis>&#32;bUnique&#32;=&#32;<emphasis role="keyword">false</emphasis>,&#32;<emphasis role="keywordtype">bool</emphasis>&#32;bReplaceIfUnique&#32;=&#32;<emphasis role="keyword">false</emphasis>);
+92 
+100 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_class_player_controller_1a3b4ce10a473a2000d1b204c7830bff97">BindControllerEvent</link>(<emphasis role="keyword">const</emphasis>&#32;<link linkend="_struct_f_key_bind_controller">FKeyBindController</link>&#32;controllerEvent,&#32;<emphasis role="keywordtype">bool</emphasis>&#32;bUnique&#32;=&#32;<emphasis role="keyword">false</emphasis>,&#32;<emphasis role="keywordtype">bool</emphasis>&#32;bReplaceIfUnique&#32;=&#32;<emphasis role="keyword">false</emphasis>);
+101 
+107 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_class_player_controller_1a654bf416ea31cbe022ccc50c7e1832e8">BindMouseEvent</link>(<emphasis role="keyword">const</emphasis>&#32;<link linkend="_struct_f_key_bind_mouse">FKeyBindMouse</link>&#32;mouseEvent);
+108 
+113 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_player_controller_1a92f0d14a05056e6296fc726fc7073410">BindKeyBindSet</link>(<link linkend="_struct_f_key_bind_set">FKeyBindSet</link>&#32;keyBindSet);
+114 
+118 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_player_controller_1a2e0c380d64a88c8cfe60ce8452921227">Update</link>();
+119 
+120 <emphasis role="keyword">private</emphasis>:
+121 &#32;&#32;&#32;&#32;<emphasis role="comment">/*&#32;--------------------------------------&#32;*/</emphasis>
+122 &#32;&#32;&#32;&#32;<emphasis role="comment">/*&#32;&#32;&#32;&#32;&#32;&#32;Process&#32;key&#32;binds&#32;functions&#32;&#32;&#32;&#32;&#32;&#32;&#32;*/</emphasis>&#32;
+123 &#32;&#32;&#32;&#32;<emphasis role="comment">/*&#32;--------------------------------------&#32;*/</emphasis>
+124 
+125 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;EvaluateKeyboardKeybinds(gef::Keyboard*&#32;keyboard);
+126 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;EvaluateControllerKeybinds(<emphasis role="keyword">const</emphasis>&#32;gef::SonyController*&#32;controller);
+127 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;EvaluateMouseKeybinds(<emphasis role="keyword">const</emphasis>&#32;gef::TouchInputManager*&#32;touchInput);
+128 
+129 &#32;&#32;&#32;&#32;<emphasis role="comment">/*&#32;--------------------------------------&#32;*/</emphasis>
+130 &#32;&#32;&#32;&#32;<emphasis role="comment">/*&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Key&#32;Binds&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;*/</emphasis>
+131 &#32;&#32;&#32;&#32;<emphasis role="comment">/*&#32;--------------------------------------&#32;*/</emphasis>
+132 &#32;&#32;&#32;&#32;std::vector&lt;FKeyBindKeyboard&gt;&#32;keyboardKeyBinds;
+133 &#32;&#32;&#32;&#32;std::vector&lt;FKeyBindController&gt;&#32;controllerKeyBinds;
+134 &#32;&#32;&#32;&#32;std::vector&lt;FKeyBindMouse&gt;&#32;mouseKeyBinds;
+135 
+136 &#32;&#32;&#32;&#32;<emphasis role="comment">/*&#32;--------------------------------------&#32;*/</emphasis>
+137 &#32;&#32;&#32;&#32;<emphasis role="comment">/*&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Mouse&#32;Stuff&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;*/</emphasis>
+138 &#32;&#32;&#32;&#32;<emphasis role="comment">/*&#32;--------------------------------------&#32;*/</emphasis>
+139 &#32;&#32;&#32;&#32;Int32&#32;activeTouchID;
+140 &#32;&#32;&#32;&#32;gef::Vector2&#32;touchPosition;
+141 
+142 &#32;&#32;&#32;&#32;gef::Vector2&#32;lastMousePosition&#32;=&#32;gef::Vector2(0,&#32;0);
+143 
+144 &#32;&#32;&#32;&#32;<emphasis role="comment">/*&#32;--------------------------------------&#32;*/</emphasis>
+145 &#32;&#32;&#32;&#32;<emphasis role="comment">/*&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Input&#32;Manager&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;*/</emphasis>
+146 &#32;&#32;&#32;&#32;<emphasis role="comment">/*&#32;--------------------------------------&#32;*/</emphasis>
+147 &#32;&#32;&#32;&#32;gef::InputManager*&#32;inputManager;
+148 
+149 <emphasis role="keyword">public</emphasis>:
+150 
+151 &#32;&#32;&#32;&#32;<emphasis role="keyword">const</emphasis>&#32;<link linkend="_struct_f_key_bind_set">FKeyBindSet</link>&amp;&#32;<link linkend="_class_player_controller_1ac23282a33a9bfc6972828f0ce385a52b">GetKeybindSet</link>()&#32;<emphasis role="keyword">const</emphasis>;
+152 };
+153 
+</programlisting></section>

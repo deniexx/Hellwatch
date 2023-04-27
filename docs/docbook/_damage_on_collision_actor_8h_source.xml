@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__damage_on_collision_actor_8h_source" xml:lang="en-US">
+<title>DamageOnCollisionActor.h</title>
+<indexterm><primary>D:/Uni/CMP208/Hellwatch/build/vs2017/Actors/MeshActors/DamageOnCollisionActor.h</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered">1 <emphasis role="preprocessor">#pragma&#32;once</emphasis>
+2 
+3 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="__mesh_actor_8h">Actors/MeshActor.h</link>&quot;</emphasis>
+4 
+8 <emphasis role="keyword">class&#32;</emphasis><link linkend="_class_damage_on_collision_actor">DamageOnCollisionActor</link>&#32;:&#32;<emphasis role="keyword">public</emphasis>&#32;<link linkend="_class_mesh_actor">MeshActor</link>
+9 {
+10 &#32;&#32;&#32;&#32;<link linkend="__utils_8h_1afc0ee7bd35c161a2d80b8e8f04fd9213">GENERATED_BODY</link>(<link linkend="_class_mesh_actor">MeshActor</link>,&#32;<link linkend="_class_damage_on_collision_actor">DamageOnCollisionActor</link>)
+11 
+12 <emphasis role="keyword">public</emphasis>:
+13 
+17 &#32;&#32;&#32;&#32;<emphasis role="keyword">virtual</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_damage_on_collision_actor_1ad097fd69169453c518a8a7b151311edc">OnCollision</link>(b2Body*&#32;otherBody)&#32;<emphasis role="keyword">override</emphasis>;
+18 
+22 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_damage_on_collision_actor_1af7de29e57bbf7b66d4e618fb3c612257">SetDamageAmount</link>(<emphasis role="keywordtype">float</emphasis>&#32;newAmount)&#32;{&#32;<link linkend="_class_damage_on_collision_actor_1a8684d8897c9e9725d32a771f08e0b4a3">damageAmount</link>&#32;=&#32;newAmount;&#32;}
+23 
+27 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_damage_on_collision_actor_1a715ad5963092224ae96d9fa30dc1b12e">SetApplyDamageOn</link>(<link linkend="_namespace_apply_damage_on_1aab4652342cac35cdff458c5aa2bad289">ApplyDamageOn::Type</link>&#32;newState)&#32;{&#32;<link linkend="_class_damage_on_collision_actor_1a07b7703b8e3db5ad89fa3a7bb30750c2">applyDamageOn</link>&#32;=&#32;newState;&#32;}
+28 
+33 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_damage_on_collision_actor_1aeb7e7f169bc0e4b22628788716e401ae">SetSpinning</link>(<emphasis role="keywordtype">bool</emphasis>&#32;bNewState)&#32;{&#32;<link linkend="_class_damage_on_collision_actor_1a3ba78bead6c77dd82c141968a971bd4f">bSpinning</link>&#32;=&#32;bNewState;&#32;}
+34 
+38 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_damage_on_collision_actor_1aaeb5e7abbad19c5f60a521f0016d3acf">SetIsPiercing</link>(<emphasis role="keywordtype">bool</emphasis>&#32;bNewState)&#32;{&#32;<link linkend="_class_damage_on_collision_actor_1aee4412e69f1df05a5a77223176b0c6fb">bIsPiercing</link>&#32;=&#32;bNewState;&#32;}
+39 
+40 
+41 &#32;&#32;&#32;&#32;<emphasis role="keyword">virtual</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_damage_on_collision_actor_1a468c69c421db3d272bf18c46cbb15c2a">Update</link>(<emphasis role="keywordtype">float</emphasis>&#32;deltaTime)&#32;<emphasis role="keyword">override</emphasis>;
+42 
+43 <emphasis role="keyword">protected</emphasis>:
+44 
+45 &#32;&#32;&#32;&#32;<link linkend="_namespace_apply_damage_on_1aab4652342cac35cdff458c5aa2bad289">ApplyDamageOn::Type</link>&#32;<link linkend="_class_damage_on_collision_actor_1a07b7703b8e3db5ad89fa3a7bb30750c2">applyDamageOn</link>&#32;=&#32;<link linkend="_namespace_apply_damage_on_1aab4652342cac35cdff458c5aa2bad289a17c0a2d2e83ad970a7bb7395c9819d1f">ApplyDamageOn::EnemiesOnly</link>;
+46 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_class_damage_on_collision_actor_1a3ba78bead6c77dd82c141968a971bd4f">bSpinning</link>&#32;=&#32;<emphasis role="keyword">false</emphasis>;
+47 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_class_damage_on_collision_actor_1aee4412e69f1df05a5a77223176b0c6fb">bIsPiercing</link>&#32;=&#32;<emphasis role="keyword">false</emphasis>;
+48 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">float</emphasis>&#32;<link linkend="_class_damage_on_collision_actor_1a8684d8897c9e9725d32a771f08e0b4a3">damageAmount</link>&#32;=&#32;0.f;
+49 };
+50 
+</programlisting></section>
